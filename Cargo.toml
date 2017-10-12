@@ -1,7 +1,11 @@
 [package]
 name = "xmc4200"
+description="Core library for XCM4200 ARM Cortex-M"
 version = "0.1.0"
 authors = ["Lucas Brendel <lucasbrendel@gmail.com>"]
+readme="README.md"
+license="MIT"
+repository="https://github.com/lucasbrendel/xmc4200"
 
 [dependencies]
 cortex-m = "0.3.0"
