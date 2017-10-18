@@ -6,6 +6,7 @@ authors = ["Lucas Brendel <lucasbrendel@gmail.com>"]
 readme="README.md"
 license="MIT"
 repository="https://github.com/lucasbrendel/xmc4200"
+keywords=["cortex-m", "infineon", "arm", "xmc4x"]
 
 [dependencies]
 cortex-m = "0.3.0"
