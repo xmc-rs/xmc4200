@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -29,73 +28,73 @@ pub struct RegisterBlock {
 }
 #[doc = "Module Identification Register"]
 pub struct ID {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Module Identification Register"]
 pub mod id;
 #[doc = "DAC0 Configuration Register 0"]
 pub struct DAC0CFG0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC0 Configuration Register 0"]
 pub mod dac0cfg0;
 #[doc = "DAC0 Configuration Register 1"]
 pub struct DAC0CFG1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC0 Configuration Register 1"]
 pub mod dac0cfg1;
 #[doc = "DAC1 Configuration Register 0"]
 pub struct DAC1CFG0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC1 Configuration Register 0"]
 pub mod dac1cfg0;
 #[doc = "DAC1 Configuration Register 1"]
 pub struct DAC1CFG1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC1 Configuration Register 1"]
 pub mod dac1cfg1;
 #[doc = "DAC0 Data Register"]
 pub struct DAC0DATA {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC0 Data Register"]
 pub mod dac0data;
 #[doc = "DAC1 Data Register"]
 pub struct DAC1DATA {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC1 Data Register"]
 pub mod dac1data;
 #[doc = "DAC01 Data Register"]
 pub struct DAC01DATA {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC01 Data Register"]
 pub mod dac01data;
 #[doc = "DAC0 Lower Pattern Register"]
 pub struct DAC0PATL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC0 Lower Pattern Register"]
 pub mod dac0patl;
 #[doc = "DAC0 Higher Pattern Register"]
 pub struct DAC0PATH {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC0 Higher Pattern Register"]
 pub mod dac0path;
 #[doc = "DAC1 Lower Pattern Register"]
 pub struct DAC1PATL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC1 Lower Pattern Register"]
 pub mod dac1patl;
 #[doc = "DAC1 Higher Pattern Register"]
 pub struct DAC1PATH {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC1 Higher Pattern Register"]
 pub mod dac1path;

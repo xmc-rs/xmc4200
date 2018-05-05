@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -37,97 +36,97 @@ pub struct RegisterBlock {
 }
 #[doc = "External input selection"]
 pub struct DCI {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "External input selection"]
 pub mod dci;
 #[doc = "External input selection"]
 pub struct IES {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "External input selection"]
 pub mod ies;
 #[doc = "Slope generation control"]
 pub struct SC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Slope generation control"]
 pub mod sc;
 #[doc = "Pulse swallow configuration"]
 pub struct PC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Pulse swallow configuration"]
 pub mod pc;
 #[doc = "DAC reference value 1"]
 pub struct DSV1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC reference value 1"]
 pub mod dsv1;
 #[doc = "DAC reference value 1"]
 pub struct DSV2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DAC reference value 1"]
 pub mod dsv2;
 #[doc = "Shadow reference value 1"]
 pub struct SDSV1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Shadow reference value 1"]
 pub mod sdsv1;
 #[doc = "Shadow Pulse swallow value"]
 pub struct SPC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Shadow Pulse swallow value"]
 pub mod spc;
 #[doc = "Comparator configuration"]
 pub struct CC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Comparator configuration"]
 pub mod cc;
 #[doc = "Passive level configuration"]
 pub struct PLC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Passive level configuration"]
 pub mod plc;
 #[doc = "Comparator blanking value"]
 pub struct BLV {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Comparator blanking value"]
 pub mod blv;
 #[doc = "Service request enable"]
 pub struct SRE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service request enable"]
 pub mod sre;
 #[doc = "Service request line selector"]
 pub struct SRS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service request line selector"]
 pub mod srs;
 #[doc = "Service request SW set"]
 pub struct SWS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service request SW set"]
 pub mod sws;
 #[doc = "Service request SW clear"]
 pub struct SWC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service request SW clear"]
 pub mod swc;
 #[doc = "Service request status"]
 pub struct ISTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service request status"]
 pub mod istat;

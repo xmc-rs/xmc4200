@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -19,43 +18,43 @@ pub struct RegisterBlock {
 }
 #[doc = "Node Control Register"]
 pub struct NCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Node Control Register"]
 pub mod ncr;
 #[doc = "Node Status Register"]
 pub struct NSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Node Status Register"]
 pub mod nsr;
 #[doc = "Node Interrupt Pointer Register"]
 pub struct NIPR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Node Interrupt Pointer Register"]
 pub mod nipr;
 #[doc = "Node Port Control Register"]
 pub struct NPCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Node Port Control Register"]
 pub mod npcr;
 #[doc = "Node Bit Timing Register"]
 pub struct NBTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Node Bit Timing Register"]
 pub mod nbtr;
 #[doc = "Node Error Counter Register"]
 pub struct NECNT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Node Error Counter Register"]
 pub mod necnt;
 #[doc = "Node Frame Counter Register"]
 pub struct NFCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Node Frame Counter Register"]
 pub mod nfcr;

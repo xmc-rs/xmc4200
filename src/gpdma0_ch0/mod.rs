@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -39,79 +38,79 @@ pub struct RegisterBlock {
 }
 #[doc = "Source Address Register"]
 pub struct SAR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Source Address Register"]
 pub mod sar;
 #[doc = "Destination Address Register"]
 pub struct DAR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Destination Address Register"]
 pub mod dar;
 #[doc = "Linked List Pointer Register"]
 pub struct LLP {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Linked List Pointer Register"]
 pub mod llp;
 #[doc = "Control Register Low"]
 pub struct CTLL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Control Register Low"]
 pub mod ctll;
 #[doc = "Control Register High"]
 pub struct CTLH {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Control Register High"]
 pub mod ctlh;
 #[doc = "Source Status Register"]
 pub struct SSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Source Status Register"]
 pub mod sstat;
 #[doc = "Destination Status Register"]
 pub struct DSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Destination Status Register"]
 pub mod dstat;
 #[doc = "Source Status Address Register"]
 pub struct SSTATAR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Source Status Address Register"]
 pub mod sstatar;
 #[doc = "Destination Status Address Register"]
 pub struct DSTATAR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Destination Status Address Register"]
 pub mod dstatar;
 #[doc = "Configuration Register Low"]
 pub struct CFGL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Configuration Register Low"]
 pub mod cfgl;
 #[doc = "Configuration Register High"]
 pub struct CFGH {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Configuration Register High"]
 pub mod cfgh;
 #[doc = "Source Gather Register"]
 pub struct SGR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Source Gather Register"]
 pub mod sgr;
 #[doc = "Destination Scatter Register"]
 pub struct DSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Destination Scatter Register"]
 pub mod dsr;

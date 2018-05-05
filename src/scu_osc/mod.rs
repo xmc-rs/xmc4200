@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -12,19 +11,19 @@ pub struct RegisterBlock {
 }
 #[doc = "OSC_HP Status Register"]
 pub struct OSCHPSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "OSC_HP Status Register"]
 pub mod oschpstat;
 #[doc = "OSC_HP Control Register"]
 pub struct OSCHPCTRL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "OSC_HP Control Register"]
 pub mod oschpctrl;
 #[doc = "Clock Calibration Constant Register"]
 pub struct CLKCALCONST {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Clock Calibration Constant Register"]
 pub mod clkcalconst;

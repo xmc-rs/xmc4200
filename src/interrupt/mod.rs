@@ -5,9 +5,7 @@ global_asm!("\n                    .thumb_func\n                    DH_TRAMPOLIN
 #[cfg(all(target_arch = "x86_64", feature = "rt"))]
 global_asm!("\n                    DH_TRAMPOLINE:\n                        jmp DEFAULT_HANDLER\n                    ");
 #[cfg(feature = "rt")]
-global_asm!(
-    "\n.weak SCU_0\nSCU_0 = DH_TRAMPOLINE\n.weak ERU0_0\nERU0_0 = DH_TRAMPOLINE\n.weak ERU0_1\nERU0_1 = DH_TRAMPOLINE\n.weak ERU0_2\nERU0_2 = DH_TRAMPOLINE\n.weak ERU0_3\nERU0_3 = DH_TRAMPOLINE\n.weak ERU1_0\nERU1_0 = DH_TRAMPOLINE\n.weak ERU1_1\nERU1_1 = DH_TRAMPOLINE\n.weak ERU1_2\nERU1_2 = DH_TRAMPOLINE\n.weak ERU1_3\nERU1_3 = DH_TRAMPOLINE\n.weak PMU0_0\nPMU0_0 = DH_TRAMPOLINE\n.weak VADC0_C0_0\nVADC0_C0_0 = DH_TRAMPOLINE\n.weak VADC0_C0_1\nVADC0_C0_1 = DH_TRAMPOLINE\n.weak VADC0_C0_2\nVADC0_C0_2 = DH_TRAMPOLINE\n.weak VADC0_C0_3\nVADC0_C0_3 = DH_TRAMPOLINE\n.weak VADC0_G0_0\nVADC0_G0_0 = DH_TRAMPOLINE\n.weak VADC0_G0_1\nVADC0_G0_1 = DH_TRAMPOLINE\n.weak VADC0_G0_2\nVADC0_G0_2 = DH_TRAMPOLINE\n.weak VADC0_G0_3\nVADC0_G0_3 = DH_TRAMPOLINE\n.weak VADC0_G1_0\nVADC0_G1_0 = DH_TRAMPOLINE\n.weak VADC0_G1_1\nVADC0_G1_1 = DH_TRAMPOLINE\n.weak VADC0_G1_2\nVADC0_G1_2 = DH_TRAMPOLINE\n.weak VADC0_G1_3\nVADC0_G1_3 = DH_TRAMPOLINE\n.weak DAC0_0\nDAC0_0 = DH_TRAMPOLINE\n.weak DAC0_1\nDAC0_1 = DH_TRAMPOLINE\n.weak CCU40_0\nCCU40_0 = DH_TRAMPOLINE\n.weak CCU40_1\nCCU40_1 = DH_TRAMPOLINE\n.weak CCU40_2\nCCU40_2 = DH_TRAMPOLINE\n.weak CCU40_3\nCCU40_3 = DH_TRAMPOLINE\n.weak CCU41_0\nCCU41_0 = DH_TRAMPOLINE\n.weak CCU41_1\nCCU41_1 = DH_TRAMPOLINE\n.weak CCU41_2\nCCU41_2 = DH_TRAMPOLINE\n.weak CCU41_3\nCCU41_3 = DH_TRAMPOLINE\n.weak CCU80_0\nCCU80_0 = DH_TRAMPOLINE\n.weak CCU80_1\nCCU80_1 = DH_TRAMPOLINE\n.weak CCU80_2\nCCU80_2 = DH_TRAMPOLINE\n.weak CCU80_3\nCCU80_3 = DH_TRAMPOLINE\n.weak POSIF0_0\nPOSIF0_0 = DH_TRAMPOLINE\n.weak POSIF0_1\nPOSIF0_1 = DH_TRAMPOLINE\n.weak HRPWM_0\nHRPWM_0 = DH_TRAMPOLINE\n.weak HRPWM_1\nHRPWM_1 = DH_TRAMPOLINE\n.weak HRPWM_2\nHRPWM_2 = DH_TRAMPOLINE\n.weak HRPWM_3\nHRPWM_3 = DH_TRAMPOLINE\n.weak CAN0_0\nCAN0_0 = DH_TRAMPOLINE\n.weak CAN0_1\nCAN0_1 = DH_TRAMPOLINE\n.weak CAN0_2\nCAN0_2 = DH_TRAMPOLINE\n.weak CAN0_3\nCAN0_3 = DH_TRAMPOLINE\n.weak CAN0_4\nCAN0_4 = DH_TRAMPOLINE\n.weak CAN0_5\nCAN0_5 = DH_TRAMPOLINE\n.weak CAN0_6\nCAN0_6 = DH_TRAMPOLINE\n.weak CAN0_7\nCAN0_7 = DH_TRAMPOLINE\n.weak USIC0_0\nUSIC0_0 = DH_TRAMPOLINE\n.weak USIC0_1\nUSIC0_1 = DH_TRAMPOLINE\n.weak USIC0_2\nUSIC0_2 = DH_TRAMPOLINE\n.weak USIC0_3\nUSIC0_3 = DH_TRAMPOLINE\n.weak USIC0_4\nUSIC0_4 = DH_TRAMPOLINE\n.weak USIC0_5\nUSIC0_5 = DH_TRAMPOLINE\n.weak USIC1_0\nUSIC1_0 = DH_TRAMPOLINE\n.weak USIC1_1\nUSIC1_1 = DH_TRAMPOLINE\n.weak USIC1_2\nUSIC1_2 = DH_TRAMPOLINE\n.weak USIC1_3\nUSIC1_3 = DH_TRAMPOLINE\n.weak USIC1_4\nUSIC1_4 = DH_TRAMPOLINE\n.weak USIC1_5\nUSIC1_5 = DH_TRAMPOLINE\n.weak LEDTS0_0\nLEDTS0_0 = DH_TRAMPOLINE\n.weak FCE0_0\nFCE0_0 = DH_TRAMPOLINE\n.weak GPDMA0_0\nGPDMA0_0 = DH_TRAMPOLINE\n.weak USB0_0\nUSB0_0 = DH_TRAMPOLINE"
-);
+global_asm ! ( "\n.weak SCU_0\nSCU_0 = DH_TRAMPOLINE\n.weak ERU0_0\nERU0_0 = DH_TRAMPOLINE\n.weak ERU0_1\nERU0_1 = DH_TRAMPOLINE\n.weak ERU0_2\nERU0_2 = DH_TRAMPOLINE\n.weak ERU0_3\nERU0_3 = DH_TRAMPOLINE\n.weak ERU1_0\nERU1_0 = DH_TRAMPOLINE\n.weak ERU1_1\nERU1_1 = DH_TRAMPOLINE\n.weak ERU1_2\nERU1_2 = DH_TRAMPOLINE\n.weak ERU1_3\nERU1_3 = DH_TRAMPOLINE\n.weak PMU0_0\nPMU0_0 = DH_TRAMPOLINE\n.weak VADC0_C0_0\nVADC0_C0_0 = DH_TRAMPOLINE\n.weak VADC0_C0_1\nVADC0_C0_1 = DH_TRAMPOLINE\n.weak VADC0_C0_2\nVADC0_C0_2 = DH_TRAMPOLINE\n.weak VADC0_C0_3\nVADC0_C0_3 = DH_TRAMPOLINE\n.weak VADC0_G0_0\nVADC0_G0_0 = DH_TRAMPOLINE\n.weak VADC0_G0_1\nVADC0_G0_1 = DH_TRAMPOLINE\n.weak VADC0_G0_2\nVADC0_G0_2 = DH_TRAMPOLINE\n.weak VADC0_G0_3\nVADC0_G0_3 = DH_TRAMPOLINE\n.weak VADC0_G1_0\nVADC0_G1_0 = DH_TRAMPOLINE\n.weak VADC0_G1_1\nVADC0_G1_1 = DH_TRAMPOLINE\n.weak VADC0_G1_2\nVADC0_G1_2 = DH_TRAMPOLINE\n.weak VADC0_G1_3\nVADC0_G1_3 = DH_TRAMPOLINE\n.weak DAC0_0\nDAC0_0 = DH_TRAMPOLINE\n.weak DAC0_1\nDAC0_1 = DH_TRAMPOLINE\n.weak CCU40_0\nCCU40_0 = DH_TRAMPOLINE\n.weak CCU40_1\nCCU40_1 = DH_TRAMPOLINE\n.weak CCU40_2\nCCU40_2 = DH_TRAMPOLINE\n.weak CCU40_3\nCCU40_3 = DH_TRAMPOLINE\n.weak CCU41_0\nCCU41_0 = DH_TRAMPOLINE\n.weak CCU41_1\nCCU41_1 = DH_TRAMPOLINE\n.weak CCU41_2\nCCU41_2 = DH_TRAMPOLINE\n.weak CCU41_3\nCCU41_3 = DH_TRAMPOLINE\n.weak CCU80_0\nCCU80_0 = DH_TRAMPOLINE\n.weak CCU80_1\nCCU80_1 = DH_TRAMPOLINE\n.weak CCU80_2\nCCU80_2 = DH_TRAMPOLINE\n.weak CCU80_3\nCCU80_3 = DH_TRAMPOLINE\n.weak POSIF0_0\nPOSIF0_0 = DH_TRAMPOLINE\n.weak POSIF0_1\nPOSIF0_1 = DH_TRAMPOLINE\n.weak HRPWM_0\nHRPWM_0 = DH_TRAMPOLINE\n.weak HRPWM_1\nHRPWM_1 = DH_TRAMPOLINE\n.weak HRPWM_2\nHRPWM_2 = DH_TRAMPOLINE\n.weak HRPWM_3\nHRPWM_3 = DH_TRAMPOLINE\n.weak CAN0_0\nCAN0_0 = DH_TRAMPOLINE\n.weak CAN0_1\nCAN0_1 = DH_TRAMPOLINE\n.weak CAN0_2\nCAN0_2 = DH_TRAMPOLINE\n.weak CAN0_3\nCAN0_3 = DH_TRAMPOLINE\n.weak CAN0_4\nCAN0_4 = DH_TRAMPOLINE\n.weak CAN0_5\nCAN0_5 = DH_TRAMPOLINE\n.weak CAN0_6\nCAN0_6 = DH_TRAMPOLINE\n.weak CAN0_7\nCAN0_7 = DH_TRAMPOLINE\n.weak USIC0_0\nUSIC0_0 = DH_TRAMPOLINE\n.weak USIC0_1\nUSIC0_1 = DH_TRAMPOLINE\n.weak USIC0_2\nUSIC0_2 = DH_TRAMPOLINE\n.weak USIC0_3\nUSIC0_3 = DH_TRAMPOLINE\n.weak USIC0_4\nUSIC0_4 = DH_TRAMPOLINE\n.weak USIC0_5\nUSIC0_5 = DH_TRAMPOLINE\n.weak USIC1_0\nUSIC1_0 = DH_TRAMPOLINE\n.weak USIC1_1\nUSIC1_1 = DH_TRAMPOLINE\n.weak USIC1_2\nUSIC1_2 = DH_TRAMPOLINE\n.weak USIC1_3\nUSIC1_3 = DH_TRAMPOLINE\n.weak USIC1_4\nUSIC1_4 = DH_TRAMPOLINE\n.weak USIC1_5\nUSIC1_5 = DH_TRAMPOLINE\n.weak LEDTS0_0\nLEDTS0_0 = DH_TRAMPOLINE\n.weak FCE0_0\nFCE0_0 = DH_TRAMPOLINE\n.weak GPDMA0_0\nGPDMA0_0 = DH_TRAMPOLINE\n.weak USB0_0\nUSB0_0 = DH_TRAMPOLINE" ) ;
 #[cfg(feature = "rt")]
 extern "C" {
     fn SCU_0();
@@ -401,6 +399,84 @@ unsafe impl Nr for Interrupt {
         }
     }
 }
+use core::convert::TryFrom;
+#[derive(Debug, Copy, Clone)]
+pub struct TryFromInterruptError(());
+impl TryFrom<u8> for Interrupt {
+    type Error = TryFromInterruptError;
+    #[inline]
+    fn try_from(value: u8) -> Result<Self, Self::Error> {
+        match value {
+            0 => Ok(Interrupt::SCU_0),
+            1 => Ok(Interrupt::ERU0_0),
+            2 => Ok(Interrupt::ERU0_1),
+            3 => Ok(Interrupt::ERU0_2),
+            4 => Ok(Interrupt::ERU0_3),
+            5 => Ok(Interrupt::ERU1_0),
+            6 => Ok(Interrupt::ERU1_1),
+            7 => Ok(Interrupt::ERU1_2),
+            8 => Ok(Interrupt::ERU1_3),
+            12 => Ok(Interrupt::PMU0_0),
+            14 => Ok(Interrupt::VADC0_C0_0),
+            15 => Ok(Interrupt::VADC0_C0_1),
+            16 => Ok(Interrupt::VADC0_C0_2),
+            17 => Ok(Interrupt::VADC0_C0_3),
+            18 => Ok(Interrupt::VADC0_G0_0),
+            19 => Ok(Interrupt::VADC0_G0_1),
+            20 => Ok(Interrupt::VADC0_G0_2),
+            21 => Ok(Interrupt::VADC0_G0_3),
+            22 => Ok(Interrupt::VADC0_G1_0),
+            23 => Ok(Interrupt::VADC0_G1_1),
+            24 => Ok(Interrupt::VADC0_G1_2),
+            25 => Ok(Interrupt::VADC0_G1_3),
+            42 => Ok(Interrupt::DAC0_0),
+            43 => Ok(Interrupt::DAC0_1),
+            44 => Ok(Interrupt::CCU40_0),
+            45 => Ok(Interrupt::CCU40_1),
+            46 => Ok(Interrupt::CCU40_2),
+            47 => Ok(Interrupt::CCU40_3),
+            48 => Ok(Interrupt::CCU41_0),
+            49 => Ok(Interrupt::CCU41_1),
+            50 => Ok(Interrupt::CCU41_2),
+            51 => Ok(Interrupt::CCU41_3),
+            60 => Ok(Interrupt::CCU80_0),
+            61 => Ok(Interrupt::CCU80_1),
+            62 => Ok(Interrupt::CCU80_2),
+            63 => Ok(Interrupt::CCU80_3),
+            68 => Ok(Interrupt::POSIF0_0),
+            69 => Ok(Interrupt::POSIF0_1),
+            72 => Ok(Interrupt::HRPWM_0),
+            73 => Ok(Interrupt::HRPWM_1),
+            74 => Ok(Interrupt::HRPWM_2),
+            75 => Ok(Interrupt::HRPWM_3),
+            76 => Ok(Interrupt::CAN0_0),
+            77 => Ok(Interrupt::CAN0_1),
+            78 => Ok(Interrupt::CAN0_2),
+            79 => Ok(Interrupt::CAN0_3),
+            80 => Ok(Interrupt::CAN0_4),
+            81 => Ok(Interrupt::CAN0_5),
+            82 => Ok(Interrupt::CAN0_6),
+            83 => Ok(Interrupt::CAN0_7),
+            84 => Ok(Interrupt::USIC0_0),
+            85 => Ok(Interrupt::USIC0_1),
+            86 => Ok(Interrupt::USIC0_2),
+            87 => Ok(Interrupt::USIC0_3),
+            88 => Ok(Interrupt::USIC0_4),
+            89 => Ok(Interrupt::USIC0_5),
+            90 => Ok(Interrupt::USIC1_0),
+            91 => Ok(Interrupt::USIC1_1),
+            92 => Ok(Interrupt::USIC1_2),
+            93 => Ok(Interrupt::USIC1_3),
+            94 => Ok(Interrupt::USIC1_4),
+            95 => Ok(Interrupt::USIC1_5),
+            102 => Ok(Interrupt::LEDTS0_0),
+            104 => Ok(Interrupt::FCE0_0),
+            105 => Ok(Interrupt::GPDMA0_0),
+            107 => Ok(Interrupt::USB0_0),
+            _ => Err(TryFromInterruptError(())),
+        }
+    }
+}
 #[cfg(feature = "rt")]
 #[macro_export]
-macro_rules ! interrupt { ( $ NAME : ident , $ path : path , locals : { $ ( $ lvar : ident : $ lty : ident = $ lval : expr ; ) * } ) => { # [ allow ( non_snake_case ) ] mod $ NAME { pub struct Locals { $ ( pub $ lvar : $ lty , ) * } } # [ allow ( non_snake_case ) ] # [ no_mangle ] pub extern "C" fn $ NAME ( ) { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; static mut LOCALS : self :: $ NAME :: Locals = self :: $ NAME :: Locals { $ ( $ lvar : $ lval , ) * } ; let f : fn ( & mut self :: $ NAME :: Locals ) = $ path ; f ( unsafe { & mut LOCALS } ) ; } } ; ( $ NAME : ident , $ path : path ) => { # [ allow ( non_snake_case ) ] # [ no_mangle ] pub extern "C" fn $ NAME ( ) { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; let f : fn ( ) = $ path ; f ( ) ; } } }
+macro_rules ! interrupt { ( $ NAME : ident , $ path : path , locals : { $ ( $ lvar : ident : $ lty : ty = $ lval : expr ; ) * } ) => { # [ allow ( non_snake_case ) ] mod $ NAME { pub struct Locals { $ ( pub $ lvar : $ lty , ) * } } # [ allow ( non_snake_case ) ] # [ no_mangle ] pub extern "C" fn $ NAME ( ) { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; static mut LOCALS : self :: $ NAME :: Locals = self :: $ NAME :: Locals { $ ( $ lvar : $ lval , ) * } ; let f : fn ( & mut self :: $ NAME :: Locals ) = $ path ; f ( unsafe { & mut LOCALS } ) ; } } ; ( $ NAME : ident , $ path : path ) => { # [ allow ( non_snake_case ) ] # [ no_mangle ] pub extern "C" fn $ NAME ( ) { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; let f : fn ( ) = $ path ; f ( ) ; } } }

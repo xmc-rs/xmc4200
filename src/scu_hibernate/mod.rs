@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -38,97 +37,97 @@ pub struct RegisterBlock {
 }
 #[doc = "Hibernate Domain Status Register"]
 pub struct HDSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Hibernate Domain Status Register"]
 pub mod hdstat;
 #[doc = "Hibernate Domain Status Clear Register"]
 pub struct HDCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Hibernate Domain Status Clear Register"]
 pub mod hdclr;
 #[doc = "Hibernate Domain Status Set Register"]
 pub struct HDSET {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Hibernate Domain Status Set Register"]
 pub mod hdset;
 #[doc = "Hibernate Domain Control Register"]
 pub struct HDCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Hibernate Domain Control Register"]
 pub mod hdcr;
 #[doc = "fOSI Control Register"]
 pub struct OSCSICTRL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "fOSI Control Register"]
 pub mod oscsictrl;
 #[doc = "OSC_ULP Status Register"]
 pub struct OSCULSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "OSC_ULP Status Register"]
 pub mod osculstat;
 #[doc = "OSC_ULP Control Register"]
 pub struct OSCULCTRL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "OSC_ULP Control Register"]
 pub mod osculctrl;
 #[doc = "Analog Wake-up Configuration Register"]
 pub struct LPACCONF {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Analog Wake-up Configuration Register"]
 pub mod lpacconf;
 #[doc = "LPAC Threshold Register 0"]
 pub struct LPACTH0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "LPAC Threshold Register 0"]
 pub mod lpacth0;
 #[doc = "LPAC Threshold Register 1"]
 pub struct LPACTH1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "LPAC Threshold Register 1"]
 pub mod lpacth1;
 #[doc = "Hibernate Analog Control State Register"]
 pub struct LPACST {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Hibernate Analog Control State Register"]
 pub mod lpacst;
 #[doc = "LPAC Control Clear Register"]
 pub struct LPACCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "LPAC Control Clear Register"]
 pub mod lpacclr;
 #[doc = "LPAC Control Set Register"]
 pub struct LPACSET {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "LPAC Control Set Register"]
 pub mod lpacset;
 #[doc = "Hibernate Internal Control State Register"]
 pub struct HINTST {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Hibernate Internal Control State Register"]
 pub mod hintst;
 #[doc = "Hibernate Internal Control Clear Register"]
 pub struct HINTCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Hibernate Internal Control Clear Register"]
 pub mod hintclr;
 #[doc = "Hibernate Internal Control Set Register"]
 pub struct HINTSET {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Hibernate Internal Control Set Register"]
 pub mod hintset;

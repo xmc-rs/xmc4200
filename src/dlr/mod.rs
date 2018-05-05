@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -14,25 +13,25 @@ pub struct RegisterBlock {
 }
 #[doc = "Overrun Status"]
 pub struct OVRSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Overrun Status"]
 pub mod ovrstat;
 #[doc = "Overrun Clear"]
 pub struct OVRCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Overrun Clear"]
 pub mod ovrclr;
 #[doc = "Service Request Selection 0"]
 pub struct SRSEL0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Selection 0"]
 pub mod srsel0;
 #[doc = "Line Enable"]
 pub struct LNEN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Line Enable"]
 pub mod lnen;

@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -21,49 +20,49 @@ pub struct RegisterBlock {
 }
 #[doc = "Input Register"]
 pub struct IR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Input Register"]
 pub mod ir;
 #[doc = "CRC Result Register"]
 pub struct RES {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CRC Result Register"]
 pub mod res;
 #[doc = "CRC Configuration Register"]
 pub struct CFG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CRC Configuration Register"]
 pub mod cfg;
 #[doc = "CRC Status Register"]
 pub struct STS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CRC Status Register"]
 pub mod sts;
 #[doc = "CRC Length Register"]
 pub struct LENGTH {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CRC Length Register"]
 pub mod length;
 #[doc = "CRC Check Register"]
 pub struct CHECK {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CRC Check Register"]
 pub mod check;
 #[doc = "CRC Register"]
 pub struct CRC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CRC Register"]
 pub mod crc;
 #[doc = "CRC Test Register"]
 pub struct CTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CRC Test Register"]
 pub mod ctr;

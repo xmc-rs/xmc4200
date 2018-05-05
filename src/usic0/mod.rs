@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -7,7 +6,7 @@ pub struct RegisterBlock {
 }
 #[doc = "Module Identification Register"]
 pub struct ID {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Module Identification Register"]
 pub mod id;

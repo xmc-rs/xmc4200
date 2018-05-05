@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -51,133 +50,133 @@ pub struct RegisterBlock {
 }
 #[doc = "Clock Status Register"]
 pub struct CLKSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Clock Status Register"]
 pub mod clkstat;
 #[doc = "CLK Set Register"]
 pub struct CLKSET {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CLK Set Register"]
 pub mod clkset;
 #[doc = "CLK Clear Register"]
 pub struct CLKCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CLK Clear Register"]
 pub mod clkclr;
 #[doc = "System Clock Control Register"]
 pub struct SYSCLKCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "System Clock Control Register"]
 pub mod sysclkcr;
 #[doc = "CPU Clock Control Register"]
 pub struct CPUCLKCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CPU Clock Control Register"]
 pub mod cpuclkcr;
 #[doc = "Peripheral Bus Clock Control Register"]
 pub struct PBCLKCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Peripheral Bus Clock Control Register"]
 pub mod pbclkcr;
 #[doc = "USB Clock Control Register"]
 pub struct USBCLKCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "USB Clock Control Register"]
 pub mod usbclkcr;
 #[doc = "CCU Clock Control Register"]
 pub struct CCUCLKCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CCU Clock Control Register"]
 pub mod ccuclkcr;
 #[doc = "WDT Clock Control Register"]
 pub struct WDTCLKCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "WDT Clock Control Register"]
 pub mod wdtclkcr;
 #[doc = "External Clock Control"]
 pub struct EXTCLKCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "External Clock Control"]
 pub mod extclkcr;
 #[doc = "Multi-Link Clock Control"]
 pub struct MLINKCLKCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Multi-Link Clock Control"]
 pub mod mlinkclkcr;
 #[doc = "Sleep Control Register"]
 pub struct SLEEPCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Sleep Control Register"]
 pub mod sleepcr;
 #[doc = "Deep Sleep Control Register"]
 pub struct DSLEEPCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Deep Sleep Control Register"]
 pub mod dsleepcr;
 #[doc = "Peripheral 0 Clock Gating Status"]
 pub struct CGATSTAT0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Peripheral 0 Clock Gating Status"]
 pub mod cgatstat0;
 #[doc = "Peripheral 0 Clock Gating Set"]
 pub struct CGATSET0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Peripheral 0 Clock Gating Set"]
 pub mod cgatset0;
 #[doc = "Peripheral 0 Clock Gating Clear"]
 pub struct CGATCLR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Peripheral 0 Clock Gating Clear"]
 pub mod cgatclr0;
 #[doc = "Peripheral 1 Clock Gating Status"]
 pub struct CGATSTAT1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Peripheral 1 Clock Gating Status"]
 pub mod cgatstat1;
 #[doc = "Peripheral 1 Clock Gating Set"]
 pub struct CGATSET1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Peripheral 1 Clock Gating Set"]
 pub mod cgatset1;
 #[doc = "Peripheral 1 Clock Gating Clear"]
 pub struct CGATCLR1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Peripheral 1 Clock Gating Clear"]
 pub mod cgatclr1;
 #[doc = "Peripheral 2 Clock Gating Status"]
 pub struct CGATSTAT2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Peripheral 2 Clock Gating Status"]
 pub mod cgatstat2;
 #[doc = "Peripheral 2 Clock Gating Set"]
 pub struct CGATSET2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Peripheral 2 Clock Gating Set"]
 pub mod cgatset2;
 #[doc = "Peripheral 2 Clock Gating Clear"]
 pub struct CGATCLR2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Peripheral 2 Clock Gating Clear"]
 pub mod cgatclr2;

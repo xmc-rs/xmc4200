@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -73,199 +72,199 @@ pub struct RegisterBlock {
 }
 #[doc = "Input Selector Configuration"]
 pub struct INS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Input Selector Configuration"]
 pub mod ins;
 #[doc = "Connection Matrix Control"]
 pub struct CMC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Connection Matrix Control"]
 pub mod cmc;
 #[doc = "Slice Timer Status"]
 pub struct TCST {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Slice Timer Status"]
 pub mod tcst;
 #[doc = "Slice Timer Run Set"]
 pub struct TCSET {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Slice Timer Run Set"]
 pub mod tcset;
 #[doc = "Slice Timer Clear"]
 pub struct TCCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Slice Timer Clear"]
 pub mod tcclr;
 #[doc = "Slice Timer Control"]
 pub struct TC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Slice Timer Control"]
 pub mod tc;
 #[doc = "Passive Level Config"]
 pub struct PSL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Passive Level Config"]
 pub mod psl;
 #[doc = "Dither Config"]
 pub struct DIT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Dither Config"]
 pub mod dit;
 #[doc = "Dither Shadow Register"]
 pub struct DITS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Dither Shadow Register"]
 pub mod dits;
 #[doc = "Prescaler Control"]
 pub struct PSC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Prescaler Control"]
 pub mod psc;
 #[doc = "Floating Prescaler Control"]
 pub struct FPC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Floating Prescaler Control"]
 pub mod fpc;
 #[doc = "Floating Prescaler Shadow"]
 pub struct FPCS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Floating Prescaler Shadow"]
 pub mod fpcs;
 #[doc = "Timer Period Value"]
 pub struct PR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Timer Period Value"]
 pub mod pr;
 #[doc = "Timer Shadow Period Value"]
 pub struct PRS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Timer Shadow Period Value"]
 pub mod prs;
 #[doc = "Channel 1 Compare Value"]
 pub struct CR1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel 1 Compare Value"]
 pub mod cr1;
 #[doc = "Channel 1 Compare Shadow Value"]
 pub struct CR1S {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel 1 Compare Shadow Value"]
 pub mod cr1s;
 #[doc = "Channel 2 Compare Value"]
 pub struct CR2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel 2 Compare Value"]
 pub mod cr2;
 #[doc = "Channel 2 Compare Shadow Value"]
 pub struct CR2S {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel 2 Compare Shadow Value"]
 pub mod cr2s;
 #[doc = "Channel Control"]
 pub struct CHC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel Control"]
 pub mod chc;
 #[doc = "Dead Time Control"]
 pub struct DTC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Dead Time Control"]
 pub mod dtc;
 #[doc = "Channel 1 Dead Time Values"]
 pub struct DC1R {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel 1 Dead Time Values"]
 pub mod dc1r;
 #[doc = "Channel 2 Dead Time Values"]
 pub struct DC2R {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel 2 Dead Time Values"]
 pub mod dc2r;
 #[doc = "Timer Value"]
 pub struct TIMER {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Timer Value"]
 pub mod timer;
 #[doc = "Capture Register 0"]
 pub struct C0V {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Capture Register 0"]
 pub mod c0v;
 #[doc = "Capture Register 1"]
 pub struct C1V {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Capture Register 1"]
 pub mod c1v;
 #[doc = "Capture Register 2"]
 pub struct C2V {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Capture Register 2"]
 pub mod c2v;
 #[doc = "Capture Register 3"]
 pub struct C3V {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Capture Register 3"]
 pub mod c3v;
 #[doc = "Interrupt Status"]
 pub struct INTS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Status"]
 pub mod ints;
 #[doc = "Interrupt Enable Control"]
 pub struct INTE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Enable Control"]
 pub mod inte;
 #[doc = "Service Request Selector"]
 pub struct SRS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Selector"]
 pub mod srs;
 #[doc = "Interrupt Status Set"]
 pub struct SWS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Status Set"]
 pub mod sws;
 #[doc = "Interrupt Status Clear"]
 pub struct SWR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Status Clear"]
 pub mod swr;
 #[doc = "Shadow transfer control"]
 pub struct STC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Shadow transfer control"]
 pub mod stc;

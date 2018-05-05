@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -21,55 +20,55 @@ pub struct RegisterBlock {
 }
 #[doc = "Message Object Function Control Register"]
 pub struct MOFCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Object Function Control Register"]
 pub mod mofcr;
 #[doc = "Message Object FIFO/Gateway Pointer Register"]
 pub struct MOFGPR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Object FIFO/Gateway Pointer Register"]
 pub mod mofgpr;
 #[doc = "Message Object Interrupt Pointer Register"]
 pub struct MOIPR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Object Interrupt Pointer Register"]
 pub mod moipr;
 #[doc = "Message Object Acceptance Mask Register"]
 pub struct MOAMR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Object Acceptance Mask Register"]
 pub mod moamr;
 #[doc = "Message Object Data Register Low"]
 pub struct MODATAL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Object Data Register Low"]
 pub mod modatal;
 #[doc = "Message Object Data Register High"]
 pub struct MODATAH {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Object Data Register High"]
 pub mod modatah;
 #[doc = "Message Object Arbitration Register"]
 pub struct MOAR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Object Arbitration Register"]
 pub mod moar;
 #[doc = "Message Object Control Register"]
 pub struct MOCTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Object Control Register"]
 pub mod moctr;
 #[doc = "Message Object Status Register"]
 pub struct MOSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Object Status Register"]
 pub mod mostat;

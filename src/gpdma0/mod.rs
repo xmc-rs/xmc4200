@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -99,193 +98,193 @@ pub struct RegisterBlock {
 }
 #[doc = "Raw IntTfr Status"]
 pub struct RAWTFR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Raw IntTfr Status"]
 pub mod rawtfr;
 #[doc = "Raw IntBlock Status"]
 pub struct RAWBLOCK {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Raw IntBlock Status"]
 pub mod rawblock;
 #[doc = "Raw IntSrcTran Status"]
 pub struct RAWSRCTRAN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Raw IntSrcTran Status"]
 pub mod rawsrctran;
 #[doc = "Raw IntBlock Status"]
 pub struct RAWDSTTRAN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Raw IntBlock Status"]
 pub mod rawdsttran;
 #[doc = "Raw IntErr Status"]
 pub struct RAWERR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Raw IntErr Status"]
 pub mod rawerr;
 #[doc = "IntTfr Status"]
 pub struct STATUSTFR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "IntTfr Status"]
 pub mod statustfr;
 #[doc = "IntBlock Status"]
 pub struct STATUSBLOCK {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "IntBlock Status"]
 pub mod statusblock;
 #[doc = "IntSrcTran Status"]
 pub struct STATUSSRCTRAN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "IntSrcTran Status"]
 pub mod statussrctran;
 #[doc = "IntBlock Status"]
 pub struct STATUSDSTTRAN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "IntBlock Status"]
 pub mod statusdsttran;
 #[doc = "IntErr Status"]
 pub struct STATUSERR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "IntErr Status"]
 pub mod statuserr;
 #[doc = "Mask for Raw IntTfr Status"]
 pub struct MASKTFR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Mask for Raw IntTfr Status"]
 pub mod masktfr;
 #[doc = "Mask for Raw IntBlock Status"]
 pub struct MASKBLOCK {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Mask for Raw IntBlock Status"]
 pub mod maskblock;
 #[doc = "Mask for Raw IntSrcTran Status"]
 pub struct MASKSRCTRAN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Mask for Raw IntSrcTran Status"]
 pub mod masksrctran;
 #[doc = "Mask for Raw IntBlock Status"]
 pub struct MASKDSTTRAN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Mask for Raw IntBlock Status"]
 pub mod maskdsttran;
 #[doc = "Mask for Raw IntErr Status"]
 pub struct MASKERR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Mask for Raw IntErr Status"]
 pub mod maskerr;
 #[doc = "IntTfr Status"]
 pub struct CLEARTFR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "IntTfr Status"]
 pub mod cleartfr;
 #[doc = "IntBlock Status"]
 pub struct CLEARBLOCK {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "IntBlock Status"]
 pub mod clearblock;
 #[doc = "IntSrcTran Status"]
 pub struct CLEARSRCTRAN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "IntSrcTran Status"]
 pub mod clearsrctran;
 #[doc = "IntBlock Status"]
 pub struct CLEARDSTTRAN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "IntBlock Status"]
 pub mod cleardsttran;
 #[doc = "IntErr Status"]
 pub struct CLEARERR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "IntErr Status"]
 pub mod clearerr;
 #[doc = "Combined Interrupt Status Register"]
 pub struct STATUSINT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Combined Interrupt Status Register"]
 pub mod statusint;
 #[doc = "Source Software Transaction Request Register"]
 pub struct REQSRCREG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Source Software Transaction Request Register"]
 pub mod reqsrcreg;
 #[doc = "Destination Software Transaction Request Register"]
 pub struct REQDSTREG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Destination Software Transaction Request Register"]
 pub mod reqdstreg;
 #[doc = "Single Source Transaction Request Register"]
 pub struct SGLREQSRCREG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Single Source Transaction Request Register"]
 pub mod sglreqsrcreg;
 #[doc = "Single Destination Transaction Request Register"]
 pub struct SGLREQDSTREG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Single Destination Transaction Request Register"]
 pub mod sglreqdstreg;
 #[doc = "Last Source Transaction Request Register"]
 pub struct LSTSRCREG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Last Source Transaction Request Register"]
 pub mod lstsrcreg;
 #[doc = "Last Destination Transaction Request Register"]
 pub struct LSTDSTREG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Last Destination Transaction Request Register"]
 pub mod lstdstreg;
 #[doc = "GPDMA Configuration Register"]
 pub struct DMACFGREG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "GPDMA Configuration Register"]
 pub mod dmacfgreg;
 #[doc = "GPDMA Channel Enable Register"]
 pub struct CHENREG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "GPDMA Channel Enable Register"]
 pub mod chenreg;
 #[doc = "GPDMA0 ID Register"]
 pub struct ID {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "GPDMA0 ID Register"]
 pub mod id;
 #[doc = "GPDMA Component Type"]
 pub struct TYPE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "GPDMA Component Type"]
 pub mod type_;
 #[doc = "DMA Component Version"]
 pub struct VERSION {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Component Version"]
 pub mod version;

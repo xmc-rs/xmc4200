@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -27,67 +26,67 @@ pub struct RegisterBlock {
 }
 #[doc = "Module Identification Register"]
 pub struct ID {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Module Identification Register"]
 pub mod id;
 #[doc = "Global Control Register"]
 pub struct GLOBCTL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Control Register"]
 pub mod globctl;
 #[doc = "Function Control Register"]
 pub struct FNCTL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Function Control Register"]
 pub mod fnctl;
 #[doc = "Event Flag Register"]
 pub struct EVFR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Event Flag Register"]
 pub mod evfr;
 #[doc = "Touch-sense TS-Counter Value"]
 pub struct TSVAL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Touch-sense TS-Counter Value"]
 pub mod tsval;
 #[doc = "Line Pattern Register 0"]
 pub struct LINE0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Line Pattern Register 0"]
 pub mod line0;
 #[doc = "Line Pattern Register 1"]
 pub struct LINE1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Line Pattern Register 1"]
 pub mod line1;
 #[doc = "LED Compare Register 0"]
 pub struct LDCMP0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "LED Compare Register 0"]
 pub mod ldcmp0;
 #[doc = "LED Compare Register 1"]
 pub struct LDCMP1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "LED Compare Register 1"]
 pub mod ldcmp1;
 #[doc = "Touch-sense Compare Register 0"]
 pub struct TSCMP0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Touch-sense Compare Register 0"]
 pub mod tscmp0;
 #[doc = "Touch-sense Compare Register 1"]
 pub struct TSCMP1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Touch-sense Compare Register 1"]
 pub mod tscmp1;

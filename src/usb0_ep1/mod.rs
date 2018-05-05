@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -33,85 +32,85 @@ pub struct RegisterBlock {
 }
 #[doc = "Device Endpoint Control Register [ISOCONT]"]
 pub struct DIEPCTL_ISOCONT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint Control Register [ISOCONT]"]
 pub mod diepctl_isocont;
 #[doc = "Device Endpoint Control Register [INTBULK]"]
 pub struct DIEPCTL_INTBULK {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint Control Register [INTBULK]"]
 pub mod diepctl_intbulk;
 #[doc = "Device Endpoint Interrupt Register"]
 pub struct DIEPINT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint Interrupt Register"]
 pub mod diepint;
 #[doc = "Device Endpoint Transfer Size Register"]
 pub struct DIEPTSIZ {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint Transfer Size Register"]
 pub mod dieptsiz;
 #[doc = "Device Endpoint DMA Address Register"]
 pub struct DIEPDMA {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint DMA Address Register"]
 pub mod diepdma;
 #[doc = "Device IN Endpoint Transmit FIFO Status Register"]
 pub struct DTXFSTS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device IN Endpoint Transmit FIFO Status Register"]
 pub mod dtxfsts;
 #[doc = "Device Endpoint DMA Buffer Address Register"]
 pub struct DIEPDMAB {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint DMA Buffer Address Register"]
 pub mod diepdmab;
 #[doc = "Device Endpoint Control Register [ISOCONT]"]
 pub struct DOEPCTL_ISOCONT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint Control Register [ISOCONT]"]
 pub mod doepctl_isocont;
 #[doc = "Device Endpoint Control Register [INTBULK]"]
 pub struct DOEPCTL_INTBULK {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint Control Register [INTBULK]"]
 pub mod doepctl_intbulk;
 #[doc = "Device Endpoint Interrupt Register"]
 pub struct DOEPINT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint Interrupt Register"]
 pub mod doepint;
 #[doc = "Device Endpoint Transfer Size Register [ISO]"]
 pub struct DOEPTSIZ_ISO {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint Transfer Size Register [ISO]"]
 pub mod doeptsiz_iso;
 #[doc = "Device Endpoint Transfer Size Register [CONT]"]
 pub struct DOEPTSIZ_CONTROL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint Transfer Size Register [CONT]"]
 pub mod doeptsiz_control;
 #[doc = "Device Endpoint DMA Address Register"]
 pub struct DOEPDMA {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint DMA Address Register"]
 pub mod doepdma;
 #[doc = "Device Endpoint DMA Buffer Address Register"]
 pub struct DOEPDMAB {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Device Endpoint DMA Buffer Address Register"]
 pub mod doepdmab;

@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -187,505 +186,505 @@ pub struct RegisterBlock {
 }
 #[doc = "Auxiliary Control Register"]
 pub struct ACTLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Auxiliary Control Register"]
 pub mod actlr;
 #[doc = "SysTick Control and Status Register"]
 pub struct SYST_CSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "SysTick Control and Status Register"]
 pub mod syst_csr;
 #[doc = "SysTick Reload Value Register"]
 pub struct SYST_RVR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "SysTick Reload Value Register"]
 pub mod syst_rvr;
 #[doc = "SysTick Current Value Register"]
 pub struct SYST_CVR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "SysTick Current Value Register"]
 pub mod syst_cvr;
 #[doc = "SysTick Calibration Value Register r"]
 pub struct SYST_CALIB {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "SysTick Calibration Value Register r"]
 pub mod syst_calib;
 #[doc = "Interrupt Set-enable Register 0"]
 pub struct NVIC_ISER0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Set-enable Register 0"]
 pub mod nvic_iser0;
 #[doc = "Interrupt Set-enable Register 1"]
 pub struct NVIC_ISER1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Set-enable Register 1"]
 pub mod nvic_iser1;
 #[doc = "Interrupt Set-enable Register 2"]
 pub struct NVIC_ISER2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Set-enable Register 2"]
 pub mod nvic_iser2;
 #[doc = "Interrupt Set-enable Register 3"]
 pub struct NVIC_ISER3 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Set-enable Register 3"]
 pub mod nvic_iser3;
 #[doc = "Interrupt Clear-enable Register 0"]
 pub struct NVIC_ICER0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Clear-enable Register 0"]
 pub mod nvic_icer0;
 #[doc = "Interrupt Clear-enable Register 1"]
 pub struct NVIC_ICER1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Clear-enable Register 1"]
 pub mod nvic_icer1;
 #[doc = "Interrupt Clear-enable Register 2"]
 pub struct NVIC_ICER2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Clear-enable Register 2"]
 pub mod nvic_icer2;
 #[doc = "Interrupt Clear-enable Register 3"]
 pub struct NVIC_ICER3 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Clear-enable Register 3"]
 pub mod nvic_icer3;
 #[doc = "Interrupt Set-pending Register 0"]
 pub struct NVIC_ISPR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Set-pending Register 0"]
 pub mod nvic_ispr0;
 #[doc = "Interrupt Set-pending Register 1"]
 pub struct NVIC_ISPR1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Set-pending Register 1"]
 pub mod nvic_ispr1;
 #[doc = "Interrupt Set-pending Register 2"]
 pub struct NVIC_ISPR2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Set-pending Register 2"]
 pub mod nvic_ispr2;
 #[doc = "Interrupt Set-pending Register 3"]
 pub struct NVIC_ISPR3 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Set-pending Register 3"]
 pub mod nvic_ispr3;
 #[doc = "Interrupt Clear-pending Register 0"]
 pub struct NVIC_ICPR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Clear-pending Register 0"]
 pub mod nvic_icpr0;
 #[doc = "Interrupt Clear-pending Register 1"]
 pub struct NVIC_ICPR1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Clear-pending Register 1"]
 pub mod nvic_icpr1;
 #[doc = "Interrupt Clear-pending Register 2"]
 pub struct NVIC_ICPR2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Clear-pending Register 2"]
 pub mod nvic_icpr2;
 #[doc = "Interrupt Clear-pending Register 3"]
 pub struct NVIC_ICPR3 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Clear-pending Register 3"]
 pub mod nvic_icpr3;
 #[doc = "Interrupt Active Bit Register 0"]
 pub struct NVIC_IABR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Active Bit Register 0"]
 pub mod nvic_iabr0;
 #[doc = "Interrupt Active Bit Register 1"]
 pub struct NVIC_IABR1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Active Bit Register 1"]
 pub mod nvic_iabr1;
 #[doc = "Interrupt Active Bit Register 2"]
 pub struct NVIC_IABR2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Active Bit Register 2"]
 pub mod nvic_iabr2;
 #[doc = "Interrupt Active Bit Register 3"]
 pub struct NVIC_IABR3 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Active Bit Register 3"]
 pub mod nvic_iabr3;
 #[doc = "Interrupt Priority Register 0"]
 pub struct NVIC_IPR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 0"]
 pub mod nvic_ipr0;
 #[doc = "Interrupt Priority Register 1"]
 pub struct NVIC_IPR1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 1"]
 pub mod nvic_ipr1;
 #[doc = "Interrupt Priority Register 2"]
 pub struct NVIC_IPR2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 2"]
 pub mod nvic_ipr2;
 #[doc = "Interrupt Priority Register 3"]
 pub struct NVIC_IPR3 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 3"]
 pub mod nvic_ipr3;
 #[doc = "Interrupt Priority Register 4"]
 pub struct NVIC_IPR4 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 4"]
 pub mod nvic_ipr4;
 #[doc = "Interrupt Priority Register 5"]
 pub struct NVIC_IPR5 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 5"]
 pub mod nvic_ipr5;
 #[doc = "Interrupt Priority Register 6"]
 pub struct NVIC_IPR6 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 6"]
 pub mod nvic_ipr6;
 #[doc = "Interrupt Priority Register 7"]
 pub struct NVIC_IPR7 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 7"]
 pub mod nvic_ipr7;
 #[doc = "Interrupt Priority Register 8"]
 pub struct NVIC_IPR8 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 8"]
 pub mod nvic_ipr8;
 #[doc = "Interrupt Priority Register 9"]
 pub struct NVIC_IPR9 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 9"]
 pub mod nvic_ipr9;
 #[doc = "Interrupt Priority Register 10"]
 pub struct NVIC_IPR10 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 10"]
 pub mod nvic_ipr10;
 #[doc = "Interrupt Priority Register 11"]
 pub struct NVIC_IPR11 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 11"]
 pub mod nvic_ipr11;
 #[doc = "Interrupt Priority Register 12"]
 pub struct NVIC_IPR12 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 12"]
 pub mod nvic_ipr12;
 #[doc = "Interrupt Priority Register 13"]
 pub struct NVIC_IPR13 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 13"]
 pub mod nvic_ipr13;
 #[doc = "Interrupt Priority Register 14"]
 pub struct NVIC_IPR14 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 14"]
 pub mod nvic_ipr14;
 #[doc = "Interrupt Priority Register 15"]
 pub struct NVIC_IPR15 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 15"]
 pub mod nvic_ipr15;
 #[doc = "Interrupt Priority Register 16"]
 pub struct NVIC_IPR16 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 16"]
 pub mod nvic_ipr16;
 #[doc = "Interrupt Priority Register 17"]
 pub struct NVIC_IPR17 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 17"]
 pub mod nvic_ipr17;
 #[doc = "Interrupt Priority Register 18"]
 pub struct NVIC_IPR18 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 18"]
 pub mod nvic_ipr18;
 #[doc = "Interrupt Priority Register 19"]
 pub struct NVIC_IPR19 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 19"]
 pub mod nvic_ipr19;
 #[doc = "Interrupt Priority Register 20"]
 pub struct NVIC_IPR20 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 20"]
 pub mod nvic_ipr20;
 #[doc = "Interrupt Priority Register 21"]
 pub struct NVIC_IPR21 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 21"]
 pub mod nvic_ipr21;
 #[doc = "Interrupt Priority Register 22"]
 pub struct NVIC_IPR22 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 22"]
 pub mod nvic_ipr22;
 #[doc = "Interrupt Priority Register 23"]
 pub struct NVIC_IPR23 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 23"]
 pub mod nvic_ipr23;
 #[doc = "Interrupt Priority Register 24"]
 pub struct NVIC_IPR24 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 24"]
 pub mod nvic_ipr24;
 #[doc = "Interrupt Priority Register 25"]
 pub struct NVIC_IPR25 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 25"]
 pub mod nvic_ipr25;
 #[doc = "Interrupt Priority Register 26"]
 pub struct NVIC_IPR26 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 26"]
 pub mod nvic_ipr26;
 #[doc = "Interrupt Priority Register 27"]
 pub struct NVIC_IPR27 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Priority Register 27"]
 pub mod nvic_ipr27;
 #[doc = "CPUID Base Register"]
 pub struct CPUID {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CPUID Base Register"]
 pub mod cpuid;
 #[doc = "Interrupt Control and State Register"]
 pub struct ICSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Control and State Register"]
 pub mod icsr;
 #[doc = "Vector Table Offset Register"]
 pub struct VTOR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Vector Table Offset Register"]
 pub mod vtor;
 #[doc = "Application Interrupt and Reset Control Register"]
 pub struct AIRCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Application Interrupt and Reset Control Register"]
 pub mod aircr;
 #[doc = "System Control Register"]
 pub struct SCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "System Control Register"]
 pub mod scr;
 #[doc = "Configuration and Control Register"]
 pub struct CCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Configuration and Control Register"]
 pub mod ccr;
 #[doc = "System Handler Priority Register 1"]
 pub struct SHPR1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "System Handler Priority Register 1"]
 pub mod shpr1;
 #[doc = "System Handler Priority Register 2"]
 pub struct SHPR2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "System Handler Priority Register 2"]
 pub mod shpr2;
 #[doc = "System Handler Priority Register 3"]
 pub struct SHPR3 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "System Handler Priority Register 3"]
 pub mod shpr3;
 #[doc = "System Handler Control and State Register"]
 pub struct SHCSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "System Handler Control and State Register"]
 pub mod shcsr;
 #[doc = "Configurable Fault Status Register"]
 pub struct CFSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Configurable Fault Status Register"]
 pub mod cfsr;
 #[doc = "HardFault Status Register"]
 pub struct HFSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "HardFault Status Register"]
 pub mod hfsr;
 #[doc = "MemManage Fault Address Register"]
 pub struct MMFAR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MemManage Fault Address Register"]
 pub mod mmfar;
 #[doc = "BusFault Address Register"]
 pub struct BFAR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "BusFault Address Register"]
 pub mod bfar;
 #[doc = "Auxiliary Fault Status Register"]
 pub struct AFSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Auxiliary Fault Status Register"]
 pub mod afsr;
 #[doc = "Coprocessor Access Control Register"]
 pub struct CPACR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Coprocessor Access Control Register"]
 pub mod cpacr;
 #[doc = "MPU Type Register"]
 pub struct MPU_TYPE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MPU Type Register"]
 pub mod mpu_type;
 #[doc = "MPU Control Register"]
 pub struct MPU_CTRL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MPU Control Register"]
 pub mod mpu_ctrl;
 #[doc = "MPU Region Number Register"]
 pub struct MPU_RNR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MPU Region Number Register"]
 pub mod mpu_rnr;
 #[doc = "MPU Region Base Address Register"]
 pub struct MPU_RBAR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MPU Region Base Address Register"]
 pub mod mpu_rbar;
 #[doc = "MPU Region Attribute and Size Register"]
 pub struct MPU_RASR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MPU Region Attribute and Size Register"]
 pub mod mpu_rasr;
 #[doc = "MPU Region Base Address Register A1"]
 pub struct MPU_RBAR_A1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MPU Region Base Address Register A1"]
 pub mod mpu_rbar_a1;
 #[doc = "MPU Region Attribute and Size Register A1"]
 pub struct MPU_RASR_A1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MPU Region Attribute and Size Register A1"]
 pub mod mpu_rasr_a1;
 #[doc = "MPU Region Base Address Register A2"]
 pub struct MPU_RBAR_A2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MPU Region Base Address Register A2"]
 pub mod mpu_rbar_a2;
 #[doc = "MPU Region Attribute and Size Register A2"]
 pub struct MPU_RASR_A2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MPU Region Attribute and Size Register A2"]
 pub mod mpu_rasr_a2;
 #[doc = "MPU Region Base Address Register A3"]
 pub struct MPU_RBAR_A3 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MPU Region Base Address Register A3"]
 pub mod mpu_rbar_a3;
 #[doc = "MPU Region Attribute and Size Register A3"]
 pub struct MPU_RASR_A3 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "MPU Region Attribute and Size Register A3"]
 pub mod mpu_rasr_a3;
 #[doc = "Software Trigger Interrupt Register"]
 pub struct STIR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Software Trigger Interrupt Register"]
 pub mod stir;
 #[doc = "Floating-point Context Control Register"]
 pub struct FPCCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Floating-point Context Control Register"]
 pub mod fpccr;
 #[doc = "Floating-point Context Address Register"]
 pub struct FPCAR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Floating-point Context Address Register"]
 pub mod fpcar;
 #[doc = "Floating-point Default Status Control Register"]
 pub struct FPDSCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Floating-point Default Status Control Register"]
 pub mod fpdscr;

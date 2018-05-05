@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -12,19 +11,19 @@ pub struct RegisterBlock {
 }
 #[doc = "Event Input Select"]
 pub struct EXISEL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Event Input Select"]
 pub mod exisel;
 #[doc = "Event Input Control"]
 pub struct EXICON {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Event Input Control"]
 pub mod exicon;
 #[doc = "Event Output Trigger Control"]
 pub struct EXOCON {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Event Output Trigger Control"]
 pub mod exocon;

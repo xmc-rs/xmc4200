@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -22,43 +21,43 @@ pub struct RegisterBlock {
 }
 #[doc = "Flash Module Identification Register"]
 pub struct ID {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Flash Module Identification Register"]
 pub mod id;
 #[doc = "Flash Status Register"]
 pub struct FSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Flash Status Register"]
 pub mod fsr;
 #[doc = "Flash Configuration Register"]
 pub struct FCON {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Flash Configuration Register"]
 pub mod fcon;
 #[doc = "Margin Control Register PFLASH"]
 pub struct MARP {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Margin Control Register PFLASH"]
 pub mod marp;
 #[doc = "Flash Protection Configuration Register User 0"]
 pub struct PROCON0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Flash Protection Configuration Register User 0"]
 pub mod procon0;
 #[doc = "Flash Protection Configuration Register User 1"]
 pub struct PROCON1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Flash Protection Configuration Register User 1"]
 pub mod procon1;
 #[doc = "Flash Protection Configuration Register User 2"]
 pub struct PROCON2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Flash Protection Configuration Register User 2"]
 pub mod procon2;

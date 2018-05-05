@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -17,37 +16,37 @@ pub struct RegisterBlock {
 }
 #[doc = "SCU Service Request Status"]
 pub struct SRSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "SCU Service Request Status"]
 pub mod srstat;
 #[doc = "SCU Raw Service Request Status"]
 pub struct SRRAW {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "SCU Raw Service Request Status"]
 pub mod srraw;
 #[doc = "SCU Service Request Mask"]
 pub struct SRMSK {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "SCU Service Request Mask"]
 pub mod srmsk;
 #[doc = "SCU Service Request Clear"]
 pub struct SRCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "SCU Service Request Clear"]
 pub mod srclr;
 #[doc = "SCU Service Request Set"]
 pub struct SRSET {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "SCU Service Request Set"]
 pub mod srset;
 #[doc = "SCU Service Request Mask"]
 pub struct NMIREQEN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "SCU Service Request Mask"]
 pub mod nmireqen;

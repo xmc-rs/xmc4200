@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -25,55 +24,55 @@ pub struct RegisterBlock {
 }
 #[doc = "Global Control Register"]
 pub struct GCTRL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Control Register"]
 pub mod gctrl;
 #[doc = "Global Status Register"]
 pub struct GSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Status Register"]
 pub mod gstat;
 #[doc = "Global Idle Set"]
 pub struct GIDLS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Idle Set"]
 pub mod gidls;
 #[doc = "Global Idle Clear"]
 pub struct GIDLC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Idle Clear"]
 pub mod gidlc;
 #[doc = "Global Channel Set"]
 pub struct GCSS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Channel Set"]
 pub mod gcss;
 #[doc = "Global Channel Clear"]
 pub struct GCSC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Channel Clear"]
 pub mod gcsc;
 #[doc = "Global Channel Status"]
 pub struct GCST {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Channel Status"]
 pub mod gcst;
 #[doc = "Extended Capture Mode Read"]
 pub struct ECRD {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Extended Capture Mode Read"]
 pub mod ecrd;
 #[doc = "Module Identification"]
 pub struct MIDR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Module Identification"]
 pub mod midr;

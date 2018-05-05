@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -29,73 +28,73 @@ pub struct RegisterBlock {
 }
 #[doc = "RCU Reset Status"]
 pub struct RSTSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Reset Status"]
 pub mod rststat;
 #[doc = "RCU Reset Set Register"]
 pub struct RSTSET {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Reset Set Register"]
 pub mod rstset;
 #[doc = "RCU Reset Clear Register"]
 pub struct RSTCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Reset Clear Register"]
 pub mod rstclr;
 #[doc = "RCU Peripheral 0 Reset Status"]
 pub struct PRSTAT0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Peripheral 0 Reset Status"]
 pub mod prstat0;
 #[doc = "RCU Peripheral 0 Reset Set"]
 pub struct PRSET0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Peripheral 0 Reset Set"]
 pub mod prset0;
 #[doc = "RCU Peripheral 0 Reset Clear"]
 pub struct PRCLR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Peripheral 0 Reset Clear"]
 pub mod prclr0;
 #[doc = "RCU Peripheral 1 Reset Status"]
 pub struct PRSTAT1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Peripheral 1 Reset Status"]
 pub mod prstat1;
 #[doc = "RCU Peripheral 1 Reset Set"]
 pub struct PRSET1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Peripheral 1 Reset Set"]
 pub mod prset1;
 #[doc = "RCU Peripheral 1 Reset Clear"]
 pub struct PRCLR1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Peripheral 1 Reset Clear"]
 pub mod prclr1;
 #[doc = "RCU Peripheral 2 Reset Status"]
 pub struct PRSTAT2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Peripheral 2 Reset Status"]
 pub mod prstat2;
 #[doc = "RCU Peripheral 2 Reset Set"]
 pub struct PRSET2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Peripheral 2 Reset Set"]
 pub mod prset2;
 #[doc = "RCU Peripheral 2 Reset Clear"]
 pub struct PRCLR2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RCU Peripheral 2 Reset Clear"]
 pub mod prclr2;

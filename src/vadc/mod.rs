@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -54,103 +53,103 @@ pub struct RegisterBlock {
 }
 #[doc = "Clock Control Register"]
 pub struct CLC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Clock Control Register"]
 pub mod clc;
 #[doc = "Module Identification Register"]
 pub struct ID {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Module Identification Register"]
 pub mod id;
 #[doc = "OCDS Control and Status Register"]
 pub struct OCS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "OCDS Control and Status Register"]
 pub mod ocs;
 #[doc = "Global Configuration Register"]
 pub struct GLOBCFG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Configuration Register"]
 pub mod globcfg;
 #[doc = "Input Class Register, Global"]
 pub struct GLOBICLASS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Input Class Register, Global"]
 pub mod globiclass;
 #[doc = "Global Boundary Select Register"]
 pub struct GLOBBOUND {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Boundary Select Register"]
 pub mod globbound;
 #[doc = "Global Event Flag Register"]
 pub struct GLOBEFLAG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Event Flag Register"]
 pub mod globeflag;
 #[doc = "Global Event Node Pointer Register"]
 pub struct GLOBEVNP {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Event Node Pointer Register"]
 pub mod globevnp;
 #[doc = "Global Test Functions Register"]
 pub struct GLOBTF {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Test Functions Register"]
 pub mod globtf;
 #[doc = "Background Request Source Channel Select Register"]
 pub struct BRSSEL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Background Request Source Channel Select Register"]
 pub mod brssel;
 #[doc = "Background Request Source Pending Register"]
 pub struct BRSPND {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Background Request Source Pending Register"]
 pub mod brspnd;
 #[doc = "Background Request Source Control Register"]
 pub struct BRSCTRL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Background Request Source Control Register"]
 pub mod brsctrl;
 #[doc = "Background Request Source Mode Register"]
 pub struct BRSMR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Background Request Source Mode Register"]
 pub mod brsmr;
 #[doc = "Global Result Control Register"]
 pub struct GLOBRCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Result Control Register"]
 pub mod globrcr;
 #[doc = "Global Result Register"]
 pub struct GLOBRES {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Result Register"]
 pub mod globres;
 #[doc = "Global Result Register, Debug"]
 pub struct GLOBRESD {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Result Register, Debug"]
 pub mod globresd;
 #[doc = "External Multiplexer Select Register"]
 pub struct EMUXSEL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "External Multiplexer Select Register"]
 pub mod emuxsel;

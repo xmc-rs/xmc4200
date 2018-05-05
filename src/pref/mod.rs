@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -7,7 +6,7 @@ pub struct RegisterBlock {
 }
 #[doc = "Prefetch Configuration Register"]
 pub struct PCON {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Prefetch Configuration Register"]
 pub mod pcon;

@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -29,61 +28,61 @@ pub struct RegisterBlock {
 }
 #[doc = "Port 14 Output Register"]
 pub struct OUT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 14 Output Register"]
 pub mod out;
 #[doc = "Port 14 Output Modification Register"]
 pub struct OMR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 14 Output Modification Register"]
 pub mod omr;
 #[doc = "Port 14 Input/Output Control Register 0"]
 pub struct IOCR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 14 Input/Output Control Register 0"]
 pub mod iocr0;
 #[doc = "Port 14 Input/Output Control Register 4"]
 pub struct IOCR4 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 14 Input/Output Control Register 4"]
 pub mod iocr4;
 #[doc = "Port 14 Input/Output Control Register 8"]
 pub struct IOCR8 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 14 Input/Output Control Register 8"]
 pub mod iocr8;
 #[doc = "Port 14 Input/Output Control Register 12"]
 pub struct IOCR12 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 14 Input/Output Control Register 12"]
 pub mod iocr12;
 #[doc = "Port 14 Input Register"]
 pub struct IN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 14 Input Register"]
 pub mod in_;
 #[doc = "Port 14 Pin Function Decision Control Register"]
 pub struct PDISC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 14 Pin Function Decision Control Register"]
 pub mod pdisc;
 #[doc = "Port 14 Pin Power Save Register"]
 pub struct PPS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 14 Pin Power Save Register"]
 pub mod pps;
 #[doc = "Port 14 Pin Hardware Select Register"]
 pub struct HWSEL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 14 Pin Hardware Select Register"]
 pub mod hwsel;

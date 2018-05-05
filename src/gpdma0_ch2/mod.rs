@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -20,37 +19,37 @@ pub struct RegisterBlock {
 }
 #[doc = "Source Address Register"]
 pub struct SAR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Source Address Register"]
 pub mod sar;
 #[doc = "Destination Address Register"]
 pub struct DAR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Destination Address Register"]
 pub mod dar;
 #[doc = "Control Register Low"]
 pub struct CTLL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Control Register Low"]
 pub mod ctll;
 #[doc = "Control Register High"]
 pub struct CTLH {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Control Register High"]
 pub mod ctlh;
 #[doc = "Configuration Register Low"]
 pub struct CFGL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Configuration Register Low"]
 pub mod cfgl;
 #[doc = "Configuration Register High"]
 pub struct CFGH {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Configuration Register High"]
 pub mod cfgh;

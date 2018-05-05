@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -26,49 +25,49 @@ pub struct RegisterBlock {
 }
 #[doc = "Port 3 Output Register"]
 pub struct OUT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 3 Output Register"]
 pub mod out;
 #[doc = "Port 3 Output Modification Register"]
 pub struct OMR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 3 Output Modification Register"]
 pub mod omr;
 #[doc = "Port 3 Input/Output Control Register 0"]
 pub struct IOCR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 3 Input/Output Control Register 0"]
 pub mod iocr0;
 #[doc = "Port 3 Input Register"]
 pub struct IN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 3 Input Register"]
 pub mod in_;
 #[doc = "Port 3 Pad Driver Mode 0 Register"]
 pub struct PDR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 3 Pad Driver Mode 0 Register"]
 pub mod pdr0;
 #[doc = "Port 3 Pin Function Decision Control Register"]
 pub struct PDISC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 3 Pin Function Decision Control Register"]
 pub mod pdisc;
 #[doc = "Port 3 Pin Power Save Register"]
 pub struct PPS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 3 Pin Power Save Register"]
 pub mod pps;
 #[doc = "Port 3 Pin Hardware Select Register"]
 pub struct HWSEL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Port 3 Pin Hardware Select Register"]
 pub mod hwsel;

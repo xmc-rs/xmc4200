@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -21,49 +20,49 @@ pub struct RegisterBlock {
 }
 #[doc = "WDT ID Register"]
 pub struct ID {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "WDT ID Register"]
 pub mod id;
 #[doc = "WDT Control Register"]
 pub struct CTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "WDT Control Register"]
 pub mod ctr;
 #[doc = "WDT Service Register"]
 pub struct SRV {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "WDT Service Register"]
 pub mod srv;
 #[doc = "WDT Timer Register"]
 pub struct TIM {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "WDT Timer Register"]
 pub mod tim;
 #[doc = "WDT Window Lower Bound Register"]
 pub struct WLB {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "WDT Window Lower Bound Register"]
 pub mod wlb;
 #[doc = "WDT Window Upper Bound Register"]
 pub struct WUB {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "WDT Window Upper Bound Register"]
 pub mod wub;
 #[doc = "WDT Status Register"]
 pub struct WDTSTS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "WDT Status Register"]
 pub mod wdtsts;
 #[doc = "WDT Clear Register"]
 pub struct WDTCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "WDT Clear Register"]
 pub mod wdtclr;

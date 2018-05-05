@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -20,43 +19,43 @@ pub struct RegisterBlock {
 }
 #[doc = "Parity Error Enable Register"]
 pub struct PEEN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Parity Error Enable Register"]
 pub mod peen;
 #[doc = "Memory Checking Control Register"]
 pub struct MCHKCON {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Memory Checking Control Register"]
 pub mod mchkcon;
 #[doc = "Parity Error Trap Enable Register"]
 pub struct PETE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Parity Error Trap Enable Register"]
 pub mod pete;
 #[doc = "Parity Error Reset Enable Register"]
 pub struct PERSTEN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Parity Error Reset Enable Register"]
 pub mod persten;
 #[doc = "Parity Error Flag Register"]
 pub struct PEFLAG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Parity Error Flag Register"]
 pub mod peflag;
 #[doc = "Parity Memory Test Pattern Register"]
 pub struct PMTPR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Parity Memory Test Pattern Register"]
 pub mod pmtpr;
 #[doc = "Parity Memory Test Select Register"]
 pub struct PMTSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Parity Memory Test Select Register"]
 pub mod pmtsr;

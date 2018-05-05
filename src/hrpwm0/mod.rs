@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -43,103 +42,103 @@ pub struct RegisterBlock {
 }
 #[doc = "Bias and suspend configuration"]
 pub struct HRBSC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Bias and suspend configuration"]
 pub mod hrbsc;
 #[doc = "Module identification register"]
 pub struct MIDR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Module identification register"]
 pub mod midr;
 #[doc = "Global Analog Configuration"]
 pub struct GLBANA {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global Analog Configuration"]
 pub mod glbana;
 #[doc = "Global CSG configuration"]
 pub struct CSGCFG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global CSG configuration"]
 pub mod csgcfg;
 #[doc = "Global CSG run bit set"]
 pub struct CSGSETG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global CSG run bit set"]
 pub mod csgsetg;
 #[doc = "Global CSG run bit clear"]
 pub struct CSGCLRG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global CSG run bit clear"]
 pub mod csgclrg;
 #[doc = "Global CSG run bit status"]
 pub struct CSGSTATG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global CSG run bit status"]
 pub mod csgstatg;
 #[doc = "Global CSG slope/prescaler control"]
 pub struct CSGFCG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global CSG slope/prescaler control"]
 pub mod csgfcg;
 #[doc = "Global CSG slope/prescaler status"]
 pub struct CSGFSG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global CSG slope/prescaler status"]
 pub mod csgfsg;
 #[doc = "Global CSG shadow/switch trigger"]
 pub struct CSGTRG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global CSG shadow/switch trigger"]
 pub mod csgtrg;
 #[doc = "Global CSG shadow trigger clear"]
 pub struct CSGTRC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global CSG shadow trigger clear"]
 pub mod csgtrc;
 #[doc = "Global CSG shadow/switch status"]
 pub struct CSGTRSG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global CSG shadow/switch status"]
 pub mod csgtrsg;
 #[doc = "Global HRC configuration"]
 pub struct HRCCFG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global HRC configuration"]
 pub mod hrccfg;
 #[doc = "Global HRC shadow trigger set"]
 pub struct HRCSTRG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global HRC shadow trigger set"]
 pub mod hrcstrg;
 #[doc = "Global HRC shadow trigger clear"]
 pub struct HRCCTRG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global HRC shadow trigger clear"]
 pub mod hrcctrg;
 #[doc = "Global HRC shadow transfer status"]
 pub struct HRCSTSG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Global HRC shadow transfer status"]
 pub mod hrcstsg;
 #[doc = "High Resolution Generation Status"]
 pub struct HRGHRS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "High Resolution Generation Status"]
 pub mod hrghrs;

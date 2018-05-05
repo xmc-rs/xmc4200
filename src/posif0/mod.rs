@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -49,115 +48,115 @@ pub struct RegisterBlock {
 }
 #[doc = "Service Request Processing configuration"]
 pub struct PCONF {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Processing configuration"]
 pub mod pconf;
 #[doc = "Service Request Processing Suspend Config"]
 pub struct PSUS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Processing Suspend Config"]
 pub mod psus;
 #[doc = "Service Request Processing Run Bit Set"]
 pub struct PRUNS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Processing Run Bit Set"]
 pub mod pruns;
 #[doc = "Service Request Processing Run Bit Clear"]
 pub struct PRUNC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Processing Run Bit Clear"]
 pub mod prunc;
 #[doc = "Service Request Processing Run Bit Status"]
 pub struct PRUN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Processing Run Bit Status"]
 pub mod prun;
 #[doc = "Module Identification register"]
 pub struct MIDR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Module Identification register"]
 pub mod midr;
 #[doc = "Hall Sensor Patterns"]
 pub struct HALP {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Hall Sensor Patterns"]
 pub mod halp;
 #[doc = "Hall Sensor Shadow Patterns"]
 pub struct HALPS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Hall Sensor Shadow Patterns"]
 pub mod halps;
 #[doc = "Multi-Channel Pattern"]
 pub struct MCM {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Multi-Channel Pattern"]
 pub mod mcm;
 #[doc = "Multi-Channel Shadow Pattern"]
 pub struct MCSM {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Multi-Channel Shadow Pattern"]
 pub mod mcsm;
 #[doc = "Multi-Channel Pattern Control set"]
 pub struct MCMS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Multi-Channel Pattern Control set"]
 pub mod mcms;
 #[doc = "Multi-Channel Pattern Control clear"]
 pub struct MCMC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Multi-Channel Pattern Control clear"]
 pub mod mcmc;
 #[doc = "Multi-Channel Pattern Control flag"]
 pub struct MCMF {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Multi-Channel Pattern Control flag"]
 pub mod mcmf;
 #[doc = "Quadrature Decoder Control"]
 pub struct QDC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Quadrature Decoder Control"]
 pub mod qdc;
 #[doc = "Service Request Processing Interrupt Flags"]
 pub struct PFLG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Processing Interrupt Flags"]
 pub mod pflg;
 #[doc = "Service Request Processing Interrupt Enable"]
 pub struct PFLGE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Processing Interrupt Enable"]
 pub mod pflge;
 #[doc = "Service Request Processing Interrupt Set"]
 pub struct SPFLG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Processing Interrupt Set"]
 pub mod spflg;
 #[doc = "Service Request Processing Interrupt Clear"]
 pub struct RPFLG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Processing Interrupt Clear"]
 pub mod rpflg;
 #[doc = "POSIF Debug register"]
 pub struct PDBG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "POSIF Debug register"]
 pub mod pdbg;

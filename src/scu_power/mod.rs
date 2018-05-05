@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -19,37 +18,37 @@ pub struct RegisterBlock {
 }
 #[doc = "PCU Status Register"]
 pub struct PWRSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "PCU Status Register"]
 pub mod pwrstat;
 #[doc = "PCU Set Control Register"]
 pub struct PWRSET {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "PCU Set Control Register"]
 pub mod pwrset;
 #[doc = "PCU Clear Control Register"]
 pub struct PWRCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "PCU Clear Control Register"]
 pub mod pwrclr;
 #[doc = "EVR Status Register"]
 pub struct EVRSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "EVR Status Register"]
 pub mod evrstat;
 #[doc = "EVR VADC Status Register"]
 pub struct EVRVADCSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "EVR VADC Status Register"]
 pub mod evrvadcstat;
 #[doc = "Power Monitor Control"]
 pub struct PWRMON {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Power Monitor Control"]
 pub mod pwrmon;

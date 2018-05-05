@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -15,31 +14,31 @@ pub struct RegisterBlock {
 }
 #[doc = "Trap Status Register"]
 pub struct TRAPSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Trap Status Register"]
 pub mod trapstat;
 #[doc = "Trap Raw Status Register"]
 pub struct TRAPRAW {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Trap Raw Status Register"]
 pub mod trapraw;
 #[doc = "Trap Disable Register"]
 pub struct TRAPDIS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Trap Disable Register"]
 pub mod trapdis;
 #[doc = "Trap Clear Register"]
 pub struct TRAPCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Trap Clear Register"]
 pub mod trapclr;
 #[doc = "Trap Set Register"]
 pub struct TRAPSET {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Trap Set Register"]
 pub mod trapset;

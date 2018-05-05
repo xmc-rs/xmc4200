@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -25,61 +24,61 @@ pub struct RegisterBlock {
 }
 #[doc = "RTC ID Register"]
 pub struct ID {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RTC ID Register"]
 pub mod id;
 #[doc = "RTC Control Register"]
 pub struct CTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RTC Control Register"]
 pub mod ctr;
 #[doc = "RTC Raw Service Request Register"]
 pub struct RAWSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RTC Raw Service Request Register"]
 pub mod rawstat;
 #[doc = "RTC Service Request Status Register"]
 pub struct STSSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RTC Service Request Status Register"]
 pub mod stssr;
 #[doc = "RTC Service Request Mask Register"]
 pub struct MSKSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RTC Service Request Mask Register"]
 pub mod msksr;
 #[doc = "RTC Clear Service Request Register"]
 pub struct CLRSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RTC Clear Service Request Register"]
 pub mod clrsr;
 #[doc = "RTC Alarm Time Register 0"]
 pub struct ATIM0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RTC Alarm Time Register 0"]
 pub mod atim0;
 #[doc = "RTC Alarm Time Register 1"]
 pub struct ATIM1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RTC Alarm Time Register 1"]
 pub mod atim1;
 #[doc = "RTC Time Register 0"]
 pub struct TIM0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RTC Time Register 0"]
 pub mod tim0;
 #[doc = "RTC Time Register 1"]
 pub struct TIM1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "RTC Time Register 1"]
 pub mod tim1;

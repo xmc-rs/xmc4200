@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -30,61 +29,61 @@ pub struct RegisterBlock {
 }
 #[doc = "CAN Clock Control Register"]
 pub struct CLC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CAN Clock Control Register"]
 pub mod clc;
 #[doc = "Module Identification Register"]
 pub struct ID {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Module Identification Register"]
 pub mod id;
 #[doc = "CAN Fractional Divider Register"]
 pub struct FDR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "CAN Fractional Divider Register"]
 pub mod fdr;
 #[doc = "List Register"]
 pub struct LIST {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "List Register"]
 pub mod list;
 #[doc = "Message Pending Register"]
 pub struct MSPND {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Pending Register"]
 pub mod mspnd;
 #[doc = "Message Index Register"]
 pub struct MSID {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Index Register"]
 pub mod msid;
 #[doc = "Message Index Mask Register"]
 pub struct MSIMASK {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Message Index Mask Register"]
 pub mod msimask;
 #[doc = "Panel Control Register"]
 pub struct PANCTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Panel Control Register"]
 pub mod panctr;
 #[doc = "Module Control Register"]
 pub struct MCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Module Control Register"]
 pub mod mcr;
 #[doc = "Module Interrupt Trigger Register"]
 pub struct MITR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Module Interrupt Trigger Register"]
 pub mod mitr;

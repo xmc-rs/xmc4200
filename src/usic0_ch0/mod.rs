@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -81,265 +80,265 @@ pub struct RegisterBlock {
 }
 #[doc = "Channel Configuration Register"]
 pub struct CCFG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel Configuration Register"]
 pub mod ccfg;
 #[doc = "Kernel State Configuration Register"]
 pub struct KSCFG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Kernel State Configuration Register"]
 pub mod kscfg;
 #[doc = "Fractional Divider Register"]
 pub struct FDR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Fractional Divider Register"]
 pub mod fdr;
 #[doc = "Baud Rate Generator Register"]
 pub struct BRG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Baud Rate Generator Register"]
 pub mod brg;
 #[doc = "Interrupt Node Pointer Register"]
 pub struct INPR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Node Pointer Register"]
 pub mod inpr;
 #[doc = "Input Control Register 0"]
 pub struct DX0CR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Input Control Register 0"]
 pub mod dx0cr;
 #[doc = "Input Control Register 1"]
 pub struct DX1CR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Input Control Register 1"]
 pub mod dx1cr;
 #[doc = "Input Control Register 2"]
 pub struct DX2CR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Input Control Register 2"]
 pub mod dx2cr;
 #[doc = "Input Control Register 3"]
 pub struct DX3CR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Input Control Register 3"]
 pub mod dx3cr;
 #[doc = "Input Control Register 4"]
 pub struct DX4CR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Input Control Register 4"]
 pub mod dx4cr;
 #[doc = "Input Control Register 5"]
 pub struct DX5CR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Input Control Register 5"]
 pub mod dx5cr;
 #[doc = "Shift Control Register"]
 pub struct SCTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Shift Control Register"]
 pub mod sctr;
 #[doc = "Transmit Control/Status Register"]
 pub struct TCSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit Control/Status Register"]
 pub mod tcsr;
 #[doc = "Protocol Control Register"]
 pub struct PCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Protocol Control Register"]
 pub mod pcr;
 #[doc = "Protocol Control Register [ASC Mode]"]
 pub struct PCR_ASCMODE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Protocol Control Register [ASC Mode]"]
 pub mod pcr_ascmode;
 #[doc = "Protocol Control Register [SSC Mode]"]
 pub struct PCR_SSCMODE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Protocol Control Register [SSC Mode]"]
 pub mod pcr_sscmode;
 #[doc = "Protocol Control Register [IIC Mode]"]
 pub struct PCR_IICMODE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Protocol Control Register [IIC Mode]"]
 pub mod pcr_iicmode;
 #[doc = "Protocol Control Register [IIS Mode]"]
 pub struct PCR_IISMODE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Protocol Control Register [IIS Mode]"]
 pub mod pcr_iismode;
 #[doc = "Channel Control Register"]
 pub struct CCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel Control Register"]
 pub mod ccr;
 #[doc = "Capture Mode Timer Register"]
 pub struct CMTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Capture Mode Timer Register"]
 pub mod cmtr;
 #[doc = "Protocol Status Register"]
 pub struct PSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Protocol Status Register"]
 pub mod psr;
 #[doc = "Protocol Status Register [ASC Mode]"]
 pub struct PSR_ASCMODE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Protocol Status Register [ASC Mode]"]
 pub mod psr_ascmode;
 #[doc = "Protocol Status Register [SSC Mode]"]
 pub struct PSR_SSCMODE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Protocol Status Register [SSC Mode]"]
 pub mod psr_sscmode;
 #[doc = "Protocol Status Register [IIC Mode]"]
 pub struct PSR_IICMODE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Protocol Status Register [IIC Mode]"]
 pub mod psr_iicmode;
 #[doc = "Protocol Status Register [IIS Mode]"]
 pub struct PSR_IISMODE {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Protocol Status Register [IIS Mode]"]
 pub mod psr_iismode;
 #[doc = "Protocol Status Clear Register"]
 pub struct PSCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Protocol Status Clear Register"]
 pub mod pscr;
 #[doc = "Receiver Buffer Status Register"]
 pub struct RBUFSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Receiver Buffer Status Register"]
 pub mod rbufsr;
 #[doc = "Receiver Buffer Register"]
 pub struct RBUF {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Receiver Buffer Register"]
 pub mod rbuf;
 #[doc = "Receiver Buffer Register for Debugger"]
 pub struct RBUFD {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Receiver Buffer Register for Debugger"]
 pub mod rbufd;
 #[doc = "Receiver Buffer Register 0"]
 pub struct RBUF0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Receiver Buffer Register 0"]
 pub mod rbuf0;
 #[doc = "Receiver Buffer Register 1"]
 pub struct RBUF1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Receiver Buffer Register 1"]
 pub mod rbuf1;
 #[doc = "Receiver Buffer 01 Status Register"]
 pub struct RBUF01SR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Receiver Buffer 01 Status Register"]
 pub mod rbuf01sr;
 #[doc = "Flag Modification Register"]
 pub struct FMR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Flag Modification Register"]
 pub mod fmr;
 #[doc = "Transmit Buffer"]
 pub struct TBUF {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit Buffer"]
 pub mod tbuf;
 #[doc = "Bypass Data Register"]
 pub struct BYP {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Bypass Data Register"]
 pub mod byp;
 #[doc = "Bypass Control Register"]
 pub struct BYPCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Bypass Control Register"]
 pub mod bypcr;
 #[doc = "Transmitter Buffer Control Register"]
 pub struct TBCTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Transmitter Buffer Control Register"]
 pub mod tbctr;
 #[doc = "Receiver Buffer Control Register"]
 pub struct RBCTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Receiver Buffer Control Register"]
 pub mod rbctr;
 #[doc = "Transmit/Receive Buffer Pointer Register"]
 pub struct TRBPTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit/Receive Buffer Pointer Register"]
 pub mod trbptr;
 #[doc = "Transmit/Receive Buffer Status Register"]
 pub struct TRBSR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit/Receive Buffer Status Register"]
 pub mod trbsr;
 #[doc = "Transmit/Receive Buffer Status Clear Register"]
 pub struct TRBSCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit/Receive Buffer Status Clear Register"]
 pub mod trbscr;
 #[doc = "Receiver Buffer Output Register"]
 pub struct OUTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Receiver Buffer Output Register"]
 pub mod outr;
 #[doc = "Receiver Buffer Output Register L for Debugger"]
 pub struct OUTDR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Receiver Buffer Output Register L for Debugger"]
 pub mod outdr;
 #[doc = "Transmit FIFO Buffer"]
 pub struct IN {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit FIFO Buffer"]
 pub mod in_;

@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -99,229 +98,229 @@ pub struct RegisterBlock {
 }
 #[doc = "Arbitration Configuration Register"]
 pub struct ARBCFG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Arbitration Configuration Register"]
 pub mod arbcfg;
 #[doc = "Arbitration Priority Register"]
 pub struct ARBPR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Arbitration Priority Register"]
 pub mod arbpr;
 #[doc = "Channel Assignment Register"]
 pub struct CHASS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel Assignment Register"]
 pub mod chass;
 #[doc = "Input Class Register"]
 pub struct ICLASS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Input Class Register"]
 pub mod iclass;
 #[doc = "Alias Register"]
 pub struct ALIAS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Alias Register"]
 pub mod alias;
 #[doc = "Boundary Select Register"]
 pub struct BOUND {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Boundary Select Register"]
 pub mod bound;
 #[doc = "Synchronization Control Register"]
 pub struct SYNCTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Synchronization Control Register"]
 pub mod synctr;
 #[doc = "Boundary Flag Register"]
 pub struct BFL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Boundary Flag Register"]
 pub mod bfl;
 #[doc = "Boundary Flag Software Register"]
 pub struct BFLS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Boundary Flag Software Register"]
 pub mod bfls;
 #[doc = "Boundary Flag Control Register"]
 pub struct BFLC {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Boundary Flag Control Register"]
 pub mod bflc;
 #[doc = "Boundary Flag Node Pointer Register"]
 pub struct BFLNP {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Boundary Flag Node Pointer Register"]
 pub mod bflnp;
 #[doc = "Queue 0 Source Control Register"]
 pub struct QCTRL0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Queue 0 Source Control Register"]
 pub mod qctrl0;
 #[doc = "Queue 0 Mode Register"]
 pub struct QMR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Queue 0 Mode Register"]
 pub mod qmr0;
 #[doc = "Queue 0 Status Register"]
 pub struct QSR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Queue 0 Status Register"]
 pub mod qsr0;
 #[doc = "Queue 0 Register 0"]
 pub struct Q0R0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Queue 0 Register 0"]
 pub mod q0r0;
 #[doc = "Queue 0 Input Register"]
 pub struct QINR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Queue 0 Input Register"]
 pub mod qinr0;
 #[doc = "Queue 0 Backup Register"]
 pub struct QBUR0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Queue 0 Backup Register"]
 pub mod qbur0;
 #[doc = "Autoscan Source Control Register"]
 pub struct ASCTRL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Autoscan Source Control Register"]
 pub mod asctrl;
 #[doc = "Autoscan Source Mode Register"]
 pub struct ASMR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Autoscan Source Mode Register"]
 pub mod asmr;
 #[doc = "Autoscan Source Channel Select Register"]
 pub struct ASSEL {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Autoscan Source Channel Select Register"]
 pub mod assel;
 #[doc = "Autoscan Source Pending Register"]
 pub struct ASPND {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Autoscan Source Pending Register"]
 pub mod aspnd;
 #[doc = "Channel Event Flag Register"]
 pub struct CEFLAG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel Event Flag Register"]
 pub mod ceflag;
 #[doc = "Result Event Flag Register"]
 pub struct REFLAG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Result Event Flag Register"]
 pub mod reflag;
 #[doc = "Source Event Flag Register"]
 pub struct SEFLAG {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Source Event Flag Register"]
 pub mod seflag;
 #[doc = "Channel Event Flag Clear Register"]
 pub struct CEFCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel Event Flag Clear Register"]
 pub mod cefclr;
 #[doc = "Result Event Flag Clear Register"]
 pub struct REFCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Result Event Flag Clear Register"]
 pub mod refclr;
 #[doc = "Source Event Flag Clear Register"]
 pub struct SEFCLR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Source Event Flag Clear Register"]
 pub mod sefclr;
 #[doc = "Channel Event Node Pointer Register 0"]
 pub struct CEVNP0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel Event Node Pointer Register 0"]
 pub mod cevnp0;
 #[doc = "Result Event Node Pointer Register 0"]
 pub struct REVNP0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Result Event Node Pointer Register 0"]
 pub mod revnp0;
 #[doc = "Result Event Node Pointer Register 1"]
 pub struct REVNP1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Result Event Node Pointer Register 1"]
 pub mod revnp1;
 #[doc = "Source Event Node Pointer Register"]
 pub struct SEVNP {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Source Event Node Pointer Register"]
 pub mod sevnp;
 #[doc = "Service Request Software Activation Trigger"]
 pub struct SRACT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Service Request Software Activation Trigger"]
 pub mod sract;
 #[doc = "External Multiplexer Control Register"]
 pub struct EMUXCTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "External Multiplexer Control Register"]
 pub mod emuxctr;
 #[doc = "Valid Flag Register"]
 pub struct VFR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Valid Flag Register"]
 pub mod vfr;
 #[doc = "Channel Ctrl. Reg."]
 pub struct CHCTR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Channel Ctrl. Reg."]
 pub mod chctr;
 #[doc = "Result Control Register"]
 pub struct RCR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Result Control Register"]
 pub mod rcr;
 #[doc = "Result Register"]
 pub struct RES {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Result Register"]
 pub mod res;
 #[doc = "Result Register, Debug"]
 pub struct RESD {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Result Register, Debug"]
 pub mod resd;

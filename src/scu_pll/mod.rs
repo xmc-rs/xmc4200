@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -20,43 +19,43 @@ pub struct RegisterBlock {
 }
 #[doc = "PLL Status Register"]
 pub struct PLLSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "PLL Status Register"]
 pub mod pllstat;
 #[doc = "PLL Configuration 0 Register"]
 pub struct PLLCON0 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "PLL Configuration 0 Register"]
 pub mod pllcon0;
 #[doc = "PLL Configuration 1 Register"]
 pub struct PLLCON1 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "PLL Configuration 1 Register"]
 pub mod pllcon1;
 #[doc = "PLL Configuration 2 Register"]
 pub struct PLLCON2 {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "PLL Configuration 2 Register"]
 pub mod pllcon2;
 #[doc = "USB PLL Status Register"]
 pub struct USBPLLSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "USB PLL Status Register"]
 pub mod usbpllstat;
 #[doc = "USB PLL Configuration Register"]
 pub struct USBPLLCON {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "USB PLL Configuration Register"]
 pub mod usbpllcon;
 #[doc = "Clock Multiplexing Status Register"]
 pub struct CLKMXSTAT {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Clock Multiplexing Status Register"]
 pub mod clkmxstat;

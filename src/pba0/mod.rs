@@ -1,4 +1,3 @@
-use vcell::VolatileCell;
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
@@ -9,13 +8,13 @@ pub struct RegisterBlock {
 }
 #[doc = "Peripheral Bridge Status Register"]
 pub struct STS {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Peripheral Bridge Status Register"]
 pub mod sts;
 #[doc = "PBA Write Error Address Register"]
 pub struct WADDR {
-    register: VolatileCell<u32>,
+    register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "PBA Write Error Address Register"]
 pub mod waddr;
