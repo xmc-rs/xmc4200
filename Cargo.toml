@@ -1,7 +1,7 @@
 [package]
 name = "xmc4200"
 description = "Peripheral access library for XCM4200 ARM Cortex-M"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Lucas Brendel <lucasbrendel@gmail.com>"]
 readme = "README.md"
 license = "MIT"
@@ -10,13 +10,13 @@ keywords = ["cortex-m", "infineon", "arm", "xmc4x"]
 documentation = "https://docs.rs/xmc4200/"
 
 [dependencies]
-cortex-m = "0.3.0"
-bare-metal = "0.1.1"
+cortex-m = "0.4.3"
+bare-metal = "0.1.2"
 vcell = "0.1.0"
 
 [dependencies.cortex-m-rt]
 optional = true
-version = "0.3.0"
+version = "0.4.0"
 
 [features]
 rt = ["cortex-m-rt"]
