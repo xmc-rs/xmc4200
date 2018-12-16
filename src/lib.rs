@@ -1,17 +1,10 @@
-#![cfg_attr(feature = "rt", feature(global_asm))]
-#![cfg_attr(feature = "rt", feature(macro_reexport))]
-#![cfg_attr(feature = "rt", feature(used))]
-#![doc = "Peripheral access API for XMC4200 microcontrollers (generated using svd2rust v0.12.0)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.12.0/svd2rust/#peripheral-api"]
-#![allow(private_no_mangle_statics)]
+#![doc = "Peripheral access API for XMC4200 microcontrollers (generated using svd2rust v0.14.0)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.14.0/svd2rust/#peripheral-api"]
 #![deny(missing_docs)]
 #![deny(warnings)]
 #![allow(non_camel_case_types)]
-#![feature(const_fn)]
-#![feature(try_from)]
 #![no_std]
 extern crate bare_metal;
 extern crate cortex_m;
-#[macro_reexport(default_handler, exception)]
 #[cfg(feature = "rt")]
 extern crate cortex_m_rt;
 extern crate vcell;
@@ -19,17 +12,408 @@ use core::marker::PhantomData;
 use core::ops::Deref;
 #[doc = r" Number available in the NVIC for configuring priority"]
 pub const NVIC_PRIO_BITS: u8 = 6;
-pub use interrupt::Interrupt;
+#[cfg(feature = "rt")]
+extern "C" {
+    fn SCU_0();
+    fn ERU0_0();
+    fn ERU0_1();
+    fn ERU0_2();
+    fn ERU0_3();
+    fn ERU1_0();
+    fn ERU1_1();
+    fn ERU1_2();
+    fn ERU1_3();
+    fn PMU0_0();
+    fn VADC0_C0_0();
+    fn VADC0_C0_1();
+    fn VADC0_C0_2();
+    fn VADC0_C0_3();
+    fn VADC0_G0_0();
+    fn VADC0_G0_1();
+    fn VADC0_G0_2();
+    fn VADC0_G0_3();
+    fn VADC0_G1_0();
+    fn VADC0_G1_1();
+    fn VADC0_G1_2();
+    fn VADC0_G1_3();
+    fn DAC0_0();
+    fn DAC0_1();
+    fn CCU40_0();
+    fn CCU40_1();
+    fn CCU40_2();
+    fn CCU40_3();
+    fn CCU41_0();
+    fn CCU41_1();
+    fn CCU41_2();
+    fn CCU41_3();
+    fn CCU80_0();
+    fn CCU80_1();
+    fn CCU80_2();
+    fn CCU80_3();
+    fn POSIF0_0();
+    fn POSIF0_1();
+    fn HRPWM_0();
+    fn HRPWM_1();
+    fn HRPWM_2();
+    fn HRPWM_3();
+    fn CAN0_0();
+    fn CAN0_1();
+    fn CAN0_2();
+    fn CAN0_3();
+    fn CAN0_4();
+    fn CAN0_5();
+    fn CAN0_6();
+    fn CAN0_7();
+    fn USIC0_0();
+    fn USIC0_1();
+    fn USIC0_2();
+    fn USIC0_3();
+    fn USIC0_4();
+    fn USIC0_5();
+    fn USIC1_0();
+    fn USIC1_1();
+    fn USIC1_2();
+    fn USIC1_3();
+    fn USIC1_4();
+    fn USIC1_5();
+    fn LEDTS0_0();
+    fn FCE0_0();
+    fn GPDMA0_0();
+    fn USB0_0();
+}
 #[doc(hidden)]
-pub mod interrupt;
+pub union Vector {
+    _handler: unsafe extern "C" fn(),
+    _reserved: u32,
+}
+#[cfg(feature = "rt")]
+#[doc(hidden)]
+#[link_section = ".vector_table.interrupts"]
+#[no_mangle]
+pub static __INTERRUPTS: [Vector; 108] = [
+    Vector { _handler: SCU_0 },
+    Vector { _handler: ERU0_0 },
+    Vector { _handler: ERU0_1 },
+    Vector { _handler: ERU0_2 },
+    Vector { _handler: ERU0_3 },
+    Vector { _handler: ERU1_0 },
+    Vector { _handler: ERU1_1 },
+    Vector { _handler: ERU1_2 },
+    Vector { _handler: ERU1_3 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: PMU0_0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: VADC0_C0_0 },
+    Vector { _handler: VADC0_C0_1 },
+    Vector { _handler: VADC0_C0_2 },
+    Vector { _handler: VADC0_C0_3 },
+    Vector { _handler: VADC0_G0_0 },
+    Vector { _handler: VADC0_G0_1 },
+    Vector { _handler: VADC0_G0_2 },
+    Vector { _handler: VADC0_G0_3 },
+    Vector { _handler: VADC0_G1_0 },
+    Vector { _handler: VADC0_G1_1 },
+    Vector { _handler: VADC0_G1_2 },
+    Vector { _handler: VADC0_G1_3 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: DAC0_0 },
+    Vector { _handler: DAC0_1 },
+    Vector { _handler: CCU40_0 },
+    Vector { _handler: CCU40_1 },
+    Vector { _handler: CCU40_2 },
+    Vector { _handler: CCU40_3 },
+    Vector { _handler: CCU41_0 },
+    Vector { _handler: CCU41_1 },
+    Vector { _handler: CCU41_2 },
+    Vector { _handler: CCU41_3 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: CCU80_0 },
+    Vector { _handler: CCU80_1 },
+    Vector { _handler: CCU80_2 },
+    Vector { _handler: CCU80_3 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: POSIF0_0 },
+    Vector { _handler: POSIF0_1 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: HRPWM_0 },
+    Vector { _handler: HRPWM_1 },
+    Vector { _handler: HRPWM_2 },
+    Vector { _handler: HRPWM_3 },
+    Vector { _handler: CAN0_0 },
+    Vector { _handler: CAN0_1 },
+    Vector { _handler: CAN0_2 },
+    Vector { _handler: CAN0_3 },
+    Vector { _handler: CAN0_4 },
+    Vector { _handler: CAN0_5 },
+    Vector { _handler: CAN0_6 },
+    Vector { _handler: CAN0_7 },
+    Vector { _handler: USIC0_0 },
+    Vector { _handler: USIC0_1 },
+    Vector { _handler: USIC0_2 },
+    Vector { _handler: USIC0_3 },
+    Vector { _handler: USIC0_4 },
+    Vector { _handler: USIC0_5 },
+    Vector { _handler: USIC1_0 },
+    Vector { _handler: USIC1_1 },
+    Vector { _handler: USIC1_2 },
+    Vector { _handler: USIC1_3 },
+    Vector { _handler: USIC1_4 },
+    Vector { _handler: USIC1_5 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: LEDTS0_0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: FCE0_0 },
+    Vector { _handler: GPDMA0_0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: USB0_0 },
+];
+#[doc = r" Enumeration of all the interrupts"]
+pub enum Interrupt {
+    #[doc = "0 - System Control"]
+    SCU_0,
+    #[doc = "1 - External Request Unit 0"]
+    ERU0_0,
+    #[doc = "2 - External Request Unit 0"]
+    ERU0_1,
+    #[doc = "3 - External Request Unit 0"]
+    ERU0_2,
+    #[doc = "4 - External Request Unit 0"]
+    ERU0_3,
+    #[doc = "5 - External Request Unit 1"]
+    ERU1_0,
+    #[doc = "6 - External Request Unit 1"]
+    ERU1_1,
+    #[doc = "7 - External Request Unit 1"]
+    ERU1_2,
+    #[doc = "8 - External Request Unit 1"]
+    ERU1_3,
+    #[doc = "12 - Program Management Unit"]
+    PMU0_0,
+    #[doc = "14 - Analog to Digital Converter Common Block 0"]
+    VADC0_C0_0,
+    #[doc = "15 - Analog to Digital Converter Common Block 0"]
+    VADC0_C0_1,
+    #[doc = "16 - Analog to Digital Converter Common Block 0"]
+    VADC0_C0_2,
+    #[doc = "17 - Analog to Digital Converter Common Block 0"]
+    VADC0_C0_3,
+    #[doc = "18 - Analog to Digital Converter Group 0"]
+    VADC0_G0_0,
+    #[doc = "19 - Analog to Digital Converter Group 0"]
+    VADC0_G0_1,
+    #[doc = "20 - Analog to Digital Converter Group 0"]
+    VADC0_G0_2,
+    #[doc = "21 - Analog to Digital Converter Group 0"]
+    VADC0_G0_3,
+    #[doc = "22 - Analog to Digital Converter Group 1"]
+    VADC0_G1_0,
+    #[doc = "23 - Analog to Digital Converter Group 1"]
+    VADC0_G1_1,
+    #[doc = "24 - Analog to Digital Converter Group 1"]
+    VADC0_G1_2,
+    #[doc = "25 - Analog to Digital Converter Group 1"]
+    VADC0_G1_3,
+    #[doc = "42 - Digital to Analog Converter"]
+    DAC0_0,
+    #[doc = "43 - Digital to Analog Converter"]
+    DAC0_1,
+    #[doc = "44 - Capture Compare Unit 4 (Module 0)"]
+    CCU40_0,
+    #[doc = "45 - Capture Compare Unit 4 (Module 0)"]
+    CCU40_1,
+    #[doc = "46 - Capture Compare Unit 4 (Module 0)"]
+    CCU40_2,
+    #[doc = "47 - Capture Compare Unit 4 (Module 0)"]
+    CCU40_3,
+    #[doc = "48 - Capture Compare Unit 4 (Module 1)"]
+    CCU41_0,
+    #[doc = "49 - Capture Compare Unit 4 (Module 1)"]
+    CCU41_1,
+    #[doc = "50 - Capture Compare Unit 4 (Module 1)"]
+    CCU41_2,
+    #[doc = "51 - Capture Compare Unit 4 (Module 1)"]
+    CCU41_3,
+    #[doc = "60 - Capture Compare Unit 8 (Module 0)"]
+    CCU80_0,
+    #[doc = "61 - Capture Compare Unit 8 (Module 0)"]
+    CCU80_1,
+    #[doc = "62 - Capture Compare Unit 8 (Module 0)"]
+    CCU80_2,
+    #[doc = "63 - Capture Compare Unit 8 (Module 0)"]
+    CCU80_3,
+    #[doc = "68 - Position Interface (Module 0)"]
+    POSIF0_0,
+    #[doc = "69 - Position Interface (Module 0)"]
+    POSIF0_1,
+    #[doc = "72 - High Resolution Pulse Width Modulation (Module 0)"]
+    HRPWM_0,
+    #[doc = "73 - High Resolution Pulse Width Modulation (Module 0)"]
+    HRPWM_1,
+    #[doc = "74 - High Resolution Pulse Width Modulation (Module 0)"]
+    HRPWM_2,
+    #[doc = "75 - High Resolution Pulse Width Modulation (Module 0)"]
+    HRPWM_3,
+    #[doc = "76 - MultiCAN"]
+    CAN0_0,
+    #[doc = "77 - MultiCAN"]
+    CAN0_1,
+    #[doc = "78 - MultiCAN"]
+    CAN0_2,
+    #[doc = "79 - MultiCAN"]
+    CAN0_3,
+    #[doc = "80 - MultiCAN"]
+    CAN0_4,
+    #[doc = "81 - MultiCAN"]
+    CAN0_5,
+    #[doc = "82 - MultiCAN"]
+    CAN0_6,
+    #[doc = "83 - MultiCAN"]
+    CAN0_7,
+    #[doc = "84 - Universal Serial Interface Channel (Module 0)"]
+    USIC0_0,
+    #[doc = "85 - Universal Serial Interface Channel (Module 0)"]
+    USIC0_1,
+    #[doc = "86 - Universal Serial Interface Channel (Module 0)"]
+    USIC0_2,
+    #[doc = "87 - Universal Serial Interface Channel (Module 0)"]
+    USIC0_3,
+    #[doc = "88 - Universal Serial Interface Channel (Module 0)"]
+    USIC0_4,
+    #[doc = "89 - Universal Serial Interface Channel (Module 0)"]
+    USIC0_5,
+    #[doc = "90 - Universal Serial Interface Channel (Module 1)"]
+    USIC1_0,
+    #[doc = "91 - Universal Serial Interface Channel (Module 1)"]
+    USIC1_1,
+    #[doc = "92 - Universal Serial Interface Channel (Module 1)"]
+    USIC1_2,
+    #[doc = "93 - Universal Serial Interface Channel (Module 1)"]
+    USIC1_3,
+    #[doc = "94 - Universal Serial Interface Channel (Module 1)"]
+    USIC1_4,
+    #[doc = "95 - Universal Serial Interface Channel (Module 1)"]
+    USIC1_5,
+    #[doc = "102 - LED and Touch Sense Control Unit (Module 0)"]
+    LEDTS0_0,
+    #[doc = "104 - Flexible CRC Engine"]
+    FCE0_0,
+    #[doc = "105 - General Purpose DMA Unit 0"]
+    GPDMA0_0,
+    #[doc = "107 - Universal Serial Bus (Module 0)"]
+    USB0_0,
+}
+unsafe impl ::bare_metal::Nr for Interrupt {
+    #[inline]
+    fn nr(&self) -> u8 {
+        match *self {
+            Interrupt::SCU_0 => 0,
+            Interrupt::ERU0_0 => 1,
+            Interrupt::ERU0_1 => 2,
+            Interrupt::ERU0_2 => 3,
+            Interrupt::ERU0_3 => 4,
+            Interrupt::ERU1_0 => 5,
+            Interrupt::ERU1_1 => 6,
+            Interrupt::ERU1_2 => 7,
+            Interrupt::ERU1_3 => 8,
+            Interrupt::PMU0_0 => 12,
+            Interrupt::VADC0_C0_0 => 14,
+            Interrupt::VADC0_C0_1 => 15,
+            Interrupt::VADC0_C0_2 => 16,
+            Interrupt::VADC0_C0_3 => 17,
+            Interrupt::VADC0_G0_0 => 18,
+            Interrupt::VADC0_G0_1 => 19,
+            Interrupt::VADC0_G0_2 => 20,
+            Interrupt::VADC0_G0_3 => 21,
+            Interrupt::VADC0_G1_0 => 22,
+            Interrupt::VADC0_G1_1 => 23,
+            Interrupt::VADC0_G1_2 => 24,
+            Interrupt::VADC0_G1_3 => 25,
+            Interrupt::DAC0_0 => 42,
+            Interrupt::DAC0_1 => 43,
+            Interrupt::CCU40_0 => 44,
+            Interrupt::CCU40_1 => 45,
+            Interrupt::CCU40_2 => 46,
+            Interrupt::CCU40_3 => 47,
+            Interrupt::CCU41_0 => 48,
+            Interrupt::CCU41_1 => 49,
+            Interrupt::CCU41_2 => 50,
+            Interrupt::CCU41_3 => 51,
+            Interrupt::CCU80_0 => 60,
+            Interrupt::CCU80_1 => 61,
+            Interrupt::CCU80_2 => 62,
+            Interrupt::CCU80_3 => 63,
+            Interrupt::POSIF0_0 => 68,
+            Interrupt::POSIF0_1 => 69,
+            Interrupt::HRPWM_0 => 72,
+            Interrupt::HRPWM_1 => 73,
+            Interrupt::HRPWM_2 => 74,
+            Interrupt::HRPWM_3 => 75,
+            Interrupt::CAN0_0 => 76,
+            Interrupt::CAN0_1 => 77,
+            Interrupt::CAN0_2 => 78,
+            Interrupt::CAN0_3 => 79,
+            Interrupt::CAN0_4 => 80,
+            Interrupt::CAN0_5 => 81,
+            Interrupt::CAN0_6 => 82,
+            Interrupt::CAN0_7 => 83,
+            Interrupt::USIC0_0 => 84,
+            Interrupt::USIC0_1 => 85,
+            Interrupt::USIC0_2 => 86,
+            Interrupt::USIC0_3 => 87,
+            Interrupt::USIC0_4 => 88,
+            Interrupt::USIC0_5 => 89,
+            Interrupt::USIC1_0 => 90,
+            Interrupt::USIC1_1 => 91,
+            Interrupt::USIC1_2 => 92,
+            Interrupt::USIC1_3 => 93,
+            Interrupt::USIC1_4 => 94,
+            Interrupt::USIC1_5 => 95,
+            Interrupt::LEDTS0_0 => 102,
+            Interrupt::FCE0_0 => 104,
+            Interrupt::GPDMA0_0 => 105,
+            Interrupt::USB0_0 => 107,
+        }
+    }
+}
+#[cfg(feature = "rt")]
+pub use self::Interrupt as interrupt;
 pub use cortex_m::peripheral::Peripherals as CorePeripherals;
-pub use cortex_m::peripheral::CPUID;
-pub use cortex_m::peripheral::DCB;
-pub use cortex_m::peripheral::DWT;
-pub use cortex_m::peripheral::MPU;
-pub use cortex_m::peripheral::NVIC;
-pub use cortex_m::peripheral::SCB;
-pub use cortex_m::peripheral::SYST;
+pub use cortex_m::peripheral::{CBP, CPUID, DCB, DWT, FPB, FPU, ITM, MPU, NVIC, SCB, SYST, TPIU};
+#[cfg(feature = "rt")]
+pub use cortex_m_rt::interrupt;
 #[doc = "Cortex-M4 Private Peripheral Block"]
 pub struct PPB {
     _marker: PhantomData<*const ()>,
@@ -2678,6 +3062,8 @@ impl Deref for PORT14 {
 }
 #[doc = "Port 14"]
 pub mod port14;
+#[allow(renamed_and_removed_lints)]
+#[allow(private_no_mangle_statics)]
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals"]
