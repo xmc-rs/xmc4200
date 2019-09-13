@@ -1,74 +1,48 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-impl super::SC {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-}
-#[doc = "Possible values of the field `ST`"]
+#[doc = "Reader of register SC"]
+pub type R = crate::R<u32, super::SC>;
+#[doc = "Source selector for the shadow transfer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum STR {
-    #[doc = "Shadow transfer signals (shadow transfer trigger and shadow transfer enable) are linked with the timer CC8y connected to the Source Selector 0."]
+pub enum ST_A {
+    #[doc = "0: Shadow transfer signals (shadow transfer trigger and shadow transfer enable) are linked with the timer CC8y connected to the Source Selector 0."]
     VALUE1,
-    #[doc = "Shadow transfer signals (shadow transfer trigger and shadow transfer enable) are linked with the timer CC8y connected to the Source Selector 1."]
+    #[doc = "1: Shadow transfer signals (shadow transfer trigger and shadow transfer enable) are linked with the timer CC8y connected to the Source Selector 1."]
     VALUE2,
 }
-impl STR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            STR::VALUE1 => false,
-            STR::VALUE2 => true,
+impl From<ST_A> for bool {
+    #[inline(always)]
+    fn from(variant: ST_A) -> Self {
+        match variant {
+            ST_A::VALUE1 => false,
+            ST_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> STR {
-        match value {
-            false => STR::VALUE1,
-            true => STR::VALUE2,
+}
+#[doc = "Reader of field `ST`"]
+pub type ST_R = crate::R<bool, ST_A>;
+impl ST_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> ST_A {
+        match self.bits {
+            false => ST_A::VALUE1,
+            true => ST_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == STR::VALUE1
+        *self == ST_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == STR::VALUE2
+        *self == ST_A::VALUE2
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 0 - Source selector for the shadow transfer"]
-    #[inline]
-    pub fn st(&self) -> STR {
-        STR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn st(&self) -> ST_R {
+        ST_R::new((self.bits & 0x01) != 0)
     }
 }

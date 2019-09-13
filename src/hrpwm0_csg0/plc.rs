@@ -1,1000 +1,743 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::PLC {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register PLC"]
+pub type R = crate::R<u32, super::PLC>;
+#[doc = "Writer for register PLC"]
+pub type W = crate::W<u32, super::PLC>;
+#[doc = "Register PLC `reset()`'s with value 0"]
+impl crate::ResetValue for super::PLC {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Possible values of the field `IPLS`"]
+#[doc = "Clamping control signal selector\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum IPLSR {
-    #[doc = "HRPWMx.BLyA"]
+pub enum IPLS_A {
+    #[doc = "0: HRPWMx.BLyA"]
     VALUE1,
-    #[doc = "HRPWMx.BLyB"]
+    #[doc = "1: HRPWMx.BLyB"]
     VALUE2,
-    #[doc = "HRPWMx.BLyC"]
+    #[doc = "2: HRPWMx.BLyC"]
     VALUE3,
-    #[doc = "HRPWMx.BLyD"]
+    #[doc = "3: HRPWMx.BLyD"]
     VALUE4,
-    #[doc = "HRPWMx.BLyE"]
+    #[doc = "4: HRPWMx.BLyE"]
     VALUE5,
-    #[doc = "HRPWMx.BLyF"]
+    #[doc = "5: HRPWMx.BLyF"]
     VALUE6,
-    #[doc = "HRPWMx.BLyG"]
+    #[doc = "6: HRPWMx.BLyG"]
     VALUE7,
-    #[doc = "HRPWMx.BLyH"]
+    #[doc = "7: HRPWMx.BLyH"]
     VALUE8,
-    #[doc = "HRPWMx.BLyI"]
+    #[doc = "8: HRPWMx.BLyI"]
     VALUE9,
-    #[doc = "HRPWMx.BLyJ"]
+    #[doc = "9: HRPWMx.BLyJ"]
     VALUE10,
-    #[doc = "HRPWMx.BLyK"]
+    #[doc = "10: HRPWMx.BLyK"]
     VALUE11,
-    #[doc = "HRPWMx.BLyL"]
+    #[doc = "11: HRPWMx.BLyL"]
     VALUE12,
-    #[doc = "HRPWMx.BLyM"]
+    #[doc = "12: HRPWMx.BLyM"]
     VALUE13,
-    #[doc = "HRPWMx.BLyN"]
+    #[doc = "13: HRPWMx.BLyN"]
     VALUE14,
-    #[doc = "HRPWMx.BLyO"]
+    #[doc = "14: HRPWMx.BLyO"]
     VALUE15,
-    #[doc = "HRPWMx.BLyP"]
+    #[doc = "15: HRPWMx.BLyP"]
     VALUE16,
 }
-impl IPLSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            IPLSR::VALUE1 => 0,
-            IPLSR::VALUE2 => 1,
-            IPLSR::VALUE3 => 2,
-            IPLSR::VALUE4 => 3,
-            IPLSR::VALUE5 => 4,
-            IPLSR::VALUE6 => 5,
-            IPLSR::VALUE7 => 6,
-            IPLSR::VALUE8 => 7,
-            IPLSR::VALUE9 => 8,
-            IPLSR::VALUE10 => 9,
-            IPLSR::VALUE11 => 10,
-            IPLSR::VALUE12 => 11,
-            IPLSR::VALUE13 => 12,
-            IPLSR::VALUE14 => 13,
-            IPLSR::VALUE15 => 14,
-            IPLSR::VALUE16 => 15,
+impl From<IPLS_A> for u8 {
+    #[inline(always)]
+    fn from(variant: IPLS_A) -> Self {
+        match variant {
+            IPLS_A::VALUE1 => 0,
+            IPLS_A::VALUE2 => 1,
+            IPLS_A::VALUE3 => 2,
+            IPLS_A::VALUE4 => 3,
+            IPLS_A::VALUE5 => 4,
+            IPLS_A::VALUE6 => 5,
+            IPLS_A::VALUE7 => 6,
+            IPLS_A::VALUE8 => 7,
+            IPLS_A::VALUE9 => 8,
+            IPLS_A::VALUE10 => 9,
+            IPLS_A::VALUE11 => 10,
+            IPLS_A::VALUE12 => 11,
+            IPLS_A::VALUE13 => 12,
+            IPLS_A::VALUE14 => 13,
+            IPLS_A::VALUE15 => 14,
+            IPLS_A::VALUE16 => 15,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> IPLSR {
-        match value {
-            0 => IPLSR::VALUE1,
-            1 => IPLSR::VALUE2,
-            2 => IPLSR::VALUE3,
-            3 => IPLSR::VALUE4,
-            4 => IPLSR::VALUE5,
-            5 => IPLSR::VALUE6,
-            6 => IPLSR::VALUE7,
-            7 => IPLSR::VALUE8,
-            8 => IPLSR::VALUE9,
-            9 => IPLSR::VALUE10,
-            10 => IPLSR::VALUE11,
-            11 => IPLSR::VALUE12,
-            12 => IPLSR::VALUE13,
-            13 => IPLSR::VALUE14,
-            14 => IPLSR::VALUE15,
-            15 => IPLSR::VALUE16,
+}
+#[doc = "Reader of field `IPLS`"]
+pub type IPLS_R = crate::R<u8, IPLS_A>;
+impl IPLS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> IPLS_A {
+        match self.bits {
+            0 => IPLS_A::VALUE1,
+            1 => IPLS_A::VALUE2,
+            2 => IPLS_A::VALUE3,
+            3 => IPLS_A::VALUE4,
+            4 => IPLS_A::VALUE5,
+            5 => IPLS_A::VALUE6,
+            6 => IPLS_A::VALUE7,
+            7 => IPLS_A::VALUE8,
+            8 => IPLS_A::VALUE9,
+            9 => IPLS_A::VALUE10,
+            10 => IPLS_A::VALUE11,
+            11 => IPLS_A::VALUE12,
+            12 => IPLS_A::VALUE13,
+            13 => IPLS_A::VALUE14,
+            14 => IPLS_A::VALUE15,
+            15 => IPLS_A::VALUE16,
             _ => unreachable!(),
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == IPLSR::VALUE1
+        *self == IPLS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == IPLSR::VALUE2
+        *self == IPLS_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == IPLSR::VALUE3
+        *self == IPLS_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == IPLSR::VALUE4
+        *self == IPLS_A::VALUE4
     }
     #[doc = "Checks if the value of the field is `VALUE5`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value5(&self) -> bool {
-        *self == IPLSR::VALUE5
+        *self == IPLS_A::VALUE5
     }
     #[doc = "Checks if the value of the field is `VALUE6`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value6(&self) -> bool {
-        *self == IPLSR::VALUE6
+        *self == IPLS_A::VALUE6
     }
     #[doc = "Checks if the value of the field is `VALUE7`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value7(&self) -> bool {
-        *self == IPLSR::VALUE7
+        *self == IPLS_A::VALUE7
     }
     #[doc = "Checks if the value of the field is `VALUE8`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value8(&self) -> bool {
-        *self == IPLSR::VALUE8
+        *self == IPLS_A::VALUE8
     }
     #[doc = "Checks if the value of the field is `VALUE9`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value9(&self) -> bool {
-        *self == IPLSR::VALUE9
+        *self == IPLS_A::VALUE9
     }
     #[doc = "Checks if the value of the field is `VALUE10`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value10(&self) -> bool {
-        *self == IPLSR::VALUE10
+        *self == IPLS_A::VALUE10
     }
     #[doc = "Checks if the value of the field is `VALUE11`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value11(&self) -> bool {
-        *self == IPLSR::VALUE11
+        *self == IPLS_A::VALUE11
     }
     #[doc = "Checks if the value of the field is `VALUE12`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value12(&self) -> bool {
-        *self == IPLSR::VALUE12
+        *self == IPLS_A::VALUE12
     }
     #[doc = "Checks if the value of the field is `VALUE13`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value13(&self) -> bool {
-        *self == IPLSR::VALUE13
+        *self == IPLS_A::VALUE13
     }
     #[doc = "Checks if the value of the field is `VALUE14`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value14(&self) -> bool {
-        *self == IPLSR::VALUE14
+        *self == IPLS_A::VALUE14
     }
     #[doc = "Checks if the value of the field is `VALUE15`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value15(&self) -> bool {
-        *self == IPLSR::VALUE15
+        *self == IPLS_A::VALUE15
     }
     #[doc = "Checks if the value of the field is `VALUE16`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value16(&self) -> bool {
-        *self == IPLSR::VALUE16
+        *self == IPLS_A::VALUE16
     }
 }
-#[doc = "Possible values of the field `PLCL`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PLCLR {
-    #[doc = "Clamping control disabled"]
-    VALUE1,
-    #[doc = "Output is set to clamped level when the control signal is HIGH"]
-    VALUE2,
-    #[doc = "Output is set to clamped level when the control signal is LOW"]
-    VALUE3,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
-}
-impl PLCLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            PLCLR::VALUE1 => 0,
-            PLCLR::VALUE2 => 1,
-            PLCLR::VALUE3 => 2,
-            PLCLR::_Reserved(bits) => bits,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> PLCLR {
-        match value {
-            0 => PLCLR::VALUE1,
-            1 => PLCLR::VALUE2,
-            2 => PLCLR::VALUE3,
-            i => PLCLR::_Reserved(i),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PLCLR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PLCLR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == PLCLR::VALUE3
-    }
-}
-#[doc = "Possible values of the field `PSL`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PSLR {
-    #[doc = "Output clamped level is LOW"]
-    VALUE1,
-    #[doc = "Output clamped level is HIGH"]
-    VALUE2,
-}
-impl PSLR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PSLR::VALUE1 => false,
-            PSLR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PSLR {
-        match value {
-            false => PSLR::VALUE1,
-            true => PSLR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PSLR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PSLR::VALUE2
-    }
-}
-#[doc = "Possible values of the field `PLSW`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PLSWR {
-    #[doc = "External signal and SW can remove the output from the clamped state"]
-    VALUE1,
-    #[doc = "Only SW can remove the output from the clamped state"]
-    VALUE2,
-}
-impl PLSWR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PLSWR::VALUE1 => false,
-            PLSWR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PLSWR {
-        match value {
-            false => PLSWR::VALUE1,
-            true => PLSWR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PLSWR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PLSWR::VALUE2
-    }
-}
-#[doc = "Possible values of the field `PLEC`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PLECR {
-    #[doc = "Passive level is entered immediately"]
-    VALUE1,
-    #[doc = "Passive level is entered only after the comparator output passes to LOW (output from the blanking stage)"]
-    VALUE2,
-    #[doc = "Passive level is entered only after the comparator output passes to HIGH (output from the blanking stage)"]
-    VALUE3,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
-}
-impl PLECR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            PLECR::VALUE1 => 0,
-            PLECR::VALUE2 => 1,
-            PLECR::VALUE3 => 2,
-            PLECR::_Reserved(bits) => bits,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> PLECR {
-        match value {
-            0 => PLECR::VALUE1,
-            1 => PLECR::VALUE2,
-            2 => PLECR::VALUE3,
-            i => PLECR::_Reserved(i),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PLECR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PLECR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == PLECR::VALUE3
-    }
-}
-#[doc = "Possible values of the field `PLXC`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PLXCR {
-    #[doc = "Passive level is exit immediately"]
-    VALUE1,
-    #[doc = "Passive level is exit only after the comparator output passes to LOW (output from the blanking stage)"]
-    VALUE2,
-    #[doc = "Passive level is exit only after the comparator output passes to HIGH (output from the blanking stage)"]
-    VALUE3,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
-}
-impl PLXCR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            PLXCR::VALUE1 => 0,
-            PLXCR::VALUE2 => 1,
-            PLXCR::VALUE3 => 2,
-            PLXCR::_Reserved(bits) => bits,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> PLXCR {
-        match value {
-            0 => PLXCR::VALUE1,
-            1 => PLXCR::VALUE2,
-            2 => PLXCR::VALUE3,
-            i => PLXCR::_Reserved(i),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PLXCR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PLXCR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == PLXCR::VALUE3
-    }
-}
-#[doc = "Values that can be written to the field `IPLS`"]
-pub enum IPLSW {
-    #[doc = "HRPWMx.BLyA"]
-    VALUE1,
-    #[doc = "HRPWMx.BLyB"]
-    VALUE2,
-    #[doc = "HRPWMx.BLyC"]
-    VALUE3,
-    #[doc = "HRPWMx.BLyD"]
-    VALUE4,
-    #[doc = "HRPWMx.BLyE"]
-    VALUE5,
-    #[doc = "HRPWMx.BLyF"]
-    VALUE6,
-    #[doc = "HRPWMx.BLyG"]
-    VALUE7,
-    #[doc = "HRPWMx.BLyH"]
-    VALUE8,
-    #[doc = "HRPWMx.BLyI"]
-    VALUE9,
-    #[doc = "HRPWMx.BLyJ"]
-    VALUE10,
-    #[doc = "HRPWMx.BLyK"]
-    VALUE11,
-    #[doc = "HRPWMx.BLyL"]
-    VALUE12,
-    #[doc = "HRPWMx.BLyM"]
-    VALUE13,
-    #[doc = "HRPWMx.BLyN"]
-    VALUE14,
-    #[doc = "HRPWMx.BLyO"]
-    VALUE15,
-    #[doc = "HRPWMx.BLyP"]
-    VALUE16,
-}
-impl IPLSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            IPLSW::VALUE1 => 0,
-            IPLSW::VALUE2 => 1,
-            IPLSW::VALUE3 => 2,
-            IPLSW::VALUE4 => 3,
-            IPLSW::VALUE5 => 4,
-            IPLSW::VALUE6 => 5,
-            IPLSW::VALUE7 => 6,
-            IPLSW::VALUE8 => 7,
-            IPLSW::VALUE9 => 8,
-            IPLSW::VALUE10 => 9,
-            IPLSW::VALUE11 => 10,
-            IPLSW::VALUE12 => 11,
-            IPLSW::VALUE13 => 12,
-            IPLSW::VALUE14 => 13,
-            IPLSW::VALUE15 => 14,
-            IPLSW::VALUE16 => 15,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _IPLSW<'a> {
+#[doc = "Write proxy for field `IPLS`"]
+pub struct IPLS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _IPLSW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: IPLSW) -> &'a mut W {
+impl<'a> IPLS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: IPLS_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "HRPWMx.BLyA"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE1)
+        self.variant(IPLS_A::VALUE1)
     }
     #[doc = "HRPWMx.BLyB"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE2)
+        self.variant(IPLS_A::VALUE2)
     }
     #[doc = "HRPWMx.BLyC"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE3)
+        self.variant(IPLS_A::VALUE3)
     }
     #[doc = "HRPWMx.BLyD"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE4)
+        self.variant(IPLS_A::VALUE4)
     }
     #[doc = "HRPWMx.BLyE"]
-    #[inline]
+    #[inline(always)]
     pub fn value5(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE5)
+        self.variant(IPLS_A::VALUE5)
     }
     #[doc = "HRPWMx.BLyF"]
-    #[inline]
+    #[inline(always)]
     pub fn value6(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE6)
+        self.variant(IPLS_A::VALUE6)
     }
     #[doc = "HRPWMx.BLyG"]
-    #[inline]
+    #[inline(always)]
     pub fn value7(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE7)
+        self.variant(IPLS_A::VALUE7)
     }
     #[doc = "HRPWMx.BLyH"]
-    #[inline]
+    #[inline(always)]
     pub fn value8(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE8)
+        self.variant(IPLS_A::VALUE8)
     }
     #[doc = "HRPWMx.BLyI"]
-    #[inline]
+    #[inline(always)]
     pub fn value9(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE9)
+        self.variant(IPLS_A::VALUE9)
     }
     #[doc = "HRPWMx.BLyJ"]
-    #[inline]
+    #[inline(always)]
     pub fn value10(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE10)
+        self.variant(IPLS_A::VALUE10)
     }
     #[doc = "HRPWMx.BLyK"]
-    #[inline]
+    #[inline(always)]
     pub fn value11(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE11)
+        self.variant(IPLS_A::VALUE11)
     }
     #[doc = "HRPWMx.BLyL"]
-    #[inline]
+    #[inline(always)]
     pub fn value12(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE12)
+        self.variant(IPLS_A::VALUE12)
     }
     #[doc = "HRPWMx.BLyM"]
-    #[inline]
+    #[inline(always)]
     pub fn value13(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE13)
+        self.variant(IPLS_A::VALUE13)
     }
     #[doc = "HRPWMx.BLyN"]
-    #[inline]
+    #[inline(always)]
     pub fn value14(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE14)
+        self.variant(IPLS_A::VALUE14)
     }
     #[doc = "HRPWMx.BLyO"]
-    #[inline]
+    #[inline(always)]
     pub fn value15(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE15)
+        self.variant(IPLS_A::VALUE15)
     }
     #[doc = "HRPWMx.BLyP"]
-    #[inline]
+    #[inline(always)]
     pub fn value16(self) -> &'a mut W {
-        self.variant(IPLSW::VALUE16)
+        self.variant(IPLS_A::VALUE16)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PLCL`"]
-pub enum PLCLW {
-    #[doc = "Clamping control disabled"]
+#[doc = "Clamping control signal level selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PLCL_A {
+    #[doc = "0: Clamping control disabled"]
     VALUE1,
-    #[doc = "Output is set to clamped level when the control signal is HIGH"]
+    #[doc = "1: Output is set to clamped level when the control signal is HIGH"]
     VALUE2,
-    #[doc = "Output is set to clamped level when the control signal is LOW"]
+    #[doc = "2: Output is set to clamped level when the control signal is LOW"]
     VALUE3,
 }
-impl PLCLW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            PLCLW::VALUE1 => 0,
-            PLCLW::VALUE2 => 1,
-            PLCLW::VALUE3 => 2,
+impl From<PLCL_A> for u8 {
+    #[inline(always)]
+    fn from(variant: PLCL_A) -> Self {
+        match variant {
+            PLCL_A::VALUE1 => 0,
+            PLCL_A::VALUE2 => 1,
+            PLCL_A::VALUE3 => 2,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PLCLW<'a> {
+#[doc = "Reader of field `PLCL`"]
+pub type PLCL_R = crate::R<u8, PLCL_A>;
+impl PLCL_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, PLCL_A> {
+        use crate::Variant::*;
+        match self.bits {
+            0 => Val(PLCL_A::VALUE1),
+            1 => Val(PLCL_A::VALUE2),
+            2 => Val(PLCL_A::VALUE3),
+            i => Res(i),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PLCL_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PLCL_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == PLCL_A::VALUE3
+    }
+}
+#[doc = "Write proxy for field `PLCL`"]
+pub struct PLCL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PLCLW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PLCLW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+impl<'a> PLCL_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PLCL_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
     }
     #[doc = "Clamping control disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PLCLW::VALUE1)
+        self.variant(PLCL_A::VALUE1)
     }
     #[doc = "Output is set to clamped level when the control signal is HIGH"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PLCLW::VALUE2)
+        self.variant(PLCL_A::VALUE2)
     }
     #[doc = "Output is set to clamped level when the control signal is LOW"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(PLCLW::VALUE3)
+        self.variant(PLCL_A::VALUE3)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u32) & 0x03) << 8);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PSL`"]
-pub enum PSLW {
-    #[doc = "Output clamped level is LOW"]
+#[doc = "Output passive level value\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PSL_A {
+    #[doc = "0: Output clamped level is LOW"]
     VALUE1,
-    #[doc = "Output clamped level is HIGH"]
+    #[doc = "1: Output clamped level is HIGH"]
     VALUE2,
 }
-impl PSLW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PSLW::VALUE1 => false,
-            PSLW::VALUE2 => true,
+impl From<PSL_A> for bool {
+    #[inline(always)]
+    fn from(variant: PSL_A) -> Self {
+        match variant {
+            PSL_A::VALUE1 => false,
+            PSL_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PSLW<'a> {
+#[doc = "Reader of field `PSL`"]
+pub type PSL_R = crate::R<bool, PSL_A>;
+impl PSL_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PSL_A {
+        match self.bits {
+            false => PSL_A::VALUE1,
+            true => PSL_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PSL_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PSL_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `PSL`"]
+pub struct PSL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PSLW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PSLW) -> &'a mut W {
+impl<'a> PSL_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PSL_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Output clamped level is LOW"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PSLW::VALUE1)
+        self.variant(PSL_A::VALUE1)
     }
     #[doc = "Output clamped level is HIGH"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PSLW::VALUE2)
+        self.variant(PSL_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PLSW`"]
-pub enum PLSWW {
-    #[doc = "External signal and SW can remove the output from the clamped state"]
+#[doc = "Clamped state exit SW configuration\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PLSW_A {
+    #[doc = "0: External signal and SW can remove the output from the clamped state"]
     VALUE1,
-    #[doc = "Only SW can remove the output from the clamped state"]
+    #[doc = "1: Only SW can remove the output from the clamped state"]
     VALUE2,
 }
-impl PLSWW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PLSWW::VALUE1 => false,
-            PLSWW::VALUE2 => true,
+impl From<PLSW_A> for bool {
+    #[inline(always)]
+    fn from(variant: PLSW_A) -> Self {
+        match variant {
+            PLSW_A::VALUE1 => false,
+            PLSW_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PLSWW<'a> {
+#[doc = "Reader of field `PLSW`"]
+pub type PLSW_R = crate::R<bool, PLSW_A>;
+impl PLSW_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PLSW_A {
+        match self.bits {
+            false => PLSW_A::VALUE1,
+            true => PLSW_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PLSW_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PLSW_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `PLSW`"]
+pub struct PLSW_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PLSWW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PLSWW) -> &'a mut W {
+impl<'a> PLSW_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PLSW_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "External signal and SW can remove the output from the clamped state"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PLSWW::VALUE1)
+        self.variant(PLSW_A::VALUE1)
     }
     #[doc = "Only SW can remove the output from the clamped state"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PLSWW::VALUE2)
+        self.variant(PLSW_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 11;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PLEC`"]
-pub enum PLECW {
-    #[doc = "Passive level is entered immediately"]
+#[doc = "Passive level enter configuration\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PLEC_A {
+    #[doc = "0: Passive level is entered immediately"]
     VALUE1,
-    #[doc = "Passive level is entered only after the comparator output passes to LOW (output from the blanking stage)"]
+    #[doc = "1: Passive level is entered only after the comparator output passes to LOW (output from the blanking stage)"]
     VALUE2,
-    #[doc = "Passive level is entered only after the comparator output passes to HIGH (output from the blanking stage)"]
+    #[doc = "2: Passive level is entered only after the comparator output passes to HIGH (output from the blanking stage)"]
     VALUE3,
 }
-impl PLECW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            PLECW::VALUE1 => 0,
-            PLECW::VALUE2 => 1,
-            PLECW::VALUE3 => 2,
+impl From<PLEC_A> for u8 {
+    #[inline(always)]
+    fn from(variant: PLEC_A) -> Self {
+        match variant {
+            PLEC_A::VALUE1 => 0,
+            PLEC_A::VALUE2 => 1,
+            PLEC_A::VALUE3 => 2,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PLECW<'a> {
+#[doc = "Reader of field `PLEC`"]
+pub type PLEC_R = crate::R<u8, PLEC_A>;
+impl PLEC_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, PLEC_A> {
+        use crate::Variant::*;
+        match self.bits {
+            0 => Val(PLEC_A::VALUE1),
+            1 => Val(PLEC_A::VALUE2),
+            2 => Val(PLEC_A::VALUE3),
+            i => Res(i),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PLEC_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PLEC_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == PLEC_A::VALUE3
+    }
+}
+#[doc = "Write proxy for field `PLEC`"]
+pub struct PLEC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PLECW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PLECW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+impl<'a> PLEC_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PLEC_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
     }
     #[doc = "Passive level is entered immediately"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PLECW::VALUE1)
+        self.variant(PLEC_A::VALUE1)
     }
     #[doc = "Passive level is entered only after the comparator output passes to LOW (output from the blanking stage)"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PLECW::VALUE2)
+        self.variant(PLEC_A::VALUE2)
     }
     #[doc = "Passive level is entered only after the comparator output passes to HIGH (output from the blanking stage)"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(PLECW::VALUE3)
+        self.variant(PLEC_A::VALUE3)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 12)) | (((value as u32) & 0x03) << 12);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PLXC`"]
-pub enum PLXCW {
-    #[doc = "Passive level is exit immediately"]
+#[doc = "Passive level exit configuration\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PLXC_A {
+    #[doc = "0: Passive level is exit immediately"]
     VALUE1,
-    #[doc = "Passive level is exit only after the comparator output passes to LOW (output from the blanking stage)"]
+    #[doc = "1: Passive level is exit only after the comparator output passes to LOW (output from the blanking stage)"]
     VALUE2,
-    #[doc = "Passive level is exit only after the comparator output passes to HIGH (output from the blanking stage)"]
+    #[doc = "2: Passive level is exit only after the comparator output passes to HIGH (output from the blanking stage)"]
     VALUE3,
 }
-impl PLXCW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            PLXCW::VALUE1 => 0,
-            PLXCW::VALUE2 => 1,
-            PLXCW::VALUE3 => 2,
+impl From<PLXC_A> for u8 {
+    #[inline(always)]
+    fn from(variant: PLXC_A) -> Self {
+        match variant {
+            PLXC_A::VALUE1 => 0,
+            PLXC_A::VALUE2 => 1,
+            PLXC_A::VALUE3 => 2,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PLXCW<'a> {
+#[doc = "Reader of field `PLXC`"]
+pub type PLXC_R = crate::R<u8, PLXC_A>;
+impl PLXC_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, PLXC_A> {
+        use crate::Variant::*;
+        match self.bits {
+            0 => Val(PLXC_A::VALUE1),
+            1 => Val(PLXC_A::VALUE2),
+            2 => Val(PLXC_A::VALUE3),
+            i => Res(i),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PLXC_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PLXC_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == PLXC_A::VALUE3
+    }
+}
+#[doc = "Write proxy for field `PLXC`"]
+pub struct PLXC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PLXCW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PLXCW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+impl<'a> PLXC_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PLXC_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
     }
     #[doc = "Passive level is exit immediately"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PLXCW::VALUE1)
+        self.variant(PLXC_A::VALUE1)
     }
     #[doc = "Passive level is exit only after the comparator output passes to LOW (output from the blanking stage)"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PLXCW::VALUE2)
+        self.variant(PLXC_A::VALUE2)
     }
     #[doc = "Passive level is exit only after the comparator output passes to HIGH (output from the blanking stage)"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(PLXCW::VALUE3)
+        self.variant(PLXC_A::VALUE3)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 14;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 14)) | (((value as u32) & 0x03) << 14);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:3 - Clamping control signal selector"]
-    #[inline]
-    pub fn ipls(&self) -> IPLSR {
-        IPLSR::_from({
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn ipls(&self) -> IPLS_R {
+        IPLS_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 8:9 - Clamping control signal level selection"]
-    #[inline]
-    pub fn plcl(&self) -> PLCLR {
-        PLCLR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn plcl(&self) -> PLCL_R {
+        PLCL_R::new(((self.bits >> 8) & 0x03) as u8)
     }
     #[doc = "Bit 10 - Output passive level value"]
-    #[inline]
-    pub fn psl(&self) -> PSLR {
-        PSLR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn psl(&self) -> PSL_R {
+        PSL_R::new(((self.bits >> 10) & 0x01) != 0)
     }
     #[doc = "Bit 11 - Clamped state exit SW configuration"]
-    #[inline]
-    pub fn plsw(&self) -> PLSWR {
-        PLSWR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn plsw(&self) -> PLSW_R {
+        PLSW_R::new(((self.bits >> 11) & 0x01) != 0)
     }
     #[doc = "Bits 12:13 - Passive level enter configuration"]
-    #[inline]
-    pub fn plec(&self) -> PLECR {
-        PLECR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn plec(&self) -> PLEC_R {
+        PLEC_R::new(((self.bits >> 12) & 0x03) as u8)
     }
     #[doc = "Bits 14:15 - Passive level exit configuration"]
-    #[inline]
-    pub fn plxc(&self) -> PLXCR {
-        PLXCR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 14;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn plxc(&self) -> PLXC_R {
+        PLXC_R::new(((self.bits >> 14) & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:3 - Clamping control signal selector"]
-    #[inline]
-    pub fn ipls(&mut self) -> _IPLSW {
-        _IPLSW { w: self }
+    #[inline(always)]
+    pub fn ipls(&mut self) -> IPLS_W {
+        IPLS_W { w: self }
     }
     #[doc = "Bits 8:9 - Clamping control signal level selection"]
-    #[inline]
-    pub fn plcl(&mut self) -> _PLCLW {
-        _PLCLW { w: self }
+    #[inline(always)]
+    pub fn plcl(&mut self) -> PLCL_W {
+        PLCL_W { w: self }
     }
     #[doc = "Bit 10 - Output passive level value"]
-    #[inline]
-    pub fn psl(&mut self) -> _PSLW {
-        _PSLW { w: self }
+    #[inline(always)]
+    pub fn psl(&mut self) -> PSL_W {
+        PSL_W { w: self }
     }
     #[doc = "Bit 11 - Clamped state exit SW configuration"]
-    #[inline]
-    pub fn plsw(&mut self) -> _PLSWW {
-        _PLSWW { w: self }
+    #[inline(always)]
+    pub fn plsw(&mut self) -> PLSW_W {
+        PLSW_W { w: self }
     }
     #[doc = "Bits 12:13 - Passive level enter configuration"]
-    #[inline]
-    pub fn plec(&mut self) -> _PLECW {
-        _PLECW { w: self }
+    #[inline(always)]
+    pub fn plec(&mut self) -> PLEC_W {
+        PLEC_W { w: self }
     }
     #[doc = "Bits 14:15 - Passive level exit configuration"]
-    #[inline]
-    pub fn plxc(&mut self) -> _PLXCW {
-        _PLXCW { w: self }
+    #[inline(always)]
+    pub fn plxc(&mut self) -> PLXC_W {
+        PLXC_W { w: self }
     }
 }

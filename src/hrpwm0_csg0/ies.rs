@@ -1,726 +1,536 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::IES {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register IES"]
+pub type R = crate::R<u32, super::IES>;
+#[doc = "Writer for register IES"]
+pub type W = crate::W<u32, super::IES>;
+#[doc = "Register IES `reset()`'s with value 0"]
+impl crate::ResetValue for super::IES {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Possible values of the field `SVLS`"]
+#[doc = "External value switch function level selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SVLSR {
-    #[doc = "Function disabled"]
+pub enum SVLS_A {
+    #[doc = "0: Function disabled"]
     VALUE1,
-    #[doc = "Active when input is HIGH"]
+    #[doc = "1: Active when input is HIGH"]
     VALUE2,
-    #[doc = "Active when input is LOW"]
+    #[doc = "2: Active when input is LOW"]
     VALUE3,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
 }
-impl SVLSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            SVLSR::VALUE1 => 0,
-            SVLSR::VALUE2 => 1,
-            SVLSR::VALUE3 => 2,
-            SVLSR::_Reserved(bits) => bits,
+impl From<SVLS_A> for u8 {
+    #[inline(always)]
+    fn from(variant: SVLS_A) -> Self {
+        match variant {
+            SVLS_A::VALUE1 => 0,
+            SVLS_A::VALUE2 => 1,
+            SVLS_A::VALUE3 => 2,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> SVLSR {
-        match value {
-            0 => SVLSR::VALUE1,
-            1 => SVLSR::VALUE2,
-            2 => SVLSR::VALUE3,
-            i => SVLSR::_Reserved(i),
+}
+#[doc = "Reader of field `SVLS`"]
+pub type SVLS_R = crate::R<u8, SVLS_A>;
+impl SVLS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, SVLS_A> {
+        use crate::Variant::*;
+        match self.bits {
+            0 => Val(SVLS_A::VALUE1),
+            1 => Val(SVLS_A::VALUE2),
+            2 => Val(SVLS_A::VALUE3),
+            i => Res(i),
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SVLSR::VALUE1
+        *self == SVLS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SVLSR::VALUE2
+        *self == SVLS_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SVLSR::VALUE3
+        *self == SVLS_A::VALUE3
     }
 }
-#[doc = "Possible values of the field `STRES`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum STRESR {
-    #[doc = "Function disabled"]
-    VALUE1,
-    #[doc = "Active on rising edge"]
-    VALUE2,
-    #[doc = "Active on falling edge"]
-    VALUE3,
-    #[doc = "Active on both edges"]
-    VALUE4,
-}
-impl STRESR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            STRESR::VALUE1 => 0,
-            STRESR::VALUE2 => 1,
-            STRESR::VALUE3 => 2,
-            STRESR::VALUE4 => 3,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> STRESR {
-        match value {
-            0 => STRESR::VALUE1,
-            1 => STRESR::VALUE2,
-            2 => STRESR::VALUE3,
-            3 => STRESR::VALUE4,
-            _ => unreachable!(),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == STRESR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == STRESR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == STRESR::VALUE3
-    }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
-    pub fn is_value4(&self) -> bool {
-        *self == STRESR::VALUE4
-    }
-}
-#[doc = "Possible values of the field `STPES`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum STPESR {
-    #[doc = "Function disabled"]
-    VALUE1,
-    #[doc = "Active on rising edge"]
-    VALUE2,
-    #[doc = "Active on falling edge"]
-    VALUE3,
-    #[doc = "Active on both edges"]
-    VALUE4,
-}
-impl STPESR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            STPESR::VALUE1 => 0,
-            STPESR::VALUE2 => 1,
-            STPESR::VALUE3 => 2,
-            STPESR::VALUE4 => 3,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> STPESR {
-        match value {
-            0 => STPESR::VALUE1,
-            1 => STPESR::VALUE2,
-            2 => STPESR::VALUE3,
-            3 => STPESR::VALUE4,
-            _ => unreachable!(),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == STPESR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == STPESR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == STPESR::VALUE3
-    }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
-    pub fn is_value4(&self) -> bool {
-        *self == STPESR::VALUE4
-    }
-}
-#[doc = "Possible values of the field `TRGES`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum TRGESR {
-    #[doc = "Function disabled"]
-    VALUE1,
-    #[doc = "Active on rising edge"]
-    VALUE2,
-    #[doc = "Active on falling edge"]
-    VALUE3,
-    #[doc = "Active on both edges"]
-    VALUE4,
-}
-impl TRGESR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            TRGESR::VALUE1 => 0,
-            TRGESR::VALUE2 => 1,
-            TRGESR::VALUE3 => 2,
-            TRGESR::VALUE4 => 3,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> TRGESR {
-        match value {
-            0 => TRGESR::VALUE1,
-            1 => TRGESR::VALUE2,
-            2 => TRGESR::VALUE3,
-            3 => TRGESR::VALUE4,
-            _ => unreachable!(),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == TRGESR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == TRGESR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == TRGESR::VALUE3
-    }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
-    pub fn is_value4(&self) -> bool {
-        *self == TRGESR::VALUE4
-    }
-}
-#[doc = "Possible values of the field `STES`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum STESR {
-    #[doc = "Function disabled"]
-    VALUE1,
-    #[doc = "Active on rising edge"]
-    VALUE2,
-    #[doc = "Active on falling edge"]
-    VALUE3,
-    #[doc = "Active on both edges"]
-    VALUE4,
-}
-impl STESR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            STESR::VALUE1 => 0,
-            STESR::VALUE2 => 1,
-            STESR::VALUE3 => 2,
-            STESR::VALUE4 => 3,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> STESR {
-        match value {
-            0 => STESR::VALUE1,
-            1 => STESR::VALUE2,
-            2 => STESR::VALUE3,
-            3 => STESR::VALUE4,
-            _ => unreachable!(),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == STESR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == STESR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == STESR::VALUE3
-    }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
-    pub fn is_value4(&self) -> bool {
-        *self == STESR::VALUE4
-    }
-}
-#[doc = "Values that can be written to the field `SVLS`"]
-pub enum SVLSW {
-    #[doc = "Function disabled"]
-    VALUE1,
-    #[doc = "Active when input is HIGH"]
-    VALUE2,
-    #[doc = "Active when input is LOW"]
-    VALUE3,
-}
-impl SVLSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            SVLSW::VALUE1 => 0,
-            SVLSW::VALUE2 => 1,
-            SVLSW::VALUE3 => 2,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SVLSW<'a> {
+#[doc = "Write proxy for field `SVLS`"]
+pub struct SVLS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SVLSW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: SVLSW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+impl<'a> SVLS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: SVLS_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
     }
     #[doc = "Function disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(SVLSW::VALUE1)
+        self.variant(SVLS_A::VALUE1)
     }
     #[doc = "Active when input is HIGH"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(SVLSW::VALUE2)
+        self.variant(SVLS_A::VALUE2)
     }
     #[doc = "Active when input is LOW"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(SVLSW::VALUE3)
+        self.variant(SVLS_A::VALUE3)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `STRES`"]
-pub enum STRESW {
-    #[doc = "Function disabled"]
+#[doc = "External start function edge selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum STRES_A {
+    #[doc = "0: Function disabled"]
     VALUE1,
-    #[doc = "Active on rising edge"]
+    #[doc = "1: Active on rising edge"]
     VALUE2,
-    #[doc = "Active on falling edge"]
+    #[doc = "2: Active on falling edge"]
     VALUE3,
-    #[doc = "Active on both edges"]
+    #[doc = "3: Active on both edges"]
     VALUE4,
 }
-impl STRESW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            STRESW::VALUE1 => 0,
-            STRESW::VALUE2 => 1,
-            STRESW::VALUE3 => 2,
-            STRESW::VALUE4 => 3,
+impl From<STRES_A> for u8 {
+    #[inline(always)]
+    fn from(variant: STRES_A) -> Self {
+        match variant {
+            STRES_A::VALUE1 => 0,
+            STRES_A::VALUE2 => 1,
+            STRES_A::VALUE3 => 2,
+            STRES_A::VALUE4 => 3,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _STRESW<'a> {
+#[doc = "Reader of field `STRES`"]
+pub type STRES_R = crate::R<u8, STRES_A>;
+impl STRES_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> STRES_A {
+        match self.bits {
+            0 => STRES_A::VALUE1,
+            1 => STRES_A::VALUE2,
+            2 => STRES_A::VALUE3,
+            3 => STRES_A::VALUE4,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == STRES_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == STRES_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == STRES_A::VALUE3
+    }
+    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[inline(always)]
+    pub fn is_value4(&self) -> bool {
+        *self == STRES_A::VALUE4
+    }
+}
+#[doc = "Write proxy for field `STRES`"]
+pub struct STRES_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _STRESW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: STRESW) -> &'a mut W {
+impl<'a> STRES_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: STRES_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "Function disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(STRESW::VALUE1)
+        self.variant(STRES_A::VALUE1)
     }
     #[doc = "Active on rising edge"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(STRESW::VALUE2)
+        self.variant(STRES_A::VALUE2)
     }
     #[doc = "Active on falling edge"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(STRESW::VALUE3)
+        self.variant(STRES_A::VALUE3)
     }
     #[doc = "Active on both edges"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(STRESW::VALUE4)
+        self.variant(STRES_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 2)) | (((value as u32) & 0x03) << 2);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `STPES`"]
-pub enum STPESW {
-    #[doc = "Function disabled"]
+#[doc = "External stop function edge selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum STPES_A {
+    #[doc = "0: Function disabled"]
     VALUE1,
-    #[doc = "Active on rising edge"]
+    #[doc = "1: Active on rising edge"]
     VALUE2,
-    #[doc = "Active on falling edge"]
+    #[doc = "2: Active on falling edge"]
     VALUE3,
-    #[doc = "Active on both edges"]
+    #[doc = "3: Active on both edges"]
     VALUE4,
 }
-impl STPESW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            STPESW::VALUE1 => 0,
-            STPESW::VALUE2 => 1,
-            STPESW::VALUE3 => 2,
-            STPESW::VALUE4 => 3,
+impl From<STPES_A> for u8 {
+    #[inline(always)]
+    fn from(variant: STPES_A) -> Self {
+        match variant {
+            STPES_A::VALUE1 => 0,
+            STPES_A::VALUE2 => 1,
+            STPES_A::VALUE3 => 2,
+            STPES_A::VALUE4 => 3,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _STPESW<'a> {
+#[doc = "Reader of field `STPES`"]
+pub type STPES_R = crate::R<u8, STPES_A>;
+impl STPES_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> STPES_A {
+        match self.bits {
+            0 => STPES_A::VALUE1,
+            1 => STPES_A::VALUE2,
+            2 => STPES_A::VALUE3,
+            3 => STPES_A::VALUE4,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == STPES_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == STPES_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == STPES_A::VALUE3
+    }
+    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[inline(always)]
+    pub fn is_value4(&self) -> bool {
+        *self == STPES_A::VALUE4
+    }
+}
+#[doc = "Write proxy for field `STPES`"]
+pub struct STPES_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _STPESW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: STPESW) -> &'a mut W {
+impl<'a> STPES_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: STPES_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "Function disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(STPESW::VALUE1)
+        self.variant(STPES_A::VALUE1)
     }
     #[doc = "Active on rising edge"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(STPESW::VALUE2)
+        self.variant(STPES_A::VALUE2)
     }
     #[doc = "Active on falling edge"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(STPESW::VALUE3)
+        self.variant(STPES_A::VALUE3)
     }
     #[doc = "Active on both edges"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(STPESW::VALUE4)
+        self.variant(STPES_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 4)) | (((value as u32) & 0x03) << 4);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `TRGES`"]
-pub enum TRGESW {
-    #[doc = "Function disabled"]
+#[doc = "External trigger function edge selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum TRGES_A {
+    #[doc = "0: Function disabled"]
     VALUE1,
-    #[doc = "Active on rising edge"]
+    #[doc = "1: Active on rising edge"]
     VALUE2,
-    #[doc = "Active on falling edge"]
+    #[doc = "2: Active on falling edge"]
     VALUE3,
-    #[doc = "Active on both edges"]
+    #[doc = "3: Active on both edges"]
     VALUE4,
 }
-impl TRGESW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            TRGESW::VALUE1 => 0,
-            TRGESW::VALUE2 => 1,
-            TRGESW::VALUE3 => 2,
-            TRGESW::VALUE4 => 3,
+impl From<TRGES_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TRGES_A) -> Self {
+        match variant {
+            TRGES_A::VALUE1 => 0,
+            TRGES_A::VALUE2 => 1,
+            TRGES_A::VALUE3 => 2,
+            TRGES_A::VALUE4 => 3,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _TRGESW<'a> {
+#[doc = "Reader of field `TRGES`"]
+pub type TRGES_R = crate::R<u8, TRGES_A>;
+impl TRGES_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TRGES_A {
+        match self.bits {
+            0 => TRGES_A::VALUE1,
+            1 => TRGES_A::VALUE2,
+            2 => TRGES_A::VALUE3,
+            3 => TRGES_A::VALUE4,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == TRGES_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == TRGES_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == TRGES_A::VALUE3
+    }
+    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[inline(always)]
+    pub fn is_value4(&self) -> bool {
+        *self == TRGES_A::VALUE4
+    }
+}
+#[doc = "Write proxy for field `TRGES`"]
+pub struct TRGES_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _TRGESW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: TRGESW) -> &'a mut W {
+impl<'a> TRGES_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: TRGES_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "Function disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(TRGESW::VALUE1)
+        self.variant(TRGES_A::VALUE1)
     }
     #[doc = "Active on rising edge"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(TRGESW::VALUE2)
+        self.variant(TRGES_A::VALUE2)
     }
     #[doc = "Active on falling edge"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(TRGESW::VALUE3)
+        self.variant(TRGES_A::VALUE3)
     }
     #[doc = "Active on both edges"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(TRGESW::VALUE4)
+        self.variant(TRGES_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 6)) | (((value as u32) & 0x03) << 6);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `STES`"]
-pub enum STESW {
-    #[doc = "Function disabled"]
+#[doc = "External shadow transfer enable edge selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum STES_A {
+    #[doc = "0: Function disabled"]
     VALUE1,
-    #[doc = "Active on rising edge"]
+    #[doc = "1: Active on rising edge"]
     VALUE2,
-    #[doc = "Active on falling edge"]
+    #[doc = "2: Active on falling edge"]
     VALUE3,
-    #[doc = "Active on both edges"]
+    #[doc = "3: Active on both edges"]
     VALUE4,
 }
-impl STESW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            STESW::VALUE1 => 0,
-            STESW::VALUE2 => 1,
-            STESW::VALUE3 => 2,
-            STESW::VALUE4 => 3,
+impl From<STES_A> for u8 {
+    #[inline(always)]
+    fn from(variant: STES_A) -> Self {
+        match variant {
+            STES_A::VALUE1 => 0,
+            STES_A::VALUE2 => 1,
+            STES_A::VALUE3 => 2,
+            STES_A::VALUE4 => 3,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _STESW<'a> {
+#[doc = "Reader of field `STES`"]
+pub type STES_R = crate::R<u8, STES_A>;
+impl STES_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> STES_A {
+        match self.bits {
+            0 => STES_A::VALUE1,
+            1 => STES_A::VALUE2,
+            2 => STES_A::VALUE3,
+            3 => STES_A::VALUE4,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == STES_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == STES_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == STES_A::VALUE3
+    }
+    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[inline(always)]
+    pub fn is_value4(&self) -> bool {
+        *self == STES_A::VALUE4
+    }
+}
+#[doc = "Write proxy for field `STES`"]
+pub struct STES_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _STESW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: STESW) -> &'a mut W {
+impl<'a> STES_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: STES_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "Function disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(STESW::VALUE1)
+        self.variant(STES_A::VALUE1)
     }
     #[doc = "Active on rising edge"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(STESW::VALUE2)
+        self.variant(STES_A::VALUE2)
     }
     #[doc = "Active on falling edge"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(STESW::VALUE3)
+        self.variant(STES_A::VALUE3)
     }
     #[doc = "Active on both edges"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(STESW::VALUE4)
+        self.variant(STES_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u32) & 0x03) << 8);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:1 - External value switch function level selection"]
-    #[inline]
-    pub fn svls(&self) -> SVLSR {
-        SVLSR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn svls(&self) -> SVLS_R {
+        SVLS_R::new((self.bits & 0x03) as u8)
     }
     #[doc = "Bits 2:3 - External start function edge selection"]
-    #[inline]
-    pub fn stres(&self) -> STRESR {
-        STRESR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn stres(&self) -> STRES_R {
+        STRES_R::new(((self.bits >> 2) & 0x03) as u8)
     }
     #[doc = "Bits 4:5 - External stop function edge selection"]
-    #[inline]
-    pub fn stpes(&self) -> STPESR {
-        STPESR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn stpes(&self) -> STPES_R {
+        STPES_R::new(((self.bits >> 4) & 0x03) as u8)
     }
     #[doc = "Bits 6:7 - External trigger function edge selection"]
-    #[inline]
-    pub fn trges(&self) -> TRGESR {
-        TRGESR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn trges(&self) -> TRGES_R {
+        TRGES_R::new(((self.bits >> 6) & 0x03) as u8)
     }
     #[doc = "Bits 8:9 - External shadow transfer enable edge selection"]
-    #[inline]
-    pub fn stes(&self) -> STESR {
-        STESR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn stes(&self) -> STES_R {
+        STES_R::new(((self.bits >> 8) & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:1 - External value switch function level selection"]
-    #[inline]
-    pub fn svls(&mut self) -> _SVLSW {
-        _SVLSW { w: self }
+    #[inline(always)]
+    pub fn svls(&mut self) -> SVLS_W {
+        SVLS_W { w: self }
     }
     #[doc = "Bits 2:3 - External start function edge selection"]
-    #[inline]
-    pub fn stres(&mut self) -> _STRESW {
-        _STRESW { w: self }
+    #[inline(always)]
+    pub fn stres(&mut self) -> STRES_W {
+        STRES_W { w: self }
     }
     #[doc = "Bits 4:5 - External stop function edge selection"]
-    #[inline]
-    pub fn stpes(&mut self) -> _STPESW {
-        _STPESW { w: self }
+    #[inline(always)]
+    pub fn stpes(&mut self) -> STPES_W {
+        STPES_W { w: self }
     }
     #[doc = "Bits 6:7 - External trigger function edge selection"]
-    #[inline]
-    pub fn trges(&mut self) -> _TRGESW {
-        _TRGESW { w: self }
+    #[inline(always)]
+    pub fn trges(&mut self) -> TRGES_W {
+        TRGES_W { w: self }
     }
     #[doc = "Bits 8:9 - External shadow transfer enable edge selection"]
-    #[inline]
-    pub fn stes(&mut self) -> _STESW {
-        _STESW { w: self }
+    #[inline(always)]
+    pub fn stes(&mut self) -> STES_W {
+        STES_W { w: self }
     }
 }

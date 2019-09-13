@@ -1,144 +1,64 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::LPACTH1 {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register LPACTH1"]
+pub type R = crate::R<u32, super::LPACTH1>;
+#[doc = "Writer for register LPACTH1"]
+pub type W = crate::W<u32, super::LPACTH1>;
+#[doc = "Register LPACTH1 `reset()`'s with value 0"]
+impl crate::ResetValue for super::LPACTH1 {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct AHIBIO0LOR {
-    bits: u8,
-}
-impl AHIBIO0LOR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct AHIBIO0HIR {
-    bits: u8,
-}
-impl AHIBIO0HIR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _AHIBIO0LOW<'a> {
+#[doc = "Reader of field `AHIBIO0LO`"]
+pub type AHIBIO0LO_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `AHIBIO0LO`"]
+pub struct AHIBIO0LO_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _AHIBIO0LOW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> AHIBIO0LO_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 63;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x3f) | ((value as u32) & 0x3f);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _AHIBIO0HIW<'a> {
+#[doc = "Reader of field `AHIBIO0HI`"]
+pub type AHIBIO0HI_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `AHIBIO0HI`"]
+pub struct AHIBIO0HI_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _AHIBIO0HIW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> AHIBIO0HI_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 63;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x3f << 8)) | (((value as u32) & 0x3f) << 8);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:5 - Analog HIB_IO_0 Lower Threshold Value"]
-    #[inline]
-    pub fn ahibio0lo(&self) -> AHIBIO0LOR {
-        let bits = {
-            const MASK: u8 = 63;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        AHIBIO0LOR { bits }
+    #[inline(always)]
+    pub fn ahibio0lo(&self) -> AHIBIO0LO_R {
+        AHIBIO0LO_R::new((self.bits & 0x3f) as u8)
     }
     #[doc = "Bits 8:13 - Analog HIB_IO_0 Upper Threshold Value"]
-    #[inline]
-    pub fn ahibio0hi(&self) -> AHIBIO0HIR {
-        let bits = {
-            const MASK: u8 = 63;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        AHIBIO0HIR { bits }
+    #[inline(always)]
+    pub fn ahibio0hi(&self) -> AHIBIO0HI_R {
+        AHIBIO0HI_R::new(((self.bits >> 8) & 0x3f) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:5 - Analog HIB_IO_0 Lower Threshold Value"]
-    #[inline]
-    pub fn ahibio0lo(&mut self) -> _AHIBIO0LOW {
-        _AHIBIO0LOW { w: self }
+    #[inline(always)]
+    pub fn ahibio0lo(&mut self) -> AHIBIO0LO_W {
+        AHIBIO0LO_W { w: self }
     }
     #[doc = "Bits 8:13 - Analog HIB_IO_0 Upper Threshold Value"]
-    #[inline]
-    pub fn ahibio0hi(&mut self) -> _AHIBIO0HIW {
-        _AHIBIO0HIW { w: self }
+    #[inline(always)]
+    pub fn ahibio0hi(&mut self) -> AHIBIO0HI_W {
+        AHIBIO0HI_W { w: self }
     }
 }

@@ -1,545 +1,316 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::GLBANA {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register GLBANA"]
+pub type R = crate::R<u32, super::GLBANA>;
+#[doc = "Writer for register GLBANA"]
+pub type W = crate::W<u32, super::GLBANA>;
+#[doc = "Register GLBANA `reset()`'s with value 0x4b8c"]
+impl crate::ResetValue for super::GLBANA {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0x4b8c
     }
 }
-#[doc = r" Value of the field"]
-pub struct SLDLYR {
-    bits: u8,
+#[doc = "Reader of field `SLDLY`"]
+pub type SLDLY_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SLDLY`"]
+pub struct SLDLY_W<'a> {
+    w: &'a mut W,
 }
-impl SLDLYR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
+impl<'a> SLDLY_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
+        self.w
     }
 }
-#[doc = r" Value of the field"]
-pub struct FUPR {
-    bits: bool,
+#[doc = "Reader of field `FUP`"]
+pub type FUP_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `FUP`"]
+pub struct FUP_W<'a> {
+    w: &'a mut W,
 }
-impl FUPR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
+impl<'a> FUP_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
     }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
     }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct FDNR {
-    bits: bool,
-}
-impl FDNR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w
     }
 }
-#[doc = r" Value of the field"]
-pub struct SLCPR {
-    bits: u8,
+#[doc = "Reader of field `FDN`"]
+pub type FDN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `FDN`"]
+pub struct FDN_W<'a> {
+    w: &'a mut W,
 }
-impl SLCPR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
+impl<'a> FDN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w
     }
 }
-#[doc = r" Value of the field"]
-pub struct SLIBLDOR {
-    bits: u8,
+#[doc = "Reader of field `SLCP`"]
+pub type SLCP_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SLCP`"]
+pub struct SLCP_W<'a> {
+    w: &'a mut W,
 }
-impl SLIBLDOR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
+impl<'a> SLCP_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x07 << 6)) | (((value as u32) & 0x07) << 6);
+        self.w
     }
 }
-#[doc = r" Value of the field"]
-pub struct SLIBLFR {
-    bits: u8,
+#[doc = "Reader of field `SLIBLDO`"]
+pub type SLIBLDO_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SLIBLDO`"]
+pub struct SLIBLDO_W<'a> {
+    w: &'a mut W,
 }
-impl SLIBLFR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
+impl<'a> SLIBLDO_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x03 << 9)) | (((value as u32) & 0x03) << 9);
+        self.w
     }
 }
-#[doc = r" Value of the field"]
-pub struct SLVREFR {
-    bits: u8,
+#[doc = "Reader of field `SLIBLF`"]
+pub type SLIBLF_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SLIBLF`"]
+pub struct SLIBLF_W<'a> {
+    w: &'a mut W,
 }
-impl SLVREFR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
+impl<'a> SLIBLF_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x03 << 11)) | (((value as u32) & 0x03) << 11);
+        self.w
     }
 }
-#[doc = r" Value of the field"]
-pub struct TRIBIASR {
-    bits: u8,
+#[doc = "Reader of field `SLVREF`"]
+pub type SLVREF_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SLVREF`"]
+pub struct SLVREF_W<'a> {
+    w: &'a mut W,
 }
-impl TRIBIASR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
+impl<'a> SLVREF_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x07 << 13)) | (((value as u32) & 0x07) << 13);
+        self.w
     }
 }
-#[doc = "Possible values of the field `GHREN`"]
+#[doc = "Reader of field `TRIBIAS`"]
+pub type TRIBIAS_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `TRIBIAS`"]
+pub struct TRIBIAS_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> TRIBIAS_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x03 << 16)) | (((value as u32) & 0x03) << 16);
+        self.w
+    }
+}
+#[doc = "Force chargepump down\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum GHRENR {
-    #[doc = "Global high resolution generation is enabled"]
+pub enum GHREN_A {
+    #[doc = "0: Global high resolution generation is enabled"]
     VALUE1,
-    #[doc = "Global high resolution generation is disabled"]
+    #[doc = "1: Global high resolution generation is disabled"]
     VALUE2,
 }
-impl GHRENR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            GHRENR::VALUE1 => false,
-            GHRENR::VALUE2 => true,
+impl From<GHREN_A> for bool {
+    #[inline(always)]
+    fn from(variant: GHREN_A) -> Self {
+        match variant {
+            GHREN_A::VALUE1 => false,
+            GHREN_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> GHRENR {
-        match value {
-            false => GHRENR::VALUE1,
-            true => GHRENR::VALUE2,
+}
+#[doc = "Reader of field `GHREN`"]
+pub type GHREN_R = crate::R<bool, GHREN_A>;
+impl GHREN_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GHREN_A {
+        match self.bits {
+            false => GHREN_A::VALUE1,
+            true => GHREN_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == GHRENR::VALUE1
+        *self == GHREN_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == GHRENR::VALUE2
+        *self == GHREN_A::VALUE2
     }
 }
-#[doc = r" Proxy"]
-pub struct _SLDLYW<'a> {
+#[doc = "Write proxy for field `GHREN`"]
+pub struct GHREN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SLDLYW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _FUPW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _FUPW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _FDNW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _FDNW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SLCPW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _SLCPW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SLIBLDOW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _SLIBLDOW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SLIBLFW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _SLIBLFW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 11;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SLVREFW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _SLVREFW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 13;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _TRIBIASW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _TRIBIASW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = "Values that can be written to the field `GHREN`"]
-pub enum GHRENW {
-    #[doc = "Global high resolution generation is enabled"]
-    VALUE1,
-    #[doc = "Global high resolution generation is disabled"]
-    VALUE2,
-}
-impl GHRENW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            GHRENW::VALUE1 => false,
-            GHRENW::VALUE2 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _GHRENW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _GHRENW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: GHRENW) -> &'a mut W {
+impl<'a> GHREN_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: GHREN_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Global high resolution generation is enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(GHRENW::VALUE1)
+        self.variant(GHREN_A::VALUE1)
     }
     #[doc = "Global high resolution generation is disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(GHRENW::VALUE2)
+        self.variant(GHREN_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 18;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:1 - Delay of lock detection"]
-    #[inline]
-    pub fn sldly(&self) -> SLDLYR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SLDLYR { bits }
+    #[inline(always)]
+    pub fn sldly(&self) -> SLDLY_R {
+        SLDLY_R::new((self.bits & 0x03) as u8)
     }
     #[doc = "Bit 2 - Force chargepump up"]
-    #[inline]
-    pub fn fup(&self) -> FUPR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        FUPR { bits }
+    #[inline(always)]
+    pub fn fup(&self) -> FUP_R {
+        FUP_R::new(((self.bits >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 3 - Force chargepump down"]
-    #[inline]
-    pub fn fdn(&self) -> FDNR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        FDNR { bits }
+    #[inline(always)]
+    pub fn fdn(&self) -> FDN_R {
+        FDN_R::new(((self.bits >> 3) & 0x01) != 0)
     }
     #[doc = "Bits 6:8 - HRCs chargepump current selection"]
-    #[inline]
-    pub fn slcp(&self) -> SLCPR {
-        let bits = {
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SLCPR { bits }
+    #[inline(always)]
+    pub fn slcp(&self) -> SLCP_R {
+        SLCP_R::new(((self.bits >> 6) & 0x07) as u8)
     }
     #[doc = "Bits 9:10 - HRCs LDO bias current"]
-    #[inline]
-    pub fn slibldo(&self) -> SLIBLDOR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SLIBLDOR { bits }
+    #[inline(always)]
+    pub fn slibldo(&self) -> SLIBLDO_R {
+        SLIBLDO_R::new(((self.bits >> 9) & 0x03) as u8)
     }
     #[doc = "Bits 11:12 - HRCs loop filter bias current"]
-    #[inline]
-    pub fn sliblf(&self) -> SLIBLFR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SLIBLFR { bits }
+    #[inline(always)]
+    pub fn sliblf(&self) -> SLIBLF_R {
+        SLIBLF_R::new(((self.bits >> 11) & 0x03) as u8)
     }
     #[doc = "Bits 13:15 - Reference voltage for chargepump and loop filter"]
-    #[inline]
-    pub fn slvref(&self) -> SLVREFR {
-        let bits = {
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SLVREFR { bits }
+    #[inline(always)]
+    pub fn slvref(&self) -> SLVREF_R {
+        SLVREF_R::new(((self.bits >> 13) & 0x07) as u8)
     }
     #[doc = "Bits 16:17 - Bias trimming"]
-    #[inline]
-    pub fn tribias(&self) -> TRIBIASR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        TRIBIASR { bits }
+    #[inline(always)]
+    pub fn tribias(&self) -> TRIBIAS_R {
+        TRIBIAS_R::new(((self.bits >> 16) & 0x03) as u8)
     }
     #[doc = "Bit 18 - Force chargepump down"]
-    #[inline]
-    pub fn ghren(&self) -> GHRENR {
-        GHRENR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 18;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ghren(&self) -> GHREN_R {
+        GHREN_R::new(((self.bits >> 18) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 19340 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:1 - Delay of lock detection"]
-    #[inline]
-    pub fn sldly(&mut self) -> _SLDLYW {
-        _SLDLYW { w: self }
+    #[inline(always)]
+    pub fn sldly(&mut self) -> SLDLY_W {
+        SLDLY_W { w: self }
     }
     #[doc = "Bit 2 - Force chargepump up"]
-    #[inline]
-    pub fn fup(&mut self) -> _FUPW {
-        _FUPW { w: self }
+    #[inline(always)]
+    pub fn fup(&mut self) -> FUP_W {
+        FUP_W { w: self }
     }
     #[doc = "Bit 3 - Force chargepump down"]
-    #[inline]
-    pub fn fdn(&mut self) -> _FDNW {
-        _FDNW { w: self }
+    #[inline(always)]
+    pub fn fdn(&mut self) -> FDN_W {
+        FDN_W { w: self }
     }
     #[doc = "Bits 6:8 - HRCs chargepump current selection"]
-    #[inline]
-    pub fn slcp(&mut self) -> _SLCPW {
-        _SLCPW { w: self }
+    #[inline(always)]
+    pub fn slcp(&mut self) -> SLCP_W {
+        SLCP_W { w: self }
     }
     #[doc = "Bits 9:10 - HRCs LDO bias current"]
-    #[inline]
-    pub fn slibldo(&mut self) -> _SLIBLDOW {
-        _SLIBLDOW { w: self }
+    #[inline(always)]
+    pub fn slibldo(&mut self) -> SLIBLDO_W {
+        SLIBLDO_W { w: self }
     }
     #[doc = "Bits 11:12 - HRCs loop filter bias current"]
-    #[inline]
-    pub fn sliblf(&mut self) -> _SLIBLFW {
-        _SLIBLFW { w: self }
+    #[inline(always)]
+    pub fn sliblf(&mut self) -> SLIBLF_W {
+        SLIBLF_W { w: self }
     }
     #[doc = "Bits 13:15 - Reference voltage for chargepump and loop filter"]
-    #[inline]
-    pub fn slvref(&mut self) -> _SLVREFW {
-        _SLVREFW { w: self }
+    #[inline(always)]
+    pub fn slvref(&mut self) -> SLVREF_W {
+        SLVREF_W { w: self }
     }
     #[doc = "Bits 16:17 - Bias trimming"]
-    #[inline]
-    pub fn tribias(&mut self) -> _TRIBIASW {
-        _TRIBIASW { w: self }
+    #[inline(always)]
+    pub fn tribias(&mut self) -> TRIBIAS_W {
+        TRIBIAS_W { w: self }
     }
     #[doc = "Bit 18 - Force chargepump down"]
-    #[inline]
-    pub fn ghren(&mut self) -> _GHRENW {
-        _GHRENW { w: self }
+    #[inline(always)]
+    pub fn ghren(&mut self) -> GHREN_W {
+        GHREN_W { w: self }
     }
 }

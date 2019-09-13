@@ -1,702 +1,494 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::DCI {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register DCI"]
+pub type R = crate::R<u32, super::DCI>;
+#[doc = "Writer for register DCI"]
+pub type W = crate::W<u32, super::DCI>;
+#[doc = "Register DCI `reset()`'s with value 0"]
+impl crate::ResetValue for super::DCI {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Possible values of the field `SVIS`"]
+#[doc = "Value Selector input selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SVISR {
-    #[doc = "HRPWMx.SyIA"]
+pub enum SVIS_A {
+    #[doc = "0: HRPWMx.SyIA"]
     VALUE1,
-    #[doc = "HRPWMx.SyIB"]
+    #[doc = "1: HRPWMx.SyIB"]
     VALUE2,
-    #[doc = "HRPWMx.SyIC"]
+    #[doc = "2: HRPWMx.SyIC"]
     VALUE3,
-    #[doc = "HRPWMx.SyID"]
+    #[doc = "3: HRPWMx.SyID"]
     VALUE4,
-    #[doc = "HRPWMx.SyIE"]
+    #[doc = "4: HRPWMx.SyIE"]
     VALUE5,
-    #[doc = "HRPWMx.SyIF"]
+    #[doc = "5: HRPWMx.SyIF"]
     VALUE6,
-    #[doc = "HRPWMx.SyIG"]
+    #[doc = "6: HRPWMx.SyIG"]
     VALUE7,
-    #[doc = "HRPWMx.SyIH"]
+    #[doc = "7: HRPWMx.SyIH"]
     VALUE8,
-    #[doc = "HRPWMx.SyII"]
+    #[doc = "8: HRPWMx.SyII"]
     VALUE9,
-    #[doc = "HRPWMx.SyIJ"]
+    #[doc = "9: HRPWMx.SyIJ"]
     VALUE10,
-    #[doc = "HRPWMx.SyIK"]
+    #[doc = "10: HRPWMx.SyIK"]
     VALUE11,
-    #[doc = "HRPWMx.SyIL"]
+    #[doc = "11: HRPWMx.SyIL"]
     VALUE12,
-    #[doc = "HRPWMx.SyIM"]
+    #[doc = "12: HRPWMx.SyIM"]
     VALUE13,
-    #[doc = "HRPWMx.SyIN"]
+    #[doc = "13: HRPWMx.SyIN"]
     VALUE14,
-    #[doc = "HRPWMx.SyIO"]
+    #[doc = "14: HRPWMx.SyIO"]
     VALUE15,
-    #[doc = "HRPWMx.SyIP"]
+    #[doc = "15: HRPWMx.SyIP"]
     VALUE16,
 }
-impl SVISR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            SVISR::VALUE1 => 0,
-            SVISR::VALUE2 => 1,
-            SVISR::VALUE3 => 2,
-            SVISR::VALUE4 => 3,
-            SVISR::VALUE5 => 4,
-            SVISR::VALUE6 => 5,
-            SVISR::VALUE7 => 6,
-            SVISR::VALUE8 => 7,
-            SVISR::VALUE9 => 8,
-            SVISR::VALUE10 => 9,
-            SVISR::VALUE11 => 10,
-            SVISR::VALUE12 => 11,
-            SVISR::VALUE13 => 12,
-            SVISR::VALUE14 => 13,
-            SVISR::VALUE15 => 14,
-            SVISR::VALUE16 => 15,
+impl From<SVIS_A> for u8 {
+    #[inline(always)]
+    fn from(variant: SVIS_A) -> Self {
+        match variant {
+            SVIS_A::VALUE1 => 0,
+            SVIS_A::VALUE2 => 1,
+            SVIS_A::VALUE3 => 2,
+            SVIS_A::VALUE4 => 3,
+            SVIS_A::VALUE5 => 4,
+            SVIS_A::VALUE6 => 5,
+            SVIS_A::VALUE7 => 6,
+            SVIS_A::VALUE8 => 7,
+            SVIS_A::VALUE9 => 8,
+            SVIS_A::VALUE10 => 9,
+            SVIS_A::VALUE11 => 10,
+            SVIS_A::VALUE12 => 11,
+            SVIS_A::VALUE13 => 12,
+            SVIS_A::VALUE14 => 13,
+            SVIS_A::VALUE15 => 14,
+            SVIS_A::VALUE16 => 15,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> SVISR {
-        match value {
-            0 => SVISR::VALUE1,
-            1 => SVISR::VALUE2,
-            2 => SVISR::VALUE3,
-            3 => SVISR::VALUE4,
-            4 => SVISR::VALUE5,
-            5 => SVISR::VALUE6,
-            6 => SVISR::VALUE7,
-            7 => SVISR::VALUE8,
-            8 => SVISR::VALUE9,
-            9 => SVISR::VALUE10,
-            10 => SVISR::VALUE11,
-            11 => SVISR::VALUE12,
-            12 => SVISR::VALUE13,
-            13 => SVISR::VALUE14,
-            14 => SVISR::VALUE15,
-            15 => SVISR::VALUE16,
+}
+#[doc = "Reader of field `SVIS`"]
+pub type SVIS_R = crate::R<u8, SVIS_A>;
+impl SVIS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SVIS_A {
+        match self.bits {
+            0 => SVIS_A::VALUE1,
+            1 => SVIS_A::VALUE2,
+            2 => SVIS_A::VALUE3,
+            3 => SVIS_A::VALUE4,
+            4 => SVIS_A::VALUE5,
+            5 => SVIS_A::VALUE6,
+            6 => SVIS_A::VALUE7,
+            7 => SVIS_A::VALUE8,
+            8 => SVIS_A::VALUE9,
+            9 => SVIS_A::VALUE10,
+            10 => SVIS_A::VALUE11,
+            11 => SVIS_A::VALUE12,
+            12 => SVIS_A::VALUE13,
+            13 => SVIS_A::VALUE14,
+            14 => SVIS_A::VALUE15,
+            15 => SVIS_A::VALUE16,
             _ => unreachable!(),
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SVISR::VALUE1
+        *self == SVIS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SVISR::VALUE2
+        *self == SVIS_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SVISR::VALUE3
+        *self == SVIS_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == SVISR::VALUE4
+        *self == SVIS_A::VALUE4
     }
     #[doc = "Checks if the value of the field is `VALUE5`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value5(&self) -> bool {
-        *self == SVISR::VALUE5
+        *self == SVIS_A::VALUE5
     }
     #[doc = "Checks if the value of the field is `VALUE6`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value6(&self) -> bool {
-        *self == SVISR::VALUE6
+        *self == SVIS_A::VALUE6
     }
     #[doc = "Checks if the value of the field is `VALUE7`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value7(&self) -> bool {
-        *self == SVISR::VALUE7
+        *self == SVIS_A::VALUE7
     }
     #[doc = "Checks if the value of the field is `VALUE8`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value8(&self) -> bool {
-        *self == SVISR::VALUE8
+        *self == SVIS_A::VALUE8
     }
     #[doc = "Checks if the value of the field is `VALUE9`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value9(&self) -> bool {
-        *self == SVISR::VALUE9
+        *self == SVIS_A::VALUE9
     }
     #[doc = "Checks if the value of the field is `VALUE10`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value10(&self) -> bool {
-        *self == SVISR::VALUE10
+        *self == SVIS_A::VALUE10
     }
     #[doc = "Checks if the value of the field is `VALUE11`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value11(&self) -> bool {
-        *self == SVISR::VALUE11
+        *self == SVIS_A::VALUE11
     }
     #[doc = "Checks if the value of the field is `VALUE12`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value12(&self) -> bool {
-        *self == SVISR::VALUE12
+        *self == SVIS_A::VALUE12
     }
     #[doc = "Checks if the value of the field is `VALUE13`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value13(&self) -> bool {
-        *self == SVISR::VALUE13
+        *self == SVIS_A::VALUE13
     }
     #[doc = "Checks if the value of the field is `VALUE14`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value14(&self) -> bool {
-        *self == SVISR::VALUE14
+        *self == SVIS_A::VALUE14
     }
     #[doc = "Checks if the value of the field is `VALUE15`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value15(&self) -> bool {
-        *self == SVISR::VALUE15
+        *self == SVIS_A::VALUE15
     }
     #[doc = "Checks if the value of the field is `VALUE16`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value16(&self) -> bool {
-        *self == SVISR::VALUE16
+        *self == SVIS_A::VALUE16
     }
 }
-#[doc = r" Value of the field"]
-pub struct STRISR {
-    bits: u8,
+#[doc = "Write proxy for field `SVIS`"]
+pub struct SVIS_W<'a> {
+    w: &'a mut W,
 }
-impl STRISR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct STPISR {
-    bits: u8,
-}
-impl STPISR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TRGISR {
-    bits: u8,
-}
-impl TRGISR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct STISR {
-    bits: u8,
-}
-impl STISR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = "Possible values of the field `SCS`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SCSR {
-    #[doc = "HRPWMx.MCLK (Module clock is used)"]
-    VALUE1,
-    #[doc = "HRPWMx.ECLKA (External clock is used)"]
-    VALUE2,
-    #[doc = "HRPWMx.ECLKB (External clock is used)"]
-    VALUE3,
-    #[doc = "HRPWMx.ECLKC (External clock is used)"]
-    VALUE4,
-}
-impl SCSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            SCSR::VALUE1 => 0,
-            SCSR::VALUE2 => 1,
-            SCSR::VALUE3 => 2,
-            SCSR::VALUE4 => 3,
+impl<'a> SVIS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: SVIS_A) -> &'a mut W {
+        {
+            self.bits(variant.into())
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> SCSR {
-        match value {
-            0 => SCSR::VALUE1,
-            1 => SCSR::VALUE2,
-            2 => SCSR::VALUE3,
-            3 => SCSR::VALUE4,
+    #[doc = "HRPWMx.SyIA"]
+    #[inline(always)]
+    pub fn value1(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE1)
+    }
+    #[doc = "HRPWMx.SyIB"]
+    #[inline(always)]
+    pub fn value2(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE2)
+    }
+    #[doc = "HRPWMx.SyIC"]
+    #[inline(always)]
+    pub fn value3(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE3)
+    }
+    #[doc = "HRPWMx.SyID"]
+    #[inline(always)]
+    pub fn value4(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE4)
+    }
+    #[doc = "HRPWMx.SyIE"]
+    #[inline(always)]
+    pub fn value5(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE5)
+    }
+    #[doc = "HRPWMx.SyIF"]
+    #[inline(always)]
+    pub fn value6(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE6)
+    }
+    #[doc = "HRPWMx.SyIG"]
+    #[inline(always)]
+    pub fn value7(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE7)
+    }
+    #[doc = "HRPWMx.SyIH"]
+    #[inline(always)]
+    pub fn value8(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE8)
+    }
+    #[doc = "HRPWMx.SyII"]
+    #[inline(always)]
+    pub fn value9(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE9)
+    }
+    #[doc = "HRPWMx.SyIJ"]
+    #[inline(always)]
+    pub fn value10(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE10)
+    }
+    #[doc = "HRPWMx.SyIK"]
+    #[inline(always)]
+    pub fn value11(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE11)
+    }
+    #[doc = "HRPWMx.SyIL"]
+    #[inline(always)]
+    pub fn value12(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE12)
+    }
+    #[doc = "HRPWMx.SyIM"]
+    #[inline(always)]
+    pub fn value13(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE13)
+    }
+    #[doc = "HRPWMx.SyIN"]
+    #[inline(always)]
+    pub fn value14(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE14)
+    }
+    #[doc = "HRPWMx.SyIO"]
+    #[inline(always)]
+    pub fn value15(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE15)
+    }
+    #[doc = "HRPWMx.SyIP"]
+    #[inline(always)]
+    pub fn value16(self) -> &'a mut W {
+        self.variant(SVIS_A::VALUE16)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
+        self.w
+    }
+}
+#[doc = "Reader of field `STRIS`"]
+pub type STRIS_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `STRIS`"]
+pub struct STRIS_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> STRIS_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u32) & 0x0f) << 4);
+        self.w
+    }
+}
+#[doc = "Reader of field `STPIS`"]
+pub type STPIS_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `STPIS`"]
+pub struct STPIS_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> STPIS_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
+        self.w
+    }
+}
+#[doc = "Reader of field `TRGIS`"]
+pub type TRGIS_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `TRGIS`"]
+pub struct TRGIS_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> TRGIS_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x0f << 12)) | (((value as u32) & 0x0f) << 12);
+        self.w
+    }
+}
+#[doc = "Reader of field `STIS`"]
+pub type STIS_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `STIS`"]
+pub struct STIS_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> STIS_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
+        self.w
+    }
+}
+#[doc = "Slope generation clock selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum SCS_A {
+    #[doc = "0: HRPWMx.MCLK (Module clock is used)"]
+    VALUE1,
+    #[doc = "1: HRPWMx.ECLKA (External clock is used)"]
+    VALUE2,
+    #[doc = "2: HRPWMx.ECLKB (External clock is used)"]
+    VALUE3,
+    #[doc = "3: HRPWMx.ECLKC (External clock is used)"]
+    VALUE4,
+}
+impl From<SCS_A> for u8 {
+    #[inline(always)]
+    fn from(variant: SCS_A) -> Self {
+        match variant {
+            SCS_A::VALUE1 => 0,
+            SCS_A::VALUE2 => 1,
+            SCS_A::VALUE3 => 2,
+            SCS_A::VALUE4 => 3,
+        }
+    }
+}
+#[doc = "Reader of field `SCS`"]
+pub type SCS_R = crate::R<u8, SCS_A>;
+impl SCS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SCS_A {
+        match self.bits {
+            0 => SCS_A::VALUE1,
+            1 => SCS_A::VALUE2,
+            2 => SCS_A::VALUE3,
+            3 => SCS_A::VALUE4,
             _ => unreachable!(),
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SCSR::VALUE1
+        *self == SCS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SCSR::VALUE2
+        *self == SCS_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SCSR::VALUE3
+        *self == SCS_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == SCSR::VALUE4
+        *self == SCS_A::VALUE4
     }
 }
-#[doc = "Values that can be written to the field `SVIS`"]
-pub enum SVISW {
-    #[doc = "HRPWMx.SyIA"]
-    VALUE1,
-    #[doc = "HRPWMx.SyIB"]
-    VALUE2,
-    #[doc = "HRPWMx.SyIC"]
-    VALUE3,
-    #[doc = "HRPWMx.SyID"]
-    VALUE4,
-    #[doc = "HRPWMx.SyIE"]
-    VALUE5,
-    #[doc = "HRPWMx.SyIF"]
-    VALUE6,
-    #[doc = "HRPWMx.SyIG"]
-    VALUE7,
-    #[doc = "HRPWMx.SyIH"]
-    VALUE8,
-    #[doc = "HRPWMx.SyII"]
-    VALUE9,
-    #[doc = "HRPWMx.SyIJ"]
-    VALUE10,
-    #[doc = "HRPWMx.SyIK"]
-    VALUE11,
-    #[doc = "HRPWMx.SyIL"]
-    VALUE12,
-    #[doc = "HRPWMx.SyIM"]
-    VALUE13,
-    #[doc = "HRPWMx.SyIN"]
-    VALUE14,
-    #[doc = "HRPWMx.SyIO"]
-    VALUE15,
-    #[doc = "HRPWMx.SyIP"]
-    VALUE16,
-}
-impl SVISW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            SVISW::VALUE1 => 0,
-            SVISW::VALUE2 => 1,
-            SVISW::VALUE3 => 2,
-            SVISW::VALUE4 => 3,
-            SVISW::VALUE5 => 4,
-            SVISW::VALUE6 => 5,
-            SVISW::VALUE7 => 6,
-            SVISW::VALUE8 => 7,
-            SVISW::VALUE9 => 8,
-            SVISW::VALUE10 => 9,
-            SVISW::VALUE11 => 10,
-            SVISW::VALUE12 => 11,
-            SVISW::VALUE13 => 12,
-            SVISW::VALUE14 => 13,
-            SVISW::VALUE15 => 14,
-            SVISW::VALUE16 => 15,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SVISW<'a> {
+#[doc = "Write proxy for field `SCS`"]
+pub struct SCS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SVISW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: SVISW) -> &'a mut W {
+impl<'a> SCS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: SCS_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
-        }
-    }
-    #[doc = "HRPWMx.SyIA"]
-    #[inline]
-    pub fn value1(self) -> &'a mut W {
-        self.variant(SVISW::VALUE1)
-    }
-    #[doc = "HRPWMx.SyIB"]
-    #[inline]
-    pub fn value2(self) -> &'a mut W {
-        self.variant(SVISW::VALUE2)
-    }
-    #[doc = "HRPWMx.SyIC"]
-    #[inline]
-    pub fn value3(self) -> &'a mut W {
-        self.variant(SVISW::VALUE3)
-    }
-    #[doc = "HRPWMx.SyID"]
-    #[inline]
-    pub fn value4(self) -> &'a mut W {
-        self.variant(SVISW::VALUE4)
-    }
-    #[doc = "HRPWMx.SyIE"]
-    #[inline]
-    pub fn value5(self) -> &'a mut W {
-        self.variant(SVISW::VALUE5)
-    }
-    #[doc = "HRPWMx.SyIF"]
-    #[inline]
-    pub fn value6(self) -> &'a mut W {
-        self.variant(SVISW::VALUE6)
-    }
-    #[doc = "HRPWMx.SyIG"]
-    #[inline]
-    pub fn value7(self) -> &'a mut W {
-        self.variant(SVISW::VALUE7)
-    }
-    #[doc = "HRPWMx.SyIH"]
-    #[inline]
-    pub fn value8(self) -> &'a mut W {
-        self.variant(SVISW::VALUE8)
-    }
-    #[doc = "HRPWMx.SyII"]
-    #[inline]
-    pub fn value9(self) -> &'a mut W {
-        self.variant(SVISW::VALUE9)
-    }
-    #[doc = "HRPWMx.SyIJ"]
-    #[inline]
-    pub fn value10(self) -> &'a mut W {
-        self.variant(SVISW::VALUE10)
-    }
-    #[doc = "HRPWMx.SyIK"]
-    #[inline]
-    pub fn value11(self) -> &'a mut W {
-        self.variant(SVISW::VALUE11)
-    }
-    #[doc = "HRPWMx.SyIL"]
-    #[inline]
-    pub fn value12(self) -> &'a mut W {
-        self.variant(SVISW::VALUE12)
-    }
-    #[doc = "HRPWMx.SyIM"]
-    #[inline]
-    pub fn value13(self) -> &'a mut W {
-        self.variant(SVISW::VALUE13)
-    }
-    #[doc = "HRPWMx.SyIN"]
-    #[inline]
-    pub fn value14(self) -> &'a mut W {
-        self.variant(SVISW::VALUE14)
-    }
-    #[doc = "HRPWMx.SyIO"]
-    #[inline]
-    pub fn value15(self) -> &'a mut W {
-        self.variant(SVISW::VALUE15)
-    }
-    #[doc = "HRPWMx.SyIP"]
-    #[inline]
-    pub fn value16(self) -> &'a mut W {
-        self.variant(SVISW::VALUE16)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _STRISW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _STRISW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _STPISW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _STPISW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _TRGISW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _TRGISW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _STISW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _STISW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = "Values that can be written to the field `SCS`"]
-pub enum SCSW {
-    #[doc = "HRPWMx.MCLK (Module clock is used)"]
-    VALUE1,
-    #[doc = "HRPWMx.ECLKA (External clock is used)"]
-    VALUE2,
-    #[doc = "HRPWMx.ECLKB (External clock is used)"]
-    VALUE3,
-    #[doc = "HRPWMx.ECLKC (External clock is used)"]
-    VALUE4,
-}
-impl SCSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            SCSW::VALUE1 => 0,
-            SCSW::VALUE2 => 1,
-            SCSW::VALUE3 => 2,
-            SCSW::VALUE4 => 3,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SCSW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _SCSW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: SCSW) -> &'a mut W {
-        {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "HRPWMx.MCLK (Module clock is used)"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(SCSW::VALUE1)
+        self.variant(SCS_A::VALUE1)
     }
     #[doc = "HRPWMx.ECLKA (External clock is used)"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(SCSW::VALUE2)
+        self.variant(SCS_A::VALUE2)
     }
     #[doc = "HRPWMx.ECLKB (External clock is used)"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(SCSW::VALUE3)
+        self.variant(SCS_A::VALUE3)
     }
     #[doc = "HRPWMx.ECLKC (External clock is used)"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(SCSW::VALUE4)
+        self.variant(SCS_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 20;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 20)) | (((value as u32) & 0x03) << 20);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:3 - Value Selector input selection"]
-    #[inline]
-    pub fn svis(&self) -> SVISR {
-        SVISR::_from({
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn svis(&self) -> SVIS_R {
+        SVIS_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 4:7 - Slope generation start control input selection"]
-    #[inline]
-    pub fn stris(&self) -> STRISR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        STRISR { bits }
+    #[inline(always)]
+    pub fn stris(&self) -> STRIS_R {
+        STRIS_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
     #[doc = "Bits 8:11 - Slope generation stop control input selection"]
-    #[inline]
-    pub fn stpis(&self) -> STPISR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        STPISR { bits }
+    #[inline(always)]
+    pub fn stpis(&self) -> STPIS_R {
+        STPIS_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bits 12:15 - External conversion trigger input selection"]
-    #[inline]
-    pub fn trgis(&self) -> TRGISR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        TRGISR { bits }
+    #[inline(always)]
+    pub fn trgis(&self) -> TRGIS_R {
+        TRGIS_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
     #[doc = "Bits 16:19 - External shadow request enable input selection"]
-    #[inline]
-    pub fn stis(&self) -> STISR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        STISR { bits }
+    #[inline(always)]
+    pub fn stis(&self) -> STIS_R {
+        STIS_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
     #[doc = "Bits 20:21 - Slope generation clock selection"]
-    #[inline]
-    pub fn scs(&self) -> SCSR {
-        SCSR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 20;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn scs(&self) -> SCS_R {
+        SCS_R::new(((self.bits >> 20) & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:3 - Value Selector input selection"]
-    #[inline]
-    pub fn svis(&mut self) -> _SVISW {
-        _SVISW { w: self }
+    #[inline(always)]
+    pub fn svis(&mut self) -> SVIS_W {
+        SVIS_W { w: self }
     }
     #[doc = "Bits 4:7 - Slope generation start control input selection"]
-    #[inline]
-    pub fn stris(&mut self) -> _STRISW {
-        _STRISW { w: self }
+    #[inline(always)]
+    pub fn stris(&mut self) -> STRIS_W {
+        STRIS_W { w: self }
     }
     #[doc = "Bits 8:11 - Slope generation stop control input selection"]
-    #[inline]
-    pub fn stpis(&mut self) -> _STPISW {
-        _STPISW { w: self }
+    #[inline(always)]
+    pub fn stpis(&mut self) -> STPIS_W {
+        STPIS_W { w: self }
     }
     #[doc = "Bits 12:15 - External conversion trigger input selection"]
-    #[inline]
-    pub fn trgis(&mut self) -> _TRGISW {
-        _TRGISW { w: self }
+    #[inline(always)]
+    pub fn trgis(&mut self) -> TRGIS_W {
+        TRGIS_W { w: self }
     }
     #[doc = "Bits 16:19 - External shadow request enable input selection"]
-    #[inline]
-    pub fn stis(&mut self) -> _STISW {
-        _STISW { w: self }
+    #[inline(always)]
+    pub fn stis(&mut self) -> STIS_W {
+        STIS_W { w: self }
     }
     #[doc = "Bits 20:21 - Slope generation clock selection"]
-    #[inline]
-    pub fn scs(&mut self) -> _SCSW {
-        _SCSW { w: self }
+    #[inline(always)]
+    pub fn scs(&mut self) -> SCS_W {
+        SCS_W { w: self }
     }
 }

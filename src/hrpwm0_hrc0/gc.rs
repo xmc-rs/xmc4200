@@ -1,1286 +1,934 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::GC {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register GC"]
+pub type R = crate::R<u32, super::GC>;
+#[doc = "Writer for register GC"]
+pub type W = crate::W<u32, super::GC>;
+#[doc = "Register GC `reset()`'s with value 0"]
+impl crate::ResetValue for super::GC {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Possible values of the field `HRM0`"]
+#[doc = "HRCy high resolution mode configuration for source selector 0\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum HRM0R {
-    #[doc = "Rising edge high resolution signal positioning enabled"]
+pub enum HRM0_A {
+    #[doc = "0: Rising edge high resolution signal positioning enabled"]
     VALUE1,
-    #[doc = "Falling edge high resolution signal positioning enabled"]
+    #[doc = "1: Falling edge high resolution signal positioning enabled"]
     VALUE2,
-    #[doc = "Both edges high resolution signal positioning is enabled"]
+    #[doc = "2: Both edges high resolution signal positioning is enabled"]
     VALUE3,
-    #[doc = "No high resolution positioning"]
+    #[doc = "3: No high resolution positioning"]
     VALUE4,
 }
-impl HRM0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            HRM0R::VALUE1 => 0,
-            HRM0R::VALUE2 => 1,
-            HRM0R::VALUE3 => 2,
-            HRM0R::VALUE4 => 3,
+impl From<HRM0_A> for u8 {
+    #[inline(always)]
+    fn from(variant: HRM0_A) -> Self {
+        match variant {
+            HRM0_A::VALUE1 => 0,
+            HRM0_A::VALUE2 => 1,
+            HRM0_A::VALUE3 => 2,
+            HRM0_A::VALUE4 => 3,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> HRM0R {
-        match value {
-            0 => HRM0R::VALUE1,
-            1 => HRM0R::VALUE2,
-            2 => HRM0R::VALUE3,
-            3 => HRM0R::VALUE4,
+}
+#[doc = "Reader of field `HRM0`"]
+pub type HRM0_R = crate::R<u8, HRM0_A>;
+impl HRM0_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> HRM0_A {
+        match self.bits {
+            0 => HRM0_A::VALUE1,
+            1 => HRM0_A::VALUE2,
+            2 => HRM0_A::VALUE3,
+            3 => HRM0_A::VALUE4,
             _ => unreachable!(),
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == HRM0R::VALUE1
+        *self == HRM0_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == HRM0R::VALUE2
+        *self == HRM0_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == HRM0R::VALUE3
+        *self == HRM0_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == HRM0R::VALUE4
+        *self == HRM0_A::VALUE4
     }
 }
-#[doc = "Possible values of the field `HRM1`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum HRM1R {
-    #[doc = "Rising edge high resolution signal positioning enabled"]
-    VALUE1,
-    #[doc = "Falling edge high resolution signal positioning enabled"]
-    VALUE2,
-    #[doc = "Both edges high resolution signal positioning is enabled"]
-    VALUE3,
-    #[doc = "No high resolution positioning"]
-    VALUE4,
+#[doc = "Write proxy for field `HRM0`"]
+pub struct HRM0_W<'a> {
+    w: &'a mut W,
 }
-impl HRM1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            HRM1R::VALUE1 => 0,
-            HRM1R::VALUE2 => 1,
-            HRM1R::VALUE3 => 2,
-            HRM1R::VALUE4 => 3,
+impl<'a> HRM0_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: HRM0_A) -> &'a mut W {
+        {
+            self.bits(variant.into())
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> HRM1R {
-        match value {
-            0 => HRM1R::VALUE1,
-            1 => HRM1R::VALUE2,
-            2 => HRM1R::VALUE3,
-            3 => HRM1R::VALUE4,
+    #[doc = "Rising edge high resolution signal positioning enabled"]
+    #[inline(always)]
+    pub fn value1(self) -> &'a mut W {
+        self.variant(HRM0_A::VALUE1)
+    }
+    #[doc = "Falling edge high resolution signal positioning enabled"]
+    #[inline(always)]
+    pub fn value2(self) -> &'a mut W {
+        self.variant(HRM0_A::VALUE2)
+    }
+    #[doc = "Both edges high resolution signal positioning is enabled"]
+    #[inline(always)]
+    pub fn value3(self) -> &'a mut W {
+        self.variant(HRM0_A::VALUE3)
+    }
+    #[doc = "No high resolution positioning"]
+    #[inline(always)]
+    pub fn value4(self) -> &'a mut W {
+        self.variant(HRM0_A::VALUE4)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
+        self.w
+    }
+}
+#[doc = "HRCy high resolution mode configuration for source selector 1\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRM1_A {
+    #[doc = "0: Rising edge high resolution signal positioning enabled"]
+    VALUE1,
+    #[doc = "1: Falling edge high resolution signal positioning enabled"]
+    VALUE2,
+    #[doc = "2: Both edges high resolution signal positioning is enabled"]
+    VALUE3,
+    #[doc = "3: No high resolution positioning"]
+    VALUE4,
+}
+impl From<HRM1_A> for u8 {
+    #[inline(always)]
+    fn from(variant: HRM1_A) -> Self {
+        match variant {
+            HRM1_A::VALUE1 => 0,
+            HRM1_A::VALUE2 => 1,
+            HRM1_A::VALUE3 => 2,
+            HRM1_A::VALUE4 => 3,
+        }
+    }
+}
+#[doc = "Reader of field `HRM1`"]
+pub type HRM1_R = crate::R<u8, HRM1_A>;
+impl HRM1_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> HRM1_A {
+        match self.bits {
+            0 => HRM1_A::VALUE1,
+            1 => HRM1_A::VALUE2,
+            2 => HRM1_A::VALUE3,
+            3 => HRM1_A::VALUE4,
             _ => unreachable!(),
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == HRM1R::VALUE1
+        *self == HRM1_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == HRM1R::VALUE2
+        *self == HRM1_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == HRM1R::VALUE3
+        *self == HRM1_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == HRM1R::VALUE4
+        *self == HRM1_A::VALUE4
     }
 }
-#[doc = "Possible values of the field `DTE`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum DTER {
-    #[doc = "Dead time insertion is disabled"]
-    VALUE1,
-    #[doc = "Dead time insertion is enabled"]
-    VALUE2,
-}
-impl DTER {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            DTER::VALUE1 => false,
-            DTER::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> DTER {
-        match value {
-            false => DTER::VALUE1,
-            true => DTER::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == DTER::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == DTER::VALUE2
-    }
-}
-#[doc = "Possible values of the field `TR0E`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum TR0ER {
-    #[doc = "Trap function for HRPWMx.HROUTy0 is disabled"]
-    VALUE1,
-    #[doc = "Trap function for HRPWMx.HROUTy0 is enabled"]
-    VALUE2,
-}
-impl TR0ER {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            TR0ER::VALUE1 => false,
-            TR0ER::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> TR0ER {
-        match value {
-            false => TR0ER::VALUE1,
-            true => TR0ER::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == TR0ER::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == TR0ER::VALUE2
-    }
-}
-#[doc = "Possible values of the field `TR1E`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum TR1ER {
-    #[doc = "Trap function for HRPWMx.HROUTy1 is disabled"]
-    VALUE1,
-    #[doc = "Trap function for HRPWMx.HROUTy1 is enabled"]
-    VALUE2,
-}
-impl TR1ER {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            TR1ER::VALUE1 => false,
-            TR1ER::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> TR1ER {
-        match value {
-            false => TR1ER::VALUE1,
-            true => TR1ER::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == TR1ER::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == TR1ER::VALUE2
-    }
-}
-#[doc = "Possible values of the field `STC`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum STCR {
-    #[doc = "HRCy shadow transfer enable for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values is not linked with the specific Capture/Compare Unit timer."]
-    VALUE1,
-    #[doc = "HRCy shadow transfer enable for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values is linked with the specific Capture/Compare Unit timer."]
-    VALUE2,
-}
-impl STCR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            STCR::VALUE1 => false,
-            STCR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> STCR {
-        match value {
-            false => STCR::VALUE1,
-            true => STCR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == STCR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == STCR::VALUE2
-    }
-}
-#[doc = "Possible values of the field `DSTC`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum DSTCR {
-    #[doc = "HRCy shadow transfer enable for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values is not linked with the specific Capture/Compare Unit timer."]
-    VALUE1,
-    #[doc = "HRCy shadow transfer enable for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values is linked with the specific Capture/Compare Unit timer."]
-    VALUE2,
-}
-impl DSTCR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            DSTCR::VALUE1 => false,
-            DSTCR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> DSTCR {
-        match value {
-            false => DSTCR::VALUE1,
-            true => DSTCR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == DSTCR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == DSTCR::VALUE2
-    }
-}
-#[doc = "Possible values of the field `OCS0`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum OCS0R {
-    #[doc = "HRPWMx.OUTy0 is connected to the latch Q channel"]
-    VALUE1,
-    #[doc = "HRPWMx.OUTy0 is connected to the latch Qn channel"]
-    VALUE2,
-}
-impl OCS0R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            OCS0R::VALUE1 => false,
-            OCS0R::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> OCS0R {
-        match value {
-            false => OCS0R::VALUE1,
-            true => OCS0R::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == OCS0R::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == OCS0R::VALUE2
-    }
-}
-#[doc = "Possible values of the field `OCS1`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum OCS1R {
-    #[doc = "HRPWMx.OUTy1 is connected to the latch Qn channel"]
-    VALUE1,
-    #[doc = "HRPWMx.OUTy1 is connected to the latch Q channel"]
-    VALUE2,
-}
-impl OCS1R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            OCS1R::VALUE1 => false,
-            OCS1R::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> OCS1R {
-        match value {
-            false => OCS1R::VALUE1,
-            true => OCS1R::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == OCS1R::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == OCS1R::VALUE2
-    }
-}
-#[doc = "Possible values of the field `DTUS`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum DTUSR {
-    #[doc = "The update of the values is done with the trigger generated by the timers. This is the same trigger that is used to update the HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, .."]
-    VALUE1,
-    #[doc = "The update of the dead time values is done when the dead time counter is not running, independently of the HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . registers."]
-    VALUE2,
-}
-impl DTUSR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            DTUSR::VALUE1 => false,
-            DTUSR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> DTUSR {
-        match value {
-            false => DTUSR::VALUE1,
-            true => DTUSR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == DTUSR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == DTUSR::VALUE2
-    }
-}
-#[doc = "Values that can be written to the field `HRM0`"]
-pub enum HRM0W {
-    #[doc = "Rising edge high resolution signal positioning enabled"]
-    VALUE1,
-    #[doc = "Falling edge high resolution signal positioning enabled"]
-    VALUE2,
-    #[doc = "Both edges high resolution signal positioning is enabled"]
-    VALUE3,
-    #[doc = "No high resolution positioning"]
-    VALUE4,
-}
-impl HRM0W {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            HRM0W::VALUE1 => 0,
-            HRM0W::VALUE2 => 1,
-            HRM0W::VALUE3 => 2,
-            HRM0W::VALUE4 => 3,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _HRM0W<'a> {
+#[doc = "Write proxy for field `HRM1`"]
+pub struct HRM1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _HRM0W<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: HRM0W) -> &'a mut W {
+impl<'a> HRM1_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: HRM1_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "Rising edge high resolution signal positioning enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(HRM0W::VALUE1)
+        self.variant(HRM1_A::VALUE1)
     }
     #[doc = "Falling edge high resolution signal positioning enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(HRM0W::VALUE2)
+        self.variant(HRM1_A::VALUE2)
     }
     #[doc = "Both edges high resolution signal positioning is enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(HRM0W::VALUE3)
+        self.variant(HRM1_A::VALUE3)
     }
     #[doc = "No high resolution positioning"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(HRM0W::VALUE4)
+        self.variant(HRM1_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 2)) | (((value as u32) & 0x03) << 2);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `HRM1`"]
-pub enum HRM1W {
-    #[doc = "Rising edge high resolution signal positioning enabled"]
+#[doc = "HRCy dead time enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum DTE_A {
+    #[doc = "0: Dead time insertion is disabled"]
     VALUE1,
-    #[doc = "Falling edge high resolution signal positioning enabled"]
-    VALUE2,
-    #[doc = "Both edges high resolution signal positioning is enabled"]
-    VALUE3,
-    #[doc = "No high resolution positioning"]
-    VALUE4,
-}
-impl HRM1W {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            HRM1W::VALUE1 => 0,
-            HRM1W::VALUE2 => 1,
-            HRM1W::VALUE3 => 2,
-            HRM1W::VALUE4 => 3,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _HRM1W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _HRM1W<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: HRM1W) -> &'a mut W {
-        {
-            self.bits(variant._bits())
-        }
-    }
-    #[doc = "Rising edge high resolution signal positioning enabled"]
-    #[inline]
-    pub fn value1(self) -> &'a mut W {
-        self.variant(HRM1W::VALUE1)
-    }
-    #[doc = "Falling edge high resolution signal positioning enabled"]
-    #[inline]
-    pub fn value2(self) -> &'a mut W {
-        self.variant(HRM1W::VALUE2)
-    }
-    #[doc = "Both edges high resolution signal positioning is enabled"]
-    #[inline]
-    pub fn value3(self) -> &'a mut W {
-        self.variant(HRM1W::VALUE3)
-    }
-    #[doc = "No high resolution positioning"]
-    #[inline]
-    pub fn value4(self) -> &'a mut W {
-        self.variant(HRM1W::VALUE4)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = "Values that can be written to the field `DTE`"]
-pub enum DTEW {
-    #[doc = "Dead time insertion is disabled"]
-    VALUE1,
-    #[doc = "Dead time insertion is enabled"]
+    #[doc = "1: Dead time insertion is enabled"]
     VALUE2,
 }
-impl DTEW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            DTEW::VALUE1 => false,
-            DTEW::VALUE2 => true,
+impl From<DTE_A> for bool {
+    #[inline(always)]
+    fn from(variant: DTE_A) -> Self {
+        match variant {
+            DTE_A::VALUE1 => false,
+            DTE_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _DTEW<'a> {
+#[doc = "Reader of field `DTE`"]
+pub type DTE_R = crate::R<bool, DTE_A>;
+impl DTE_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> DTE_A {
+        match self.bits {
+            false => DTE_A::VALUE1,
+            true => DTE_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == DTE_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == DTE_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `DTE`"]
+pub struct DTE_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _DTEW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: DTEW) -> &'a mut W {
+impl<'a> DTE_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: DTE_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Dead time insertion is disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(DTEW::VALUE1)
+        self.variant(DTE_A::VALUE1)
     }
     #[doc = "Dead time insertion is enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(DTEW::VALUE2)
+        self.variant(DTE_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `TR0E`"]
-pub enum TR0EW {
+#[doc = "HRCy trap enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum TR0E_A {
+    #[doc = "0: Trap function for HRPWMx.HROUTy0 is disabled"]
+    VALUE1,
+    #[doc = "1: Trap function for HRPWMx.HROUTy0 is enabled"]
+    VALUE2,
+}
+impl From<TR0E_A> for bool {
+    #[inline(always)]
+    fn from(variant: TR0E_A) -> Self {
+        match variant {
+            TR0E_A::VALUE1 => false,
+            TR0E_A::VALUE2 => true,
+        }
+    }
+}
+#[doc = "Reader of field `TR0E`"]
+pub type TR0E_R = crate::R<bool, TR0E_A>;
+impl TR0E_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TR0E_A {
+        match self.bits {
+            false => TR0E_A::VALUE1,
+            true => TR0E_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == TR0E_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == TR0E_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `TR0E`"]
+pub struct TR0E_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> TR0E_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: TR0E_A) -> &'a mut W {
+        {
+            self.bit(variant.into())
+        }
+    }
     #[doc = "Trap function for HRPWMx.HROUTy0 is disabled"]
-    VALUE1,
-    #[doc = "Trap function for HRPWMx.HROUTy0 is enabled"]
-    VALUE2,
-}
-impl TR0EW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            TR0EW::VALUE1 => false,
-            TR0EW::VALUE2 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _TR0EW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _TR0EW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: TR0EW) -> &'a mut W {
-        {
-            self.bit(variant._bits())
-        }
-    }
-    #[doc = "Trap function for HRPWMx.HROUTy0 is disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(TR0EW::VALUE1)
+        self.variant(TR0E_A::VALUE1)
     }
     #[doc = "Trap function for HRPWMx.HROUTy0 is enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(TR0EW::VALUE2)
+        self.variant(TR0E_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `TR1E`"]
-pub enum TR1EW {
-    #[doc = "Trap function for HRPWMx.HROUTy1 is disabled"]
+#[doc = "HRCy complementary trap enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum TR1E_A {
+    #[doc = "0: Trap function for HRPWMx.HROUTy1 is disabled"]
     VALUE1,
-    #[doc = "Trap function for HRPWMx.HROUTy1 is enabled"]
+    #[doc = "1: Trap function for HRPWMx.HROUTy1 is enabled"]
     VALUE2,
 }
-impl TR1EW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            TR1EW::VALUE1 => false,
-            TR1EW::VALUE2 => true,
+impl From<TR1E_A> for bool {
+    #[inline(always)]
+    fn from(variant: TR1E_A) -> Self {
+        match variant {
+            TR1E_A::VALUE1 => false,
+            TR1E_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _TR1EW<'a> {
+#[doc = "Reader of field `TR1E`"]
+pub type TR1E_R = crate::R<bool, TR1E_A>;
+impl TR1E_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TR1E_A {
+        match self.bits {
+            false => TR1E_A::VALUE1,
+            true => TR1E_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == TR1E_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == TR1E_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `TR1E`"]
+pub struct TR1E_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _TR1EW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: TR1EW) -> &'a mut W {
+impl<'a> TR1E_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: TR1E_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Trap function for HRPWMx.HROUTy1 is disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(TR1EW::VALUE1)
+        self.variant(TR1E_A::VALUE1)
     }
     #[doc = "Trap function for HRPWMx.HROUTy1 is enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(TR1EW::VALUE2)
+        self.variant(TR1E_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `STC`"]
-pub enum STCW {
+#[doc = "HRCy shadow transfer configuration\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum STC_A {
+    #[doc = "0: HRCy shadow transfer enable for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values is not linked with the specific Capture/Compare Unit timer."]
+    VALUE1,
+    #[doc = "1: HRCy shadow transfer enable for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values is linked with the specific Capture/Compare Unit timer."]
+    VALUE2,
+}
+impl From<STC_A> for bool {
+    #[inline(always)]
+    fn from(variant: STC_A) -> Self {
+        match variant {
+            STC_A::VALUE1 => false,
+            STC_A::VALUE2 => true,
+        }
+    }
+}
+#[doc = "Reader of field `STC`"]
+pub type STC_R = crate::R<bool, STC_A>;
+impl STC_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> STC_A {
+        match self.bits {
+            false => STC_A::VALUE1,
+            true => STC_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == STC_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == STC_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `STC`"]
+pub struct STC_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> STC_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: STC_A) -> &'a mut W {
+        {
+            self.bit(variant.into())
+        }
+    }
     #[doc = "HRCy shadow transfer enable for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values is not linked with the specific Capture/Compare Unit timer."]
-    VALUE1,
-    #[doc = "HRCy shadow transfer enable for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values is linked with the specific Capture/Compare Unit timer."]
-    VALUE2,
-}
-impl STCW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            STCW::VALUE1 => false,
-            STCW::VALUE2 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _STCW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _STCW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: STCW) -> &'a mut W {
-        {
-            self.bit(variant._bits())
-        }
-    }
-    #[doc = "HRCy shadow transfer enable for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values is not linked with the specific Capture/Compare Unit timer."]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(STCW::VALUE1)
+        self.variant(STC_A::VALUE1)
     }
     #[doc = "HRCy shadow transfer enable for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values is linked with the specific Capture/Compare Unit timer."]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(STCW::VALUE2)
+        self.variant(STC_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 11;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `DSTC`"]
-pub enum DSTCW {
-    #[doc = "HRCy shadow transfer enable for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values is not linked with the specific Capture/Compare Unit timer."]
+#[doc = "HRCy dead time shadow transfer configuration\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum DSTC_A {
+    #[doc = "0: HRCy shadow transfer enable for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values is not linked with the specific Capture/Compare Unit timer."]
     VALUE1,
-    #[doc = "HRCy shadow transfer enable for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values is linked with the specific Capture/Compare Unit timer."]
+    #[doc = "1: HRCy shadow transfer enable for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values is linked with the specific Capture/Compare Unit timer."]
     VALUE2,
 }
-impl DSTCW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            DSTCW::VALUE1 => false,
-            DSTCW::VALUE2 => true,
+impl From<DSTC_A> for bool {
+    #[inline(always)]
+    fn from(variant: DSTC_A) -> Self {
+        match variant {
+            DSTC_A::VALUE1 => false,
+            DSTC_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _DSTCW<'a> {
+#[doc = "Reader of field `DSTC`"]
+pub type DSTC_R = crate::R<bool, DSTC_A>;
+impl DSTC_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> DSTC_A {
+        match self.bits {
+            false => DSTC_A::VALUE1,
+            true => DSTC_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == DSTC_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == DSTC_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `DSTC`"]
+pub struct DSTC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _DSTCW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: DSTCW) -> &'a mut W {
+impl<'a> DSTC_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: DSTC_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "HRCy shadow transfer enable for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values is not linked with the specific Capture/Compare Unit timer."]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(DSTCW::VALUE1)
+        self.variant(DSTC_A::VALUE1)
     }
     #[doc = "HRCy shadow transfer enable for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values is linked with the specific Capture/Compare Unit timer."]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(DSTCW::VALUE2)
+        self.variant(DSTC_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `OCS0`"]
-pub enum OCS0W {
+#[doc = "HRPWMx.OUTy0 channel selector\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum OCS0_A {
+    #[doc = "0: HRPWMx.OUTy0 is connected to the latch Q channel"]
+    VALUE1,
+    #[doc = "1: HRPWMx.OUTy0 is connected to the latch Qn channel"]
+    VALUE2,
+}
+impl From<OCS0_A> for bool {
+    #[inline(always)]
+    fn from(variant: OCS0_A) -> Self {
+        match variant {
+            OCS0_A::VALUE1 => false,
+            OCS0_A::VALUE2 => true,
+        }
+    }
+}
+#[doc = "Reader of field `OCS0`"]
+pub type OCS0_R = crate::R<bool, OCS0_A>;
+impl OCS0_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> OCS0_A {
+        match self.bits {
+            false => OCS0_A::VALUE1,
+            true => OCS0_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == OCS0_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == OCS0_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `OCS0`"]
+pub struct OCS0_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> OCS0_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: OCS0_A) -> &'a mut W {
+        {
+            self.bit(variant.into())
+        }
+    }
     #[doc = "HRPWMx.OUTy0 is connected to the latch Q channel"]
-    VALUE1,
-    #[doc = "HRPWMx.OUTy0 is connected to the latch Qn channel"]
-    VALUE2,
-}
-impl OCS0W {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            OCS0W::VALUE1 => false,
-            OCS0W::VALUE2 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _OCS0W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _OCS0W<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: OCS0W) -> &'a mut W {
-        {
-            self.bit(variant._bits())
-        }
-    }
-    #[doc = "HRPWMx.OUTy0 is connected to the latch Q channel"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(OCS0W::VALUE1)
+        self.variant(OCS0_A::VALUE1)
     }
     #[doc = "HRPWMx.OUTy0 is connected to the latch Qn channel"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(OCS0W::VALUE2)
+        self.variant(OCS0_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 13;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `OCS1`"]
-pub enum OCS1W {
-    #[doc = "HRPWMx.OUTy1 is connected to the latch Qn channel"]
+#[doc = "HRPWMx.OUTy1 channel selector\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum OCS1_A {
+    #[doc = "0: HRPWMx.OUTy1 is connected to the latch Qn channel"]
     VALUE1,
-    #[doc = "HRPWMx.OUTy1 is connected to the latch Q channel"]
+    #[doc = "1: HRPWMx.OUTy1 is connected to the latch Q channel"]
     VALUE2,
 }
-impl OCS1W {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            OCS1W::VALUE1 => false,
-            OCS1W::VALUE2 => true,
+impl From<OCS1_A> for bool {
+    #[inline(always)]
+    fn from(variant: OCS1_A) -> Self {
+        match variant {
+            OCS1_A::VALUE1 => false,
+            OCS1_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCS1W<'a> {
+#[doc = "Reader of field `OCS1`"]
+pub type OCS1_R = crate::R<bool, OCS1_A>;
+impl OCS1_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> OCS1_A {
+        match self.bits {
+            false => OCS1_A::VALUE1,
+            true => OCS1_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == OCS1_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == OCS1_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `OCS1`"]
+pub struct OCS1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCS1W<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: OCS1W) -> &'a mut W {
+impl<'a> OCS1_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: OCS1_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "HRPWMx.OUTy1 is connected to the latch Qn channel"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(OCS1W::VALUE1)
+        self.variant(OCS1_A::VALUE1)
     }
     #[doc = "HRPWMx.OUTy1 is connected to the latch Q channel"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(OCS1W::VALUE2)
+        self.variant(OCS1_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 14;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `DTUS`"]
-pub enum DTUSW {
-    #[doc = "The update of the values is done with the trigger generated by the timers. This is the same trigger that is used to update the HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, .."]
+#[doc = "Dead Time update trigger selector\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum DTUS_A {
+    #[doc = "0: The update of the values is done with the trigger generated by the timers. This is the same trigger that is used to update the HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, .."]
     VALUE1,
-    #[doc = "The update of the dead time values is done when the dead time counter is not running, independently of the HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . registers."]
+    #[doc = "1: The update of the dead time values is done when the dead time counter is not running, independently of the HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . registers."]
     VALUE2,
 }
-impl DTUSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            DTUSW::VALUE1 => false,
-            DTUSW::VALUE2 => true,
+impl From<DTUS_A> for bool {
+    #[inline(always)]
+    fn from(variant: DTUS_A) -> Self {
+        match variant {
+            DTUS_A::VALUE1 => false,
+            DTUS_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _DTUSW<'a> {
+#[doc = "Reader of field `DTUS`"]
+pub type DTUS_R = crate::R<bool, DTUS_A>;
+impl DTUS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> DTUS_A {
+        match self.bits {
+            false => DTUS_A::VALUE1,
+            true => DTUS_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == DTUS_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == DTUS_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `DTUS`"]
+pub struct DTUS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _DTUSW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: DTUSW) -> &'a mut W {
+impl<'a> DTUS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: DTUS_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "The update of the values is done with the trigger generated by the timers. This is the same trigger that is used to update the HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, .."]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(DTUSW::VALUE1)
+        self.variant(DTUS_A::VALUE1)
     }
     #[doc = "The update of the dead time values is done when the dead time counter is not running, independently of the HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . registers."]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(DTUSW::VALUE2)
+        self.variant(DTUS_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:1 - HRCy high resolution mode configuration for source selector 0"]
-    #[inline]
-    pub fn hrm0(&self) -> HRM0R {
-        HRM0R::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn hrm0(&self) -> HRM0_R {
+        HRM0_R::new((self.bits & 0x03) as u8)
     }
     #[doc = "Bits 2:3 - HRCy high resolution mode configuration for source selector 1"]
-    #[inline]
-    pub fn hrm1(&self) -> HRM1R {
-        HRM1R::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn hrm1(&self) -> HRM1_R {
+        HRM1_R::new(((self.bits >> 2) & 0x03) as u8)
     }
     #[doc = "Bit 8 - HRCy dead time enable"]
-    #[inline]
-    pub fn dte(&self) -> DTER {
-        DTER::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn dte(&self) -> DTE_R {
+        DTE_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 9 - HRCy trap enable"]
-    #[inline]
-    pub fn tr0e(&self) -> TR0ER {
-        TR0ER::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn tr0e(&self) -> TR0E_R {
+        TR0E_R::new(((self.bits >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 10 - HRCy complementary trap enable"]
-    #[inline]
-    pub fn tr1e(&self) -> TR1ER {
-        TR1ER::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn tr1e(&self) -> TR1E_R {
+        TR1E_R::new(((self.bits >> 10) & 0x01) != 0)
     }
     #[doc = "Bit 11 - HRCy shadow transfer configuration"]
-    #[inline]
-    pub fn stc(&self) -> STCR {
-        STCR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn stc(&self) -> STC_R {
+        STC_R::new(((self.bits >> 11) & 0x01) != 0)
     }
     #[doc = "Bit 12 - HRCy dead time shadow transfer configuration"]
-    #[inline]
-    pub fn dstc(&self) -> DSTCR {
-        DSTCR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn dstc(&self) -> DSTC_R {
+        DSTC_R::new(((self.bits >> 12) & 0x01) != 0)
     }
     #[doc = "Bit 13 - HRPWMx.OUTy0 channel selector"]
-    #[inline]
-    pub fn ocs0(&self) -> OCS0R {
-        OCS0R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ocs0(&self) -> OCS0_R {
+        OCS0_R::new(((self.bits >> 13) & 0x01) != 0)
     }
     #[doc = "Bit 14 - HRPWMx.OUTy1 channel selector"]
-    #[inline]
-    pub fn ocs1(&self) -> OCS1R {
-        OCS1R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 14;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ocs1(&self) -> OCS1_R {
+        OCS1_R::new(((self.bits >> 14) & 0x01) != 0)
     }
     #[doc = "Bit 16 - Dead Time update trigger selector"]
-    #[inline]
-    pub fn dtus(&self) -> DTUSR {
-        DTUSR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn dtus(&self) -> DTUS_R {
+        DTUS_R::new(((self.bits >> 16) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:1 - HRCy high resolution mode configuration for source selector 0"]
-    #[inline]
-    pub fn hrm0(&mut self) -> _HRM0W {
-        _HRM0W { w: self }
+    #[inline(always)]
+    pub fn hrm0(&mut self) -> HRM0_W {
+        HRM0_W { w: self }
     }
     #[doc = "Bits 2:3 - HRCy high resolution mode configuration for source selector 1"]
-    #[inline]
-    pub fn hrm1(&mut self) -> _HRM1W {
-        _HRM1W { w: self }
+    #[inline(always)]
+    pub fn hrm1(&mut self) -> HRM1_W {
+        HRM1_W { w: self }
     }
     #[doc = "Bit 8 - HRCy dead time enable"]
-    #[inline]
-    pub fn dte(&mut self) -> _DTEW {
-        _DTEW { w: self }
+    #[inline(always)]
+    pub fn dte(&mut self) -> DTE_W {
+        DTE_W { w: self }
     }
     #[doc = "Bit 9 - HRCy trap enable"]
-    #[inline]
-    pub fn tr0e(&mut self) -> _TR0EW {
-        _TR0EW { w: self }
+    #[inline(always)]
+    pub fn tr0e(&mut self) -> TR0E_W {
+        TR0E_W { w: self }
     }
     #[doc = "Bit 10 - HRCy complementary trap enable"]
-    #[inline]
-    pub fn tr1e(&mut self) -> _TR1EW {
-        _TR1EW { w: self }
+    #[inline(always)]
+    pub fn tr1e(&mut self) -> TR1E_W {
+        TR1E_W { w: self }
     }
     #[doc = "Bit 11 - HRCy shadow transfer configuration"]
-    #[inline]
-    pub fn stc(&mut self) -> _STCW {
-        _STCW { w: self }
+    #[inline(always)]
+    pub fn stc(&mut self) -> STC_W {
+        STC_W { w: self }
     }
     #[doc = "Bit 12 - HRCy dead time shadow transfer configuration"]
-    #[inline]
-    pub fn dstc(&mut self) -> _DSTCW {
-        _DSTCW { w: self }
+    #[inline(always)]
+    pub fn dstc(&mut self) -> DSTC_W {
+        DSTC_W { w: self }
     }
     #[doc = "Bit 13 - HRPWMx.OUTy0 channel selector"]
-    #[inline]
-    pub fn ocs0(&mut self) -> _OCS0W {
-        _OCS0W { w: self }
+    #[inline(always)]
+    pub fn ocs0(&mut self) -> OCS0_W {
+        OCS0_W { w: self }
     }
     #[doc = "Bit 14 - HRPWMx.OUTy1 channel selector"]
-    #[inline]
-    pub fn ocs1(&mut self) -> _OCS1W {
-        _OCS1W { w: self }
+    #[inline(always)]
+    pub fn ocs1(&mut self) -> OCS1_W {
+        OCS1_W { w: self }
     }
     #[doc = "Bit 16 - Dead Time update trigger selector"]
-    #[inline]
-    pub fn dtus(&mut self) -> _DTUSW {
-        _DTUSW { w: self }
+    #[inline(always)]
+    pub fn dtus(&mut self) -> DTUS_W {
+        DTUS_W { w: self }
     }
 }

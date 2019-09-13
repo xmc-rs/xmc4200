@@ -1,895 +1,632 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::MCHKCON {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register MCHKCON"]
+pub type R = crate::R<u32, super::MCHKCON>;
+#[doc = "Writer for register MCHKCON"]
+pub type W = crate::W<u32, super::MCHKCON>;
+#[doc = "Register MCHKCON `reset()`'s with value 0"]
+impl crate::ResetValue for super::MCHKCON {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Possible values of the field `SELPS`"]
+#[doc = "Select Memory Check for PSRAM\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SELPSR {
-    #[doc = "Not selected"]
+pub enum SELPS_A {
+    #[doc = "0: Not selected"]
     VALUE1,
-    #[doc = "Selected"]
+    #[doc = "1: Selected"]
     VALUE2,
 }
-impl SELPSR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            SELPSR::VALUE1 => false,
-            SELPSR::VALUE2 => true,
+impl From<SELPS_A> for bool {
+    #[inline(always)]
+    fn from(variant: SELPS_A) -> Self {
+        match variant {
+            SELPS_A::VALUE1 => false,
+            SELPS_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> SELPSR {
-        match value {
-            false => SELPSR::VALUE1,
-            true => SELPSR::VALUE2,
+}
+#[doc = "Reader of field `SELPS`"]
+pub type SELPS_R = crate::R<bool, SELPS_A>;
+impl SELPS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SELPS_A {
+        match self.bits {
+            false => SELPS_A::VALUE1,
+            true => SELPS_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SELPSR::VALUE1
+        *self == SELPS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SELPSR::VALUE2
+        *self == SELPS_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `SELDS1`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SELDS1R {
-    #[doc = "Not selected"]
-    VALUE1,
-    #[doc = "Selected"]
-    VALUE2,
-}
-impl SELDS1R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            SELDS1R::VALUE1 => false,
-            SELDS1R::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> SELDS1R {
-        match value {
-            false => SELDS1R::VALUE1,
-            true => SELDS1R::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == SELDS1R::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == SELDS1R::VALUE2
-    }
-}
-#[doc = "Possible values of the field `USIC0DRA`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum USIC0DRAR {
-    #[doc = "Not selected"]
-    VALUE1,
-    #[doc = "Selected"]
-    VALUE2,
-}
-impl USIC0DRAR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            USIC0DRAR::VALUE1 => false,
-            USIC0DRAR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> USIC0DRAR {
-        match value {
-            false => USIC0DRAR::VALUE1,
-            true => USIC0DRAR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == USIC0DRAR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == USIC0DRAR::VALUE2
-    }
-}
-#[doc = "Possible values of the field `USIC1DRA`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum USIC1DRAR {
-    #[doc = "Not selected"]
-    VALUE1,
-    #[doc = "Selected"]
-    VALUE2,
-}
-impl USIC1DRAR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            USIC1DRAR::VALUE1 => false,
-            USIC1DRAR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> USIC1DRAR {
-        match value {
-            false => USIC1DRAR::VALUE1,
-            true => USIC1DRAR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == USIC1DRAR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == USIC1DRAR::VALUE2
-    }
-}
-#[doc = "Possible values of the field `MCANDRA`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum MCANDRAR {
-    #[doc = "Not selected"]
-    VALUE1,
-    #[doc = "Selected"]
-    VALUE2,
-}
-impl MCANDRAR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            MCANDRAR::VALUE1 => false,
-            MCANDRAR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> MCANDRAR {
-        match value {
-            false => MCANDRAR::VALUE1,
-            true => MCANDRAR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == MCANDRAR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == MCANDRAR::VALUE2
-    }
-}
-#[doc = "Possible values of the field `PPRFDRA`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PPRFDRAR {
-    #[doc = "Not selected"]
-    VALUE1,
-    #[doc = "Selected"]
-    VALUE2,
-}
-impl PPRFDRAR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PPRFDRAR::VALUE1 => false,
-            PPRFDRAR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PPRFDRAR {
-        match value {
-            false => PPRFDRAR::VALUE1,
-            true => PPRFDRAR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PPRFDRAR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PPRFDRAR::VALUE2
-    }
-}
-#[doc = "Possible values of the field `SELUSB`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SELUSBR {
-    #[doc = "Not selected"]
-    VALUE1,
-    #[doc = "Selected"]
-    VALUE2,
-}
-impl SELUSBR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            SELUSBR::VALUE1 => false,
-            SELUSBR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> SELUSBR {
-        match value {
-            false => SELUSBR::VALUE1,
-            true => SELUSBR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == SELUSBR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == SELUSBR::VALUE2
-    }
-}
-#[doc = "Values that can be written to the field `SELPS`"]
-pub enum SELPSW {
-    #[doc = "Not selected"]
-    VALUE1,
-    #[doc = "Selected"]
-    VALUE2,
-}
-impl SELPSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            SELPSW::VALUE1 => false,
-            SELPSW::VALUE2 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SELPSW<'a> {
+#[doc = "Write proxy for field `SELPS`"]
+pub struct SELPS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SELPSW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: SELPSW) -> &'a mut W {
+impl<'a> SELPS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: SELPS_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Not selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(SELPSW::VALUE1)
+        self.variant(SELPS_A::VALUE1)
     }
     #[doc = "Selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(SELPSW::VALUE2)
+        self.variant(SELPS_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `SELDS1`"]
-pub enum SELDS1W {
-    #[doc = "Not selected"]
+#[doc = "Select Memory Check for DSRAM1\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum SELDS1_A {
+    #[doc = "0: Not selected"]
     VALUE1,
-    #[doc = "Selected"]
+    #[doc = "1: Selected"]
     VALUE2,
 }
-impl SELDS1W {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            SELDS1W::VALUE1 => false,
-            SELDS1W::VALUE2 => true,
+impl From<SELDS1_A> for bool {
+    #[inline(always)]
+    fn from(variant: SELDS1_A) -> Self {
+        match variant {
+            SELDS1_A::VALUE1 => false,
+            SELDS1_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _SELDS1W<'a> {
+#[doc = "Reader of field `SELDS1`"]
+pub type SELDS1_R = crate::R<bool, SELDS1_A>;
+impl SELDS1_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SELDS1_A {
+        match self.bits {
+            false => SELDS1_A::VALUE1,
+            true => SELDS1_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == SELDS1_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == SELDS1_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `SELDS1`"]
+pub struct SELDS1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SELDS1W<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: SELDS1W) -> &'a mut W {
+impl<'a> SELDS1_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: SELDS1_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Not selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(SELDS1W::VALUE1)
+        self.variant(SELDS1_A::VALUE1)
     }
     #[doc = "Selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(SELDS1W::VALUE2)
+        self.variant(SELDS1_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `USIC0DRA`"]
-pub enum USIC0DRAW {
-    #[doc = "Not selected"]
+#[doc = "Select Memory Check for USIC0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum USIC0DRA_A {
+    #[doc = "0: Not selected"]
     VALUE1,
-    #[doc = "Selected"]
+    #[doc = "1: Selected"]
     VALUE2,
 }
-impl USIC0DRAW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            USIC0DRAW::VALUE1 => false,
-            USIC0DRAW::VALUE2 => true,
+impl From<USIC0DRA_A> for bool {
+    #[inline(always)]
+    fn from(variant: USIC0DRA_A) -> Self {
+        match variant {
+            USIC0DRA_A::VALUE1 => false,
+            USIC0DRA_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _USIC0DRAW<'a> {
+#[doc = "Reader of field `USIC0DRA`"]
+pub type USIC0DRA_R = crate::R<bool, USIC0DRA_A>;
+impl USIC0DRA_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> USIC0DRA_A {
+        match self.bits {
+            false => USIC0DRA_A::VALUE1,
+            true => USIC0DRA_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == USIC0DRA_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == USIC0DRA_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `USIC0DRA`"]
+pub struct USIC0DRA_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _USIC0DRAW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: USIC0DRAW) -> &'a mut W {
+impl<'a> USIC0DRA_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: USIC0DRA_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Not selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(USIC0DRAW::VALUE1)
+        self.variant(USIC0DRA_A::VALUE1)
     }
     #[doc = "Selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(USIC0DRAW::VALUE2)
+        self.variant(USIC0DRA_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `USIC1DRA`"]
-pub enum USIC1DRAW {
-    #[doc = "Not selected"]
+#[doc = "Select Memory Check for USIC1\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum USIC1DRA_A {
+    #[doc = "0: Not selected"]
     VALUE1,
-    #[doc = "Selected"]
+    #[doc = "1: Selected"]
     VALUE2,
 }
-impl USIC1DRAW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            USIC1DRAW::VALUE1 => false,
-            USIC1DRAW::VALUE2 => true,
+impl From<USIC1DRA_A> for bool {
+    #[inline(always)]
+    fn from(variant: USIC1DRA_A) -> Self {
+        match variant {
+            USIC1DRA_A::VALUE1 => false,
+            USIC1DRA_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _USIC1DRAW<'a> {
+#[doc = "Reader of field `USIC1DRA`"]
+pub type USIC1DRA_R = crate::R<bool, USIC1DRA_A>;
+impl USIC1DRA_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> USIC1DRA_A {
+        match self.bits {
+            false => USIC1DRA_A::VALUE1,
+            true => USIC1DRA_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == USIC1DRA_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == USIC1DRA_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `USIC1DRA`"]
+pub struct USIC1DRA_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _USIC1DRAW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: USIC1DRAW) -> &'a mut W {
+impl<'a> USIC1DRA_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: USIC1DRA_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Not selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(USIC1DRAW::VALUE1)
+        self.variant(USIC1DRA_A::VALUE1)
     }
     #[doc = "Selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(USIC1DRAW::VALUE2)
+        self.variant(USIC1DRA_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `MCANDRA`"]
-pub enum MCANDRAW {
-    #[doc = "Not selected"]
+#[doc = "Select Memory Check for MultiCAN\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MCANDRA_A {
+    #[doc = "0: Not selected"]
     VALUE1,
-    #[doc = "Selected"]
+    #[doc = "1: Selected"]
     VALUE2,
 }
-impl MCANDRAW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            MCANDRAW::VALUE1 => false,
-            MCANDRAW::VALUE2 => true,
+impl From<MCANDRA_A> for bool {
+    #[inline(always)]
+    fn from(variant: MCANDRA_A) -> Self {
+        match variant {
+            MCANDRA_A::VALUE1 => false,
+            MCANDRA_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _MCANDRAW<'a> {
+#[doc = "Reader of field `MCANDRA`"]
+pub type MCANDRA_R = crate::R<bool, MCANDRA_A>;
+impl MCANDRA_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> MCANDRA_A {
+        match self.bits {
+            false => MCANDRA_A::VALUE1,
+            true => MCANDRA_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == MCANDRA_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == MCANDRA_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `MCANDRA`"]
+pub struct MCANDRA_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MCANDRAW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: MCANDRAW) -> &'a mut W {
+impl<'a> MCANDRA_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: MCANDRA_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Not selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(MCANDRAW::VALUE1)
+        self.variant(MCANDRA_A::VALUE1)
     }
     #[doc = "Selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(MCANDRAW::VALUE2)
+        self.variant(MCANDRA_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PPRFDRA`"]
-pub enum PPRFDRAW {
-    #[doc = "Not selected"]
+#[doc = "Select Memory Check for PMU\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PPRFDRA_A {
+    #[doc = "0: Not selected"]
     VALUE1,
-    #[doc = "Selected"]
+    #[doc = "1: Selected"]
     VALUE2,
 }
-impl PPRFDRAW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PPRFDRAW::VALUE1 => false,
-            PPRFDRAW::VALUE2 => true,
+impl From<PPRFDRA_A> for bool {
+    #[inline(always)]
+    fn from(variant: PPRFDRA_A) -> Self {
+        match variant {
+            PPRFDRA_A::VALUE1 => false,
+            PPRFDRA_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PPRFDRAW<'a> {
+#[doc = "Reader of field `PPRFDRA`"]
+pub type PPRFDRA_R = crate::R<bool, PPRFDRA_A>;
+impl PPRFDRA_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PPRFDRA_A {
+        match self.bits {
+            false => PPRFDRA_A::VALUE1,
+            true => PPRFDRA_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PPRFDRA_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PPRFDRA_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `PPRFDRA`"]
+pub struct PPRFDRA_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PPRFDRAW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PPRFDRAW) -> &'a mut W {
+impl<'a> PPRFDRA_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PPRFDRA_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Not selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PPRFDRAW::VALUE1)
+        self.variant(PPRFDRA_A::VALUE1)
     }
     #[doc = "Selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PPRFDRAW::VALUE2)
+        self.variant(PPRFDRA_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 13;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `SELUSB`"]
-pub enum SELUSBW {
-    #[doc = "Not selected"]
+#[doc = "Select Memory Check for USB SRAM\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum SELUSB_A {
+    #[doc = "0: Not selected"]
     VALUE1,
-    #[doc = "Selected"]
+    #[doc = "1: Selected"]
     VALUE2,
 }
-impl SELUSBW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            SELUSBW::VALUE1 => false,
-            SELUSBW::VALUE2 => true,
+impl From<SELUSB_A> for bool {
+    #[inline(always)]
+    fn from(variant: SELUSB_A) -> Self {
+        match variant {
+            SELUSB_A::VALUE1 => false,
+            SELUSB_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _SELUSBW<'a> {
+#[doc = "Reader of field `SELUSB`"]
+pub type SELUSB_R = crate::R<bool, SELUSB_A>;
+impl SELUSB_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SELUSB_A {
+        match self.bits {
+            false => SELUSB_A::VALUE1,
+            true => SELUSB_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == SELUSB_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == SELUSB_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `SELUSB`"]
+pub struct SELUSB_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SELUSBW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: SELUSBW) -> &'a mut W {
+impl<'a> SELUSB_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: SELUSB_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Not selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(SELUSBW::VALUE1)
+        self.variant(SELUSB_A::VALUE1)
     }
     #[doc = "Selected"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(SELUSBW::VALUE2)
+        self.variant(SELUSB_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 0 - Select Memory Check for PSRAM"]
-    #[inline]
-    pub fn selps(&self) -> SELPSR {
-        SELPSR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn selps(&self) -> SELPS_R {
+        SELPS_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - Select Memory Check for DSRAM1"]
-    #[inline]
-    pub fn selds1(&self) -> SELDS1R {
-        SELDS1R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn selds1(&self) -> SELDS1_R {
+        SELDS1_R::new(((self.bits >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 8 - Select Memory Check for USIC0"]
-    #[inline]
-    pub fn usic0dra(&self) -> USIC0DRAR {
-        USIC0DRAR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn usic0dra(&self) -> USIC0DRA_R {
+        USIC0DRA_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 9 - Select Memory Check for USIC1"]
-    #[inline]
-    pub fn usic1dra(&self) -> USIC1DRAR {
-        USIC1DRAR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn usic1dra(&self) -> USIC1DRA_R {
+        USIC1DRA_R::new(((self.bits >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 12 - Select Memory Check for MultiCAN"]
-    #[inline]
-    pub fn mcandra(&self) -> MCANDRAR {
-        MCANDRAR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn mcandra(&self) -> MCANDRA_R {
+        MCANDRA_R::new(((self.bits >> 12) & 0x01) != 0)
     }
     #[doc = "Bit 13 - Select Memory Check for PMU"]
-    #[inline]
-    pub fn pprfdra(&self) -> PPRFDRAR {
-        PPRFDRAR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn pprfdra(&self) -> PPRFDRA_R {
+        PPRFDRA_R::new(((self.bits >> 13) & 0x01) != 0)
     }
     #[doc = "Bit 16 - Select Memory Check for USB SRAM"]
-    #[inline]
-    pub fn selusb(&self) -> SELUSBR {
-        SELUSBR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn selusb(&self) -> SELUSB_R {
+        SELUSB_R::new(((self.bits >> 16) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 0 - Select Memory Check for PSRAM"]
-    #[inline]
-    pub fn selps(&mut self) -> _SELPSW {
-        _SELPSW { w: self }
+    #[inline(always)]
+    pub fn selps(&mut self) -> SELPS_W {
+        SELPS_W { w: self }
     }
     #[doc = "Bit 1 - Select Memory Check for DSRAM1"]
-    #[inline]
-    pub fn selds1(&mut self) -> _SELDS1W {
-        _SELDS1W { w: self }
+    #[inline(always)]
+    pub fn selds1(&mut self) -> SELDS1_W {
+        SELDS1_W { w: self }
     }
     #[doc = "Bit 8 - Select Memory Check for USIC0"]
-    #[inline]
-    pub fn usic0dra(&mut self) -> _USIC0DRAW {
-        _USIC0DRAW { w: self }
+    #[inline(always)]
+    pub fn usic0dra(&mut self) -> USIC0DRA_W {
+        USIC0DRA_W { w: self }
     }
     #[doc = "Bit 9 - Select Memory Check for USIC1"]
-    #[inline]
-    pub fn usic1dra(&mut self) -> _USIC1DRAW {
-        _USIC1DRAW { w: self }
+    #[inline(always)]
+    pub fn usic1dra(&mut self) -> USIC1DRA_W {
+        USIC1DRA_W { w: self }
     }
     #[doc = "Bit 12 - Select Memory Check for MultiCAN"]
-    #[inline]
-    pub fn mcandra(&mut self) -> _MCANDRAW {
-        _MCANDRAW { w: self }
+    #[inline(always)]
+    pub fn mcandra(&mut self) -> MCANDRA_W {
+        MCANDRA_W { w: self }
     }
     #[doc = "Bit 13 - Select Memory Check for PMU"]
-    #[inline]
-    pub fn pprfdra(&mut self) -> _PPRFDRAW {
-        _PPRFDRAW { w: self }
+    #[inline(always)]
+    pub fn pprfdra(&mut self) -> PPRFDRA_W {
+        PPRFDRA_W { w: self }
     }
     #[doc = "Bit 16 - Select Memory Check for USB SRAM"]
-    #[inline]
-    pub fn selusb(&mut self) -> _SELUSBW {
-        _SELUSBW { w: self }
+    #[inline(always)]
+    pub fn selusb(&mut self) -> SELUSB_W {
+        SELUSB_W { w: self }
     }
 }

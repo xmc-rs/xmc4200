@@ -1,528 +1,352 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::LPACCONF {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register LPACCONF"]
+pub type R = crate::R<u32, super::LPACCONF>;
+#[doc = "Writer for register LPACCONF"]
+pub type W = crate::W<u32, super::LPACCONF>;
+#[doc = "Register LPACCONF `reset()`'s with value 0x7000_0000"]
+impl crate::ResetValue for super::LPACCONF {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0x7000_0000
     }
 }
-#[doc = "Possible values of the field `CMPEN`"]
+#[doc = "Compare Enable for Input Selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum CMPENR {
+pub enum CMPEN_A {
+    #[doc = "0: Comparator permanently in power down"]
+    VALUE1,
+    #[doc = "1: Comparator activated for VBAT input"]
+    VALUE2,
+    #[doc = "2: Comparator activated for HIB_IO_0 input"]
+    VALUE3,
+    #[doc = "4: Comparator activated for HIB_IO_1 input"]
+    VALUE4,
+}
+impl From<CMPEN_A> for u8 {
+    #[inline(always)]
+    fn from(variant: CMPEN_A) -> Self {
+        match variant {
+            CMPEN_A::VALUE1 => 0,
+            CMPEN_A::VALUE2 => 1,
+            CMPEN_A::VALUE3 => 2,
+            CMPEN_A::VALUE4 => 4,
+        }
+    }
+}
+#[doc = "Reader of field `CMPEN`"]
+pub type CMPEN_R = crate::R<u8, CMPEN_A>;
+impl CMPEN_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, CMPEN_A> {
+        use crate::Variant::*;
+        match self.bits {
+            0 => Val(CMPEN_A::VALUE1),
+            1 => Val(CMPEN_A::VALUE2),
+            2 => Val(CMPEN_A::VALUE3),
+            4 => Val(CMPEN_A::VALUE4),
+            i => Res(i),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == CMPEN_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == CMPEN_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == CMPEN_A::VALUE3
+    }
+    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[inline(always)]
+    pub fn is_value4(&self) -> bool {
+        *self == CMPEN_A::VALUE4
+    }
+}
+#[doc = "Write proxy for field `CMPEN`"]
+pub struct CMPEN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> CMPEN_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: CMPEN_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
+    }
     #[doc = "Comparator permanently in power down"]
-    VALUE1,
+    #[inline(always)]
+    pub fn value1(self) -> &'a mut W {
+        self.variant(CMPEN_A::VALUE1)
+    }
     #[doc = "Comparator activated for VBAT input"]
-    VALUE2,
+    #[inline(always)]
+    pub fn value2(self) -> &'a mut W {
+        self.variant(CMPEN_A::VALUE2)
+    }
     #[doc = "Comparator activated for HIB_IO_0 input"]
-    VALUE3,
+    #[inline(always)]
+    pub fn value3(self) -> &'a mut W {
+        self.variant(CMPEN_A::VALUE3)
+    }
     #[doc = "Comparator activated for HIB_IO_1 input"]
-    VALUE4,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
-}
-impl CMPENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            CMPENR::VALUE1 => 0,
-            CMPENR::VALUE2 => 1,
-            CMPENR::VALUE3 => 2,
-            CMPENR::VALUE4 => 4,
-            CMPENR::_Reserved(bits) => bits,
-        }
+    #[inline(always)]
+    pub fn value4(self) -> &'a mut W {
+        self.variant(CMPEN_A::VALUE4)
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> CMPENR {
-        match value {
-            0 => CMPENR::VALUE1,
-            1 => CMPENR::VALUE2,
-            2 => CMPENR::VALUE3,
-            4 => CMPENR::VALUE4,
-            i => CMPENR::_Reserved(i),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == CMPENR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == CMPENR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == CMPENR::VALUE3
-    }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
-    pub fn is_value4(&self) -> bool {
-        *self == CMPENR::VALUE4
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x07) | ((value as u32) & 0x07);
+        self.w
     }
 }
-#[doc = "Possible values of the field `TRIGSEL`"]
+#[doc = "Analog Compare Trigger Select\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum TRIGSELR {
-    #[doc = "Sub-second interval counter"]
+pub enum TRIGSEL_A {
+    #[doc = "0: Sub-second interval counter"]
     VALUE1,
-    #[doc = "RTC alarm event"]
+    #[doc = "1: RTC alarm event"]
     VALUE2,
-    #[doc = "RTC periodic event"]
+    #[doc = "2: RTC periodic event"]
     VALUE3,
-    #[doc = "On digital WKUP input positive edge event"]
+    #[doc = "3: On digital WKUP input positive edge event"]
     VALUE4,
-    #[doc = "On digital WKUP input negative edge event"]
+    #[doc = "5: On digital WKUP input negative edge event"]
     VALUE5,
-    #[doc = "Continuous measurement"]
+    #[doc = "6: Continuous measurement"]
     VALUE6,
-    #[doc = "Single-shot on software request"]
+    #[doc = "7: Single-shot on software request"]
     VALUE7,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
 }
-impl TRIGSELR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            TRIGSELR::VALUE1 => 0,
-            TRIGSELR::VALUE2 => 1,
-            TRIGSELR::VALUE3 => 2,
-            TRIGSELR::VALUE4 => 3,
-            TRIGSELR::VALUE5 => 5,
-            TRIGSELR::VALUE6 => 6,
-            TRIGSELR::VALUE7 => 7,
-            TRIGSELR::_Reserved(bits) => bits,
+impl From<TRIGSEL_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TRIGSEL_A) -> Self {
+        match variant {
+            TRIGSEL_A::VALUE1 => 0,
+            TRIGSEL_A::VALUE2 => 1,
+            TRIGSEL_A::VALUE3 => 2,
+            TRIGSEL_A::VALUE4 => 3,
+            TRIGSEL_A::VALUE5 => 5,
+            TRIGSEL_A::VALUE6 => 6,
+            TRIGSEL_A::VALUE7 => 7,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> TRIGSELR {
-        match value {
-            0 => TRIGSELR::VALUE1,
-            1 => TRIGSELR::VALUE2,
-            2 => TRIGSELR::VALUE3,
-            3 => TRIGSELR::VALUE4,
-            5 => TRIGSELR::VALUE5,
-            6 => TRIGSELR::VALUE6,
-            7 => TRIGSELR::VALUE7,
-            i => TRIGSELR::_Reserved(i),
+}
+#[doc = "Reader of field `TRIGSEL`"]
+pub type TRIGSEL_R = crate::R<u8, TRIGSEL_A>;
+impl TRIGSEL_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, TRIGSEL_A> {
+        use crate::Variant::*;
+        match self.bits {
+            0 => Val(TRIGSEL_A::VALUE1),
+            1 => Val(TRIGSEL_A::VALUE2),
+            2 => Val(TRIGSEL_A::VALUE3),
+            3 => Val(TRIGSEL_A::VALUE4),
+            5 => Val(TRIGSEL_A::VALUE5),
+            6 => Val(TRIGSEL_A::VALUE6),
+            7 => Val(TRIGSEL_A::VALUE7),
+            i => Res(i),
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == TRIGSELR::VALUE1
+        *self == TRIGSEL_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == TRIGSELR::VALUE2
+        *self == TRIGSEL_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == TRIGSELR::VALUE3
+        *self == TRIGSEL_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == TRIGSELR::VALUE4
+        *self == TRIGSEL_A::VALUE4
     }
     #[doc = "Checks if the value of the field is `VALUE5`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value5(&self) -> bool {
-        *self == TRIGSELR::VALUE5
+        *self == TRIGSEL_A::VALUE5
     }
     #[doc = "Checks if the value of the field is `VALUE6`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value6(&self) -> bool {
-        *self == TRIGSELR::VALUE6
+        *self == TRIGSEL_A::VALUE6
     }
     #[doc = "Checks if the value of the field is `VALUE7`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value7(&self) -> bool {
-        *self == TRIGSELR::VALUE7
+        *self == TRIGSEL_A::VALUE7
     }
 }
-#[doc = r" Value of the field"]
-pub struct CONVDELR {
-    bits: bool,
-}
-impl CONVDELR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct INTERVCNTR {
-    bits: u16,
-}
-impl INTERVCNTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SETTLECNTR {
-    bits: u8,
-}
-impl SETTLECNTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = "Values that can be written to the field `CMPEN`"]
-pub enum CMPENW {
-    #[doc = "Comparator permanently in power down"]
-    VALUE1,
-    #[doc = "Comparator activated for VBAT input"]
-    VALUE2,
-    #[doc = "Comparator activated for HIB_IO_0 input"]
-    VALUE3,
-    #[doc = "Comparator activated for HIB_IO_1 input"]
-    VALUE4,
-}
-impl CMPENW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            CMPENW::VALUE1 => 0,
-            CMPENW::VALUE2 => 1,
-            CMPENW::VALUE3 => 2,
-            CMPENW::VALUE4 => 4,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _CMPENW<'a> {
+#[doc = "Write proxy for field `TRIGSEL`"]
+pub struct TRIGSEL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CMPENW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: CMPENW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
-    }
-    #[doc = "Comparator permanently in power down"]
-    #[inline]
-    pub fn value1(self) -> &'a mut W {
-        self.variant(CMPENW::VALUE1)
-    }
-    #[doc = "Comparator activated for VBAT input"]
-    #[inline]
-    pub fn value2(self) -> &'a mut W {
-        self.variant(CMPENW::VALUE2)
-    }
-    #[doc = "Comparator activated for HIB_IO_0 input"]
-    #[inline]
-    pub fn value3(self) -> &'a mut W {
-        self.variant(CMPENW::VALUE3)
-    }
-    #[doc = "Comparator activated for HIB_IO_1 input"]
-    #[inline]
-    pub fn value4(self) -> &'a mut W {
-        self.variant(CMPENW::VALUE4)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = "Values that can be written to the field `TRIGSEL`"]
-pub enum TRIGSELW {
-    #[doc = "Sub-second interval counter"]
-    VALUE1,
-    #[doc = "RTC alarm event"]
-    VALUE2,
-    #[doc = "RTC periodic event"]
-    VALUE3,
-    #[doc = "On digital WKUP input positive edge event"]
-    VALUE4,
-    #[doc = "On digital WKUP input negative edge event"]
-    VALUE5,
-    #[doc = "Continuous measurement"]
-    VALUE6,
-    #[doc = "Single-shot on software request"]
-    VALUE7,
-}
-impl TRIGSELW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            TRIGSELW::VALUE1 => 0,
-            TRIGSELW::VALUE2 => 1,
-            TRIGSELW::VALUE3 => 2,
-            TRIGSELW::VALUE4 => 3,
-            TRIGSELW::VALUE5 => 5,
-            TRIGSELW::VALUE6 => 6,
-            TRIGSELW::VALUE7 => 7,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _TRIGSELW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _TRIGSELW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: TRIGSELW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+impl<'a> TRIGSEL_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: TRIGSEL_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
     }
     #[doc = "Sub-second interval counter"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(TRIGSELW::VALUE1)
+        self.variant(TRIGSEL_A::VALUE1)
     }
     #[doc = "RTC alarm event"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(TRIGSELW::VALUE2)
+        self.variant(TRIGSEL_A::VALUE2)
     }
     #[doc = "RTC periodic event"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(TRIGSELW::VALUE3)
+        self.variant(TRIGSEL_A::VALUE3)
     }
     #[doc = "On digital WKUP input positive edge event"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(TRIGSELW::VALUE4)
+        self.variant(TRIGSEL_A::VALUE4)
     }
     #[doc = "On digital WKUP input negative edge event"]
-    #[inline]
+    #[inline(always)]
     pub fn value5(self) -> &'a mut W {
-        self.variant(TRIGSELW::VALUE5)
+        self.variant(TRIGSEL_A::VALUE5)
     }
     #[doc = "Continuous measurement"]
-    #[inline]
+    #[inline(always)]
     pub fn value6(self) -> &'a mut W {
-        self.variant(TRIGSELW::VALUE6)
+        self.variant(TRIGSEL_A::VALUE6)
     }
     #[doc = "Single-shot on software request"]
-    #[inline]
+    #[inline(always)]
     pub fn value7(self) -> &'a mut W {
-        self.variant(TRIGSELW::VALUE7)
+        self.variant(TRIGSEL_A::VALUE7)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 4)) | (((value as u32) & 0x07) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CONVDELW<'a> {
+#[doc = "Reader of field `CONVDEL`"]
+pub type CONVDEL_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `CONVDEL`"]
+pub struct CONVDEL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CONVDELW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> CONVDEL_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _INTERVCNTW<'a> {
+#[doc = "Reader of field `INTERVCNT`"]
+pub type INTERVCNT_R = crate::R<u16, u16>;
+#[doc = "Write proxy for field `INTERVCNT`"]
+pub struct INTERVCNT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _INTERVCNTW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> INTERVCNT_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 4095;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0fff << 16)) | (((value as u32) & 0x0fff) << 16);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SETTLECNTW<'a> {
+#[doc = "Reader of field `SETTLECNT`"]
+pub type SETTLECNT_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SETTLECNT`"]
+pub struct SETTLECNT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SETTLECNTW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SETTLECNT_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 28;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 28)) | (((value as u32) & 0x0f) << 28);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:2 - Compare Enable for Input Selection"]
-    #[inline]
-    pub fn cmpen(&self) -> CMPENR {
-        CMPENR::_from({
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn cmpen(&self) -> CMPEN_R {
+        CMPEN_R::new((self.bits & 0x07) as u8)
     }
     #[doc = "Bits 4:6 - Analog Compare Trigger Select"]
-    #[inline]
-    pub fn trigsel(&self) -> TRIGSELR {
-        TRIGSELR::_from({
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn trigsel(&self) -> TRIGSEL_R {
+        TRIGSEL_R::new(((self.bits >> 4) & 0x07) as u8)
     }
     #[doc = "Bit 12 - Conversion Delay"]
-    #[inline]
-    pub fn convdel(&self) -> CONVDELR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        CONVDELR { bits }
+    #[inline(always)]
+    pub fn convdel(&self) -> CONVDEL_R {
+        CONVDEL_R::new(((self.bits >> 12) & 0x01) != 0)
     }
     #[doc = "Bits 16:27 - Sub-second Interval Counter"]
-    #[inline]
-    pub fn intervcnt(&self) -> INTERVCNTR {
-        let bits = {
-            const MASK: u16 = 4095;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        INTERVCNTR { bits }
+    #[inline(always)]
+    pub fn intervcnt(&self) -> INTERVCNT_R {
+        INTERVCNT_R::new(((self.bits >> 16) & 0x0fff) as u16)
     }
     #[doc = "Bits 28:31 - LPAC Settle Time Counter"]
-    #[inline]
-    pub fn settlecnt(&self) -> SETTLECNTR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 28;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SETTLECNTR { bits }
+    #[inline(always)]
+    pub fn settlecnt(&self) -> SETTLECNT_R {
+        SETTLECNT_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 1879048192 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:2 - Compare Enable for Input Selection"]
-    #[inline]
-    pub fn cmpen(&mut self) -> _CMPENW {
-        _CMPENW { w: self }
+    #[inline(always)]
+    pub fn cmpen(&mut self) -> CMPEN_W {
+        CMPEN_W { w: self }
     }
     #[doc = "Bits 4:6 - Analog Compare Trigger Select"]
-    #[inline]
-    pub fn trigsel(&mut self) -> _TRIGSELW {
-        _TRIGSELW { w: self }
+    #[inline(always)]
+    pub fn trigsel(&mut self) -> TRIGSEL_W {
+        TRIGSEL_W { w: self }
     }
     #[doc = "Bit 12 - Conversion Delay"]
-    #[inline]
-    pub fn convdel(&mut self) -> _CONVDELW {
-        _CONVDELW { w: self }
+    #[inline(always)]
+    pub fn convdel(&mut self) -> CONVDEL_W {
+        CONVDEL_W { w: self }
     }
     #[doc = "Bits 16:27 - Sub-second Interval Counter"]
-    #[inline]
-    pub fn intervcnt(&mut self) -> _INTERVCNTW {
-        _INTERVCNTW { w: self }
+    #[inline(always)]
+    pub fn intervcnt(&mut self) -> INTERVCNT_W {
+        INTERVCNT_W { w: self }
     }
     #[doc = "Bits 28:31 - LPAC Settle Time Counter"]
-    #[inline]
-    pub fn settlecnt(&mut self) -> _SETTLECNTW {
-        _SETTLECNTW { w: self }
+    #[inline(always)]
+    pub fn settlecnt(&mut self) -> SETTLECNT_W {
+        SETTLECNT_W { w: self }
     }
 }

@@ -1,466 +1,356 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-impl super::PRSTAT0 {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-}
-#[doc = "Possible values of the field `VADCRS`"]
+#[doc = "Reader of register PRSTAT0"]
+pub type R = crate::R<u32, super::PRSTAT0>;
+#[doc = "VADC Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum VADCRSR {
-    #[doc = "Reset de-asserted"]
+pub enum VADCRS_A {
+    #[doc = "0: Reset de-asserted"]
     VALUE1,
-    #[doc = "Reset asserted"]
+    #[doc = "1: Reset asserted"]
     VALUE2,
 }
-impl VADCRSR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            VADCRSR::VALUE1 => false,
-            VADCRSR::VALUE2 => true,
+impl From<VADCRS_A> for bool {
+    #[inline(always)]
+    fn from(variant: VADCRS_A) -> Self {
+        match variant {
+            VADCRS_A::VALUE1 => false,
+            VADCRS_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> VADCRSR {
-        match value {
-            false => VADCRSR::VALUE1,
-            true => VADCRSR::VALUE2,
+}
+#[doc = "Reader of field `VADCRS`"]
+pub type VADCRS_R = crate::R<bool, VADCRS_A>;
+impl VADCRS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> VADCRS_A {
+        match self.bits {
+            false => VADCRS_A::VALUE1,
+            true => VADCRS_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VADCRSR::VALUE1
+        *self == VADCRS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VADCRSR::VALUE2
+        *self == VADCRS_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `CCU40RS`"]
+#[doc = "CCU40 Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum CCU40RSR {
-    #[doc = "Reset de-asserted"]
+pub enum CCU40RS_A {
+    #[doc = "0: Reset de-asserted"]
     VALUE1,
-    #[doc = "Reset asserted"]
+    #[doc = "1: Reset asserted"]
     VALUE2,
 }
-impl CCU40RSR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            CCU40RSR::VALUE1 => false,
-            CCU40RSR::VALUE2 => true,
+impl From<CCU40RS_A> for bool {
+    #[inline(always)]
+    fn from(variant: CCU40RS_A) -> Self {
+        match variant {
+            CCU40RS_A::VALUE1 => false,
+            CCU40RS_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> CCU40RSR {
-        match value {
-            false => CCU40RSR::VALUE1,
-            true => CCU40RSR::VALUE2,
+}
+#[doc = "Reader of field `CCU40RS`"]
+pub type CCU40RS_R = crate::R<bool, CCU40RS_A>;
+impl CCU40RS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CCU40RS_A {
+        match self.bits {
+            false => CCU40RS_A::VALUE1,
+            true => CCU40RS_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CCU40RSR::VALUE1
+        *self == CCU40RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CCU40RSR::VALUE2
+        *self == CCU40RS_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `CCU41RS`"]
+#[doc = "CCU41 Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum CCU41RSR {
-    #[doc = "Reset de-asserted"]
+pub enum CCU41RS_A {
+    #[doc = "0: Reset de-asserted"]
     VALUE1,
-    #[doc = "Reset asserted"]
+    #[doc = "1: Reset asserted"]
     VALUE2,
 }
-impl CCU41RSR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            CCU41RSR::VALUE1 => false,
-            CCU41RSR::VALUE2 => true,
+impl From<CCU41RS_A> for bool {
+    #[inline(always)]
+    fn from(variant: CCU41RS_A) -> Self {
+        match variant {
+            CCU41RS_A::VALUE1 => false,
+            CCU41RS_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> CCU41RSR {
-        match value {
-            false => CCU41RSR::VALUE1,
-            true => CCU41RSR::VALUE2,
+}
+#[doc = "Reader of field `CCU41RS`"]
+pub type CCU41RS_R = crate::R<bool, CCU41RS_A>;
+impl CCU41RS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CCU41RS_A {
+        match self.bits {
+            false => CCU41RS_A::VALUE1,
+            true => CCU41RS_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CCU41RSR::VALUE1
+        *self == CCU41RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CCU41RSR::VALUE2
+        *self == CCU41RS_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `CCU80RS`"]
+#[doc = "CCU80 Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum CCU80RSR {
-    #[doc = "Reset de-asserted"]
+pub enum CCU80RS_A {
+    #[doc = "0: Reset de-asserted"]
     VALUE1,
-    #[doc = "Reset asserted"]
+    #[doc = "1: Reset asserted"]
     VALUE2,
 }
-impl CCU80RSR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            CCU80RSR::VALUE1 => false,
-            CCU80RSR::VALUE2 => true,
+impl From<CCU80RS_A> for bool {
+    #[inline(always)]
+    fn from(variant: CCU80RS_A) -> Self {
+        match variant {
+            CCU80RS_A::VALUE1 => false,
+            CCU80RS_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> CCU80RSR {
-        match value {
-            false => CCU80RSR::VALUE1,
-            true => CCU80RSR::VALUE2,
+}
+#[doc = "Reader of field `CCU80RS`"]
+pub type CCU80RS_R = crate::R<bool, CCU80RS_A>;
+impl CCU80RS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CCU80RS_A {
+        match self.bits {
+            false => CCU80RS_A::VALUE1,
+            true => CCU80RS_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CCU80RSR::VALUE1
+        *self == CCU80RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CCU80RSR::VALUE2
+        *self == CCU80RS_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `POSIF0RS`"]
+#[doc = "POSIF0 Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum POSIF0RSR {
-    #[doc = "Reset de-asserted"]
+pub enum POSIF0RS_A {
+    #[doc = "0: Reset de-asserted"]
     VALUE1,
-    #[doc = "Reset asserted"]
+    #[doc = "1: Reset asserted"]
     VALUE2,
 }
-impl POSIF0RSR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            POSIF0RSR::VALUE1 => false,
-            POSIF0RSR::VALUE2 => true,
+impl From<POSIF0RS_A> for bool {
+    #[inline(always)]
+    fn from(variant: POSIF0RS_A) -> Self {
+        match variant {
+            POSIF0RS_A::VALUE1 => false,
+            POSIF0RS_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> POSIF0RSR {
-        match value {
-            false => POSIF0RSR::VALUE1,
-            true => POSIF0RSR::VALUE2,
+}
+#[doc = "Reader of field `POSIF0RS`"]
+pub type POSIF0RS_R = crate::R<bool, POSIF0RS_A>;
+impl POSIF0RS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> POSIF0RS_A {
+        match self.bits {
+            false => POSIF0RS_A::VALUE1,
+            true => POSIF0RS_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == POSIF0RSR::VALUE1
+        *self == POSIF0RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == POSIF0RSR::VALUE2
+        *self == POSIF0RS_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `USIC0RS`"]
+#[doc = "USIC0 Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum USIC0RSR {
-    #[doc = "Reset de-asserted"]
+pub enum USIC0RS_A {
+    #[doc = "0: Reset de-asserted"]
     VALUE1,
-    #[doc = "Reset asserted"]
+    #[doc = "1: Reset asserted"]
     VALUE2,
 }
-impl USIC0RSR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            USIC0RSR::VALUE1 => false,
-            USIC0RSR::VALUE2 => true,
+impl From<USIC0RS_A> for bool {
+    #[inline(always)]
+    fn from(variant: USIC0RS_A) -> Self {
+        match variant {
+            USIC0RS_A::VALUE1 => false,
+            USIC0RS_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> USIC0RSR {
-        match value {
-            false => USIC0RSR::VALUE1,
-            true => USIC0RSR::VALUE2,
+}
+#[doc = "Reader of field `USIC0RS`"]
+pub type USIC0RS_R = crate::R<bool, USIC0RS_A>;
+impl USIC0RS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> USIC0RS_A {
+        match self.bits {
+            false => USIC0RS_A::VALUE1,
+            true => USIC0RS_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == USIC0RSR::VALUE1
+        *self == USIC0RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == USIC0RSR::VALUE2
+        *self == USIC0RS_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `ERU1RS`"]
+#[doc = "ERU1 Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum ERU1RSR {
-    #[doc = "Reset de-asserted"]
+pub enum ERU1RS_A {
+    #[doc = "0: Reset de-asserted"]
     VALUE1,
-    #[doc = "Reset asserted"]
+    #[doc = "1: Reset asserted"]
     VALUE2,
 }
-impl ERU1RSR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            ERU1RSR::VALUE1 => false,
-            ERU1RSR::VALUE2 => true,
+impl From<ERU1RS_A> for bool {
+    #[inline(always)]
+    fn from(variant: ERU1RS_A) -> Self {
+        match variant {
+            ERU1RS_A::VALUE1 => false,
+            ERU1RS_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> ERU1RSR {
-        match value {
-            false => ERU1RSR::VALUE1,
-            true => ERU1RSR::VALUE2,
+}
+#[doc = "Reader of field `ERU1RS`"]
+pub type ERU1RS_R = crate::R<bool, ERU1RS_A>;
+impl ERU1RS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> ERU1RS_A {
+        match self.bits {
+            false => ERU1RS_A::VALUE1,
+            true => ERU1RS_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == ERU1RSR::VALUE1
+        *self == ERU1RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == ERU1RSR::VALUE2
+        *self == ERU1RS_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `HRPWM0RS`"]
+#[doc = "HRPWM0 Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum HRPWM0RSR {
-    #[doc = "Reset de-asserted"]
+pub enum HRPWM0RS_A {
+    #[doc = "0: Reset de-asserted"]
     VALUE1,
-    #[doc = "Reset asserted"]
+    #[doc = "1: Reset asserted"]
     VALUE2,
 }
-impl HRPWM0RSR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            HRPWM0RSR::VALUE1 => false,
-            HRPWM0RSR::VALUE2 => true,
+impl From<HRPWM0RS_A> for bool {
+    #[inline(always)]
+    fn from(variant: HRPWM0RS_A) -> Self {
+        match variant {
+            HRPWM0RS_A::VALUE1 => false,
+            HRPWM0RS_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> HRPWM0RSR {
-        match value {
-            false => HRPWM0RSR::VALUE1,
-            true => HRPWM0RSR::VALUE2,
+}
+#[doc = "Reader of field `HRPWM0RS`"]
+pub type HRPWM0RS_R = crate::R<bool, HRPWM0RS_A>;
+impl HRPWM0RS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> HRPWM0RS_A {
+        match self.bits {
+            false => HRPWM0RS_A::VALUE1,
+            true => HRPWM0RS_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == HRPWM0RSR::VALUE1
+        *self == HRPWM0RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == HRPWM0RSR::VALUE2
+        *self == HRPWM0RS_A::VALUE2
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 0 - VADC Reset Status"]
-    #[inline]
-    pub fn vadcrs(&self) -> VADCRSR {
-        VADCRSR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn vadcrs(&self) -> VADCRS_R {
+        VADCRS_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 2 - CCU40 Reset Status"]
-    #[inline]
-    pub fn ccu40rs(&self) -> CCU40RSR {
-        CCU40RSR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ccu40rs(&self) -> CCU40RS_R {
+        CCU40RS_R::new(((self.bits >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 3 - CCU41 Reset Status"]
-    #[inline]
-    pub fn ccu41rs(&self) -> CCU41RSR {
-        CCU41RSR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ccu41rs(&self) -> CCU41RS_R {
+        CCU41RS_R::new(((self.bits >> 3) & 0x01) != 0)
     }
     #[doc = "Bit 7 - CCU80 Reset Status"]
-    #[inline]
-    pub fn ccu80rs(&self) -> CCU80RSR {
-        CCU80RSR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ccu80rs(&self) -> CCU80RS_R {
+        CCU80RS_R::new(((self.bits >> 7) & 0x01) != 0)
     }
     #[doc = "Bit 9 - POSIF0 Reset Status"]
-    #[inline]
-    pub fn posif0rs(&self) -> POSIF0RSR {
-        POSIF0RSR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn posif0rs(&self) -> POSIF0RS_R {
+        POSIF0RS_R::new(((self.bits >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 11 - USIC0 Reset Status"]
-    #[inline]
-    pub fn usic0rs(&self) -> USIC0RSR {
-        USIC0RSR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn usic0rs(&self) -> USIC0RS_R {
+        USIC0RS_R::new(((self.bits >> 11) & 0x01) != 0)
     }
     #[doc = "Bit 16 - ERU1 Reset Status"]
-    #[inline]
-    pub fn eru1rs(&self) -> ERU1RSR {
-        ERU1RSR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn eru1rs(&self) -> ERU1RS_R {
+        ERU1RS_R::new(((self.bits >> 16) & 0x01) != 0)
     }
     #[doc = "Bit 23 - HRPWM0 Reset Status"]
-    #[inline]
-    pub fn hrpwm0rs(&self) -> HRPWM0RSR {
-        HRPWM0RSR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 23;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn hrpwm0rs(&self) -> HRPWM0RS_R {
+        HRPWM0RS_R::new(((self.bits >> 23) & 0x01) != 0)
     }
 }

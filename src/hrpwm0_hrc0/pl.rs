@@ -1,300 +1,192 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::PL {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register PL"]
+pub type R = crate::R<u32, super::PL>;
+#[doc = "Writer for register PL"]
+pub type W = crate::W<u32, super::PL>;
+#[doc = "Register PL `reset()`'s with value 0"]
+impl crate::ResetValue for super::PL {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Possible values of the field `PSL0`"]
+#[doc = "HRPWMx.OUTy0 passive level\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PSL0R {
-    #[doc = "HRPWMx.OUTy0 output passive level is set to LOW"]
+pub enum PSL0_A {
+    #[doc = "0: HRPWMx.OUTy0 output passive level is set to LOW"]
     VALUE1,
-    #[doc = "HRPWMx.OUTy0 output passive level is set to HIGH"]
+    #[doc = "1: HRPWMx.OUTy0 output passive level is set to HIGH"]
     VALUE2,
 }
-impl PSL0R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PSL0R::VALUE1 => false,
-            PSL0R::VALUE2 => true,
+impl From<PSL0_A> for bool {
+    #[inline(always)]
+    fn from(variant: PSL0_A) -> Self {
+        match variant {
+            PSL0_A::VALUE1 => false,
+            PSL0_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PSL0R {
-        match value {
-            false => PSL0R::VALUE1,
-            true => PSL0R::VALUE2,
+}
+#[doc = "Reader of field `PSL0`"]
+pub type PSL0_R = crate::R<bool, PSL0_A>;
+impl PSL0_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PSL0_A {
+        match self.bits {
+            false => PSL0_A::VALUE1,
+            true => PSL0_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PSL0R::VALUE1
+        *self == PSL0_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PSL0R::VALUE2
+        *self == PSL0_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `PSL1`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PSL1R {
-    #[doc = "HRPWMx.OUTy1 output passive level is set to LOW"]
-    VALUE1,
-    #[doc = "HRPWMx.OUTy1 output passive level is set to HIGH"]
-    VALUE2,
-}
-impl PSL1R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PSL1R::VALUE1 => false,
-            PSL1R::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PSL1R {
-        match value {
-            false => PSL1R::VALUE1,
-            true => PSL1R::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PSL1R::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PSL1R::VALUE2
-    }
-}
-#[doc = "Values that can be written to the field `PSL0`"]
-pub enum PSL0W {
-    #[doc = "HRPWMx.OUTy0 output passive level is set to LOW"]
-    VALUE1,
-    #[doc = "HRPWMx.OUTy0 output passive level is set to HIGH"]
-    VALUE2,
-}
-impl PSL0W {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PSL0W::VALUE1 => false,
-            PSL0W::VALUE2 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PSL0W<'a> {
+#[doc = "Write proxy for field `PSL0`"]
+pub struct PSL0_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PSL0W<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PSL0W) -> &'a mut W {
+impl<'a> PSL0_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PSL0_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "HRPWMx.OUTy0 output passive level is set to LOW"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PSL0W::VALUE1)
+        self.variant(PSL0_A::VALUE1)
     }
     #[doc = "HRPWMx.OUTy0 output passive level is set to HIGH"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PSL0W::VALUE2)
+        self.variant(PSL0_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PSL1`"]
-pub enum PSL1W {
-    #[doc = "HRPWMx.OUTy1 output passive level is set to LOW"]
+#[doc = "HRPWMx.OUTy1 passive level\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PSL1_A {
+    #[doc = "0: HRPWMx.OUTy1 output passive level is set to LOW"]
     VALUE1,
-    #[doc = "HRPWMx.OUTy1 output passive level is set to HIGH"]
+    #[doc = "1: HRPWMx.OUTy1 output passive level is set to HIGH"]
     VALUE2,
 }
-impl PSL1W {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PSL1W::VALUE1 => false,
-            PSL1W::VALUE2 => true,
+impl From<PSL1_A> for bool {
+    #[inline(always)]
+    fn from(variant: PSL1_A) -> Self {
+        match variant {
+            PSL1_A::VALUE1 => false,
+            PSL1_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PSL1W<'a> {
+#[doc = "Reader of field `PSL1`"]
+pub type PSL1_R = crate::R<bool, PSL1_A>;
+impl PSL1_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PSL1_A {
+        match self.bits {
+            false => PSL1_A::VALUE1,
+            true => PSL1_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PSL1_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PSL1_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `PSL1`"]
+pub struct PSL1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PSL1W<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PSL1W) -> &'a mut W {
+impl<'a> PSL1_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PSL1_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "HRPWMx.OUTy1 output passive level is set to LOW"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PSL1W::VALUE1)
+        self.variant(PSL1_A::VALUE1)
     }
     #[doc = "HRPWMx.OUTy1 output passive level is set to HIGH"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PSL1W::VALUE2)
+        self.variant(PSL1_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 0 - HRPWMx.OUTy0 passive level"]
-    #[inline]
-    pub fn psl0(&self) -> PSL0R {
-        PSL0R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn psl0(&self) -> PSL0_R {
+        PSL0_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - HRPWMx.OUTy1 passive level"]
-    #[inline]
-    pub fn psl1(&self) -> PSL1R {
-        PSL1R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn psl1(&self) -> PSL1_R {
+        PSL1_R::new(((self.bits >> 1) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 0 - HRPWMx.OUTy0 passive level"]
-    #[inline]
-    pub fn psl0(&mut self) -> _PSL0W {
-        _PSL0W { w: self }
+    #[inline(always)]
+    pub fn psl0(&mut self) -> PSL0_W {
+        PSL0_W { w: self }
     }
     #[doc = "Bit 1 - HRPWMx.OUTy1 passive level"]
-    #[inline]
-    pub fn psl1(&mut self) -> _PSL1W {
-        _PSL1W { w: self }
+    #[inline(always)]
+    pub fn psl1(&mut self) -> PSL1_W {
+        PSL1_W { w: self }
     }
 }

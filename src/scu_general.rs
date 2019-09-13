@@ -1,4 +1,4 @@
-#[doc = r" Register block"]
+#[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - SCU Module ID Register"]
@@ -7,23 +7,23 @@ pub struct RegisterBlock {
     pub idchip: IDCHIP,
     #[doc = "0x08 - Manufactory ID Register"]
     pub idmanuf: IDMANUF,
-    _reserved0: [u8; 4usize],
+    _reserved3: [u8; 4usize],
     #[doc = "0x10 - Startup Configuration Register"]
     pub stcon: STCON,
-    _reserved1: [u8; 24usize],
+    _reserved4: [u8; 24usize],
     #[doc = "0x2c - General Purpose Register 0"]
     pub gpr0: GPR0,
     #[doc = "0x30 - General Purpose Register 1"]
     pub gpr1: GPR1,
-    _reserved2: [u8; 24usize],
+    _reserved6: [u8; 24usize],
     #[doc = "0x4c - CCU Control Register"]
     pub ccucon: CCUCON,
-    _reserved3: [u8; 60usize],
+    _reserved7: [u8; 60usize],
     #[doc = "0x8c - Die Temperature Sensor Control Register"]
     pub dtscon: DTSCON,
     #[doc = "0x90 - Die Temperature Sensor Status Register"]
     pub dtsstat: DTSSTAT,
-    _reserved4: [u8; 12usize],
+    _reserved9: [u8; 12usize],
     #[doc = "0xa0 - Out of Range Comparator Enable Register 0"]
     pub g0orcen: G0ORCEN,
     #[doc = "0xa4 - Out of Range Comparator Enable Register 1"]
@@ -32,7 +32,7 @@ pub struct RegisterBlock {
     pub dtemplim: DTEMPLIM,
     #[doc = "0xac - Die Temperature Sensor Alarm Register"]
     pub dtempalarm: DTEMPALARM,
-    _reserved5: [u8; 20usize],
+    _reserved13: [u8; 20usize],
     #[doc = "0xc4 - Mirror Write Status Register"]
     pub mirrsts: MIRRSTS,
     #[doc = "0xc8 - Retention Memory Access Control Register"]
@@ -44,111 +44,185 @@ pub struct RegisterBlock {
     #[doc = "0xd4 - Mirror All Request"]
     pub mirrallreq: MIRRALLREQ,
 }
-#[doc = "SCU Module ID Register"]
-pub struct ID {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "SCU Module ID Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [id](id) module"]
+pub type ID = crate::Reg<u32, _ID>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _ID;
+#[doc = "`read()` method returns [id::R](id::R) reader structure"]
+impl crate::Readable for ID {}
 #[doc = "SCU Module ID Register"]
 pub mod id;
-#[doc = "Chip ID Register"]
-pub struct IDCHIP {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Chip ID Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [idchip](idchip) module"]
+pub type IDCHIP = crate::Reg<u32, _IDCHIP>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _IDCHIP;
+#[doc = "`read()` method returns [idchip::R](idchip::R) reader structure"]
+impl crate::Readable for IDCHIP {}
 #[doc = "Chip ID Register"]
 pub mod idchip;
-#[doc = "Manufactory ID Register"]
-pub struct IDMANUF {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Manufactory ID Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [idmanuf](idmanuf) module"]
+pub type IDMANUF = crate::Reg<u32, _IDMANUF>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _IDMANUF;
+#[doc = "`read()` method returns [idmanuf::R](idmanuf::R) reader structure"]
+impl crate::Readable for IDMANUF {}
 #[doc = "Manufactory ID Register"]
 pub mod idmanuf;
-#[doc = "Startup Configuration Register"]
-pub struct STCON {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Startup Configuration Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [stcon](stcon) module"]
+pub type STCON = crate::Reg<u32, _STCON>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _STCON;
+#[doc = "`read()` method returns [stcon::R](stcon::R) reader structure"]
+impl crate::Readable for STCON {}
+#[doc = "`write(|w| ..)` method takes [stcon::W](stcon::W) writer structure"]
+impl crate::Writable for STCON {}
 #[doc = "Startup Configuration Register"]
 pub mod stcon;
-#[doc = "General Purpose Register 0"]
-pub struct GPR0 {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "General Purpose Register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [gpr0](gpr0) module"]
+pub type GPR0 = crate::Reg<u32, _GPR0>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _GPR0;
+#[doc = "`read()` method returns [gpr0::R](gpr0::R) reader structure"]
+impl crate::Readable for GPR0 {}
+#[doc = "`write(|w| ..)` method takes [gpr0::W](gpr0::W) writer structure"]
+impl crate::Writable for GPR0 {}
 #[doc = "General Purpose Register 0"]
 pub mod gpr0;
-#[doc = "General Purpose Register 1"]
-pub struct GPR1 {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "General Purpose Register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [gpr1](gpr1) module"]
+pub type GPR1 = crate::Reg<u32, _GPR1>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _GPR1;
+#[doc = "`read()` method returns [gpr1::R](gpr1::R) reader structure"]
+impl crate::Readable for GPR1 {}
+#[doc = "`write(|w| ..)` method takes [gpr1::W](gpr1::W) writer structure"]
+impl crate::Writable for GPR1 {}
 #[doc = "General Purpose Register 1"]
 pub mod gpr1;
-#[doc = "CCU Control Register"]
-pub struct CCUCON {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "CCU Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ccucon](ccucon) module"]
+pub type CCUCON = crate::Reg<u32, _CCUCON>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _CCUCON;
+#[doc = "`read()` method returns [ccucon::R](ccucon::R) reader structure"]
+impl crate::Readable for CCUCON {}
+#[doc = "`write(|w| ..)` method takes [ccucon::W](ccucon::W) writer structure"]
+impl crate::Writable for CCUCON {}
 #[doc = "CCU Control Register"]
 pub mod ccucon;
-#[doc = "Die Temperature Sensor Control Register"]
-pub struct DTSCON {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Die Temperature Sensor Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dtscon](dtscon) module"]
+pub type DTSCON = crate::Reg<u32, _DTSCON>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _DTSCON;
+#[doc = "`read()` method returns [dtscon::R](dtscon::R) reader structure"]
+impl crate::Readable for DTSCON {}
+#[doc = "`write(|w| ..)` method takes [dtscon::W](dtscon::W) writer structure"]
+impl crate::Writable for DTSCON {}
 #[doc = "Die Temperature Sensor Control Register"]
 pub mod dtscon;
-#[doc = "Die Temperature Sensor Status Register"]
-pub struct DTSSTAT {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Die Temperature Sensor Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dtsstat](dtsstat) module"]
+pub type DTSSTAT = crate::Reg<u32, _DTSSTAT>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _DTSSTAT;
+#[doc = "`read()` method returns [dtsstat::R](dtsstat::R) reader structure"]
+impl crate::Readable for DTSSTAT {}
 #[doc = "Die Temperature Sensor Status Register"]
 pub mod dtsstat;
-#[doc = "Out of Range Comparator Enable Register 0"]
-pub struct G0ORCEN {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Out of Range Comparator Enable Register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [g0orcen](g0orcen) module"]
+pub type G0ORCEN = crate::Reg<u32, _G0ORCEN>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _G0ORCEN;
+#[doc = "`read()` method returns [g0orcen::R](g0orcen::R) reader structure"]
+impl crate::Readable for G0ORCEN {}
+#[doc = "`write(|w| ..)` method takes [g0orcen::W](g0orcen::W) writer structure"]
+impl crate::Writable for G0ORCEN {}
 #[doc = "Out of Range Comparator Enable Register 0"]
 pub mod g0orcen;
-#[doc = "Out of Range Comparator Enable Register 1"]
-pub struct G1ORCEN {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Out of Range Comparator Enable Register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [g1orcen](g1orcen) module"]
+pub type G1ORCEN = crate::Reg<u32, _G1ORCEN>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _G1ORCEN;
+#[doc = "`read()` method returns [g1orcen::R](g1orcen::R) reader structure"]
+impl crate::Readable for G1ORCEN {}
+#[doc = "`write(|w| ..)` method takes [g1orcen::W](g1orcen::W) writer structure"]
+impl crate::Writable for G1ORCEN {}
 #[doc = "Out of Range Comparator Enable Register 1"]
 pub mod g1orcen;
-#[doc = "Die Temperature Sensor Limit Register"]
-pub struct DTEMPLIM {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Die Temperature Sensor Limit Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dtemplim](dtemplim) module"]
+pub type DTEMPLIM = crate::Reg<u32, _DTEMPLIM>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _DTEMPLIM;
+#[doc = "`read()` method returns [dtemplim::R](dtemplim::R) reader structure"]
+impl crate::Readable for DTEMPLIM {}
+#[doc = "`write(|w| ..)` method takes [dtemplim::W](dtemplim::W) writer structure"]
+impl crate::Writable for DTEMPLIM {}
 #[doc = "Die Temperature Sensor Limit Register"]
 pub mod dtemplim;
-#[doc = "Die Temperature Sensor Alarm Register"]
-pub struct DTEMPALARM {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Die Temperature Sensor Alarm Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dtempalarm](dtempalarm) module"]
+pub type DTEMPALARM = crate::Reg<u32, _DTEMPALARM>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _DTEMPALARM;
+#[doc = "`read()` method returns [dtempalarm::R](dtempalarm::R) reader structure"]
+impl crate::Readable for DTEMPALARM {}
 #[doc = "Die Temperature Sensor Alarm Register"]
 pub mod dtempalarm;
-#[doc = "Mirror Write Status Register"]
-pub struct MIRRSTS {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Mirror Write Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [mirrsts](mirrsts) module"]
+pub type MIRRSTS = crate::Reg<u32, _MIRRSTS>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _MIRRSTS;
+#[doc = "`read()` method returns [mirrsts::R](mirrsts::R) reader structure"]
+impl crate::Readable for MIRRSTS {}
 #[doc = "Mirror Write Status Register"]
 pub mod mirrsts;
-#[doc = "Retention Memory Access Control Register"]
-pub struct RMACR {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Retention Memory Access Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [rmacr](rmacr) module"]
+pub type RMACR = crate::Reg<u32, _RMACR>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _RMACR;
+#[doc = "`read()` method returns [rmacr::R](rmacr::R) reader structure"]
+impl crate::Readable for RMACR {}
+#[doc = "`write(|w| ..)` method takes [rmacr::W](rmacr::W) writer structure"]
+impl crate::Writable for RMACR {}
 #[doc = "Retention Memory Access Control Register"]
 pub mod rmacr;
-#[doc = "Retention Memory Access Data Register"]
-pub struct RMDATA {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Retention Memory Access Data Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [rmdata](rmdata) module"]
+pub type RMDATA = crate::Reg<u32, _RMDATA>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _RMDATA;
+#[doc = "`read()` method returns [rmdata::R](rmdata::R) reader structure"]
+impl crate::Readable for RMDATA {}
+#[doc = "`write(|w| ..)` method takes [rmdata::W](rmdata::W) writer structure"]
+impl crate::Writable for RMDATA {}
 #[doc = "Retention Memory Access Data Register"]
 pub mod rmdata;
-#[doc = "Mirror All Status"]
-pub struct MIRRALLSTAT {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Mirror All Status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [mirrallstat](mirrallstat) module"]
+pub type MIRRALLSTAT = crate::Reg<u32, _MIRRALLSTAT>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _MIRRALLSTAT;
+#[doc = "`read()` method returns [mirrallstat::R](mirrallstat::R) reader structure"]
+impl crate::Readable for MIRRALLSTAT {}
 #[doc = "Mirror All Status"]
 pub mod mirrallstat;
-#[doc = "Mirror All Request"]
-pub struct MIRRALLREQ {
-    register: ::vcell::VolatileCell<u32>,
-}
+#[doc = "Mirror All Request\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [mirrallreq](mirrallreq) module"]
+pub type MIRRALLREQ = crate::Reg<u32, _MIRRALLREQ>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _MIRRALLREQ;
+#[doc = "`write(|w| ..)` method takes [mirrallreq::W](mirrallreq::W) writer structure"]
+impl crate::Writable for MIRRALLREQ {}
 #[doc = "Mirror All Request"]
 pub mod mirrallreq;

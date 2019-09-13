@@ -1,354 +1,268 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-impl super::CSGTRSG {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-}
-#[doc = "Possible values of the field `D0STE`"]
+#[doc = "Reader of register CSGTRSG"]
+pub type R = crate::R<u32, super::CSGTRSG>;
+#[doc = "DAC0 shadow transfer enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum D0STER {
-    #[doc = "Shadow transfer has been performed."]
+pub enum D0STE_A {
+    #[doc = "0: Shadow transfer has been performed."]
     VALUE1,
-    #[doc = "Shadow transfer has been requested but is still pending completion."]
+    #[doc = "1: Shadow transfer has been requested but is still pending completion."]
     VALUE2,
 }
-impl D0STER {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            D0STER::VALUE1 => false,
-            D0STER::VALUE2 => true,
+impl From<D0STE_A> for bool {
+    #[inline(always)]
+    fn from(variant: D0STE_A) -> Self {
+        match variant {
+            D0STE_A::VALUE1 => false,
+            D0STE_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> D0STER {
-        match value {
-            false => D0STER::VALUE1,
-            true => D0STER::VALUE2,
+}
+#[doc = "Reader of field `D0STE`"]
+pub type D0STE_R = crate::R<bool, D0STE_A>;
+impl D0STE_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> D0STE_A {
+        match self.bits {
+            false => D0STE_A::VALUE1,
+            true => D0STE_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == D0STER::VALUE1
+        *self == D0STE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == D0STER::VALUE2
+        *self == D0STE_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `SW0ST`"]
+#[doc = "CMP0 inverting input connection status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SW0STR {
-    #[doc = "Inverting input connected to HRPWMx.C0I\\[A\\]"]
+pub enum SW0ST_A {
+    #[doc = "0: Inverting input connected to HRPWMx.C0I\\[A\\]"]
     VALUE1,
-    #[doc = "Inverting input connected to HRPWMx.C0I\\[B\\]"]
+    #[doc = "1: Inverting input connected to HRPWMx.C0I\\[B\\]"]
     VALUE2,
 }
-impl SW0STR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            SW0STR::VALUE1 => false,
-            SW0STR::VALUE2 => true,
+impl From<SW0ST_A> for bool {
+    #[inline(always)]
+    fn from(variant: SW0ST_A) -> Self {
+        match variant {
+            SW0ST_A::VALUE1 => false,
+            SW0ST_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> SW0STR {
-        match value {
-            false => SW0STR::VALUE1,
-            true => SW0STR::VALUE2,
+}
+#[doc = "Reader of field `SW0ST`"]
+pub type SW0ST_R = crate::R<bool, SW0ST_A>;
+impl SW0ST_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SW0ST_A {
+        match self.bits {
+            false => SW0ST_A::VALUE1,
+            true => SW0ST_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SW0STR::VALUE1
+        *self == SW0ST_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SW0STR::VALUE2
+        *self == SW0ST_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `D1STE`"]
+#[doc = "DAC1 shadow transfer enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum D1STER {
-    #[doc = "Shadow transfer has been performed."]
+pub enum D1STE_A {
+    #[doc = "0: Shadow transfer has been performed."]
     VALUE1,
-    #[doc = "Shadow transfer has been requested but is still pending completion."]
+    #[doc = "1: Shadow transfer has been requested but is still pending completion."]
     VALUE2,
 }
-impl D1STER {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            D1STER::VALUE1 => false,
-            D1STER::VALUE2 => true,
+impl From<D1STE_A> for bool {
+    #[inline(always)]
+    fn from(variant: D1STE_A) -> Self {
+        match variant {
+            D1STE_A::VALUE1 => false,
+            D1STE_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> D1STER {
-        match value {
-            false => D1STER::VALUE1,
-            true => D1STER::VALUE2,
+}
+#[doc = "Reader of field `D1STE`"]
+pub type D1STE_R = crate::R<bool, D1STE_A>;
+impl D1STE_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> D1STE_A {
+        match self.bits {
+            false => D1STE_A::VALUE1,
+            true => D1STE_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == D1STER::VALUE1
+        *self == D1STE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == D1STER::VALUE2
+        *self == D1STE_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `SW1ST`"]
+#[doc = "CMP1 inverting input connection status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SW1STR {
-    #[doc = "Inverting input connected to HRPWMx.C1I\\[A\\]"]
+pub enum SW1ST_A {
+    #[doc = "0: Inverting input connected to HRPWMx.C1I\\[A\\]"]
     VALUE1,
-    #[doc = "Inverting input connected to HRPWMx.C1I\\[B\\]"]
+    #[doc = "1: Inverting input connected to HRPWMx.C1I\\[B\\]"]
     VALUE2,
 }
-impl SW1STR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            SW1STR::VALUE1 => false,
-            SW1STR::VALUE2 => true,
+impl From<SW1ST_A> for bool {
+    #[inline(always)]
+    fn from(variant: SW1ST_A) -> Self {
+        match variant {
+            SW1ST_A::VALUE1 => false,
+            SW1ST_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> SW1STR {
-        match value {
-            false => SW1STR::VALUE1,
-            true => SW1STR::VALUE2,
+}
+#[doc = "Reader of field `SW1ST`"]
+pub type SW1ST_R = crate::R<bool, SW1ST_A>;
+impl SW1ST_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SW1ST_A {
+        match self.bits {
+            false => SW1ST_A::VALUE1,
+            true => SW1ST_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SW1STR::VALUE1
+        *self == SW1ST_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SW1STR::VALUE2
+        *self == SW1ST_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `D2STE`"]
+#[doc = "DAC2 shadow transfer enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum D2STER {
-    #[doc = "Shadow transfer has been performed."]
+pub enum D2STE_A {
+    #[doc = "0: Shadow transfer has been performed."]
     VALUE1,
-    #[doc = "Shadow transfer has been requested but is still pending completion."]
+    #[doc = "1: Shadow transfer has been requested but is still pending completion."]
     VALUE2,
 }
-impl D2STER {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            D2STER::VALUE1 => false,
-            D2STER::VALUE2 => true,
+impl From<D2STE_A> for bool {
+    #[inline(always)]
+    fn from(variant: D2STE_A) -> Self {
+        match variant {
+            D2STE_A::VALUE1 => false,
+            D2STE_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> D2STER {
-        match value {
-            false => D2STER::VALUE1,
-            true => D2STER::VALUE2,
+}
+#[doc = "Reader of field `D2STE`"]
+pub type D2STE_R = crate::R<bool, D2STE_A>;
+impl D2STE_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> D2STE_A {
+        match self.bits {
+            false => D2STE_A::VALUE1,
+            true => D2STE_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == D2STER::VALUE1
+        *self == D2STE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == D2STER::VALUE2
+        *self == D2STE_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `SW2ST`"]
+#[doc = "CMP2 inverting input connection status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SW2STR {
-    #[doc = "Inverting input connected to HRPWMx.C2I\\[A\\]"]
+pub enum SW2ST_A {
+    #[doc = "0: Inverting input connected to HRPWMx.C2I\\[A\\]"]
     VALUE1,
-    #[doc = "Inverting input connected to HRPWMx.C2I\\[B\\]"]
+    #[doc = "1: Inverting input connected to HRPWMx.C2I\\[B\\]"]
     VALUE2,
 }
-impl SW2STR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            SW2STR::VALUE1 => false,
-            SW2STR::VALUE2 => true,
+impl From<SW2ST_A> for bool {
+    #[inline(always)]
+    fn from(variant: SW2ST_A) -> Self {
+        match variant {
+            SW2ST_A::VALUE1 => false,
+            SW2ST_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> SW2STR {
-        match value {
-            false => SW2STR::VALUE1,
-            true => SW2STR::VALUE2,
+}
+#[doc = "Reader of field `SW2ST`"]
+pub type SW2ST_R = crate::R<bool, SW2ST_A>;
+impl SW2ST_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SW2ST_A {
+        match self.bits {
+            false => SW2ST_A::VALUE1,
+            true => SW2ST_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SW2STR::VALUE1
+        *self == SW2ST_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SW2STR::VALUE2
+        *self == SW2ST_A::VALUE2
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 0 - DAC0 shadow transfer enable"]
-    #[inline]
-    pub fn d0ste(&self) -> D0STER {
-        D0STER::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn d0ste(&self) -> D0STE_R {
+        D0STE_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - CMP0 inverting input connection status"]
-    #[inline]
-    pub fn sw0st(&self) -> SW0STR {
-        SW0STR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn sw0st(&self) -> SW0ST_R {
+        SW0ST_R::new(((self.bits >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 4 - DAC1 shadow transfer enable"]
-    #[inline]
-    pub fn d1ste(&self) -> D1STER {
-        D1STER::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn d1ste(&self) -> D1STE_R {
+        D1STE_R::new(((self.bits >> 4) & 0x01) != 0)
     }
     #[doc = "Bit 5 - CMP1 inverting input connection status"]
-    #[inline]
-    pub fn sw1st(&self) -> SW1STR {
-        SW1STR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn sw1st(&self) -> SW1ST_R {
+        SW1ST_R::new(((self.bits >> 5) & 0x01) != 0)
     }
     #[doc = "Bit 8 - DAC2 shadow transfer enable"]
-    #[inline]
-    pub fn d2ste(&self) -> D2STER {
-        D2STER::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn d2ste(&self) -> D2STE_R {
+        D2STE_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 9 - CMP2 inverting input connection status"]
-    #[inline]
-    pub fn sw2st(&self) -> SW2STR {
-        SW2STR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn sw2st(&self) -> SW2ST_R {
+        SW2ST_R::new(((self.bits >> 9) & 0x01) != 0)
     }
 }

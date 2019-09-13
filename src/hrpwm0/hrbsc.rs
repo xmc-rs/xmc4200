@@ -1,258 +1,156 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::HRBSC {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register HRBSC"]
+pub type R = crate::R<u32, super::HRBSC>;
+#[doc = "Writer for register HRBSC"]
+pub type W = crate::W<u32, super::HRBSC>;
+#[doc = "Register HRBSC `reset()`'s with value 0"]
+impl crate::ResetValue for super::HRBSC {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Possible values of the field `SUSCFG`"]
+#[doc = "Suspend configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SUSCFGR {
-    #[doc = "Suspend is ignored."]
+pub enum SUSCFG_A {
+    #[doc = "0: Suspend is ignored."]
     VALUE1,
-    #[doc = "CSGy and HRCy units are halted."]
+    #[doc = "1: CSGy and HRCy units are halted."]
     VALUE2,
-    #[doc = "Comparator outputs, HRPWMx.CyO are clamped to passive level and the CSGy units are halted. High resolution channel outputs, HRPWMx.HROUTy0 and HRPWMx.HROUTy1, are clamped to passive state and the HRCy units are halted."]
+    #[doc = "2: Comparator outputs, HRPWMx.CyO are clamped to passive level and the CSGy units are halted. High resolution channel outputs, HRPWMx.HROUTy0 and HRPWMx.HROUTy1, are clamped to passive state and the HRCy units are halted."]
     VALUE3,
-    #[doc = "CSGy units are halted. High resolution channel outputs, HRPWMx.HROUTy0 and HRPWMx.HROUTy1, are clamped to passive state and the HRCy units are halted."]
+    #[doc = "3: CSGy units are halted. High resolution channel outputs, HRPWMx.HROUTy0 and HRPWMx.HROUTy1, are clamped to passive state and the HRCy units are halted."]
     VALUE4,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
 }
-impl SUSCFGR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            SUSCFGR::VALUE1 => 0,
-            SUSCFGR::VALUE2 => 1,
-            SUSCFGR::VALUE3 => 2,
-            SUSCFGR::VALUE4 => 3,
-            SUSCFGR::_Reserved(bits) => bits,
+impl From<SUSCFG_A> for u8 {
+    #[inline(always)]
+    fn from(variant: SUSCFG_A) -> Self {
+        match variant {
+            SUSCFG_A::VALUE1 => 0,
+            SUSCFG_A::VALUE2 => 1,
+            SUSCFG_A::VALUE3 => 2,
+            SUSCFG_A::VALUE4 => 3,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> SUSCFGR {
-        match value {
-            0 => SUSCFGR::VALUE1,
-            1 => SUSCFGR::VALUE2,
-            2 => SUSCFGR::VALUE3,
-            3 => SUSCFGR::VALUE4,
-            i => SUSCFGR::_Reserved(i),
+}
+#[doc = "Reader of field `SUSCFG`"]
+pub type SUSCFG_R = crate::R<u8, SUSCFG_A>;
+impl SUSCFG_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, SUSCFG_A> {
+        use crate::Variant::*;
+        match self.bits {
+            0 => Val(SUSCFG_A::VALUE1),
+            1 => Val(SUSCFG_A::VALUE2),
+            2 => Val(SUSCFG_A::VALUE3),
+            3 => Val(SUSCFG_A::VALUE4),
+            i => Res(i),
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SUSCFGR::VALUE1
+        *self == SUSCFG_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SUSCFGR::VALUE2
+        *self == SUSCFG_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SUSCFGR::VALUE3
+        *self == SUSCFG_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == SUSCFGR::VALUE4
+        *self == SUSCFG_A::VALUE4
     }
 }
-#[doc = r" Value of the field"]
-pub struct HRBER {
-    bits: bool,
-}
-impl HRBER {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = "Values that can be written to the field `SUSCFG`"]
-pub enum SUSCFGW {
-    #[doc = "Suspend is ignored."]
-    VALUE1,
-    #[doc = "CSGy and HRCy units are halted."]
-    VALUE2,
-    #[doc = "Comparator outputs, HRPWMx.CyO are clamped to passive level and the CSGy units are halted. High resolution channel outputs, HRPWMx.HROUTy0 and HRPWMx.HROUTy1, are clamped to passive state and the HRCy units are halted."]
-    VALUE3,
-    #[doc = "CSGy units are halted. High resolution channel outputs, HRPWMx.HROUTy0 and HRPWMx.HROUTy1, are clamped to passive state and the HRCy units are halted."]
-    VALUE4,
-}
-impl SUSCFGW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            SUSCFGW::VALUE1 => 0,
-            SUSCFGW::VALUE2 => 1,
-            SUSCFGW::VALUE3 => 2,
-            SUSCFGW::VALUE4 => 3,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SUSCFGW<'a> {
+#[doc = "Write proxy for field `SUSCFG`"]
+pub struct SUSCFG_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SUSCFGW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: SUSCFGW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+impl<'a> SUSCFG_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: SUSCFG_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
     }
     #[doc = "Suspend is ignored."]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(SUSCFGW::VALUE1)
+        self.variant(SUSCFG_A::VALUE1)
     }
     #[doc = "CSGy and HRCy units are halted."]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(SUSCFGW::VALUE2)
+        self.variant(SUSCFG_A::VALUE2)
     }
     #[doc = "Comparator outputs, HRPWMx.CyO are clamped to passive level and the CSGy units are halted. High resolution channel outputs, HRPWMx.HROUTy0 and HRPWMx.HROUTy1, are clamped to passive state and the HRCy units are halted."]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(SUSCFGW::VALUE3)
+        self.variant(SUSCFG_A::VALUE3)
     }
     #[doc = "CSGy units are halted. High resolution channel outputs, HRPWMx.HROUTy0 and HRPWMx.HROUTy1, are clamped to passive state and the HRCy units are halted."]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(SUSCFGW::VALUE4)
+        self.variant(SUSCFG_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x07) | ((value as u32) & 0x07);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _HRBEW<'a> {
+#[doc = "Reader of field `HRBE`"]
+pub type HRBE_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `HRBE`"]
+pub struct HRBE_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _HRBEW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> HRBE_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:2 - Suspend configuration"]
-    #[inline]
-    pub fn suscfg(&self) -> SUSCFGR {
-        SUSCFGR::_from({
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn suscfg(&self) -> SUSCFG_R {
+        SUSCFG_R::new((self.bits & 0x07) as u8)
     }
     #[doc = "Bit 8 - HRPWM bias enable"]
-    #[inline]
-    pub fn hrbe(&self) -> HRBER {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        HRBER { bits }
+    #[inline(always)]
+    pub fn hrbe(&self) -> HRBE_R {
+        HRBE_R::new(((self.bits >> 8) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:2 - Suspend configuration"]
-    #[inline]
-    pub fn suscfg(&mut self) -> _SUSCFGW {
-        _SUSCFGW { w: self }
+    #[inline(always)]
+    pub fn suscfg(&mut self) -> SUSCFG_W {
+        SUSCFG_W { w: self }
     }
     #[doc = "Bit 8 - HRPWM bias enable"]
-    #[inline]
-    pub fn hrbe(&mut self) -> _HRBEW {
-        _HRBEW { w: self }
+    #[inline(always)]
+    pub fn hrbe(&mut self) -> HRBE_W {
+        HRBE_W { w: self }
     }
 }
