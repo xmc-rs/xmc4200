@@ -1,522 +1,400 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-impl super::CSGSTATG {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-}
-#[doc = "Possible values of the field `D0RB`"]
+#[doc = "Reader of register CSGSTATG"]
+pub type R = crate::R<u32, super::CSGSTATG>;
+#[doc = "DAC0 run bit status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum D0RBR {
-    #[doc = "DAC0 is not running (control logic is disabled)"]
+pub enum D0RB_A {
+    #[doc = "0: DAC0 is not running (control logic is disabled)"]
     VALUE1,
-    #[doc = "DAC0 is running"]
+    #[doc = "1: DAC0 is running"]
     VALUE2,
 }
-impl D0RBR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            D0RBR::VALUE1 => false,
-            D0RBR::VALUE2 => true,
+impl From<D0RB_A> for bool {
+    #[inline(always)]
+    fn from(variant: D0RB_A) -> Self {
+        match variant {
+            D0RB_A::VALUE1 => false,
+            D0RB_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> D0RBR {
-        match value {
-            false => D0RBR::VALUE1,
-            true => D0RBR::VALUE2,
+}
+#[doc = "Reader of field `D0RB`"]
+pub type D0RB_R = crate::R<bool, D0RB_A>;
+impl D0RB_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> D0RB_A {
+        match self.bits {
+            false => D0RB_A::VALUE1,
+            true => D0RB_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == D0RBR::VALUE1
+        *self == D0RB_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == D0RBR::VALUE2
+        *self == D0RB_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `C0RB`"]
+#[doc = "CMP0 run bit status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum C0RBR {
-    #[doc = "CMP0 functionality is disabled"]
+pub enum C0RB_A {
+    #[doc = "0: CMP0 functionality is disabled"]
     VALUE1,
-    #[doc = "CMP0 functionality is enabled"]
+    #[doc = "1: CMP0 functionality is enabled"]
     VALUE2,
 }
-impl C0RBR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            C0RBR::VALUE1 => false,
-            C0RBR::VALUE2 => true,
+impl From<C0RB_A> for bool {
+    #[inline(always)]
+    fn from(variant: C0RB_A) -> Self {
+        match variant {
+            C0RB_A::VALUE1 => false,
+            C0RB_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> C0RBR {
-        match value {
-            false => C0RBR::VALUE1,
-            true => C0RBR::VALUE2,
+}
+#[doc = "Reader of field `C0RB`"]
+pub type C0RB_R = crate::R<bool, C0RB_A>;
+impl C0RB_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C0RB_A {
+        match self.bits {
+            false => C0RB_A::VALUE1,
+            true => C0RB_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == C0RBR::VALUE1
+        *self == C0RB_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == C0RBR::VALUE2
+        *self == C0RB_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `PSLS0`"]
+#[doc = "CMP0 output passive status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PSLS0R {
-    #[doc = "CMP0 output is not clamped"]
+pub enum PSLS0_A {
+    #[doc = "0: CMP0 output is not clamped"]
     VALUE1,
-    #[doc = "CMP0 output is clamped"]
+    #[doc = "1: CMP0 output is clamped"]
     VALUE2,
 }
-impl PSLS0R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PSLS0R::VALUE1 => false,
-            PSLS0R::VALUE2 => true,
+impl From<PSLS0_A> for bool {
+    #[inline(always)]
+    fn from(variant: PSLS0_A) -> Self {
+        match variant {
+            PSLS0_A::VALUE1 => false,
+            PSLS0_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PSLS0R {
-        match value {
-            false => PSLS0R::VALUE1,
-            true => PSLS0R::VALUE2,
+}
+#[doc = "Reader of field `PSLS0`"]
+pub type PSLS0_R = crate::R<bool, PSLS0_A>;
+impl PSLS0_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PSLS0_A {
+        match self.bits {
+            false => PSLS0_A::VALUE1,
+            true => PSLS0_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PSLS0R::VALUE1
+        *self == PSLS0_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PSLS0R::VALUE2
+        *self == PSLS0_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `D1RB`"]
+#[doc = "DAC1 run bit status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum D1RBR {
-    #[doc = "DAC1 is not running (control logic is disabled)"]
+pub enum D1RB_A {
+    #[doc = "0: DAC1 is not running (control logic is disabled)"]
     VALUE1,
-    #[doc = "DAC1 is running"]
+    #[doc = "1: DAC1 is running"]
     VALUE2,
 }
-impl D1RBR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            D1RBR::VALUE1 => false,
-            D1RBR::VALUE2 => true,
+impl From<D1RB_A> for bool {
+    #[inline(always)]
+    fn from(variant: D1RB_A) -> Self {
+        match variant {
+            D1RB_A::VALUE1 => false,
+            D1RB_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> D1RBR {
-        match value {
-            false => D1RBR::VALUE1,
-            true => D1RBR::VALUE2,
+}
+#[doc = "Reader of field `D1RB`"]
+pub type D1RB_R = crate::R<bool, D1RB_A>;
+impl D1RB_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> D1RB_A {
+        match self.bits {
+            false => D1RB_A::VALUE1,
+            true => D1RB_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == D1RBR::VALUE1
+        *self == D1RB_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == D1RBR::VALUE2
+        *self == D1RB_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `C1RB`"]
+#[doc = "CMP1 run bit status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum C1RBR {
-    #[doc = "CMP1 functionality is disabled"]
+pub enum C1RB_A {
+    #[doc = "0: CMP1 functionality is disabled"]
     VALUE1,
-    #[doc = "CMP1 functionality is enabled"]
+    #[doc = "1: CMP1 functionality is enabled"]
     VALUE2,
 }
-impl C1RBR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            C1RBR::VALUE1 => false,
-            C1RBR::VALUE2 => true,
+impl From<C1RB_A> for bool {
+    #[inline(always)]
+    fn from(variant: C1RB_A) -> Self {
+        match variant {
+            C1RB_A::VALUE1 => false,
+            C1RB_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> C1RBR {
-        match value {
-            false => C1RBR::VALUE1,
-            true => C1RBR::VALUE2,
+}
+#[doc = "Reader of field `C1RB`"]
+pub type C1RB_R = crate::R<bool, C1RB_A>;
+impl C1RB_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C1RB_A {
+        match self.bits {
+            false => C1RB_A::VALUE1,
+            true => C1RB_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == C1RBR::VALUE1
+        *self == C1RB_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == C1RBR::VALUE2
+        *self == C1RB_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `PSLS1`"]
+#[doc = "CMP1 output passive status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PSLS1R {
-    #[doc = "CMP1 output is not clamped"]
+pub enum PSLS1_A {
+    #[doc = "0: CMP1 output is not clamped"]
     VALUE1,
-    #[doc = "CMP1 output is clamped"]
+    #[doc = "1: CMP1 output is clamped"]
     VALUE2,
 }
-impl PSLS1R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PSLS1R::VALUE1 => false,
-            PSLS1R::VALUE2 => true,
+impl From<PSLS1_A> for bool {
+    #[inline(always)]
+    fn from(variant: PSLS1_A) -> Self {
+        match variant {
+            PSLS1_A::VALUE1 => false,
+            PSLS1_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PSLS1R {
-        match value {
-            false => PSLS1R::VALUE1,
-            true => PSLS1R::VALUE2,
+}
+#[doc = "Reader of field `PSLS1`"]
+pub type PSLS1_R = crate::R<bool, PSLS1_A>;
+impl PSLS1_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PSLS1_A {
+        match self.bits {
+            false => PSLS1_A::VALUE1,
+            true => PSLS1_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PSLS1R::VALUE1
+        *self == PSLS1_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PSLS1R::VALUE2
+        *self == PSLS1_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `D2RB`"]
+#[doc = "DAC2 run bit status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum D2RBR {
-    #[doc = "DAC2 is not running (control logic is disabled)"]
+pub enum D2RB_A {
+    #[doc = "0: DAC2 is not running (control logic is disabled)"]
     VALUE1,
-    #[doc = "DAC1 is running"]
+    #[doc = "1: DAC1 is running"]
     VALUE2,
 }
-impl D2RBR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            D2RBR::VALUE1 => false,
-            D2RBR::VALUE2 => true,
+impl From<D2RB_A> for bool {
+    #[inline(always)]
+    fn from(variant: D2RB_A) -> Self {
+        match variant {
+            D2RB_A::VALUE1 => false,
+            D2RB_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> D2RBR {
-        match value {
-            false => D2RBR::VALUE1,
-            true => D2RBR::VALUE2,
+}
+#[doc = "Reader of field `D2RB`"]
+pub type D2RB_R = crate::R<bool, D2RB_A>;
+impl D2RB_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> D2RB_A {
+        match self.bits {
+            false => D2RB_A::VALUE1,
+            true => D2RB_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == D2RBR::VALUE1
+        *self == D2RB_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == D2RBR::VALUE2
+        *self == D2RB_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `C2RB`"]
+#[doc = "CMP2 run bit status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum C2RBR {
-    #[doc = "CMP2 functionality is disabled"]
+pub enum C2RB_A {
+    #[doc = "0: CMP2 functionality is disabled"]
     VALUE1,
-    #[doc = "CMP2 functionality is enabled"]
+    #[doc = "1: CMP2 functionality is enabled"]
     VALUE2,
 }
-impl C2RBR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            C2RBR::VALUE1 => false,
-            C2RBR::VALUE2 => true,
+impl From<C2RB_A> for bool {
+    #[inline(always)]
+    fn from(variant: C2RB_A) -> Self {
+        match variant {
+            C2RB_A::VALUE1 => false,
+            C2RB_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> C2RBR {
-        match value {
-            false => C2RBR::VALUE1,
-            true => C2RBR::VALUE2,
+}
+#[doc = "Reader of field `C2RB`"]
+pub type C2RB_R = crate::R<bool, C2RB_A>;
+impl C2RB_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C2RB_A {
+        match self.bits {
+            false => C2RB_A::VALUE1,
+            true => C2RB_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == C2RBR::VALUE1
+        *self == C2RB_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == C2RBR::VALUE2
+        *self == C2RB_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `PSLS2`"]
+#[doc = "CMP2 output passive status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PSLS2R {
-    #[doc = "CMP2 output is not clamped"]
+pub enum PSLS2_A {
+    #[doc = "0: CMP2 output is not clamped"]
     VALUE1,
-    #[doc = "CMP2 output is clamped"]
+    #[doc = "1: CMP2 output is clamped"]
     VALUE2,
 }
-impl PSLS2R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PSLS2R::VALUE1 => false,
-            PSLS2R::VALUE2 => true,
+impl From<PSLS2_A> for bool {
+    #[inline(always)]
+    fn from(variant: PSLS2_A) -> Self {
+        match variant {
+            PSLS2_A::VALUE1 => false,
+            PSLS2_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PSLS2R {
-        match value {
-            false => PSLS2R::VALUE1,
-            true => PSLS2R::VALUE2,
+}
+#[doc = "Reader of field `PSLS2`"]
+pub type PSLS2_R = crate::R<bool, PSLS2_A>;
+impl PSLS2_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PSLS2_A {
+        match self.bits {
+            false => PSLS2_A::VALUE1,
+            true => PSLS2_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PSLS2R::VALUE1
+        *self == PSLS2_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PSLS2R::VALUE2
+        *self == PSLS2_A::VALUE2
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 0 - DAC0 run bit status"]
-    #[inline]
-    pub fn d0rb(&self) -> D0RBR {
-        D0RBR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn d0rb(&self) -> D0RB_R {
+        D0RB_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - CMP0 run bit status"]
-    #[inline]
-    pub fn c0rb(&self) -> C0RBR {
-        C0RBR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn c0rb(&self) -> C0RB_R {
+        C0RB_R::new(((self.bits >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 2 - CMP0 output passive status"]
-    #[inline]
-    pub fn psls0(&self) -> PSLS0R {
-        PSLS0R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn psls0(&self) -> PSLS0_R {
+        PSLS0_R::new(((self.bits >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 4 - DAC1 run bit status"]
-    #[inline]
-    pub fn d1rb(&self) -> D1RBR {
-        D1RBR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn d1rb(&self) -> D1RB_R {
+        D1RB_R::new(((self.bits >> 4) & 0x01) != 0)
     }
     #[doc = "Bit 5 - CMP1 run bit status"]
-    #[inline]
-    pub fn c1rb(&self) -> C1RBR {
-        C1RBR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn c1rb(&self) -> C1RB_R {
+        C1RB_R::new(((self.bits >> 5) & 0x01) != 0)
     }
     #[doc = "Bit 6 - CMP1 output passive status"]
-    #[inline]
-    pub fn psls1(&self) -> PSLS1R {
-        PSLS1R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn psls1(&self) -> PSLS1_R {
+        PSLS1_R::new(((self.bits >> 6) & 0x01) != 0)
     }
     #[doc = "Bit 8 - DAC2 run bit status"]
-    #[inline]
-    pub fn d2rb(&self) -> D2RBR {
-        D2RBR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn d2rb(&self) -> D2RB_R {
+        D2RB_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 9 - CMP2 run bit status"]
-    #[inline]
-    pub fn c2rb(&self) -> C2RBR {
-        C2RBR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn c2rb(&self) -> C2RB_R {
+        C2RB_R::new(((self.bits >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 10 - CMP2 output passive status"]
-    #[inline]
-    pub fn psls2(&self) -> PSLS2R {
-        PSLS2R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn psls2(&self) -> PSLS2_R {
+        PSLS2_R::new(((self.bits >> 10) & 0x01) != 0)
     }
 }

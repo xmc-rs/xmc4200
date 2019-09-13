@@ -1,218 +1,195 @@
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::CLKCLR {
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
+#[doc = "Writer for register CLKCLR"]
+pub type W = crate::W<u32, super::CLKCLR>;
+#[doc = "Register CLKCLR `reset()`'s with value 0"]
+impl crate::ResetValue for super::CLKCLR {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Values that can be written to the field `USBCDI`"]
-pub enum USBCDIW {
-    #[doc = "No effect"]
+#[doc = "USB Clock Disable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum USBCDI_AW {
+    #[doc = "0: No effect"]
     VALUE1,
-    #[doc = "Disable clock"]
+    #[doc = "1: Disable clock"]
     VALUE2,
 }
-impl USBCDIW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            USBCDIW::VALUE1 => false,
-            USBCDIW::VALUE2 => true,
+impl From<USBCDI_AW> for bool {
+    #[inline(always)]
+    fn from(variant: USBCDI_AW) -> Self {
+        match variant {
+            USBCDI_AW::VALUE1 => false,
+            USBCDI_AW::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _USBCDIW<'a> {
+#[doc = "Write proxy for field `USBCDI`"]
+pub struct USBCDI_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _USBCDIW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: USBCDIW) -> &'a mut W {
+impl<'a> USBCDI_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: USBCDI_AW) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "No effect"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(USBCDIW::VALUE1)
+        self.variant(USBCDI_AW::VALUE1)
     }
     #[doc = "Disable clock"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(USBCDIW::VALUE2)
+        self.variant(USBCDI_AW::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `CCUCDI`"]
-pub enum CCUCDIW {
-    #[doc = "No effect"]
+#[doc = "CCU Clock Disable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum CCUCDI_AW {
+    #[doc = "0: No effect"]
     VALUE1,
-    #[doc = "Disable clock"]
+    #[doc = "1: Disable clock"]
     VALUE2,
 }
-impl CCUCDIW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            CCUCDIW::VALUE1 => false,
-            CCUCDIW::VALUE2 => true,
+impl From<CCUCDI_AW> for bool {
+    #[inline(always)]
+    fn from(variant: CCUCDI_AW) -> Self {
+        match variant {
+            CCUCDI_AW::VALUE1 => false,
+            CCUCDI_AW::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _CCUCDIW<'a> {
+#[doc = "Write proxy for field `CCUCDI`"]
+pub struct CCUCDI_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CCUCDIW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: CCUCDIW) -> &'a mut W {
+impl<'a> CCUCDI_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: CCUCDI_AW) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "No effect"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(CCUCDIW::VALUE1)
+        self.variant(CCUCDI_AW::VALUE1)
     }
     #[doc = "Disable clock"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(CCUCDIW::VALUE2)
+        self.variant(CCUCDI_AW::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `WDTCDI`"]
-pub enum WDTCDIW {
-    #[doc = "No effect"]
+#[doc = "WDT Clock Disable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum WDTCDI_AW {
+    #[doc = "0: No effect"]
     VALUE1,
-    #[doc = "Disable clock"]
+    #[doc = "1: Disable clock"]
     VALUE2,
 }
-impl WDTCDIW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            WDTCDIW::VALUE1 => false,
-            WDTCDIW::VALUE2 => true,
+impl From<WDTCDI_AW> for bool {
+    #[inline(always)]
+    fn from(variant: WDTCDI_AW) -> Self {
+        match variant {
+            WDTCDI_AW::VALUE1 => false,
+            WDTCDI_AW::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _WDTCDIW<'a> {
+#[doc = "Write proxy for field `WDTCDI`"]
+pub struct WDTCDI_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _WDTCDIW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: WDTCDIW) -> &'a mut W {
+impl<'a> WDTCDI_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: WDTCDI_AW) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "No effect"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(WDTCDIW::VALUE1)
+        self.variant(WDTCDI_AW::VALUE1)
     }
     #[doc = "Disable clock"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(WDTCDIW::VALUE2)
+        self.variant(WDTCDI_AW::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
         self.w
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 0 - USB Clock Disable"]
-    #[inline]
-    pub fn usbcdi(&mut self) -> _USBCDIW {
-        _USBCDIW { w: self }
+    #[inline(always)]
+    pub fn usbcdi(&mut self) -> USBCDI_W {
+        USBCDI_W { w: self }
     }
     #[doc = "Bit 4 - CCU Clock Disable"]
-    #[inline]
-    pub fn ccucdi(&mut self) -> _CCUCDIW {
-        _CCUCDIW { w: self }
+    #[inline(always)]
+    pub fn ccucdi(&mut self) -> CCUCDI_W {
+        CCUCDI_W { w: self }
     }
     #[doc = "Bit 5 - WDT Clock Disable"]
-    #[inline]
-    pub fn wdtcdi(&mut self) -> _WDTCDIW {
-        _WDTCDIW { w: self }
+    #[inline(always)]
+    pub fn wdtcdi(&mut self) -> WDTCDI_W {
+        WDTCDI_W { w: self }
     }
 }

@@ -1,895 +1,632 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::PEEN {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register PEEN"]
+pub type R = crate::R<u32, super::PEEN>;
+#[doc = "Writer for register PEEN"]
+pub type W = crate::W<u32, super::PEEN>;
+#[doc = "Register PEEN `reset()`'s with value 0"]
+impl crate::ResetValue for super::PEEN {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Possible values of the field `PEENPS`"]
+#[doc = "Parity Error Enable for PSRAM\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PEENPSR {
-    #[doc = "Disabled"]
+pub enum PEENPS_A {
+    #[doc = "0: Disabled"]
     VALUE1,
-    #[doc = "Enabled"]
+    #[doc = "1: Enabled"]
     VALUE2,
 }
-impl PEENPSR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PEENPSR::VALUE1 => false,
-            PEENPSR::VALUE2 => true,
+impl From<PEENPS_A> for bool {
+    #[inline(always)]
+    fn from(variant: PEENPS_A) -> Self {
+        match variant {
+            PEENPS_A::VALUE1 => false,
+            PEENPS_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PEENPSR {
-        match value {
-            false => PEENPSR::VALUE1,
-            true => PEENPSR::VALUE2,
+}
+#[doc = "Reader of field `PEENPS`"]
+pub type PEENPS_R = crate::R<bool, PEENPS_A>;
+impl PEENPS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PEENPS_A {
+        match self.bits {
+            false => PEENPS_A::VALUE1,
+            true => PEENPS_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PEENPSR::VALUE1
+        *self == PEENPS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PEENPSR::VALUE2
+        *self == PEENPS_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `PEENDS1`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PEENDS1R {
-    #[doc = "Disabled"]
-    VALUE1,
-    #[doc = "Enabled"]
-    VALUE2,
-}
-impl PEENDS1R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PEENDS1R::VALUE1 => false,
-            PEENDS1R::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PEENDS1R {
-        match value {
-            false => PEENDS1R::VALUE1,
-            true => PEENDS1R::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PEENDS1R::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PEENDS1R::VALUE2
-    }
-}
-#[doc = "Possible values of the field `PEENU0`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PEENU0R {
-    #[doc = "Disabled"]
-    VALUE1,
-    #[doc = "Enabled"]
-    VALUE2,
-}
-impl PEENU0R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PEENU0R::VALUE1 => false,
-            PEENU0R::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PEENU0R {
-        match value {
-            false => PEENU0R::VALUE1,
-            true => PEENU0R::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PEENU0R::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PEENU0R::VALUE2
-    }
-}
-#[doc = "Possible values of the field `PEENU1`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PEENU1R {
-    #[doc = "Disabled"]
-    VALUE1,
-    #[doc = "Enabled"]
-    VALUE2,
-}
-impl PEENU1R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PEENU1R::VALUE1 => false,
-            PEENU1R::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PEENU1R {
-        match value {
-            false => PEENU1R::VALUE1,
-            true => PEENU1R::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PEENU1R::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PEENU1R::VALUE2
-    }
-}
-#[doc = "Possible values of the field `PEENMC`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PEENMCR {
-    #[doc = "Disabled"]
-    VALUE1,
-    #[doc = "Enabled"]
-    VALUE2,
-}
-impl PEENMCR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PEENMCR::VALUE1 => false,
-            PEENMCR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PEENMCR {
-        match value {
-            false => PEENMCR::VALUE1,
-            true => PEENMCR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PEENMCR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PEENMCR::VALUE2
-    }
-}
-#[doc = "Possible values of the field `PEENPPRF`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PEENPPRFR {
-    #[doc = "Disabled"]
-    VALUE1,
-    #[doc = "Enabled"]
-    VALUE2,
-}
-impl PEENPPRFR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PEENPPRFR::VALUE1 => false,
-            PEENPPRFR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PEENPPRFR {
-        match value {
-            false => PEENPPRFR::VALUE1,
-            true => PEENPPRFR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PEENPPRFR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PEENPPRFR::VALUE2
-    }
-}
-#[doc = "Possible values of the field `PEENUSB`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum PEENUSBR {
-    #[doc = "Disabled"]
-    VALUE1,
-    #[doc = "Enabled"]
-    VALUE2,
-}
-impl PEENUSBR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            PEENUSBR::VALUE1 => false,
-            PEENUSBR::VALUE2 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> PEENUSBR {
-        match value {
-            false => PEENUSBR::VALUE1,
-            true => PEENUSBR::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == PEENUSBR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == PEENUSBR::VALUE2
-    }
-}
-#[doc = "Values that can be written to the field `PEENPS`"]
-pub enum PEENPSW {
-    #[doc = "Disabled"]
-    VALUE1,
-    #[doc = "Enabled"]
-    VALUE2,
-}
-impl PEENPSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PEENPSW::VALUE1 => false,
-            PEENPSW::VALUE2 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PEENPSW<'a> {
+#[doc = "Write proxy for field `PEENPS`"]
+pub struct PEENPS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PEENPSW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PEENPSW) -> &'a mut W {
+impl<'a> PEENPS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PEENPS_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PEENPSW::VALUE1)
+        self.variant(PEENPS_A::VALUE1)
     }
     #[doc = "Enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PEENPSW::VALUE2)
+        self.variant(PEENPS_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PEENDS1`"]
-pub enum PEENDS1W {
-    #[doc = "Disabled"]
+#[doc = "Parity Error Enable for DSRAM1\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PEENDS1_A {
+    #[doc = "0: Disabled"]
     VALUE1,
-    #[doc = "Enabled"]
+    #[doc = "1: Enabled"]
     VALUE2,
 }
-impl PEENDS1W {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PEENDS1W::VALUE1 => false,
-            PEENDS1W::VALUE2 => true,
+impl From<PEENDS1_A> for bool {
+    #[inline(always)]
+    fn from(variant: PEENDS1_A) -> Self {
+        match variant {
+            PEENDS1_A::VALUE1 => false,
+            PEENDS1_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PEENDS1W<'a> {
+#[doc = "Reader of field `PEENDS1`"]
+pub type PEENDS1_R = crate::R<bool, PEENDS1_A>;
+impl PEENDS1_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PEENDS1_A {
+        match self.bits {
+            false => PEENDS1_A::VALUE1,
+            true => PEENDS1_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PEENDS1_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PEENDS1_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `PEENDS1`"]
+pub struct PEENDS1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PEENDS1W<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PEENDS1W) -> &'a mut W {
+impl<'a> PEENDS1_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PEENDS1_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PEENDS1W::VALUE1)
+        self.variant(PEENDS1_A::VALUE1)
     }
     #[doc = "Enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PEENDS1W::VALUE2)
+        self.variant(PEENDS1_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PEENU0`"]
-pub enum PEENU0W {
-    #[doc = "Disabled"]
+#[doc = "Parity Error Enable for USIC0 Memory\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PEENU0_A {
+    #[doc = "0: Disabled"]
     VALUE1,
-    #[doc = "Enabled"]
+    #[doc = "1: Enabled"]
     VALUE2,
 }
-impl PEENU0W {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PEENU0W::VALUE1 => false,
-            PEENU0W::VALUE2 => true,
+impl From<PEENU0_A> for bool {
+    #[inline(always)]
+    fn from(variant: PEENU0_A) -> Self {
+        match variant {
+            PEENU0_A::VALUE1 => false,
+            PEENU0_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PEENU0W<'a> {
+#[doc = "Reader of field `PEENU0`"]
+pub type PEENU0_R = crate::R<bool, PEENU0_A>;
+impl PEENU0_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PEENU0_A {
+        match self.bits {
+            false => PEENU0_A::VALUE1,
+            true => PEENU0_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PEENU0_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PEENU0_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `PEENU0`"]
+pub struct PEENU0_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PEENU0W<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PEENU0W) -> &'a mut W {
+impl<'a> PEENU0_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PEENU0_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PEENU0W::VALUE1)
+        self.variant(PEENU0_A::VALUE1)
     }
     #[doc = "Enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PEENU0W::VALUE2)
+        self.variant(PEENU0_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PEENU1`"]
-pub enum PEENU1W {
-    #[doc = "Disabled"]
+#[doc = "Parity Error Enable for USIC1 Memory\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PEENU1_A {
+    #[doc = "0: Disabled"]
     VALUE1,
-    #[doc = "Enabled"]
+    #[doc = "1: Enabled"]
     VALUE2,
 }
-impl PEENU1W {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PEENU1W::VALUE1 => false,
-            PEENU1W::VALUE2 => true,
+impl From<PEENU1_A> for bool {
+    #[inline(always)]
+    fn from(variant: PEENU1_A) -> Self {
+        match variant {
+            PEENU1_A::VALUE1 => false,
+            PEENU1_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PEENU1W<'a> {
+#[doc = "Reader of field `PEENU1`"]
+pub type PEENU1_R = crate::R<bool, PEENU1_A>;
+impl PEENU1_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PEENU1_A {
+        match self.bits {
+            false => PEENU1_A::VALUE1,
+            true => PEENU1_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PEENU1_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PEENU1_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `PEENU1`"]
+pub struct PEENU1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PEENU1W<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PEENU1W) -> &'a mut W {
+impl<'a> PEENU1_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PEENU1_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PEENU1W::VALUE1)
+        self.variant(PEENU1_A::VALUE1)
     }
     #[doc = "Enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PEENU1W::VALUE2)
+        self.variant(PEENU1_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PEENMC`"]
-pub enum PEENMCW {
-    #[doc = "Disabled"]
+#[doc = "Parity Error Enable for MultiCAN Memory\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PEENMC_A {
+    #[doc = "0: Disabled"]
     VALUE1,
-    #[doc = "Enabled"]
+    #[doc = "1: Enabled"]
     VALUE2,
 }
-impl PEENMCW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PEENMCW::VALUE1 => false,
-            PEENMCW::VALUE2 => true,
+impl From<PEENMC_A> for bool {
+    #[inline(always)]
+    fn from(variant: PEENMC_A) -> Self {
+        match variant {
+            PEENMC_A::VALUE1 => false,
+            PEENMC_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PEENMCW<'a> {
+#[doc = "Reader of field `PEENMC`"]
+pub type PEENMC_R = crate::R<bool, PEENMC_A>;
+impl PEENMC_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PEENMC_A {
+        match self.bits {
+            false => PEENMC_A::VALUE1,
+            true => PEENMC_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PEENMC_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PEENMC_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `PEENMC`"]
+pub struct PEENMC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PEENMCW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PEENMCW) -> &'a mut W {
+impl<'a> PEENMC_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PEENMC_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PEENMCW::VALUE1)
+        self.variant(PEENMC_A::VALUE1)
     }
     #[doc = "Enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PEENMCW::VALUE2)
+        self.variant(PEENMC_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PEENPPRF`"]
-pub enum PEENPPRFW {
-    #[doc = "Disabled"]
+#[doc = "Parity Error Enable for PMU Prefetch Memory\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PEENPPRF_A {
+    #[doc = "0: Disabled"]
     VALUE1,
-    #[doc = "Enabled"]
+    #[doc = "1: Enabled"]
     VALUE2,
 }
-impl PEENPPRFW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PEENPPRFW::VALUE1 => false,
-            PEENPPRFW::VALUE2 => true,
+impl From<PEENPPRF_A> for bool {
+    #[inline(always)]
+    fn from(variant: PEENPPRF_A) -> Self {
+        match variant {
+            PEENPPRF_A::VALUE1 => false,
+            PEENPPRF_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PEENPPRFW<'a> {
+#[doc = "Reader of field `PEENPPRF`"]
+pub type PEENPPRF_R = crate::R<bool, PEENPPRF_A>;
+impl PEENPPRF_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PEENPPRF_A {
+        match self.bits {
+            false => PEENPPRF_A::VALUE1,
+            true => PEENPPRF_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PEENPPRF_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PEENPPRF_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `PEENPPRF`"]
+pub struct PEENPPRF_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PEENPPRFW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PEENPPRFW) -> &'a mut W {
+impl<'a> PEENPPRF_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PEENPPRF_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PEENPPRFW::VALUE1)
+        self.variant(PEENPPRF_A::VALUE1)
     }
     #[doc = "Enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PEENPPRFW::VALUE2)
+        self.variant(PEENPPRF_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 13;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PEENUSB`"]
-pub enum PEENUSBW {
-    #[doc = "Disabled"]
+#[doc = "Parity Error Enable for USB Memory\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PEENUSB_A {
+    #[doc = "0: Disabled"]
     VALUE1,
-    #[doc = "Enabled"]
+    #[doc = "1: Enabled"]
     VALUE2,
 }
-impl PEENUSBW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PEENUSBW::VALUE1 => false,
-            PEENUSBW::VALUE2 => true,
+impl From<PEENUSB_A> for bool {
+    #[inline(always)]
+    fn from(variant: PEENUSB_A) -> Self {
+        match variant {
+            PEENUSB_A::VALUE1 => false,
+            PEENUSB_A::VALUE2 => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _PEENUSBW<'a> {
+#[doc = "Reader of field `PEENUSB`"]
+pub type PEENUSB_R = crate::R<bool, PEENUSB_A>;
+impl PEENUSB_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PEENUSB_A {
+        match self.bits {
+            false => PEENUSB_A::VALUE1,
+            true => PEENUSB_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == PEENUSB_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == PEENUSB_A::VALUE2
+    }
+}
+#[doc = "Write proxy for field `PEENUSB`"]
+pub struct PEENUSB_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PEENUSBW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PEENUSBW) -> &'a mut W {
+impl<'a> PEENUSB_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PEENUSB_A) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Disabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(PEENUSBW::VALUE1)
+        self.variant(PEENUSB_A::VALUE1)
     }
     #[doc = "Enabled"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(PEENUSBW::VALUE2)
+        self.variant(PEENUSB_A::VALUE2)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 0 - Parity Error Enable for PSRAM"]
-    #[inline]
-    pub fn peenps(&self) -> PEENPSR {
-        PEENPSR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn peenps(&self) -> PEENPS_R {
+        PEENPS_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - Parity Error Enable for DSRAM1"]
-    #[inline]
-    pub fn peends1(&self) -> PEENDS1R {
-        PEENDS1R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn peends1(&self) -> PEENDS1_R {
+        PEENDS1_R::new(((self.bits >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 8 - Parity Error Enable for USIC0 Memory"]
-    #[inline]
-    pub fn peenu0(&self) -> PEENU0R {
-        PEENU0R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn peenu0(&self) -> PEENU0_R {
+        PEENU0_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 9 - Parity Error Enable for USIC1 Memory"]
-    #[inline]
-    pub fn peenu1(&self) -> PEENU1R {
-        PEENU1R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn peenu1(&self) -> PEENU1_R {
+        PEENU1_R::new(((self.bits >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 12 - Parity Error Enable for MultiCAN Memory"]
-    #[inline]
-    pub fn peenmc(&self) -> PEENMCR {
-        PEENMCR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn peenmc(&self) -> PEENMC_R {
+        PEENMC_R::new(((self.bits >> 12) & 0x01) != 0)
     }
     #[doc = "Bit 13 - Parity Error Enable for PMU Prefetch Memory"]
-    #[inline]
-    pub fn peenpprf(&self) -> PEENPPRFR {
-        PEENPPRFR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn peenpprf(&self) -> PEENPPRF_R {
+        PEENPPRF_R::new(((self.bits >> 13) & 0x01) != 0)
     }
     #[doc = "Bit 16 - Parity Error Enable for USB Memory"]
-    #[inline]
-    pub fn peenusb(&self) -> PEENUSBR {
-        PEENUSBR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn peenusb(&self) -> PEENUSB_R {
+        PEENUSB_R::new(((self.bits >> 16) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 0 - Parity Error Enable for PSRAM"]
-    #[inline]
-    pub fn peenps(&mut self) -> _PEENPSW {
-        _PEENPSW { w: self }
+    #[inline(always)]
+    pub fn peenps(&mut self) -> PEENPS_W {
+        PEENPS_W { w: self }
     }
     #[doc = "Bit 1 - Parity Error Enable for DSRAM1"]
-    #[inline]
-    pub fn peends1(&mut self) -> _PEENDS1W {
-        _PEENDS1W { w: self }
+    #[inline(always)]
+    pub fn peends1(&mut self) -> PEENDS1_W {
+        PEENDS1_W { w: self }
     }
     #[doc = "Bit 8 - Parity Error Enable for USIC0 Memory"]
-    #[inline]
-    pub fn peenu0(&mut self) -> _PEENU0W {
-        _PEENU0W { w: self }
+    #[inline(always)]
+    pub fn peenu0(&mut self) -> PEENU0_W {
+        PEENU0_W { w: self }
     }
     #[doc = "Bit 9 - Parity Error Enable for USIC1 Memory"]
-    #[inline]
-    pub fn peenu1(&mut self) -> _PEENU1W {
-        _PEENU1W { w: self }
+    #[inline(always)]
+    pub fn peenu1(&mut self) -> PEENU1_W {
+        PEENU1_W { w: self }
     }
     #[doc = "Bit 12 - Parity Error Enable for MultiCAN Memory"]
-    #[inline]
-    pub fn peenmc(&mut self) -> _PEENMCW {
-        _PEENMCW { w: self }
+    #[inline(always)]
+    pub fn peenmc(&mut self) -> PEENMC_W {
+        PEENMC_W { w: self }
     }
     #[doc = "Bit 13 - Parity Error Enable for PMU Prefetch Memory"]
-    #[inline]
-    pub fn peenpprf(&mut self) -> _PEENPPRFW {
-        _PEENPPRFW { w: self }
+    #[inline(always)]
+    pub fn peenpprf(&mut self) -> PEENPPRF_W {
+        PEENPPRF_W { w: self }
     }
     #[doc = "Bit 16 - Parity Error Enable for USB Memory"]
-    #[inline]
-    pub fn peenusb(&mut self) -> _PEENUSBW {
-        _PEENUSBW { w: self }
+    #[inline(always)]
+    pub fn peenusb(&mut self) -> PEENUSB_W {
+        PEENUSB_W { w: self }
     }
 }

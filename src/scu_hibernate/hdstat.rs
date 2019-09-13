@@ -1,522 +1,400 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-impl super::HDSTAT {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-}
-#[doc = "Possible values of the field `EPEV`"]
+#[doc = "Reader of register HDSTAT"]
+pub type R = crate::R<u32, super::HDSTAT>;
+#[doc = "Wake-up Pin Event Positive Edge\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum EPEVR {
-    #[doc = "Wake-up on positive edge pin event inactive"]
+pub enum EPEV_A {
+    #[doc = "0: Wake-up on positive edge pin event inactive"]
     VALUE1,
-    #[doc = "Wake-up on positive edge pin event active"]
+    #[doc = "1: Wake-up on positive edge pin event active"]
     VALUE2,
 }
-impl EPEVR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            EPEVR::VALUE1 => false,
-            EPEVR::VALUE2 => true,
+impl From<EPEV_A> for bool {
+    #[inline(always)]
+    fn from(variant: EPEV_A) -> Self {
+        match variant {
+            EPEV_A::VALUE1 => false,
+            EPEV_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> EPEVR {
-        match value {
-            false => EPEVR::VALUE1,
-            true => EPEVR::VALUE2,
+}
+#[doc = "Reader of field `EPEV`"]
+pub type EPEV_R = crate::R<bool, EPEV_A>;
+impl EPEV_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> EPEV_A {
+        match self.bits {
+            false => EPEV_A::VALUE1,
+            true => EPEV_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == EPEVR::VALUE1
+        *self == EPEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == EPEVR::VALUE2
+        *self == EPEV_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `ENEV`"]
+#[doc = "Wake-up Pin Event Negative Edge\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum ENEVR {
-    #[doc = "Wake-up on negative edge pin event inactive"]
+pub enum ENEV_A {
+    #[doc = "0: Wake-up on negative edge pin event inactive"]
     VALUE1,
-    #[doc = "Wake-up on negative edge pin event active"]
+    #[doc = "1: Wake-up on negative edge pin event active"]
     VALUE2,
 }
-impl ENEVR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            ENEVR::VALUE1 => false,
-            ENEVR::VALUE2 => true,
+impl From<ENEV_A> for bool {
+    #[inline(always)]
+    fn from(variant: ENEV_A) -> Self {
+        match variant {
+            ENEV_A::VALUE1 => false,
+            ENEV_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> ENEVR {
-        match value {
-            false => ENEVR::VALUE1,
-            true => ENEVR::VALUE2,
+}
+#[doc = "Reader of field `ENEV`"]
+pub type ENEV_R = crate::R<bool, ENEV_A>;
+impl ENEV_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> ENEV_A {
+        match self.bits {
+            false => ENEV_A::VALUE1,
+            true => ENEV_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == ENEVR::VALUE1
+        *self == ENEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == ENEVR::VALUE2
+        *self == ENEV_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `RTCEV`"]
+#[doc = "RTC Event\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum RTCEVR {
-    #[doc = "Wake-up on RTC event inactive"]
+pub enum RTCEV_A {
+    #[doc = "0: Wake-up on RTC event inactive"]
     VALUE1,
-    #[doc = "Wake-up on RTC event active"]
+    #[doc = "1: Wake-up on RTC event active"]
     VALUE2,
 }
-impl RTCEVR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            RTCEVR::VALUE1 => false,
-            RTCEVR::VALUE2 => true,
+impl From<RTCEV_A> for bool {
+    #[inline(always)]
+    fn from(variant: RTCEV_A) -> Self {
+        match variant {
+            RTCEV_A::VALUE1 => false,
+            RTCEV_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> RTCEVR {
-        match value {
-            false => RTCEVR::VALUE1,
-            true => RTCEVR::VALUE2,
+}
+#[doc = "Reader of field `RTCEV`"]
+pub type RTCEV_R = crate::R<bool, RTCEV_A>;
+impl RTCEV_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> RTCEV_A {
+        match self.bits {
+            false => RTCEV_A::VALUE1,
+            true => RTCEV_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == RTCEVR::VALUE1
+        *self == RTCEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == RTCEVR::VALUE2
+        *self == RTCEV_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `ULPWDG`"]
+#[doc = "ULP WDG Alarm Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum ULPWDGR {
-    #[doc = "Watchdog alarm did not occur"]
+pub enum ULPWDG_A {
+    #[doc = "0: Watchdog alarm did not occur"]
     VALUE1,
-    #[doc = "Watchdog alarm occurred"]
+    #[doc = "1: Watchdog alarm occurred"]
     VALUE2,
 }
-impl ULPWDGR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            ULPWDGR::VALUE1 => false,
-            ULPWDGR::VALUE2 => true,
+impl From<ULPWDG_A> for bool {
+    #[inline(always)]
+    fn from(variant: ULPWDG_A) -> Self {
+        match variant {
+            ULPWDG_A::VALUE1 => false,
+            ULPWDG_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> ULPWDGR {
-        match value {
-            false => ULPWDGR::VALUE1,
-            true => ULPWDGR::VALUE2,
+}
+#[doc = "Reader of field `ULPWDG`"]
+pub type ULPWDG_R = crate::R<bool, ULPWDG_A>;
+impl ULPWDG_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> ULPWDG_A {
+        match self.bits {
+            false => ULPWDG_A::VALUE1,
+            true => ULPWDG_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == ULPWDGR::VALUE1
+        *self == ULPWDG_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == ULPWDGR::VALUE2
+        *self == ULPWDG_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `HIBNOUT`"]
+#[doc = "Hibernate Control Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum HIBNOUTR {
-    #[doc = "Hibernate not driven active to pads"]
+pub enum HIBNOUT_A {
+    #[doc = "0: Hibernate not driven active to pads"]
     VALUE1,
-    #[doc = "Hibernate driven active to pads"]
+    #[doc = "1: Hibernate driven active to pads"]
     VALUE2,
 }
-impl HIBNOUTR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            HIBNOUTR::VALUE1 => false,
-            HIBNOUTR::VALUE2 => true,
+impl From<HIBNOUT_A> for bool {
+    #[inline(always)]
+    fn from(variant: HIBNOUT_A) -> Self {
+        match variant {
+            HIBNOUT_A::VALUE1 => false,
+            HIBNOUT_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> HIBNOUTR {
-        match value {
-            false => HIBNOUTR::VALUE1,
-            true => HIBNOUTR::VALUE2,
+}
+#[doc = "Reader of field `HIBNOUT`"]
+pub type HIBNOUT_R = crate::R<bool, HIBNOUT_A>;
+impl HIBNOUT_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> HIBNOUT_A {
+        match self.bits {
+            false => HIBNOUT_A::VALUE1,
+            true => HIBNOUT_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == HIBNOUTR::VALUE1
+        *self == HIBNOUT_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == HIBNOUTR::VALUE2
+        *self == HIBNOUT_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `VBATPEV`"]
+#[doc = "Wake-Up on LPAC Positive Edge of VBAT Threshold Crossing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum VBATPEVR {
-    #[doc = "Wake-up on rising above threshold event inactive"]
+pub enum VBATPEV_A {
+    #[doc = "0: Wake-up on rising above threshold event inactive"]
     VALUE1,
-    #[doc = "Wake-up on rising above threshold event active"]
+    #[doc = "1: Wake-up on rising above threshold event active"]
     VALUE2,
 }
-impl VBATPEVR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            VBATPEVR::VALUE1 => false,
-            VBATPEVR::VALUE2 => true,
+impl From<VBATPEV_A> for bool {
+    #[inline(always)]
+    fn from(variant: VBATPEV_A) -> Self {
+        match variant {
+            VBATPEV_A::VALUE1 => false,
+            VBATPEV_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> VBATPEVR {
-        match value {
-            false => VBATPEVR::VALUE1,
-            true => VBATPEVR::VALUE2,
+}
+#[doc = "Reader of field `VBATPEV`"]
+pub type VBATPEV_R = crate::R<bool, VBATPEV_A>;
+impl VBATPEV_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> VBATPEV_A {
+        match self.bits {
+            false => VBATPEV_A::VALUE1,
+            true => VBATPEV_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VBATPEVR::VALUE1
+        *self == VBATPEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VBATPEVR::VALUE2
+        *self == VBATPEV_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `VBATNEV`"]
+#[doc = "Wake-Up on LPAC Negative Edge of VBAT Threshold Crossing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum VBATNEVR {
-    #[doc = "Wake-up on falling below threshold event inactive"]
+pub enum VBATNEV_A {
+    #[doc = "0: Wake-up on falling below threshold event inactive"]
     VALUE1,
-    #[doc = "Wake-up on falling below threshold event active"]
+    #[doc = "1: Wake-up on falling below threshold event active"]
     VALUE2,
 }
-impl VBATNEVR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            VBATNEVR::VALUE1 => false,
-            VBATNEVR::VALUE2 => true,
+impl From<VBATNEV_A> for bool {
+    #[inline(always)]
+    fn from(variant: VBATNEV_A) -> Self {
+        match variant {
+            VBATNEV_A::VALUE1 => false,
+            VBATNEV_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> VBATNEVR {
-        match value {
-            false => VBATNEVR::VALUE1,
-            true => VBATNEVR::VALUE2,
+}
+#[doc = "Reader of field `VBATNEV`"]
+pub type VBATNEV_R = crate::R<bool, VBATNEV_A>;
+impl VBATNEV_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> VBATNEV_A {
+        match self.bits {
+            false => VBATNEV_A::VALUE1,
+            true => VBATNEV_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VBATNEVR::VALUE1
+        *self == VBATNEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VBATNEVR::VALUE2
+        *self == VBATNEV_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `AHIBIO0PEV`"]
+#[doc = "Wake-Up on LPAC Positive Edge of HIB_IO_0 Threshold Crossing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum AHIBIO0PEVR {
-    #[doc = "Wake-up on rising above threshold event inactive"]
+pub enum AHIBIO0PEV_A {
+    #[doc = "0: Wake-up on rising above threshold event inactive"]
     VALUE1,
-    #[doc = "Wake-up on rising above threshold event active"]
+    #[doc = "1: Wake-up on rising above threshold event active"]
     VALUE2,
 }
-impl AHIBIO0PEVR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            AHIBIO0PEVR::VALUE1 => false,
-            AHIBIO0PEVR::VALUE2 => true,
+impl From<AHIBIO0PEV_A> for bool {
+    #[inline(always)]
+    fn from(variant: AHIBIO0PEV_A) -> Self {
+        match variant {
+            AHIBIO0PEV_A::VALUE1 => false,
+            AHIBIO0PEV_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> AHIBIO0PEVR {
-        match value {
-            false => AHIBIO0PEVR::VALUE1,
-            true => AHIBIO0PEVR::VALUE2,
+}
+#[doc = "Reader of field `AHIBIO0PEV`"]
+pub type AHIBIO0PEV_R = crate::R<bool, AHIBIO0PEV_A>;
+impl AHIBIO0PEV_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> AHIBIO0PEV_A {
+        match self.bits {
+            false => AHIBIO0PEV_A::VALUE1,
+            true => AHIBIO0PEV_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == AHIBIO0PEVR::VALUE1
+        *self == AHIBIO0PEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == AHIBIO0PEVR::VALUE2
+        *self == AHIBIO0PEV_A::VALUE2
     }
 }
-#[doc = "Possible values of the field `AHIBIO0NEV`"]
+#[doc = "Wake-Up on LPAC Negative Edge of HIB_IO_0 Threshold Crossing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum AHIBIO0NEVR {
-    #[doc = "Wake-up on falling below threshold event inactive"]
+pub enum AHIBIO0NEV_A {
+    #[doc = "0: Wake-up on falling below threshold event inactive"]
     VALUE1,
-    #[doc = "Wake-up on falling below threshold event active"]
+    #[doc = "1: Wake-up on falling below threshold event active"]
     VALUE2,
 }
-impl AHIBIO0NEVR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            AHIBIO0NEVR::VALUE1 => false,
-            AHIBIO0NEVR::VALUE2 => true,
+impl From<AHIBIO0NEV_A> for bool {
+    #[inline(always)]
+    fn from(variant: AHIBIO0NEV_A) -> Self {
+        match variant {
+            AHIBIO0NEV_A::VALUE1 => false,
+            AHIBIO0NEV_A::VALUE2 => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> AHIBIO0NEVR {
-        match value {
-            false => AHIBIO0NEVR::VALUE1,
-            true => AHIBIO0NEVR::VALUE2,
+}
+#[doc = "Reader of field `AHIBIO0NEV`"]
+pub type AHIBIO0NEV_R = crate::R<bool, AHIBIO0NEV_A>;
+impl AHIBIO0NEV_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> AHIBIO0NEV_A {
+        match self.bits {
+            false => AHIBIO0NEV_A::VALUE1,
+            true => AHIBIO0NEV_A::VALUE2,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == AHIBIO0NEVR::VALUE1
+        *self == AHIBIO0NEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == AHIBIO0NEVR::VALUE2
+        *self == AHIBIO0NEV_A::VALUE2
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 0 - Wake-up Pin Event Positive Edge"]
-    #[inline]
-    pub fn epev(&self) -> EPEVR {
-        EPEVR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn epev(&self) -> EPEV_R {
+        EPEV_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - Wake-up Pin Event Negative Edge"]
-    #[inline]
-    pub fn enev(&self) -> ENEVR {
-        ENEVR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn enev(&self) -> ENEV_R {
+        ENEV_R::new(((self.bits >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 2 - RTC Event"]
-    #[inline]
-    pub fn rtcev(&self) -> RTCEVR {
-        RTCEVR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn rtcev(&self) -> RTCEV_R {
+        RTCEV_R::new(((self.bits >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 3 - ULP WDG Alarm Status"]
-    #[inline]
-    pub fn ulpwdg(&self) -> ULPWDGR {
-        ULPWDGR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ulpwdg(&self) -> ULPWDG_R {
+        ULPWDG_R::new(((self.bits >> 3) & 0x01) != 0)
     }
     #[doc = "Bit 4 - Hibernate Control Status"]
-    #[inline]
-    pub fn hibnout(&self) -> HIBNOUTR {
-        HIBNOUTR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn hibnout(&self) -> HIBNOUT_R {
+        HIBNOUT_R::new(((self.bits >> 4) & 0x01) != 0)
     }
     #[doc = "Bit 8 - Wake-Up on LPAC Positive Edge of VBAT Threshold Crossing"]
-    #[inline]
-    pub fn vbatpev(&self) -> VBATPEVR {
-        VBATPEVR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn vbatpev(&self) -> VBATPEV_R {
+        VBATPEV_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 9 - Wake-Up on LPAC Negative Edge of VBAT Threshold Crossing"]
-    #[inline]
-    pub fn vbatnev(&self) -> VBATNEVR {
-        VBATNEVR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn vbatnev(&self) -> VBATNEV_R {
+        VBATNEV_R::new(((self.bits >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 10 - Wake-Up on LPAC Positive Edge of HIB_IO_0 Threshold Crossing"]
-    #[inline]
-    pub fn ahibio0pev(&self) -> AHIBIO0PEVR {
-        AHIBIO0PEVR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ahibio0pev(&self) -> AHIBIO0PEV_R {
+        AHIBIO0PEV_R::new(((self.bits >> 10) & 0x01) != 0)
     }
     #[doc = "Bit 11 - Wake-Up on LPAC Negative Edge of HIB_IO_0 Threshold Crossing"]
-    #[inline]
-    pub fn ahibio0nev(&self) -> AHIBIO0NEVR {
-        AHIBIO0NEVR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ahibio0nev(&self) -> AHIBIO0NEV_R {
+        AHIBIO0NEV_R::new(((self.bits >> 11) & 0x01) != 0)
     }
 }

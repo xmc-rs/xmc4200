@@ -1,1014 +1,765 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::SRS {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register SRS"]
+pub type R = crate::R<u32, super::SRS>;
+#[doc = "Writer for register SRS"]
+pub type W = crate::W<u32, super::SRS>;
+#[doc = "Register SRS `reset()`'s with value 0"]
+impl crate::ResetValue for super::SRS {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Possible values of the field `VLS1S`"]
+#[doc = "Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum VLS1SR {
-    #[doc = "CSGySR0"]
+pub enum VLS1S_A {
+    #[doc = "0: CSGySR0"]
     VALUE1,
-    #[doc = "CSGySR1"]
+    #[doc = "1: CSGySR1"]
     VALUE2,
-    #[doc = "CSGySR2"]
+    #[doc = "2: CSGySR2"]
     VALUE3,
-    #[doc = "CSGySR3"]
+    #[doc = "3: CSGySR3"]
     VALUE4,
 }
-impl VLS1SR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            VLS1SR::VALUE1 => 0,
-            VLS1SR::VALUE2 => 1,
-            VLS1SR::VALUE3 => 2,
-            VLS1SR::VALUE4 => 3,
+impl From<VLS1S_A> for u8 {
+    #[inline(always)]
+    fn from(variant: VLS1S_A) -> Self {
+        match variant {
+            VLS1S_A::VALUE1 => 0,
+            VLS1S_A::VALUE2 => 1,
+            VLS1S_A::VALUE3 => 2,
+            VLS1S_A::VALUE4 => 3,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> VLS1SR {
-        match value {
-            0 => VLS1SR::VALUE1,
-            1 => VLS1SR::VALUE2,
-            2 => VLS1SR::VALUE3,
-            3 => VLS1SR::VALUE4,
+}
+#[doc = "Reader of field `VLS1S`"]
+pub type VLS1S_R = crate::R<u8, VLS1S_A>;
+impl VLS1S_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> VLS1S_A {
+        match self.bits {
+            0 => VLS1S_A::VALUE1,
+            1 => VLS1S_A::VALUE2,
+            2 => VLS1S_A::VALUE3,
+            3 => VLS1S_A::VALUE4,
             _ => unreachable!(),
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VLS1SR::VALUE1
+        *self == VLS1S_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VLS1SR::VALUE2
+        *self == VLS1S_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == VLS1SR::VALUE3
+        *self == VLS1S_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == VLS1SR::VALUE4
+        *self == VLS1S_A::VALUE4
     }
 }
-#[doc = "Possible values of the field `VLS2S`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum VLS2SR {
-    #[doc = "CSGySR0"]
-    VALUE1,
-    #[doc = "CSGySR1"]
-    VALUE2,
-    #[doc = "CSGySR2"]
-    VALUE3,
-    #[doc = "CSGySR3"]
-    VALUE4,
-}
-impl VLS2SR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            VLS2SR::VALUE1 => 0,
-            VLS2SR::VALUE2 => 1,
-            VLS2SR::VALUE3 => 2,
-            VLS2SR::VALUE4 => 3,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> VLS2SR {
-        match value {
-            0 => VLS2SR::VALUE1,
-            1 => VLS2SR::VALUE2,
-            2 => VLS2SR::VALUE3,
-            3 => VLS2SR::VALUE4,
-            _ => unreachable!(),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == VLS2SR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == VLS2SR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == VLS2SR::VALUE3
-    }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
-    pub fn is_value4(&self) -> bool {
-        *self == VLS2SR::VALUE4
-    }
-}
-#[doc = "Possible values of the field `TRLS`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum TRLSR {
-    #[doc = "CSGySR0"]
-    VALUE1,
-    #[doc = "CSGySR1"]
-    VALUE2,
-    #[doc = "CSGySR2"]
-    VALUE3,
-    #[doc = "CSGySR3"]
-    VALUE4,
-}
-impl TRLSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            TRLSR::VALUE1 => 0,
-            TRLSR::VALUE2 => 1,
-            TRLSR::VALUE3 => 2,
-            TRLSR::VALUE4 => 3,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> TRLSR {
-        match value {
-            0 => TRLSR::VALUE1,
-            1 => TRLSR::VALUE2,
-            2 => TRLSR::VALUE3,
-            3 => TRLSR::VALUE4,
-            _ => unreachable!(),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == TRLSR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == TRLSR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == TRLSR::VALUE3
-    }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
-    pub fn is_value4(&self) -> bool {
-        *self == TRLSR::VALUE4
-    }
-}
-#[doc = "Possible values of the field `SSLS`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SSLSR {
-    #[doc = "CSGySR0"]
-    VALUE1,
-    #[doc = "CSGySR1"]
-    VALUE2,
-    #[doc = "CSGySR2"]
-    VALUE3,
-    #[doc = "CSGySR3"]
-    VALUE4,
-}
-impl SSLSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            SSLSR::VALUE1 => 0,
-            SSLSR::VALUE2 => 1,
-            SSLSR::VALUE3 => 2,
-            SSLSR::VALUE4 => 3,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> SSLSR {
-        match value {
-            0 => SSLSR::VALUE1,
-            1 => SSLSR::VALUE2,
-            2 => SSLSR::VALUE3,
-            3 => SSLSR::VALUE4,
-            _ => unreachable!(),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == SSLSR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == SSLSR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == SSLSR::VALUE3
-    }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
-    pub fn is_value4(&self) -> bool {
-        *self == SSLSR::VALUE4
-    }
-}
-#[doc = "Possible values of the field `STLS`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum STLSR {
-    #[doc = "CSGySR0"]
-    VALUE1,
-    #[doc = "CSGySR1"]
-    VALUE2,
-    #[doc = "CSGySR2"]
-    VALUE3,
-    #[doc = "CSGySR3"]
-    VALUE4,
-}
-impl STLSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            STLSR::VALUE1 => 0,
-            STLSR::VALUE2 => 1,
-            STLSR::VALUE3 => 2,
-            STLSR::VALUE4 => 3,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> STLSR {
-        match value {
-            0 => STLSR::VALUE1,
-            1 => STLSR::VALUE2,
-            2 => STLSR::VALUE3,
-            3 => STLSR::VALUE4,
-            _ => unreachable!(),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == STLSR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == STLSR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == STLSR::VALUE3
-    }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
-    pub fn is_value4(&self) -> bool {
-        *self == STLSR::VALUE4
-    }
-}
-#[doc = "Possible values of the field `CRFLS`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum CRFLSR {
-    #[doc = "CSGySR0"]
-    VALUE1,
-    #[doc = "CSGySR1"]
-    VALUE2,
-    #[doc = "CSGySR2"]
-    VALUE3,
-    #[doc = "CSGySR3"]
-    VALUE4,
-}
-impl CRFLSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            CRFLSR::VALUE1 => 0,
-            CRFLSR::VALUE2 => 1,
-            CRFLSR::VALUE3 => 2,
-            CRFLSR::VALUE4 => 3,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> CRFLSR {
-        match value {
-            0 => CRFLSR::VALUE1,
-            1 => CRFLSR::VALUE2,
-            2 => CRFLSR::VALUE3,
-            3 => CRFLSR::VALUE4,
-            _ => unreachable!(),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == CRFLSR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == CRFLSR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == CRFLSR::VALUE3
-    }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
-    pub fn is_value4(&self) -> bool {
-        *self == CRFLSR::VALUE4
-    }
-}
-#[doc = "Possible values of the field `CSLS`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum CSLSR {
-    #[doc = "CSGySR0"]
-    VALUE1,
-    #[doc = "CSGySR1"]
-    VALUE2,
-    #[doc = "CSGySR2"]
-    VALUE3,
-    #[doc = "CSGySR3"]
-    VALUE4,
-}
-impl CSLSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            CSLSR::VALUE1 => 0,
-            CSLSR::VALUE2 => 1,
-            CSLSR::VALUE3 => 2,
-            CSLSR::VALUE4 => 3,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> CSLSR {
-        match value {
-            0 => CSLSR::VALUE1,
-            1 => CSLSR::VALUE2,
-            2 => CSLSR::VALUE3,
-            3 => CSLSR::VALUE4,
-            _ => unreachable!(),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == CSLSR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == CSLSR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == CSLSR::VALUE3
-    }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
-    #[inline]
-    pub fn is_value4(&self) -> bool {
-        *self == CSLSR::VALUE4
-    }
-}
-#[doc = "Values that can be written to the field `VLS1S`"]
-pub enum VLS1SW {
-    #[doc = "CSGySR0"]
-    VALUE1,
-    #[doc = "CSGySR1"]
-    VALUE2,
-    #[doc = "CSGySR2"]
-    VALUE3,
-    #[doc = "CSGySR3"]
-    VALUE4,
-}
-impl VLS1SW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            VLS1SW::VALUE1 => 0,
-            VLS1SW::VALUE2 => 1,
-            VLS1SW::VALUE3 => 2,
-            VLS1SW::VALUE4 => 3,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _VLS1SW<'a> {
+#[doc = "Write proxy for field `VLS1S`"]
+pub struct VLS1S_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _VLS1SW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: VLS1SW) -> &'a mut W {
+impl<'a> VLS1S_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: VLS1S_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "CSGySR0"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(VLS1SW::VALUE1)
+        self.variant(VLS1S_A::VALUE1)
     }
     #[doc = "CSGySR1"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(VLS1SW::VALUE2)
+        self.variant(VLS1S_A::VALUE2)
     }
     #[doc = "CSGySR2"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(VLS1SW::VALUE3)
+        self.variant(VLS1S_A::VALUE3)
     }
     #[doc = "CSGySR3"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(VLS1SW::VALUE4)
+        self.variant(VLS1S_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `VLS2S`"]
-pub enum VLS2SW {
-    #[doc = "CSGySR0"]
+#[doc = "Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum VLS2S_A {
+    #[doc = "0: CSGySR0"]
     VALUE1,
-    #[doc = "CSGySR1"]
+    #[doc = "1: CSGySR1"]
     VALUE2,
-    #[doc = "CSGySR2"]
+    #[doc = "2: CSGySR2"]
     VALUE3,
-    #[doc = "CSGySR3"]
+    #[doc = "3: CSGySR3"]
     VALUE4,
 }
-impl VLS2SW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            VLS2SW::VALUE1 => 0,
-            VLS2SW::VALUE2 => 1,
-            VLS2SW::VALUE3 => 2,
-            VLS2SW::VALUE4 => 3,
+impl From<VLS2S_A> for u8 {
+    #[inline(always)]
+    fn from(variant: VLS2S_A) -> Self {
+        match variant {
+            VLS2S_A::VALUE1 => 0,
+            VLS2S_A::VALUE2 => 1,
+            VLS2S_A::VALUE3 => 2,
+            VLS2S_A::VALUE4 => 3,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _VLS2SW<'a> {
+#[doc = "Reader of field `VLS2S`"]
+pub type VLS2S_R = crate::R<u8, VLS2S_A>;
+impl VLS2S_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> VLS2S_A {
+        match self.bits {
+            0 => VLS2S_A::VALUE1,
+            1 => VLS2S_A::VALUE2,
+            2 => VLS2S_A::VALUE3,
+            3 => VLS2S_A::VALUE4,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == VLS2S_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == VLS2S_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == VLS2S_A::VALUE3
+    }
+    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[inline(always)]
+    pub fn is_value4(&self) -> bool {
+        *self == VLS2S_A::VALUE4
+    }
+}
+#[doc = "Write proxy for field `VLS2S`"]
+pub struct VLS2S_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _VLS2SW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: VLS2SW) -> &'a mut W {
+impl<'a> VLS2S_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: VLS2S_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "CSGySR0"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(VLS2SW::VALUE1)
+        self.variant(VLS2S_A::VALUE1)
     }
     #[doc = "CSGySR1"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(VLS2SW::VALUE2)
+        self.variant(VLS2S_A::VALUE2)
     }
     #[doc = "CSGySR2"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(VLS2SW::VALUE3)
+        self.variant(VLS2S_A::VALUE3)
     }
     #[doc = "CSGySR3"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(VLS2SW::VALUE4)
+        self.variant(VLS2S_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 2)) | (((value as u32) & 0x03) << 2);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `TRLS`"]
-pub enum TRLSW {
-    #[doc = "CSGySR0"]
+#[doc = "Conversion trigger interrupt line selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum TRLS_A {
+    #[doc = "0: CSGySR0"]
     VALUE1,
-    #[doc = "CSGySR1"]
+    #[doc = "1: CSGySR1"]
     VALUE2,
-    #[doc = "CSGySR2"]
+    #[doc = "2: CSGySR2"]
     VALUE3,
-    #[doc = "CSGySR3"]
+    #[doc = "3: CSGySR3"]
     VALUE4,
 }
-impl TRLSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            TRLSW::VALUE1 => 0,
-            TRLSW::VALUE2 => 1,
-            TRLSW::VALUE3 => 2,
-            TRLSW::VALUE4 => 3,
+impl From<TRLS_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TRLS_A) -> Self {
+        match variant {
+            TRLS_A::VALUE1 => 0,
+            TRLS_A::VALUE2 => 1,
+            TRLS_A::VALUE3 => 2,
+            TRLS_A::VALUE4 => 3,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _TRLSW<'a> {
+#[doc = "Reader of field `TRLS`"]
+pub type TRLS_R = crate::R<u8, TRLS_A>;
+impl TRLS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TRLS_A {
+        match self.bits {
+            0 => TRLS_A::VALUE1,
+            1 => TRLS_A::VALUE2,
+            2 => TRLS_A::VALUE3,
+            3 => TRLS_A::VALUE4,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == TRLS_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == TRLS_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == TRLS_A::VALUE3
+    }
+    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[inline(always)]
+    pub fn is_value4(&self) -> bool {
+        *self == TRLS_A::VALUE4
+    }
+}
+#[doc = "Write proxy for field `TRLS`"]
+pub struct TRLS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _TRLSW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: TRLSW) -> &'a mut W {
+impl<'a> TRLS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: TRLS_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "CSGySR0"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(TRLSW::VALUE1)
+        self.variant(TRLS_A::VALUE1)
     }
     #[doc = "CSGySR1"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(TRLSW::VALUE2)
+        self.variant(TRLS_A::VALUE2)
     }
     #[doc = "CSGySR2"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(TRLSW::VALUE3)
+        self.variant(TRLS_A::VALUE3)
     }
     #[doc = "CSGySR3"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(TRLSW::VALUE4)
+        self.variant(TRLS_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 4)) | (((value as u32) & 0x03) << 4);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `SSLS`"]
-pub enum SSLSW {
-    #[doc = "CSGySR0"]
+#[doc = "Start/Stop trigger interrupt line selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum SSLS_A {
+    #[doc = "0: CSGySR0"]
     VALUE1,
-    #[doc = "CSGySR1"]
+    #[doc = "1: CSGySR1"]
     VALUE2,
-    #[doc = "CSGySR2"]
+    #[doc = "2: CSGySR2"]
     VALUE3,
-    #[doc = "CSGySR3"]
+    #[doc = "3: CSGySR3"]
     VALUE4,
 }
-impl SSLSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            SSLSW::VALUE1 => 0,
-            SSLSW::VALUE2 => 1,
-            SSLSW::VALUE3 => 2,
-            SSLSW::VALUE4 => 3,
+impl From<SSLS_A> for u8 {
+    #[inline(always)]
+    fn from(variant: SSLS_A) -> Self {
+        match variant {
+            SSLS_A::VALUE1 => 0,
+            SSLS_A::VALUE2 => 1,
+            SSLS_A::VALUE3 => 2,
+            SSLS_A::VALUE4 => 3,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _SSLSW<'a> {
+#[doc = "Reader of field `SSLS`"]
+pub type SSLS_R = crate::R<u8, SSLS_A>;
+impl SSLS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SSLS_A {
+        match self.bits {
+            0 => SSLS_A::VALUE1,
+            1 => SSLS_A::VALUE2,
+            2 => SSLS_A::VALUE3,
+            3 => SSLS_A::VALUE4,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == SSLS_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == SSLS_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == SSLS_A::VALUE3
+    }
+    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[inline(always)]
+    pub fn is_value4(&self) -> bool {
+        *self == SSLS_A::VALUE4
+    }
+}
+#[doc = "Write proxy for field `SSLS`"]
+pub struct SSLS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SSLSW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: SSLSW) -> &'a mut W {
+impl<'a> SSLS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: SSLS_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "CSGySR0"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(SSLSW::VALUE1)
+        self.variant(SSLS_A::VALUE1)
     }
     #[doc = "CSGySR1"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(SSLSW::VALUE2)
+        self.variant(SSLS_A::VALUE2)
     }
     #[doc = "CSGySR2"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(SSLSW::VALUE3)
+        self.variant(SSLS_A::VALUE3)
     }
     #[doc = "CSGySR3"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(SSLSW::VALUE4)
+        self.variant(SSLS_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 6)) | (((value as u32) & 0x03) << 6);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `STLS`"]
-pub enum STLSW {
-    #[doc = "CSGySR0"]
+#[doc = "Shadow transfer done interrupt line selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum STLS_A {
+    #[doc = "0: CSGySR0"]
     VALUE1,
-    #[doc = "CSGySR1"]
+    #[doc = "1: CSGySR1"]
     VALUE2,
-    #[doc = "CSGySR2"]
+    #[doc = "2: CSGySR2"]
     VALUE3,
-    #[doc = "CSGySR3"]
+    #[doc = "3: CSGySR3"]
     VALUE4,
 }
-impl STLSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            STLSW::VALUE1 => 0,
-            STLSW::VALUE2 => 1,
-            STLSW::VALUE3 => 2,
-            STLSW::VALUE4 => 3,
+impl From<STLS_A> for u8 {
+    #[inline(always)]
+    fn from(variant: STLS_A) -> Self {
+        match variant {
+            STLS_A::VALUE1 => 0,
+            STLS_A::VALUE2 => 1,
+            STLS_A::VALUE3 => 2,
+            STLS_A::VALUE4 => 3,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _STLSW<'a> {
+#[doc = "Reader of field `STLS`"]
+pub type STLS_R = crate::R<u8, STLS_A>;
+impl STLS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> STLS_A {
+        match self.bits {
+            0 => STLS_A::VALUE1,
+            1 => STLS_A::VALUE2,
+            2 => STLS_A::VALUE3,
+            3 => STLS_A::VALUE4,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == STLS_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == STLS_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == STLS_A::VALUE3
+    }
+    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[inline(always)]
+    pub fn is_value4(&self) -> bool {
+        *self == STLS_A::VALUE4
+    }
+}
+#[doc = "Write proxy for field `STLS`"]
+pub struct STLS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _STLSW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: STLSW) -> &'a mut W {
+impl<'a> STLS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: STLS_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "CSGySR0"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(STLSW::VALUE1)
+        self.variant(STLS_A::VALUE1)
     }
     #[doc = "CSGySR1"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(STLSW::VALUE2)
+        self.variant(STLS_A::VALUE2)
     }
     #[doc = "CSGySR2"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(STLSW::VALUE3)
+        self.variant(STLS_A::VALUE3)
     }
     #[doc = "CSGySR3"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(STLSW::VALUE4)
+        self.variant(STLS_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u32) & 0x03) << 8);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `CRFLS`"]
-pub enum CRFLSW {
-    #[doc = "CSGySR0"]
+#[doc = "Comparator rise/fall interrupt line selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum CRFLS_A {
+    #[doc = "0: CSGySR0"]
     VALUE1,
-    #[doc = "CSGySR1"]
+    #[doc = "1: CSGySR1"]
     VALUE2,
-    #[doc = "CSGySR2"]
+    #[doc = "2: CSGySR2"]
     VALUE3,
-    #[doc = "CSGySR3"]
+    #[doc = "3: CSGySR3"]
     VALUE4,
 }
-impl CRFLSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            CRFLSW::VALUE1 => 0,
-            CRFLSW::VALUE2 => 1,
-            CRFLSW::VALUE3 => 2,
-            CRFLSW::VALUE4 => 3,
+impl From<CRFLS_A> for u8 {
+    #[inline(always)]
+    fn from(variant: CRFLS_A) -> Self {
+        match variant {
+            CRFLS_A::VALUE1 => 0,
+            CRFLS_A::VALUE2 => 1,
+            CRFLS_A::VALUE3 => 2,
+            CRFLS_A::VALUE4 => 3,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _CRFLSW<'a> {
+#[doc = "Reader of field `CRFLS`"]
+pub type CRFLS_R = crate::R<u8, CRFLS_A>;
+impl CRFLS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CRFLS_A {
+        match self.bits {
+            0 => CRFLS_A::VALUE1,
+            1 => CRFLS_A::VALUE2,
+            2 => CRFLS_A::VALUE3,
+            3 => CRFLS_A::VALUE4,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == CRFLS_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == CRFLS_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == CRFLS_A::VALUE3
+    }
+    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[inline(always)]
+    pub fn is_value4(&self) -> bool {
+        *self == CRFLS_A::VALUE4
+    }
+}
+#[doc = "Write proxy for field `CRFLS`"]
+pub struct CRFLS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CRFLSW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: CRFLSW) -> &'a mut W {
+impl<'a> CRFLS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: CRFLS_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "CSGySR0"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(CRFLSW::VALUE1)
+        self.variant(CRFLS_A::VALUE1)
     }
     #[doc = "CSGySR1"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(CRFLSW::VALUE2)
+        self.variant(CRFLS_A::VALUE2)
     }
     #[doc = "CSGySR2"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(CRFLSW::VALUE3)
+        self.variant(CRFLS_A::VALUE3)
     }
     #[doc = "CSGySR3"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(CRFLSW::VALUE4)
+        self.variant(CRFLS_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 10)) | (((value as u32) & 0x03) << 10);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `CSLS`"]
-pub enum CSLSW {
-    #[doc = "CSGySR0"]
+#[doc = "Comparator clamped state interrupt line selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum CSLS_A {
+    #[doc = "0: CSGySR0"]
     VALUE1,
-    #[doc = "CSGySR1"]
+    #[doc = "1: CSGySR1"]
     VALUE2,
-    #[doc = "CSGySR2"]
+    #[doc = "2: CSGySR2"]
     VALUE3,
-    #[doc = "CSGySR3"]
+    #[doc = "3: CSGySR3"]
     VALUE4,
 }
-impl CSLSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            CSLSW::VALUE1 => 0,
-            CSLSW::VALUE2 => 1,
-            CSLSW::VALUE3 => 2,
-            CSLSW::VALUE4 => 3,
+impl From<CSLS_A> for u8 {
+    #[inline(always)]
+    fn from(variant: CSLS_A) -> Self {
+        match variant {
+            CSLS_A::VALUE1 => 0,
+            CSLS_A::VALUE2 => 1,
+            CSLS_A::VALUE3 => 2,
+            CSLS_A::VALUE4 => 3,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _CSLSW<'a> {
+#[doc = "Reader of field `CSLS`"]
+pub type CSLS_R = crate::R<u8, CSLS_A>;
+impl CSLS_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CSLS_A {
+        match self.bits {
+            0 => CSLS_A::VALUE1,
+            1 => CSLS_A::VALUE2,
+            2 => CSLS_A::VALUE3,
+            3 => CSLS_A::VALUE4,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == CSLS_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == CSLS_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == CSLS_A::VALUE3
+    }
+    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[inline(always)]
+    pub fn is_value4(&self) -> bool {
+        *self == CSLS_A::VALUE4
+    }
+}
+#[doc = "Write proxy for field `CSLS`"]
+pub struct CSLS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CSLSW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: CSLSW) -> &'a mut W {
+impl<'a> CSLS_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: CSLS_A) -> &'a mut W {
         {
-            self.bits(variant._bits())
+            self.bits(variant.into())
         }
     }
     #[doc = "CSGySR0"]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(CSLSW::VALUE1)
+        self.variant(CSLS_A::VALUE1)
     }
     #[doc = "CSGySR1"]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(CSLSW::VALUE2)
+        self.variant(CSLS_A::VALUE2)
     }
     #[doc = "CSGySR2"]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(CSLSW::VALUE3)
+        self.variant(CSLS_A::VALUE3)
     }
     #[doc = "CSGySR3"]
-    #[inline]
+    #[inline(always)]
     pub fn value4(self) -> &'a mut W {
-        self.variant(CSLSW::VALUE4)
+        self.variant(CSLS_A::VALUE4)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 12)) | (((value as u32) & 0x03) << 12);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:1 - Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection"]
-    #[inline]
-    pub fn vls1s(&self) -> VLS1SR {
-        VLS1SR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn vls1s(&self) -> VLS1S_R {
+        VLS1S_R::new((self.bits & 0x03) as u8)
     }
     #[doc = "Bits 2:3 - Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection"]
-    #[inline]
-    pub fn vls2s(&self) -> VLS2SR {
-        VLS2SR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn vls2s(&self) -> VLS2S_R {
+        VLS2S_R::new(((self.bits >> 2) & 0x03) as u8)
     }
     #[doc = "Bits 4:5 - Conversion trigger interrupt line selection"]
-    #[inline]
-    pub fn trls(&self) -> TRLSR {
-        TRLSR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn trls(&self) -> TRLS_R {
+        TRLS_R::new(((self.bits >> 4) & 0x03) as u8)
     }
     #[doc = "Bits 6:7 - Start/Stop trigger interrupt line selection"]
-    #[inline]
-    pub fn ssls(&self) -> SSLSR {
-        SSLSR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn ssls(&self) -> SSLS_R {
+        SSLS_R::new(((self.bits >> 6) & 0x03) as u8)
     }
     #[doc = "Bits 8:9 - Shadow transfer done interrupt line selection"]
-    #[inline]
-    pub fn stls(&self) -> STLSR {
-        STLSR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn stls(&self) -> STLS_R {
+        STLS_R::new(((self.bits >> 8) & 0x03) as u8)
     }
     #[doc = "Bits 10:11 - Comparator rise/fall interrupt line selection"]
-    #[inline]
-    pub fn crfls(&self) -> CRFLSR {
-        CRFLSR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn crfls(&self) -> CRFLS_R {
+        CRFLS_R::new(((self.bits >> 10) & 0x03) as u8)
     }
     #[doc = "Bits 12:13 - Comparator clamped state interrupt line selection"]
-    #[inline]
-    pub fn csls(&self) -> CSLSR {
-        CSLSR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn csls(&self) -> CSLS_R {
+        CSLS_R::new(((self.bits >> 12) & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:1 - Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection"]
-    #[inline]
-    pub fn vls1s(&mut self) -> _VLS1SW {
-        _VLS1SW { w: self }
+    #[inline(always)]
+    pub fn vls1s(&mut self) -> VLS1S_W {
+        VLS1S_W { w: self }
     }
     #[doc = "Bits 2:3 - Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection"]
-    #[inline]
-    pub fn vls2s(&mut self) -> _VLS2SW {
-        _VLS2SW { w: self }
+    #[inline(always)]
+    pub fn vls2s(&mut self) -> VLS2S_W {
+        VLS2S_W { w: self }
     }
     #[doc = "Bits 4:5 - Conversion trigger interrupt line selection"]
-    #[inline]
-    pub fn trls(&mut self) -> _TRLSW {
-        _TRLSW { w: self }
+    #[inline(always)]
+    pub fn trls(&mut self) -> TRLS_W {
+        TRLS_W { w: self }
     }
     #[doc = "Bits 6:7 - Start/Stop trigger interrupt line selection"]
-    #[inline]
-    pub fn ssls(&mut self) -> _SSLSW {
-        _SSLSW { w: self }
+    #[inline(always)]
+    pub fn ssls(&mut self) -> SSLS_W {
+        SSLS_W { w: self }
     }
     #[doc = "Bits 8:9 - Shadow transfer done interrupt line selection"]
-    #[inline]
-    pub fn stls(&mut self) -> _STLSW {
-        _STLSW { w: self }
+    #[inline(always)]
+    pub fn stls(&mut self) -> STLS_W {
+        STLS_W { w: self }
     }
     #[doc = "Bits 10:11 - Comparator rise/fall interrupt line selection"]
-    #[inline]
-    pub fn crfls(&mut self) -> _CRFLSW {
-        _CRFLSW { w: self }
+    #[inline(always)]
+    pub fn crfls(&mut self) -> CRFLS_W {
+        CRFLS_W { w: self }
     }
     #[doc = "Bits 12:13 - Comparator clamped state interrupt line selection"]
-    #[inline]
-    pub fn csls(&mut self) -> _CSLSW {
-        _CSLSW { w: self }
+    #[inline(always)]
+    pub fn csls(&mut self) -> CSLS_W {
+        CSLS_W { w: self }
     }
 }
