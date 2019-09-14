@@ -8,7 +8,7 @@ main() {
         rustup component add clippy
         cargo install cargo-update || echo "cargo-update already installed"
         cargo install cargo-travis || echo "cargo-travis already installed"
-        cargo isntall-update -a
+        cargo install-update -a
     fi
 }
 
