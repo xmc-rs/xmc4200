@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euxo pipefail
+set -e
 
 main() {
     if [ $TARGET != x86_64-unknown-linux-gnu ]; then
