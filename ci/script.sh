@@ -6,18 +6,23 @@ set -ex
 
 # TODO This is the "test phase", tweak it as you see fit
 main() {
-    cross build --target $TARGET
-    cross build --target $TARGET --release
+
+    cargo check --target $TARGET
+    cargo clippy --target $TARGET --all-features
+
+    # cargo build --target $TARGET
+    cargo build --verbose --target $TARGET --all && cargo coverage --verbose && bash <(curl -s https://codecov.io/bash) -s target/kcov
+    cargo coverage --verbose
 
     if [ ! -z $DISABLE_TESTS ]; then
         return
     fi
 
-    cross test --target $TARGET
-    cross test --target $TARGET --release
+    # cross test --target $TARGET
+    cargo test --target $TARGET --release --verbose --all
 
-    # cross run --target $TARGET
-    # cross run --target $TARGET --release
+    cargo doc --verbose --no-deps --document-private-items
+    cargo doc-upload
 }
 
 # we don't run the "test phase" when doing deploys
