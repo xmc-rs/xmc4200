@@ -31,7 +31,12 @@ matrix:
 before_install: set -e
 
 install:
-  - sh ci/install.sh
+  - rustup target add $TARGET
+  - rustup component add rustfmt --toolchain nightly-$TARGET
+  - rustup component add clippy --toolchain nightly-$TARGET
+  - cargo install cargo-update || echo "cargo-update already installed"
+  - cargo install cargo-travis || echo "cargo-travis already installed"
+  - cargo install-update -a
 
 script:
   - bash ci/script.sh
