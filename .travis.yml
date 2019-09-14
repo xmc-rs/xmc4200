@@ -8,6 +8,11 @@ matrix:
         apt:
           packages:
             - dos2unix
+            - libcurl4-openssl-dev
+            - libelf-dev
+            - libdw-dev
+            - binutils-dev
+            - cmake
 
     # - env: TARGET=thumbv7em-none-eabi
     #   rust: nightly
@@ -37,12 +42,6 @@ cache: cargo
 before_cache:
   # Travis can't cache files that are not readable by "others"
   - chmod -R a+r $HOME/.cargo
-
-branches:
-  only:
-    # release tags
-    - /^v\d+\.\d+\.\d+.*$/
-    - master
 
 notifications:
   email:
