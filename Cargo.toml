@@ -5,18 +5,18 @@ version = "0.2.0"
 authors = ["Lucas Brendel <lucasbrendel@gmail.com>"]
 readme = "README.md"
 license = "MIT"
-repository = "https://github.com/lucasbrendel/xmc4200"
+repository = "https://github.com/xmc-rs/xmc4200"
 keywords = ["cortex-m", "infineon", "arm", "xmc4x"]
 documentation = "https://docs.rs/xmc4200/"
 
 [dependencies]
-cortex-m = "0.6.0"
-bare-metal = "0.2.4"
-vcell = "0.1.0"
+cortex-m = "0.6.1"
+bare-metal = "0.2.5"
+vcell = "0.1.2"
 
 [dependencies.cortex-m-rt]
 optional = true
-version = "0.6.7"
+version = "0.6.10"
 
 [features]
 rt = ["cortex-m-rt"]
