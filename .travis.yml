@@ -39,7 +39,7 @@ script:
   - cargo coverage --verbose
   - cargo test --target $TARGET --release --verbose --all
   - cargo doc --verbose --no-deps --document-private-items
-  - cargo doc-upload
+  # - cargo doc-upload
 after_script: set +e
 cache: cargo
 notifications:
