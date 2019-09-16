@@ -1,4 +1,8 @@
 language: rust
+rust:
+  - nightly
+  - beta
+  - stable
 addons:
   apt:
     packages:
@@ -10,24 +14,18 @@ addons:
 matrix:
   include:
     - env: TARGET=x86_64-unknown-linux-gnu
-      rust:
-        - nightly
-        - beta
-        - stable
       addons:
         apt:
           packages:
             - dos2unix
 
     - env: TARGET=thumbv7em-none-eabi
-      rust: nightly
       addons:
         apt:
           packages:
             - gcc-arm-none-eabi
 
     - env: TARGET=thumbv7em-none-eabihf
-      rust: nightly
       addons:
         apt:
           packages:
