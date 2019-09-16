@@ -15,8 +15,8 @@ jobs:
     strategy:
       matrix:
         rust-channel: [ 'stable', 'nightly' ]
-        rust-host: [ 'x86_64-unknown-linux-gnu', 'thumbv7em-none-eabi' ]
-    name: ${{ matrix.rust-channel }}-${{ matrix.rust-host }}
+        rust-target: [ 'x86_64-unknown-linux-gnu', 'thumbv7em-none-eabi' ]
+    name: ${{ matrix.rust-channel }}-${{ matrix.rust-target }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -24,15 +24,15 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
             toolchain: ${{ matrix.rust-channel }}
-            target: ${{ matrix.rust-host }}
+            target: ${{ matrix.rust-target }}
             override: true
       - name: Cargo Check
         uses: actions-rs/cargo@v1
         with:
           command: check
-          args: --verbose
+          args: --target ${{ matrix.rust-target }}
       - name: Cargo Build
         uses: actions-rs/cargo@v1
         with:
           command: build
-          args: --verbose
+          args: --verbose --target ${{ matrix.rust-target }}
