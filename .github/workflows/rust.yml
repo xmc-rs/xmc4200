@@ -1,0 +1,28 @@
+name: Rust
+
+on: 
+  push:
+    branches:
+     - master
+     - dev/*
+     - dependabot/*
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        rust-channel: [ 'stable', 'nightly' ]
+        rust-host: [ 'x86_64-unknown-linux-gnu', 'thumbv7em-none-eabi', 'thumbv7em-none-eabihf' ]
+    name: ${{ matrix.rust-channel }}-${{ matrix.rust-host }}
+    steps:
+      - uses: actions/checkout@v1
+      - uses: raftario/setup-rust-action@v1
+        with:
+          rust-channel: ${{ matrix.rust-channel }}
+          rust-host: ${{ matrix.rust-host }}
+      - name: Setup Rust
+      - run: cargo build --verbose
