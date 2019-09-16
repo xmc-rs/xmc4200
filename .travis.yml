@@ -1,8 +1,4 @@
 language: rust
-rust:
-  - nightly
-  - beta
-  - stable
 addons:
   apt:
     packages:
