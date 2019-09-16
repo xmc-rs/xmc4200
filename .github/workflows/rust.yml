@@ -24,5 +24,4 @@ jobs:
         with:
           rust-channel: ${{ matrix.rust-channel }}
           rust-host: ${{ matrix.rust-host }}
-      - name: Setup Rust
       - run: cargo build --verbose
