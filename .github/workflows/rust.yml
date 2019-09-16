@@ -11,17 +11,26 @@ on:
     - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  check:
     strategy:
       matrix:
         rust-channel: [ 'stable', 'nightly' ]
-        rust-host: [ 'x86_64-unknown-linux-gnu', 'thumbv7em-none-eabi', 'thumbv7em-none-eabihf' ]
+        rust-host: [ 'x86_64-unknown-linux-gnu' ]
     name: ${{ matrix.rust-channel }}-${{ matrix.rust-host }}
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: raftario/setup-rust-action@v1
+      - uses: actions/checkout@master
+      - name: Install nightly
+        uses: actions-rs/toolchain@v1
         with:
-          rust-channel: ${{ matrix.rust-channel }}
-          rust-host: ${{ matrix.rust-host }}
-      - run: cargo build --verbose
+            toolchain: ${{ matrix.rust-channel }}
+            target: ${{ matrix.rust-host }}
+            override: true
+
+      # `cargo check` command here will use installed `nightly`
+      # as it set as an "override" for current directory
+
+      - name: Cargo Check
+        uses: actions-rs/cargo@v1
+        with:
+          command: check
