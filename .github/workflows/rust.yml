@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         rust-channel: [ 'stable', 'nightly' ]
-        rust-host: [ 'x86_64-unknown-linux-gnu' ]
+        rust-host: [ 'x86_64-unknown-linux-gnu', 'thumbv7em-none-eabi' ]
     name: ${{ matrix.rust-channel }}-${{ matrix.rust-host }}
     runs-on: ubuntu-latest
     steps:
