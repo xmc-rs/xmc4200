@@ -1,11 +1,6 @@
 name: Rust
 
-on: 
-  push:
-    branches:
-     - master
-     - dev/*
-     - dependabot/*
+on:
   pull_request:
     branches:
     - master
