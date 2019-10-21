@@ -6,8 +6,9 @@ authors = ["Lucas Brendel <lucasbrendel@gmail.com>"]
 readme = "README.md"
 license = "MIT"
 repository = "https://github.com/xmc-rs/xmc4200"
-keywords = ["cortex-m", "infineon", "arm", "xmc4x"]
+keywords = ["cortex-m", "xmc4x", "no_std", "svd2rust", "embedded"]
 documentation = "https://docs.rs/xmc4200/"
+categories = ["embedded", "no-std"]
 
 [dependencies]
 cortex-m = "0.6.1"
@@ -20,3 +21,6 @@ version = "0.6.10"
 
 [features]
 rt = ["cortex-m-rt/device"]
+
+[package.metadata.docs.rs]
+features = ['rt']
