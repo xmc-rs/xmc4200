@@ -14,17 +14,14 @@ impl crate::ResetValue for super::HRCCFG {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HRCPM_A {
     #[doc = "0: High resolution generation logic is OFF. It is not possible to generate high resolution signals throughout any of the high resolution channels, HRCy."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: High resolution generation logic is ON. In this mode it is possible to generate a high resolution signal placement with the HRCy subunits."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HRCPM_A> for bool {
     #[inline(always)]
     fn from(variant: HRCPM_A) -> Self {
-        match variant {
-            HRCPM_A::VALUE1 => false,
-            HRCPM_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `HRCPM`"]
@@ -92,17 +89,14 @@ impl<'a> HRCPM_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HRC0E_A {
     #[doc = "0: HRC0 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC0 to generate an output PWM signal."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRC0 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HRC0E_A> for bool {
     #[inline(always)]
     fn from(variant: HRC0E_A) -> Self {
-        match variant {
-            HRC0E_A::VALUE1 => false,
-            HRC0E_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `HRC0E`"]
@@ -170,17 +164,14 @@ impl<'a> HRC0E_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HRC1E_A {
     #[doc = "0: HRC1 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC1 to generate an output PWM signal."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRC1 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HRC1E_A> for bool {
     #[inline(always)]
     fn from(variant: HRC1E_A) -> Self {
-        match variant {
-            HRC1E_A::VALUE1 => false,
-            HRC1E_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `HRC1E`"]
@@ -248,17 +239,14 @@ impl<'a> HRC1E_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HRC2E_A {
     #[doc = "0: HRC2 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC2 to generate an output PWM signal."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRC2 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HRC2E_A> for bool {
     #[inline(always)]
     fn from(variant: HRC2E_A) -> Self {
-        match variant {
-            HRC2E_A::VALUE1 => false,
-            HRC2E_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `HRC2E`"]
@@ -326,17 +314,14 @@ impl<'a> HRC2E_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HRC3E_A {
     #[doc = "0: HRC3 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC3 to generate an output PWM signal."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRC3 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HRC3E_A> for bool {
     #[inline(always)]
     fn from(variant: HRC3E_A) -> Self {
-        match variant {
-            HRC3E_A::VALUE1 => false,
-            HRC3E_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `HRC3E`"]
@@ -402,25 +387,21 @@ impl<'a> HRC3E_W<'a> {
 }
 #[doc = "Clock information control\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum CLKC_A {
     #[doc = "0: No clock frequency is selected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Module clock frequency is 180 MHz"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Module clock frequency is 120 MHz"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Module clock frequency is 80 MHz"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<CLKC_A> for u8 {
     #[inline(always)]
     fn from(variant: CLKC_A) -> Self {
-        match variant {
-            CLKC_A::VALUE1 => 0,
-            CLKC_A::VALUE2 => 1,
-            CLKC_A::VALUE3 => 2,
-            CLKC_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `CLKC`"]
@@ -500,17 +481,14 @@ impl<'a> CLKC_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LRC0E_A {
     #[doc = "0: HRC0 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC0 to generate an output PWM signal."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRC0 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<LRC0E_A> for bool {
     #[inline(always)]
     fn from(variant: LRC0E_A) -> Self {
-        match variant {
-            LRC0E_A::VALUE1 => false,
-            LRC0E_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `LRC0E`"]
@@ -578,17 +556,14 @@ impl<'a> LRC0E_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LRC1E_A {
     #[doc = "0: HRC1 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC1 to generate an output PWM signal."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRC1 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<LRC1E_A> for bool {
     #[inline(always)]
     fn from(variant: LRC1E_A) -> Self {
-        match variant {
-            LRC1E_A::VALUE1 => false,
-            LRC1E_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `LRC1E`"]
@@ -656,17 +631,14 @@ impl<'a> LRC1E_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LRC2E_A {
     #[doc = "0: HRC2 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC2 to generate an output PWM signal."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRC2 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<LRC2E_A> for bool {
     #[inline(always)]
     fn from(variant: LRC2E_A) -> Self {
-        match variant {
-            LRC2E_A::VALUE1 => false,
-            LRC2E_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `LRC2E`"]
@@ -734,17 +706,14 @@ impl<'a> LRC2E_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LRC3E_A {
     #[doc = "0: HRC3 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC3 to generate an output PWM signal."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRC3 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<LRC3E_A> for bool {
     #[inline(always)]
     fn from(variant: LRC3E_A) -> Self {
-        match variant {
-            LRC3E_A::VALUE1 => false,
-            LRC3E_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `LRC3E`"]

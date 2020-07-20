@@ -14,17 +14,14 @@ impl crate::ResetValue for super::PL {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PSL0_A {
     #[doc = "0: HRPWMx.OUTy0 output passive level is set to LOW"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRPWMx.OUTy0 output passive level is set to HIGH"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PSL0_A> for bool {
     #[inline(always)]
     fn from(variant: PSL0_A) -> Self {
-        match variant {
-            PSL0_A::VALUE1 => false,
-            PSL0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PSL0`"]
@@ -92,17 +89,14 @@ impl<'a> PSL0_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PSL1_A {
     #[doc = "0: HRPWMx.OUTy1 output passive level is set to LOW"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRPWMx.OUTy1 output passive level is set to HIGH"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PSL1_A> for bool {
     #[inline(always)]
     fn from(variant: PSL1_A) -> Self {
-        match variant {
-            PSL1_A::VALUE1 => false,
-            PSL1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PSL1`"]

@@ -35,7 +35,7 @@ pub struct RegisterBlock {
     #[doc = "0x40 - Hibernate Internal Control Set Register"]
     pub hintset: HINTSET,
 }
-#[doc = "Hibernate Domain Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [hdstat](hdstat) module"]
+#[doc = "Hibernate Domain Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hdstat](hdstat) module"]
 pub type HDSTAT = crate::Reg<u32, _HDSTAT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -44,7 +44,7 @@ pub struct _HDSTAT;
 impl crate::Readable for HDSTAT {}
 #[doc = "Hibernate Domain Status Register"]
 pub mod hdstat;
-#[doc = "Hibernate Domain Status Clear Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [hdclr](hdclr) module"]
+#[doc = "Hibernate Domain Status Clear Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hdclr](hdclr) module"]
 pub type HDCLR = crate::Reg<u32, _HDCLR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -53,7 +53,7 @@ pub struct _HDCLR;
 impl crate::Writable for HDCLR {}
 #[doc = "Hibernate Domain Status Clear Register"]
 pub mod hdclr;
-#[doc = "Hibernate Domain Status Set Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [hdset](hdset) module"]
+#[doc = "Hibernate Domain Status Set Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hdset](hdset) module"]
 pub type HDSET = crate::Reg<u32, _HDSET>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -62,7 +62,7 @@ pub struct _HDSET;
 impl crate::Writable for HDSET {}
 #[doc = "Hibernate Domain Status Set Register"]
 pub mod hdset;
-#[doc = "Hibernate Domain Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [hdcr](hdcr) module"]
+#[doc = "Hibernate Domain Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hdcr](hdcr) module"]
 pub type HDCR = crate::Reg<u32, _HDCR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -73,7 +73,7 @@ impl crate::Readable for HDCR {}
 impl crate::Writable for HDCR {}
 #[doc = "Hibernate Domain Control Register"]
 pub mod hdcr;
-#[doc = "fOSI Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [oscsictrl](oscsictrl) module"]
+#[doc = "fOSI Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [oscsictrl](oscsictrl) module"]
 pub type OSCSICTRL = crate::Reg<u32, _OSCSICTRL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -84,7 +84,7 @@ impl crate::Readable for OSCSICTRL {}
 impl crate::Writable for OSCSICTRL {}
 #[doc = "fOSI Control Register"]
 pub mod oscsictrl;
-#[doc = "OSC_ULP Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [osculstat](osculstat) module"]
+#[doc = "OSC_ULP Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [osculstat](osculstat) module"]
 pub type OSCULSTAT = crate::Reg<u32, _OSCULSTAT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -93,7 +93,7 @@ pub struct _OSCULSTAT;
 impl crate::Readable for OSCULSTAT {}
 #[doc = "OSC_ULP Status Register"]
 pub mod osculstat;
-#[doc = "OSC_ULP Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [osculctrl](osculctrl) module"]
+#[doc = "OSC_ULP Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [osculctrl](osculctrl) module"]
 pub type OSCULCTRL = crate::Reg<u32, _OSCULCTRL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -104,7 +104,7 @@ impl crate::Readable for OSCULCTRL {}
 impl crate::Writable for OSCULCTRL {}
 #[doc = "OSC_ULP Control Register"]
 pub mod osculctrl;
-#[doc = "Analog Wake-up Configuration Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [lpacconf](lpacconf) module"]
+#[doc = "Analog Wake-up Configuration Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lpacconf](lpacconf) module"]
 pub type LPACCONF = crate::Reg<u32, _LPACCONF>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -115,7 +115,7 @@ impl crate::Readable for LPACCONF {}
 impl crate::Writable for LPACCONF {}
 #[doc = "Analog Wake-up Configuration Register"]
 pub mod lpacconf;
-#[doc = "LPAC Threshold Register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [lpacth0](lpacth0) module"]
+#[doc = "LPAC Threshold Register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lpacth0](lpacth0) module"]
 pub type LPACTH0 = crate::Reg<u32, _LPACTH0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -126,7 +126,7 @@ impl crate::Readable for LPACTH0 {}
 impl crate::Writable for LPACTH0 {}
 #[doc = "LPAC Threshold Register 0"]
 pub mod lpacth0;
-#[doc = "LPAC Threshold Register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [lpacth1](lpacth1) module"]
+#[doc = "LPAC Threshold Register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lpacth1](lpacth1) module"]
 pub type LPACTH1 = crate::Reg<u32, _LPACTH1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -137,7 +137,7 @@ impl crate::Readable for LPACTH1 {}
 impl crate::Writable for LPACTH1 {}
 #[doc = "LPAC Threshold Register 1"]
 pub mod lpacth1;
-#[doc = "Hibernate Analog Control State Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [lpacst](lpacst) module"]
+#[doc = "Hibernate Analog Control State Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lpacst](lpacst) module"]
 pub type LPACST = crate::Reg<u32, _LPACST>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -146,7 +146,7 @@ pub struct _LPACST;
 impl crate::Readable for LPACST {}
 #[doc = "Hibernate Analog Control State Register"]
 pub mod lpacst;
-#[doc = "LPAC Control Clear Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [lpacclr](lpacclr) module"]
+#[doc = "LPAC Control Clear Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lpacclr](lpacclr) module"]
 pub type LPACCLR = crate::Reg<u32, _LPACCLR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -155,7 +155,7 @@ pub struct _LPACCLR;
 impl crate::Writable for LPACCLR {}
 #[doc = "LPAC Control Clear Register"]
 pub mod lpacclr;
-#[doc = "LPAC Control Set Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [lpacset](lpacset) module"]
+#[doc = "LPAC Control Set Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lpacset](lpacset) module"]
 pub type LPACSET = crate::Reg<u32, _LPACSET>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -164,7 +164,7 @@ pub struct _LPACSET;
 impl crate::Writable for LPACSET {}
 #[doc = "LPAC Control Set Register"]
 pub mod lpacset;
-#[doc = "Hibernate Internal Control State Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [hintst](hintst) module"]
+#[doc = "Hibernate Internal Control State Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hintst](hintst) module"]
 pub type HINTST = crate::Reg<u32, _HINTST>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -173,7 +173,7 @@ pub struct _HINTST;
 impl crate::Readable for HINTST {}
 #[doc = "Hibernate Internal Control State Register"]
 pub mod hintst;
-#[doc = "Hibernate Internal Control Clear Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [hintclr](hintclr) module"]
+#[doc = "Hibernate Internal Control Clear Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hintclr](hintclr) module"]
 pub type HINTCLR = crate::Reg<u32, _HINTCLR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -182,7 +182,7 @@ pub struct _HINTCLR;
 impl crate::Writable for HINTCLR {}
 #[doc = "Hibernate Internal Control Clear Register"]
 pub mod hintclr;
-#[doc = "Hibernate Internal Control Set Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [hintset](hintset) module"]
+#[doc = "Hibernate Internal Control Set Register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hintset](hintset) module"]
 pub type HINTSET = crate::Reg<u32, _HINTSET>;
 #[allow(missing_docs)]
 #[doc(hidden)]

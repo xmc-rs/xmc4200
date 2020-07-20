@@ -12,22 +12,19 @@ impl crate::ResetValue for super::GSEL {
 }
 #[doc = "Source selector 0 comparator set configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum C0SS_A {
     #[doc = "0: CMP output of CSG0 unit can be used as set source for the output latch"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CMP output of CSG1 unit can be used as set source for the output latch"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CMP output of CSG2 unit can be used as set source for the output latch"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<C0SS_A> for u8 {
     #[inline(always)]
     fn from(variant: C0SS_A) -> Self {
-        match variant {
-            C0SS_A::VALUE1 => 0,
-            C0SS_A::VALUE2 => 1,
-            C0SS_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `C0SS`"]
@@ -94,22 +91,19 @@ impl<'a> C0SS_W<'a> {
 }
 #[doc = "Source selector 0 comparator clear configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum C0CS_A {
     #[doc = "0: CMP output of CSG0 unit can be used as clear source for the output latch"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CMP output of CSG1 unit can be used as clear source for the output latch"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CMP output of CSG2 unit can be used as clear source for the output latch"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<C0CS_A> for u8 {
     #[inline(always)]
     fn from(variant: C0CS_A) -> Self {
-        match variant {
-            C0CS_A::VALUE1 => 0,
-            C0CS_A::VALUE2 => 1,
-            C0CS_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `C0CS`"]
@@ -176,19 +170,17 @@ impl<'a> C0CS_W<'a> {
 }
 #[doc = "Source selector 0 set configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum S0M_A {
     #[doc = "0: Set from source selector 0 is controlled via the Capture/Compare Unit timer, CCSTy signal"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set from source selector 0 is controlled via the CMP output from the CSGy unit. Which unit is being used is configured via the C0SS field."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<S0M_A> for u8 {
     #[inline(always)]
     fn from(variant: S0M_A) -> Self {
-        match variant {
-            S0M_A::VALUE1 => 0,
-            S0M_A::VALUE2 => 1,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `S0M`"]
@@ -244,19 +236,17 @@ impl<'a> S0M_W<'a> {
 }
 #[doc = "Source selector 0 clear configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum C0M_A {
     #[doc = "0: Clear from source selector 0 is controlled via the Capture/Compare Unit timer, CCSTy signal"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear from source selector 0 is controlled via the CMP output from the CSGy unit. Which unit is being used is configured via the C0CS field."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<C0M_A> for u8 {
     #[inline(always)]
     fn from(variant: C0M_A) -> Self {
-        match variant {
-            C0M_A::VALUE1 => 0,
-            C0M_A::VALUE2 => 1,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `C0M`"]
@@ -312,25 +302,21 @@ impl<'a> C0M_W<'a> {
 }
 #[doc = "Source selector 0 set edge configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum S0ES_A {
     #[doc = "0: Generation of the set signal is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set signal is generated on a LOW to HIGH transition of the selected input"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Set signal is generated on a HIGH to LOW transition of the selected input"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Set signal is generated on both transitions of the selected input"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<S0ES_A> for u8 {
     #[inline(always)]
     fn from(variant: S0ES_A) -> Self {
-        match variant {
-            S0ES_A::VALUE1 => 0,
-            S0ES_A::VALUE2 => 1,
-            S0ES_A::VALUE3 => 2,
-            S0ES_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `S0ES`"]
@@ -409,25 +395,21 @@ impl<'a> S0ES_W<'a> {
 }
 #[doc = "Source selector 0 clear edge configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum C0ES_A {
     #[doc = "0: Generation of the clear signal is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear signal is generated on a LOW to HIGH transition of the selected input"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Clear signal is generated on a HIGH to LOW transition of the selected input"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Clear signal is generated on both transitions of the selected input"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<C0ES_A> for u8 {
     #[inline(always)]
     fn from(variant: C0ES_A) -> Self {
-        match variant {
-            C0ES_A::VALUE1 => 0,
-            C0ES_A::VALUE2 => 1,
-            C0ES_A::VALUE3 => 2,
-            C0ES_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `C0ES`"]
@@ -506,22 +488,19 @@ impl<'a> C0ES_W<'a> {
 }
 #[doc = "Source selector 1 comparator set configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum C1SS_A {
     #[doc = "0: CMP output of CSG0 unit can be used as set source for the output latch"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CMP output of CSG2 unit can be used as set source for the output latch"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CMP output of CSG2 unit can be used as set source for the output latch"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<C1SS_A> for u8 {
     #[inline(always)]
     fn from(variant: C1SS_A) -> Self {
-        match variant {
-            C1SS_A::VALUE1 => 0,
-            C1SS_A::VALUE2 => 1,
-            C1SS_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `C1SS`"]
@@ -588,22 +567,19 @@ impl<'a> C1SS_W<'a> {
 }
 #[doc = "Source selector 1 comparator clear configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum C1CS_A {
     #[doc = "0: CMP output of CSG0 unit can be used as clear source for the output latch"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CMP output of CSG2 unit can be used as clear source for the output latch"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CMP output of CSG2 unit can be used as clear source for the output latch"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<C1CS_A> for u8 {
     #[inline(always)]
     fn from(variant: C1CS_A) -> Self {
-        match variant {
-            C1CS_A::VALUE1 => 0,
-            C1CS_A::VALUE2 => 1,
-            C1CS_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `C1CS`"]
@@ -670,19 +646,17 @@ impl<'a> C1CS_W<'a> {
 }
 #[doc = "Source selector 1 set configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum S1M_A {
     #[doc = "0: Set from source selector 1 is controlled via the Capture/Compare Unit timer, CCSTy signal"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set from source selector 1 is controlled via the CMP output from the CSGy unit. Which unit is being used is configured via the C1SS field."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<S1M_A> for u8 {
     #[inline(always)]
     fn from(variant: S1M_A) -> Self {
-        match variant {
-            S1M_A::VALUE1 => 0,
-            S1M_A::VALUE2 => 1,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `S1M`"]
@@ -738,19 +712,17 @@ impl<'a> S1M_W<'a> {
 }
 #[doc = "Source selector 1 clear configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum C1M_A {
     #[doc = "0: Clear from source selector 1 is controlled via the Capture/Compare Unit timer, CCSTy signal"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear from source selector 1 is controlled via the CMP output from the CSGy unit. Which unit is being used is configured via the C1CS field."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<C1M_A> for u8 {
     #[inline(always)]
     fn from(variant: C1M_A) -> Self {
-        match variant {
-            C1M_A::VALUE1 => 0,
-            C1M_A::VALUE2 => 1,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `C1M`"]
@@ -806,25 +778,21 @@ impl<'a> C1M_W<'a> {
 }
 #[doc = "Source selector 1 set edge configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum S1ES_A {
     #[doc = "0: Generation of the set signal is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set signal is generated on a LOW to HIGH transition of the selected input"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Set signal is generated on a HIGH to LOW transition of the selected input"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Set signal is generated on both transitions of the selected input"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<S1ES_A> for u8 {
     #[inline(always)]
     fn from(variant: S1ES_A) -> Self {
-        match variant {
-            S1ES_A::VALUE1 => 0,
-            S1ES_A::VALUE2 => 1,
-            S1ES_A::VALUE3 => 2,
-            S1ES_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `S1ES`"]
@@ -903,25 +871,21 @@ impl<'a> S1ES_W<'a> {
 }
 #[doc = "Source selector 1 clear edge configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum C1ES_A {
     #[doc = "0: Generation of the clear signal is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear signal is generated on a LOW to HIGH transition of the selected input"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Clear signal is generated on a HIGH to LOW transition of the selected input"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Clear signal is generated on both transitions of the selected input"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<C1ES_A> for u8 {
     #[inline(always)]
     fn from(variant: C1ES_A) -> Self {
-        match variant {
-            C1ES_A::VALUE1 => 0,
-            C1ES_A::VALUE2 => 1,
-            C1ES_A::VALUE3 => 2,
-            C1ES_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `C1ES`"]

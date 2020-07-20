@@ -12,61 +12,45 @@ impl crate::ResetValue for super::DCI {
 }
 #[doc = "Value Selector input selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum SVIS_A {
     #[doc = "0: HRPWMx.SyIA"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRPWMx.SyIB"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: HRPWMx.SyIC"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: HRPWMx.SyID"]
-    VALUE4,
+    VALUE4 = 3,
     #[doc = "4: HRPWMx.SyIE"]
-    VALUE5,
+    VALUE5 = 4,
     #[doc = "5: HRPWMx.SyIF"]
-    VALUE6,
+    VALUE6 = 5,
     #[doc = "6: HRPWMx.SyIG"]
-    VALUE7,
+    VALUE7 = 6,
     #[doc = "7: HRPWMx.SyIH"]
-    VALUE8,
+    VALUE8 = 7,
     #[doc = "8: HRPWMx.SyII"]
-    VALUE9,
+    VALUE9 = 8,
     #[doc = "9: HRPWMx.SyIJ"]
-    VALUE10,
+    VALUE10 = 9,
     #[doc = "10: HRPWMx.SyIK"]
-    VALUE11,
+    VALUE11 = 10,
     #[doc = "11: HRPWMx.SyIL"]
-    VALUE12,
+    VALUE12 = 11,
     #[doc = "12: HRPWMx.SyIM"]
-    VALUE13,
+    VALUE13 = 12,
     #[doc = "13: HRPWMx.SyIN"]
-    VALUE14,
+    VALUE14 = 13,
     #[doc = "14: HRPWMx.SyIO"]
-    VALUE15,
+    VALUE15 = 14,
     #[doc = "15: HRPWMx.SyIP"]
-    VALUE16,
+    VALUE16 = 15,
 }
 impl From<SVIS_A> for u8 {
     #[inline(always)]
     fn from(variant: SVIS_A) -> Self {
-        match variant {
-            SVIS_A::VALUE1 => 0,
-            SVIS_A::VALUE2 => 1,
-            SVIS_A::VALUE3 => 2,
-            SVIS_A::VALUE4 => 3,
-            SVIS_A::VALUE5 => 4,
-            SVIS_A::VALUE6 => 5,
-            SVIS_A::VALUE7 => 6,
-            SVIS_A::VALUE8 => 7,
-            SVIS_A::VALUE9 => 8,
-            SVIS_A::VALUE10 => 9,
-            SVIS_A::VALUE11 => 10,
-            SVIS_A::VALUE12 => 11,
-            SVIS_A::VALUE13 => 12,
-            SVIS_A::VALUE14 => 13,
-            SVIS_A::VALUE15 => 14,
-            SVIS_A::VALUE16 => 15,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `SVIS`"]
@@ -333,25 +317,21 @@ impl<'a> STIS_W<'a> {
 }
 #[doc = "Slope generation clock selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum SCS_A {
     #[doc = "0: HRPWMx.MCLK (Module clock is used)"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRPWMx.ECLKA (External clock is used)"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: HRPWMx.ECLKB (External clock is used)"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: HRPWMx.ECLKC (External clock is used)"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<SCS_A> for u8 {
     #[inline(always)]
     fn from(variant: SCS_A) -> Self {
-        match variant {
-            SCS_A::VALUE1 => 0,
-            SCS_A::VALUE2 => 1,
-            SCS_A::VALUE3 => 2,
-            SCS_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `SCS`"]

@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::HRGHRS>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HRGR_A {
     #[doc = "0: High resolution logic is not working"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: High resolution logic is working"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HRGR_A> for bool {
     #[inline(always)]
     fn from(variant: HRGR_A) -> Self {
-        match variant {
-            HRGR_A::VALUE1 => false,
-            HRGR_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `HRGR`"]

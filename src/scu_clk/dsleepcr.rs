@@ -14,17 +14,14 @@ impl crate::ResetValue for super::DSLEEPCR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SYSSEL_A {
     #[doc = "0: fOFI clock"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: fPLL clock"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<SYSSEL_A> for bool {
     #[inline(always)]
     fn from(variant: SYSSEL_A) -> Self {
-        match variant {
-            SYSSEL_A::VALUE1 => false,
-            SYSSEL_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `SYSSEL`"]
@@ -92,17 +89,14 @@ impl<'a> SYSSEL_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FPDN_A {
     #[doc = "1: Flash power down module"]
-    VALUE1,
+    VALUE1 = 1,
     #[doc = "0: No effect"]
-    VALUE2,
+    VALUE2 = 0,
 }
 impl From<FPDN_A> for bool {
     #[inline(always)]
     fn from(variant: FPDN_A) -> Self {
-        match variant {
-            FPDN_A::VALUE1 => true,
-            FPDN_A::VALUE2 => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `FPDN`"]
@@ -170,17 +164,14 @@ impl<'a> FPDN_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PLLPDN_A {
     #[doc = "1: Switch off main PLL"]
-    VALUE1,
+    VALUE1 = 1,
     #[doc = "0: No effect"]
-    VALUE2,
+    VALUE2 = 0,
 }
 impl From<PLLPDN_A> for bool {
     #[inline(always)]
     fn from(variant: PLLPDN_A) -> Self {
-        match variant {
-            PLLPDN_A::VALUE1 => true,
-            PLLPDN_A::VALUE2 => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PLLPDN`"]
@@ -248,17 +239,14 @@ impl<'a> PLLPDN_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VCOPDN_A {
     #[doc = "1: Switch off VCO of main PLL"]
-    VALUE1,
+    VALUE1 = 1,
     #[doc = "0: No effect"]
-    VALUE2,
+    VALUE2 = 0,
 }
 impl From<VCOPDN_A> for bool {
     #[inline(always)]
     fn from(variant: VCOPDN_A) -> Self {
-        match variant {
-            VCOPDN_A::VALUE1 => true,
-            VCOPDN_A::VALUE2 => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `VCOPDN`"]
@@ -326,17 +314,14 @@ impl<'a> VCOPDN_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum USBCR_A {
     #[doc = "0: Disable"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Enable"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<USBCR_A> for bool {
     #[inline(always)]
     fn from(variant: USBCR_A) -> Self {
-        match variant {
-            USBCR_A::VALUE1 => false,
-            USBCR_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `USBCR`"]
@@ -404,17 +389,14 @@ impl<'a> USBCR_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CCUCR_A {
     #[doc = "0: Disable"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Enable"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<CCUCR_A> for bool {
     #[inline(always)]
     fn from(variant: CCUCR_A) -> Self {
-        match variant {
-            CCUCR_A::VALUE1 => false,
-            CCUCR_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `CCUCR`"]
@@ -482,17 +464,14 @@ impl<'a> CCUCR_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum WDTCR_A {
     #[doc = "0: Disable"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Enable"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<WDTCR_A> for bool {
     #[inline(always)]
     fn from(variant: WDTCR_A) -> Self {
-        match variant {
-            WDTCR_A::VALUE1 => false,
-            WDTCR_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `WDTCR`"]

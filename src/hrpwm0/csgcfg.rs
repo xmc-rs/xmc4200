@@ -12,22 +12,19 @@ impl crate::ResetValue for super::CSGCFG {
 }
 #[doc = "CSG0 Power Mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum C0PM_A {
     #[doc = "0: CSG0 unit is powered OFF"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSG0 unit is set in Low Speed Mode"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "3: CSG0 unit is set in High Speed Mode"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<C0PM_A> for u8 {
     #[inline(always)]
     fn from(variant: C0PM_A) -> Self {
-        match variant {
-            C0PM_A::VALUE1 => 0,
-            C0PM_A::VALUE2 => 1,
-            C0PM_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `C0PM`"]
@@ -94,22 +91,19 @@ impl<'a> C0PM_W<'a> {
 }
 #[doc = "CSG1 Power Mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum C1PM_A {
     #[doc = "0: CSG1 unit is powered OFF"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSG1 unit is set in Low Speed Mode"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "3: CSG1 unit is set in High Speed Mode"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<C1PM_A> for u8 {
     #[inline(always)]
     fn from(variant: C1PM_A) -> Self {
-        match variant {
-            C1PM_A::VALUE1 => 0,
-            C1PM_A::VALUE2 => 1,
-            C1PM_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `C1PM`"]
@@ -176,22 +170,19 @@ impl<'a> C1PM_W<'a> {
 }
 #[doc = "CSG2 Power Mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum C2PM_A {
     #[doc = "0: CSG2 unit is powered OFF"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSG2 unit is set in Low Speed Mode"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "3: CSG2 unit is set in High Speed Mode"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<C2PM_A> for u8 {
     #[inline(always)]
     fn from(variant: C2PM_A) -> Self {
-        match variant {
-            C2PM_A::VALUE1 => 0,
-            C2PM_A::VALUE2 => 1,
-            C2PM_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `C2PM`"]

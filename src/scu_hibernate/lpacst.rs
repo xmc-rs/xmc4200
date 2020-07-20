@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::LPACST>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VBATSCMP_A {
     #[doc = "0: Ready to start new compare operation"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Compare operation completed"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<VBATSCMP_A> for bool {
     #[inline(always)]
     fn from(variant: VBATSCMP_A) -> Self {
-        match variant {
-            VBATSCMP_A::VALUE1 => false,
-            VBATSCMP_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `VBATSCMP`"]
@@ -43,17 +40,14 @@ impl VBATSCMP_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AHIBIO0SCMP_A {
     #[doc = "0: Ready to start new compare operation"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Compare operation completed"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<AHIBIO0SCMP_A> for bool {
     #[inline(always)]
     fn from(variant: AHIBIO0SCMP_A) -> Self {
-        match variant {
-            AHIBIO0SCMP_A::VALUE1 => false,
-            AHIBIO0SCMP_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `AHIBIO0SCMP`"]
@@ -82,17 +76,14 @@ impl AHIBIO0SCMP_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VBATVAL_A {
     #[doc = "0: Below programmed threshold"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Above programmed threshold"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<VBATVAL_A> for bool {
     #[inline(always)]
     fn from(variant: VBATVAL_A) -> Self {
-        match variant {
-            VBATVAL_A::VALUE1 => false,
-            VBATVAL_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `VBATVAL`"]
@@ -121,17 +112,14 @@ impl VBATVAL_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AHIBIO0VAL_A {
     #[doc = "0: Below programmed threshold"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Above programmed threshold"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<AHIBIO0VAL_A> for bool {
     #[inline(always)]
     fn from(variant: AHIBIO0VAL_A) -> Self {
-        match variant {
-            AHIBIO0VAL_A::VALUE1 => false,
-            AHIBIO0VAL_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `AHIBIO0VAL`"]

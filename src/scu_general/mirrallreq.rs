@@ -12,17 +12,14 @@ impl crate::ResetValue for super::MIRRALLREQ {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum REQ_AW {
     #[doc = "0: No action"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Start mirror update"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<REQ_AW> for bool {
     #[inline(always)]
     fn from(variant: REQ_AW) -> Self {
-        match variant {
-            REQ_AW::VALUE1 => false,
-            REQ_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `REQ`"]

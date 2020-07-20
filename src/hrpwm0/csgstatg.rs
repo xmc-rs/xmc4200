@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::CSGSTATG>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum D0RB_A {
     #[doc = "0: DAC0 is not running (control logic is disabled)"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: DAC0 is running"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<D0RB_A> for bool {
     #[inline(always)]
     fn from(variant: D0RB_A) -> Self {
-        match variant {
-            D0RB_A::VALUE1 => false,
-            D0RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `D0RB`"]
@@ -43,17 +40,14 @@ impl D0RB_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum C0RB_A {
     #[doc = "0: CMP0 functionality is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CMP0 functionality is enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<C0RB_A> for bool {
     #[inline(always)]
     fn from(variant: C0RB_A) -> Self {
-        match variant {
-            C0RB_A::VALUE1 => false,
-            C0RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `C0RB`"]
@@ -82,17 +76,14 @@ impl C0RB_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PSLS0_A {
     #[doc = "0: CMP0 output is not clamped"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CMP0 output is clamped"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PSLS0_A> for bool {
     #[inline(always)]
     fn from(variant: PSLS0_A) -> Self {
-        match variant {
-            PSLS0_A::VALUE1 => false,
-            PSLS0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PSLS0`"]
@@ -121,17 +112,14 @@ impl PSLS0_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum D1RB_A {
     #[doc = "0: DAC1 is not running (control logic is disabled)"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: DAC1 is running"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<D1RB_A> for bool {
     #[inline(always)]
     fn from(variant: D1RB_A) -> Self {
-        match variant {
-            D1RB_A::VALUE1 => false,
-            D1RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `D1RB`"]
@@ -160,17 +148,14 @@ impl D1RB_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum C1RB_A {
     #[doc = "0: CMP1 functionality is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CMP1 functionality is enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<C1RB_A> for bool {
     #[inline(always)]
     fn from(variant: C1RB_A) -> Self {
-        match variant {
-            C1RB_A::VALUE1 => false,
-            C1RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `C1RB`"]
@@ -199,17 +184,14 @@ impl C1RB_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PSLS1_A {
     #[doc = "0: CMP1 output is not clamped"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CMP1 output is clamped"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PSLS1_A> for bool {
     #[inline(always)]
     fn from(variant: PSLS1_A) -> Self {
-        match variant {
-            PSLS1_A::VALUE1 => false,
-            PSLS1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PSLS1`"]
@@ -238,17 +220,14 @@ impl PSLS1_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum D2RB_A {
     #[doc = "0: DAC2 is not running (control logic is disabled)"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: DAC1 is running"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<D2RB_A> for bool {
     #[inline(always)]
     fn from(variant: D2RB_A) -> Self {
-        match variant {
-            D2RB_A::VALUE1 => false,
-            D2RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `D2RB`"]
@@ -277,17 +256,14 @@ impl D2RB_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum C2RB_A {
     #[doc = "0: CMP2 functionality is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CMP2 functionality is enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<C2RB_A> for bool {
     #[inline(always)]
     fn from(variant: C2RB_A) -> Self {
-        match variant {
-            C2RB_A::VALUE1 => false,
-            C2RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `C2RB`"]
@@ -316,17 +292,14 @@ impl C2RB_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PSLS2_A {
     #[doc = "0: CMP2 output is not clamped"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CMP2 output is clamped"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PSLS2_A> for bool {
     #[inline(always)]
     fn from(variant: PSLS2_A) -> Self {
-        match variant {
-            PSLS2_A::VALUE1 => false,
-            PSLS2_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PSLS2`"]

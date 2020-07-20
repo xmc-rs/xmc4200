@@ -12,25 +12,21 @@ impl crate::ResetValue for super::SC {
 }
 #[doc = "Prescaler external start configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum PSRM_A {
     #[doc = "0: External start trigger is ignored"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Start prescaler"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Clear prescaler"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Clear & Start prescaler"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<PSRM_A> for u8 {
     #[inline(always)]
     fn from(variant: PSRM_A) -> Self {
-        match variant {
-            PSRM_A::VALUE1 => 0,
-            PSRM_A::VALUE2 => 1,
-            PSRM_A::VALUE3 => 2,
-            PSRM_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `PSRM`"]
@@ -109,25 +105,21 @@ impl<'a> PSRM_W<'a> {
 }
 #[doc = "Prescaler external stop configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum PSTM_A {
     #[doc = "0: External stop trigger is ignored"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Stop prescaler"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Clear prescaler"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Clear & Stop prescaler"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<PSTM_A> for u8 {
     #[inline(always)]
     fn from(variant: PSTM_A) -> Self {
-        match variant {
-            PSTM_A::VALUE1 => 0,
-            PSTM_A::VALUE2 => 1,
-            PSTM_A::VALUE3 => 2,
-            PSTM_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `PSTM`"]
@@ -208,17 +200,14 @@ impl<'a> PSTM_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FPD_A {
     #[doc = "0: Division by 4 enabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Division by 4 disabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<FPD_A> for bool {
     #[inline(always)]
     fn from(variant: FPD_A) -> Self {
-        match variant {
-            FPD_A::VALUE1 => false,
-            FPD_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `FPD`"]
@@ -284,25 +273,21 @@ impl<'a> FPD_W<'a> {
 }
 #[doc = "Prescaler division factor\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum PSV_A {
     #[doc = "0: division by 1"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: division by 2"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: division by 4"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: division by 8"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<PSV_A> for u8 {
     #[inline(always)]
     fn from(variant: PSV_A) -> Self {
-        match variant {
-            PSV_A::VALUE1 => 0,
-            PSV_A::VALUE2 => 1,
-            PSV_A::VALUE3 => 2,
-            PSV_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `PSV`"]
@@ -381,25 +366,21 @@ impl<'a> PSV_W<'a> {
 }
 #[doc = "Slope control mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum SCM_A {
     #[doc = "0: Slope generation disabled. Used when the switch between the two reference values, CSGyDSV1This register contains the actual value used for the DSV1 reference. and CSGyDSV2This register contains the actual value used for the DSV2 reference. is done via external signal."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Decrementing slope generation."]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Incrementing slope generation."]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Triangular slope generation."]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<SCM_A> for u8 {
     #[inline(always)]
     fn from(variant: SCM_A) -> Self {
-        match variant {
-            SCM_A::VALUE1 => 0,
-            SCM_A::VALUE2 => 1,
-            SCM_A::VALUE3 => 2,
-            SCM_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `SCM`"]
@@ -478,22 +459,19 @@ impl<'a> SCM_W<'a> {
 }
 #[doc = "Slope external start configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum SSRM_A {
     #[doc = "0: External start trigger is ignored"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Start/restart slope generation"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Resumes slope"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<SSRM_A> for u8 {
     #[inline(always)]
     fn from(variant: SSRM_A) -> Self {
-        match variant {
-            SSRM_A::VALUE1 => 0,
-            SSRM_A::VALUE2 => 1,
-            SSRM_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `SSRM`"]
@@ -560,22 +538,19 @@ impl<'a> SSRM_W<'a> {
 }
 #[doc = "Slope external stop configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum SSTM_A {
     #[doc = "0: External stop trigger is ignored"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Stops/Halts the slope generation"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Used in hybrid mode. It freezes the slope generation and feeds constantly the value programmed in CSGyDSV2This register contains the actual value used for the DSV2 reference. to the DAC."]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<SSTM_A> for u8 {
     #[inline(always)]
     fn from(variant: SSTM_A) -> Self {
-        match variant {
-            SSTM_A::VALUE1 => 0,
-            SSTM_A::VALUE2 => 1,
-            SSTM_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `SSTM`"]
@@ -642,22 +617,19 @@ impl<'a> SSTM_W<'a> {
 }
 #[doc = "Slope reference value mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum SVSC_A {
     #[doc = "0: Only CSGyDSV1This register contains the actual value used for the DSV1 reference. value is used for the slope generation: if slope is incrementing, CSGyDSV1This register contains the actual value used for the DSV1 reference. is the bottom reference value from where the ramp starts; if decrementing, then CSGyDSV1This register contains the actual value used for the DSV1 reference. is the upper reference value from where the ramp starts."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: The two reference values are being used: CSGyDSV1This register contains the actual value used for the DSV1 reference. is the low or high reference value from where the ramp starts (incrementing or decrementing respectively); CSGyDSV2This register contains the actual value used for the DSV2 reference. is used as a static value (this value is constantly fed to the DAC after a stop trigger as been detected)."]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: The two reference values are used: CSGyDSV1This register contains the actual value used for the DSV1 reference. is the low or high reference value from where the slope starts (incrementing or decrementing respectively); CSGyDSV2This register contains the actual value used for the DSV2 reference. is used as an internal re start condition for the slope."]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<SVSC_A> for u8 {
     #[inline(always)]
     fn from(variant: SVSC_A) -> Self {
-        match variant {
-            SVSC_A::VALUE1 => 0,
-            SVSC_A::VALUE2 => 1,
-            SVSC_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `SVSC`"]
@@ -724,25 +696,21 @@ impl<'a> SVSC_W<'a> {
 }
 #[doc = "Initial DAC start mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum SWSM_A {
     #[doc = "0: CSGyDSV2This register contains the actual value used for the DSV2 reference. is fed to the DAC and initial conversion trigger is generated."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSGyDSV1This register contains the actual value used for the DSV1 reference. is fed to the DAC and initial conversion trigger is generated."]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CSGyDSV2This register contains the actual value used for the DSV2 reference. is fed to the DAC but initial conversion trigger is not generated."]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: CSGyDSV1This register contains the actual value used for the DSV1 reference. is fed to the DAC but initial conversion trigger is not generated."]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<SWSM_A> for u8 {
     #[inline(always)]
     fn from(variant: SWSM_A) -> Self {
-        match variant {
-            SWSM_A::VALUE1 => 0,
-            SWSM_A::VALUE2 => 1,
-            SWSM_A::VALUE3 => 2,
-            SWSM_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `SWSM`"]
@@ -821,25 +789,21 @@ impl<'a> SWSM_W<'a> {
 }
 #[doc = "Slope step gain configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum GCFG_A {
     #[doc = "0: Each slope step has an increment/decrement of 1"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Each slope step has an increment/decrement of 2"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Each slope step has an increment/decrement of 4"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Each slope step has an increment/decrement of 8"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<GCFG_A> for u8 {
     #[inline(always)]
     fn from(variant: GCFG_A) -> Self {
-        match variant {
-            GCFG_A::VALUE1 => 0,
-            GCFG_A::VALUE2 => 1,
-            GCFG_A::VALUE3 => 2,
-            GCFG_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `GCFG`"]
@@ -944,17 +908,14 @@ impl<'a> IST_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PSE_A {
     #[doc = "0: Pulse swallow disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Pulse swallow enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PSE_A> for bool {
     #[inline(always)]
     fn from(variant: PSE_A) -> Self {
-        match variant {
-            PSE_A::VALUE1 => false,
-            PSE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PSE`"]
@@ -1020,22 +981,19 @@ impl<'a> PSE_W<'a> {
 }
 #[doc = "Pulse swallow window mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum PSWM_A {
     #[doc = "0: 16 clock cycle window"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: 32 clock cycle window"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: 64 clock cycle window"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<PSWM_A> for u8 {
     #[inline(always)]
     fn from(variant: PSWM_A) -> Self {
-        match variant {
-            PSWM_A::VALUE1 => 0,
-            PSWM_A::VALUE2 => 1,
-            PSWM_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `PSWM`"]

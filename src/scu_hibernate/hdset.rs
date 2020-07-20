@@ -12,17 +12,14 @@ impl crate::ResetValue for super::HDSET {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum EPEV_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set wake-up event"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<EPEV_AW> for bool {
     #[inline(always)]
     fn from(variant: EPEV_AW) -> Self {
-        match variant {
-            EPEV_AW::VALUE1 => false,
-            EPEV_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `EPEV`"]
@@ -68,17 +65,14 @@ impl<'a> EPEV_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ENEV_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set wake-up event"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ENEV_AW> for bool {
     #[inline(always)]
     fn from(variant: ENEV_AW) -> Self {
-        match variant {
-            ENEV_AW::VALUE1 => false,
-            ENEV_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `ENEV`"]
@@ -124,17 +118,14 @@ impl<'a> ENEV_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RTCEV_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set wake-up event"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RTCEV_AW> for bool {
     #[inline(always)]
     fn from(variant: RTCEV_AW) -> Self {
-        match variant {
-            RTCEV_AW::VALUE1 => false,
-            RTCEV_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `RTCEV`"]
@@ -180,17 +171,14 @@ impl<'a> RTCEV_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ULPWDG_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set watchdog alarm"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ULPWDG_AW> for bool {
     #[inline(always)]
     fn from(variant: ULPWDG_AW) -> Self {
-        match variant {
-            ULPWDG_AW::VALUE1 => false,
-            ULPWDG_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `ULPWDG`"]
@@ -236,17 +224,14 @@ impl<'a> ULPWDG_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VBATPEV_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set wake-up event"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<VBATPEV_AW> for bool {
     #[inline(always)]
     fn from(variant: VBATPEV_AW) -> Self {
-        match variant {
-            VBATPEV_AW::VALUE1 => false,
-            VBATPEV_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `VBATPEV`"]
@@ -292,17 +277,14 @@ impl<'a> VBATPEV_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VBATNEV_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set wake-up event"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<VBATNEV_AW> for bool {
     #[inline(always)]
     fn from(variant: VBATNEV_AW) -> Self {
-        match variant {
-            VBATNEV_AW::VALUE1 => false,
-            VBATNEV_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `VBATNEV`"]
@@ -348,17 +330,14 @@ impl<'a> VBATNEV_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AHIBIO0PEV_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set wake-up event"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<AHIBIO0PEV_AW> for bool {
     #[inline(always)]
     fn from(variant: AHIBIO0PEV_AW) -> Self {
-        match variant {
-            AHIBIO0PEV_AW::VALUE1 => false,
-            AHIBIO0PEV_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `AHIBIO0PEV`"]
@@ -404,17 +383,14 @@ impl<'a> AHIBIO0PEV_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AHIBIO0NEV_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Set wake-up event"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<AHIBIO0NEV_AW> for bool {
     #[inline(always)]
     fn from(variant: AHIBIO0NEV_AW) -> Self {
-        match variant {
-            AHIBIO0NEV_AW::VALUE1 => false,
-            AHIBIO0NEV_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `AHIBIO0NEV`"]

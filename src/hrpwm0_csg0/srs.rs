@@ -12,25 +12,21 @@ impl crate::ResetValue for super::SRS {
 }
 #[doc = "Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum VLS1S_A {
     #[doc = "0: CSGySR0"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<VLS1S_A> for u8 {
     #[inline(always)]
     fn from(variant: VLS1S_A) -> Self {
-        match variant {
-            VLS1S_A::VALUE1 => 0,
-            VLS1S_A::VALUE2 => 1,
-            VLS1S_A::VALUE3 => 2,
-            VLS1S_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `VLS1S`"]
@@ -109,25 +105,21 @@ impl<'a> VLS1S_W<'a> {
 }
 #[doc = "Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum VLS2S_A {
     #[doc = "0: CSGySR0"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<VLS2S_A> for u8 {
     #[inline(always)]
     fn from(variant: VLS2S_A) -> Self {
-        match variant {
-            VLS2S_A::VALUE1 => 0,
-            VLS2S_A::VALUE2 => 1,
-            VLS2S_A::VALUE3 => 2,
-            VLS2S_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `VLS2S`"]
@@ -206,25 +198,21 @@ impl<'a> VLS2S_W<'a> {
 }
 #[doc = "Conversion trigger interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum TRLS_A {
     #[doc = "0: CSGySR0"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<TRLS_A> for u8 {
     #[inline(always)]
     fn from(variant: TRLS_A) -> Self {
-        match variant {
-            TRLS_A::VALUE1 => 0,
-            TRLS_A::VALUE2 => 1,
-            TRLS_A::VALUE3 => 2,
-            TRLS_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `TRLS`"]
@@ -303,25 +291,21 @@ impl<'a> TRLS_W<'a> {
 }
 #[doc = "Start/Stop trigger interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum SSLS_A {
     #[doc = "0: CSGySR0"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<SSLS_A> for u8 {
     #[inline(always)]
     fn from(variant: SSLS_A) -> Self {
-        match variant {
-            SSLS_A::VALUE1 => 0,
-            SSLS_A::VALUE2 => 1,
-            SSLS_A::VALUE3 => 2,
-            SSLS_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `SSLS`"]
@@ -400,25 +384,21 @@ impl<'a> SSLS_W<'a> {
 }
 #[doc = "Shadow transfer done interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum STLS_A {
     #[doc = "0: CSGySR0"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<STLS_A> for u8 {
     #[inline(always)]
     fn from(variant: STLS_A) -> Self {
-        match variant {
-            STLS_A::VALUE1 => 0,
-            STLS_A::VALUE2 => 1,
-            STLS_A::VALUE3 => 2,
-            STLS_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `STLS`"]
@@ -497,25 +477,21 @@ impl<'a> STLS_W<'a> {
 }
 #[doc = "Comparator rise/fall interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum CRFLS_A {
     #[doc = "0: CSGySR0"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<CRFLS_A> for u8 {
     #[inline(always)]
     fn from(variant: CRFLS_A) -> Self {
-        match variant {
-            CRFLS_A::VALUE1 => 0,
-            CRFLS_A::VALUE2 => 1,
-            CRFLS_A::VALUE3 => 2,
-            CRFLS_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `CRFLS`"]
@@ -594,25 +570,21 @@ impl<'a> CRFLS_W<'a> {
 }
 #[doc = "Comparator clamped state interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum CSLS_A {
     #[doc = "0: CSGySR0"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<CSLS_A> for u8 {
     #[inline(always)]
     fn from(variant: CSLS_A) -> Self {
-        match variant {
-            CSLS_A::VALUE1 => 0,
-            CSLS_A::VALUE2 => 1,
-            CSLS_A::VALUE3 => 2,
-            CSLS_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `CSLS`"]

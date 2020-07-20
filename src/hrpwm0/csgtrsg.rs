@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::CSGTRSG>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum D0STE_A {
     #[doc = "0: Shadow transfer has been performed."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer has been requested but is still pending completion."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<D0STE_A> for bool {
     #[inline(always)]
     fn from(variant: D0STE_A) -> Self {
-        match variant {
-            D0STE_A::VALUE1 => false,
-            D0STE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `D0STE`"]
@@ -43,17 +40,14 @@ impl D0STE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SW0ST_A {
     #[doc = "0: Inverting input connected to HRPWMx.C0I\\[A\\]"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Inverting input connected to HRPWMx.C0I\\[B\\]"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<SW0ST_A> for bool {
     #[inline(always)]
     fn from(variant: SW0ST_A) -> Self {
-        match variant {
-            SW0ST_A::VALUE1 => false,
-            SW0ST_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `SW0ST`"]
@@ -82,17 +76,14 @@ impl SW0ST_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum D1STE_A {
     #[doc = "0: Shadow transfer has been performed."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer has been requested but is still pending completion."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<D1STE_A> for bool {
     #[inline(always)]
     fn from(variant: D1STE_A) -> Self {
-        match variant {
-            D1STE_A::VALUE1 => false,
-            D1STE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `D1STE`"]
@@ -121,17 +112,14 @@ impl D1STE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SW1ST_A {
     #[doc = "0: Inverting input connected to HRPWMx.C1I\\[A\\]"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Inverting input connected to HRPWMx.C1I\\[B\\]"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<SW1ST_A> for bool {
     #[inline(always)]
     fn from(variant: SW1ST_A) -> Self {
-        match variant {
-            SW1ST_A::VALUE1 => false,
-            SW1ST_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `SW1ST`"]
@@ -160,17 +148,14 @@ impl SW1ST_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum D2STE_A {
     #[doc = "0: Shadow transfer has been performed."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer has been requested but is still pending completion."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<D2STE_A> for bool {
     #[inline(always)]
     fn from(variant: D2STE_A) -> Self {
-        match variant {
-            D2STE_A::VALUE1 => false,
-            D2STE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `D2STE`"]
@@ -199,17 +184,14 @@ impl D2STE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SW2ST_A {
     #[doc = "0: Inverting input connected to HRPWMx.C2I\\[A\\]"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Inverting input connected to HRPWMx.C2I\\[B\\]"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<SW2ST_A> for bool {
     #[inline(always)]
     fn from(variant: SW2ST_A) -> Self {
-        match variant {
-            SW2ST_A::VALUE1 => false,
-            SW2ST_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `SW2ST`"]

@@ -12,25 +12,21 @@ impl crate::ResetValue for super::HRBSC {
 }
 #[doc = "Suspend configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum SUSCFG_A {
     #[doc = "0: Suspend is ignored."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CSGy and HRCy units are halted."]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Comparator outputs, HRPWMx.CyO are clamped to passive level and the CSGy units are halted. High resolution channel outputs, HRPWMx.HROUTy0 and HRPWMx.HROUTy1, are clamped to passive state and the HRCy units are halted."]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: CSGy units are halted. High resolution channel outputs, HRPWMx.HROUTy0 and HRPWMx.HROUTy1, are clamped to passive state and the HRCy units are halted."]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<SUSCFG_A> for u8 {
     #[inline(always)]
     fn from(variant: SUSCFG_A) -> Self {
-        match variant {
-            SUSCFG_A::VALUE1 => 0,
-            SUSCFG_A::VALUE2 => 1,
-            SUSCFG_A::VALUE3 => 2,
-            SUSCFG_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `SUSCFG`"]

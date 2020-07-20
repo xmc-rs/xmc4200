@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::CSGFSG>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum S0RB_A {
     #[doc = "0: Slope generation is stopped."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Slope generation is running."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<S0RB_A> for bool {
     #[inline(always)]
     fn from(variant: S0RB_A) -> Self {
-        match variant {
-            S0RB_A::VALUE1 => false,
-            S0RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `S0RB`"]
@@ -43,17 +40,14 @@ impl S0RB_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum P0RB_A {
     #[doc = "0: Prescaler is stopped. The clock used for the slope generation is halted and therefore the slope is frozen."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Prescaler is running."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<P0RB_A> for bool {
     #[inline(always)]
     fn from(variant: P0RB_A) -> Self {
-        match variant {
-            P0RB_A::VALUE1 => false,
-            P0RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `P0RB`"]
@@ -82,17 +76,14 @@ impl P0RB_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum S1RB_A {
     #[doc = "0: Slope generation is stopped."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Slope generation is running."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<S1RB_A> for bool {
     #[inline(always)]
     fn from(variant: S1RB_A) -> Self {
-        match variant {
-            S1RB_A::VALUE1 => false,
-            S1RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `S1RB`"]
@@ -121,17 +112,14 @@ impl S1RB_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum P1RB_A {
     #[doc = "0: Prescaler is stopped. The clock used for the slope generation is halted and therefore the slope is frozen."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Prescaler is running."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<P1RB_A> for bool {
     #[inline(always)]
     fn from(variant: P1RB_A) -> Self {
-        match variant {
-            P1RB_A::VALUE1 => false,
-            P1RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `P1RB`"]
@@ -160,17 +148,14 @@ impl P1RB_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum S2RB_A {
     #[doc = "0: Slope generation is stopped."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Slope generation is running."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<S2RB_A> for bool {
     #[inline(always)]
     fn from(variant: S2RB_A) -> Self {
-        match variant {
-            S2RB_A::VALUE1 => false,
-            S2RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `S2RB`"]
@@ -199,17 +184,14 @@ impl S2RB_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum P2RB_A {
     #[doc = "0: Prescaler is stopped. The clock used for the slope generation is halted and therefore the slope is frozen."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Prescaler is running."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<P2RB_A> for bool {
     #[inline(always)]
     fn from(variant: P2RB_A) -> Self {
-        match variant {
-            P2RB_A::VALUE1 => false,
-            P2RB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `P2RB`"]

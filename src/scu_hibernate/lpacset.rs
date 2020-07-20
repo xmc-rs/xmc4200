@@ -12,17 +12,14 @@ impl crate::ResetValue for super::LPACSET {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VBATSCMP_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Start compare operation"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<VBATSCMP_AW> for bool {
     #[inline(always)]
     fn from(variant: VBATSCMP_AW) -> Self {
-        match variant {
-            VBATSCMP_AW::VALUE1 => false,
-            VBATSCMP_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `VBATSCMP`"]
@@ -68,17 +65,14 @@ impl<'a> VBATSCMP_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AHIBIO0SCMP_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Start compare operation"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<AHIBIO0SCMP_AW> for bool {
     #[inline(always)]
     fn from(variant: AHIBIO0SCMP_AW) -> Self {
-        match variant {
-            AHIBIO0SCMP_AW::VALUE1 => false,
-            AHIBIO0SCMP_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `AHIBIO0SCMP`"]
@@ -124,17 +118,14 @@ impl<'a> AHIBIO0SCMP_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VBATVAL_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Above programmed threshold"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<VBATVAL_AW> for bool {
     #[inline(always)]
     fn from(variant: VBATVAL_AW) -> Self {
-        match variant {
-            VBATVAL_AW::VALUE1 => false,
-            VBATVAL_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `VBATVAL`"]
@@ -180,17 +171,14 @@ impl<'a> VBATVAL_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AHIBIO0VAL_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Above programmed threshold"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<AHIBIO0VAL_AW> for bool {
     #[inline(always)]
     fn from(variant: AHIBIO0VAL_AW) -> Self {
-        match variant {
-            AHIBIO0VAL_AW::VALUE1 => false,
-            AHIBIO0VAL_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `AHIBIO0VAL`"]

@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::HRCSTSG>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum H0STE_A {
     #[doc = "0: No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<H0STE_A> for bool {
     #[inline(always)]
     fn from(variant: H0STE_A) -> Self {
-        match variant {
-            H0STE_A::VALUE1 => false,
-            H0STE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `H0STE`"]
@@ -43,17 +40,14 @@ impl H0STE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum H0DSTE_A {
     #[doc = "0: No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<H0DSTE_A> for bool {
     #[inline(always)]
     fn from(variant: H0DSTE_A) -> Self {
-        match variant {
-            H0DSTE_A::VALUE1 => false,
-            H0DSTE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `H0DSTE`"]
@@ -82,17 +76,14 @@ impl H0DSTE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum H1STE_A {
     #[doc = "0: No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<H1STE_A> for bool {
     #[inline(always)]
     fn from(variant: H1STE_A) -> Self {
-        match variant {
-            H1STE_A::VALUE1 => false,
-            H1STE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `H1STE`"]
@@ -121,17 +112,14 @@ impl H1STE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum H1DSTE_A {
     #[doc = "0: No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<H1DSTE_A> for bool {
     #[inline(always)]
     fn from(variant: H1DSTE_A) -> Self {
-        match variant {
-            H1DSTE_A::VALUE1 => false,
-            H1DSTE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `H1DSTE`"]
@@ -160,17 +148,14 @@ impl H1DSTE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum H2STE_A {
     #[doc = "0: No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<H2STE_A> for bool {
     #[inline(always)]
     fn from(variant: H2STE_A) -> Self {
-        match variant {
-            H2STE_A::VALUE1 => false,
-            H2STE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `H2STE`"]
@@ -199,17 +184,14 @@ impl H2STE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum H2DSTE_A {
     #[doc = "0: No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<H2DSTE_A> for bool {
     #[inline(always)]
     fn from(variant: H2DSTE_A) -> Self {
-        match variant {
-            H2DSTE_A::VALUE1 => false,
-            H2DSTE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `H2DSTE`"]
@@ -238,17 +220,14 @@ impl H2DSTE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum H3STE_A {
     #[doc = "0: No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<H3STE_A> for bool {
     #[inline(always)]
     fn from(variant: H3STE_A) -> Self {
-        match variant {
-            H3STE_A::VALUE1 => false,
-            H3STE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `H3STE`"]
@@ -277,17 +256,14 @@ impl H3STE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum H3DSTE_A {
     #[doc = "0: No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<H3DSTE_A> for bool {
     #[inline(always)]
     fn from(variant: H3DSTE_A) -> Self {
-        match variant {
-            H3DSTE_A::VALUE1 => false,
-            H3DSTE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `H3DSTE`"]

@@ -12,61 +12,45 @@ impl crate::ResetValue for super::PLC {
 }
 #[doc = "Clamping control signal selector\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum IPLS_A {
     #[doc = "0: HRPWMx.BLyA"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRPWMx.BLyB"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: HRPWMx.BLyC"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: HRPWMx.BLyD"]
-    VALUE4,
+    VALUE4 = 3,
     #[doc = "4: HRPWMx.BLyE"]
-    VALUE5,
+    VALUE5 = 4,
     #[doc = "5: HRPWMx.BLyF"]
-    VALUE6,
+    VALUE6 = 5,
     #[doc = "6: HRPWMx.BLyG"]
-    VALUE7,
+    VALUE7 = 6,
     #[doc = "7: HRPWMx.BLyH"]
-    VALUE8,
+    VALUE8 = 7,
     #[doc = "8: HRPWMx.BLyI"]
-    VALUE9,
+    VALUE9 = 8,
     #[doc = "9: HRPWMx.BLyJ"]
-    VALUE10,
+    VALUE10 = 9,
     #[doc = "10: HRPWMx.BLyK"]
-    VALUE11,
+    VALUE11 = 10,
     #[doc = "11: HRPWMx.BLyL"]
-    VALUE12,
+    VALUE12 = 11,
     #[doc = "12: HRPWMx.BLyM"]
-    VALUE13,
+    VALUE13 = 12,
     #[doc = "13: HRPWMx.BLyN"]
-    VALUE14,
+    VALUE14 = 13,
     #[doc = "14: HRPWMx.BLyO"]
-    VALUE15,
+    VALUE15 = 14,
     #[doc = "15: HRPWMx.BLyP"]
-    VALUE16,
+    VALUE16 = 15,
 }
 impl From<IPLS_A> for u8 {
     #[inline(always)]
     fn from(variant: IPLS_A) -> Self {
-        match variant {
-            IPLS_A::VALUE1 => 0,
-            IPLS_A::VALUE2 => 1,
-            IPLS_A::VALUE3 => 2,
-            IPLS_A::VALUE4 => 3,
-            IPLS_A::VALUE5 => 4,
-            IPLS_A::VALUE6 => 5,
-            IPLS_A::VALUE7 => 6,
-            IPLS_A::VALUE8 => 7,
-            IPLS_A::VALUE9 => 8,
-            IPLS_A::VALUE10 => 9,
-            IPLS_A::VALUE11 => 10,
-            IPLS_A::VALUE12 => 11,
-            IPLS_A::VALUE13 => 12,
-            IPLS_A::VALUE14 => 13,
-            IPLS_A::VALUE15 => 14,
-            IPLS_A::VALUE16 => 15,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `IPLS`"]
@@ -277,22 +261,19 @@ impl<'a> IPLS_W<'a> {
 }
 #[doc = "Clamping control signal level selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum PLCL_A {
     #[doc = "0: Clamping control disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Output is set to clamped level when the control signal is HIGH"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Output is set to clamped level when the control signal is LOW"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<PLCL_A> for u8 {
     #[inline(always)]
     fn from(variant: PLCL_A) -> Self {
-        match variant {
-            PLCL_A::VALUE1 => 0,
-            PLCL_A::VALUE2 => 1,
-            PLCL_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `PLCL`"]
@@ -361,17 +342,14 @@ impl<'a> PLCL_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PSL_A {
     #[doc = "0: Output clamped level is LOW"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Output clamped level is HIGH"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PSL_A> for bool {
     #[inline(always)]
     fn from(variant: PSL_A) -> Self {
-        match variant {
-            PSL_A::VALUE1 => false,
-            PSL_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PSL`"]
@@ -439,17 +417,14 @@ impl<'a> PSL_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PLSW_A {
     #[doc = "0: External signal and SW can remove the output from the clamped state"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Only SW can remove the output from the clamped state"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PLSW_A> for bool {
     #[inline(always)]
     fn from(variant: PLSW_A) -> Self {
-        match variant {
-            PLSW_A::VALUE1 => false,
-            PLSW_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PLSW`"]
@@ -515,22 +490,19 @@ impl<'a> PLSW_W<'a> {
 }
 #[doc = "Passive level enter configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum PLEC_A {
     #[doc = "0: Passive level is entered immediately"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Passive level is entered only after the comparator output passes to LOW (output from the blanking stage)"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Passive level is entered only after the comparator output passes to HIGH (output from the blanking stage)"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<PLEC_A> for u8 {
     #[inline(always)]
     fn from(variant: PLEC_A) -> Self {
-        match variant {
-            PLEC_A::VALUE1 => 0,
-            PLEC_A::VALUE2 => 1,
-            PLEC_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `PLEC`"]
@@ -597,22 +569,19 @@ impl<'a> PLEC_W<'a> {
 }
 #[doc = "Passive level exit configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum PLXC_A {
     #[doc = "0: Passive level is exit immediately"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Passive level is exit only after the comparator output passes to LOW (output from the blanking stage)"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Passive level is exit only after the comparator output passes to HIGH (output from the blanking stage)"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<PLXC_A> for u8 {
     #[inline(always)]
     fn from(variant: PLXC_A) -> Self {
-        match variant {
-            PLXC_A::VALUE1 => 0,
-            PLXC_A::VALUE2 => 1,
-            PLXC_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `PLXC`"]
