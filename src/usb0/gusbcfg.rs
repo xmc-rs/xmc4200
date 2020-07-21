@@ -28,14 +28,12 @@ impl<'a> TOUTCAL_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PHYSEL_A {
     #[doc = "1: USB 1.1 full-speed serial transceiver"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PHYSEL_A> for bool {
     #[inline(always)]
     fn from(variant: PHYSEL_A) -> Self {
-        match variant {
-            PHYSEL_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PHYSel`"]
@@ -74,17 +72,14 @@ impl<'a> USBTRDTIM_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TXENDDELAY_A {
     #[doc = "0: Normal mode"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Introduce Tx end delay timers"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<TXENDDELAY_A> for bool {
     #[inline(always)]
     fn from(variant: TXENDDELAY_A) -> Self {
-        match variant {
-            TXENDDELAY_A::VALUE1 => false,
-            TXENDDELAY_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `TxEndDelay`"]
@@ -152,17 +147,14 @@ impl<'a> TXENDDELAY_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FORCEDEVMODE_A {
     #[doc = "0: Normal Mode"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Force Device Mode"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<FORCEDEVMODE_A> for bool {
     #[inline(always)]
     fn from(variant: FORCEDEVMODE_A) -> Self {
-        match variant {
-            FORCEDEVMODE_A::VALUE1 => false,
-            FORCEDEVMODE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ForceDevMode`"]

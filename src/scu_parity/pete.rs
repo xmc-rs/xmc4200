@@ -14,17 +14,14 @@ impl crate::ResetValue for super::PETE {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PETEPS_A {
     #[doc = "0: Disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PETEPS_A> for bool {
     #[inline(always)]
     fn from(variant: PETEPS_A) -> Self {
-        match variant {
-            PETEPS_A::VALUE1 => false,
-            PETEPS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PETEPS`"]
@@ -92,17 +89,14 @@ impl<'a> PETEPS_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PETEDS1_A {
     #[doc = "0: Disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PETEDS1_A> for bool {
     #[inline(always)]
     fn from(variant: PETEDS1_A) -> Self {
-        match variant {
-            PETEDS1_A::VALUE1 => false,
-            PETEDS1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PETEDS1`"]
@@ -170,17 +164,14 @@ impl<'a> PETEDS1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PETEU0_A {
     #[doc = "0: Disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PETEU0_A> for bool {
     #[inline(always)]
     fn from(variant: PETEU0_A) -> Self {
-        match variant {
-            PETEU0_A::VALUE1 => false,
-            PETEU0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PETEU0`"]
@@ -248,17 +239,14 @@ impl<'a> PETEU0_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PETEU1_A {
     #[doc = "0: Disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PETEU1_A> for bool {
     #[inline(always)]
     fn from(variant: PETEU1_A) -> Self {
-        match variant {
-            PETEU1_A::VALUE1 => false,
-            PETEU1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PETEU1`"]
@@ -326,17 +314,14 @@ impl<'a> PETEU1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PETEMC_A {
     #[doc = "0: Disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PETEMC_A> for bool {
     #[inline(always)]
     fn from(variant: PETEMC_A) -> Self {
-        match variant {
-            PETEMC_A::VALUE1 => false,
-            PETEMC_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PETEMC`"]
@@ -404,17 +389,14 @@ impl<'a> PETEMC_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PETEPPRF_A {
     #[doc = "0: Disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PETEPPRF_A> for bool {
     #[inline(always)]
     fn from(variant: PETEPPRF_A) -> Self {
-        match variant {
-            PETEPPRF_A::VALUE1 => false,
-            PETEPPRF_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PETEPPRF`"]
@@ -482,17 +464,14 @@ impl<'a> PETEPPRF_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PETEUSB_A {
     #[doc = "0: Disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PETEUSB_A> for bool {
     #[inline(always)]
     fn from(variant: PETEUSB_A) -> Self {
-        match variant {
-            PETEUSB_A::VALUE1 => false,
-            PETEUSB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PETEUSB`"]

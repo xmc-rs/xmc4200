@@ -14,17 +14,14 @@ impl crate::ResetValue for super::PMTSR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MTENPS_A {
     #[doc = "0: Standard operation"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity bits under test"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<MTENPS_A> for bool {
     #[inline(always)]
     fn from(variant: MTENPS_A) -> Self {
-        match variant {
-            MTENPS_A::VALUE1 => false,
-            MTENPS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MTENPS`"]
@@ -92,17 +89,14 @@ impl<'a> MTENPS_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MTENDS1_A {
     #[doc = "0: Standard operation"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity bits under test"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<MTENDS1_A> for bool {
     #[inline(always)]
     fn from(variant: MTENDS1_A) -> Self {
-        match variant {
-            MTENDS1_A::VALUE1 => false,
-            MTENDS1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MTENDS1`"]
@@ -170,17 +164,14 @@ impl<'a> MTENDS1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MTEU0_A {
     #[doc = "0: Standard operation"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity bits under test"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<MTEU0_A> for bool {
     #[inline(always)]
     fn from(variant: MTEU0_A) -> Self {
-        match variant {
-            MTEU0_A::VALUE1 => false,
-            MTEU0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MTEU0`"]
@@ -248,17 +239,14 @@ impl<'a> MTEU0_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MTEU1_A {
     #[doc = "0: Standard operation"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity bits under test"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<MTEU1_A> for bool {
     #[inline(always)]
     fn from(variant: MTEU1_A) -> Self {
-        match variant {
-            MTEU1_A::VALUE1 => false,
-            MTEU1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MTEU1`"]
@@ -326,17 +314,14 @@ impl<'a> MTEU1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MTEMC_A {
     #[doc = "0: Standard operation"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity bits under test"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<MTEMC_A> for bool {
     #[inline(always)]
     fn from(variant: MTEMC_A) -> Self {
-        match variant {
-            MTEMC_A::VALUE1 => false,
-            MTEMC_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MTEMC`"]
@@ -404,17 +389,14 @@ impl<'a> MTEMC_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MTEPPRF_A {
     #[doc = "0: Standard operation"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity bits under test"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<MTEPPRF_A> for bool {
     #[inline(always)]
     fn from(variant: MTEPPRF_A) -> Self {
-        match variant {
-            MTEPPRF_A::VALUE1 => false,
-            MTEPPRF_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MTEPPRF`"]
@@ -482,17 +464,14 @@ impl<'a> MTEPPRF_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MTUSB_A {
     #[doc = "0: Standard operation"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity bits under test"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<MTUSB_A> for bool {
     #[inline(always)]
     fn from(variant: MTUSB_A) -> Self {
-        match variant {
-            MTUSB_A::VALUE1 => false,
-            MTUSB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MTUSB`"]

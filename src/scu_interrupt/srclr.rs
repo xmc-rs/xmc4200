@@ -12,17 +12,14 @@ impl crate::ResetValue for super::SRCLR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PRWARN_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PRWARN_AW> for bool {
     #[inline(always)]
     fn from(variant: PRWARN_AW) -> Self {
-        match variant {
-            PRWARN_AW::VALUE1 => false,
-            PRWARN_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `PRWARN`"]
@@ -68,17 +65,14 @@ impl<'a> PRWARN_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PI_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PI_AW> for bool {
     #[inline(always)]
     fn from(variant: PI_AW) -> Self {
-        match variant {
-            PI_AW::VALUE1 => false,
-            PI_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `PI`"]
@@ -124,17 +118,14 @@ impl<'a> PI_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AI_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<AI_AW> for bool {
     #[inline(always)]
     fn from(variant: AI_AW) -> Self {
-        match variant {
-            AI_AW::VALUE1 => false,
-            AI_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `AI`"]
@@ -180,17 +171,14 @@ impl<'a> AI_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DLROVR_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<DLROVR_AW> for bool {
     #[inline(always)]
     fn from(variant: DLROVR_AW) -> Self {
-        match variant {
-            DLROVR_AW::VALUE1 => false,
-            DLROVR_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `DLROVR`"]
@@ -236,17 +224,14 @@ impl<'a> DLROVR_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LPACCR_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<LPACCR_AW> for bool {
     #[inline(always)]
     fn from(variant: LPACCR_AW) -> Self {
-        match variant {
-            LPACCR_AW::VALUE1 => false,
-            LPACCR_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `LPACCR`"]
@@ -292,17 +277,14 @@ impl<'a> LPACCR_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LPACTH0_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<LPACTH0_AW> for bool {
     #[inline(always)]
     fn from(variant: LPACTH0_AW) -> Self {
-        match variant {
-            LPACTH0_AW::VALUE1 => false,
-            LPACTH0_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `LPACTH0`"]
@@ -348,17 +330,14 @@ impl<'a> LPACTH0_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LPACTH1_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<LPACTH1_AW> for bool {
     #[inline(always)]
     fn from(variant: LPACTH1_AW) -> Self {
-        match variant {
-            LPACTH1_AW::VALUE1 => false,
-            LPACTH1_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `LPACTH1`"]
@@ -404,17 +383,14 @@ impl<'a> LPACTH1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LPACST_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<LPACST_AW> for bool {
     #[inline(always)]
     fn from(variant: LPACST_AW) -> Self {
-        match variant {
-            LPACST_AW::VALUE1 => false,
-            LPACST_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `LPACST`"]
@@ -460,17 +436,14 @@ impl<'a> LPACST_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LPACCLR_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<LPACCLR_AW> for bool {
     #[inline(always)]
     fn from(variant: LPACCLR_AW) -> Self {
-        match variant {
-            LPACCLR_AW::VALUE1 => false,
-            LPACCLR_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `LPACCLR`"]
@@ -516,17 +489,14 @@ impl<'a> LPACCLR_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LPACSET_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<LPACSET_AW> for bool {
     #[inline(always)]
     fn from(variant: LPACSET_AW) -> Self {
-        match variant {
-            LPACSET_AW::VALUE1 => false,
-            LPACSET_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `LPACSET`"]
@@ -572,17 +542,14 @@ impl<'a> LPACSET_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HINTST_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HINTST_AW> for bool {
     #[inline(always)]
     fn from(variant: HINTST_AW) -> Self {
-        match variant {
-            HINTST_AW::VALUE1 => false,
-            HINTST_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `HINTST`"]
@@ -628,17 +595,14 @@ impl<'a> HINTST_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HINTCLR_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HINTCLR_AW> for bool {
     #[inline(always)]
     fn from(variant: HINTCLR_AW) -> Self {
-        match variant {
-            HINTCLR_AW::VALUE1 => false,
-            HINTCLR_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `HINTCLR`"]
@@ -684,17 +648,14 @@ impl<'a> HINTCLR_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HINTSET_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HINTSET_AW> for bool {
     #[inline(always)]
     fn from(variant: HINTSET_AW) -> Self {
-        match variant {
-            HINTSET_AW::VALUE1 => false,
-            HINTSET_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `HINTSET`"]
@@ -740,17 +701,14 @@ impl<'a> HINTSET_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HDCLR_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HDCLR_AW> for bool {
     #[inline(always)]
     fn from(variant: HDCLR_AW) -> Self {
-        match variant {
-            HDCLR_AW::VALUE1 => false,
-            HDCLR_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `HDCLR`"]
@@ -796,17 +754,14 @@ impl<'a> HDCLR_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HDSET_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HDSET_AW> for bool {
     #[inline(always)]
     fn from(variant: HDSET_AW) -> Self {
-        match variant {
-            HDSET_AW::VALUE1 => false,
-            HDSET_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `HDSET`"]
@@ -852,17 +807,14 @@ impl<'a> HDSET_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HDCR_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HDCR_AW> for bool {
     #[inline(always)]
     fn from(variant: HDCR_AW) -> Self {
-        match variant {
-            HDCR_AW::VALUE1 => false,
-            HDCR_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `HDCR`"]
@@ -908,17 +860,14 @@ impl<'a> HDCR_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum OSCSICTRL_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<OSCSICTRL_AW> for bool {
     #[inline(always)]
     fn from(variant: OSCSICTRL_AW) -> Self {
-        match variant {
-            OSCSICTRL_AW::VALUE1 => false,
-            OSCSICTRL_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `OSCSICTRL`"]
@@ -964,17 +913,14 @@ impl<'a> OSCSICTRL_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum OSCULCTRL_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<OSCULCTRL_AW> for bool {
     #[inline(always)]
     fn from(variant: OSCULCTRL_AW) -> Self {
-        match variant {
-            OSCULCTRL_AW::VALUE1 => false,
-            OSCULCTRL_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `OSCULCTRL`"]
@@ -1020,17 +966,14 @@ impl<'a> OSCULCTRL_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RTC_CTR_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RTC_CTR_AW> for bool {
     #[inline(always)]
     fn from(variant: RTC_CTR_AW) -> Self {
-        match variant {
-            RTC_CTR_AW::VALUE1 => false,
-            RTC_CTR_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `RTC_CTR`"]
@@ -1076,17 +1019,14 @@ impl<'a> RTC_CTR_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RTC_ATIM0_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RTC_ATIM0_AW> for bool {
     #[inline(always)]
     fn from(variant: RTC_ATIM0_AW) -> Self {
-        match variant {
-            RTC_ATIM0_AW::VALUE1 => false,
-            RTC_ATIM0_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `RTC_ATIM0`"]
@@ -1132,17 +1072,14 @@ impl<'a> RTC_ATIM0_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RTC_ATIM1_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RTC_ATIM1_AW> for bool {
     #[inline(always)]
     fn from(variant: RTC_ATIM1_AW) -> Self {
-        match variant {
-            RTC_ATIM1_AW::VALUE1 => false,
-            RTC_ATIM1_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `RTC_ATIM1`"]
@@ -1188,17 +1125,14 @@ impl<'a> RTC_ATIM1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RTC_TIM0_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RTC_TIM0_AW> for bool {
     #[inline(always)]
     fn from(variant: RTC_TIM0_AW) -> Self {
-        match variant {
-            RTC_TIM0_AW::VALUE1 => false,
-            RTC_TIM0_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `RTC_TIM0`"]
@@ -1244,17 +1178,14 @@ impl<'a> RTC_TIM0_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RTC_TIM1_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RTC_TIM1_AW> for bool {
     #[inline(always)]
     fn from(variant: RTC_TIM1_AW) -> Self {
-        match variant {
-            RTC_TIM1_AW::VALUE1 => false,
-            RTC_TIM1_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `RTC_TIM1`"]
@@ -1300,17 +1231,14 @@ impl<'a> RTC_TIM1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RMX_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RMX_AW> for bool {
     #[inline(always)]
     fn from(variant: RMX_AW) -> Self {
-        match variant {
-            RMX_AW::VALUE1 => false,
-            RMX_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `RMX`"]

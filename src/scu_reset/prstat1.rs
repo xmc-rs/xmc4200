@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::PRSTAT1>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LEDTSCU0RS_A {
     #[doc = "0: Reset de-asserted"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Reset asserted"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<LEDTSCU0RS_A> for bool {
     #[inline(always)]
     fn from(variant: LEDTSCU0RS_A) -> Self {
-        match variant {
-            LEDTSCU0RS_A::VALUE1 => false,
-            LEDTSCU0RS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `LEDTSCU0RS`"]
@@ -43,17 +40,14 @@ impl LEDTSCU0RS_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MCAN0RS_A {
     #[doc = "0: Reset de-asserted"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Reset asserted"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<MCAN0RS_A> for bool {
     #[inline(always)]
     fn from(variant: MCAN0RS_A) -> Self {
-        match variant {
-            MCAN0RS_A::VALUE1 => false,
-            MCAN0RS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MCAN0RS`"]
@@ -82,17 +76,14 @@ impl MCAN0RS_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DACRS_A {
     #[doc = "0: Reset de-asserted"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Reset asserted"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<DACRS_A> for bool {
     #[inline(always)]
     fn from(variant: DACRS_A) -> Self {
-        match variant {
-            DACRS_A::VALUE1 => false,
-            DACRS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `DACRS`"]
@@ -121,17 +112,14 @@ impl DACRS_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum USIC1RS_A {
     #[doc = "0: Reset de-asserted"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Reset asserted"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<USIC1RS_A> for bool {
     #[inline(always)]
     fn from(variant: USIC1RS_A) -> Self {
-        match variant {
-            USIC1RS_A::VALUE1 => false,
-            USIC1RS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `USIC1RS`"]
@@ -160,17 +148,14 @@ impl USIC1RS_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PPORTSRS_A {
     #[doc = "0: Reset de-asserted"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Reset asserted"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PPORTSRS_A> for bool {
     #[inline(always)]
     fn from(variant: PPORTSRS_A) -> Self {
-        match variant {
-            PPORTSRS_A::VALUE1 => false,
-            PPORTSRS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PPORTSRS`"]

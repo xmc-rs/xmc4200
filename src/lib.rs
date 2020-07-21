@@ -1,7 +1,25 @@
-#![doc = "Peripheral access API for XMC4200 microcontrollers (generated using svd2rust v0.16.1)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.16.1/svd2rust/#peripheral-api"]
+#![doc = "Peripheral access API for XMC4200 microcontrollers (generated using svd2rust v0.17.0)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.17.0/svd2rust/#peripheral-api"]
+#![deny(const_err)]
+#![deny(dead_code)]
+#![deny(improper_ctypes)]
+#![deny(legacy_directory_ownership)]
 #![deny(missing_docs)]
-#![deny(warnings)]
+#![deny(no_mangle_generic_items)]
+#![deny(non_shorthand_field_patterns)]
+#![deny(overflowing_literals)]
+#![deny(path_statements)]
+#![deny(patterns_in_fns_without_body)]
+#![deny(plugin_as_library)]
+#![deny(private_in_public)]
+#![deny(safe_extern_statics)]
+#![deny(unconditional_recursion)]
+#![deny(unions_with_drop_fields)]
+#![deny(unused_allocation)]
+#![deny(unused_comparisons)]
+#![deny(unused_parens)]
+#![deny(while_true)]
 #![allow(non_camel_case_types)]
+#![allow(non_snake_case)]
 #![no_std]
 extern crate bare_metal;
 extern crate cortex_m;
@@ -202,211 +220,145 @@ pub static __INTERRUPTS: [Vector; 108] = [
 ];
 #[doc = r"Enumeration of all the interrupts"]
 #[derive(Copy, Clone, Debug)]
+#[repr(u8)]
 pub enum Interrupt {
     #[doc = "0 - System Control"]
-    SCU_0,
+    SCU_0 = 0,
     #[doc = "1 - External Request Unit 0"]
-    ERU0_0,
+    ERU0_0 = 1,
     #[doc = "2 - External Request Unit 0"]
-    ERU0_1,
+    ERU0_1 = 2,
     #[doc = "3 - External Request Unit 0"]
-    ERU0_2,
+    ERU0_2 = 3,
     #[doc = "4 - External Request Unit 0"]
-    ERU0_3,
+    ERU0_3 = 4,
     #[doc = "5 - External Request Unit 1"]
-    ERU1_0,
+    ERU1_0 = 5,
     #[doc = "6 - External Request Unit 1"]
-    ERU1_1,
+    ERU1_1 = 6,
     #[doc = "7 - External Request Unit 1"]
-    ERU1_2,
+    ERU1_2 = 7,
     #[doc = "8 - External Request Unit 1"]
-    ERU1_3,
+    ERU1_3 = 8,
     #[doc = "12 - Program Management Unit"]
-    PMU0_0,
+    PMU0_0 = 12,
     #[doc = "14 - Analog to Digital Converter Common Block 0"]
-    VADC0_C0_0,
+    VADC0_C0_0 = 14,
     #[doc = "15 - Analog to Digital Converter Common Block 0"]
-    VADC0_C0_1,
+    VADC0_C0_1 = 15,
     #[doc = "16 - Analog to Digital Converter Common Block 0"]
-    VADC0_C0_2,
+    VADC0_C0_2 = 16,
     #[doc = "17 - Analog to Digital Converter Common Block 0"]
-    VADC0_C0_3,
+    VADC0_C0_3 = 17,
     #[doc = "18 - Analog to Digital Converter Group 0"]
-    VADC0_G0_0,
+    VADC0_G0_0 = 18,
     #[doc = "19 - Analog to Digital Converter Group 0"]
-    VADC0_G0_1,
+    VADC0_G0_1 = 19,
     #[doc = "20 - Analog to Digital Converter Group 0"]
-    VADC0_G0_2,
+    VADC0_G0_2 = 20,
     #[doc = "21 - Analog to Digital Converter Group 0"]
-    VADC0_G0_3,
+    VADC0_G0_3 = 21,
     #[doc = "22 - Analog to Digital Converter Group 1"]
-    VADC0_G1_0,
+    VADC0_G1_0 = 22,
     #[doc = "23 - Analog to Digital Converter Group 1"]
-    VADC0_G1_1,
+    VADC0_G1_1 = 23,
     #[doc = "24 - Analog to Digital Converter Group 1"]
-    VADC0_G1_2,
+    VADC0_G1_2 = 24,
     #[doc = "25 - Analog to Digital Converter Group 1"]
-    VADC0_G1_3,
+    VADC0_G1_3 = 25,
     #[doc = "42 - Digital to Analog Converter"]
-    DAC0_0,
+    DAC0_0 = 42,
     #[doc = "43 - Digital to Analog Converter"]
-    DAC0_1,
+    DAC0_1 = 43,
     #[doc = "44 - Capture Compare Unit 4 (Module 0)"]
-    CCU40_0,
+    CCU40_0 = 44,
     #[doc = "45 - Capture Compare Unit 4 (Module 0)"]
-    CCU40_1,
+    CCU40_1 = 45,
     #[doc = "46 - Capture Compare Unit 4 (Module 0)"]
-    CCU40_2,
+    CCU40_2 = 46,
     #[doc = "47 - Capture Compare Unit 4 (Module 0)"]
-    CCU40_3,
+    CCU40_3 = 47,
     #[doc = "48 - Capture Compare Unit 4 (Module 1)"]
-    CCU41_0,
+    CCU41_0 = 48,
     #[doc = "49 - Capture Compare Unit 4 (Module 1)"]
-    CCU41_1,
+    CCU41_1 = 49,
     #[doc = "50 - Capture Compare Unit 4 (Module 1)"]
-    CCU41_2,
+    CCU41_2 = 50,
     #[doc = "51 - Capture Compare Unit 4 (Module 1)"]
-    CCU41_3,
+    CCU41_3 = 51,
     #[doc = "60 - Capture Compare Unit 8 (Module 0)"]
-    CCU80_0,
+    CCU80_0 = 60,
     #[doc = "61 - Capture Compare Unit 8 (Module 0)"]
-    CCU80_1,
+    CCU80_1 = 61,
     #[doc = "62 - Capture Compare Unit 8 (Module 0)"]
-    CCU80_2,
+    CCU80_2 = 62,
     #[doc = "63 - Capture Compare Unit 8 (Module 0)"]
-    CCU80_3,
+    CCU80_3 = 63,
     #[doc = "68 - Position Interface (Module 0)"]
-    POSIF0_0,
+    POSIF0_0 = 68,
     #[doc = "69 - Position Interface (Module 0)"]
-    POSIF0_1,
+    POSIF0_1 = 69,
     #[doc = "72 - High Resolution Pulse Width Modulation (Module 0)"]
-    HRPWM_0,
+    HRPWM_0 = 72,
     #[doc = "73 - High Resolution Pulse Width Modulation (Module 0)"]
-    HRPWM_1,
+    HRPWM_1 = 73,
     #[doc = "74 - High Resolution Pulse Width Modulation (Module 0)"]
-    HRPWM_2,
+    HRPWM_2 = 74,
     #[doc = "75 - High Resolution Pulse Width Modulation (Module 0)"]
-    HRPWM_3,
+    HRPWM_3 = 75,
     #[doc = "76 - MultiCAN"]
-    CAN0_0,
+    CAN0_0 = 76,
     #[doc = "77 - MultiCAN"]
-    CAN0_1,
+    CAN0_1 = 77,
     #[doc = "78 - MultiCAN"]
-    CAN0_2,
+    CAN0_2 = 78,
     #[doc = "79 - MultiCAN"]
-    CAN0_3,
+    CAN0_3 = 79,
     #[doc = "80 - MultiCAN"]
-    CAN0_4,
+    CAN0_4 = 80,
     #[doc = "81 - MultiCAN"]
-    CAN0_5,
+    CAN0_5 = 81,
     #[doc = "82 - MultiCAN"]
-    CAN0_6,
+    CAN0_6 = 82,
     #[doc = "83 - MultiCAN"]
-    CAN0_7,
+    CAN0_7 = 83,
     #[doc = "84 - Universal Serial Interface Channel (Module 0)"]
-    USIC0_0,
+    USIC0_0 = 84,
     #[doc = "85 - Universal Serial Interface Channel (Module 0)"]
-    USIC0_1,
+    USIC0_1 = 85,
     #[doc = "86 - Universal Serial Interface Channel (Module 0)"]
-    USIC0_2,
+    USIC0_2 = 86,
     #[doc = "87 - Universal Serial Interface Channel (Module 0)"]
-    USIC0_3,
+    USIC0_3 = 87,
     #[doc = "88 - Universal Serial Interface Channel (Module 0)"]
-    USIC0_4,
+    USIC0_4 = 88,
     #[doc = "89 - Universal Serial Interface Channel (Module 0)"]
-    USIC0_5,
+    USIC0_5 = 89,
     #[doc = "90 - Universal Serial Interface Channel (Module 1)"]
-    USIC1_0,
+    USIC1_0 = 90,
     #[doc = "91 - Universal Serial Interface Channel (Module 1)"]
-    USIC1_1,
+    USIC1_1 = 91,
     #[doc = "92 - Universal Serial Interface Channel (Module 1)"]
-    USIC1_2,
+    USIC1_2 = 92,
     #[doc = "93 - Universal Serial Interface Channel (Module 1)"]
-    USIC1_3,
+    USIC1_3 = 93,
     #[doc = "94 - Universal Serial Interface Channel (Module 1)"]
-    USIC1_4,
+    USIC1_4 = 94,
     #[doc = "95 - Universal Serial Interface Channel (Module 1)"]
-    USIC1_5,
+    USIC1_5 = 95,
     #[doc = "102 - LED and Touch Sense Control Unit (Module 0)"]
-    LEDTS0_0,
+    LEDTS0_0 = 102,
     #[doc = "104 - Flexible CRC Engine"]
-    FCE0_0,
+    FCE0_0 = 104,
     #[doc = "105 - General Purpose DMA Unit 0"]
-    GPDMA0_0,
+    GPDMA0_0 = 105,
     #[doc = "107 - Universal Serial Bus (Module 0)"]
-    USB0_0,
+    USB0_0 = 107,
 }
 unsafe impl bare_metal::Nr for Interrupt {
-    #[inline]
+    #[inline(always)]
     fn nr(&self) -> u8 {
-        match *self {
-            Interrupt::SCU_0 => 0,
-            Interrupt::ERU0_0 => 1,
-            Interrupt::ERU0_1 => 2,
-            Interrupt::ERU0_2 => 3,
-            Interrupt::ERU0_3 => 4,
-            Interrupt::ERU1_0 => 5,
-            Interrupt::ERU1_1 => 6,
-            Interrupt::ERU1_2 => 7,
-            Interrupt::ERU1_3 => 8,
-            Interrupt::PMU0_0 => 12,
-            Interrupt::VADC0_C0_0 => 14,
-            Interrupt::VADC0_C0_1 => 15,
-            Interrupt::VADC0_C0_2 => 16,
-            Interrupt::VADC0_C0_3 => 17,
-            Interrupt::VADC0_G0_0 => 18,
-            Interrupt::VADC0_G0_1 => 19,
-            Interrupt::VADC0_G0_2 => 20,
-            Interrupt::VADC0_G0_3 => 21,
-            Interrupt::VADC0_G1_0 => 22,
-            Interrupt::VADC0_G1_1 => 23,
-            Interrupt::VADC0_G1_2 => 24,
-            Interrupt::VADC0_G1_3 => 25,
-            Interrupt::DAC0_0 => 42,
-            Interrupt::DAC0_1 => 43,
-            Interrupt::CCU40_0 => 44,
-            Interrupt::CCU40_1 => 45,
-            Interrupt::CCU40_2 => 46,
-            Interrupt::CCU40_3 => 47,
-            Interrupt::CCU41_0 => 48,
-            Interrupt::CCU41_1 => 49,
-            Interrupt::CCU41_2 => 50,
-            Interrupt::CCU41_3 => 51,
-            Interrupt::CCU80_0 => 60,
-            Interrupt::CCU80_1 => 61,
-            Interrupt::CCU80_2 => 62,
-            Interrupt::CCU80_3 => 63,
-            Interrupt::POSIF0_0 => 68,
-            Interrupt::POSIF0_1 => 69,
-            Interrupt::HRPWM_0 => 72,
-            Interrupt::HRPWM_1 => 73,
-            Interrupt::HRPWM_2 => 74,
-            Interrupt::HRPWM_3 => 75,
-            Interrupt::CAN0_0 => 76,
-            Interrupt::CAN0_1 => 77,
-            Interrupt::CAN0_2 => 78,
-            Interrupt::CAN0_3 => 79,
-            Interrupt::CAN0_4 => 80,
-            Interrupt::CAN0_5 => 81,
-            Interrupt::CAN0_6 => 82,
-            Interrupt::CAN0_7 => 83,
-            Interrupt::USIC0_0 => 84,
-            Interrupt::USIC0_1 => 85,
-            Interrupt::USIC0_2 => 86,
-            Interrupt::USIC0_3 => 87,
-            Interrupt::USIC0_4 => 88,
-            Interrupt::USIC0_5 => 89,
-            Interrupt::USIC1_0 => 90,
-            Interrupt::USIC1_1 => 91,
-            Interrupt::USIC1_2 => 92,
-            Interrupt::USIC1_3 => 93,
-            Interrupt::USIC1_4 => 94,
-            Interrupt::USIC1_5 => 95,
-            Interrupt::LEDTS0_0 => 102,
-            Interrupt::FCE0_0 => 104,
-            Interrupt::GPDMA0_0 => 105,
-            Interrupt::USB0_0 => 107,
-        }
+        *self as u8
     }
 }
 #[cfg(feature = "rt")]
@@ -433,6 +385,7 @@ impl PPB {
 }
 impl Deref for PPB {
     type Target = ppb::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*PPB::ptr() }
     }
@@ -453,6 +406,7 @@ impl DLR {
 }
 impl Deref for DLR {
     type Target = dlr::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*DLR::ptr() }
     }
@@ -473,6 +427,7 @@ impl ERU0 {
 }
 impl Deref for ERU0 {
     type Target = eru0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*ERU0::ptr() }
     }
@@ -493,6 +448,7 @@ impl ERU1 {
 }
 impl Deref for ERU1 {
     type Target = eru0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*ERU1::ptr() }
     }
@@ -511,6 +467,7 @@ impl GPDMA0 {
 }
 impl Deref for GPDMA0 {
     type Target = gpdma0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPDMA0::ptr() }
     }
@@ -531,6 +488,7 @@ impl GPDMA0_CH0 {
 }
 impl Deref for GPDMA0_CH0 {
     type Target = gpdma0_ch0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPDMA0_CH0::ptr() }
     }
@@ -551,6 +509,7 @@ impl GPDMA0_CH1 {
 }
 impl Deref for GPDMA0_CH1 {
     type Target = gpdma0_ch0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPDMA0_CH1::ptr() }
     }
@@ -569,6 +528,7 @@ impl GPDMA0_CH2 {
 }
 impl Deref for GPDMA0_CH2 {
     type Target = gpdma0_ch2::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPDMA0_CH2::ptr() }
     }
@@ -589,6 +549,7 @@ impl GPDMA0_CH3 {
 }
 impl Deref for GPDMA0_CH3 {
     type Target = gpdma0_ch2::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPDMA0_CH3::ptr() }
     }
@@ -607,6 +568,7 @@ impl GPDMA0_CH4 {
 }
 impl Deref for GPDMA0_CH4 {
     type Target = gpdma0_ch2::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPDMA0_CH4::ptr() }
     }
@@ -625,6 +587,7 @@ impl GPDMA0_CH5 {
 }
 impl Deref for GPDMA0_CH5 {
     type Target = gpdma0_ch2::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPDMA0_CH5::ptr() }
     }
@@ -643,6 +606,7 @@ impl GPDMA0_CH6 {
 }
 impl Deref for GPDMA0_CH6 {
     type Target = gpdma0_ch2::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPDMA0_CH6::ptr() }
     }
@@ -661,6 +625,7 @@ impl GPDMA0_CH7 {
 }
 impl Deref for GPDMA0_CH7 {
     type Target = gpdma0_ch2::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPDMA0_CH7::ptr() }
     }
@@ -679,6 +644,7 @@ impl FCE {
 }
 impl Deref for FCE {
     type Target = fce::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*FCE::ptr() }
     }
@@ -699,6 +665,7 @@ impl FCE_KE0 {
 }
 impl Deref for FCE_KE0 {
     type Target = fce_ke0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*FCE_KE0::ptr() }
     }
@@ -719,6 +686,7 @@ impl FCE_KE1 {
 }
 impl Deref for FCE_KE1 {
     type Target = fce_ke0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*FCE_KE1::ptr() }
     }
@@ -737,6 +705,7 @@ impl FCE_KE2 {
 }
 impl Deref for FCE_KE2 {
     type Target = fce_ke0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*FCE_KE2::ptr() }
     }
@@ -755,6 +724,7 @@ impl FCE_KE3 {
 }
 impl Deref for FCE_KE3 {
     type Target = fce_ke0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*FCE_KE3::ptr() }
     }
@@ -773,6 +743,7 @@ impl PBA0 {
 }
 impl Deref for PBA0 {
     type Target = pba0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*PBA0::ptr() }
     }
@@ -793,6 +764,7 @@ impl PBA1 {
 }
 impl Deref for PBA1 {
     type Target = pba0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*PBA1::ptr() }
     }
@@ -811,6 +783,7 @@ impl FLASH0 {
 }
 impl Deref for FLASH0 {
     type Target = flash0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*FLASH0::ptr() }
     }
@@ -831,6 +804,7 @@ impl PREF {
 }
 impl Deref for PREF {
     type Target = pref::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*PREF::ptr() }
     }
@@ -851,6 +825,7 @@ impl PMU0 {
 }
 impl Deref for PMU0 {
     type Target = pmu0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*PMU0::ptr() }
     }
@@ -871,6 +846,7 @@ impl WDT {
 }
 impl Deref for WDT {
     type Target = wdt::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*WDT::ptr() }
     }
@@ -891,6 +867,7 @@ impl RTC {
 }
 impl Deref for RTC {
     type Target = rtc::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*RTC::ptr() }
     }
@@ -911,6 +888,7 @@ impl SCU_CLK {
 }
 impl Deref for SCU_CLK {
     type Target = scu_clk::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SCU_CLK::ptr() }
     }
@@ -931,6 +909,7 @@ impl SCU_OSC {
 }
 impl Deref for SCU_OSC {
     type Target = scu_osc::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SCU_OSC::ptr() }
     }
@@ -951,6 +930,7 @@ impl SCU_PLL {
 }
 impl Deref for SCU_PLL {
     type Target = scu_pll::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SCU_PLL::ptr() }
     }
@@ -971,6 +951,7 @@ impl SCU_GENERAL {
 }
 impl Deref for SCU_GENERAL {
     type Target = scu_general::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SCU_GENERAL::ptr() }
     }
@@ -991,6 +972,7 @@ impl SCU_INTERRUPT {
 }
 impl Deref for SCU_INTERRUPT {
     type Target = scu_interrupt::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SCU_INTERRUPT::ptr() }
     }
@@ -1011,6 +993,7 @@ impl SCU_PARITY {
 }
 impl Deref for SCU_PARITY {
     type Target = scu_parity::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SCU_PARITY::ptr() }
     }
@@ -1031,6 +1014,7 @@ impl SCU_TRAP {
 }
 impl Deref for SCU_TRAP {
     type Target = scu_trap::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SCU_TRAP::ptr() }
     }
@@ -1051,6 +1035,7 @@ impl SCU_HIBERNATE {
 }
 impl Deref for SCU_HIBERNATE {
     type Target = scu_hibernate::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SCU_HIBERNATE::ptr() }
     }
@@ -1071,6 +1056,7 @@ impl SCU_POWER {
 }
 impl Deref for SCU_POWER {
     type Target = scu_power::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SCU_POWER::ptr() }
     }
@@ -1091,6 +1077,7 @@ impl SCU_RESET {
 }
 impl Deref for SCU_RESET {
     type Target = scu_reset::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SCU_RESET::ptr() }
     }
@@ -1111,6 +1098,7 @@ impl LEDTS0 {
 }
 impl Deref for LEDTS0 {
     type Target = ledts0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*LEDTS0::ptr() }
     }
@@ -1131,6 +1119,7 @@ impl USB0 {
 }
 impl Deref for USB0 {
     type Target = usb0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USB0::ptr() }
     }
@@ -1151,6 +1140,7 @@ impl USB0_EP0 {
 }
 impl Deref for USB0_EP0 {
     type Target = usb0_ep0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USB0_EP0::ptr() }
     }
@@ -1171,6 +1161,7 @@ impl USB0_EP1 {
 }
 impl Deref for USB0_EP1 {
     type Target = usb0_ep1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USB0_EP1::ptr() }
     }
@@ -1191,6 +1182,7 @@ impl USB0_EP2 {
 }
 impl Deref for USB0_EP2 {
     type Target = usb0_ep1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USB0_EP2::ptr() }
     }
@@ -1209,6 +1201,7 @@ impl USB0_EP3 {
 }
 impl Deref for USB0_EP3 {
     type Target = usb0_ep1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USB0_EP3::ptr() }
     }
@@ -1227,6 +1220,7 @@ impl USB0_EP4 {
 }
 impl Deref for USB0_EP4 {
     type Target = usb0_ep1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USB0_EP4::ptr() }
     }
@@ -1245,6 +1239,7 @@ impl USB0_EP5 {
 }
 impl Deref for USB0_EP5 {
     type Target = usb0_ep1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USB0_EP5::ptr() }
     }
@@ -1263,6 +1258,7 @@ impl USB0_EP6 {
 }
 impl Deref for USB0_EP6 {
     type Target = usb0_ep1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USB0_EP6::ptr() }
     }
@@ -1281,6 +1277,7 @@ impl USIC0 {
 }
 impl Deref for USIC0 {
     type Target = usic0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USIC0::ptr() }
     }
@@ -1301,6 +1298,7 @@ impl USIC1 {
 }
 impl Deref for USIC1 {
     type Target = usic0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USIC1::ptr() }
     }
@@ -1319,6 +1317,7 @@ impl USIC0_CH0 {
 }
 impl Deref for USIC0_CH0 {
     type Target = usic0_ch0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USIC0_CH0::ptr() }
     }
@@ -1339,6 +1338,7 @@ impl USIC0_CH1 {
 }
 impl Deref for USIC0_CH1 {
     type Target = usic0_ch0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USIC0_CH1::ptr() }
     }
@@ -1357,6 +1357,7 @@ impl USIC1_CH0 {
 }
 impl Deref for USIC1_CH0 {
     type Target = usic0_ch0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USIC1_CH0::ptr() }
     }
@@ -1375,6 +1376,7 @@ impl USIC1_CH1 {
 }
 impl Deref for USIC1_CH1 {
     type Target = usic0_ch0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USIC1_CH1::ptr() }
     }
@@ -1393,6 +1395,7 @@ impl CAN {
 }
 impl Deref for CAN {
     type Target = can::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN::ptr() }
     }
@@ -1413,6 +1416,7 @@ impl CAN_NODE0 {
 }
 impl Deref for CAN_NODE0 {
     type Target = can_node0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_NODE0::ptr() }
     }
@@ -1433,6 +1437,7 @@ impl CAN_NODE1 {
 }
 impl Deref for CAN_NODE1 {
     type Target = can_node0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_NODE1::ptr() }
     }
@@ -1451,6 +1456,7 @@ impl CAN_MO0 {
 }
 impl Deref for CAN_MO0 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO0::ptr() }
     }
@@ -1471,6 +1477,7 @@ impl CAN_MO1 {
 }
 impl Deref for CAN_MO1 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO1::ptr() }
     }
@@ -1489,6 +1496,7 @@ impl CAN_MO2 {
 }
 impl Deref for CAN_MO2 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO2::ptr() }
     }
@@ -1507,6 +1515,7 @@ impl CAN_MO3 {
 }
 impl Deref for CAN_MO3 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO3::ptr() }
     }
@@ -1525,6 +1534,7 @@ impl CAN_MO4 {
 }
 impl Deref for CAN_MO4 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO4::ptr() }
     }
@@ -1543,6 +1553,7 @@ impl CAN_MO5 {
 }
 impl Deref for CAN_MO5 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO5::ptr() }
     }
@@ -1561,6 +1572,7 @@ impl CAN_MO6 {
 }
 impl Deref for CAN_MO6 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO6::ptr() }
     }
@@ -1579,6 +1591,7 @@ impl CAN_MO7 {
 }
 impl Deref for CAN_MO7 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO7::ptr() }
     }
@@ -1597,6 +1610,7 @@ impl CAN_MO8 {
 }
 impl Deref for CAN_MO8 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO8::ptr() }
     }
@@ -1615,6 +1629,7 @@ impl CAN_MO9 {
 }
 impl Deref for CAN_MO9 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO9::ptr() }
     }
@@ -1633,6 +1648,7 @@ impl CAN_MO10 {
 }
 impl Deref for CAN_MO10 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO10::ptr() }
     }
@@ -1651,6 +1667,7 @@ impl CAN_MO11 {
 }
 impl Deref for CAN_MO11 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO11::ptr() }
     }
@@ -1669,6 +1686,7 @@ impl CAN_MO12 {
 }
 impl Deref for CAN_MO12 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO12::ptr() }
     }
@@ -1687,6 +1705,7 @@ impl CAN_MO13 {
 }
 impl Deref for CAN_MO13 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO13::ptr() }
     }
@@ -1705,6 +1724,7 @@ impl CAN_MO14 {
 }
 impl Deref for CAN_MO14 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO14::ptr() }
     }
@@ -1723,6 +1743,7 @@ impl CAN_MO15 {
 }
 impl Deref for CAN_MO15 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO15::ptr() }
     }
@@ -1741,6 +1762,7 @@ impl CAN_MO16 {
 }
 impl Deref for CAN_MO16 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO16::ptr() }
     }
@@ -1759,6 +1781,7 @@ impl CAN_MO17 {
 }
 impl Deref for CAN_MO17 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO17::ptr() }
     }
@@ -1777,6 +1800,7 @@ impl CAN_MO18 {
 }
 impl Deref for CAN_MO18 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO18::ptr() }
     }
@@ -1795,6 +1819,7 @@ impl CAN_MO19 {
 }
 impl Deref for CAN_MO19 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO19::ptr() }
     }
@@ -1813,6 +1838,7 @@ impl CAN_MO20 {
 }
 impl Deref for CAN_MO20 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO20::ptr() }
     }
@@ -1831,6 +1857,7 @@ impl CAN_MO21 {
 }
 impl Deref for CAN_MO21 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO21::ptr() }
     }
@@ -1849,6 +1876,7 @@ impl CAN_MO22 {
 }
 impl Deref for CAN_MO22 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO22::ptr() }
     }
@@ -1867,6 +1895,7 @@ impl CAN_MO23 {
 }
 impl Deref for CAN_MO23 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO23::ptr() }
     }
@@ -1885,6 +1914,7 @@ impl CAN_MO24 {
 }
 impl Deref for CAN_MO24 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO24::ptr() }
     }
@@ -1903,6 +1933,7 @@ impl CAN_MO25 {
 }
 impl Deref for CAN_MO25 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO25::ptr() }
     }
@@ -1921,6 +1952,7 @@ impl CAN_MO26 {
 }
 impl Deref for CAN_MO26 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO26::ptr() }
     }
@@ -1939,6 +1971,7 @@ impl CAN_MO27 {
 }
 impl Deref for CAN_MO27 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO27::ptr() }
     }
@@ -1957,6 +1990,7 @@ impl CAN_MO28 {
 }
 impl Deref for CAN_MO28 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO28::ptr() }
     }
@@ -1975,6 +2009,7 @@ impl CAN_MO29 {
 }
 impl Deref for CAN_MO29 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO29::ptr() }
     }
@@ -1993,6 +2028,7 @@ impl CAN_MO30 {
 }
 impl Deref for CAN_MO30 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO30::ptr() }
     }
@@ -2011,6 +2047,7 @@ impl CAN_MO31 {
 }
 impl Deref for CAN_MO31 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO31::ptr() }
     }
@@ -2029,6 +2066,7 @@ impl CAN_MO32 {
 }
 impl Deref for CAN_MO32 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO32::ptr() }
     }
@@ -2047,6 +2085,7 @@ impl CAN_MO33 {
 }
 impl Deref for CAN_MO33 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO33::ptr() }
     }
@@ -2065,6 +2104,7 @@ impl CAN_MO34 {
 }
 impl Deref for CAN_MO34 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO34::ptr() }
     }
@@ -2083,6 +2123,7 @@ impl CAN_MO35 {
 }
 impl Deref for CAN_MO35 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO35::ptr() }
     }
@@ -2101,6 +2142,7 @@ impl CAN_MO36 {
 }
 impl Deref for CAN_MO36 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO36::ptr() }
     }
@@ -2119,6 +2161,7 @@ impl CAN_MO37 {
 }
 impl Deref for CAN_MO37 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO37::ptr() }
     }
@@ -2137,6 +2180,7 @@ impl CAN_MO38 {
 }
 impl Deref for CAN_MO38 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO38::ptr() }
     }
@@ -2155,6 +2199,7 @@ impl CAN_MO39 {
 }
 impl Deref for CAN_MO39 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO39::ptr() }
     }
@@ -2173,6 +2218,7 @@ impl CAN_MO40 {
 }
 impl Deref for CAN_MO40 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO40::ptr() }
     }
@@ -2191,6 +2237,7 @@ impl CAN_MO41 {
 }
 impl Deref for CAN_MO41 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO41::ptr() }
     }
@@ -2209,6 +2256,7 @@ impl CAN_MO42 {
 }
 impl Deref for CAN_MO42 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO42::ptr() }
     }
@@ -2227,6 +2275,7 @@ impl CAN_MO43 {
 }
 impl Deref for CAN_MO43 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO43::ptr() }
     }
@@ -2245,6 +2294,7 @@ impl CAN_MO44 {
 }
 impl Deref for CAN_MO44 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO44::ptr() }
     }
@@ -2263,6 +2313,7 @@ impl CAN_MO45 {
 }
 impl Deref for CAN_MO45 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO45::ptr() }
     }
@@ -2281,6 +2332,7 @@ impl CAN_MO46 {
 }
 impl Deref for CAN_MO46 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO46::ptr() }
     }
@@ -2299,6 +2351,7 @@ impl CAN_MO47 {
 }
 impl Deref for CAN_MO47 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO47::ptr() }
     }
@@ -2317,6 +2370,7 @@ impl CAN_MO48 {
 }
 impl Deref for CAN_MO48 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO48::ptr() }
     }
@@ -2335,6 +2389,7 @@ impl CAN_MO49 {
 }
 impl Deref for CAN_MO49 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO49::ptr() }
     }
@@ -2353,6 +2408,7 @@ impl CAN_MO50 {
 }
 impl Deref for CAN_MO50 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO50::ptr() }
     }
@@ -2371,6 +2427,7 @@ impl CAN_MO51 {
 }
 impl Deref for CAN_MO51 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO51::ptr() }
     }
@@ -2389,6 +2446,7 @@ impl CAN_MO52 {
 }
 impl Deref for CAN_MO52 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO52::ptr() }
     }
@@ -2407,6 +2465,7 @@ impl CAN_MO53 {
 }
 impl Deref for CAN_MO53 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO53::ptr() }
     }
@@ -2425,6 +2484,7 @@ impl CAN_MO54 {
 }
 impl Deref for CAN_MO54 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO54::ptr() }
     }
@@ -2443,6 +2503,7 @@ impl CAN_MO55 {
 }
 impl Deref for CAN_MO55 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO55::ptr() }
     }
@@ -2461,6 +2522,7 @@ impl CAN_MO56 {
 }
 impl Deref for CAN_MO56 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO56::ptr() }
     }
@@ -2479,6 +2541,7 @@ impl CAN_MO57 {
 }
 impl Deref for CAN_MO57 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO57::ptr() }
     }
@@ -2497,6 +2560,7 @@ impl CAN_MO58 {
 }
 impl Deref for CAN_MO58 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO58::ptr() }
     }
@@ -2515,6 +2579,7 @@ impl CAN_MO59 {
 }
 impl Deref for CAN_MO59 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO59::ptr() }
     }
@@ -2533,6 +2598,7 @@ impl CAN_MO60 {
 }
 impl Deref for CAN_MO60 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO60::ptr() }
     }
@@ -2551,6 +2617,7 @@ impl CAN_MO61 {
 }
 impl Deref for CAN_MO61 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO61::ptr() }
     }
@@ -2569,6 +2636,7 @@ impl CAN_MO62 {
 }
 impl Deref for CAN_MO62 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO62::ptr() }
     }
@@ -2587,6 +2655,7 @@ impl CAN_MO63 {
 }
 impl Deref for CAN_MO63 {
     type Target = can_mo0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN_MO63::ptr() }
     }
@@ -2605,6 +2674,7 @@ impl VADC {
 }
 impl Deref for VADC {
     type Target = vadc::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*VADC::ptr() }
     }
@@ -2625,6 +2695,7 @@ impl VADC_G0 {
 }
 impl Deref for VADC_G0 {
     type Target = vadc_g0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*VADC_G0::ptr() }
     }
@@ -2645,6 +2716,7 @@ impl VADC_G1 {
 }
 impl Deref for VADC_G1 {
     type Target = vadc_g0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*VADC_G1::ptr() }
     }
@@ -2663,6 +2735,7 @@ impl DAC {
 }
 impl Deref for DAC {
     type Target = dac::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*DAC::ptr() }
     }
@@ -2683,6 +2756,7 @@ impl CCU40 {
 }
 impl Deref for CCU40 {
     type Target = ccu40::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU40::ptr() }
     }
@@ -2703,6 +2777,7 @@ impl CCU41 {
 }
 impl Deref for CCU41 {
     type Target = ccu40::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU41::ptr() }
     }
@@ -2721,6 +2796,7 @@ impl CCU40_CC40 {
 }
 impl Deref for CCU40_CC40 {
     type Target = ccu40_cc40::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU40_CC40::ptr() }
     }
@@ -2741,6 +2817,7 @@ impl CCU40_CC41 {
 }
 impl Deref for CCU40_CC41 {
     type Target = ccu40_cc40::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU40_CC41::ptr() }
     }
@@ -2759,6 +2836,7 @@ impl CCU40_CC42 {
 }
 impl Deref for CCU40_CC42 {
     type Target = ccu40_cc40::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU40_CC42::ptr() }
     }
@@ -2777,6 +2855,7 @@ impl CCU40_CC43 {
 }
 impl Deref for CCU40_CC43 {
     type Target = ccu40_cc40::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU40_CC43::ptr() }
     }
@@ -2795,6 +2874,7 @@ impl CCU41_CC40 {
 }
 impl Deref for CCU41_CC40 {
     type Target = ccu40_cc40::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU41_CC40::ptr() }
     }
@@ -2813,6 +2893,7 @@ impl CCU41_CC41 {
 }
 impl Deref for CCU41_CC41 {
     type Target = ccu40_cc40::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU41_CC41::ptr() }
     }
@@ -2831,6 +2912,7 @@ impl CCU41_CC42 {
 }
 impl Deref for CCU41_CC42 {
     type Target = ccu40_cc40::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU41_CC42::ptr() }
     }
@@ -2849,6 +2931,7 @@ impl CCU41_CC43 {
 }
 impl Deref for CCU41_CC43 {
     type Target = ccu40_cc40::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU41_CC43::ptr() }
     }
@@ -2867,6 +2950,7 @@ impl CCU80 {
 }
 impl Deref for CCU80 {
     type Target = ccu80::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU80::ptr() }
     }
@@ -2887,6 +2971,7 @@ impl CCU80_CC80 {
 }
 impl Deref for CCU80_CC80 {
     type Target = ccu80_cc80::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU80_CC80::ptr() }
     }
@@ -2907,6 +2992,7 @@ impl CCU80_CC81 {
 }
 impl Deref for CCU80_CC81 {
     type Target = ccu80_cc80::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU80_CC81::ptr() }
     }
@@ -2925,6 +3011,7 @@ impl CCU80_CC82 {
 }
 impl Deref for CCU80_CC82 {
     type Target = ccu80_cc80::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU80_CC82::ptr() }
     }
@@ -2943,6 +3030,7 @@ impl CCU80_CC83 {
 }
 impl Deref for CCU80_CC83 {
     type Target = ccu80_cc80::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CCU80_CC83::ptr() }
     }
@@ -2961,6 +3049,7 @@ impl HRPWM0 {
 }
 impl Deref for HRPWM0 {
     type Target = hrpwm0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*HRPWM0::ptr() }
     }
@@ -2981,6 +3070,7 @@ impl HRPWM0_CSG0 {
 }
 impl Deref for HRPWM0_CSG0 {
     type Target = hrpwm0_csg0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*HRPWM0_CSG0::ptr() }
     }
@@ -3001,6 +3091,7 @@ impl HRPWM0_CSG1 {
 }
 impl Deref for HRPWM0_CSG1 {
     type Target = hrpwm0_csg0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*HRPWM0_CSG1::ptr() }
     }
@@ -3019,6 +3110,7 @@ impl HRPWM0_CSG2 {
 }
 impl Deref for HRPWM0_CSG2 {
     type Target = hrpwm0_csg0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*HRPWM0_CSG2::ptr() }
     }
@@ -3037,6 +3129,7 @@ impl HRPWM0_HRC0 {
 }
 impl Deref for HRPWM0_HRC0 {
     type Target = hrpwm0_hrc0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*HRPWM0_HRC0::ptr() }
     }
@@ -3057,6 +3150,7 @@ impl HRPWM0_HRC1 {
 }
 impl Deref for HRPWM0_HRC1 {
     type Target = hrpwm0_hrc0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*HRPWM0_HRC1::ptr() }
     }
@@ -3075,6 +3169,7 @@ impl HRPWM0_HRC2 {
 }
 impl Deref for HRPWM0_HRC2 {
     type Target = hrpwm0_hrc0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*HRPWM0_HRC2::ptr() }
     }
@@ -3093,6 +3188,7 @@ impl HRPWM0_HRC3 {
 }
 impl Deref for HRPWM0_HRC3 {
     type Target = hrpwm0_hrc0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*HRPWM0_HRC3::ptr() }
     }
@@ -3111,6 +3207,7 @@ impl POSIF0 {
 }
 impl Deref for POSIF0 {
     type Target = posif0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*POSIF0::ptr() }
     }
@@ -3131,6 +3228,7 @@ impl PORT0 {
 }
 impl Deref for PORT0 {
     type Target = port0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*PORT0::ptr() }
     }
@@ -3151,6 +3249,7 @@ impl PORT1 {
 }
 impl Deref for PORT1 {
     type Target = port1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*PORT1::ptr() }
     }
@@ -3171,6 +3270,7 @@ impl PORT2 {
 }
 impl Deref for PORT2 {
     type Target = port2::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*PORT2::ptr() }
     }
@@ -3191,6 +3291,7 @@ impl PORT3 {
 }
 impl Deref for PORT3 {
     type Target = port3::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*PORT3::ptr() }
     }
@@ -3211,6 +3312,7 @@ impl PORT14 {
 }
 impl Deref for PORT14 {
     type Target = port14::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*PORT14::ptr() }
     }
@@ -3530,6 +3632,7 @@ impl Peripherals {
         cortex_m::interrupt::free(|_| if unsafe { DEVICE_PERIPHERALS } { None } else { Some(unsafe { Peripherals::steal() }) })
     }
     #[doc = r"Unchecked version of `Peripherals::take`"]
+    #[inline]
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {

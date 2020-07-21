@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::HINTST>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HIBNINT_A {
     #[doc = "0: Hibernate not entered"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Hibernate entered"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HIBNINT_A> for bool {
     #[inline(always)]
     fn from(variant: HIBNINT_A) -> Self {
-        match variant {
-            HIBNINT_A::VALUE1 => false,
-            HIBNINT_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `HIBNINT`"]
@@ -43,17 +40,14 @@ impl HIBNINT_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FLASHOFF_A {
     #[doc = "0: VDDP supply of Flash switched on"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: VDDP supply of Flash switched off"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<FLASHOFF_A> for bool {
     #[inline(always)]
     fn from(variant: FLASHOFF_A) -> Self {
-        match variant {
-            FLASHOFF_A::VALUE1 => false,
-            FLASHOFF_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `FLASHOFF`"]
@@ -82,17 +76,14 @@ impl FLASHOFF_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FLASHPD_A {
     #[doc = "0: Normal mode"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Power down mode effectively entered"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<FLASHPD_A> for bool {
     #[inline(always)]
     fn from(variant: FLASHPD_A) -> Self {
-        match variant {
-            FLASHPD_A::VALUE1 => false,
-            FLASHPD_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `FLASHPD`"]
@@ -121,17 +112,14 @@ impl FLASHPD_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum POFFD_A {
     #[doc = "0: Pull-up on"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Pull-up off"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<POFFD_A> for bool {
     #[inline(always)]
     fn from(variant: POFFD_A) -> Self {
-        match variant {
-            POFFD_A::VALUE1 => false,
-            POFFD_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `POFFD`"]
@@ -162,17 +150,14 @@ pub type PPODEL_R = crate::R<u8, u8>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum POFFH_A {
     #[doc = "0: Pull-up on"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Pull-up off"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<POFFH_A> for bool {
     #[inline(always)]
     fn from(variant: POFFH_A) -> Self {
-        match variant {
-            POFFH_A::VALUE1 => false,
-            POFFH_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `POFFH`"]

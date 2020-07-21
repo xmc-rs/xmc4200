@@ -12,25 +12,21 @@ impl crate::ResetValue for super::GC {
 }
 #[doc = "HRCy high resolution mode configuration for source selector 0\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum HRM0_A {
     #[doc = "0: Rising edge high resolution signal positioning enabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Falling edge high resolution signal positioning enabled"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Both edges high resolution signal positioning is enabled"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: No high resolution positioning"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<HRM0_A> for u8 {
     #[inline(always)]
     fn from(variant: HRM0_A) -> Self {
-        match variant {
-            HRM0_A::VALUE1 => 0,
-            HRM0_A::VALUE2 => 1,
-            HRM0_A::VALUE3 => 2,
-            HRM0_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `HRM0`"]
@@ -109,25 +105,21 @@ impl<'a> HRM0_W<'a> {
 }
 #[doc = "HRCy high resolution mode configuration for source selector 1\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum HRM1_A {
     #[doc = "0: Rising edge high resolution signal positioning enabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Falling edge high resolution signal positioning enabled"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Both edges high resolution signal positioning is enabled"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: No high resolution positioning"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<HRM1_A> for u8 {
     #[inline(always)]
     fn from(variant: HRM1_A) -> Self {
-        match variant {
-            HRM1_A::VALUE1 => 0,
-            HRM1_A::VALUE2 => 1,
-            HRM1_A::VALUE3 => 2,
-            HRM1_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `HRM1`"]
@@ -208,17 +200,14 @@ impl<'a> HRM1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DTE_A {
     #[doc = "0: Dead time insertion is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Dead time insertion is enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<DTE_A> for bool {
     #[inline(always)]
     fn from(variant: DTE_A) -> Self {
-        match variant {
-            DTE_A::VALUE1 => false,
-            DTE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `DTE`"]
@@ -286,17 +275,14 @@ impl<'a> DTE_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TR0E_A {
     #[doc = "0: Trap function for HRPWMx.HROUTy0 is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Trap function for HRPWMx.HROUTy0 is enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<TR0E_A> for bool {
     #[inline(always)]
     fn from(variant: TR0E_A) -> Self {
-        match variant {
-            TR0E_A::VALUE1 => false,
-            TR0E_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `TR0E`"]
@@ -364,17 +350,14 @@ impl<'a> TR0E_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TR1E_A {
     #[doc = "0: Trap function for HRPWMx.HROUTy1 is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Trap function for HRPWMx.HROUTy1 is enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<TR1E_A> for bool {
     #[inline(always)]
     fn from(variant: TR1E_A) -> Self {
-        match variant {
-            TR1E_A::VALUE1 => false,
-            TR1E_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `TR1E`"]
@@ -442,17 +425,14 @@ impl<'a> TR1E_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum STC_A {
     #[doc = "0: HRCy shadow transfer enable for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values is not linked with the specific Capture/Compare Unit timer."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRCy shadow transfer enable for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values is linked with the specific Capture/Compare Unit timer."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<STC_A> for bool {
     #[inline(always)]
     fn from(variant: STC_A) -> Self {
-        match variant {
-            STC_A::VALUE1 => false,
-            STC_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `STC`"]
@@ -520,17 +500,14 @@ impl<'a> STC_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DSTC_A {
     #[doc = "0: HRCy shadow transfer enable for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values is not linked with the specific Capture/Compare Unit timer."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRCy shadow transfer enable for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values is linked with the specific Capture/Compare Unit timer."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<DSTC_A> for bool {
     #[inline(always)]
     fn from(variant: DSTC_A) -> Self {
-        match variant {
-            DSTC_A::VALUE1 => false,
-            DSTC_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `DSTC`"]
@@ -598,17 +575,14 @@ impl<'a> DSTC_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum OCS0_A {
     #[doc = "0: HRPWMx.OUTy0 is connected to the latch Q channel"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRPWMx.OUTy0 is connected to the latch Qn channel"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<OCS0_A> for bool {
     #[inline(always)]
     fn from(variant: OCS0_A) -> Self {
-        match variant {
-            OCS0_A::VALUE1 => false,
-            OCS0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `OCS0`"]
@@ -676,17 +650,14 @@ impl<'a> OCS0_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum OCS1_A {
     #[doc = "0: HRPWMx.OUTy1 is connected to the latch Qn channel"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRPWMx.OUTy1 is connected to the latch Q channel"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<OCS1_A> for bool {
     #[inline(always)]
     fn from(variant: OCS1_A) -> Self {
-        match variant {
-            OCS1_A::VALUE1 => false,
-            OCS1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `OCS1`"]
@@ -754,17 +725,14 @@ impl<'a> OCS1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DTUS_A {
     #[doc = "0: The update of the values is done with the trigger generated by the timers. This is the same trigger that is used to update the HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, .."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: The update of the dead time values is done when the dead time counter is not running, independently of the HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . registers."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<DTUS_A> for bool {
     #[inline(always)]
     fn from(variant: DTUS_A) -> Self {
-        match variant {
-            DTUS_A::VALUE1 => false,
-            DTUS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `DTUS`"]

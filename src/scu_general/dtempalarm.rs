@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::DTEMPALARM>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum UNDERFL_A {
     #[doc = "0: No temperature underflow was detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: A temperature underflow was detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<UNDERFL_A> for bool {
     #[inline(always)]
     fn from(variant: UNDERFL_A) -> Self {
-        match variant {
-            UNDERFL_A::VALUE1 => false,
-            UNDERFL_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `UNDERFL`"]
@@ -43,17 +40,14 @@ impl UNDERFL_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum OVERFL_A {
     #[doc = "0: No temperature overflow was detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: A temperature overflow was detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<OVERFL_A> for bool {
     #[inline(always)]
     fn from(variant: OVERFL_A) -> Self {
-        match variant {
-            OVERFL_A::VALUE1 => false,
-            OVERFL_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `OVERFL`"]

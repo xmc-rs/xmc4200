@@ -14,17 +14,14 @@ impl crate::ResetValue for super::PEFLAG {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PEFPS_A {
     #[doc = "0: No parity error detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity error detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PEFPS_A> for bool {
     #[inline(always)]
     fn from(variant: PEFPS_A) -> Self {
-        match variant {
-            PEFPS_A::VALUE1 => false,
-            PEFPS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PEFPS`"]
@@ -92,17 +89,14 @@ impl<'a> PEFPS_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PEFDS1_A {
     #[doc = "0: No parity error detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity error detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PEFDS1_A> for bool {
     #[inline(always)]
     fn from(variant: PEFDS1_A) -> Self {
-        match variant {
-            PEFDS1_A::VALUE1 => false,
-            PEFDS1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PEFDS1`"]
@@ -170,17 +164,14 @@ impl<'a> PEFDS1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PEFU0_A {
     #[doc = "0: No parity error detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity error detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PEFU0_A> for bool {
     #[inline(always)]
     fn from(variant: PEFU0_A) -> Self {
-        match variant {
-            PEFU0_A::VALUE1 => false,
-            PEFU0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PEFU0`"]
@@ -248,17 +239,14 @@ impl<'a> PEFU0_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PEFU1_A {
     #[doc = "0: No parity error detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity error detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PEFU1_A> for bool {
     #[inline(always)]
     fn from(variant: PEFU1_A) -> Self {
-        match variant {
-            PEFU1_A::VALUE1 => false,
-            PEFU1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PEFU1`"]
@@ -326,17 +314,14 @@ impl<'a> PEFU1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PEFMC_A {
     #[doc = "0: No parity error detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity error detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PEFMC_A> for bool {
     #[inline(always)]
     fn from(variant: PEFMC_A) -> Self {
-        match variant {
-            PEFMC_A::VALUE1 => false,
-            PEFMC_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PEFMC`"]
@@ -404,17 +389,14 @@ impl<'a> PEFMC_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PEFPPRF_A {
     #[doc = "0: No parity error detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity error detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PEFPPRF_A> for bool {
     #[inline(always)]
     fn from(variant: PEFPPRF_A) -> Self {
-        match variant {
-            PEFPPRF_A::VALUE1 => false,
-            PEFPPRF_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PEFPPRF`"]
@@ -482,17 +464,14 @@ impl<'a> PEFPPRF_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PEUSB_A {
     #[doc = "0: No parity error detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Parity error detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PEUSB_A> for bool {
     #[inline(always)]
     fn from(variant: PEUSB_A) -> Self {
-        match variant {
-            PEUSB_A::VALUE1 => false,
-            PEUSB_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PEUSB`"]

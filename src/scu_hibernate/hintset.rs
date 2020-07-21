@@ -12,17 +12,14 @@ impl crate::ResetValue for super::HINTSET {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HIBNINT_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Hardware controlled hibernate sequence request active"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HIBNINT_AW> for bool {
     #[inline(always)]
     fn from(variant: HIBNINT_AW) -> Self {
-        match variant {
-            HIBNINT_AW::VALUE1 => false,
-            HIBNINT_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `HIBNINT`"]
@@ -68,17 +65,14 @@ impl<'a> HIBNINT_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VCOREOFF_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: VDDC off to EVR set"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<VCOREOFF_AW> for bool {
     #[inline(always)]
     fn from(variant: VCOREOFF_AW) -> Self {
-        match variant {
-            VCOREOFF_AW::VALUE1 => false,
-            VCOREOFF_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `VCOREOFF`"]
@@ -124,17 +118,14 @@ impl<'a> VCOREOFF_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FLASHOFF_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Switch off VDDP supply of Flash"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<FLASHOFF_AW> for bool {
     #[inline(always)]
     fn from(variant: FLASHOFF_AW) -> Self {
-        match variant {
-            FLASHOFF_AW::VALUE1 => false,
-            FLASHOFF_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `FLASHOFF`"]
@@ -180,17 +171,14 @@ impl<'a> FLASHOFF_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FLASHPD_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Flash power down mode request set"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<FLASHPD_AW> for bool {
     #[inline(always)]
     fn from(variant: FLASHPD_AW) -> Self {
-        match variant {
-            FLASHPD_AW::VALUE1 => false,
-            FLASHPD_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `FLASHPD`"]
@@ -236,17 +224,14 @@ impl<'a> FLASHPD_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum POFFD_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Pull-up off"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<POFFD_AW> for bool {
     #[inline(always)]
     fn from(variant: POFFD_AW) -> Self {
-        match variant {
-            POFFD_AW::VALUE1 => false,
-            POFFD_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `POFFD`"]
@@ -304,17 +289,14 @@ impl<'a> PPODEL_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum POFFH_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Pull-up off"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<POFFH_AW> for bool {
     #[inline(always)]
     fn from(variant: POFFH_AW) -> Self {
-        match variant {
-            POFFH_AW::VALUE1 => false,
-            POFFH_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `POFFH`"]

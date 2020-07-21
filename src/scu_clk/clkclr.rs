@@ -12,17 +12,14 @@ impl crate::ResetValue for super::CLKCLR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum USBCDI_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Disable clock"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<USBCDI_AW> for bool {
     #[inline(always)]
     fn from(variant: USBCDI_AW) -> Self {
-        match variant {
-            USBCDI_AW::VALUE1 => false,
-            USBCDI_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `USBCDI`"]
@@ -68,17 +65,14 @@ impl<'a> USBCDI_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CCUCDI_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Disable clock"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<CCUCDI_AW> for bool {
     #[inline(always)]
     fn from(variant: CCUCDI_AW) -> Self {
-        match variant {
-            CCUCDI_AW::VALUE1 => false,
-            CCUCDI_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `CCUCDI`"]
@@ -124,17 +118,14 @@ impl<'a> CCUCDI_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum WDTCDI_AW {
     #[doc = "0: No effect"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Disable clock"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<WDTCDI_AW> for bool {
     #[inline(always)]
     fn from(variant: WDTCDI_AW) -> Self {
-        match variant {
-            WDTCDI_AW::VALUE1 => false,
-            WDTCDI_AW::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `WDTCDI`"]

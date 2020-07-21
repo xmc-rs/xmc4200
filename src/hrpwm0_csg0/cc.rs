@@ -12,61 +12,45 @@ impl crate::ResetValue for super::CC {
 }
 #[doc = "External blanking trigger selector\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum IBS_A {
     #[doc = "0: HRPWMx.BLyA"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRPWMx.BLyB"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: HRPWMx.BLyC"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: HRPWMx.BLyD"]
-    VALUE4,
+    VALUE4 = 3,
     #[doc = "4: HRPWMx.BLyE"]
-    VALUE5,
+    VALUE5 = 4,
     #[doc = "5: HRPWMx.BLyF"]
-    VALUE6,
+    VALUE6 = 5,
     #[doc = "6: HRPWMx.BLyG"]
-    VALUE7,
+    VALUE7 = 6,
     #[doc = "7: HRPWMx.BLyH"]
-    VALUE8,
+    VALUE8 = 7,
     #[doc = "8: HRPWMx.BLyI"]
-    VALUE9,
+    VALUE9 = 8,
     #[doc = "9: HRPWMx.BLyJ"]
-    VALUE10,
+    VALUE10 = 9,
     #[doc = "10: HRPWMx.BLyK"]
-    VALUE11,
+    VALUE11 = 10,
     #[doc = "11: HRPWMx.BLyL"]
-    VALUE12,
+    VALUE12 = 11,
     #[doc = "12: HRPWMx.BLyM"]
-    VALUE13,
+    VALUE13 = 12,
     #[doc = "13: HRPWMx.BLyN"]
-    VALUE14,
+    VALUE14 = 13,
     #[doc = "14: HRPWMx.BLyO"]
-    VALUE15,
+    VALUE15 = 14,
     #[doc = "15: HRPWMx.BLyP"]
-    VALUE16,
+    VALUE16 = 15,
 }
 impl From<IBS_A> for u8 {
     #[inline(always)]
     fn from(variant: IBS_A) -> Self {
-        match variant {
-            IBS_A::VALUE1 => 0,
-            IBS_A::VALUE2 => 1,
-            IBS_A::VALUE3 => 2,
-            IBS_A::VALUE4 => 3,
-            IBS_A::VALUE5 => 4,
-            IBS_A::VALUE6 => 5,
-            IBS_A::VALUE7 => 6,
-            IBS_A::VALUE8 => 7,
-            IBS_A::VALUE9 => 8,
-            IBS_A::VALUE10 => 9,
-            IBS_A::VALUE11 => 10,
-            IBS_A::VALUE12 => 11,
-            IBS_A::VALUE13 => 12,
-            IBS_A::VALUE14 => 13,
-            IBS_A::VALUE15 => 14,
-            IBS_A::VALUE16 => 15,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `IBS`"]
@@ -279,17 +263,14 @@ impl<'a> IBS_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IMCS_A {
     #[doc = "0: HRPWMx.CyINA"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: HRPWMx.CyINB"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<IMCS_A> for bool {
     #[inline(always)]
     fn from(variant: IMCS_A) -> Self {
-        match variant {
-            IMCS_A::VALUE1 => false,
-            IMCS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `IMCS`"]
@@ -355,22 +336,19 @@ impl<'a> IMCS_W<'a> {
 }
 #[doc = "Comparator input switching configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum IMCC_A {
     #[doc = "0: Dynamic switch disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Comparator input is connected to HRPWMx.CyINB when the control signal is HIGH"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Comparator input is connected to HRPWMx.CyINA when the control signal is HIGH"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<IMCC_A> for u8 {
     #[inline(always)]
     fn from(variant: IMCC_A) -> Self {
-        match variant {
-            IMCC_A::VALUE1 => 0,
-            IMCC_A::VALUE2 => 1,
-            IMCC_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `IMCC`"]
@@ -509,25 +487,21 @@ impl<'a> OSE_W<'a> {
 }
 #[doc = "Blanking mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum BLMC_A {
     #[doc = "0: Blanking disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Blanking on a LOW to HIGH transition"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Blanking on a HIGH to LOW transition"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Blanking on both transitions"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<BLMC_A> for u8 {
     #[inline(always)]
     fn from(variant: BLMC_A) -> Self {
-        match variant {
-            BLMC_A::VALUE1 => 0,
-            BLMC_A::VALUE2 => 1,
-            BLMC_A::VALUE3 => 2,
-            BLMC_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `BLMC`"]
@@ -632,17 +606,14 @@ impl<'a> EBE_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum COFE_A {
     #[doc = "0: Filtering stage disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Filtering stage enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<COFE_A> for bool {
     #[inline(always)]
     fn from(variant: COFE_A) -> Self {
-        match variant {
-            COFE_A::VALUE1 => false,
-            COFE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `COFE`"]
@@ -708,37 +679,29 @@ impl<'a> COFE_W<'a> {
 }
 #[doc = "Comparator output filter window\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum COFM_A {
     #[doc = "0: Comparator Output needs to be stable for 2 clock cycles"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Comparator Output needs to be stable for 3 clock cycles"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Comparator Output needs to be stable for 4 clock cycles"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Comparator Output needs to be stable for 5 clock cycles"]
-    VALUE4,
+    VALUE4 = 3,
     #[doc = "12: Comparator Output needs to be stable for 14 clock cycles"]
-    VALUE5,
+    VALUE5 = 12,
     #[doc = "13: Comparator Output needs to be stable for 15 clock cycles"]
-    VALUE6,
+    VALUE6 = 13,
     #[doc = "14: Comparator Output needs to be stable for 16 clock cycles"]
-    VALUE7,
+    VALUE7 = 14,
     #[doc = "15: Comparator Output needs to be stable for 32 clock cycles"]
-    VALUE8,
+    VALUE8 = 15,
 }
 impl From<COFM_A> for u8 {
     #[inline(always)]
     fn from(variant: COFM_A) -> Self {
-        match variant {
-            COFM_A::VALUE1 => 0,
-            COFM_A::VALUE2 => 1,
-            COFM_A::VALUE3 => 2,
-            COFM_A::VALUE4 => 3,
-            COFM_A::VALUE5 => 12,
-            COFM_A::VALUE6 => 13,
-            COFM_A::VALUE7 => 14,
-            COFM_A::VALUE8 => 15,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `COFM`"]
@@ -860,22 +823,19 @@ impl<'a> COFM_W<'a> {
 }
 #[doc = "Comparator output filter control\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum COFC_A {
     #[doc = "0: Filtering is always done if enabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Filtering is only done when CSGyDSV1 value is currently fed to the DAC"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Filtering is only done when the CSGyDSV2 value is currently fed to the DAC"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<COFC_A> for u8 {
     #[inline(always)]
     fn from(variant: COFC_A) -> Self {
-        match variant {
-            COFC_A::VALUE1 => 0,
-            COFC_A::VALUE2 => 1,
-            COFC_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `COFC`"]

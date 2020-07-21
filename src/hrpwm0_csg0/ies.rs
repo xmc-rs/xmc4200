@@ -12,22 +12,19 @@ impl crate::ResetValue for super::IES {
 }
 #[doc = "External value switch function level selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum SVLS_A {
     #[doc = "0: Function disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Active when input is HIGH"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Active when input is LOW"]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<SVLS_A> for u8 {
     #[inline(always)]
     fn from(variant: SVLS_A) -> Self {
-        match variant {
-            SVLS_A::VALUE1 => 0,
-            SVLS_A::VALUE2 => 1,
-            SVLS_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `SVLS`"]
@@ -94,25 +91,21 @@ impl<'a> SVLS_W<'a> {
 }
 #[doc = "External start function edge selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum STRES_A {
     #[doc = "0: Function disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Active on rising edge"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Active on falling edge"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Active on both edges"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<STRES_A> for u8 {
     #[inline(always)]
     fn from(variant: STRES_A) -> Self {
-        match variant {
-            STRES_A::VALUE1 => 0,
-            STRES_A::VALUE2 => 1,
-            STRES_A::VALUE3 => 2,
-            STRES_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `STRES`"]
@@ -191,25 +184,21 @@ impl<'a> STRES_W<'a> {
 }
 #[doc = "External stop function edge selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum STPES_A {
     #[doc = "0: Function disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Active on rising edge"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Active on falling edge"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Active on both edges"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<STPES_A> for u8 {
     #[inline(always)]
     fn from(variant: STPES_A) -> Self {
-        match variant {
-            STPES_A::VALUE1 => 0,
-            STPES_A::VALUE2 => 1,
-            STPES_A::VALUE3 => 2,
-            STPES_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `STPES`"]
@@ -288,25 +277,21 @@ impl<'a> STPES_W<'a> {
 }
 #[doc = "External trigger function edge selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum TRGES_A {
     #[doc = "0: Function disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Active on rising edge"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Active on falling edge"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Active on both edges"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<TRGES_A> for u8 {
     #[inline(always)]
     fn from(variant: TRGES_A) -> Self {
-        match variant {
-            TRGES_A::VALUE1 => 0,
-            TRGES_A::VALUE2 => 1,
-            TRGES_A::VALUE3 => 2,
-            TRGES_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `TRGES`"]
@@ -385,25 +370,21 @@ impl<'a> TRGES_W<'a> {
 }
 #[doc = "External shadow transfer enable edge selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum STES_A {
     #[doc = "0: Function disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Active on rising edge"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Active on falling edge"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: Active on both edges"]
-    VALUE4,
+    VALUE4 = 3,
 }
 impl From<STES_A> for u8 {
     #[inline(always)]
     fn from(variant: STES_A) -> Self {
-        match variant {
-            STES_A::VALUE1 => 0,
-            STES_A::VALUE2 => 1,
-            STES_A::VALUE3 => 2,
-            STES_A::VALUE4 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `STES`"]

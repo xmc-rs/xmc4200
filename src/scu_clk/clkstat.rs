@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::CLKSTAT>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum USBCST_A {
     #[doc = "0: Clock disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clock enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<USBCST_A> for bool {
     #[inline(always)]
     fn from(variant: USBCST_A) -> Self {
-        match variant {
-            USBCST_A::VALUE1 => false,
-            USBCST_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `USBCST`"]
@@ -43,17 +40,14 @@ impl USBCST_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CCUCST_A {
     #[doc = "0: Clock disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clock enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<CCUCST_A> for bool {
     #[inline(always)]
     fn from(variant: CCUCST_A) -> Self {
-        match variant {
-            CCUCST_A::VALUE1 => false,
-            CCUCST_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `CCUCST`"]
@@ -82,17 +76,14 @@ impl CCUCST_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum WDTCST_A {
     #[doc = "0: Clock disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Clock enabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<WDTCST_A> for bool {
     #[inline(always)]
     fn from(variant: WDTCST_A) -> Self {
-        match variant {
-            WDTCST_A::VALUE1 => false,
-            WDTCST_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `WDTCST`"]

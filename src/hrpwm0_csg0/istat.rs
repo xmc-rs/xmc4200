@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::ISTAT>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VLS1S_A {
     #[doc = "0: Value switch not detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Value switch detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<VLS1S_A> for bool {
     #[inline(always)]
     fn from(variant: VLS1S_A) -> Self {
-        match variant {
-            VLS1S_A::VALUE1 => false,
-            VLS1S_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `VLS1S`"]
@@ -43,17 +40,14 @@ impl VLS1S_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VLS2S_A {
     #[doc = "0: Value switch not detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Value switch detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<VLS2S_A> for bool {
     #[inline(always)]
     fn from(variant: VLS2S_A) -> Self {
-        match variant {
-            VLS2S_A::VALUE1 => false,
-            VLS2S_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `VLS2S`"]
@@ -82,17 +76,14 @@ impl VLS2S_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TRGSS_A {
     #[doc = "0: Conversion trigger was not generated"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Conversion trigger was generated"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<TRGSS_A> for bool {
     #[inline(always)]
     fn from(variant: TRGSS_A) -> Self {
-        match variant {
-            TRGSS_A::VALUE1 => false,
-            TRGSS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `TRGSS`"]
@@ -121,17 +112,14 @@ impl TRGSS_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum STRSS_A {
     #[doc = "0: Start trigger not detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Start trigger detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<STRSS_A> for bool {
     #[inline(always)]
     fn from(variant: STRSS_A) -> Self {
-        match variant {
-            STRSS_A::VALUE1 => false,
-            STRSS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `STRSS`"]
@@ -160,17 +148,14 @@ impl STRSS_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum STPSS_A {
     #[doc = "0: Stop trigger not detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Stop trigger detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<STPSS_A> for bool {
     #[inline(always)]
     fn from(variant: STPSS_A) -> Self {
-        match variant {
-            STPSS_A::VALUE1 => false,
-            STPSS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `STPSS`"]
@@ -199,17 +184,14 @@ impl STPSS_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum STDS_A {
     #[doc = "0: Shadow transfer was not performed"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Shadow transfer was performed"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<STDS_A> for bool {
     #[inline(always)]
     fn from(variant: STDS_A) -> Self {
-        match variant {
-            STDS_A::VALUE1 => false,
-            STDS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `STDS`"]
@@ -238,17 +220,14 @@ impl STDS_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CRSS_A {
     #[doc = "0: Comparator output LOW to HIGH transition not detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Comparator output LOW to HIGH transition detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<CRSS_A> for bool {
     #[inline(always)]
     fn from(variant: CRSS_A) -> Self {
-        match variant {
-            CRSS_A::VALUE1 => false,
-            CRSS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `CRSS`"]
@@ -277,17 +256,14 @@ impl CRSS_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CFSS_A {
     #[doc = "0: Comparator output HIGH to LOW transition not detected"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Comparator output HIGH to LOW transition detected"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<CFSS_A> for bool {
     #[inline(always)]
     fn from(variant: CFSS_A) -> Self {
-        match variant {
-            CFSS_A::VALUE1 => false,
-            CFSS_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `CFSS`"]
@@ -316,17 +292,14 @@ impl CFSS_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CSES_A {
     #[doc = "0: Comparator output has been set to the clamped state"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Comparator output has not been set to the clamped state"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<CSES_A> for bool {
     #[inline(always)]
     fn from(variant: CSES_A) -> Self {
-        match variant {
-            CSES_A::VALUE1 => false,
-            CSES_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `CSES`"]

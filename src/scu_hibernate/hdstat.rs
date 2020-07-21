@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::HDSTAT>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum EPEV_A {
     #[doc = "0: Wake-up on positive edge pin event inactive"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Wake-up on positive edge pin event active"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<EPEV_A> for bool {
     #[inline(always)]
     fn from(variant: EPEV_A) -> Self {
-        match variant {
-            EPEV_A::VALUE1 => false,
-            EPEV_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `EPEV`"]
@@ -43,17 +40,14 @@ impl EPEV_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ENEV_A {
     #[doc = "0: Wake-up on negative edge pin event inactive"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Wake-up on negative edge pin event active"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ENEV_A> for bool {
     #[inline(always)]
     fn from(variant: ENEV_A) -> Self {
-        match variant {
-            ENEV_A::VALUE1 => false,
-            ENEV_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ENEV`"]
@@ -82,17 +76,14 @@ impl ENEV_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RTCEV_A {
     #[doc = "0: Wake-up on RTC event inactive"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Wake-up on RTC event active"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RTCEV_A> for bool {
     #[inline(always)]
     fn from(variant: RTCEV_A) -> Self {
-        match variant {
-            RTCEV_A::VALUE1 => false,
-            RTCEV_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `RTCEV`"]
@@ -121,17 +112,14 @@ impl RTCEV_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ULPWDG_A {
     #[doc = "0: Watchdog alarm did not occur"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Watchdog alarm occurred"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ULPWDG_A> for bool {
     #[inline(always)]
     fn from(variant: ULPWDG_A) -> Self {
-        match variant {
-            ULPWDG_A::VALUE1 => false,
-            ULPWDG_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ULPWDG`"]
@@ -160,17 +148,14 @@ impl ULPWDG_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HIBNOUT_A {
     #[doc = "0: Hibernate not driven active to pads"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Hibernate driven active to pads"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<HIBNOUT_A> for bool {
     #[inline(always)]
     fn from(variant: HIBNOUT_A) -> Self {
-        match variant {
-            HIBNOUT_A::VALUE1 => false,
-            HIBNOUT_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `HIBNOUT`"]
@@ -199,17 +184,14 @@ impl HIBNOUT_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VBATPEV_A {
     #[doc = "0: Wake-up on rising above threshold event inactive"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Wake-up on rising above threshold event active"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<VBATPEV_A> for bool {
     #[inline(always)]
     fn from(variant: VBATPEV_A) -> Self {
-        match variant {
-            VBATPEV_A::VALUE1 => false,
-            VBATPEV_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `VBATPEV`"]
@@ -238,17 +220,14 @@ impl VBATPEV_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VBATNEV_A {
     #[doc = "0: Wake-up on falling below threshold event inactive"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Wake-up on falling below threshold event active"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<VBATNEV_A> for bool {
     #[inline(always)]
     fn from(variant: VBATNEV_A) -> Self {
-        match variant {
-            VBATNEV_A::VALUE1 => false,
-            VBATNEV_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `VBATNEV`"]
@@ -277,17 +256,14 @@ impl VBATNEV_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AHIBIO0PEV_A {
     #[doc = "0: Wake-up on rising above threshold event inactive"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Wake-up on rising above threshold event active"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<AHIBIO0PEV_A> for bool {
     #[inline(always)]
     fn from(variant: AHIBIO0PEV_A) -> Self {
-        match variant {
-            AHIBIO0PEV_A::VALUE1 => false,
-            AHIBIO0PEV_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `AHIBIO0PEV`"]
@@ -316,17 +292,14 @@ impl AHIBIO0PEV_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AHIBIO0NEV_A {
     #[doc = "0: Wake-up on falling below threshold event inactive"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Wake-up on falling below threshold event active"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<AHIBIO0NEV_A> for bool {
     #[inline(always)]
     fn from(variant: AHIBIO0NEV_A) -> Self {
-        match variant {
-            AHIBIO0NEV_A::VALUE1 => false,
-            AHIBIO0NEV_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `AHIBIO0NEV`"]

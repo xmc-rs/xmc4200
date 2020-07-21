@@ -14,17 +14,14 @@ impl crate::ResetValue for super::SSC {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SST_A {
     #[doc = "0: Next shadow transfer signals (shadow transfer trigger and shadow transfer enable) are linked with the timer CC8y connected to the Source Selector 0."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Next shadow transfer signals (shadow transfer trigger and shadow transfer enable) are linked with the timer CC8y connected to the Source Selector 1."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<SST_A> for bool {
     #[inline(always)]
     fn from(variant: SST_A) -> Self {
-        match variant {
-            SST_A::VALUE1 => false,
-            SST_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `SST`"]

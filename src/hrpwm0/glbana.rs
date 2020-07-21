@@ -146,17 +146,14 @@ impl<'a> TRIBIAS_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum GHREN_A {
     #[doc = "0: Global high resolution generation is enabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Global high resolution generation is disabled"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<GHREN_A> for bool {
     #[inline(always)]
     fn from(variant: GHREN_A) -> Self {
-        match variant {
-            GHREN_A::VALUE1 => false,
-            GHREN_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `GHREN`"]

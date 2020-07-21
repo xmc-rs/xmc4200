@@ -12,25 +12,21 @@ impl crate::ResetValue for super::LPACCONF {
 }
 #[doc = "Compare Enable for Input Selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum CMPEN_A {
     #[doc = "0: Comparator permanently in power down"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Comparator activated for VBAT input"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Comparator activated for HIB_IO_0 input"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "4: Comparator activated for HIB_IO_1 input"]
-    VALUE4,
+    VALUE4 = 4,
 }
 impl From<CMPEN_A> for u8 {
     #[inline(always)]
     fn from(variant: CMPEN_A) -> Self {
-        match variant {
-            CMPEN_A::VALUE1 => 0,
-            CMPEN_A::VALUE2 => 1,
-            CMPEN_A::VALUE3 => 2,
-            CMPEN_A::VALUE4 => 4,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `CMPEN`"]
@@ -108,34 +104,27 @@ impl<'a> CMPEN_W<'a> {
 }
 #[doc = "Analog Compare Trigger Select\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum TRIGSEL_A {
     #[doc = "0: Sub-second interval counter"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: RTC alarm event"]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: RTC periodic event"]
-    VALUE3,
+    VALUE3 = 2,
     #[doc = "3: On digital WKUP input positive edge event"]
-    VALUE4,
+    VALUE4 = 3,
     #[doc = "5: On digital WKUP input negative edge event"]
-    VALUE5,
+    VALUE5 = 5,
     #[doc = "6: Continuous measurement"]
-    VALUE6,
+    VALUE6 = 6,
     #[doc = "7: Single-shot on software request"]
-    VALUE7,
+    VALUE7 = 7,
 }
 impl From<TRIGSEL_A> for u8 {
     #[inline(always)]
     fn from(variant: TRIGSEL_A) -> Self {
-        match variant {
-            TRIGSEL_A::VALUE1 => 0,
-            TRIGSEL_A::VALUE2 => 1,
-            TRIGSEL_A::VALUE3 => 2,
-            TRIGSEL_A::VALUE4 => 3,
-            TRIGSEL_A::VALUE5 => 5,
-            TRIGSEL_A::VALUE6 => 6,
-            TRIGSEL_A::VALUE7 => 7,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `TRIGSEL`"]
