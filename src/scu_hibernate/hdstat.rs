@@ -1,5 +1,18 @@
-#[doc = "Reader of register HDSTAT"]
-pub type R = crate::R<u32, super::HDSTAT>;
+#[doc = "Register `HDSTAT` reader"]
+pub struct R(crate::R<HDSTAT_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<HDSTAT_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<HDSTAT_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<HDSTAT_SPEC>) -> Self {
+        R(reader)
+    }
+}
 #[doc = "Wake-up Pin Event Positive Edge\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum EPEV_A {
@@ -14,9 +27,12 @@ impl From<EPEV_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `EPEV`"]
-pub type EPEV_R = crate::R<bool, EPEV_A>;
+#[doc = "Field `EPEV` reader - Wake-up Pin Event Positive Edge"]
+pub struct EPEV_R(crate::FieldReader<bool, EPEV_A>);
 impl EPEV_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        EPEV_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> EPEV_A {
@@ -28,12 +44,19 @@ impl EPEV_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == EPEV_A::VALUE1
+        **self == EPEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == EPEV_A::VALUE2
+        **self == EPEV_A::VALUE2
+    }
+}
+impl core::ops::Deref for EPEV_R {
+    type Target = crate::FieldReader<bool, EPEV_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Wake-up Pin Event Negative Edge\n\nValue on reset: 0"]
@@ -50,9 +73,12 @@ impl From<ENEV_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `ENEV`"]
-pub type ENEV_R = crate::R<bool, ENEV_A>;
+#[doc = "Field `ENEV` reader - Wake-up Pin Event Negative Edge"]
+pub struct ENEV_R(crate::FieldReader<bool, ENEV_A>);
 impl ENEV_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ENEV_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> ENEV_A {
@@ -64,12 +90,19 @@ impl ENEV_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == ENEV_A::VALUE1
+        **self == ENEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == ENEV_A::VALUE2
+        **self == ENEV_A::VALUE2
+    }
+}
+impl core::ops::Deref for ENEV_R {
+    type Target = crate::FieldReader<bool, ENEV_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "RTC Event\n\nValue on reset: 0"]
@@ -86,9 +119,12 @@ impl From<RTCEV_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `RTCEV`"]
-pub type RTCEV_R = crate::R<bool, RTCEV_A>;
+#[doc = "Field `RTCEV` reader - RTC Event"]
+pub struct RTCEV_R(crate::FieldReader<bool, RTCEV_A>);
 impl RTCEV_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RTCEV_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> RTCEV_A {
@@ -100,12 +136,19 @@ impl RTCEV_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == RTCEV_A::VALUE1
+        **self == RTCEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == RTCEV_A::VALUE2
+        **self == RTCEV_A::VALUE2
+    }
+}
+impl core::ops::Deref for RTCEV_R {
+    type Target = crate::FieldReader<bool, RTCEV_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "ULP WDG Alarm Status\n\nValue on reset: 0"]
@@ -122,9 +165,12 @@ impl From<ULPWDG_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `ULPWDG`"]
-pub type ULPWDG_R = crate::R<bool, ULPWDG_A>;
+#[doc = "Field `ULPWDG` reader - ULP WDG Alarm Status"]
+pub struct ULPWDG_R(crate::FieldReader<bool, ULPWDG_A>);
 impl ULPWDG_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ULPWDG_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> ULPWDG_A {
@@ -136,12 +182,19 @@ impl ULPWDG_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == ULPWDG_A::VALUE1
+        **self == ULPWDG_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == ULPWDG_A::VALUE2
+        **self == ULPWDG_A::VALUE2
+    }
+}
+impl core::ops::Deref for ULPWDG_R {
+    type Target = crate::FieldReader<bool, ULPWDG_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Hibernate Control Status\n\nValue on reset: 0"]
@@ -158,9 +211,12 @@ impl From<HIBNOUT_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `HIBNOUT`"]
-pub type HIBNOUT_R = crate::R<bool, HIBNOUT_A>;
+#[doc = "Field `HIBNOUT` reader - Hibernate Control Status"]
+pub struct HIBNOUT_R(crate::FieldReader<bool, HIBNOUT_A>);
 impl HIBNOUT_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        HIBNOUT_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> HIBNOUT_A {
@@ -172,12 +228,19 @@ impl HIBNOUT_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == HIBNOUT_A::VALUE1
+        **self == HIBNOUT_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == HIBNOUT_A::VALUE2
+        **self == HIBNOUT_A::VALUE2
+    }
+}
+impl core::ops::Deref for HIBNOUT_R {
+    type Target = crate::FieldReader<bool, HIBNOUT_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Wake-Up on LPAC Positive Edge of VBAT Threshold Crossing\n\nValue on reset: 0"]
@@ -194,9 +257,12 @@ impl From<VBATPEV_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `VBATPEV`"]
-pub type VBATPEV_R = crate::R<bool, VBATPEV_A>;
+#[doc = "Field `VBATPEV` reader - Wake-Up on LPAC Positive Edge of VBAT Threshold Crossing"]
+pub struct VBATPEV_R(crate::FieldReader<bool, VBATPEV_A>);
 impl VBATPEV_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VBATPEV_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> VBATPEV_A {
@@ -208,12 +274,19 @@ impl VBATPEV_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VBATPEV_A::VALUE1
+        **self == VBATPEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VBATPEV_A::VALUE2
+        **self == VBATPEV_A::VALUE2
+    }
+}
+impl core::ops::Deref for VBATPEV_R {
+    type Target = crate::FieldReader<bool, VBATPEV_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Wake-Up on LPAC Negative Edge of VBAT Threshold Crossing\n\nValue on reset: 0"]
@@ -230,9 +303,12 @@ impl From<VBATNEV_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `VBATNEV`"]
-pub type VBATNEV_R = crate::R<bool, VBATNEV_A>;
+#[doc = "Field `VBATNEV` reader - Wake-Up on LPAC Negative Edge of VBAT Threshold Crossing"]
+pub struct VBATNEV_R(crate::FieldReader<bool, VBATNEV_A>);
 impl VBATNEV_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VBATNEV_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> VBATNEV_A {
@@ -244,12 +320,19 @@ impl VBATNEV_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VBATNEV_A::VALUE1
+        **self == VBATNEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VBATNEV_A::VALUE2
+        **self == VBATNEV_A::VALUE2
+    }
+}
+impl core::ops::Deref for VBATNEV_R {
+    type Target = crate::FieldReader<bool, VBATNEV_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Wake-Up on LPAC Positive Edge of HIB_IO_0 Threshold Crossing\n\nValue on reset: 0"]
@@ -266,9 +349,12 @@ impl From<AHIBIO0PEV_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `AHIBIO0PEV`"]
-pub type AHIBIO0PEV_R = crate::R<bool, AHIBIO0PEV_A>;
+#[doc = "Field `AHIBIO0PEV` reader - Wake-Up on LPAC Positive Edge of HIB_IO_0 Threshold Crossing"]
+pub struct AHIBIO0PEV_R(crate::FieldReader<bool, AHIBIO0PEV_A>);
 impl AHIBIO0PEV_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        AHIBIO0PEV_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> AHIBIO0PEV_A {
@@ -280,12 +366,19 @@ impl AHIBIO0PEV_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == AHIBIO0PEV_A::VALUE1
+        **self == AHIBIO0PEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == AHIBIO0PEV_A::VALUE2
+        **self == AHIBIO0PEV_A::VALUE2
+    }
+}
+impl core::ops::Deref for AHIBIO0PEV_R {
+    type Target = crate::FieldReader<bool, AHIBIO0PEV_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Wake-Up on LPAC Negative Edge of HIB_IO_0 Threshold Crossing\n\nValue on reset: 0"]
@@ -302,9 +395,12 @@ impl From<AHIBIO0NEV_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `AHIBIO0NEV`"]
-pub type AHIBIO0NEV_R = crate::R<bool, AHIBIO0NEV_A>;
+#[doc = "Field `AHIBIO0NEV` reader - Wake-Up on LPAC Negative Edge of HIB_IO_0 Threshold Crossing"]
+pub struct AHIBIO0NEV_R(crate::FieldReader<bool, AHIBIO0NEV_A>);
 impl AHIBIO0NEV_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        AHIBIO0NEV_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> AHIBIO0NEV_A {
@@ -316,12 +412,19 @@ impl AHIBIO0NEV_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == AHIBIO0NEV_A::VALUE1
+        **self == AHIBIO0NEV_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == AHIBIO0NEV_A::VALUE2
+        **self == AHIBIO0NEV_A::VALUE2
+    }
+}
+impl core::ops::Deref for AHIBIO0NEV_R {
+    type Target = crate::FieldReader<bool, AHIBIO0NEV_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 impl R {
@@ -369,5 +472,21 @@ impl R {
     #[inline(always)]
     pub fn ahibio0nev(&self) -> AHIBIO0NEV_R {
         AHIBIO0NEV_R::new(((self.bits >> 11) & 0x01) != 0)
+    }
+}
+#[doc = "Hibernate Domain Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hdstat](index.html) module"]
+pub struct HDSTAT_SPEC;
+impl crate::RegisterSpec for HDSTAT_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [hdstat::R](R) reader structure"]
+impl crate::Readable for HDSTAT_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets HDSTAT to value 0"]
+impl crate::Resettable for HDSTAT_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

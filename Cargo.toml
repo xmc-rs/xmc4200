@@ -9,10 +9,10 @@ repository = "https://github.com/xmc-rs/xmc4200"
 keywords = ["cortex-m", "xmc4x", "no_std", "svd2rust", "embedded"]
 documentation = "https://docs.rs/xmc4200/"
 categories = ["embedded", "no-std"]
+edition = "2018"
 
 [dependencies]
 cortex-m = "0.7.0"
-bare-metal = "0.2.5"
 vcell = "0.1.2"
 
 [dependencies.cortex-m-rt]

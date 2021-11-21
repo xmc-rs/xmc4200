@@ -1,13 +1,37 @@
-#[doc = "Reader of register DCI"]
-pub type R = crate::R<u32, super::DCI>;
-#[doc = "Writer for register DCI"]
-pub type W = crate::W<u32, super::DCI>;
-#[doc = "Register DCI `reset()`'s with value 0"]
-impl crate::ResetValue for super::DCI {
-    type Type = u32;
+#[doc = "Register `DCI` reader"]
+pub struct R(crate::R<DCI_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<DCI_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<DCI_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<DCI_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `DCI` writer"]
+pub struct W(crate::W<DCI_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<DCI_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<DCI_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<DCI_SPEC>) -> Self {
+        W(writer)
     }
 }
 #[doc = "Value Selector input selection\n\nValue on reset: 0"]
@@ -53,9 +77,12 @@ impl From<SVIS_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `SVIS`"]
-pub type SVIS_R = crate::R<u8, SVIS_A>;
+#[doc = "Field `SVIS` reader - Value Selector input selection"]
+pub struct SVIS_R(crate::FieldReader<u8, SVIS_A>);
 impl SVIS_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        SVIS_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SVIS_A {
@@ -82,85 +109,92 @@ impl SVIS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SVIS_A::VALUE1
+        **self == SVIS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SVIS_A::VALUE2
+        **self == SVIS_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SVIS_A::VALUE3
+        **self == SVIS_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == SVIS_A::VALUE4
+        **self == SVIS_A::VALUE4
     }
     #[doc = "Checks if the value of the field is `VALUE5`"]
     #[inline(always)]
     pub fn is_value5(&self) -> bool {
-        *self == SVIS_A::VALUE5
+        **self == SVIS_A::VALUE5
     }
     #[doc = "Checks if the value of the field is `VALUE6`"]
     #[inline(always)]
     pub fn is_value6(&self) -> bool {
-        *self == SVIS_A::VALUE6
+        **self == SVIS_A::VALUE6
     }
     #[doc = "Checks if the value of the field is `VALUE7`"]
     #[inline(always)]
     pub fn is_value7(&self) -> bool {
-        *self == SVIS_A::VALUE7
+        **self == SVIS_A::VALUE7
     }
     #[doc = "Checks if the value of the field is `VALUE8`"]
     #[inline(always)]
     pub fn is_value8(&self) -> bool {
-        *self == SVIS_A::VALUE8
+        **self == SVIS_A::VALUE8
     }
     #[doc = "Checks if the value of the field is `VALUE9`"]
     #[inline(always)]
     pub fn is_value9(&self) -> bool {
-        *self == SVIS_A::VALUE9
+        **self == SVIS_A::VALUE9
     }
     #[doc = "Checks if the value of the field is `VALUE10`"]
     #[inline(always)]
     pub fn is_value10(&self) -> bool {
-        *self == SVIS_A::VALUE10
+        **self == SVIS_A::VALUE10
     }
     #[doc = "Checks if the value of the field is `VALUE11`"]
     #[inline(always)]
     pub fn is_value11(&self) -> bool {
-        *self == SVIS_A::VALUE11
+        **self == SVIS_A::VALUE11
     }
     #[doc = "Checks if the value of the field is `VALUE12`"]
     #[inline(always)]
     pub fn is_value12(&self) -> bool {
-        *self == SVIS_A::VALUE12
+        **self == SVIS_A::VALUE12
     }
     #[doc = "Checks if the value of the field is `VALUE13`"]
     #[inline(always)]
     pub fn is_value13(&self) -> bool {
-        *self == SVIS_A::VALUE13
+        **self == SVIS_A::VALUE13
     }
     #[doc = "Checks if the value of the field is `VALUE14`"]
     #[inline(always)]
     pub fn is_value14(&self) -> bool {
-        *self == SVIS_A::VALUE14
+        **self == SVIS_A::VALUE14
     }
     #[doc = "Checks if the value of the field is `VALUE15`"]
     #[inline(always)]
     pub fn is_value15(&self) -> bool {
-        *self == SVIS_A::VALUE15
+        **self == SVIS_A::VALUE15
     }
     #[doc = "Checks if the value of the field is `VALUE16`"]
     #[inline(always)]
     pub fn is_value16(&self) -> bool {
-        *self == SVIS_A::VALUE16
+        **self == SVIS_A::VALUE16
     }
 }
-#[doc = "Write proxy for field `SVIS`"]
+impl core::ops::Deref for SVIS_R {
+    type Target = crate::FieldReader<u8, SVIS_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SVIS` writer - Value Selector input selection"]
 pub struct SVIS_W<'a> {
     w: &'a mut W,
 }
@@ -168,9 +202,7 @@ impl<'a> SVIS_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: SVIS_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "HRPWMx.SyIA"]
     #[inline(always)]
@@ -255,13 +287,25 @@ impl<'a> SVIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
+        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
         self.w
     }
 }
-#[doc = "Reader of field `STRIS`"]
-pub type STRIS_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `STRIS`"]
+#[doc = "Field `STRIS` reader - Slope generation start control input selection"]
+pub struct STRIS_R(crate::FieldReader<u8, u8>);
+impl STRIS_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        STRIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STRIS_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STRIS` writer - Slope generation start control input selection"]
 pub struct STRIS_W<'a> {
     w: &'a mut W,
 }
@@ -269,13 +313,25 @@ impl<'a> STRIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u32) & 0x0f) << 4);
+        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `STPIS`"]
-pub type STPIS_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `STPIS`"]
+#[doc = "Field `STPIS` reader - Slope generation stop control input selection"]
+pub struct STPIS_R(crate::FieldReader<u8, u8>);
+impl STPIS_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        STPIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STPIS_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STPIS` writer - Slope generation stop control input selection"]
 pub struct STPIS_W<'a> {
     w: &'a mut W,
 }
@@ -283,13 +339,25 @@ impl<'a> STPIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
         self.w
     }
 }
-#[doc = "Reader of field `TRGIS`"]
-pub type TRGIS_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `TRGIS`"]
+#[doc = "Field `TRGIS` reader - External conversion trigger input selection"]
+pub struct TRGIS_R(crate::FieldReader<u8, u8>);
+impl TRGIS_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        TRGIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TRGIS_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TRGIS` writer - External conversion trigger input selection"]
 pub struct TRGIS_W<'a> {
     w: &'a mut W,
 }
@@ -297,13 +365,25 @@ impl<'a> TRGIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | (((value as u32) & 0x0f) << 12);
+        self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u32 & 0x0f) << 12);
         self.w
     }
 }
-#[doc = "Reader of field `STIS`"]
-pub type STIS_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `STIS`"]
+#[doc = "Field `STIS` reader - External shadow request enable input selection"]
+pub struct STIS_R(crate::FieldReader<u8, u8>);
+impl STIS_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        STIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STIS_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STIS` writer - External shadow request enable input selection"]
 pub struct STIS_W<'a> {
     w: &'a mut W,
 }
@@ -311,7 +391,7 @@ impl<'a> STIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
+        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
         self.w
     }
 }
@@ -334,9 +414,12 @@ impl From<SCS_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `SCS`"]
-pub type SCS_R = crate::R<u8, SCS_A>;
+#[doc = "Field `SCS` reader - Slope generation clock selection"]
+pub struct SCS_R(crate::FieldReader<u8, SCS_A>);
 impl SCS_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        SCS_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SCS_A {
@@ -351,25 +434,32 @@ impl SCS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SCS_A::VALUE1
+        **self == SCS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SCS_A::VALUE2
+        **self == SCS_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SCS_A::VALUE3
+        **self == SCS_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == SCS_A::VALUE4
+        **self == SCS_A::VALUE4
     }
 }
-#[doc = "Write proxy for field `SCS`"]
+impl core::ops::Deref for SCS_R {
+    type Target = crate::FieldReader<u8, SCS_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SCS` writer - Slope generation clock selection"]
 pub struct SCS_W<'a> {
     w: &'a mut W,
 }
@@ -377,9 +467,7 @@ impl<'a> SCS_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: SCS_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "HRPWMx.MCLK (Module clock is used)"]
     #[inline(always)]
@@ -404,7 +492,7 @@ impl<'a> SCS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | (((value as u32) & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
         self.w
     }
 }
@@ -470,5 +558,31 @@ impl W {
     #[inline(always)]
     pub fn scs(&mut self) -> SCS_W {
         SCS_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "External input selection\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dci](index.html) module"]
+pub struct DCI_SPEC;
+impl crate::RegisterSpec for DCI_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [dci::R](R) reader structure"]
+impl crate::Readable for DCI_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [dci::W](W) writer structure"]
+impl crate::Writable for DCI_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets DCI to value 0"]
+impl crate::Resettable for DCI_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

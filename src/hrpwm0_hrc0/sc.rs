@@ -1,5 +1,18 @@
-#[doc = "Reader of register SC"]
-pub type R = crate::R<u32, super::SC>;
+#[doc = "Register `SC` reader"]
+pub struct R(crate::R<SC_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<SC_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<SC_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<SC_SPEC>) -> Self {
+        R(reader)
+    }
+}
 #[doc = "Source selector for the shadow transfer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ST_A {
@@ -14,9 +27,12 @@ impl From<ST_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `ST`"]
-pub type ST_R = crate::R<bool, ST_A>;
+#[doc = "Field `ST` reader - Source selector for the shadow transfer"]
+pub struct ST_R(crate::FieldReader<bool, ST_A>);
 impl ST_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ST_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> ST_A {
@@ -28,12 +44,19 @@ impl ST_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == ST_A::VALUE1
+        **self == ST_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == ST_A::VALUE2
+        **self == ST_A::VALUE2
+    }
+}
+impl core::ops::Deref for ST_R {
+    type Target = crate::FieldReader<bool, ST_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 impl R {
@@ -41,5 +64,21 @@ impl R {
     #[inline(always)]
     pub fn st(&self) -> ST_R {
         ST_R::new((self.bits & 0x01) != 0)
+    }
+}
+#[doc = "HRC current source for shadow\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sc](index.html) module"]
+pub struct SC_SPEC;
+impl crate::RegisterSpec for SC_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [sc::R](R) reader structure"]
+impl crate::Readable for SC_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets SC to value 0"]
+impl crate::Resettable for SC_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

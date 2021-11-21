@@ -1,5 +1,18 @@
-#[doc = "Reader of register ISTAT"]
-pub type R = crate::R<u32, super::ISTAT>;
+#[doc = "Register `ISTAT` reader"]
+pub struct R(crate::R<ISTAT_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<ISTAT_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<ISTAT_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<ISTAT_SPEC>) -> Self {
+        R(reader)
+    }
+}
 #[doc = "Value switch from CSGyDSV1 to CSGyDSV2 interrupt status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VLS1S_A {
@@ -14,9 +27,12 @@ impl From<VLS1S_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `VLS1S`"]
-pub type VLS1S_R = crate::R<bool, VLS1S_A>;
+#[doc = "Field `VLS1S` reader - Value switch from CSGyDSV1 to CSGyDSV2 interrupt status"]
+pub struct VLS1S_R(crate::FieldReader<bool, VLS1S_A>);
 impl VLS1S_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VLS1S_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> VLS1S_A {
@@ -28,12 +44,19 @@ impl VLS1S_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VLS1S_A::VALUE1
+        **self == VLS1S_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VLS1S_A::VALUE2
+        **self == VLS1S_A::VALUE2
+    }
+}
+impl core::ops::Deref for VLS1S_R {
+    type Target = crate::FieldReader<bool, VLS1S_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Value switch from CSGyDSV2 to CSGyDSV1 interrupt status\n\nValue on reset: 0"]
@@ -50,9 +73,12 @@ impl From<VLS2S_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `VLS2S`"]
-pub type VLS2S_R = crate::R<bool, VLS2S_A>;
+#[doc = "Field `VLS2S` reader - Value switch from CSGyDSV2 to CSGyDSV1 interrupt status"]
+pub struct VLS2S_R(crate::FieldReader<bool, VLS2S_A>);
 impl VLS2S_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VLS2S_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> VLS2S_A {
@@ -64,12 +90,19 @@ impl VLS2S_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VLS2S_A::VALUE1
+        **self == VLS2S_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VLS2S_A::VALUE2
+        **self == VLS2S_A::VALUE2
+    }
+}
+impl core::ops::Deref for VLS2S_R {
+    type Target = crate::FieldReader<bool, VLS2S_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Conversion trigger status\n\nValue on reset: 0"]
@@ -86,9 +119,12 @@ impl From<TRGSS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `TRGSS`"]
-pub type TRGSS_R = crate::R<bool, TRGSS_A>;
+#[doc = "Field `TRGSS` reader - Conversion trigger status"]
+pub struct TRGSS_R(crate::FieldReader<bool, TRGSS_A>);
 impl TRGSS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TRGSS_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TRGSS_A {
@@ -100,12 +136,19 @@ impl TRGSS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == TRGSS_A::VALUE1
+        **self == TRGSS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == TRGSS_A::VALUE2
+        **self == TRGSS_A::VALUE2
+    }
+}
+impl core::ops::Deref for TRGSS_R {
+    type Target = crate::FieldReader<bool, TRGSS_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Start trigger interrupt status\n\nValue on reset: 0"]
@@ -122,9 +165,12 @@ impl From<STRSS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `STRSS`"]
-pub type STRSS_R = crate::R<bool, STRSS_A>;
+#[doc = "Field `STRSS` reader - Start trigger interrupt status"]
+pub struct STRSS_R(crate::FieldReader<bool, STRSS_A>);
 impl STRSS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STRSS_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> STRSS_A {
@@ -136,12 +182,19 @@ impl STRSS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == STRSS_A::VALUE1
+        **self == STRSS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == STRSS_A::VALUE2
+        **self == STRSS_A::VALUE2
+    }
+}
+impl core::ops::Deref for STRSS_R {
+    type Target = crate::FieldReader<bool, STRSS_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Stop trigger interrupt status\n\nValue on reset: 0"]
@@ -158,9 +211,12 @@ impl From<STPSS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `STPSS`"]
-pub type STPSS_R = crate::R<bool, STPSS_A>;
+#[doc = "Field `STPSS` reader - Stop trigger interrupt status"]
+pub struct STPSS_R(crate::FieldReader<bool, STPSS_A>);
 impl STPSS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STPSS_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> STPSS_A {
@@ -172,12 +228,19 @@ impl STPSS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == STPSS_A::VALUE1
+        **self == STPSS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == STPSS_A::VALUE2
+        **self == STPSS_A::VALUE2
+    }
+}
+impl core::ops::Deref for STPSS_R {
+    type Target = crate::FieldReader<bool, STPSS_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Shadow transfer interrupt status\n\nValue on reset: 0"]
@@ -194,9 +257,12 @@ impl From<STDS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `STDS`"]
-pub type STDS_R = crate::R<bool, STDS_A>;
+#[doc = "Field `STDS` reader - Shadow transfer interrupt status"]
+pub struct STDS_R(crate::FieldReader<bool, STDS_A>);
 impl STDS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STDS_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> STDS_A {
@@ -208,12 +274,19 @@ impl STDS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == STDS_A::VALUE1
+        **self == STDS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == STDS_A::VALUE2
+        **self == STDS_A::VALUE2
+    }
+}
+impl core::ops::Deref for STDS_R {
+    type Target = crate::FieldReader<bool, STDS_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Comparator rise interrupt status\n\nValue on reset: 0"]
@@ -230,9 +303,12 @@ impl From<CRSS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `CRSS`"]
-pub type CRSS_R = crate::R<bool, CRSS_A>;
+#[doc = "Field `CRSS` reader - Comparator rise interrupt status"]
+pub struct CRSS_R(crate::FieldReader<bool, CRSS_A>);
 impl CRSS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CRSS_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CRSS_A {
@@ -244,12 +320,19 @@ impl CRSS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CRSS_A::VALUE1
+        **self == CRSS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CRSS_A::VALUE2
+        **self == CRSS_A::VALUE2
+    }
+}
+impl core::ops::Deref for CRSS_R {
+    type Target = crate::FieldReader<bool, CRSS_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Comparator fall interrupt status\n\nValue on reset: 0"]
@@ -266,9 +349,12 @@ impl From<CFSS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `CFSS`"]
-pub type CFSS_R = crate::R<bool, CFSS_A>;
+#[doc = "Field `CFSS` reader - Comparator fall interrupt status"]
+pub struct CFSS_R(crate::FieldReader<bool, CFSS_A>);
 impl CFSS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CFSS_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CFSS_A {
@@ -280,12 +366,19 @@ impl CFSS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CFSS_A::VALUE1
+        **self == CFSS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CFSS_A::VALUE2
+        **self == CFSS_A::VALUE2
+    }
+}
+impl core::ops::Deref for CFSS_R {
+    type Target = crate::FieldReader<bool, CFSS_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Comparator clamped interrupt status\n\nValue on reset: 0"]
@@ -302,9 +395,12 @@ impl From<CSES_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `CSES`"]
-pub type CSES_R = crate::R<bool, CSES_A>;
+#[doc = "Field `CSES` reader - Comparator clamped interrupt status"]
+pub struct CSES_R(crate::FieldReader<bool, CSES_A>);
 impl CSES_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CSES_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CSES_A {
@@ -316,12 +412,19 @@ impl CSES_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CSES_A::VALUE1
+        **self == CSES_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CSES_A::VALUE2
+        **self == CSES_A::VALUE2
+    }
+}
+impl core::ops::Deref for CSES_R {
+    type Target = crate::FieldReader<bool, CSES_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 impl R {
@@ -369,5 +472,21 @@ impl R {
     #[inline(always)]
     pub fn cses(&self) -> CSES_R {
         CSES_R::new(((self.bits >> 8) & 0x01) != 0)
+    }
+}
+#[doc = "Service request status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [istat](index.html) module"]
+pub struct ISTAT_SPEC;
+impl crate::RegisterSpec for ISTAT_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [istat::R](R) reader structure"]
+impl crate::Readable for ISTAT_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets ISTAT to value 0"]
+impl crate::Resettable for ISTAT_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

@@ -1,14 +1,25 @@
-#[doc = "Writer for register CSGSETG"]
-pub type W = crate::W<u32, super::CSGSETG>;
-#[doc = "Register CSGSETG `reset()`'s with value 0"]
-impl crate::ResetValue for super::CSGSETG {
-    type Type = u32;
+#[doc = "Register `CSGSETG` writer"]
+pub struct W(crate::W<CSGSETG_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CSGSETG_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Write proxy for field `SD0R`"]
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<CSGSETG_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<CSGSETG_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `SD0R` writer - DAC0 run bit set"]
 pub struct SD0R_W<'a> {
     w: &'a mut W,
 }
@@ -26,11 +37,11 @@ impl<'a> SD0R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
-#[doc = "Write proxy for field `SC0R`"]
+#[doc = "Field `SC0R` writer - CMP0 run bit set"]
 pub struct SC0R_W<'a> {
     w: &'a mut W,
 }
@@ -48,11 +59,11 @@ impl<'a> SC0R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Write proxy for field `SC0P`"]
+#[doc = "Field `SC0P` writer - CMP0 passive level set"]
 pub struct SC0P_W<'a> {
     w: &'a mut W,
 }
@@ -70,11 +81,11 @@ impl<'a> SC0P_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Write proxy for field `SD1R`"]
+#[doc = "Field `SD1R` writer - DAC1 run bit set"]
 pub struct SD1R_W<'a> {
     w: &'a mut W,
 }
@@ -92,11 +103,11 @@ impl<'a> SD1R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Write proxy for field `SC1R`"]
+#[doc = "Field `SC1R` writer - CMP1 run bit set"]
 pub struct SC1R_W<'a> {
     w: &'a mut W,
 }
@@ -114,11 +125,11 @@ impl<'a> SC1R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Write proxy for field `SC1P`"]
+#[doc = "Field `SC1P` writer - CMP1 passive level set"]
 pub struct SC1P_W<'a> {
     w: &'a mut W,
 }
@@ -136,11 +147,11 @@ impl<'a> SC1P_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Write proxy for field `SD2R`"]
+#[doc = "Field `SD2R` writer - DAC2 run bit set"]
 pub struct SD2R_W<'a> {
     w: &'a mut W,
 }
@@ -158,11 +169,11 @@ impl<'a> SD2R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
-#[doc = "Write proxy for field `SC2R`"]
+#[doc = "Field `SC2R` writer - CMP2 run bit set"]
 pub struct SC2R_W<'a> {
     w: &'a mut W,
 }
@@ -180,11 +191,11 @@ impl<'a> SC2R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Write proxy for field `SC2P`"]
+#[doc = "Field `SC2P` writer - CMP2 passive level set"]
 pub struct SC2P_W<'a> {
     w: &'a mut W,
 }
@@ -202,7 +213,7 @@ impl<'a> SC2P_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
@@ -251,5 +262,27 @@ impl W {
     #[inline(always)]
     pub fn sc2p(&mut self) -> SC2P_W {
         SC2P_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Global CSG run bit set\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csgsetg](index.html) module"]
+pub struct CSGSETG_SPEC;
+impl crate::RegisterSpec for CSGSETG_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [csgsetg::W](W) writer structure"]
+impl crate::Writable for CSGSETG_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets CSGSETG to value 0"]
+impl crate::Resettable for CSGSETG_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }
