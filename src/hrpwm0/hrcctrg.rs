@@ -1,14 +1,25 @@
-#[doc = "Writer for register HRCCTRG"]
-pub type W = crate::W<u32, super::HRCCTRG>;
-#[doc = "Register HRCCTRG `reset()`'s with value 0"]
-impl crate::ResetValue for super::HRCCTRG {
-    type Type = u32;
+#[doc = "Register `HRCCTRG` writer"]
+pub struct W(crate::W<HRCCTRG_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<HRCCTRG_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Write proxy for field `H0EC`"]
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<HRCCTRG_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<HRCCTRG_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `H0EC` writer - HRC0 high resolution values shadow transfer Enable Clear"]
 pub struct H0EC_W<'a> {
     w: &'a mut W,
 }
@@ -26,11 +37,11 @@ impl<'a> H0EC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
-#[doc = "Write proxy for field `H0DEC`"]
+#[doc = "Field `H0DEC` writer - HRC0 dead time value shadow transfer Enable Clear"]
 pub struct H0DEC_W<'a> {
     w: &'a mut W,
 }
@@ -48,11 +59,11 @@ impl<'a> H0DEC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Write proxy for field `H1EC`"]
+#[doc = "Field `H1EC` writer - HRC1 high resolution values shadow transfer Enable Clear"]
 pub struct H1EC_W<'a> {
     w: &'a mut W,
 }
@@ -70,11 +81,11 @@ impl<'a> H1EC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Write proxy for field `H1DEC`"]
+#[doc = "Field `H1DEC` writer - HRC1 dead time value shadow transfer Enable Clear"]
 pub struct H1DEC_W<'a> {
     w: &'a mut W,
 }
@@ -92,11 +103,11 @@ impl<'a> H1DEC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Write proxy for field `H2CEC`"]
+#[doc = "Field `H2CEC` writer - HRC2 high resolution values shadow transfer Enable Clear"]
 pub struct H2CEC_W<'a> {
     w: &'a mut W,
 }
@@ -114,11 +125,11 @@ impl<'a> H2CEC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
-#[doc = "Write proxy for field `H2DEC`"]
+#[doc = "Field `H2DEC` writer - HRC2 dead time value shadow transfer Enable Clear"]
 pub struct H2DEC_W<'a> {
     w: &'a mut W,
 }
@@ -136,11 +147,11 @@ impl<'a> H2DEC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Write proxy for field `H3EC`"]
+#[doc = "Field `H3EC` writer - HRC3 high resolution values shadow transfer Enable Clear"]
 pub struct H3EC_W<'a> {
     w: &'a mut W,
 }
@@ -158,11 +169,11 @@ impl<'a> H3EC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
-#[doc = "Write proxy for field `H3DEC`"]
+#[doc = "Field `H3DEC` writer - HRC3 dead time value shadow transfer Enable Clear"]
 pub struct H3DEC_W<'a> {
     w: &'a mut W,
 }
@@ -180,7 +191,7 @@ impl<'a> H3DEC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
@@ -224,5 +235,27 @@ impl W {
     #[inline(always)]
     pub fn h3dec(&mut self) -> H3DEC_W {
         H3DEC_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Global HRC shadow trigger clear\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hrcctrg](index.html) module"]
+pub struct HRCCTRG_SPEC;
+impl crate::RegisterSpec for HRCCTRG_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [hrcctrg::W](W) writer structure"]
+impl crate::Writable for HRCCTRG_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets HRCCTRG to value 0"]
+impl crate::Resettable for HRCCTRG_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

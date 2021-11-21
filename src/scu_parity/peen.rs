@@ -1,13 +1,37 @@
-#[doc = "Reader of register PEEN"]
-pub type R = crate::R<u32, super::PEEN>;
-#[doc = "Writer for register PEEN"]
-pub type W = crate::W<u32, super::PEEN>;
-#[doc = "Register PEEN `reset()`'s with value 0"]
-impl crate::ResetValue for super::PEEN {
-    type Type = u32;
+#[doc = "Register `PEEN` reader"]
+pub struct R(crate::R<PEEN_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<PEEN_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<PEEN_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<PEEN_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `PEEN` writer"]
+pub struct W(crate::W<PEEN_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<PEEN_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<PEEN_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<PEEN_SPEC>) -> Self {
+        W(writer)
     }
 }
 #[doc = "Parity Error Enable for PSRAM\n\nValue on reset: 0"]
@@ -24,9 +48,12 @@ impl From<PEENPS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `PEENPS`"]
-pub type PEENPS_R = crate::R<bool, PEENPS_A>;
+#[doc = "Field `PEENPS` reader - Parity Error Enable for PSRAM"]
+pub struct PEENPS_R(crate::FieldReader<bool, PEENPS_A>);
 impl PEENPS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PEENPS_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> PEENPS_A {
@@ -38,15 +65,22 @@ impl PEENPS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PEENPS_A::VALUE1
+        **self == PEENPS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PEENPS_A::VALUE2
+        **self == PEENPS_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `PEENPS`"]
+impl core::ops::Deref for PEENPS_R {
+    type Target = crate::FieldReader<bool, PEENPS_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PEENPS` writer - Parity Error Enable for PSRAM"]
 pub struct PEENPS_W<'a> {
     w: &'a mut W,
 }
@@ -54,9 +88,7 @@ impl<'a> PEENPS_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: PEENPS_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "Disabled"]
     #[inline(always)]
@@ -81,7 +113,7 @@ impl<'a> PEENPS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -99,9 +131,12 @@ impl From<PEENDS1_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `PEENDS1`"]
-pub type PEENDS1_R = crate::R<bool, PEENDS1_A>;
+#[doc = "Field `PEENDS1` reader - Parity Error Enable for DSRAM1"]
+pub struct PEENDS1_R(crate::FieldReader<bool, PEENDS1_A>);
 impl PEENDS1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PEENDS1_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> PEENDS1_A {
@@ -113,15 +148,22 @@ impl PEENDS1_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PEENDS1_A::VALUE1
+        **self == PEENDS1_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PEENDS1_A::VALUE2
+        **self == PEENDS1_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `PEENDS1`"]
+impl core::ops::Deref for PEENDS1_R {
+    type Target = crate::FieldReader<bool, PEENDS1_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PEENDS1` writer - Parity Error Enable for DSRAM1"]
 pub struct PEENDS1_W<'a> {
     w: &'a mut W,
 }
@@ -129,9 +171,7 @@ impl<'a> PEENDS1_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: PEENDS1_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "Disabled"]
     #[inline(always)]
@@ -156,7 +196,7 @@ impl<'a> PEENDS1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -174,9 +214,12 @@ impl From<PEENU0_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `PEENU0`"]
-pub type PEENU0_R = crate::R<bool, PEENU0_A>;
+#[doc = "Field `PEENU0` reader - Parity Error Enable for USIC0 Memory"]
+pub struct PEENU0_R(crate::FieldReader<bool, PEENU0_A>);
 impl PEENU0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PEENU0_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> PEENU0_A {
@@ -188,15 +231,22 @@ impl PEENU0_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PEENU0_A::VALUE1
+        **self == PEENU0_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PEENU0_A::VALUE2
+        **self == PEENU0_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `PEENU0`"]
+impl core::ops::Deref for PEENU0_R {
+    type Target = crate::FieldReader<bool, PEENU0_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PEENU0` writer - Parity Error Enable for USIC0 Memory"]
 pub struct PEENU0_W<'a> {
     w: &'a mut W,
 }
@@ -204,9 +254,7 @@ impl<'a> PEENU0_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: PEENU0_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "Disabled"]
     #[inline(always)]
@@ -231,7 +279,7 @@ impl<'a> PEENU0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
@@ -249,9 +297,12 @@ impl From<PEENU1_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `PEENU1`"]
-pub type PEENU1_R = crate::R<bool, PEENU1_A>;
+#[doc = "Field `PEENU1` reader - Parity Error Enable for USIC1 Memory"]
+pub struct PEENU1_R(crate::FieldReader<bool, PEENU1_A>);
 impl PEENU1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PEENU1_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> PEENU1_A {
@@ -263,15 +314,22 @@ impl PEENU1_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PEENU1_A::VALUE1
+        **self == PEENU1_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PEENU1_A::VALUE2
+        **self == PEENU1_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `PEENU1`"]
+impl core::ops::Deref for PEENU1_R {
+    type Target = crate::FieldReader<bool, PEENU1_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PEENU1` writer - Parity Error Enable for USIC1 Memory"]
 pub struct PEENU1_W<'a> {
     w: &'a mut W,
 }
@@ -279,9 +337,7 @@ impl<'a> PEENU1_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: PEENU1_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "Disabled"]
     #[inline(always)]
@@ -306,7 +362,7 @@ impl<'a> PEENU1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
@@ -324,9 +380,12 @@ impl From<PEENMC_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `PEENMC`"]
-pub type PEENMC_R = crate::R<bool, PEENMC_A>;
+#[doc = "Field `PEENMC` reader - Parity Error Enable for MultiCAN Memory"]
+pub struct PEENMC_R(crate::FieldReader<bool, PEENMC_A>);
 impl PEENMC_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PEENMC_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> PEENMC_A {
@@ -338,15 +397,22 @@ impl PEENMC_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PEENMC_A::VALUE1
+        **self == PEENMC_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PEENMC_A::VALUE2
+        **self == PEENMC_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `PEENMC`"]
+impl core::ops::Deref for PEENMC_R {
+    type Target = crate::FieldReader<bool, PEENMC_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PEENMC` writer - Parity Error Enable for MultiCAN Memory"]
 pub struct PEENMC_W<'a> {
     w: &'a mut W,
 }
@@ -354,9 +420,7 @@ impl<'a> PEENMC_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: PEENMC_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "Disabled"]
     #[inline(always)]
@@ -381,7 +445,7 @@ impl<'a> PEENMC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
@@ -399,9 +463,12 @@ impl From<PEENPPRF_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `PEENPPRF`"]
-pub type PEENPPRF_R = crate::R<bool, PEENPPRF_A>;
+#[doc = "Field `PEENPPRF` reader - Parity Error Enable for PMU Prefetch Memory"]
+pub struct PEENPPRF_R(crate::FieldReader<bool, PEENPPRF_A>);
 impl PEENPPRF_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PEENPPRF_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> PEENPPRF_A {
@@ -413,15 +480,22 @@ impl PEENPPRF_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PEENPPRF_A::VALUE1
+        **self == PEENPPRF_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PEENPPRF_A::VALUE2
+        **self == PEENPPRF_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `PEENPPRF`"]
+impl core::ops::Deref for PEENPPRF_R {
+    type Target = crate::FieldReader<bool, PEENPPRF_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PEENPPRF` writer - Parity Error Enable for PMU Prefetch Memory"]
 pub struct PEENPPRF_W<'a> {
     w: &'a mut W,
 }
@@ -429,9 +503,7 @@ impl<'a> PEENPPRF_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: PEENPPRF_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "Disabled"]
     #[inline(always)]
@@ -456,7 +528,7 @@ impl<'a> PEENPPRF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
@@ -474,9 +546,12 @@ impl From<PEENUSB_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `PEENUSB`"]
-pub type PEENUSB_R = crate::R<bool, PEENUSB_A>;
+#[doc = "Field `PEENUSB` reader - Parity Error Enable for USB Memory"]
+pub struct PEENUSB_R(crate::FieldReader<bool, PEENUSB_A>);
 impl PEENUSB_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PEENUSB_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> PEENUSB_A {
@@ -488,15 +563,22 @@ impl PEENUSB_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PEENUSB_A::VALUE1
+        **self == PEENUSB_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PEENUSB_A::VALUE2
+        **self == PEENUSB_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `PEENUSB`"]
+impl core::ops::Deref for PEENUSB_R {
+    type Target = crate::FieldReader<bool, PEENUSB_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PEENUSB` writer - Parity Error Enable for USB Memory"]
 pub struct PEENUSB_W<'a> {
     w: &'a mut W,
 }
@@ -504,9 +586,7 @@ impl<'a> PEENUSB_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: PEENUSB_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "Disabled"]
     #[inline(always)]
@@ -531,7 +611,7 @@ impl<'a> PEENUSB_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
         self.w
     }
 }
@@ -607,5 +687,31 @@ impl W {
     #[inline(always)]
     pub fn peenusb(&mut self) -> PEENUSB_W {
         PEENUSB_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Parity Error Enable Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [peen](index.html) module"]
+pub struct PEEN_SPEC;
+impl crate::RegisterSpec for PEEN_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [peen::R](R) reader structure"]
+impl crate::Readable for PEEN_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [peen::W](W) writer structure"]
+impl crate::Writable for PEEN_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets PEEN to value 0"]
+impl crate::Resettable for PEEN_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

@@ -1,13 +1,37 @@
-#[doc = "Reader of register HRCCFG"]
-pub type R = crate::R<u32, super::HRCCFG>;
-#[doc = "Writer for register HRCCFG"]
-pub type W = crate::W<u32, super::HRCCFG>;
-#[doc = "Register HRCCFG `reset()`'s with value 0"]
-impl crate::ResetValue for super::HRCCFG {
-    type Type = u32;
+#[doc = "Register `HRCCFG` reader"]
+pub struct R(crate::R<HRCCFG_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<HRCCFG_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<HRCCFG_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<HRCCFG_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `HRCCFG` writer"]
+pub struct W(crate::W<HRCCFG_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<HRCCFG_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<HRCCFG_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<HRCCFG_SPEC>) -> Self {
+        W(writer)
     }
 }
 #[doc = "High resolution channels power mode\n\nValue on reset: 0"]
@@ -24,9 +48,12 @@ impl From<HRCPM_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `HRCPM`"]
-pub type HRCPM_R = crate::R<bool, HRCPM_A>;
+#[doc = "Field `HRCPM` reader - High resolution channels power mode"]
+pub struct HRCPM_R(crate::FieldReader<bool, HRCPM_A>);
 impl HRCPM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        HRCPM_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> HRCPM_A {
@@ -38,15 +65,22 @@ impl HRCPM_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == HRCPM_A::VALUE1
+        **self == HRCPM_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == HRCPM_A::VALUE2
+        **self == HRCPM_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `HRCPM`"]
+impl core::ops::Deref for HRCPM_R {
+    type Target = crate::FieldReader<bool, HRCPM_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `HRCPM` writer - High resolution channels power mode"]
 pub struct HRCPM_W<'a> {
     w: &'a mut W,
 }
@@ -54,9 +88,7 @@ impl<'a> HRCPM_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: HRCPM_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "High resolution generation logic is OFF. It is not possible to generate high resolution signals throughout any of the high resolution channels, HRCy."]
     #[inline(always)]
@@ -81,7 +113,7 @@ impl<'a> HRCPM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -99,9 +131,12 @@ impl From<HRC0E_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `HRC0E`"]
-pub type HRC0E_R = crate::R<bool, HRC0E_A>;
+#[doc = "Field `HRC0E` reader - HRC0 high resolution enable"]
+pub struct HRC0E_R(crate::FieldReader<bool, HRC0E_A>);
 impl HRC0E_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        HRC0E_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> HRC0E_A {
@@ -113,15 +148,22 @@ impl HRC0E_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == HRC0E_A::VALUE1
+        **self == HRC0E_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == HRC0E_A::VALUE2
+        **self == HRC0E_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `HRC0E`"]
+impl core::ops::Deref for HRC0E_R {
+    type Target = crate::FieldReader<bool, HRC0E_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `HRC0E` writer - HRC0 high resolution enable"]
 pub struct HRC0E_W<'a> {
     w: &'a mut W,
 }
@@ -129,9 +171,7 @@ impl<'a> HRC0E_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: HRC0E_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "HRC0 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC0 to generate an output PWM signal."]
     #[inline(always)]
@@ -156,7 +196,7 @@ impl<'a> HRC0E_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
@@ -174,9 +214,12 @@ impl From<HRC1E_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `HRC1E`"]
-pub type HRC1E_R = crate::R<bool, HRC1E_A>;
+#[doc = "Field `HRC1E` reader - HRC1 high resolution channel enable"]
+pub struct HRC1E_R(crate::FieldReader<bool, HRC1E_A>);
 impl HRC1E_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        HRC1E_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> HRC1E_A {
@@ -188,15 +231,22 @@ impl HRC1E_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == HRC1E_A::VALUE1
+        **self == HRC1E_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == HRC1E_A::VALUE2
+        **self == HRC1E_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `HRC1E`"]
+impl core::ops::Deref for HRC1E_R {
+    type Target = crate::FieldReader<bool, HRC1E_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `HRC1E` writer - HRC1 high resolution channel enable"]
 pub struct HRC1E_W<'a> {
     w: &'a mut W,
 }
@@ -204,9 +254,7 @@ impl<'a> HRC1E_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: HRC1E_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "HRC1 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC1 to generate an output PWM signal."]
     #[inline(always)]
@@ -231,7 +279,7 @@ impl<'a> HRC1E_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
@@ -249,9 +297,12 @@ impl From<HRC2E_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `HRC2E`"]
-pub type HRC2E_R = crate::R<bool, HRC2E_A>;
+#[doc = "Field `HRC2E` reader - HRC2 high resolution channel enable"]
+pub struct HRC2E_R(crate::FieldReader<bool, HRC2E_A>);
 impl HRC2E_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        HRC2E_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> HRC2E_A {
@@ -263,15 +314,22 @@ impl HRC2E_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == HRC2E_A::VALUE1
+        **self == HRC2E_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == HRC2E_A::VALUE2
+        **self == HRC2E_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `HRC2E`"]
+impl core::ops::Deref for HRC2E_R {
+    type Target = crate::FieldReader<bool, HRC2E_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `HRC2E` writer - HRC2 high resolution channel enable"]
 pub struct HRC2E_W<'a> {
     w: &'a mut W,
 }
@@ -279,9 +337,7 @@ impl<'a> HRC2E_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: HRC2E_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "HRC2 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC2 to generate an output PWM signal."]
     #[inline(always)]
@@ -306,7 +362,7 @@ impl<'a> HRC2E_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
         self.w
     }
 }
@@ -324,9 +380,12 @@ impl From<HRC3E_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `HRC3E`"]
-pub type HRC3E_R = crate::R<bool, HRC3E_A>;
+#[doc = "Field `HRC3E` reader - HRC3 high resolution channel enable"]
+pub struct HRC3E_R(crate::FieldReader<bool, HRC3E_A>);
 impl HRC3E_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        HRC3E_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> HRC3E_A {
@@ -338,15 +397,22 @@ impl HRC3E_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == HRC3E_A::VALUE1
+        **self == HRC3E_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == HRC3E_A::VALUE2
+        **self == HRC3E_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `HRC3E`"]
+impl core::ops::Deref for HRC3E_R {
+    type Target = crate::FieldReader<bool, HRC3E_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `HRC3E` writer - HRC3 high resolution channel enable"]
 pub struct HRC3E_W<'a> {
     w: &'a mut W,
 }
@@ -354,9 +420,7 @@ impl<'a> HRC3E_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: HRC3E_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "HRC3 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC3 to generate an output PWM signal."]
     #[inline(always)]
@@ -381,7 +445,7 @@ impl<'a> HRC3E_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
         self.w
     }
 }
@@ -404,43 +468,52 @@ impl From<CLKC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `CLKC`"]
-pub type CLKC_R = crate::R<u8, CLKC_A>;
+#[doc = "Field `CLKC` reader - Clock information control"]
+pub struct CLKC_R(crate::FieldReader<u8, CLKC_A>);
 impl CLKC_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        CLKC_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> crate::Variant<u8, CLKC_A> {
-        use crate::Variant::*;
+    pub fn variant(&self) -> Option<CLKC_A> {
         match self.bits {
-            0 => Val(CLKC_A::VALUE1),
-            1 => Val(CLKC_A::VALUE2),
-            2 => Val(CLKC_A::VALUE3),
-            3 => Val(CLKC_A::VALUE4),
-            i => Res(i),
+            0 => Some(CLKC_A::VALUE1),
+            1 => Some(CLKC_A::VALUE2),
+            2 => Some(CLKC_A::VALUE3),
+            3 => Some(CLKC_A::VALUE4),
+            _ => None,
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CLKC_A::VALUE1
+        **self == CLKC_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CLKC_A::VALUE2
+        **self == CLKC_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == CLKC_A::VALUE3
+        **self == CLKC_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == CLKC_A::VALUE4
+        **self == CLKC_A::VALUE4
     }
 }
-#[doc = "Write proxy for field `CLKC`"]
+impl core::ops::Deref for CLKC_R {
+    type Target = crate::FieldReader<u8, CLKC_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CLKC` writer - Clock information control"]
 pub struct CLKC_W<'a> {
     w: &'a mut W,
 }
@@ -473,7 +546,7 @@ impl<'a> CLKC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 16)) | (((value as u32) & 0x07) << 16);
+        self.w.bits = (self.w.bits & !(0x07 << 16)) | ((value as u32 & 0x07) << 16);
         self.w
     }
 }
@@ -491,9 +564,12 @@ impl From<LRC0E_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `LRC0E`"]
-pub type LRC0E_R = crate::R<bool, LRC0E_A>;
+#[doc = "Field `LRC0E` reader - HRC0 low resolution channel enable"]
+pub struct LRC0E_R(crate::FieldReader<bool, LRC0E_A>);
 impl LRC0E_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        LRC0E_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> LRC0E_A {
@@ -505,15 +581,22 @@ impl LRC0E_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == LRC0E_A::VALUE1
+        **self == LRC0E_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == LRC0E_A::VALUE2
+        **self == LRC0E_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `LRC0E`"]
+impl core::ops::Deref for LRC0E_R {
+    type Target = crate::FieldReader<bool, LRC0E_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `LRC0E` writer - HRC0 low resolution channel enable"]
 pub struct LRC0E_W<'a> {
     w: &'a mut W,
 }
@@ -521,9 +604,7 @@ impl<'a> LRC0E_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: LRC0E_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "HRC0 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC0 to generate an output PWM signal."]
     #[inline(always)]
@@ -548,7 +629,7 @@ impl<'a> LRC0E_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
         self.w
     }
 }
@@ -566,9 +647,12 @@ impl From<LRC1E_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `LRC1E`"]
-pub type LRC1E_R = crate::R<bool, LRC1E_A>;
+#[doc = "Field `LRC1E` reader - HRC1 low resolution channel enable"]
+pub struct LRC1E_R(crate::FieldReader<bool, LRC1E_A>);
 impl LRC1E_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        LRC1E_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> LRC1E_A {
@@ -580,15 +664,22 @@ impl LRC1E_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == LRC1E_A::VALUE1
+        **self == LRC1E_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == LRC1E_A::VALUE2
+        **self == LRC1E_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `LRC1E`"]
+impl core::ops::Deref for LRC1E_R {
+    type Target = crate::FieldReader<bool, LRC1E_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `LRC1E` writer - HRC1 low resolution channel enable"]
 pub struct LRC1E_W<'a> {
     w: &'a mut W,
 }
@@ -596,9 +687,7 @@ impl<'a> LRC1E_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: LRC1E_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "HRC1 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC1 to generate an output PWM signal."]
     #[inline(always)]
@@ -623,7 +712,7 @@ impl<'a> LRC1E_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
         self.w
     }
 }
@@ -641,9 +730,12 @@ impl From<LRC2E_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `LRC2E`"]
-pub type LRC2E_R = crate::R<bool, LRC2E_A>;
+#[doc = "Field `LRC2E` reader - HRC2 low resolution channel enable"]
+pub struct LRC2E_R(crate::FieldReader<bool, LRC2E_A>);
 impl LRC2E_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        LRC2E_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> LRC2E_A {
@@ -655,15 +747,22 @@ impl LRC2E_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == LRC2E_A::VALUE1
+        **self == LRC2E_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == LRC2E_A::VALUE2
+        **self == LRC2E_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `LRC2E`"]
+impl core::ops::Deref for LRC2E_R {
+    type Target = crate::FieldReader<bool, LRC2E_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `LRC2E` writer - HRC2 low resolution channel enable"]
 pub struct LRC2E_W<'a> {
     w: &'a mut W,
 }
@@ -671,9 +770,7 @@ impl<'a> LRC2E_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: LRC2E_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "HRC2 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC2 to generate an output PWM signal."]
     #[inline(always)]
@@ -698,7 +795,7 @@ impl<'a> LRC2E_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | (((value as u32) & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
         self.w
     }
 }
@@ -716,9 +813,12 @@ impl From<LRC3E_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `LRC3E`"]
-pub type LRC3E_R = crate::R<bool, LRC3E_A>;
+#[doc = "Field `LRC3E` reader - HRC3 low resolution channel enable"]
+pub struct LRC3E_R(crate::FieldReader<bool, LRC3E_A>);
 impl LRC3E_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        LRC3E_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> LRC3E_A {
@@ -730,15 +830,22 @@ impl LRC3E_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == LRC3E_A::VALUE1
+        **self == LRC3E_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == LRC3E_A::VALUE2
+        **self == LRC3E_A::VALUE2
     }
 }
-#[doc = "Write proxy for field `LRC3E`"]
+impl core::ops::Deref for LRC3E_R {
+    type Target = crate::FieldReader<bool, LRC3E_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `LRC3E` writer - HRC3 low resolution channel enable"]
 pub struct LRC3E_W<'a> {
     w: &'a mut W,
 }
@@ -746,9 +853,7 @@ impl<'a> LRC3E_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: LRC3E_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "HRC3 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC3 to generate an output PWM signal."]
     #[inline(always)]
@@ -773,7 +878,7 @@ impl<'a> LRC3E_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | (((value as u32) & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
         self.w
     }
 }
@@ -879,5 +984,31 @@ impl W {
     #[inline(always)]
     pub fn lrc3e(&mut self) -> LRC3E_W {
         LRC3E_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Global HRC configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hrccfg](index.html) module"]
+pub struct HRCCFG_SPEC;
+impl crate::RegisterSpec for HRCCFG_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [hrccfg::R](R) reader structure"]
+impl crate::Readable for HRCCFG_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [hrccfg::W](W) writer structure"]
+impl crate::Writable for HRCCFG_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets HRCCFG to value 0"]
+impl crate::Resettable for HRCCFG_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

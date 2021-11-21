@@ -1,5 +1,18 @@
-#[doc = "Reader of register CSGTRSG"]
-pub type R = crate::R<u32, super::CSGTRSG>;
+#[doc = "Register `CSGTRSG` reader"]
+pub struct R(crate::R<CSGTRSG_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CSGTRSG_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<CSGTRSG_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<CSGTRSG_SPEC>) -> Self {
+        R(reader)
+    }
+}
 #[doc = "DAC0 shadow transfer enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum D0STE_A {
@@ -14,9 +27,12 @@ impl From<D0STE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `D0STE`"]
-pub type D0STE_R = crate::R<bool, D0STE_A>;
+#[doc = "Field `D0STE` reader - DAC0 shadow transfer enable"]
+pub struct D0STE_R(crate::FieldReader<bool, D0STE_A>);
 impl D0STE_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        D0STE_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> D0STE_A {
@@ -28,12 +44,19 @@ impl D0STE_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == D0STE_A::VALUE1
+        **self == D0STE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == D0STE_A::VALUE2
+        **self == D0STE_A::VALUE2
+    }
+}
+impl core::ops::Deref for D0STE_R {
+    type Target = crate::FieldReader<bool, D0STE_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "CMP0 inverting input connection status\n\nValue on reset: 0"]
@@ -50,9 +73,12 @@ impl From<SW0ST_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `SW0ST`"]
-pub type SW0ST_R = crate::R<bool, SW0ST_A>;
+#[doc = "Field `SW0ST` reader - CMP0 inverting input connection status"]
+pub struct SW0ST_R(crate::FieldReader<bool, SW0ST_A>);
 impl SW0ST_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SW0ST_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SW0ST_A {
@@ -64,12 +90,19 @@ impl SW0ST_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SW0ST_A::VALUE1
+        **self == SW0ST_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SW0ST_A::VALUE2
+        **self == SW0ST_A::VALUE2
+    }
+}
+impl core::ops::Deref for SW0ST_R {
+    type Target = crate::FieldReader<bool, SW0ST_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "DAC1 shadow transfer enable\n\nValue on reset: 0"]
@@ -86,9 +119,12 @@ impl From<D1STE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `D1STE`"]
-pub type D1STE_R = crate::R<bool, D1STE_A>;
+#[doc = "Field `D1STE` reader - DAC1 shadow transfer enable"]
+pub struct D1STE_R(crate::FieldReader<bool, D1STE_A>);
 impl D1STE_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        D1STE_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> D1STE_A {
@@ -100,12 +136,19 @@ impl D1STE_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == D1STE_A::VALUE1
+        **self == D1STE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == D1STE_A::VALUE2
+        **self == D1STE_A::VALUE2
+    }
+}
+impl core::ops::Deref for D1STE_R {
+    type Target = crate::FieldReader<bool, D1STE_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "CMP1 inverting input connection status\n\nValue on reset: 0"]
@@ -122,9 +165,12 @@ impl From<SW1ST_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `SW1ST`"]
-pub type SW1ST_R = crate::R<bool, SW1ST_A>;
+#[doc = "Field `SW1ST` reader - CMP1 inverting input connection status"]
+pub struct SW1ST_R(crate::FieldReader<bool, SW1ST_A>);
 impl SW1ST_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SW1ST_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SW1ST_A {
@@ -136,12 +182,19 @@ impl SW1ST_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SW1ST_A::VALUE1
+        **self == SW1ST_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SW1ST_A::VALUE2
+        **self == SW1ST_A::VALUE2
+    }
+}
+impl core::ops::Deref for SW1ST_R {
+    type Target = crate::FieldReader<bool, SW1ST_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "DAC2 shadow transfer enable\n\nValue on reset: 0"]
@@ -158,9 +211,12 @@ impl From<D2STE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `D2STE`"]
-pub type D2STE_R = crate::R<bool, D2STE_A>;
+#[doc = "Field `D2STE` reader - DAC2 shadow transfer enable"]
+pub struct D2STE_R(crate::FieldReader<bool, D2STE_A>);
 impl D2STE_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        D2STE_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> D2STE_A {
@@ -172,12 +228,19 @@ impl D2STE_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == D2STE_A::VALUE1
+        **self == D2STE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == D2STE_A::VALUE2
+        **self == D2STE_A::VALUE2
+    }
+}
+impl core::ops::Deref for D2STE_R {
+    type Target = crate::FieldReader<bool, D2STE_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "CMP2 inverting input connection status\n\nValue on reset: 0"]
@@ -194,9 +257,12 @@ impl From<SW2ST_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `SW2ST`"]
-pub type SW2ST_R = crate::R<bool, SW2ST_A>;
+#[doc = "Field `SW2ST` reader - CMP2 inverting input connection status"]
+pub struct SW2ST_R(crate::FieldReader<bool, SW2ST_A>);
 impl SW2ST_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SW2ST_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SW2ST_A {
@@ -208,12 +274,19 @@ impl SW2ST_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SW2ST_A::VALUE1
+        **self == SW2ST_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SW2ST_A::VALUE2
+        **self == SW2ST_A::VALUE2
+    }
+}
+impl core::ops::Deref for SW2ST_R {
+    type Target = crate::FieldReader<bool, SW2ST_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 impl R {
@@ -246,5 +319,21 @@ impl R {
     #[inline(always)]
     pub fn sw2st(&self) -> SW2ST_R {
         SW2ST_R::new(((self.bits >> 9) & 0x01) != 0)
+    }
+}
+#[doc = "Global CSG shadow/switch status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csgtrsg](index.html) module"]
+pub struct CSGTRSG_SPEC;
+impl crate::RegisterSpec for CSGTRSG_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [csgtrsg::R](R) reader structure"]
+impl crate::Readable for CSGTRSG_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets CSGTRSG to value 0"]
+impl crate::Resettable for CSGTRSG_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

@@ -2,201 +2,99 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - External input selection"]
-    pub dci: DCI,
+    pub dci: crate::Reg<dci::DCI_SPEC>,
     #[doc = "0x04 - External input selection"]
-    pub ies: IES,
+    pub ies: crate::Reg<ies::IES_SPEC>,
     #[doc = "0x08 - Slope generation control"]
-    pub sc: SC,
+    pub sc: crate::Reg<sc::SC_SPEC>,
     #[doc = "0x0c - Pulse swallow configuration"]
-    pub pc: PC,
+    pub pc: crate::Reg<pc::PC_SPEC>,
     #[doc = "0x10 - DAC reference value 1"]
-    pub dsv1: DSV1,
+    pub dsv1: crate::Reg<dsv1::DSV1_SPEC>,
     #[doc = "0x14 - DAC reference value 1"]
-    pub dsv2: DSV2,
+    pub dsv2: crate::Reg<dsv2::DSV2_SPEC>,
     #[doc = "0x18 - Shadow reference value 1"]
-    pub sdsv1: SDSV1,
+    pub sdsv1: crate::Reg<sdsv1::SDSV1_SPEC>,
     #[doc = "0x1c - Shadow Pulse swallow value"]
-    pub spc: SPC,
+    pub spc: crate::Reg<spc::SPC_SPEC>,
     #[doc = "0x20 - Comparator configuration"]
-    pub cc: CC,
+    pub cc: crate::Reg<cc::CC_SPEC>,
     #[doc = "0x24 - Passive level configuration"]
-    pub plc: PLC,
+    pub plc: crate::Reg<plc::PLC_SPEC>,
     #[doc = "0x28 - Comparator blanking value"]
-    pub blv: BLV,
+    pub blv: crate::Reg<blv::BLV_SPEC>,
     #[doc = "0x2c - Service request enable"]
-    pub sre: SRE,
+    pub sre: crate::Reg<sre::SRE_SPEC>,
     #[doc = "0x30 - Service request line selector"]
-    pub srs: SRS,
+    pub srs: crate::Reg<srs::SRS_SPEC>,
     #[doc = "0x34 - Service request SW set"]
-    pub sws: SWS,
+    pub sws: crate::Reg<sws::SWS_SPEC>,
     #[doc = "0x38 - Service request SW clear"]
-    pub swc: SWC,
+    pub swc: crate::Reg<swc::SWC_SPEC>,
     #[doc = "0x3c - Service request status"]
-    pub istat: ISTAT,
+    pub istat: crate::Reg<istat::ISTAT_SPEC>,
 }
-#[doc = "External input selection\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dci](dci) module"]
-pub type DCI = crate::Reg<u32, _DCI>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _DCI;
-#[doc = "`read()` method returns [dci::R](dci::R) reader structure"]
-impl crate::Readable for DCI {}
-#[doc = "`write(|w| ..)` method takes [dci::W](dci::W) writer structure"]
-impl crate::Writable for DCI {}
+#[doc = "DCI register accessor: an alias for `Reg<DCI_SPEC>`"]
+pub type DCI = crate::Reg<dci::DCI_SPEC>;
 #[doc = "External input selection"]
 pub mod dci;
-#[doc = "External input selection\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ies](ies) module"]
-pub type IES = crate::Reg<u32, _IES>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _IES;
-#[doc = "`read()` method returns [ies::R](ies::R) reader structure"]
-impl crate::Readable for IES {}
-#[doc = "`write(|w| ..)` method takes [ies::W](ies::W) writer structure"]
-impl crate::Writable for IES {}
+#[doc = "IES register accessor: an alias for `Reg<IES_SPEC>`"]
+pub type IES = crate::Reg<ies::IES_SPEC>;
 #[doc = "External input selection"]
 pub mod ies;
-#[doc = "Slope generation control\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sc](sc) module"]
-pub type SC = crate::Reg<u32, _SC>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _SC;
-#[doc = "`read()` method returns [sc::R](sc::R) reader structure"]
-impl crate::Readable for SC {}
-#[doc = "`write(|w| ..)` method takes [sc::W](sc::W) writer structure"]
-impl crate::Writable for SC {}
+#[doc = "SC register accessor: an alias for `Reg<SC_SPEC>`"]
+pub type SC = crate::Reg<sc::SC_SPEC>;
 #[doc = "Slope generation control"]
 pub mod sc;
-#[doc = "Pulse swallow configuration\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pc](pc) module"]
-pub type PC = crate::Reg<u32, _PC>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _PC;
-#[doc = "`read()` method returns [pc::R](pc::R) reader structure"]
-impl crate::Readable for PC {}
+#[doc = "PC register accessor: an alias for `Reg<PC_SPEC>`"]
+pub type PC = crate::Reg<pc::PC_SPEC>;
 #[doc = "Pulse swallow configuration"]
 pub mod pc;
-#[doc = "DAC reference value 1\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dsv1](dsv1) module"]
-pub type DSV1 = crate::Reg<u32, _DSV1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _DSV1;
-#[doc = "`read()` method returns [dsv1::R](dsv1::R) reader structure"]
-impl crate::Readable for DSV1 {}
+#[doc = "DSV1 register accessor: an alias for `Reg<DSV1_SPEC>`"]
+pub type DSV1 = crate::Reg<dsv1::DSV1_SPEC>;
 #[doc = "DAC reference value 1"]
 pub mod dsv1;
-#[doc = "DAC reference value 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dsv2](dsv2) module"]
-pub type DSV2 = crate::Reg<u32, _DSV2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _DSV2;
-#[doc = "`read()` method returns [dsv2::R](dsv2::R) reader structure"]
-impl crate::Readable for DSV2 {}
-#[doc = "`write(|w| ..)` method takes [dsv2::W](dsv2::W) writer structure"]
-impl crate::Writable for DSV2 {}
+#[doc = "DSV2 register accessor: an alias for `Reg<DSV2_SPEC>`"]
+pub type DSV2 = crate::Reg<dsv2::DSV2_SPEC>;
 #[doc = "DAC reference value 1"]
 pub mod dsv2;
-#[doc = "Shadow reference value 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sdsv1](sdsv1) module"]
-pub type SDSV1 = crate::Reg<u32, _SDSV1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _SDSV1;
-#[doc = "`read()` method returns [sdsv1::R](sdsv1::R) reader structure"]
-impl crate::Readable for SDSV1 {}
-#[doc = "`write(|w| ..)` method takes [sdsv1::W](sdsv1::W) writer structure"]
-impl crate::Writable for SDSV1 {}
+#[doc = "SDSV1 register accessor: an alias for `Reg<SDSV1_SPEC>`"]
+pub type SDSV1 = crate::Reg<sdsv1::SDSV1_SPEC>;
 #[doc = "Shadow reference value 1"]
 pub mod sdsv1;
-#[doc = "Shadow Pulse swallow value\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spc](spc) module"]
-pub type SPC = crate::Reg<u32, _SPC>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _SPC;
-#[doc = "`read()` method returns [spc::R](spc::R) reader structure"]
-impl crate::Readable for SPC {}
-#[doc = "`write(|w| ..)` method takes [spc::W](spc::W) writer structure"]
-impl crate::Writable for SPC {}
+#[doc = "SPC register accessor: an alias for `Reg<SPC_SPEC>`"]
+pub type SPC = crate::Reg<spc::SPC_SPEC>;
 #[doc = "Shadow Pulse swallow value"]
 pub mod spc;
-#[doc = "Comparator configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc](cc) module"]
-pub type CC = crate::Reg<u32, _CC>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC;
-#[doc = "`read()` method returns [cc::R](cc::R) reader structure"]
-impl crate::Readable for CC {}
-#[doc = "`write(|w| ..)` method takes [cc::W](cc::W) writer structure"]
-impl crate::Writable for CC {}
+#[doc = "CC register accessor: an alias for `Reg<CC_SPEC>`"]
+pub type CC = crate::Reg<cc::CC_SPEC>;
 #[doc = "Comparator configuration"]
 pub mod cc;
-#[doc = "Passive level configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [plc](plc) module"]
-pub type PLC = crate::Reg<u32, _PLC>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _PLC;
-#[doc = "`read()` method returns [plc::R](plc::R) reader structure"]
-impl crate::Readable for PLC {}
-#[doc = "`write(|w| ..)` method takes [plc::W](plc::W) writer structure"]
-impl crate::Writable for PLC {}
+#[doc = "PLC register accessor: an alias for `Reg<PLC_SPEC>`"]
+pub type PLC = crate::Reg<plc::PLC_SPEC>;
 #[doc = "Passive level configuration"]
 pub mod plc;
-#[doc = "Comparator blanking value\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blv](blv) module"]
-pub type BLV = crate::Reg<u32, _BLV>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _BLV;
-#[doc = "`read()` method returns [blv::R](blv::R) reader structure"]
-impl crate::Readable for BLV {}
-#[doc = "`write(|w| ..)` method takes [blv::W](blv::W) writer structure"]
-impl crate::Writable for BLV {}
+#[doc = "BLV register accessor: an alias for `Reg<BLV_SPEC>`"]
+pub type BLV = crate::Reg<blv::BLV_SPEC>;
 #[doc = "Comparator blanking value"]
 pub mod blv;
-#[doc = "Service request enable\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sre](sre) module"]
-pub type SRE = crate::Reg<u32, _SRE>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _SRE;
-#[doc = "`read()` method returns [sre::R](sre::R) reader structure"]
-impl crate::Readable for SRE {}
-#[doc = "`write(|w| ..)` method takes [sre::W](sre::W) writer structure"]
-impl crate::Writable for SRE {}
+#[doc = "SRE register accessor: an alias for `Reg<SRE_SPEC>`"]
+pub type SRE = crate::Reg<sre::SRE_SPEC>;
 #[doc = "Service request enable"]
 pub mod sre;
-#[doc = "Service request line selector\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [srs](srs) module"]
-pub type SRS = crate::Reg<u32, _SRS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _SRS;
-#[doc = "`read()` method returns [srs::R](srs::R) reader structure"]
-impl crate::Readable for SRS {}
-#[doc = "`write(|w| ..)` method takes [srs::W](srs::W) writer structure"]
-impl crate::Writable for SRS {}
+#[doc = "SRS register accessor: an alias for `Reg<SRS_SPEC>`"]
+pub type SRS = crate::Reg<srs::SRS_SPEC>;
 #[doc = "Service request line selector"]
 pub mod srs;
-#[doc = "Service request SW set\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sws](sws) module"]
-pub type SWS = crate::Reg<u32, _SWS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _SWS;
-#[doc = "`write(|w| ..)` method takes [sws::W](sws::W) writer structure"]
-impl crate::Writable for SWS {}
+#[doc = "SWS register accessor: an alias for `Reg<SWS_SPEC>`"]
+pub type SWS = crate::Reg<sws::SWS_SPEC>;
 #[doc = "Service request SW set"]
 pub mod sws;
-#[doc = "Service request SW clear\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swc](swc) module"]
-pub type SWC = crate::Reg<u32, _SWC>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _SWC;
-#[doc = "`write(|w| ..)` method takes [swc::W](swc::W) writer structure"]
-impl crate::Writable for SWC {}
+#[doc = "SWC register accessor: an alias for `Reg<SWC_SPEC>`"]
+pub type SWC = crate::Reg<swc::SWC_SPEC>;
 #[doc = "Service request SW clear"]
 pub mod swc;
-#[doc = "Service request status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [istat](istat) module"]
-pub type ISTAT = crate::Reg<u32, _ISTAT>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _ISTAT;
-#[doc = "`read()` method returns [istat::R](istat::R) reader structure"]
-impl crate::Readable for ISTAT {}
+#[doc = "ISTAT register accessor: an alias for `Reg<ISTAT_SPEC>`"]
+pub type ISTAT = crate::Reg<istat::ISTAT_SPEC>;
 #[doc = "Service request status"]
 pub mod istat;
