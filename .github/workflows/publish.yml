@@ -6,6 +6,10 @@ on:
           required: true
           type: string
 
+permissions:
+  # TODO: once `releases: write` is supported, use it instead.
+  contents: write
+
 name: Publish
 
 jobs:
