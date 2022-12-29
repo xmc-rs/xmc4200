@@ -35,421 +35,142 @@ impl From<crate::W<SRE_SPEC>> for W {
     }
 }
 #[doc = "Field `VLS1E` reader - Value switch from CSGyDSV1 to CSGyDSV2 interrupt enable"]
-pub struct VLS1E_R(crate::FieldReader<bool, bool>);
-impl VLS1E_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        VLS1E_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VLS1E_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VLS1E_R = crate::BitReader<bool>;
 #[doc = "Field `VLS1E` writer - Value switch from CSGyDSV1 to CSGyDSV2 interrupt enable"]
-pub struct VLS1E_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VLS1E_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type VLS1E_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRE_SPEC, bool, O>;
 #[doc = "Field `VLS2E` reader - Value switch from CSGyDSV2 to CSGyDSV1 interrupt enable"]
-pub struct VLS2E_R(crate::FieldReader<bool, bool>);
-impl VLS2E_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        VLS2E_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VLS2E_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VLS2E_R = crate::BitReader<bool>;
 #[doc = "Field `VLS2E` writer - Value switch from CSGyDSV2 to CSGyDSV1 interrupt enable"]
-pub struct VLS2E_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VLS2E_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type VLS2E_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRE_SPEC, bool, O>;
 #[doc = "Field `TRGSE` reader - Conversion trigger interrupt enable"]
-pub struct TRGSE_R(crate::FieldReader<bool, bool>);
-impl TRGSE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        TRGSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRGSE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRGSE_R = crate::BitReader<bool>;
 #[doc = "Field `TRGSE` writer - Conversion trigger interrupt enable"]
-pub struct TRGSE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRGSE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type TRGSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRE_SPEC, bool, O>;
 #[doc = "Field `STRSE` reader - Start trigger interrupt enable"]
-pub struct STRSE_R(crate::FieldReader<bool, bool>);
-impl STRSE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        STRSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STRSE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STRSE_R = crate::BitReader<bool>;
 #[doc = "Field `STRSE` writer - Start trigger interrupt enable"]
-pub struct STRSE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STRSE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type STRSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRE_SPEC, bool, O>;
 #[doc = "Field `STPSE` reader - Stop trigger interrupt enable"]
-pub struct STPSE_R(crate::FieldReader<bool, bool>);
-impl STPSE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        STPSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STPSE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STPSE_R = crate::BitReader<bool>;
 #[doc = "Field `STPSE` writer - Stop trigger interrupt enable"]
-pub struct STPSE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STPSE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
+pub type STPSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRE_SPEC, bool, O>;
 #[doc = "Field `STDE` reader - Shadow transfer done interrupt enable"]
-pub struct STDE_R(crate::FieldReader<bool, bool>);
-impl STDE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        STDE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STDE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STDE_R = crate::BitReader<bool>;
 #[doc = "Field `STDE` writer - Shadow transfer done interrupt enable"]
-pub struct STDE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STDE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
+pub type STDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRE_SPEC, bool, O>;
 #[doc = "Field `CRSE` reader - Comparator rise interrupt enable"]
-pub struct CRSE_R(crate::FieldReader<bool, bool>);
-impl CRSE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CRSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRSE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRSE_R = crate::BitReader<bool>;
 #[doc = "Field `CRSE` writer - Comparator rise interrupt enable"]
-pub struct CRSE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRSE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type CRSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRE_SPEC, bool, O>;
 #[doc = "Field `CFSE` reader - Comparator fall interrupt enable"]
-pub struct CFSE_R(crate::FieldReader<bool, bool>);
-impl CFSE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CFSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CFSE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CFSE_R = crate::BitReader<bool>;
 #[doc = "Field `CFSE` writer - Comparator fall interrupt enable"]
-pub struct CFSE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CFSE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
+pub type CFSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRE_SPEC, bool, O>;
 #[doc = "Field `CSEE` reader - Clamped state interrupt enable"]
-pub struct CSEE_R(crate::FieldReader<bool, bool>);
-impl CSEE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CSEE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CSEE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CSEE_R = crate::BitReader<bool>;
 #[doc = "Field `CSEE` writer - Clamped state interrupt enable"]
-pub struct CSEE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CSEE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
+pub type CSEE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRE_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Value switch from CSGyDSV1 to CSGyDSV2 interrupt enable"]
     #[inline(always)]
     pub fn vls1e(&self) -> VLS1E_R {
-        VLS1E_R::new((self.bits & 0x01) != 0)
+        VLS1E_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Value switch from CSGyDSV2 to CSGyDSV1 interrupt enable"]
     #[inline(always)]
     pub fn vls2e(&self) -> VLS2E_R {
-        VLS2E_R::new(((self.bits >> 1) & 0x01) != 0)
+        VLS2E_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Conversion trigger interrupt enable"]
     #[inline(always)]
     pub fn trgse(&self) -> TRGSE_R {
-        TRGSE_R::new(((self.bits >> 2) & 0x01) != 0)
+        TRGSE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Start trigger interrupt enable"]
     #[inline(always)]
     pub fn strse(&self) -> STRSE_R {
-        STRSE_R::new(((self.bits >> 3) & 0x01) != 0)
+        STRSE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Stop trigger interrupt enable"]
     #[inline(always)]
     pub fn stpse(&self) -> STPSE_R {
-        STPSE_R::new(((self.bits >> 4) & 0x01) != 0)
+        STPSE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Shadow transfer done interrupt enable"]
     #[inline(always)]
     pub fn stde(&self) -> STDE_R {
-        STDE_R::new(((self.bits >> 5) & 0x01) != 0)
+        STDE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Comparator rise interrupt enable"]
     #[inline(always)]
     pub fn crse(&self) -> CRSE_R {
-        CRSE_R::new(((self.bits >> 6) & 0x01) != 0)
+        CRSE_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Comparator fall interrupt enable"]
     #[inline(always)]
     pub fn cfse(&self) -> CFSE_R {
-        CFSE_R::new(((self.bits >> 7) & 0x01) != 0)
+        CFSE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Clamped state interrupt enable"]
     #[inline(always)]
     pub fn csee(&self) -> CSEE_R {
-        CSEE_R::new(((self.bits >> 8) & 0x01) != 0)
+        CSEE_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Value switch from CSGyDSV1 to CSGyDSV2 interrupt enable"]
     #[inline(always)]
-    pub fn vls1e(&mut self) -> VLS1E_W {
-        VLS1E_W { w: self }
+    #[must_use]
+    pub fn vls1e(&mut self) -> VLS1E_W<0> {
+        VLS1E_W::new(self)
     }
     #[doc = "Bit 1 - Value switch from CSGyDSV2 to CSGyDSV1 interrupt enable"]
     #[inline(always)]
-    pub fn vls2e(&mut self) -> VLS2E_W {
-        VLS2E_W { w: self }
+    #[must_use]
+    pub fn vls2e(&mut self) -> VLS2E_W<1> {
+        VLS2E_W::new(self)
     }
     #[doc = "Bit 2 - Conversion trigger interrupt enable"]
     #[inline(always)]
-    pub fn trgse(&mut self) -> TRGSE_W {
-        TRGSE_W { w: self }
+    #[must_use]
+    pub fn trgse(&mut self) -> TRGSE_W<2> {
+        TRGSE_W::new(self)
     }
     #[doc = "Bit 3 - Start trigger interrupt enable"]
     #[inline(always)]
-    pub fn strse(&mut self) -> STRSE_W {
-        STRSE_W { w: self }
+    #[must_use]
+    pub fn strse(&mut self) -> STRSE_W<3> {
+        STRSE_W::new(self)
     }
     #[doc = "Bit 4 - Stop trigger interrupt enable"]
     #[inline(always)]
-    pub fn stpse(&mut self) -> STPSE_W {
-        STPSE_W { w: self }
+    #[must_use]
+    pub fn stpse(&mut self) -> STPSE_W<4> {
+        STPSE_W::new(self)
     }
     #[doc = "Bit 5 - Shadow transfer done interrupt enable"]
     #[inline(always)]
-    pub fn stde(&mut self) -> STDE_W {
-        STDE_W { w: self }
+    #[must_use]
+    pub fn stde(&mut self) -> STDE_W<5> {
+        STDE_W::new(self)
     }
     #[doc = "Bit 6 - Comparator rise interrupt enable"]
     #[inline(always)]
-    pub fn crse(&mut self) -> CRSE_W {
-        CRSE_W { w: self }
+    #[must_use]
+    pub fn crse(&mut self) -> CRSE_W<6> {
+        CRSE_W::new(self)
     }
     #[doc = "Bit 7 - Comparator fall interrupt enable"]
     #[inline(always)]
-    pub fn cfse(&mut self) -> CFSE_W {
-        CFSE_W { w: self }
+    #[must_use]
+    pub fn cfse(&mut self) -> CFSE_W<7> {
+        CFSE_W::new(self)
     }
     #[doc = "Bit 8 - Clamped state interrupt enable"]
     #[inline(always)]
-    pub fn csee(&mut self) -> CSEE_W {
-        CSEE_W { w: self }
+    #[must_use]
+    pub fn csee(&mut self) -> CSEE_W<8> {
+        CSEE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -470,11 +191,10 @@ impl crate::Readable for SRE_SPEC {
 #[doc = "`write(|w| ..)` method takes [sre::W](W) writer structure"]
 impl crate::Writable for SRE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRE to value 0"]
 impl crate::Resettable for SRE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

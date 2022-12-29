@@ -34,8 +34,10 @@ impl From<crate::W<HRBSC_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `SUSCFG` reader - Suspend configuration"]
+pub type SUSCFG_R = crate::FieldReader<u8, SUSCFG_A>;
 #[doc = "Suspend configuration\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SUSCFG_A {
     #[doc = "0: Suspend is ignored."]
@@ -53,13 +55,8 @@ impl From<SUSCFG_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `SUSCFG` reader - Suspend configuration"]
-pub struct SUSCFG_R(crate::FieldReader<u8, SUSCFG_A>);
 impl SUSCFG_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SUSCFG_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<SUSCFG_A> {
         match self.bits {
@@ -73,41 +70,27 @@ impl SUSCFG_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == SUSCFG_A::VALUE1
+        *self == SUSCFG_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == SUSCFG_A::VALUE2
+        *self == SUSCFG_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        **self == SUSCFG_A::VALUE3
+        *self == SUSCFG_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        **self == SUSCFG_A::VALUE4
-    }
-}
-impl core::ops::Deref for SUSCFG_R {
-    type Target = crate::FieldReader<u8, SUSCFG_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SUSCFG_A::VALUE4
     }
 }
 #[doc = "Field `SUSCFG` writer - Suspend configuration"]
-pub struct SUSCFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SUSCFG_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SUSCFG_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type SUSCFG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HRBSC_SPEC, u8, SUSCFG_A, 3, O>;
+impl<'a, const O: u8> SUSCFG_W<'a, O> {
     #[doc = "Suspend is ignored."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -128,71 +111,35 @@ impl<'a> SUSCFG_W<'a> {
     pub fn value4(self) -> &'a mut W {
         self.variant(SUSCFG_A::VALUE4)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
-        self.w
-    }
 }
 #[doc = "Field `HRBE` reader - HRPWM bias enable"]
-pub struct HRBE_R(crate::FieldReader<bool, bool>);
-impl HRBE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        HRBE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HRBE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HRBE_R = crate::BitReader<bool>;
 #[doc = "Field `HRBE` writer - HRPWM bias enable"]
-pub struct HRBE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HRBE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
+pub type HRBE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HRBSC_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:2 - Suspend configuration"]
     #[inline(always)]
     pub fn suscfg(&self) -> SUSCFG_R {
-        SUSCFG_R::new((self.bits & 0x07) as u8)
+        SUSCFG_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 8 - HRPWM bias enable"]
     #[inline(always)]
     pub fn hrbe(&self) -> HRBE_R {
-        HRBE_R::new(((self.bits >> 8) & 0x01) != 0)
+        HRBE_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Suspend configuration"]
     #[inline(always)]
-    pub fn suscfg(&mut self) -> SUSCFG_W {
-        SUSCFG_W { w: self }
+    #[must_use]
+    pub fn suscfg(&mut self) -> SUSCFG_W<0> {
+        SUSCFG_W::new(self)
     }
     #[doc = "Bit 8 - HRPWM bias enable"]
     #[inline(always)]
-    pub fn hrbe(&mut self) -> HRBE_W {
-        HRBE_W { w: self }
+    #[must_use]
+    pub fn hrbe(&mut self) -> HRBE_W<8> {
+        HRBE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -213,11 +160,10 @@ impl crate::Readable for HRBSC_SPEC {
 #[doc = "`write(|w| ..)` method takes [hrbsc::W](W) writer structure"]
 impl crate::Writable for HRBSC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HRBSC to value 0"]
 impl crate::Resettable for HRBSC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

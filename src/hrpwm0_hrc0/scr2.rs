@@ -35,31 +35,9 @@ impl From<crate::W<SCR2_SPEC>> for W {
     }
 }
 #[doc = "Field `SCR2` reader - High resolution rising edge value"]
-pub struct SCR2_R(crate::FieldReader<u8, u8>);
-impl SCR2_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SCR2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCR2_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCR2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCR2` writer - High resolution rising edge value"]
-pub struct SCR2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCR2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SCR2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SCR2_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - High resolution rising edge value"]
     #[inline(always)]
@@ -70,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - High resolution rising edge value"]
     #[inline(always)]
-    pub fn scr2(&mut self) -> SCR2_W {
-        SCR2_W { w: self }
+    #[must_use]
+    pub fn scr2(&mut self) -> SCR2_W<0> {
+        SCR2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -92,11 +71,10 @@ impl crate::Readable for SCR2_SPEC {
 #[doc = "`write(|w| ..)` method takes [scr2::W](W) writer structure"]
 impl crate::Writable for SCR2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCR2 to value 0"]
 impl crate::Resettable for SCR2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

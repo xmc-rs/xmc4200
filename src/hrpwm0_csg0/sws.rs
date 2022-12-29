@@ -20,248 +20,77 @@ impl From<crate::W<SWS_SPEC>> for W {
     }
 }
 #[doc = "Field `SVLS1` writer - Value switch from CSGyDSV1 to CSGyDSV2 status set"]
-pub struct SVLS1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVLS1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type SVLS1_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWS_SPEC, bool, O>;
 #[doc = "Field `SVLS2` writer - Value switch from CSGyDSV2 to CSGyDSV1 status set"]
-pub struct SVLS2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVLS2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type SVLS2_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWS_SPEC, bool, O>;
 #[doc = "Field `STRGS` writer - Conversion trigger status set"]
-pub struct STRGS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STRGS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type STRGS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWS_SPEC, bool, O>;
 #[doc = "Field `SSTRS` writer - Start trigger status set"]
-pub struct SSTRS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SSTRS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type SSTRS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWS_SPEC, bool, O>;
 #[doc = "Field `SSTPS` writer - Stop trigger status set"]
-pub struct SSTPS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SSTPS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
+pub type SSTPS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWS_SPEC, bool, O>;
 #[doc = "Field `SSTD` writer - Shadow transfer status set"]
-pub struct SSTD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SSTD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
+pub type SSTD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWS_SPEC, bool, O>;
 #[doc = "Field `SCRS` writer - Comparator rise status set"]
-pub struct SCRS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCRS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type SCRS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWS_SPEC, bool, O>;
 #[doc = "Field `SCFS` writer - Comparator fall status set"]
-pub struct SCFS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCFS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
+pub type SCFS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWS_SPEC, bool, O>;
 #[doc = "Field `SCSS` writer - Comparator clamped state status set"]
-pub struct SCSS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCSS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
+pub type SCSS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWS_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Value switch from CSGyDSV1 to CSGyDSV2 status set"]
     #[inline(always)]
-    pub fn svls1(&mut self) -> SVLS1_W {
-        SVLS1_W { w: self }
+    #[must_use]
+    pub fn svls1(&mut self) -> SVLS1_W<0> {
+        SVLS1_W::new(self)
     }
     #[doc = "Bit 1 - Value switch from CSGyDSV2 to CSGyDSV1 status set"]
     #[inline(always)]
-    pub fn svls2(&mut self) -> SVLS2_W {
-        SVLS2_W { w: self }
+    #[must_use]
+    pub fn svls2(&mut self) -> SVLS2_W<1> {
+        SVLS2_W::new(self)
     }
     #[doc = "Bit 2 - Conversion trigger status set"]
     #[inline(always)]
-    pub fn strgs(&mut self) -> STRGS_W {
-        STRGS_W { w: self }
+    #[must_use]
+    pub fn strgs(&mut self) -> STRGS_W<2> {
+        STRGS_W::new(self)
     }
     #[doc = "Bit 3 - Start trigger status set"]
     #[inline(always)]
-    pub fn sstrs(&mut self) -> SSTRS_W {
-        SSTRS_W { w: self }
+    #[must_use]
+    pub fn sstrs(&mut self) -> SSTRS_W<3> {
+        SSTRS_W::new(self)
     }
     #[doc = "Bit 4 - Stop trigger status set"]
     #[inline(always)]
-    pub fn sstps(&mut self) -> SSTPS_W {
-        SSTPS_W { w: self }
+    #[must_use]
+    pub fn sstps(&mut self) -> SSTPS_W<4> {
+        SSTPS_W::new(self)
     }
     #[doc = "Bit 5 - Shadow transfer status set"]
     #[inline(always)]
-    pub fn sstd(&mut self) -> SSTD_W {
-        SSTD_W { w: self }
+    #[must_use]
+    pub fn sstd(&mut self) -> SSTD_W<5> {
+        SSTD_W::new(self)
     }
     #[doc = "Bit 6 - Comparator rise status set"]
     #[inline(always)]
-    pub fn scrs(&mut self) -> SCRS_W {
-        SCRS_W { w: self }
+    #[must_use]
+    pub fn scrs(&mut self) -> SCRS_W<6> {
+        SCRS_W::new(self)
     }
     #[doc = "Bit 7 - Comparator fall status set"]
     #[inline(always)]
-    pub fn scfs(&mut self) -> SCFS_W {
-        SCFS_W { w: self }
+    #[must_use]
+    pub fn scfs(&mut self) -> SCFS_W<7> {
+        SCFS_W::new(self)
     }
     #[doc = "Bit 8 - Comparator clamped state status set"]
     #[inline(always)]
-    pub fn scss(&mut self) -> SCSS_W {
-        SCSS_W { w: self }
+    #[must_use]
+    pub fn scss(&mut self) -> SCSS_W<8> {
+        SCSS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -278,11 +107,10 @@ impl crate::RegisterSpec for SWS_SPEC {
 #[doc = "`write(|w| ..)` method takes [sws::W](W) writer structure"]
 impl crate::Writable for SWS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SWS to value 0"]
 impl crate::Resettable for SWS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

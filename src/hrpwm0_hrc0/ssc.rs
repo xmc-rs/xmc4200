@@ -34,8 +34,10 @@ impl From<crate::W<SSC_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `SST` reader - Source selector for the shadow transfer"]
+pub type SST_R = crate::BitReader<SST_A>;
 #[doc = "Source selector for the shadow transfer\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SST_A {
     #[doc = "0: Next shadow transfer signals (shadow transfer trigger and shadow transfer enable) are linked with the timer CC8y connected to the Source Selector 0."]
     VALUE1 = 0,
@@ -48,13 +50,8 @@ impl From<SST_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `SST` reader - Source selector for the shadow transfer"]
-pub struct SST_R(crate::FieldReader<bool, SST_A>);
 impl SST_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SST_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SST_A {
         match self.bits {
@@ -65,31 +62,17 @@ impl SST_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == SST_A::VALUE1
+        *self == SST_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == SST_A::VALUE2
-    }
-}
-impl core::ops::Deref for SST_R {
-    type Target = crate::FieldReader<bool, SST_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SST_A::VALUE2
     }
 }
 #[doc = "Field `SST` writer - Source selector for the shadow transfer"]
-pub struct SST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SST_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SST_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type SST_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSC_SPEC, SST_A, O>;
+impl<'a, const O: u8> SST_W<'a, O> {
     #[doc = "Next shadow transfer signals (shadow transfer trigger and shadow transfer enable) are linked with the timer CC8y connected to the Source Selector 0."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -100,35 +83,20 @@ impl<'a> SST_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(SST_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bit 0 - Source selector for the shadow transfer"]
     #[inline(always)]
     pub fn sst(&self) -> SST_R {
-        SST_R::new((self.bits & 0x01) != 0)
+        SST_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Source selector for the shadow transfer"]
     #[inline(always)]
-    pub fn sst(&mut self) -> SST_W {
-        SST_W { w: self }
+    #[must_use]
+    pub fn sst(&mut self) -> SST_W<0> {
+        SST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -149,11 +117,10 @@ impl crate::Readable for SSC_SPEC {
 #[doc = "`write(|w| ..)` method takes [ssc::W](W) writer structure"]
 impl crate::Writable for SSC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SSC to value 0"]
 impl crate::Resettable for SSC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

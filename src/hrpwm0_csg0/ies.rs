@@ -34,8 +34,10 @@ impl From<crate::W<IES_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `SVLS` reader - External value switch function level selection"]
+pub type SVLS_R = crate::FieldReader<u8, SVLS_A>;
 #[doc = "External value switch function level selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SVLS_A {
     #[doc = "0: Function disabled"]
@@ -51,13 +53,8 @@ impl From<SVLS_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `SVLS` reader - External value switch function level selection"]
-pub struct SVLS_R(crate::FieldReader<u8, SVLS_A>);
 impl SVLS_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SVLS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<SVLS_A> {
         match self.bits {
@@ -70,36 +67,22 @@ impl SVLS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == SVLS_A::VALUE1
+        *self == SVLS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == SVLS_A::VALUE2
+        *self == SVLS_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        **self == SVLS_A::VALUE3
-    }
-}
-impl core::ops::Deref for SVLS_R {
-    type Target = crate::FieldReader<u8, SVLS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SVLS_A::VALUE3
     }
 }
 #[doc = "Field `SVLS` writer - External value switch function level selection"]
-pub struct SVLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVLS_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SVLS_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type SVLS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IES_SPEC, u8, SVLS_A, 2, O>;
+impl<'a, const O: u8> SVLS_W<'a, O> {
     #[doc = "Function disabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -115,15 +98,11 @@ impl<'a> SVLS_W<'a> {
     pub fn value3(self) -> &'a mut W {
         self.variant(SVLS_A::VALUE3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
-        self.w
-    }
 }
+#[doc = "Field `STRES` reader - External start function edge selection"]
+pub type STRES_R = crate::FieldReader<u8, STRES_A>;
 #[doc = "External start function edge selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum STRES_A {
     #[doc = "0: Function disabled"]
@@ -141,13 +120,8 @@ impl From<STRES_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `STRES` reader - External start function edge selection"]
-pub struct STRES_R(crate::FieldReader<u8, STRES_A>);
 impl STRES_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        STRES_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> STRES_A {
         match self.bits {
@@ -161,41 +135,27 @@ impl STRES_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == STRES_A::VALUE1
+        *self == STRES_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == STRES_A::VALUE2
+        *self == STRES_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        **self == STRES_A::VALUE3
+        *self == STRES_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        **self == STRES_A::VALUE4
-    }
-}
-impl core::ops::Deref for STRES_R {
-    type Target = crate::FieldReader<u8, STRES_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == STRES_A::VALUE4
     }
 }
 #[doc = "Field `STRES` writer - External start function edge selection"]
-pub struct STRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STRES_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: STRES_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type STRES_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, IES_SPEC, u8, STRES_A, 2, O>;
+impl<'a, const O: u8> STRES_W<'a, O> {
     #[doc = "Function disabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -216,15 +176,11 @@ impl<'a> STRES_W<'a> {
     pub fn value4(self) -> &'a mut W {
         self.variant(STRES_A::VALUE4)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
-        self.w
-    }
 }
+#[doc = "Field `STPES` reader - External stop function edge selection"]
+pub type STPES_R = crate::FieldReader<u8, STPES_A>;
 #[doc = "External stop function edge selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum STPES_A {
     #[doc = "0: Function disabled"]
@@ -242,13 +198,8 @@ impl From<STPES_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `STPES` reader - External stop function edge selection"]
-pub struct STPES_R(crate::FieldReader<u8, STPES_A>);
 impl STPES_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        STPES_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> STPES_A {
         match self.bits {
@@ -262,41 +213,27 @@ impl STPES_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == STPES_A::VALUE1
+        *self == STPES_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == STPES_A::VALUE2
+        *self == STPES_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        **self == STPES_A::VALUE3
+        *self == STPES_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        **self == STPES_A::VALUE4
-    }
-}
-impl core::ops::Deref for STPES_R {
-    type Target = crate::FieldReader<u8, STPES_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == STPES_A::VALUE4
     }
 }
 #[doc = "Field `STPES` writer - External stop function edge selection"]
-pub struct STPES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STPES_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: STPES_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type STPES_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, IES_SPEC, u8, STPES_A, 2, O>;
+impl<'a, const O: u8> STPES_W<'a, O> {
     #[doc = "Function disabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -317,15 +254,11 @@ impl<'a> STPES_W<'a> {
     pub fn value4(self) -> &'a mut W {
         self.variant(STPES_A::VALUE4)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
-        self.w
-    }
 }
+#[doc = "Field `TRGES` reader - External trigger function edge selection"]
+pub type TRGES_R = crate::FieldReader<u8, TRGES_A>;
 #[doc = "External trigger function edge selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TRGES_A {
     #[doc = "0: Function disabled"]
@@ -343,13 +276,8 @@ impl From<TRGES_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `TRGES` reader - External trigger function edge selection"]
-pub struct TRGES_R(crate::FieldReader<u8, TRGES_A>);
 impl TRGES_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TRGES_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TRGES_A {
         match self.bits {
@@ -363,41 +291,27 @@ impl TRGES_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == TRGES_A::VALUE1
+        *self == TRGES_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == TRGES_A::VALUE2
+        *self == TRGES_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        **self == TRGES_A::VALUE3
+        *self == TRGES_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        **self == TRGES_A::VALUE4
-    }
-}
-impl core::ops::Deref for TRGES_R {
-    type Target = crate::FieldReader<u8, TRGES_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TRGES_A::VALUE4
     }
 }
 #[doc = "Field `TRGES` writer - External trigger function edge selection"]
-pub struct TRGES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRGES_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TRGES_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type TRGES_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, IES_SPEC, u8, TRGES_A, 2, O>;
+impl<'a, const O: u8> TRGES_W<'a, O> {
     #[doc = "Function disabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -418,15 +332,11 @@ impl<'a> TRGES_W<'a> {
     pub fn value4(self) -> &'a mut W {
         self.variant(TRGES_A::VALUE4)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
-        self.w
-    }
 }
+#[doc = "Field `STES` reader - External shadow transfer enable edge selection"]
+pub type STES_R = crate::FieldReader<u8, STES_A>;
 #[doc = "External shadow transfer enable edge selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum STES_A {
     #[doc = "0: Function disabled"]
@@ -444,13 +354,8 @@ impl From<STES_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `STES` reader - External shadow transfer enable edge selection"]
-pub struct STES_R(crate::FieldReader<u8, STES_A>);
 impl STES_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        STES_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> STES_A {
         match self.bits {
@@ -464,41 +369,27 @@ impl STES_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == STES_A::VALUE1
+        *self == STES_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == STES_A::VALUE2
+        *self == STES_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        **self == STES_A::VALUE3
+        *self == STES_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        **self == STES_A::VALUE4
-    }
-}
-impl core::ops::Deref for STES_R {
-    type Target = crate::FieldReader<u8, STES_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == STES_A::VALUE4
     }
 }
 #[doc = "Field `STES` writer - External shadow transfer enable edge selection"]
-pub struct STES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STES_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: STES_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type STES_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, IES_SPEC, u8, STES_A, 2, O>;
+impl<'a, const O: u8> STES_W<'a, O> {
     #[doc = "Function disabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -519,65 +410,64 @@ impl<'a> STES_W<'a> {
     pub fn value4(self) -> &'a mut W {
         self.variant(STES_A::VALUE4)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bits 0:1 - External value switch function level selection"]
     #[inline(always)]
     pub fn svls(&self) -> SVLS_R {
-        SVLS_R::new((self.bits & 0x03) as u8)
+        SVLS_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - External start function edge selection"]
     #[inline(always)]
     pub fn stres(&self) -> STRES_R {
-        STRES_R::new(((self.bits >> 2) & 0x03) as u8)
+        STRES_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - External stop function edge selection"]
     #[inline(always)]
     pub fn stpes(&self) -> STPES_R {
-        STPES_R::new(((self.bits >> 4) & 0x03) as u8)
+        STPES_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - External trigger function edge selection"]
     #[inline(always)]
     pub fn trges(&self) -> TRGES_R {
-        TRGES_R::new(((self.bits >> 6) & 0x03) as u8)
+        TRGES_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - External shadow transfer enable edge selection"]
     #[inline(always)]
     pub fn stes(&self) -> STES_R {
-        STES_R::new(((self.bits >> 8) & 0x03) as u8)
+        STES_R::new(((self.bits >> 8) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - External value switch function level selection"]
     #[inline(always)]
-    pub fn svls(&mut self) -> SVLS_W {
-        SVLS_W { w: self }
+    #[must_use]
+    pub fn svls(&mut self) -> SVLS_W<0> {
+        SVLS_W::new(self)
     }
     #[doc = "Bits 2:3 - External start function edge selection"]
     #[inline(always)]
-    pub fn stres(&mut self) -> STRES_W {
-        STRES_W { w: self }
+    #[must_use]
+    pub fn stres(&mut self) -> STRES_W<2> {
+        STRES_W::new(self)
     }
     #[doc = "Bits 4:5 - External stop function edge selection"]
     #[inline(always)]
-    pub fn stpes(&mut self) -> STPES_W {
-        STPES_W { w: self }
+    #[must_use]
+    pub fn stpes(&mut self) -> STPES_W<4> {
+        STPES_W::new(self)
     }
     #[doc = "Bits 6:7 - External trigger function edge selection"]
     #[inline(always)]
-    pub fn trges(&mut self) -> TRGES_W {
-        TRGES_W { w: self }
+    #[must_use]
+    pub fn trges(&mut self) -> TRGES_W<6> {
+        TRGES_W::new(self)
     }
     #[doc = "Bits 8:9 - External shadow transfer enable edge selection"]
     #[inline(always)]
-    pub fn stes(&mut self) -> STES_W {
-        STES_W { w: self }
+    #[must_use]
+    pub fn stes(&mut self) -> STES_W<8> {
+        STES_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -598,11 +488,10 @@ impl crate::Readable for IES_SPEC {
 #[doc = "`write(|w| ..)` method takes [ies::W](W) writer structure"]
 impl crate::Writable for IES_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IES to value 0"]
 impl crate::Resettable for IES_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

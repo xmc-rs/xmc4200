@@ -14,19 +14,7 @@ impl From<crate::R<DCR_SPEC>> for R {
     }
 }
 #[doc = "Field `DTRV` reader - Dead time rising value"]
-pub struct DTRV_R(crate::FieldReader<u16, u16>);
-impl DTRV_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        DTRV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTRV_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DTRV_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Dead time rising value"]
     #[inline(always)]
@@ -45,8 +33,5 @@ impl crate::Readable for DCR_SPEC {
 }
 #[doc = "`reset()` method sets DCR to value 0x01"]
 impl crate::Resettable for DCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

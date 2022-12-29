@@ -14,19 +14,7 @@ impl From<crate::R<DCF_SPEC>> for R {
     }
 }
 #[doc = "Field `DTFV` reader - Dead time falling value"]
-pub struct DTFV_R(crate::FieldReader<u16, u16>);
-impl DTFV_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        DTFV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTFV_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DTFV_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Dead time falling value"]
     #[inline(always)]
@@ -45,8 +33,5 @@ impl crate::Readable for DCF_SPEC {
 }
 #[doc = "`reset()` method sets DCF to value 0x01"]
 impl crate::Resettable for DCF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

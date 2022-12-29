@@ -20,86 +20,29 @@ impl From<crate::W<CSGTRC_SPEC>> for W {
     }
 }
 #[doc = "Field `D0SEC` writer - DAC0 shadow transfer enable clear"]
-pub struct D0SEC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D0SEC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type D0SEC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSGTRC_SPEC, bool, O>;
 #[doc = "Field `D1SEC` writer - DAC1 shadow transfer enable clear"]
-pub struct D1SEC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D1SEC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
+pub type D1SEC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSGTRC_SPEC, bool, O>;
 #[doc = "Field `D2SEC` writer - DAC2 shadow transfer enable clear"]
-pub struct D2SEC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D2SEC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
+pub type D2SEC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSGTRC_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - DAC0 shadow transfer enable clear"]
     #[inline(always)]
-    pub fn d0sec(&mut self) -> D0SEC_W {
-        D0SEC_W { w: self }
+    #[must_use]
+    pub fn d0sec(&mut self) -> D0SEC_W<0> {
+        D0SEC_W::new(self)
     }
     #[doc = "Bit 4 - DAC1 shadow transfer enable clear"]
     #[inline(always)]
-    pub fn d1sec(&mut self) -> D1SEC_W {
-        D1SEC_W { w: self }
+    #[must_use]
+    pub fn d1sec(&mut self) -> D1SEC_W<4> {
+        D1SEC_W::new(self)
     }
     #[doc = "Bit 8 - DAC2 shadow transfer enable clear"]
     #[inline(always)]
-    pub fn d2sec(&mut self) -> D2SEC_W {
-        D2SEC_W { w: self }
+    #[must_use]
+    pub fn d2sec(&mut self) -> D2SEC_W<8> {
+        D2SEC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -116,11 +59,10 @@ impl crate::RegisterSpec for CSGTRC_SPEC {
 #[doc = "`write(|w| ..)` method takes [csgtrc::W](W) writer structure"]
 impl crate::Writable for CSGTRC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CSGTRC to value 0"]
 impl crate::Resettable for CSGTRC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

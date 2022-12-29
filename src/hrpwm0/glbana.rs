@@ -35,235 +35,41 @@ impl From<crate::W<GLBANA_SPEC>> for W {
     }
 }
 #[doc = "Field `SLDLY` reader - Delay of lock detection"]
-pub struct SLDLY_R(crate::FieldReader<u8, u8>);
-impl SLDLY_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SLDLY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLDLY_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLDLY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLDLY` writer - Delay of lock detection"]
-pub struct SLDLY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLDLY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
-        self.w
-    }
-}
+pub type SLDLY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GLBANA_SPEC, u8, u8, 2, O>;
 #[doc = "Field `FUP` reader - Force chargepump up"]
-pub struct FUP_R(crate::FieldReader<bool, bool>);
-impl FUP_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        FUP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FUP_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FUP_R = crate::BitReader<bool>;
 #[doc = "Field `FUP` writer - Force chargepump up"]
-pub struct FUP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FUP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type FUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, GLBANA_SPEC, bool, O>;
 #[doc = "Field `FDN` reader - Force chargepump down"]
-pub struct FDN_R(crate::FieldReader<bool, bool>);
-impl FDN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        FDN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FDN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FDN_R = crate::BitReader<bool>;
 #[doc = "Field `FDN` writer - Force chargepump down"]
-pub struct FDN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FDN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type FDN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GLBANA_SPEC, bool, O>;
 #[doc = "Field `SLCP` reader - HRCs chargepump current selection"]
-pub struct SLCP_R(crate::FieldReader<u8, u8>);
-impl SLCP_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SLCP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLCP_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLCP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLCP` writer - HRCs chargepump current selection"]
-pub struct SLCP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLCP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 6)) | ((value as u32 & 0x07) << 6);
-        self.w
-    }
-}
+pub type SLCP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GLBANA_SPEC, u8, u8, 3, O>;
 #[doc = "Field `SLIBLDO` reader - HRCs LDO bias current"]
-pub struct SLIBLDO_R(crate::FieldReader<u8, u8>);
-impl SLIBLDO_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SLIBLDO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLIBLDO_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLIBLDO_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLIBLDO` writer - HRCs LDO bias current"]
-pub struct SLIBLDO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLIBLDO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 9)) | ((value as u32 & 0x03) << 9);
-        self.w
-    }
-}
+pub type SLIBLDO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GLBANA_SPEC, u8, u8, 2, O>;
 #[doc = "Field `SLIBLF` reader - HRCs loop filter bias current"]
-pub struct SLIBLF_R(crate::FieldReader<u8, u8>);
-impl SLIBLF_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SLIBLF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLIBLF_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLIBLF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLIBLF` writer - HRCs loop filter bias current"]
-pub struct SLIBLF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLIBLF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 11)) | ((value as u32 & 0x03) << 11);
-        self.w
-    }
-}
+pub type SLIBLF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GLBANA_SPEC, u8, u8, 2, O>;
 #[doc = "Field `SLVREF` reader - Reference voltage for chargepump and loop filter"]
-pub struct SLVREF_R(crate::FieldReader<u8, u8>);
-impl SLVREF_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SLVREF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLVREF_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLVREF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLVREF` writer - Reference voltage for chargepump and loop filter"]
-pub struct SLVREF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLVREF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 13)) | ((value as u32 & 0x07) << 13);
-        self.w
-    }
-}
+pub type SLVREF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GLBANA_SPEC, u8, u8, 3, O>;
 #[doc = "Field `TRIBIAS` reader - Bias trimming"]
-pub struct TRIBIAS_R(crate::FieldReader<u8, u8>);
-impl TRIBIAS_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TRIBIAS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRIBIAS_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRIBIAS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TRIBIAS` writer - Bias trimming"]
-pub struct TRIBIAS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIBIAS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
-        self.w
-    }
-}
+pub type TRIBIAS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GLBANA_SPEC, u8, u8, 2, O>;
+#[doc = "Field `GHREN` reader - Force chargepump down"]
+pub type GHREN_R = crate::BitReader<GHREN_A>;
 #[doc = "Force chargepump down\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GHREN_A {
     #[doc = "0: Global high resolution generation is enabled"]
     VALUE1 = 0,
@@ -276,13 +82,8 @@ impl From<GHREN_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `GHREN` reader - Force chargepump down"]
-pub struct GHREN_R(crate::FieldReader<bool, GHREN_A>);
 impl GHREN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        GHREN_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> GHREN_A {
         match self.bits {
@@ -293,31 +94,17 @@ impl GHREN_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == GHREN_A::VALUE1
+        *self == GHREN_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == GHREN_A::VALUE2
-    }
-}
-impl core::ops::Deref for GHREN_R {
-    type Target = crate::FieldReader<bool, GHREN_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GHREN_A::VALUE2
     }
 }
 #[doc = "Field `GHREN` writer - Force chargepump down"]
-pub struct GHREN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GHREN_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: GHREN_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type GHREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GLBANA_SPEC, GHREN_A, O>;
+impl<'a, const O: u8> GHREN_W<'a, O> {
     #[doc = "Global high resolution generation is enabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -328,115 +115,108 @@ impl<'a> GHREN_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(GHREN_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bits 0:1 - Delay of lock detection"]
     #[inline(always)]
     pub fn sldly(&self) -> SLDLY_R {
-        SLDLY_R::new((self.bits & 0x03) as u8)
+        SLDLY_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - Force chargepump up"]
     #[inline(always)]
     pub fn fup(&self) -> FUP_R {
-        FUP_R::new(((self.bits >> 2) & 0x01) != 0)
+        FUP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Force chargepump down"]
     #[inline(always)]
     pub fn fdn(&self) -> FDN_R {
-        FDN_R::new(((self.bits >> 3) & 0x01) != 0)
+        FDN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 6:8 - HRCs chargepump current selection"]
     #[inline(always)]
     pub fn slcp(&self) -> SLCP_R {
-        SLCP_R::new(((self.bits >> 6) & 0x07) as u8)
+        SLCP_R::new(((self.bits >> 6) & 7) as u8)
     }
     #[doc = "Bits 9:10 - HRCs LDO bias current"]
     #[inline(always)]
     pub fn slibldo(&self) -> SLIBLDO_R {
-        SLIBLDO_R::new(((self.bits >> 9) & 0x03) as u8)
+        SLIBLDO_R::new(((self.bits >> 9) & 3) as u8)
     }
     #[doc = "Bits 11:12 - HRCs loop filter bias current"]
     #[inline(always)]
     pub fn sliblf(&self) -> SLIBLF_R {
-        SLIBLF_R::new(((self.bits >> 11) & 0x03) as u8)
+        SLIBLF_R::new(((self.bits >> 11) & 3) as u8)
     }
     #[doc = "Bits 13:15 - Reference voltage for chargepump and loop filter"]
     #[inline(always)]
     pub fn slvref(&self) -> SLVREF_R {
-        SLVREF_R::new(((self.bits >> 13) & 0x07) as u8)
+        SLVREF_R::new(((self.bits >> 13) & 7) as u8)
     }
     #[doc = "Bits 16:17 - Bias trimming"]
     #[inline(always)]
     pub fn tribias(&self) -> TRIBIAS_R {
-        TRIBIAS_R::new(((self.bits >> 16) & 0x03) as u8)
+        TRIBIAS_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bit 18 - Force chargepump down"]
     #[inline(always)]
     pub fn ghren(&self) -> GHREN_R {
-        GHREN_R::new(((self.bits >> 18) & 0x01) != 0)
+        GHREN_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Delay of lock detection"]
     #[inline(always)]
-    pub fn sldly(&mut self) -> SLDLY_W {
-        SLDLY_W { w: self }
+    #[must_use]
+    pub fn sldly(&mut self) -> SLDLY_W<0> {
+        SLDLY_W::new(self)
     }
     #[doc = "Bit 2 - Force chargepump up"]
     #[inline(always)]
-    pub fn fup(&mut self) -> FUP_W {
-        FUP_W { w: self }
+    #[must_use]
+    pub fn fup(&mut self) -> FUP_W<2> {
+        FUP_W::new(self)
     }
     #[doc = "Bit 3 - Force chargepump down"]
     #[inline(always)]
-    pub fn fdn(&mut self) -> FDN_W {
-        FDN_W { w: self }
+    #[must_use]
+    pub fn fdn(&mut self) -> FDN_W<3> {
+        FDN_W::new(self)
     }
     #[doc = "Bits 6:8 - HRCs chargepump current selection"]
     #[inline(always)]
-    pub fn slcp(&mut self) -> SLCP_W {
-        SLCP_W { w: self }
+    #[must_use]
+    pub fn slcp(&mut self) -> SLCP_W<6> {
+        SLCP_W::new(self)
     }
     #[doc = "Bits 9:10 - HRCs LDO bias current"]
     #[inline(always)]
-    pub fn slibldo(&mut self) -> SLIBLDO_W {
-        SLIBLDO_W { w: self }
+    #[must_use]
+    pub fn slibldo(&mut self) -> SLIBLDO_W<9> {
+        SLIBLDO_W::new(self)
     }
     #[doc = "Bits 11:12 - HRCs loop filter bias current"]
     #[inline(always)]
-    pub fn sliblf(&mut self) -> SLIBLF_W {
-        SLIBLF_W { w: self }
+    #[must_use]
+    pub fn sliblf(&mut self) -> SLIBLF_W<11> {
+        SLIBLF_W::new(self)
     }
     #[doc = "Bits 13:15 - Reference voltage for chargepump and loop filter"]
     #[inline(always)]
-    pub fn slvref(&mut self) -> SLVREF_W {
-        SLVREF_W { w: self }
+    #[must_use]
+    pub fn slvref(&mut self) -> SLVREF_W<13> {
+        SLVREF_W::new(self)
     }
     #[doc = "Bits 16:17 - Bias trimming"]
     #[inline(always)]
-    pub fn tribias(&mut self) -> TRIBIAS_W {
-        TRIBIAS_W { w: self }
+    #[must_use]
+    pub fn tribias(&mut self) -> TRIBIAS_W<16> {
+        TRIBIAS_W::new(self)
     }
     #[doc = "Bit 18 - Force chargepump down"]
     #[inline(always)]
-    pub fn ghren(&mut self) -> GHREN_W {
-        GHREN_W { w: self }
+    #[must_use]
+    pub fn ghren(&mut self) -> GHREN_W<18> {
+        GHREN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -457,11 +237,10 @@ impl crate::Readable for GLBANA_SPEC {
 #[doc = "`write(|w| ..)` method takes [glbana::W](W) writer structure"]
 impl crate::Writable for GLBANA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GLBANA to value 0x4b8c"]
 impl crate::Resettable for GLBANA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4b8c
-    }
+    const RESET_VALUE: Self::Ux = 0x4b8c;
 }

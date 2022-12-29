@@ -13,8 +13,10 @@ impl From<crate::R<HRCSTSG_SPEC>> for R {
         R(reader)
     }
 }
+#[doc = "Field `H0STE` reader - HRC0 high resolution values shadow transfer status"]
+pub type H0STE_R = crate::BitReader<H0STE_A>;
 #[doc = "HRC0 high resolution values shadow transfer status\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum H0STE_A {
     #[doc = "0: No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     VALUE1 = 0,
@@ -27,13 +29,8 @@ impl From<H0STE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `H0STE` reader - HRC0 high resolution values shadow transfer status"]
-pub struct H0STE_R(crate::FieldReader<bool, H0STE_A>);
 impl H0STE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        H0STE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> H0STE_A {
         match self.bits {
@@ -44,23 +41,18 @@ impl H0STE_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == H0STE_A::VALUE1
+        *self == H0STE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == H0STE_A::VALUE2
+        *self == H0STE_A::VALUE2
     }
 }
-impl core::ops::Deref for H0STE_R {
-    type Target = crate::FieldReader<bool, H0STE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `H0DSTE` reader - HRC0 dead time value shadow transfer status"]
+pub type H0DSTE_R = crate::BitReader<H0DSTE_A>;
 #[doc = "HRC0 dead time value shadow transfer status\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum H0DSTE_A {
     #[doc = "0: No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     VALUE1 = 0,
@@ -73,13 +65,8 @@ impl From<H0DSTE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `H0DSTE` reader - HRC0 dead time value shadow transfer status"]
-pub struct H0DSTE_R(crate::FieldReader<bool, H0DSTE_A>);
 impl H0DSTE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        H0DSTE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> H0DSTE_A {
         match self.bits {
@@ -90,23 +77,18 @@ impl H0DSTE_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == H0DSTE_A::VALUE1
+        *self == H0DSTE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == H0DSTE_A::VALUE2
+        *self == H0DSTE_A::VALUE2
     }
 }
-impl core::ops::Deref for H0DSTE_R {
-    type Target = crate::FieldReader<bool, H0DSTE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `H1STE` reader - HRC1 high resolution values shadow transfer status"]
+pub type H1STE_R = crate::BitReader<H1STE_A>;
 #[doc = "HRC1 high resolution values shadow transfer status\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum H1STE_A {
     #[doc = "0: No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     VALUE1 = 0,
@@ -119,13 +101,8 @@ impl From<H1STE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `H1STE` reader - HRC1 high resolution values shadow transfer status"]
-pub struct H1STE_R(crate::FieldReader<bool, H1STE_A>);
 impl H1STE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        H1STE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> H1STE_A {
         match self.bits {
@@ -136,23 +113,18 @@ impl H1STE_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == H1STE_A::VALUE1
+        *self == H1STE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == H1STE_A::VALUE2
+        *self == H1STE_A::VALUE2
     }
 }
-impl core::ops::Deref for H1STE_R {
-    type Target = crate::FieldReader<bool, H1STE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `H1DSTE` reader - HRC1 dead time value shadow transfer status"]
+pub type H1DSTE_R = crate::BitReader<H1DSTE_A>;
 #[doc = "HRC1 dead time value shadow transfer status\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum H1DSTE_A {
     #[doc = "0: No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     VALUE1 = 0,
@@ -165,13 +137,8 @@ impl From<H1DSTE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `H1DSTE` reader - HRC1 dead time value shadow transfer status"]
-pub struct H1DSTE_R(crate::FieldReader<bool, H1DSTE_A>);
 impl H1DSTE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        H1DSTE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> H1DSTE_A {
         match self.bits {
@@ -182,23 +149,18 @@ impl H1DSTE_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == H1DSTE_A::VALUE1
+        *self == H1DSTE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == H1DSTE_A::VALUE2
+        *self == H1DSTE_A::VALUE2
     }
 }
-impl core::ops::Deref for H1DSTE_R {
-    type Target = crate::FieldReader<bool, H1DSTE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `H2STE` reader - HRC2 high resolution values shadow transfer status"]
+pub type H2STE_R = crate::BitReader<H2STE_A>;
 #[doc = "HRC2 high resolution values shadow transfer status\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum H2STE_A {
     #[doc = "0: No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     VALUE1 = 0,
@@ -211,13 +173,8 @@ impl From<H2STE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `H2STE` reader - HRC2 high resolution values shadow transfer status"]
-pub struct H2STE_R(crate::FieldReader<bool, H2STE_A>);
 impl H2STE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        H2STE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> H2STE_A {
         match self.bits {
@@ -228,23 +185,18 @@ impl H2STE_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == H2STE_A::VALUE1
+        *self == H2STE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == H2STE_A::VALUE2
+        *self == H2STE_A::VALUE2
     }
 }
-impl core::ops::Deref for H2STE_R {
-    type Target = crate::FieldReader<bool, H2STE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `H2DSTE` reader - HRC2 dead time value shadow transfer status"]
+pub type H2DSTE_R = crate::BitReader<H2DSTE_A>;
 #[doc = "HRC2 dead time value shadow transfer status\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum H2DSTE_A {
     #[doc = "0: No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     VALUE1 = 0,
@@ -257,13 +209,8 @@ impl From<H2DSTE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `H2DSTE` reader - HRC2 dead time value shadow transfer status"]
-pub struct H2DSTE_R(crate::FieldReader<bool, H2DSTE_A>);
 impl H2DSTE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        H2DSTE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> H2DSTE_A {
         match self.bits {
@@ -274,23 +221,18 @@ impl H2DSTE_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == H2DSTE_A::VALUE1
+        *self == H2DSTE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == H2DSTE_A::VALUE2
+        *self == H2DSTE_A::VALUE2
     }
 }
-impl core::ops::Deref for H2DSTE_R {
-    type Target = crate::FieldReader<bool, H2DSTE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `H3STE` reader - HRC3 high resolution values shadow transfer status"]
+pub type H3STE_R = crate::BitReader<H3STE_A>;
 #[doc = "HRC3 high resolution values shadow transfer status\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum H3STE_A {
     #[doc = "0: No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     VALUE1 = 0,
@@ -303,13 +245,8 @@ impl From<H3STE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `H3STE` reader - HRC3 high resolution values shadow transfer status"]
-pub struct H3STE_R(crate::FieldReader<bool, H3STE_A>);
 impl H3STE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        H3STE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> H3STE_A {
         match self.bits {
@@ -320,23 +257,18 @@ impl H3STE_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == H3STE_A::VALUE1
+        *self == H3STE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == H3STE_A::VALUE2
+        *self == H3STE_A::VALUE2
     }
 }
-impl core::ops::Deref for H3STE_R {
-    type Target = crate::FieldReader<bool, H3STE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `H3DSTE` reader - HRC3 dead time value shadow transfer status"]
+pub type H3DSTE_R = crate::BitReader<H3DSTE_A>;
 #[doc = "HRC3 dead time value shadow transfer status\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum H3DSTE_A {
     #[doc = "0: No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     VALUE1 = 0,
@@ -349,13 +281,8 @@ impl From<H3DSTE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `H3DSTE` reader - HRC3 dead time value shadow transfer status"]
-pub struct H3DSTE_R(crate::FieldReader<bool, H3DSTE_A>);
 impl H3DSTE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        H3DSTE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> H3DSTE_A {
         match self.bits {
@@ -366,61 +293,54 @@ impl H3DSTE_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == H3DSTE_A::VALUE1
+        *self == H3DSTE_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == H3DSTE_A::VALUE2
-    }
-}
-impl core::ops::Deref for H3DSTE_R {
-    type Target = crate::FieldReader<bool, H3DSTE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == H3DSTE_A::VALUE2
     }
 }
 impl R {
     #[doc = "Bit 0 - HRC0 high resolution values shadow transfer status"]
     #[inline(always)]
     pub fn h0ste(&self) -> H0STE_R {
-        H0STE_R::new((self.bits & 0x01) != 0)
+        H0STE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - HRC0 dead time value shadow transfer status"]
     #[inline(always)]
     pub fn h0dste(&self) -> H0DSTE_R {
-        H0DSTE_R::new(((self.bits >> 1) & 0x01) != 0)
+        H0DSTE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 4 - HRC1 high resolution values shadow transfer status"]
     #[inline(always)]
     pub fn h1ste(&self) -> H1STE_R {
-        H1STE_R::new(((self.bits >> 4) & 0x01) != 0)
+        H1STE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - HRC1 dead time value shadow transfer status"]
     #[inline(always)]
     pub fn h1dste(&self) -> H1DSTE_R {
-        H1DSTE_R::new(((self.bits >> 5) & 0x01) != 0)
+        H1DSTE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 8 - HRC2 high resolution values shadow transfer status"]
     #[inline(always)]
     pub fn h2ste(&self) -> H2STE_R {
-        H2STE_R::new(((self.bits >> 8) & 0x01) != 0)
+        H2STE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - HRC2 dead time value shadow transfer status"]
     #[inline(always)]
     pub fn h2dste(&self) -> H2DSTE_R {
-        H2DSTE_R::new(((self.bits >> 9) & 0x01) != 0)
+        H2DSTE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 12 - HRC3 high resolution values shadow transfer status"]
     #[inline(always)]
     pub fn h3ste(&self) -> H3STE_R {
-        H3STE_R::new(((self.bits >> 12) & 0x01) != 0)
+        H3STE_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - HRC3 dead time value shadow transfer status"]
     #[inline(always)]
     pub fn h3dste(&self) -> H3DSTE_R {
-        H3DSTE_R::new(((self.bits >> 13) & 0x01) != 0)
+        H3DSTE_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 #[doc = "Global HRC shadow transfer status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hrcstsg](index.html) module"]
@@ -434,8 +354,5 @@ impl crate::Readable for HRCSTSG_SPEC {
 }
 #[doc = "`reset()` method sets HRCSTSG to value 0"]
 impl crate::Resettable for HRCSTSG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

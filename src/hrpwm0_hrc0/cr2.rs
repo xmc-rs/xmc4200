@@ -14,19 +14,7 @@ impl From<crate::R<CR2_SPEC>> for R {
     }
 }
 #[doc = "Field `CR2` reader - High resolution falling edge value"]
-pub struct CR2_R(crate::FieldReader<u8, u8>);
-impl CR2_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CR2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR2_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CR2_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - High resolution falling edge value"]
     #[inline(always)]
@@ -45,8 +33,5 @@ impl crate::Readable for CR2_SPEC {
 }
 #[doc = "`reset()` method sets CR2 to value 0"]
 impl crate::Resettable for CR2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

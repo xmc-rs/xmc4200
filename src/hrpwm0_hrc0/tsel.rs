@@ -34,8 +34,10 @@ impl From<crate::W<TSEL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `TSEL0` reader - Source Selector 0 Timer connection"]
+pub type TSEL0_R = crate::FieldReader<u8, TSEL0_A>;
 #[doc = "Source Selector 0 Timer connection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TSEL0_A {
     #[doc = "0: Source Selector 0 is connected to Capture/Compare Unit Timer 0 (CCST0 can be used)"]
@@ -53,13 +55,8 @@ impl From<TSEL0_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `TSEL0` reader - Source Selector 0 Timer connection"]
-pub struct TSEL0_R(crate::FieldReader<u8, TSEL0_A>);
 impl TSEL0_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TSEL0_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<TSEL0_A> {
         match self.bits {
@@ -73,41 +70,27 @@ impl TSEL0_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == TSEL0_A::VALUE1
+        *self == TSEL0_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == TSEL0_A::VALUE2
+        *self == TSEL0_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        **self == TSEL0_A::VALUE3
+        *self == TSEL0_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        **self == TSEL0_A::VALUE4
-    }
-}
-impl core::ops::Deref for TSEL0_R {
-    type Target = crate::FieldReader<u8, TSEL0_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TSEL0_A::VALUE4
     }
 }
 #[doc = "Field `TSEL0` writer - Source Selector 0 Timer connection"]
-pub struct TSEL0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TSEL0_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TSEL0_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type TSEL0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TSEL_SPEC, u8, TSEL0_A, 3, O>;
+impl<'a, const O: u8> TSEL0_W<'a, O> {
     #[doc = "Source Selector 0 is connected to Capture/Compare Unit Timer 0 (CCST0 can be used)"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -128,15 +111,11 @@ impl<'a> TSEL0_W<'a> {
     pub fn value4(self) -> &'a mut W {
         self.variant(TSEL0_A::VALUE4)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
-        self.w
-    }
 }
+#[doc = "Field `TSEL1` reader - Source Selector 1 Timer connection"]
+pub type TSEL1_R = crate::FieldReader<u8, TSEL1_A>;
 #[doc = "Source Selector 1 Timer connection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TSEL1_A {
     #[doc = "0: Source Selector 1 is connected to Capture/Compare Unit Timer 0 (CCST0 can be used)"]
@@ -154,13 +133,8 @@ impl From<TSEL1_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `TSEL1` reader - Source Selector 1 Timer connection"]
-pub struct TSEL1_R(crate::FieldReader<u8, TSEL1_A>);
 impl TSEL1_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TSEL1_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<TSEL1_A> {
         match self.bits {
@@ -174,41 +148,27 @@ impl TSEL1_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == TSEL1_A::VALUE1
+        *self == TSEL1_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == TSEL1_A::VALUE2
+        *self == TSEL1_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        **self == TSEL1_A::VALUE3
+        *self == TSEL1_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        **self == TSEL1_A::VALUE4
-    }
-}
-impl core::ops::Deref for TSEL1_R {
-    type Target = crate::FieldReader<u8, TSEL1_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TSEL1_A::VALUE4
     }
 }
 #[doc = "Field `TSEL1` writer - Source Selector 1 Timer connection"]
-pub struct TSEL1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TSEL1_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TSEL1_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type TSEL1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TSEL_SPEC, u8, TSEL1_A, 3, O>;
+impl<'a, const O: u8> TSEL1_W<'a, O> {
     #[doc = "Source Selector 1 is connected to Capture/Compare Unit Timer 0 (CCST0 can be used)"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -229,15 +189,11 @@ impl<'a> TSEL1_W<'a> {
     pub fn value4(self) -> &'a mut W {
         self.variant(TSEL1_A::VALUE4)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | ((value as u32 & 0x07) << 3);
-        self.w
-    }
 }
+#[doc = "Field `TS0E` reader - Source selector 0 TRAP enable"]
+pub type TS0E_R = crate::BitReader<TS0E_A>;
 #[doc = "Source selector 0 TRAP enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TS0E_A {
     #[doc = "0: TRAP signal generated from the Timer connected to Source Selector 0 is disabled."]
     VALUE1 = 0,
@@ -250,13 +206,8 @@ impl From<TS0E_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `TS0E` reader - Source selector 0 TRAP enable"]
-pub struct TS0E_R(crate::FieldReader<bool, TS0E_A>);
 impl TS0E_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        TS0E_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TS0E_A {
         match self.bits {
@@ -267,31 +218,17 @@ impl TS0E_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == TS0E_A::VALUE1
+        *self == TS0E_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == TS0E_A::VALUE2
-    }
-}
-impl core::ops::Deref for TS0E_R {
-    type Target = crate::FieldReader<bool, TS0E_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TS0E_A::VALUE2
     }
 }
 #[doc = "Field `TS0E` writer - Source selector 0 TRAP enable"]
-pub struct TS0E_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TS0E_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TS0E_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type TS0E_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSEL_SPEC, TS0E_A, O>;
+impl<'a, const O: u8> TS0E_W<'a, O> {
     #[doc = "TRAP signal generated from the Timer connected to Source Selector 0 is disabled."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -302,25 +239,11 @@ impl<'a> TS0E_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(TS0E_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
 }
+#[doc = "Field `TS1E` reader - Source selector 1 TRAP enable"]
+pub type TS1E_R = crate::BitReader<TS1E_A>;
 #[doc = "Source selector 1 TRAP enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TS1E_A {
     #[doc = "0: TRAP signal generated from the Timer connected to Source Selector 1 is disabled."]
     VALUE1 = 0,
@@ -333,13 +256,8 @@ impl From<TS1E_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `TS1E` reader - Source selector 1 TRAP enable"]
-pub struct TS1E_R(crate::FieldReader<bool, TS1E_A>);
 impl TS1E_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        TS1E_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TS1E_A {
         match self.bits {
@@ -350,31 +268,17 @@ impl TS1E_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == TS1E_A::VALUE1
+        *self == TS1E_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == TS1E_A::VALUE2
-    }
-}
-impl core::ops::Deref for TS1E_R {
-    type Target = crate::FieldReader<bool, TS1E_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TS1E_A::VALUE2
     }
 }
 #[doc = "Field `TS1E` writer - Source selector 1 TRAP enable"]
-pub struct TS1E_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TS1E_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TS1E_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type TS1E_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSEL_SPEC, TS1E_A, O>;
+impl<'a, const O: u8> TS1E_W<'a, O> {
     #[doc = "TRAP signal generated from the Timer connected to Source Selector 1 is disabled."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -385,65 +289,53 @@ impl<'a> TS1E_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(TS1E_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bits 0:2 - Source Selector 0 Timer connection"]
     #[inline(always)]
     pub fn tsel0(&self) -> TSEL0_R {
-        TSEL0_R::new((self.bits & 0x07) as u8)
+        TSEL0_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - Source Selector 1 Timer connection"]
     #[inline(always)]
     pub fn tsel1(&self) -> TSEL1_R {
-        TSEL1_R::new(((self.bits >> 3) & 0x07) as u8)
+        TSEL1_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bit 16 - Source selector 0 TRAP enable"]
     #[inline(always)]
     pub fn ts0e(&self) -> TS0E_R {
-        TS0E_R::new(((self.bits >> 16) & 0x01) != 0)
+        TS0E_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Source selector 1 TRAP enable"]
     #[inline(always)]
     pub fn ts1e(&self) -> TS1E_R {
-        TS1E_R::new(((self.bits >> 17) & 0x01) != 0)
+        TS1E_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Source Selector 0 Timer connection"]
     #[inline(always)]
-    pub fn tsel0(&mut self) -> TSEL0_W {
-        TSEL0_W { w: self }
+    #[must_use]
+    pub fn tsel0(&mut self) -> TSEL0_W<0> {
+        TSEL0_W::new(self)
     }
     #[doc = "Bits 3:5 - Source Selector 1 Timer connection"]
     #[inline(always)]
-    pub fn tsel1(&mut self) -> TSEL1_W {
-        TSEL1_W { w: self }
+    #[must_use]
+    pub fn tsel1(&mut self) -> TSEL1_W<3> {
+        TSEL1_W::new(self)
     }
     #[doc = "Bit 16 - Source selector 0 TRAP enable"]
     #[inline(always)]
-    pub fn ts0e(&mut self) -> TS0E_W {
-        TS0E_W { w: self }
+    #[must_use]
+    pub fn ts0e(&mut self) -> TS0E_W<16> {
+        TS0E_W::new(self)
     }
     #[doc = "Bit 17 - Source selector 1 TRAP enable"]
     #[inline(always)]
-    pub fn ts1e(&mut self) -> TS1E_W {
-        TS1E_W { w: self }
+    #[must_use]
+    pub fn ts1e(&mut self) -> TS1E_W<17> {
+        TS1E_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -464,11 +356,10 @@ impl crate::Readable for TSEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [tsel::W](W) writer structure"]
 impl crate::Writable for TSEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TSEL to value 0"]
 impl crate::Resettable for TSEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

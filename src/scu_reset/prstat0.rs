@@ -13,8 +13,10 @@ impl From<crate::R<PRSTAT0_SPEC>> for R {
         R(reader)
     }
 }
+#[doc = "Field `VADCRS` reader - VADC Reset Status"]
+pub type VADCRS_R = crate::BitReader<VADCRS_A>;
 #[doc = "VADC Reset Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum VADCRS_A {
     #[doc = "0: Reset de-asserted"]
     VALUE1 = 0,
@@ -27,13 +29,8 @@ impl From<VADCRS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `VADCRS` reader - VADC Reset Status"]
-pub struct VADCRS_R(crate::FieldReader<bool, VADCRS_A>);
 impl VADCRS_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        VADCRS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> VADCRS_A {
         match self.bits {
@@ -44,23 +41,18 @@ impl VADCRS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == VADCRS_A::VALUE1
+        *self == VADCRS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == VADCRS_A::VALUE2
+        *self == VADCRS_A::VALUE2
     }
 }
-impl core::ops::Deref for VADCRS_R {
-    type Target = crate::FieldReader<bool, VADCRS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `CCU40RS` reader - CCU40 Reset Status"]
+pub type CCU40RS_R = crate::BitReader<CCU40RS_A>;
 #[doc = "CCU40 Reset Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCU40RS_A {
     #[doc = "0: Reset de-asserted"]
     VALUE1 = 0,
@@ -73,13 +65,8 @@ impl From<CCU40RS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `CCU40RS` reader - CCU40 Reset Status"]
-pub struct CCU40RS_R(crate::FieldReader<bool, CCU40RS_A>);
 impl CCU40RS_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CCU40RS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CCU40RS_A {
         match self.bits {
@@ -90,23 +77,18 @@ impl CCU40RS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == CCU40RS_A::VALUE1
+        *self == CCU40RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == CCU40RS_A::VALUE2
+        *self == CCU40RS_A::VALUE2
     }
 }
-impl core::ops::Deref for CCU40RS_R {
-    type Target = crate::FieldReader<bool, CCU40RS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `CCU41RS` reader - CCU41 Reset Status"]
+pub type CCU41RS_R = crate::BitReader<CCU41RS_A>;
 #[doc = "CCU41 Reset Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCU41RS_A {
     #[doc = "0: Reset de-asserted"]
     VALUE1 = 0,
@@ -119,13 +101,8 @@ impl From<CCU41RS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `CCU41RS` reader - CCU41 Reset Status"]
-pub struct CCU41RS_R(crate::FieldReader<bool, CCU41RS_A>);
 impl CCU41RS_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CCU41RS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CCU41RS_A {
         match self.bits {
@@ -136,23 +113,18 @@ impl CCU41RS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == CCU41RS_A::VALUE1
+        *self == CCU41RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == CCU41RS_A::VALUE2
+        *self == CCU41RS_A::VALUE2
     }
 }
-impl core::ops::Deref for CCU41RS_R {
-    type Target = crate::FieldReader<bool, CCU41RS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `CCU80RS` reader - CCU80 Reset Status"]
+pub type CCU80RS_R = crate::BitReader<CCU80RS_A>;
 #[doc = "CCU80 Reset Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCU80RS_A {
     #[doc = "0: Reset de-asserted"]
     VALUE1 = 0,
@@ -165,13 +137,8 @@ impl From<CCU80RS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `CCU80RS` reader - CCU80 Reset Status"]
-pub struct CCU80RS_R(crate::FieldReader<bool, CCU80RS_A>);
 impl CCU80RS_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CCU80RS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CCU80RS_A {
         match self.bits {
@@ -182,23 +149,18 @@ impl CCU80RS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == CCU80RS_A::VALUE1
+        *self == CCU80RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == CCU80RS_A::VALUE2
+        *self == CCU80RS_A::VALUE2
     }
 }
-impl core::ops::Deref for CCU80RS_R {
-    type Target = crate::FieldReader<bool, CCU80RS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `POSIF0RS` reader - POSIF0 Reset Status"]
+pub type POSIF0RS_R = crate::BitReader<POSIF0RS_A>;
 #[doc = "POSIF0 Reset Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum POSIF0RS_A {
     #[doc = "0: Reset de-asserted"]
     VALUE1 = 0,
@@ -211,13 +173,8 @@ impl From<POSIF0RS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `POSIF0RS` reader - POSIF0 Reset Status"]
-pub struct POSIF0RS_R(crate::FieldReader<bool, POSIF0RS_A>);
 impl POSIF0RS_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        POSIF0RS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> POSIF0RS_A {
         match self.bits {
@@ -228,23 +185,18 @@ impl POSIF0RS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == POSIF0RS_A::VALUE1
+        *self == POSIF0RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == POSIF0RS_A::VALUE2
+        *self == POSIF0RS_A::VALUE2
     }
 }
-impl core::ops::Deref for POSIF0RS_R {
-    type Target = crate::FieldReader<bool, POSIF0RS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `USIC0RS` reader - USIC0 Reset Status"]
+pub type USIC0RS_R = crate::BitReader<USIC0RS_A>;
 #[doc = "USIC0 Reset Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USIC0RS_A {
     #[doc = "0: Reset de-asserted"]
     VALUE1 = 0,
@@ -257,13 +209,8 @@ impl From<USIC0RS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `USIC0RS` reader - USIC0 Reset Status"]
-pub struct USIC0RS_R(crate::FieldReader<bool, USIC0RS_A>);
 impl USIC0RS_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        USIC0RS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> USIC0RS_A {
         match self.bits {
@@ -274,23 +221,18 @@ impl USIC0RS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == USIC0RS_A::VALUE1
+        *self == USIC0RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == USIC0RS_A::VALUE2
+        *self == USIC0RS_A::VALUE2
     }
 }
-impl core::ops::Deref for USIC0RS_R {
-    type Target = crate::FieldReader<bool, USIC0RS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `ERU1RS` reader - ERU1 Reset Status"]
+pub type ERU1RS_R = crate::BitReader<ERU1RS_A>;
 #[doc = "ERU1 Reset Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ERU1RS_A {
     #[doc = "0: Reset de-asserted"]
     VALUE1 = 0,
@@ -303,13 +245,8 @@ impl From<ERU1RS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `ERU1RS` reader - ERU1 Reset Status"]
-pub struct ERU1RS_R(crate::FieldReader<bool, ERU1RS_A>);
 impl ERU1RS_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        ERU1RS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> ERU1RS_A {
         match self.bits {
@@ -320,23 +257,18 @@ impl ERU1RS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == ERU1RS_A::VALUE1
+        *self == ERU1RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == ERU1RS_A::VALUE2
+        *self == ERU1RS_A::VALUE2
     }
 }
-impl core::ops::Deref for ERU1RS_R {
-    type Target = crate::FieldReader<bool, ERU1RS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `HRPWM0RS` reader - HRPWM0 Reset Status"]
+pub type HRPWM0RS_R = crate::BitReader<HRPWM0RS_A>;
 #[doc = "HRPWM0 Reset Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum HRPWM0RS_A {
     #[doc = "0: Reset de-asserted"]
     VALUE1 = 0,
@@ -349,13 +281,8 @@ impl From<HRPWM0RS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `HRPWM0RS` reader - HRPWM0 Reset Status"]
-pub struct HRPWM0RS_R(crate::FieldReader<bool, HRPWM0RS_A>);
 impl HRPWM0RS_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        HRPWM0RS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> HRPWM0RS_A {
         match self.bits {
@@ -366,61 +293,54 @@ impl HRPWM0RS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == HRPWM0RS_A::VALUE1
+        *self == HRPWM0RS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == HRPWM0RS_A::VALUE2
-    }
-}
-impl core::ops::Deref for HRPWM0RS_R {
-    type Target = crate::FieldReader<bool, HRPWM0RS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == HRPWM0RS_A::VALUE2
     }
 }
 impl R {
     #[doc = "Bit 0 - VADC Reset Status"]
     #[inline(always)]
     pub fn vadcrs(&self) -> VADCRS_R {
-        VADCRS_R::new((self.bits & 0x01) != 0)
+        VADCRS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - CCU40 Reset Status"]
     #[inline(always)]
     pub fn ccu40rs(&self) -> CCU40RS_R {
-        CCU40RS_R::new(((self.bits >> 2) & 0x01) != 0)
+        CCU40RS_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - CCU41 Reset Status"]
     #[inline(always)]
     pub fn ccu41rs(&self) -> CCU41RS_R {
-        CCU41RS_R::new(((self.bits >> 3) & 0x01) != 0)
+        CCU41RS_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 7 - CCU80 Reset Status"]
     #[inline(always)]
     pub fn ccu80rs(&self) -> CCU80RS_R {
-        CCU80RS_R::new(((self.bits >> 7) & 0x01) != 0)
+        CCU80RS_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 9 - POSIF0 Reset Status"]
     #[inline(always)]
     pub fn posif0rs(&self) -> POSIF0RS_R {
-        POSIF0RS_R::new(((self.bits >> 9) & 0x01) != 0)
+        POSIF0RS_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 11 - USIC0 Reset Status"]
     #[inline(always)]
     pub fn usic0rs(&self) -> USIC0RS_R {
-        USIC0RS_R::new(((self.bits >> 11) & 0x01) != 0)
+        USIC0RS_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 16 - ERU1 Reset Status"]
     #[inline(always)]
     pub fn eru1rs(&self) -> ERU1RS_R {
-        ERU1RS_R::new(((self.bits >> 16) & 0x01) != 0)
+        ERU1RS_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 23 - HRPWM0 Reset Status"]
     #[inline(always)]
     pub fn hrpwm0rs(&self) -> HRPWM0RS_R {
-        HRPWM0RS_R::new(((self.bits >> 23) & 0x01) != 0)
+        HRPWM0RS_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
 #[doc = "RCU Peripheral 0 Reset Status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [prstat0](index.html) module"]
@@ -434,8 +354,5 @@ impl crate::Readable for PRSTAT0_SPEC {
 }
 #[doc = "`reset()` method sets PRSTAT0 to value 0x0081_0a8d"]
 impl crate::Resettable for PRSTAT0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0081_0a8d
-    }
+    const RESET_VALUE: Self::Ux = 0x0081_0a8d;
 }

@@ -20,7 +20,7 @@ impl From<crate::W<MIRRALLREQ_SPEC>> for W {
     }
 }
 #[doc = "Mirror All Execution Request\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum REQ_AW {
     #[doc = "0: No action"]
     VALUE1 = 0,
@@ -34,15 +34,8 @@ impl From<REQ_AW> for bool {
     }
 }
 #[doc = "Field `REQ` writer - Mirror All Execution Request"]
-pub struct REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REQ_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REQ_AW) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, MIRRALLREQ_SPEC, REQ_AW, O>;
+impl<'a, const O: u8> REQ_W<'a, O> {
     #[doc = "No action"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -53,28 +46,13 @@ impl<'a> REQ_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(REQ_AW::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
 }
 impl W {
     #[doc = "Bit 0 - Mirror All Execution Request"]
     #[inline(always)]
-    pub fn req(&mut self) -> REQ_W {
-        REQ_W { w: self }
+    #[must_use]
+    pub fn req(&mut self) -> REQ_W<0> {
+        REQ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -91,11 +69,10 @@ impl crate::RegisterSpec for MIRRALLREQ_SPEC {
 #[doc = "`write(|w| ..)` method takes [mirrallreq::W](W) writer structure"]
 impl crate::Writable for MIRRALLREQ_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MIRRALLREQ to value 0"]
 impl crate::Resettable for MIRRALLREQ_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

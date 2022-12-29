@@ -35,31 +35,9 @@ impl From<crate::W<BLV_SPEC>> for W {
     }
 }
 #[doc = "Field `BLV` reader - Blanking value"]
-pub struct BLV_R(crate::FieldReader<u8, u8>);
-impl BLV_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        BLV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BLV_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BLV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BLV` writer - Blanking value"]
-pub struct BLV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BLV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type BLV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BLV_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Blanking value"]
     #[inline(always)]
@@ -70,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Blanking value"]
     #[inline(always)]
-    pub fn blv(&mut self) -> BLV_W {
-        BLV_W { w: self }
+    #[must_use]
+    pub fn blv(&mut self) -> BLV_W<0> {
+        BLV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -92,11 +71,10 @@ impl crate::Readable for BLV_SPEC {
 #[doc = "`write(|w| ..)` method takes [blv::W](W) writer structure"]
 impl crate::Writable for BLV_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLV to value 0"]
 impl crate::Resettable for BLV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

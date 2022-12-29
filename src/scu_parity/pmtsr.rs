@@ -34,8 +34,10 @@ impl From<crate::W<PMTSR_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `MTENPS` reader - Test Enable Control for PSRAM"]
+pub type MTENPS_R = crate::BitReader<MTENPS_A>;
 #[doc = "Test Enable Control for PSRAM\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MTENPS_A {
     #[doc = "0: Standard operation"]
     VALUE1 = 0,
@@ -48,13 +50,8 @@ impl From<MTENPS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `MTENPS` reader - Test Enable Control for PSRAM"]
-pub struct MTENPS_R(crate::FieldReader<bool, MTENPS_A>);
 impl MTENPS_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        MTENPS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> MTENPS_A {
         match self.bits {
@@ -65,31 +62,17 @@ impl MTENPS_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == MTENPS_A::VALUE1
+        *self == MTENPS_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == MTENPS_A::VALUE2
-    }
-}
-impl core::ops::Deref for MTENPS_R {
-    type Target = crate::FieldReader<bool, MTENPS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == MTENPS_A::VALUE2
     }
 }
 #[doc = "Field `MTENPS` writer - Test Enable Control for PSRAM"]
-pub struct MTENPS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MTENPS_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MTENPS_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type MTENPS_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMTSR_SPEC, MTENPS_A, O>;
+impl<'a, const O: u8> MTENPS_W<'a, O> {
     #[doc = "Standard operation"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -100,25 +83,11 @@ impl<'a> MTENPS_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(MTENPS_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
 }
+#[doc = "Field `MTENDS1` reader - Test Enable Control for DSRAM1"]
+pub type MTENDS1_R = crate::BitReader<MTENDS1_A>;
 #[doc = "Test Enable Control for DSRAM1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MTENDS1_A {
     #[doc = "0: Standard operation"]
     VALUE1 = 0,
@@ -131,13 +100,8 @@ impl From<MTENDS1_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `MTENDS1` reader - Test Enable Control for DSRAM1"]
-pub struct MTENDS1_R(crate::FieldReader<bool, MTENDS1_A>);
 impl MTENDS1_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        MTENDS1_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> MTENDS1_A {
         match self.bits {
@@ -148,31 +112,17 @@ impl MTENDS1_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == MTENDS1_A::VALUE1
+        *self == MTENDS1_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == MTENDS1_A::VALUE2
-    }
-}
-impl core::ops::Deref for MTENDS1_R {
-    type Target = crate::FieldReader<bool, MTENDS1_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == MTENDS1_A::VALUE2
     }
 }
 #[doc = "Field `MTENDS1` writer - Test Enable Control for DSRAM1"]
-pub struct MTENDS1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MTENDS1_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MTENDS1_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type MTENDS1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMTSR_SPEC, MTENDS1_A, O>;
+impl<'a, const O: u8> MTENDS1_W<'a, O> {
     #[doc = "Standard operation"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -183,25 +133,11 @@ impl<'a> MTENDS1_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(MTENDS1_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
 }
+#[doc = "Field `MTEU0` reader - Test Enable Control for USIC0 Memory"]
+pub type MTEU0_R = crate::BitReader<MTEU0_A>;
 #[doc = "Test Enable Control for USIC0 Memory\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MTEU0_A {
     #[doc = "0: Standard operation"]
     VALUE1 = 0,
@@ -214,13 +150,8 @@ impl From<MTEU0_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `MTEU0` reader - Test Enable Control for USIC0 Memory"]
-pub struct MTEU0_R(crate::FieldReader<bool, MTEU0_A>);
 impl MTEU0_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        MTEU0_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> MTEU0_A {
         match self.bits {
@@ -231,31 +162,17 @@ impl MTEU0_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == MTEU0_A::VALUE1
+        *self == MTEU0_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == MTEU0_A::VALUE2
-    }
-}
-impl core::ops::Deref for MTEU0_R {
-    type Target = crate::FieldReader<bool, MTEU0_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == MTEU0_A::VALUE2
     }
 }
 #[doc = "Field `MTEU0` writer - Test Enable Control for USIC0 Memory"]
-pub struct MTEU0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MTEU0_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MTEU0_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type MTEU0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMTSR_SPEC, MTEU0_A, O>;
+impl<'a, const O: u8> MTEU0_W<'a, O> {
     #[doc = "Standard operation"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -266,25 +183,11 @@ impl<'a> MTEU0_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(MTEU0_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
 }
+#[doc = "Field `MTEU1` reader - Test Enable Control for USIC1 Memory"]
+pub type MTEU1_R = crate::BitReader<MTEU1_A>;
 #[doc = "Test Enable Control for USIC1 Memory\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MTEU1_A {
     #[doc = "0: Standard operation"]
     VALUE1 = 0,
@@ -297,13 +200,8 @@ impl From<MTEU1_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `MTEU1` reader - Test Enable Control for USIC1 Memory"]
-pub struct MTEU1_R(crate::FieldReader<bool, MTEU1_A>);
 impl MTEU1_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        MTEU1_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> MTEU1_A {
         match self.bits {
@@ -314,31 +212,17 @@ impl MTEU1_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == MTEU1_A::VALUE1
+        *self == MTEU1_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == MTEU1_A::VALUE2
-    }
-}
-impl core::ops::Deref for MTEU1_R {
-    type Target = crate::FieldReader<bool, MTEU1_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == MTEU1_A::VALUE2
     }
 }
 #[doc = "Field `MTEU1` writer - Test Enable Control for USIC1 Memory"]
-pub struct MTEU1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MTEU1_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MTEU1_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type MTEU1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMTSR_SPEC, MTEU1_A, O>;
+impl<'a, const O: u8> MTEU1_W<'a, O> {
     #[doc = "Standard operation"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -349,25 +233,11 @@ impl<'a> MTEU1_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(MTEU1_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
-        self.w
-    }
 }
+#[doc = "Field `MTEMC` reader - Test Enable Control for MultiCAN Memory"]
+pub type MTEMC_R = crate::BitReader<MTEMC_A>;
 #[doc = "Test Enable Control for MultiCAN Memory\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MTEMC_A {
     #[doc = "0: Standard operation"]
     VALUE1 = 0,
@@ -380,13 +250,8 @@ impl From<MTEMC_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `MTEMC` reader - Test Enable Control for MultiCAN Memory"]
-pub struct MTEMC_R(crate::FieldReader<bool, MTEMC_A>);
 impl MTEMC_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        MTEMC_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> MTEMC_A {
         match self.bits {
@@ -397,31 +262,17 @@ impl MTEMC_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == MTEMC_A::VALUE1
+        *self == MTEMC_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == MTEMC_A::VALUE2
-    }
-}
-impl core::ops::Deref for MTEMC_R {
-    type Target = crate::FieldReader<bool, MTEMC_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == MTEMC_A::VALUE2
     }
 }
 #[doc = "Field `MTEMC` writer - Test Enable Control for MultiCAN Memory"]
-pub struct MTEMC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MTEMC_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MTEMC_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type MTEMC_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMTSR_SPEC, MTEMC_A, O>;
+impl<'a, const O: u8> MTEMC_W<'a, O> {
     #[doc = "Standard operation"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -432,25 +283,11 @@ impl<'a> MTEMC_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(MTEMC_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
-        self.w
-    }
 }
+#[doc = "Field `MTEPPRF` reader - Test Enable Control for PMU Prefetch Memory"]
+pub type MTEPPRF_R = crate::BitReader<MTEPPRF_A>;
 #[doc = "Test Enable Control for PMU Prefetch Memory\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MTEPPRF_A {
     #[doc = "0: Standard operation"]
     VALUE1 = 0,
@@ -463,13 +300,8 @@ impl From<MTEPPRF_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `MTEPPRF` reader - Test Enable Control for PMU Prefetch Memory"]
-pub struct MTEPPRF_R(crate::FieldReader<bool, MTEPPRF_A>);
 impl MTEPPRF_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        MTEPPRF_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> MTEPPRF_A {
         match self.bits {
@@ -480,31 +312,17 @@ impl MTEPPRF_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == MTEPPRF_A::VALUE1
+        *self == MTEPPRF_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == MTEPPRF_A::VALUE2
-    }
-}
-impl core::ops::Deref for MTEPPRF_R {
-    type Target = crate::FieldReader<bool, MTEPPRF_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == MTEPPRF_A::VALUE2
     }
 }
 #[doc = "Field `MTEPPRF` writer - Test Enable Control for PMU Prefetch Memory"]
-pub struct MTEPPRF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MTEPPRF_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MTEPPRF_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type MTEPPRF_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMTSR_SPEC, MTEPPRF_A, O>;
+impl<'a, const O: u8> MTEPPRF_W<'a, O> {
     #[doc = "Standard operation"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -515,25 +333,11 @@ impl<'a> MTEPPRF_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(MTEPPRF_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
-        self.w
-    }
 }
+#[doc = "Field `MTUSB` reader - Test Enable Control for USB Memory"]
+pub type MTUSB_R = crate::BitReader<MTUSB_A>;
 #[doc = "Test Enable Control for USB Memory\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MTUSB_A {
     #[doc = "0: Standard operation"]
     VALUE1 = 0,
@@ -546,13 +350,8 @@ impl From<MTUSB_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `MTUSB` reader - Test Enable Control for USB Memory"]
-pub struct MTUSB_R(crate::FieldReader<bool, MTUSB_A>);
 impl MTUSB_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        MTUSB_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> MTUSB_A {
         match self.bits {
@@ -563,31 +362,17 @@ impl MTUSB_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == MTUSB_A::VALUE1
+        *self == MTUSB_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == MTUSB_A::VALUE2
-    }
-}
-impl core::ops::Deref for MTUSB_R {
-    type Target = crate::FieldReader<bool, MTUSB_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == MTUSB_A::VALUE2
     }
 }
 #[doc = "Field `MTUSB` writer - Test Enable Control for USB Memory"]
-pub struct MTUSB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MTUSB_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MTUSB_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type MTUSB_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMTSR_SPEC, MTUSB_A, O>;
+impl<'a, const O: u8> MTUSB_W<'a, O> {
     #[doc = "Standard operation"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -598,95 +383,86 @@ impl<'a> MTUSB_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(MTUSB_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bit 0 - Test Enable Control for PSRAM"]
     #[inline(always)]
     pub fn mtenps(&self) -> MTENPS_R {
-        MTENPS_R::new((self.bits & 0x01) != 0)
+        MTENPS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Test Enable Control for DSRAM1"]
     #[inline(always)]
     pub fn mtends1(&self) -> MTENDS1_R {
-        MTENDS1_R::new(((self.bits >> 1) & 0x01) != 0)
+        MTENDS1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 8 - Test Enable Control for USIC0 Memory"]
     #[inline(always)]
     pub fn mteu0(&self) -> MTEU0_R {
-        MTEU0_R::new(((self.bits >> 8) & 0x01) != 0)
+        MTEU0_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Test Enable Control for USIC1 Memory"]
     #[inline(always)]
     pub fn mteu1(&self) -> MTEU1_R {
-        MTEU1_R::new(((self.bits >> 9) & 0x01) != 0)
+        MTEU1_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 12 - Test Enable Control for MultiCAN Memory"]
     #[inline(always)]
     pub fn mtemc(&self) -> MTEMC_R {
-        MTEMC_R::new(((self.bits >> 12) & 0x01) != 0)
+        MTEMC_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Test Enable Control for PMU Prefetch Memory"]
     #[inline(always)]
     pub fn mtepprf(&self) -> MTEPPRF_R {
-        MTEPPRF_R::new(((self.bits >> 13) & 0x01) != 0)
+        MTEPPRF_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 16 - Test Enable Control for USB Memory"]
     #[inline(always)]
     pub fn mtusb(&self) -> MTUSB_R {
-        MTUSB_R::new(((self.bits >> 16) & 0x01) != 0)
+        MTUSB_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Test Enable Control for PSRAM"]
     #[inline(always)]
-    pub fn mtenps(&mut self) -> MTENPS_W {
-        MTENPS_W { w: self }
+    #[must_use]
+    pub fn mtenps(&mut self) -> MTENPS_W<0> {
+        MTENPS_W::new(self)
     }
     #[doc = "Bit 1 - Test Enable Control for DSRAM1"]
     #[inline(always)]
-    pub fn mtends1(&mut self) -> MTENDS1_W {
-        MTENDS1_W { w: self }
+    #[must_use]
+    pub fn mtends1(&mut self) -> MTENDS1_W<1> {
+        MTENDS1_W::new(self)
     }
     #[doc = "Bit 8 - Test Enable Control for USIC0 Memory"]
     #[inline(always)]
-    pub fn mteu0(&mut self) -> MTEU0_W {
-        MTEU0_W { w: self }
+    #[must_use]
+    pub fn mteu0(&mut self) -> MTEU0_W<8> {
+        MTEU0_W::new(self)
     }
     #[doc = "Bit 9 - Test Enable Control for USIC1 Memory"]
     #[inline(always)]
-    pub fn mteu1(&mut self) -> MTEU1_W {
-        MTEU1_W { w: self }
+    #[must_use]
+    pub fn mteu1(&mut self) -> MTEU1_W<9> {
+        MTEU1_W::new(self)
     }
     #[doc = "Bit 12 - Test Enable Control for MultiCAN Memory"]
     #[inline(always)]
-    pub fn mtemc(&mut self) -> MTEMC_W {
-        MTEMC_W { w: self }
+    #[must_use]
+    pub fn mtemc(&mut self) -> MTEMC_W<12> {
+        MTEMC_W::new(self)
     }
     #[doc = "Bit 13 - Test Enable Control for PMU Prefetch Memory"]
     #[inline(always)]
-    pub fn mtepprf(&mut self) -> MTEPPRF_W {
-        MTEPPRF_W { w: self }
+    #[must_use]
+    pub fn mtepprf(&mut self) -> MTEPPRF_W<13> {
+        MTEPPRF_W::new(self)
     }
     #[doc = "Bit 16 - Test Enable Control for USB Memory"]
     #[inline(always)]
-    pub fn mtusb(&mut self) -> MTUSB_W {
-        MTUSB_W { w: self }
+    #[must_use]
+    pub fn mtusb(&mut self) -> MTUSB_W<16> {
+        MTUSB_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -707,11 +483,10 @@ impl crate::Readable for PMTSR_SPEC {
 #[doc = "`write(|w| ..)` method takes [pmtsr::W](W) writer structure"]
 impl crate::Writable for PMTSR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PMTSR to value 0"]
 impl crate::Resettable for PMTSR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -34,8 +34,10 @@ impl From<crate::W<CCUCON_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `GSC40` reader - Global Start Control CCU40"]
+pub type GSC40_R = crate::BitReader<GSC40_A>;
 #[doc = "Global Start Control CCU40\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GSC40_A {
     #[doc = "0: Disable"]
     VALUE1 = 0,
@@ -48,13 +50,8 @@ impl From<GSC40_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `GSC40` reader - Global Start Control CCU40"]
-pub struct GSC40_R(crate::FieldReader<bool, GSC40_A>);
 impl GSC40_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        GSC40_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> GSC40_A {
         match self.bits {
@@ -65,31 +62,17 @@ impl GSC40_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == GSC40_A::VALUE1
+        *self == GSC40_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == GSC40_A::VALUE2
-    }
-}
-impl core::ops::Deref for GSC40_R {
-    type Target = crate::FieldReader<bool, GSC40_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GSC40_A::VALUE2
     }
 }
 #[doc = "Field `GSC40` writer - Global Start Control CCU40"]
-pub struct GSC40_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GSC40_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: GSC40_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type GSC40_W<'a, const O: u8> = crate::BitWriter<'a, u32, CCUCON_SPEC, GSC40_A, O>;
+impl<'a, const O: u8> GSC40_W<'a, O> {
     #[doc = "Disable"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -100,25 +83,11 @@ impl<'a> GSC40_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(GSC40_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
 }
+#[doc = "Field `GSC41` reader - Global Start Control CCU41"]
+pub type GSC41_R = crate::BitReader<GSC41_A>;
 #[doc = "Global Start Control CCU41\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GSC41_A {
     #[doc = "0: Disable"]
     VALUE1 = 0,
@@ -131,13 +100,8 @@ impl From<GSC41_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `GSC41` reader - Global Start Control CCU41"]
-pub struct GSC41_R(crate::FieldReader<bool, GSC41_A>);
 impl GSC41_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        GSC41_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> GSC41_A {
         match self.bits {
@@ -148,31 +112,17 @@ impl GSC41_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == GSC41_A::VALUE1
+        *self == GSC41_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == GSC41_A::VALUE2
-    }
-}
-impl core::ops::Deref for GSC41_R {
-    type Target = crate::FieldReader<bool, GSC41_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GSC41_A::VALUE2
     }
 }
 #[doc = "Field `GSC41` writer - Global Start Control CCU41"]
-pub struct GSC41_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GSC41_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: GSC41_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type GSC41_W<'a, const O: u8> = crate::BitWriter<'a, u32, CCUCON_SPEC, GSC41_A, O>;
+impl<'a, const O: u8> GSC41_W<'a, O> {
     #[doc = "Disable"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -183,25 +133,11 @@ impl<'a> GSC41_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(GSC41_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
 }
+#[doc = "Field `GSC80` reader - Global Start Control CCU80"]
+pub type GSC80_R = crate::BitReader<GSC80_A>;
 #[doc = "Global Start Control CCU80\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GSC80_A {
     #[doc = "0: Disable"]
     VALUE1 = 0,
@@ -214,13 +150,8 @@ impl From<GSC80_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `GSC80` reader - Global Start Control CCU80"]
-pub struct GSC80_R(crate::FieldReader<bool, GSC80_A>);
 impl GSC80_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        GSC80_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> GSC80_A {
         match self.bits {
@@ -231,31 +162,17 @@ impl GSC80_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == GSC80_A::VALUE1
+        *self == GSC80_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == GSC80_A::VALUE2
-    }
-}
-impl core::ops::Deref for GSC80_R {
-    type Target = crate::FieldReader<bool, GSC80_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GSC80_A::VALUE2
     }
 }
 #[doc = "Field `GSC80` writer - Global Start Control CCU80"]
-pub struct GSC80_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GSC80_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: GSC80_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type GSC80_W<'a, const O: u8> = crate::BitWriter<'a, u32, CCUCON_SPEC, GSC80_A, O>;
+impl<'a, const O: u8> GSC80_W<'a, O> {
     #[doc = "Disable"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -266,25 +183,11 @@ impl<'a> GSC80_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(GSC80_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
 }
+#[doc = "Field `GSHR0` reader - Global Start Control HRPWM0"]
+pub type GSHR0_R = crate::BitReader<GSHR0_A>;
 #[doc = "Global Start Control HRPWM0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GSHR0_A {
     #[doc = "0: Disable"]
     VALUE1 = 0,
@@ -297,13 +200,8 @@ impl From<GSHR0_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `GSHR0` reader - Global Start Control HRPWM0"]
-pub struct GSHR0_R(crate::FieldReader<bool, GSHR0_A>);
 impl GSHR0_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        GSHR0_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> GSHR0_A {
         match self.bits {
@@ -314,31 +212,17 @@ impl GSHR0_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == GSHR0_A::VALUE1
+        *self == GSHR0_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == GSHR0_A::VALUE2
-    }
-}
-impl core::ops::Deref for GSHR0_R {
-    type Target = crate::FieldReader<bool, GSHR0_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GSHR0_A::VALUE2
     }
 }
 #[doc = "Field `GSHR0` writer - Global Start Control HRPWM0"]
-pub struct GSHR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GSHR0_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: GSHR0_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type GSHR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CCUCON_SPEC, GSHR0_A, O>;
+impl<'a, const O: u8> GSHR0_W<'a, O> {
     #[doc = "Disable"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -349,65 +233,53 @@ impl<'a> GSHR0_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(GSHR0_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bit 0 - Global Start Control CCU40"]
     #[inline(always)]
     pub fn gsc40(&self) -> GSC40_R {
-        GSC40_R::new((self.bits & 0x01) != 0)
+        GSC40_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Global Start Control CCU41"]
     #[inline(always)]
     pub fn gsc41(&self) -> GSC41_R {
-        GSC41_R::new(((self.bits >> 1) & 0x01) != 0)
+        GSC41_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 8 - Global Start Control CCU80"]
     #[inline(always)]
     pub fn gsc80(&self) -> GSC80_R {
-        GSC80_R::new(((self.bits >> 8) & 0x01) != 0)
+        GSC80_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 24 - Global Start Control HRPWM0"]
     #[inline(always)]
     pub fn gshr0(&self) -> GSHR0_R {
-        GSHR0_R::new(((self.bits >> 24) & 0x01) != 0)
+        GSHR0_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Global Start Control CCU40"]
     #[inline(always)]
-    pub fn gsc40(&mut self) -> GSC40_W {
-        GSC40_W { w: self }
+    #[must_use]
+    pub fn gsc40(&mut self) -> GSC40_W<0> {
+        GSC40_W::new(self)
     }
     #[doc = "Bit 1 - Global Start Control CCU41"]
     #[inline(always)]
-    pub fn gsc41(&mut self) -> GSC41_W {
-        GSC41_W { w: self }
+    #[must_use]
+    pub fn gsc41(&mut self) -> GSC41_W<1> {
+        GSC41_W::new(self)
     }
     #[doc = "Bit 8 - Global Start Control CCU80"]
     #[inline(always)]
-    pub fn gsc80(&mut self) -> GSC80_W {
-        GSC80_W { w: self }
+    #[must_use]
+    pub fn gsc80(&mut self) -> GSC80_W<8> {
+        GSC80_W::new(self)
     }
     #[doc = "Bit 24 - Global Start Control HRPWM0"]
     #[inline(always)]
-    pub fn gshr0(&mut self) -> GSHR0_W {
-        GSHR0_W { w: self }
+    #[must_use]
+    pub fn gshr0(&mut self) -> GSHR0_W<24> {
+        GSHR0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -428,11 +300,10 @@ impl crate::Readable for CCUCON_SPEC {
 #[doc = "`write(|w| ..)` method takes [ccucon::W](W) writer structure"]
 impl crate::Writable for CCUCON_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CCUCON to value 0"]
 impl crate::Resettable for CCUCON_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

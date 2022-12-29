@@ -35,57 +35,13 @@ impl From<crate::W<DTEMPLIM_SPEC>> for W {
     }
 }
 #[doc = "Field `LOWER` reader - Lower Limit"]
-pub struct LOWER_R(crate::FieldReader<u16, u16>);
-impl LOWER_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        LOWER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOWER_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LOWER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LOWER` writer - Lower Limit"]
-pub struct LOWER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LOWER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type LOWER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DTEMPLIM_SPEC, u16, u16, 10, O>;
 #[doc = "Field `UPPER` reader - Upper Limit"]
-pub struct UPPER_R(crate::FieldReader<u16, u16>);
-impl UPPER_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        UPPER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UPPER_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UPPER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `UPPER` writer - Upper Limit"]
-pub struct UPPER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UPPER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 16)) | ((value as u32 & 0x03ff) << 16);
-        self.w
-    }
-}
+pub type UPPER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DTEMPLIM_SPEC, u16, u16, 10, O>;
 impl R {
     #[doc = "Bits 0:9 - Lower Limit"]
     #[inline(always)]
@@ -101,13 +57,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Lower Limit"]
     #[inline(always)]
-    pub fn lower(&mut self) -> LOWER_W {
-        LOWER_W { w: self }
+    #[must_use]
+    pub fn lower(&mut self) -> LOWER_W<0> {
+        LOWER_W::new(self)
     }
     #[doc = "Bits 16:25 - Upper Limit"]
     #[inline(always)]
-    pub fn upper(&mut self) -> UPPER_W {
-        UPPER_W { w: self }
+    #[must_use]
+    pub fn upper(&mut self) -> UPPER_W<16> {
+        UPPER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -128,11 +86,10 @@ impl crate::Readable for DTEMPLIM_SPEC {
 #[doc = "`write(|w| ..)` method takes [dtemplim::W](W) writer structure"]
 impl crate::Writable for DTEMPLIM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DTEMPLIM to value 0"]
 impl crate::Resettable for DTEMPLIM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

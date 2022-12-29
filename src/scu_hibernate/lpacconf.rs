@@ -34,8 +34,10 @@ impl From<crate::W<LPACCONF_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `CMPEN` reader - Compare Enable for Input Selection"]
+pub type CMPEN_R = crate::FieldReader<u8, CMPEN_A>;
 #[doc = "Compare Enable for Input Selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CMPEN_A {
     #[doc = "0: Comparator permanently in power down"]
@@ -53,13 +55,8 @@ impl From<CMPEN_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `CMPEN` reader - Compare Enable for Input Selection"]
-pub struct CMPEN_R(crate::FieldReader<u8, CMPEN_A>);
 impl CMPEN_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CMPEN_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<CMPEN_A> {
         match self.bits {
@@ -73,41 +70,27 @@ impl CMPEN_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == CMPEN_A::VALUE1
+        *self == CMPEN_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == CMPEN_A::VALUE2
+        *self == CMPEN_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        **self == CMPEN_A::VALUE3
+        *self == CMPEN_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        **self == CMPEN_A::VALUE4
-    }
-}
-impl core::ops::Deref for CMPEN_R {
-    type Target = crate::FieldReader<u8, CMPEN_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CMPEN_A::VALUE4
     }
 }
 #[doc = "Field `CMPEN` writer - Compare Enable for Input Selection"]
-pub struct CMPEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CMPEN_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CMPEN_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type CMPEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LPACCONF_SPEC, u8, CMPEN_A, 3, O>;
+impl<'a, const O: u8> CMPEN_W<'a, O> {
     #[doc = "Comparator permanently in power down"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -128,15 +111,11 @@ impl<'a> CMPEN_W<'a> {
     pub fn value4(self) -> &'a mut W {
         self.variant(CMPEN_A::VALUE4)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
-        self.w
-    }
 }
+#[doc = "Field `TRIGSEL` reader - Analog Compare Trigger Select"]
+pub type TRIGSEL_R = crate::FieldReader<u8, TRIGSEL_A>;
 #[doc = "Analog Compare Trigger Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TRIGSEL_A {
     #[doc = "0: Sub-second interval counter"]
@@ -160,13 +139,8 @@ impl From<TRIGSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `TRIGSEL` reader - Analog Compare Trigger Select"]
-pub struct TRIGSEL_R(crate::FieldReader<u8, TRIGSEL_A>);
 impl TRIGSEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TRIGSEL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<TRIGSEL_A> {
         match self.bits {
@@ -183,56 +157,42 @@ impl TRIGSEL_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == TRIGSEL_A::VALUE1
+        *self == TRIGSEL_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == TRIGSEL_A::VALUE2
+        *self == TRIGSEL_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        **self == TRIGSEL_A::VALUE3
+        *self == TRIGSEL_A::VALUE3
     }
     #[doc = "Checks if the value of the field is `VALUE4`"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        **self == TRIGSEL_A::VALUE4
+        *self == TRIGSEL_A::VALUE4
     }
     #[doc = "Checks if the value of the field is `VALUE5`"]
     #[inline(always)]
     pub fn is_value5(&self) -> bool {
-        **self == TRIGSEL_A::VALUE5
+        *self == TRIGSEL_A::VALUE5
     }
     #[doc = "Checks if the value of the field is `VALUE6`"]
     #[inline(always)]
     pub fn is_value6(&self) -> bool {
-        **self == TRIGSEL_A::VALUE6
+        *self == TRIGSEL_A::VALUE6
     }
     #[doc = "Checks if the value of the field is `VALUE7`"]
     #[inline(always)]
     pub fn is_value7(&self) -> bool {
-        **self == TRIGSEL_A::VALUE7
-    }
-}
-impl core::ops::Deref for TRIGSEL_R {
-    type Target = crate::FieldReader<u8, TRIGSEL_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TRIGSEL_A::VALUE7
     }
 }
 #[doc = "Field `TRIGSEL` writer - Analog Compare Trigger Select"]
-pub struct TRIGSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIGSEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TRIGSEL_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type TRIGSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LPACCONF_SPEC, u8, TRIGSEL_A, 3, O>;
+impl<'a, const O: u8> TRIGSEL_W<'a, O> {
     #[doc = "Sub-second interval counter"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -268,116 +228,34 @@ impl<'a> TRIGSEL_W<'a> {
     pub fn value7(self) -> &'a mut W {
         self.variant(TRIGSEL_A::VALUE7)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 4)) | ((value as u32 & 0x07) << 4);
-        self.w
-    }
 }
 #[doc = "Field `CONVDEL` reader - Conversion Delay"]
-pub struct CONVDEL_R(crate::FieldReader<bool, bool>);
-impl CONVDEL_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CONVDEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONVDEL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CONVDEL_R = crate::BitReader<bool>;
 #[doc = "Field `CONVDEL` writer - Conversion Delay"]
-pub struct CONVDEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONVDEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
-        self.w
-    }
-}
+pub type CONVDEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPACCONF_SPEC, bool, O>;
 #[doc = "Field `INTERVCNT` reader - Sub-second Interval Counter"]
-pub struct INTERVCNT_R(crate::FieldReader<u16, u16>);
-impl INTERVCNT_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        INTERVCNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERVCNT_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERVCNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `INTERVCNT` writer - Sub-second Interval Counter"]
-pub struct INTERVCNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERVCNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 16)) | ((value as u32 & 0x0fff) << 16);
-        self.w
-    }
-}
+pub type INTERVCNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LPACCONF_SPEC, u16, u16, 12, O>;
 #[doc = "Field `SETTLECNT` reader - LPAC Settle Time Counter"]
-pub struct SETTLECNT_R(crate::FieldReader<u8, u8>);
-impl SETTLECNT_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SETTLECNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SETTLECNT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SETTLECNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SETTLECNT` writer - LPAC Settle Time Counter"]
-pub struct SETTLECNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SETTLECNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | ((value as u32 & 0x0f) << 28);
-        self.w
-    }
-}
+pub type SETTLECNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LPACCONF_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:2 - Compare Enable for Input Selection"]
     #[inline(always)]
     pub fn cmpen(&self) -> CMPEN_R {
-        CMPEN_R::new((self.bits & 0x07) as u8)
+        CMPEN_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 4:6 - Analog Compare Trigger Select"]
     #[inline(always)]
     pub fn trigsel(&self) -> TRIGSEL_R {
-        TRIGSEL_R::new(((self.bits >> 4) & 0x07) as u8)
+        TRIGSEL_R::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Bit 12 - Conversion Delay"]
     #[inline(always)]
     pub fn convdel(&self) -> CONVDEL_R {
-        CONVDEL_R::new(((self.bits >> 12) & 0x01) != 0)
+        CONVDEL_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 16:27 - Sub-second Interval Counter"]
     #[inline(always)]
@@ -393,28 +271,33 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Compare Enable for Input Selection"]
     #[inline(always)]
-    pub fn cmpen(&mut self) -> CMPEN_W {
-        CMPEN_W { w: self }
+    #[must_use]
+    pub fn cmpen(&mut self) -> CMPEN_W<0> {
+        CMPEN_W::new(self)
     }
     #[doc = "Bits 4:6 - Analog Compare Trigger Select"]
     #[inline(always)]
-    pub fn trigsel(&mut self) -> TRIGSEL_W {
-        TRIGSEL_W { w: self }
+    #[must_use]
+    pub fn trigsel(&mut self) -> TRIGSEL_W<4> {
+        TRIGSEL_W::new(self)
     }
     #[doc = "Bit 12 - Conversion Delay"]
     #[inline(always)]
-    pub fn convdel(&mut self) -> CONVDEL_W {
-        CONVDEL_W { w: self }
+    #[must_use]
+    pub fn convdel(&mut self) -> CONVDEL_W<12> {
+        CONVDEL_W::new(self)
     }
     #[doc = "Bits 16:27 - Sub-second Interval Counter"]
     #[inline(always)]
-    pub fn intervcnt(&mut self) -> INTERVCNT_W {
-        INTERVCNT_W { w: self }
+    #[must_use]
+    pub fn intervcnt(&mut self) -> INTERVCNT_W<16> {
+        INTERVCNT_W::new(self)
     }
     #[doc = "Bits 28:31 - LPAC Settle Time Counter"]
     #[inline(always)]
-    pub fn settlecnt(&mut self) -> SETTLECNT_W {
-        SETTLECNT_W { w: self }
+    #[must_use]
+    pub fn settlecnt(&mut self) -> SETTLECNT_W<28> {
+        SETTLECNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -435,11 +318,10 @@ impl crate::Readable for LPACCONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [lpacconf::W](W) writer structure"]
 impl crate::Writable for LPACCONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LPACCONF to value 0x7000_0000"]
 impl crate::Resettable for LPACCONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x7000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x7000_0000;
 }

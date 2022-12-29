@@ -14,19 +14,7 @@ impl From<crate::R<PC_SPEC>> for R {
     }
 }
 #[doc = "Field `PSWV` reader - Pulse swallow configuration"]
-pub struct PSWV_R(crate::FieldReader<u8, u8>);
-impl PSWV_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        PSWV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PSWV_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PSWV_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:5 - Pulse swallow configuration"]
     #[inline(always)]
@@ -45,8 +33,5 @@ impl crate::Readable for PC_SPEC {
 }
 #[doc = "`reset()` method sets PC to value 0"]
 impl crate::Resettable for PC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

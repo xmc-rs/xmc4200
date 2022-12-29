@@ -14,19 +14,7 @@ impl From<crate::R<DSV1_SPEC>> for R {
     }
 }
 #[doc = "Field `DSV1` reader - DAC reference value 1"]
-pub struct DSV1_R(crate::FieldReader<u16, u16>);
-impl DSV1_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        DSV1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DSV1_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DSV1_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:9 - DAC reference value 1"]
     #[inline(always)]
@@ -45,8 +33,5 @@ impl crate::Readable for DSV1_SPEC {
 }
 #[doc = "`reset()` method sets DSV1 to value 0"]
 impl crate::Resettable for DSV1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

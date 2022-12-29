@@ -34,8 +34,10 @@ impl From<crate::W<PL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `PSL0` reader - HRPWMx.OUTy0 passive level"]
+pub type PSL0_R = crate::BitReader<PSL0_A>;
 #[doc = "HRPWMx.OUTy0 passive level\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSL0_A {
     #[doc = "0: HRPWMx.OUTy0 output passive level is set to LOW"]
     VALUE1 = 0,
@@ -48,13 +50,8 @@ impl From<PSL0_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `PSL0` reader - HRPWMx.OUTy0 passive level"]
-pub struct PSL0_R(crate::FieldReader<bool, PSL0_A>);
 impl PSL0_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        PSL0_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> PSL0_A {
         match self.bits {
@@ -65,31 +62,17 @@ impl PSL0_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == PSL0_A::VALUE1
+        *self == PSL0_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == PSL0_A::VALUE2
-    }
-}
-impl core::ops::Deref for PSL0_R {
-    type Target = crate::FieldReader<bool, PSL0_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == PSL0_A::VALUE2
     }
 }
 #[doc = "Field `PSL0` writer - HRPWMx.OUTy0 passive level"]
-pub struct PSL0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PSL0_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: PSL0_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type PSL0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PL_SPEC, PSL0_A, O>;
+impl<'a, const O: u8> PSL0_W<'a, O> {
     #[doc = "HRPWMx.OUTy0 output passive level is set to LOW"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -100,25 +83,11 @@ impl<'a> PSL0_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(PSL0_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
 }
+#[doc = "Field `PSL1` reader - HRPWMx.OUTy1 passive level"]
+pub type PSL1_R = crate::BitReader<PSL1_A>;
 #[doc = "HRPWMx.OUTy1 passive level\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSL1_A {
     #[doc = "0: HRPWMx.OUTy1 output passive level is set to LOW"]
     VALUE1 = 0,
@@ -131,13 +100,8 @@ impl From<PSL1_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `PSL1` reader - HRPWMx.OUTy1 passive level"]
-pub struct PSL1_R(crate::FieldReader<bool, PSL1_A>);
 impl PSL1_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        PSL1_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> PSL1_A {
         match self.bits {
@@ -148,31 +112,17 @@ impl PSL1_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == PSL1_A::VALUE1
+        *self == PSL1_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == PSL1_A::VALUE2
-    }
-}
-impl core::ops::Deref for PSL1_R {
-    type Target = crate::FieldReader<bool, PSL1_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == PSL1_A::VALUE2
     }
 }
 #[doc = "Field `PSL1` writer - HRPWMx.OUTy1 passive level"]
-pub struct PSL1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PSL1_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: PSL1_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type PSL1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PL_SPEC, PSL1_A, O>;
+impl<'a, const O: u8> PSL1_W<'a, O> {
     #[doc = "HRPWMx.OUTy1 output passive level is set to LOW"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -183,45 +133,31 @@ impl<'a> PSL1_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(PSL1_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bit 0 - HRPWMx.OUTy0 passive level"]
     #[inline(always)]
     pub fn psl0(&self) -> PSL0_R {
-        PSL0_R::new((self.bits & 0x01) != 0)
+        PSL0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - HRPWMx.OUTy1 passive level"]
     #[inline(always)]
     pub fn psl1(&self) -> PSL1_R {
-        PSL1_R::new(((self.bits >> 1) & 0x01) != 0)
+        PSL1_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - HRPWMx.OUTy0 passive level"]
     #[inline(always)]
-    pub fn psl0(&mut self) -> PSL0_W {
-        PSL0_W { w: self }
+    #[must_use]
+    pub fn psl0(&mut self) -> PSL0_W<0> {
+        PSL0_W::new(self)
     }
     #[doc = "Bit 1 - HRPWMx.OUTy1 passive level"]
     #[inline(always)]
-    pub fn psl1(&mut self) -> PSL1_W {
-        PSL1_W { w: self }
+    #[must_use]
+    pub fn psl1(&mut self) -> PSL1_W<1> {
+        PSL1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -242,11 +178,10 @@ impl crate::Readable for PL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pl::W](W) writer structure"]
 impl crate::Writable for PL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PL to value 0"]
 impl crate::Resettable for PL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
