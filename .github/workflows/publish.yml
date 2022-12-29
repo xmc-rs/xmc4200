@@ -34,3 +34,5 @@ jobs:
         with:
           command: release
           args: ${{ inputs.version }} -x --no-confirm
+          env:
+            CARGO_REGISTRY_TOKEN: '${{ secrets.CRATES_TOKEN }}'
