@@ -33,4 +33,4 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: release
-          args: ${{ inputs.version }} -x
+          args: ${{ inputs.version }} -x --no-confirm
