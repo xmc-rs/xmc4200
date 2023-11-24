@@ -1,24 +1,5 @@
 #[doc = "Register `HDSET` writer"]
-pub struct W(crate::W<HDSET_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HDSET_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HDSET_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HDSET_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HDSET_SPEC>;
 #[doc = "Wake-up Pin Event Positive Edge Set\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EPEV_AW {
@@ -34,16 +15,19 @@ impl From<EPEV_AW> for bool {
     }
 }
 #[doc = "Field `EPEV` writer - Wake-up Pin Event Positive Edge Set"]
-pub type EPEV_W<'a, const O: u8> = crate::BitWriter<'a, u32, HDSET_SPEC, EPEV_AW, O>;
-impl<'a, const O: u8> EPEV_W<'a, O> {
+pub type EPEV_W<'a, REG> = crate::BitWriter<'a, REG, EPEV_AW>;
+impl<'a, REG> EPEV_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No effect"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(EPEV_AW::VALUE1)
     }
     #[doc = "Set wake-up event"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(EPEV_AW::VALUE2)
     }
 }
@@ -62,16 +46,19 @@ impl From<ENEV_AW> for bool {
     }
 }
 #[doc = "Field `ENEV` writer - Wake-up Pin Event Negative Edge Set"]
-pub type ENEV_W<'a, const O: u8> = crate::BitWriter<'a, u32, HDSET_SPEC, ENEV_AW, O>;
-impl<'a, const O: u8> ENEV_W<'a, O> {
+pub type ENEV_W<'a, REG> = crate::BitWriter<'a, REG, ENEV_AW>;
+impl<'a, REG> ENEV_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No effect"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ENEV_AW::VALUE1)
     }
     #[doc = "Set wake-up event"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ENEV_AW::VALUE2)
     }
 }
@@ -90,16 +77,19 @@ impl From<RTCEV_AW> for bool {
     }
 }
 #[doc = "Field `RTCEV` writer - RTC Event Set"]
-pub type RTCEV_W<'a, const O: u8> = crate::BitWriter<'a, u32, HDSET_SPEC, RTCEV_AW, O>;
-impl<'a, const O: u8> RTCEV_W<'a, O> {
+pub type RTCEV_W<'a, REG> = crate::BitWriter<'a, REG, RTCEV_AW>;
+impl<'a, REG> RTCEV_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No effect"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(RTCEV_AW::VALUE1)
     }
     #[doc = "Set wake-up event"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(RTCEV_AW::VALUE2)
     }
 }
@@ -118,16 +108,19 @@ impl From<ULPWDG_AW> for bool {
     }
 }
 #[doc = "Field `ULPWDG` writer - ULP WDG Alarm Set"]
-pub type ULPWDG_W<'a, const O: u8> = crate::BitWriter<'a, u32, HDSET_SPEC, ULPWDG_AW, O>;
-impl<'a, const O: u8> ULPWDG_W<'a, O> {
+pub type ULPWDG_W<'a, REG> = crate::BitWriter<'a, REG, ULPWDG_AW>;
+impl<'a, REG> ULPWDG_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No effect"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ULPWDG_AW::VALUE1)
     }
     #[doc = "Set watchdog alarm"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ULPWDG_AW::VALUE2)
     }
 }
@@ -146,16 +139,19 @@ impl From<VBATPEV_AW> for bool {
     }
 }
 #[doc = "Field `VBATPEV` writer - Wake-Up on LPAC Positive Edge of VBAT Threshold Crossing Set"]
-pub type VBATPEV_W<'a, const O: u8> = crate::BitWriter<'a, u32, HDSET_SPEC, VBATPEV_AW, O>;
-impl<'a, const O: u8> VBATPEV_W<'a, O> {
+pub type VBATPEV_W<'a, REG> = crate::BitWriter<'a, REG, VBATPEV_AW>;
+impl<'a, REG> VBATPEV_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No effect"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(VBATPEV_AW::VALUE1)
     }
     #[doc = "Set wake-up event"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(VBATPEV_AW::VALUE2)
     }
 }
@@ -174,16 +170,19 @@ impl From<VBATNEV_AW> for bool {
     }
 }
 #[doc = "Field `VBATNEV` writer - Wake-Up on LPAC Negative Edge of VBAT Threshold Crossing Set"]
-pub type VBATNEV_W<'a, const O: u8> = crate::BitWriter<'a, u32, HDSET_SPEC, VBATNEV_AW, O>;
-impl<'a, const O: u8> VBATNEV_W<'a, O> {
+pub type VBATNEV_W<'a, REG> = crate::BitWriter<'a, REG, VBATNEV_AW>;
+impl<'a, REG> VBATNEV_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No effect"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(VBATNEV_AW::VALUE1)
     }
     #[doc = "Set wake-up event"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(VBATNEV_AW::VALUE2)
     }
 }
@@ -202,16 +201,19 @@ impl From<AHIBIO0PEV_AW> for bool {
     }
 }
 #[doc = "Field `AHIBIO0PEV` writer - Wake-Up on LPAC Positive Edge of HIB_IO_0 Threshold Crossing Set"]
-pub type AHIBIO0PEV_W<'a, const O: u8> = crate::BitWriter<'a, u32, HDSET_SPEC, AHIBIO0PEV_AW, O>;
-impl<'a, const O: u8> AHIBIO0PEV_W<'a, O> {
+pub type AHIBIO0PEV_W<'a, REG> = crate::BitWriter<'a, REG, AHIBIO0PEV_AW>;
+impl<'a, REG> AHIBIO0PEV_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No effect"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(AHIBIO0PEV_AW::VALUE1)
     }
     #[doc = "Set wake-up event"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(AHIBIO0PEV_AW::VALUE2)
     }
 }
@@ -230,16 +232,19 @@ impl From<AHIBIO0NEV_AW> for bool {
     }
 }
 #[doc = "Field `AHIBIO0NEV` writer - Wake-Up on LPAC Negative Edge of HIB_IO_0 Threshold Crossing Set"]
-pub type AHIBIO0NEV_W<'a, const O: u8> = crate::BitWriter<'a, u32, HDSET_SPEC, AHIBIO0NEV_AW, O>;
-impl<'a, const O: u8> AHIBIO0NEV_W<'a, O> {
+pub type AHIBIO0NEV_W<'a, REG> = crate::BitWriter<'a, REG, AHIBIO0NEV_AW>;
+impl<'a, REG> AHIBIO0NEV_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No effect"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(AHIBIO0NEV_AW::VALUE1)
     }
     #[doc = "Set wake-up event"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(AHIBIO0NEV_AW::VALUE2)
     }
 }
@@ -247,66 +252,69 @@ impl W {
     #[doc = "Bit 0 - Wake-up Pin Event Positive Edge Set"]
     #[inline(always)]
     #[must_use]
-    pub fn epev(&mut self) -> EPEV_W<0> {
-        EPEV_W::new(self)
+    pub fn epev(&mut self) -> EPEV_W<HDSET_SPEC> {
+        EPEV_W::new(self, 0)
     }
     #[doc = "Bit 1 - Wake-up Pin Event Negative Edge Set"]
     #[inline(always)]
     #[must_use]
-    pub fn enev(&mut self) -> ENEV_W<1> {
-        ENEV_W::new(self)
+    pub fn enev(&mut self) -> ENEV_W<HDSET_SPEC> {
+        ENEV_W::new(self, 1)
     }
     #[doc = "Bit 2 - RTC Event Set"]
     #[inline(always)]
     #[must_use]
-    pub fn rtcev(&mut self) -> RTCEV_W<2> {
-        RTCEV_W::new(self)
+    pub fn rtcev(&mut self) -> RTCEV_W<HDSET_SPEC> {
+        RTCEV_W::new(self, 2)
     }
     #[doc = "Bit 3 - ULP WDG Alarm Set"]
     #[inline(always)]
     #[must_use]
-    pub fn ulpwdg(&mut self) -> ULPWDG_W<3> {
-        ULPWDG_W::new(self)
+    pub fn ulpwdg(&mut self) -> ULPWDG_W<HDSET_SPEC> {
+        ULPWDG_W::new(self, 3)
     }
     #[doc = "Bit 8 - Wake-Up on LPAC Positive Edge of VBAT Threshold Crossing Set"]
     #[inline(always)]
     #[must_use]
-    pub fn vbatpev(&mut self) -> VBATPEV_W<8> {
-        VBATPEV_W::new(self)
+    pub fn vbatpev(&mut self) -> VBATPEV_W<HDSET_SPEC> {
+        VBATPEV_W::new(self, 8)
     }
     #[doc = "Bit 9 - Wake-Up on LPAC Negative Edge of VBAT Threshold Crossing Set"]
     #[inline(always)]
     #[must_use]
-    pub fn vbatnev(&mut self) -> VBATNEV_W<9> {
-        VBATNEV_W::new(self)
+    pub fn vbatnev(&mut self) -> VBATNEV_W<HDSET_SPEC> {
+        VBATNEV_W::new(self, 9)
     }
     #[doc = "Bit 10 - Wake-Up on LPAC Positive Edge of HIB_IO_0 Threshold Crossing Set"]
     #[inline(always)]
     #[must_use]
-    pub fn ahibio0pev(&mut self) -> AHIBIO0PEV_W<10> {
-        AHIBIO0PEV_W::new(self)
+    pub fn ahibio0pev(&mut self) -> AHIBIO0PEV_W<HDSET_SPEC> {
+        AHIBIO0PEV_W::new(self, 10)
     }
     #[doc = "Bit 11 - Wake-Up on LPAC Negative Edge of HIB_IO_0 Threshold Crossing Set"]
     #[inline(always)]
     #[must_use]
-    pub fn ahibio0nev(&mut self) -> AHIBIO0NEV_W<11> {
-        AHIBIO0NEV_W::new(self)
+    pub fn ahibio0nev(&mut self) -> AHIBIO0NEV_W<HDSET_SPEC> {
+        AHIBIO0NEV_W::new(self, 11)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Hibernate Domain Status Set Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hdset](index.html) module"]
+#[doc = "Hibernate Domain Status Set Register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hdset::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HDSET_SPEC;
 impl crate::RegisterSpec for HDSET_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [hdset::W](W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [`hdset::W`](W) writer structure"]
 impl crate::Writable for HDSET_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

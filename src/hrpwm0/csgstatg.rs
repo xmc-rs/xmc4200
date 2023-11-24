@@ -1,18 +1,5 @@
 #[doc = "Register `CSGSTATG` reader"]
-pub struct R(crate::R<CSGSTATG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CSGSTATG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CSGSTATG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CSGSTATG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CSGSTATG_SPEC>;
 #[doc = "Field `D0RB` reader - DAC0 run bit status"]
 pub type D0RB_R = crate::BitReader<D0RB_A>;
 #[doc = "DAC0 run bit status\n\nValue on reset: 0"]
@@ -32,18 +19,18 @@ impl From<D0RB_A> for bool {
 impl D0RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> D0RB_A {
+    pub const fn variant(&self) -> D0RB_A {
         match self.bits {
             false => D0RB_A::VALUE1,
             true => D0RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "DAC0 is not running (control logic is disabled)"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == D0RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "DAC0 is running"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == D0RB_A::VALUE2
@@ -68,18 +55,18 @@ impl From<C0RB_A> for bool {
 impl C0RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C0RB_A {
+    pub const fn variant(&self) -> C0RB_A {
         match self.bits {
             false => C0RB_A::VALUE1,
             true => C0RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "CMP0 functionality is disabled"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == C0RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "CMP0 functionality is enabled"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == C0RB_A::VALUE2
@@ -104,18 +91,18 @@ impl From<PSLS0_A> for bool {
 impl PSLS0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PSLS0_A {
+    pub const fn variant(&self) -> PSLS0_A {
         match self.bits {
             false => PSLS0_A::VALUE1,
             true => PSLS0_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "CMP0 output is not clamped"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == PSLS0_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "CMP0 output is clamped"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == PSLS0_A::VALUE2
@@ -140,18 +127,18 @@ impl From<D1RB_A> for bool {
 impl D1RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> D1RB_A {
+    pub const fn variant(&self) -> D1RB_A {
         match self.bits {
             false => D1RB_A::VALUE1,
             true => D1RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "DAC1 is not running (control logic is disabled)"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == D1RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "DAC1 is running"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == D1RB_A::VALUE2
@@ -176,18 +163,18 @@ impl From<C1RB_A> for bool {
 impl C1RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1RB_A {
+    pub const fn variant(&self) -> C1RB_A {
         match self.bits {
             false => C1RB_A::VALUE1,
             true => C1RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "CMP1 functionality is disabled"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == C1RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "CMP1 functionality is enabled"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == C1RB_A::VALUE2
@@ -212,18 +199,18 @@ impl From<PSLS1_A> for bool {
 impl PSLS1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PSLS1_A {
+    pub const fn variant(&self) -> PSLS1_A {
         match self.bits {
             false => PSLS1_A::VALUE1,
             true => PSLS1_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "CMP1 output is not clamped"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == PSLS1_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "CMP1 output is clamped"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == PSLS1_A::VALUE2
@@ -248,18 +235,18 @@ impl From<D2RB_A> for bool {
 impl D2RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> D2RB_A {
+    pub const fn variant(&self) -> D2RB_A {
         match self.bits {
             false => D2RB_A::VALUE1,
             true => D2RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "DAC2 is not running (control logic is disabled)"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == D2RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "DAC1 is running"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == D2RB_A::VALUE2
@@ -284,18 +271,18 @@ impl From<C2RB_A> for bool {
 impl C2RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C2RB_A {
+    pub const fn variant(&self) -> C2RB_A {
         match self.bits {
             false => C2RB_A::VALUE1,
             true => C2RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "CMP2 functionality is disabled"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == C2RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "CMP2 functionality is enabled"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == C2RB_A::VALUE2
@@ -320,18 +307,18 @@ impl From<PSLS2_A> for bool {
 impl PSLS2_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PSLS2_A {
+    pub const fn variant(&self) -> PSLS2_A {
         match self.bits {
             false => PSLS2_A::VALUE1,
             true => PSLS2_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "CMP2 output is not clamped"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == PSLS2_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "CMP2 output is clamped"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == PSLS2_A::VALUE2
@@ -384,15 +371,13 @@ impl R {
         PSLS2_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
-#[doc = "Global CSG run bit status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csgstatg](index.html) module"]
+#[doc = "Global CSG run bit status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`csgstatg::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CSGSTATG_SPEC;
 impl crate::RegisterSpec for CSGSTATG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [csgstatg::R](R) reader structure"]
-impl crate::Readable for CSGSTATG_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`csgstatg::R`](R) reader structure"]
+impl crate::Readable for CSGSTATG_SPEC {}
 #[doc = "`reset()` method sets CSGSTATG to value 0"]
 impl crate::Resettable for CSGSTATG_SPEC {
     const RESET_VALUE: Self::Ux = 0;

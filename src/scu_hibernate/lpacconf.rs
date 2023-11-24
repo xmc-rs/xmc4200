@@ -1,41 +1,9 @@
 #[doc = "Register `LPACCONF` reader"]
-pub struct R(crate::R<LPACCONF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LPACCONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LPACCONF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LPACCONF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LPACCONF_SPEC>;
 #[doc = "Register `LPACCONF` writer"]
-pub struct W(crate::W<LPACCONF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<LPACCONF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<LPACCONF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<LPACCONF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<LPACCONF_SPEC>;
 #[doc = "Field `CMPEN` reader - Compare Enable for Input Selection"]
-pub type CMPEN_R = crate::FieldReader<u8, CMPEN_A>;
+pub type CMPEN_R = crate::FieldReader<CMPEN_A>;
 #[doc = "Compare Enable for Input Selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -55,10 +23,13 @@ impl From<CMPEN_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for CMPEN_A {
+    type Ux = u8;
+}
 impl CMPEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<CMPEN_A> {
+    pub const fn variant(&self) -> Option<CMPEN_A> {
         match self.bits {
             0 => Some(CMPEN_A::VALUE1),
             1 => Some(CMPEN_A::VALUE2),
@@ -67,53 +38,57 @@ impl CMPEN_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Comparator permanently in power down"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == CMPEN_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Comparator activated for VBAT input"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == CMPEN_A::VALUE2
     }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[doc = "Comparator activated for HIB_IO_0 input"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
         *self == CMPEN_A::VALUE3
     }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[doc = "Comparator activated for HIB_IO_1 input"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
         *self == CMPEN_A::VALUE4
     }
 }
 #[doc = "Field `CMPEN` writer - Compare Enable for Input Selection"]
-pub type CMPEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LPACCONF_SPEC, u8, CMPEN_A, 3, O>;
-impl<'a, const O: u8> CMPEN_W<'a, O> {
+pub type CMPEN_W<'a, REG> = crate::FieldWriter<'a, REG, 3, CMPEN_A>;
+impl<'a, REG> CMPEN_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Comparator permanently in power down"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(CMPEN_A::VALUE1)
     }
     #[doc = "Comparator activated for VBAT input"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(CMPEN_A::VALUE2)
     }
     #[doc = "Comparator activated for HIB_IO_0 input"]
     #[inline(always)]
-    pub fn value3(self) -> &'a mut W {
+    pub fn value3(self) -> &'a mut crate::W<REG> {
         self.variant(CMPEN_A::VALUE3)
     }
     #[doc = "Comparator activated for HIB_IO_1 input"]
     #[inline(always)]
-    pub fn value4(self) -> &'a mut W {
+    pub fn value4(self) -> &'a mut crate::W<REG> {
         self.variant(CMPEN_A::VALUE4)
     }
 }
 #[doc = "Field `TRIGSEL` reader - Analog Compare Trigger Select"]
-pub type TRIGSEL_R = crate::FieldReader<u8, TRIGSEL_A>;
+pub type TRIGSEL_R = crate::FieldReader<TRIGSEL_A>;
 #[doc = "Analog Compare Trigger Select\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -139,10 +114,13 @@ impl From<TRIGSEL_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for TRIGSEL_A {
+    type Ux = u8;
+}
 impl TRIGSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TRIGSEL_A> {
+    pub const fn variant(&self) -> Option<TRIGSEL_A> {
         match self.bits {
             0 => Some(TRIGSEL_A::VALUE1),
             1 => Some(TRIGSEL_A::VALUE2),
@@ -154,93 +132,97 @@ impl TRIGSEL_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Sub-second interval counter"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == TRIGSEL_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "RTC alarm event"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == TRIGSEL_A::VALUE2
     }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[doc = "RTC periodic event"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
         *self == TRIGSEL_A::VALUE3
     }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[doc = "On digital WKUP input positive edge event"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
         *self == TRIGSEL_A::VALUE4
     }
-    #[doc = "Checks if the value of the field is `VALUE5`"]
+    #[doc = "On digital WKUP input negative edge event"]
     #[inline(always)]
     pub fn is_value5(&self) -> bool {
         *self == TRIGSEL_A::VALUE5
     }
-    #[doc = "Checks if the value of the field is `VALUE6`"]
+    #[doc = "Continuous measurement"]
     #[inline(always)]
     pub fn is_value6(&self) -> bool {
         *self == TRIGSEL_A::VALUE6
     }
-    #[doc = "Checks if the value of the field is `VALUE7`"]
+    #[doc = "Single-shot on software request"]
     #[inline(always)]
     pub fn is_value7(&self) -> bool {
         *self == TRIGSEL_A::VALUE7
     }
 }
 #[doc = "Field `TRIGSEL` writer - Analog Compare Trigger Select"]
-pub type TRIGSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LPACCONF_SPEC, u8, TRIGSEL_A, 3, O>;
-impl<'a, const O: u8> TRIGSEL_W<'a, O> {
+pub type TRIGSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3, TRIGSEL_A>;
+impl<'a, REG> TRIGSEL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Sub-second interval counter"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(TRIGSEL_A::VALUE1)
     }
     #[doc = "RTC alarm event"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(TRIGSEL_A::VALUE2)
     }
     #[doc = "RTC periodic event"]
     #[inline(always)]
-    pub fn value3(self) -> &'a mut W {
+    pub fn value3(self) -> &'a mut crate::W<REG> {
         self.variant(TRIGSEL_A::VALUE3)
     }
     #[doc = "On digital WKUP input positive edge event"]
     #[inline(always)]
-    pub fn value4(self) -> &'a mut W {
+    pub fn value4(self) -> &'a mut crate::W<REG> {
         self.variant(TRIGSEL_A::VALUE4)
     }
     #[doc = "On digital WKUP input negative edge event"]
     #[inline(always)]
-    pub fn value5(self) -> &'a mut W {
+    pub fn value5(self) -> &'a mut crate::W<REG> {
         self.variant(TRIGSEL_A::VALUE5)
     }
     #[doc = "Continuous measurement"]
     #[inline(always)]
-    pub fn value6(self) -> &'a mut W {
+    pub fn value6(self) -> &'a mut crate::W<REG> {
         self.variant(TRIGSEL_A::VALUE6)
     }
     #[doc = "Single-shot on software request"]
     #[inline(always)]
-    pub fn value7(self) -> &'a mut W {
+    pub fn value7(self) -> &'a mut crate::W<REG> {
         self.variant(TRIGSEL_A::VALUE7)
     }
 }
 #[doc = "Field `CONVDEL` reader - Conversion Delay"]
-pub type CONVDEL_R = crate::BitReader<bool>;
+pub type CONVDEL_R = crate::BitReader;
 #[doc = "Field `CONVDEL` writer - Conversion Delay"]
-pub type CONVDEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPACCONF_SPEC, bool, O>;
+pub type CONVDEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTERVCNT` reader - Sub-second Interval Counter"]
-pub type INTERVCNT_R = crate::FieldReader<u16, u16>;
+pub type INTERVCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `INTERVCNT` writer - Sub-second Interval Counter"]
-pub type INTERVCNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LPACCONF_SPEC, u16, u16, 12, O>;
+pub type INTERVCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `SETTLECNT` reader - LPAC Settle Time Counter"]
-pub type SETTLECNT_R = crate::FieldReader<u8, u8>;
+pub type SETTLECNT_R = crate::FieldReader;
 #[doc = "Field `SETTLECNT` writer - LPAC Settle Time Counter"]
-pub type SETTLECNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LPACCONF_SPEC, u8, u8, 4, O>;
+pub type SETTLECNT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:2 - Compare Enable for Input Selection"]
     #[inline(always)]
@@ -272,52 +254,53 @@ impl W {
     #[doc = "Bits 0:2 - Compare Enable for Input Selection"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpen(&mut self) -> CMPEN_W<0> {
-        CMPEN_W::new(self)
+    pub fn cmpen(&mut self) -> CMPEN_W<LPACCONF_SPEC> {
+        CMPEN_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Analog Compare Trigger Select"]
     #[inline(always)]
     #[must_use]
-    pub fn trigsel(&mut self) -> TRIGSEL_W<4> {
-        TRIGSEL_W::new(self)
+    pub fn trigsel(&mut self) -> TRIGSEL_W<LPACCONF_SPEC> {
+        TRIGSEL_W::new(self, 4)
     }
     #[doc = "Bit 12 - Conversion Delay"]
     #[inline(always)]
     #[must_use]
-    pub fn convdel(&mut self) -> CONVDEL_W<12> {
-        CONVDEL_W::new(self)
+    pub fn convdel(&mut self) -> CONVDEL_W<LPACCONF_SPEC> {
+        CONVDEL_W::new(self, 12)
     }
     #[doc = "Bits 16:27 - Sub-second Interval Counter"]
     #[inline(always)]
     #[must_use]
-    pub fn intervcnt(&mut self) -> INTERVCNT_W<16> {
-        INTERVCNT_W::new(self)
+    pub fn intervcnt(&mut self) -> INTERVCNT_W<LPACCONF_SPEC> {
+        INTERVCNT_W::new(self, 16)
     }
     #[doc = "Bits 28:31 - LPAC Settle Time Counter"]
     #[inline(always)]
     #[must_use]
-    pub fn settlecnt(&mut self) -> SETTLECNT_W<28> {
-        SETTLECNT_W::new(self)
+    pub fn settlecnt(&mut self) -> SETTLECNT_W<LPACCONF_SPEC> {
+        SETTLECNT_W::new(self, 28)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Analog Wake-up Configuration Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lpacconf](index.html) module"]
+#[doc = "Analog Wake-up Configuration Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lpacconf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lpacconf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LPACCONF_SPEC;
 impl crate::RegisterSpec for LPACCONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lpacconf::R](R) reader structure"]
-impl crate::Readable for LPACCONF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [lpacconf::W](W) writer structure"]
+#[doc = "`read()` method returns [`lpacconf::R`](R) reader structure"]
+impl crate::Readable for LPACCONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`lpacconf::W`](W) writer structure"]
 impl crate::Writable for LPACCONF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

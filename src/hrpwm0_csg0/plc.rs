@@ -1,41 +1,9 @@
 #[doc = "Register `PLC` reader"]
-pub struct R(crate::R<PLC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PLC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PLC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PLC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PLC_SPEC>;
 #[doc = "Register `PLC` writer"]
-pub struct W(crate::W<PLC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PLC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PLC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PLC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PLC_SPEC>;
 #[doc = "Field `IPLS` reader - Clamping control signal selector"]
-pub type IPLS_R = crate::FieldReader<u8, IPLS_A>;
+pub type IPLS_R = crate::FieldReader<IPLS_A>;
 #[doc = "Clamping control signal selector\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -79,10 +47,13 @@ impl From<IPLS_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for IPLS_A {
+    type Ux = u8;
+}
 impl IPLS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IPLS_A {
+    pub const fn variant(&self) -> IPLS_A {
         match self.bits {
             0 => IPLS_A::VALUE1,
             1 => IPLS_A::VALUE2,
@@ -103,173 +74,177 @@ impl IPLS_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "HRPWMx.BLyA"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == IPLS_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "HRPWMx.BLyB"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == IPLS_A::VALUE2
     }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[doc = "HRPWMx.BLyC"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
         *self == IPLS_A::VALUE3
     }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[doc = "HRPWMx.BLyD"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
         *self == IPLS_A::VALUE4
     }
-    #[doc = "Checks if the value of the field is `VALUE5`"]
+    #[doc = "HRPWMx.BLyE"]
     #[inline(always)]
     pub fn is_value5(&self) -> bool {
         *self == IPLS_A::VALUE5
     }
-    #[doc = "Checks if the value of the field is `VALUE6`"]
+    #[doc = "HRPWMx.BLyF"]
     #[inline(always)]
     pub fn is_value6(&self) -> bool {
         *self == IPLS_A::VALUE6
     }
-    #[doc = "Checks if the value of the field is `VALUE7`"]
+    #[doc = "HRPWMx.BLyG"]
     #[inline(always)]
     pub fn is_value7(&self) -> bool {
         *self == IPLS_A::VALUE7
     }
-    #[doc = "Checks if the value of the field is `VALUE8`"]
+    #[doc = "HRPWMx.BLyH"]
     #[inline(always)]
     pub fn is_value8(&self) -> bool {
         *self == IPLS_A::VALUE8
     }
-    #[doc = "Checks if the value of the field is `VALUE9`"]
+    #[doc = "HRPWMx.BLyI"]
     #[inline(always)]
     pub fn is_value9(&self) -> bool {
         *self == IPLS_A::VALUE9
     }
-    #[doc = "Checks if the value of the field is `VALUE10`"]
+    #[doc = "HRPWMx.BLyJ"]
     #[inline(always)]
     pub fn is_value10(&self) -> bool {
         *self == IPLS_A::VALUE10
     }
-    #[doc = "Checks if the value of the field is `VALUE11`"]
+    #[doc = "HRPWMx.BLyK"]
     #[inline(always)]
     pub fn is_value11(&self) -> bool {
         *self == IPLS_A::VALUE11
     }
-    #[doc = "Checks if the value of the field is `VALUE12`"]
+    #[doc = "HRPWMx.BLyL"]
     #[inline(always)]
     pub fn is_value12(&self) -> bool {
         *self == IPLS_A::VALUE12
     }
-    #[doc = "Checks if the value of the field is `VALUE13`"]
+    #[doc = "HRPWMx.BLyM"]
     #[inline(always)]
     pub fn is_value13(&self) -> bool {
         *self == IPLS_A::VALUE13
     }
-    #[doc = "Checks if the value of the field is `VALUE14`"]
+    #[doc = "HRPWMx.BLyN"]
     #[inline(always)]
     pub fn is_value14(&self) -> bool {
         *self == IPLS_A::VALUE14
     }
-    #[doc = "Checks if the value of the field is `VALUE15`"]
+    #[doc = "HRPWMx.BLyO"]
     #[inline(always)]
     pub fn is_value15(&self) -> bool {
         *self == IPLS_A::VALUE15
     }
-    #[doc = "Checks if the value of the field is `VALUE16`"]
+    #[doc = "HRPWMx.BLyP"]
     #[inline(always)]
     pub fn is_value16(&self) -> bool {
         *self == IPLS_A::VALUE16
     }
 }
 #[doc = "Field `IPLS` writer - Clamping control signal selector"]
-pub type IPLS_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, PLC_SPEC, u8, IPLS_A, 4, O>;
-impl<'a, const O: u8> IPLS_W<'a, O> {
+pub type IPLS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4, IPLS_A>;
+impl<'a, REG> IPLS_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "HRPWMx.BLyA"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE1)
     }
     #[doc = "HRPWMx.BLyB"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE2)
     }
     #[doc = "HRPWMx.BLyC"]
     #[inline(always)]
-    pub fn value3(self) -> &'a mut W {
+    pub fn value3(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE3)
     }
     #[doc = "HRPWMx.BLyD"]
     #[inline(always)]
-    pub fn value4(self) -> &'a mut W {
+    pub fn value4(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE4)
     }
     #[doc = "HRPWMx.BLyE"]
     #[inline(always)]
-    pub fn value5(self) -> &'a mut W {
+    pub fn value5(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE5)
     }
     #[doc = "HRPWMx.BLyF"]
     #[inline(always)]
-    pub fn value6(self) -> &'a mut W {
+    pub fn value6(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE6)
     }
     #[doc = "HRPWMx.BLyG"]
     #[inline(always)]
-    pub fn value7(self) -> &'a mut W {
+    pub fn value7(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE7)
     }
     #[doc = "HRPWMx.BLyH"]
     #[inline(always)]
-    pub fn value8(self) -> &'a mut W {
+    pub fn value8(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE8)
     }
     #[doc = "HRPWMx.BLyI"]
     #[inline(always)]
-    pub fn value9(self) -> &'a mut W {
+    pub fn value9(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE9)
     }
     #[doc = "HRPWMx.BLyJ"]
     #[inline(always)]
-    pub fn value10(self) -> &'a mut W {
+    pub fn value10(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE10)
     }
     #[doc = "HRPWMx.BLyK"]
     #[inline(always)]
-    pub fn value11(self) -> &'a mut W {
+    pub fn value11(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE11)
     }
     #[doc = "HRPWMx.BLyL"]
     #[inline(always)]
-    pub fn value12(self) -> &'a mut W {
+    pub fn value12(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE12)
     }
     #[doc = "HRPWMx.BLyM"]
     #[inline(always)]
-    pub fn value13(self) -> &'a mut W {
+    pub fn value13(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE13)
     }
     #[doc = "HRPWMx.BLyN"]
     #[inline(always)]
-    pub fn value14(self) -> &'a mut W {
+    pub fn value14(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE14)
     }
     #[doc = "HRPWMx.BLyO"]
     #[inline(always)]
-    pub fn value15(self) -> &'a mut W {
+    pub fn value15(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE15)
     }
     #[doc = "HRPWMx.BLyP"]
     #[inline(always)]
-    pub fn value16(self) -> &'a mut W {
+    pub fn value16(self) -> &'a mut crate::W<REG> {
         self.variant(IPLS_A::VALUE16)
     }
 }
 #[doc = "Field `PLCL` reader - Clamping control signal level selection"]
-pub type PLCL_R = crate::FieldReader<u8, PLCL_A>;
+pub type PLCL_R = crate::FieldReader<PLCL_A>;
 #[doc = "Clamping control signal level selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -287,10 +262,13 @@ impl From<PLCL_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for PLCL_A {
+    type Ux = u8;
+}
 impl PLCL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<PLCL_A> {
+    pub const fn variant(&self) -> Option<PLCL_A> {
         match self.bits {
             0 => Some(PLCL_A::VALUE1),
             1 => Some(PLCL_A::VALUE2),
@@ -298,38 +276,42 @@ impl PLCL_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Clamping control disabled"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == PLCL_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Output is set to clamped level when the control signal is HIGH"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == PLCL_A::VALUE2
     }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[doc = "Output is set to clamped level when the control signal is LOW"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
         *self == PLCL_A::VALUE3
     }
 }
 #[doc = "Field `PLCL` writer - Clamping control signal level selection"]
-pub type PLCL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLC_SPEC, u8, PLCL_A, 2, O>;
-impl<'a, const O: u8> PLCL_W<'a, O> {
+pub type PLCL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, PLCL_A>;
+impl<'a, REG> PLCL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Clamping control disabled"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(PLCL_A::VALUE1)
     }
     #[doc = "Output is set to clamped level when the control signal is HIGH"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(PLCL_A::VALUE2)
     }
     #[doc = "Output is set to clamped level when the control signal is LOW"]
     #[inline(always)]
-    pub fn value3(self) -> &'a mut W {
+    pub fn value3(self) -> &'a mut crate::W<REG> {
         self.variant(PLCL_A::VALUE3)
     }
 }
@@ -352,34 +334,37 @@ impl From<PSL_A> for bool {
 impl PSL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PSL_A {
+    pub const fn variant(&self) -> PSL_A {
         match self.bits {
             false => PSL_A::VALUE1,
             true => PSL_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Output clamped level is LOW"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == PSL_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Output clamped level is HIGH"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == PSL_A::VALUE2
     }
 }
 #[doc = "Field `PSL` writer - Output passive level value"]
-pub type PSL_W<'a, const O: u8> = crate::BitWriter<'a, u32, PLC_SPEC, PSL_A, O>;
-impl<'a, const O: u8> PSL_W<'a, O> {
+pub type PSL_W<'a, REG> = crate::BitWriter<'a, REG, PSL_A>;
+impl<'a, REG> PSL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Output clamped level is LOW"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(PSL_A::VALUE1)
     }
     #[doc = "Output clamped level is HIGH"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(PSL_A::VALUE2)
     }
 }
@@ -402,39 +387,42 @@ impl From<PLSW_A> for bool {
 impl PLSW_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PLSW_A {
+    pub const fn variant(&self) -> PLSW_A {
         match self.bits {
             false => PLSW_A::VALUE1,
             true => PLSW_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "External signal and SW can remove the output from the clamped state"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == PLSW_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Only SW can remove the output from the clamped state"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == PLSW_A::VALUE2
     }
 }
 #[doc = "Field `PLSW` writer - Clamped state exit SW configuration"]
-pub type PLSW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PLC_SPEC, PLSW_A, O>;
-impl<'a, const O: u8> PLSW_W<'a, O> {
+pub type PLSW_W<'a, REG> = crate::BitWriter<'a, REG, PLSW_A>;
+impl<'a, REG> PLSW_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "External signal and SW can remove the output from the clamped state"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(PLSW_A::VALUE1)
     }
     #[doc = "Only SW can remove the output from the clamped state"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(PLSW_A::VALUE2)
     }
 }
 #[doc = "Field `PLEC` reader - Passive level enter configuration"]
-pub type PLEC_R = crate::FieldReader<u8, PLEC_A>;
+pub type PLEC_R = crate::FieldReader<PLEC_A>;
 #[doc = "Passive level enter configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -452,10 +440,13 @@ impl From<PLEC_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for PLEC_A {
+    type Ux = u8;
+}
 impl PLEC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<PLEC_A> {
+    pub const fn variant(&self) -> Option<PLEC_A> {
         match self.bits {
             0 => Some(PLEC_A::VALUE1),
             1 => Some(PLEC_A::VALUE2),
@@ -463,43 +454,47 @@ impl PLEC_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Passive level is entered immediately"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == PLEC_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Passive level is entered only after the comparator output passes to LOW (output from the blanking stage)"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == PLEC_A::VALUE2
     }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[doc = "Passive level is entered only after the comparator output passes to HIGH (output from the blanking stage)"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
         *self == PLEC_A::VALUE3
     }
 }
 #[doc = "Field `PLEC` writer - Passive level enter configuration"]
-pub type PLEC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLC_SPEC, u8, PLEC_A, 2, O>;
-impl<'a, const O: u8> PLEC_W<'a, O> {
+pub type PLEC_W<'a, REG> = crate::FieldWriter<'a, REG, 2, PLEC_A>;
+impl<'a, REG> PLEC_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Passive level is entered immediately"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(PLEC_A::VALUE1)
     }
     #[doc = "Passive level is entered only after the comparator output passes to LOW (output from the blanking stage)"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(PLEC_A::VALUE2)
     }
     #[doc = "Passive level is entered only after the comparator output passes to HIGH (output from the blanking stage)"]
     #[inline(always)]
-    pub fn value3(self) -> &'a mut W {
+    pub fn value3(self) -> &'a mut crate::W<REG> {
         self.variant(PLEC_A::VALUE3)
     }
 }
 #[doc = "Field `PLXC` reader - Passive level exit configuration"]
-pub type PLXC_R = crate::FieldReader<u8, PLXC_A>;
+pub type PLXC_R = crate::FieldReader<PLXC_A>;
 #[doc = "Passive level exit configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -517,10 +512,13 @@ impl From<PLXC_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for PLXC_A {
+    type Ux = u8;
+}
 impl PLXC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<PLXC_A> {
+    pub const fn variant(&self) -> Option<PLXC_A> {
         match self.bits {
             0 => Some(PLXC_A::VALUE1),
             1 => Some(PLXC_A::VALUE2),
@@ -528,38 +526,42 @@ impl PLXC_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Passive level is exit immediately"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == PLXC_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Passive level is exit only after the comparator output passes to LOW (output from the blanking stage)"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == PLXC_A::VALUE2
     }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[doc = "Passive level is exit only after the comparator output passes to HIGH (output from the blanking stage)"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
         *self == PLXC_A::VALUE3
     }
 }
 #[doc = "Field `PLXC` writer - Passive level exit configuration"]
-pub type PLXC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLC_SPEC, u8, PLXC_A, 2, O>;
-impl<'a, const O: u8> PLXC_W<'a, O> {
+pub type PLXC_W<'a, REG> = crate::FieldWriter<'a, REG, 2, PLXC_A>;
+impl<'a, REG> PLXC_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Passive level is exit immediately"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(PLXC_A::VALUE1)
     }
     #[doc = "Passive level is exit only after the comparator output passes to LOW (output from the blanking stage)"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(PLXC_A::VALUE2)
     }
     #[doc = "Passive level is exit only after the comparator output passes to HIGH (output from the blanking stage)"]
     #[inline(always)]
-    pub fn value3(self) -> &'a mut W {
+    pub fn value3(self) -> &'a mut crate::W<REG> {
         self.variant(PLXC_A::VALUE3)
     }
 }
@@ -599,58 +601,59 @@ impl W {
     #[doc = "Bits 0:3 - Clamping control signal selector"]
     #[inline(always)]
     #[must_use]
-    pub fn ipls(&mut self) -> IPLS_W<0> {
-        IPLS_W::new(self)
+    pub fn ipls(&mut self) -> IPLS_W<PLC_SPEC> {
+        IPLS_W::new(self, 0)
     }
     #[doc = "Bits 8:9 - Clamping control signal level selection"]
     #[inline(always)]
     #[must_use]
-    pub fn plcl(&mut self) -> PLCL_W<8> {
-        PLCL_W::new(self)
+    pub fn plcl(&mut self) -> PLCL_W<PLC_SPEC> {
+        PLCL_W::new(self, 8)
     }
     #[doc = "Bit 10 - Output passive level value"]
     #[inline(always)]
     #[must_use]
-    pub fn psl(&mut self) -> PSL_W<10> {
-        PSL_W::new(self)
+    pub fn psl(&mut self) -> PSL_W<PLC_SPEC> {
+        PSL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Clamped state exit SW configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn plsw(&mut self) -> PLSW_W<11> {
-        PLSW_W::new(self)
+    pub fn plsw(&mut self) -> PLSW_W<PLC_SPEC> {
+        PLSW_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Passive level enter configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn plec(&mut self) -> PLEC_W<12> {
-        PLEC_W::new(self)
+    pub fn plec(&mut self) -> PLEC_W<PLC_SPEC> {
+        PLEC_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Passive level exit configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn plxc(&mut self) -> PLXC_W<14> {
-        PLXC_W::new(self)
+    pub fn plxc(&mut self) -> PLXC_W<PLC_SPEC> {
+        PLXC_W::new(self, 14)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Passive level configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [plc](index.html) module"]
+#[doc = "Passive level configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`plc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`plc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PLC_SPEC;
 impl crate::RegisterSpec for PLC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [plc::R](R) reader structure"]
-impl crate::Readable for PLC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [plc::W](W) writer structure"]
+#[doc = "`read()` method returns [`plc::R`](R) reader structure"]
+impl crate::Readable for PLC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`plc::W`](W) writer structure"]
 impl crate::Writable for PLC_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,41 +1,9 @@
 #[doc = "Register `DCI` reader"]
-pub struct R(crate::R<DCI_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DCI_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DCI_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DCI_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DCI_SPEC>;
 #[doc = "Register `DCI` writer"]
-pub struct W(crate::W<DCI_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DCI_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DCI_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DCI_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DCI_SPEC>;
 #[doc = "Field `SVIS` reader - Value Selector input selection"]
-pub type SVIS_R = crate::FieldReader<u8, SVIS_A>;
+pub type SVIS_R = crate::FieldReader<SVIS_A>;
 #[doc = "Value Selector input selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -79,10 +47,13 @@ impl From<SVIS_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for SVIS_A {
+    type Ux = u8;
+}
 impl SVIS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SVIS_A {
+    pub const fn variant(&self) -> SVIS_A {
         match self.bits {
             0 => SVIS_A::VALUE1,
             1 => SVIS_A::VALUE2,
@@ -103,189 +74,193 @@ impl SVIS_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "HRPWMx.SyIA"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == SVIS_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "HRPWMx.SyIB"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == SVIS_A::VALUE2
     }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[doc = "HRPWMx.SyIC"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
         *self == SVIS_A::VALUE3
     }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[doc = "HRPWMx.SyID"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
         *self == SVIS_A::VALUE4
     }
-    #[doc = "Checks if the value of the field is `VALUE5`"]
+    #[doc = "HRPWMx.SyIE"]
     #[inline(always)]
     pub fn is_value5(&self) -> bool {
         *self == SVIS_A::VALUE5
     }
-    #[doc = "Checks if the value of the field is `VALUE6`"]
+    #[doc = "HRPWMx.SyIF"]
     #[inline(always)]
     pub fn is_value6(&self) -> bool {
         *self == SVIS_A::VALUE6
     }
-    #[doc = "Checks if the value of the field is `VALUE7`"]
+    #[doc = "HRPWMx.SyIG"]
     #[inline(always)]
     pub fn is_value7(&self) -> bool {
         *self == SVIS_A::VALUE7
     }
-    #[doc = "Checks if the value of the field is `VALUE8`"]
+    #[doc = "HRPWMx.SyIH"]
     #[inline(always)]
     pub fn is_value8(&self) -> bool {
         *self == SVIS_A::VALUE8
     }
-    #[doc = "Checks if the value of the field is `VALUE9`"]
+    #[doc = "HRPWMx.SyII"]
     #[inline(always)]
     pub fn is_value9(&self) -> bool {
         *self == SVIS_A::VALUE9
     }
-    #[doc = "Checks if the value of the field is `VALUE10`"]
+    #[doc = "HRPWMx.SyIJ"]
     #[inline(always)]
     pub fn is_value10(&self) -> bool {
         *self == SVIS_A::VALUE10
     }
-    #[doc = "Checks if the value of the field is `VALUE11`"]
+    #[doc = "HRPWMx.SyIK"]
     #[inline(always)]
     pub fn is_value11(&self) -> bool {
         *self == SVIS_A::VALUE11
     }
-    #[doc = "Checks if the value of the field is `VALUE12`"]
+    #[doc = "HRPWMx.SyIL"]
     #[inline(always)]
     pub fn is_value12(&self) -> bool {
         *self == SVIS_A::VALUE12
     }
-    #[doc = "Checks if the value of the field is `VALUE13`"]
+    #[doc = "HRPWMx.SyIM"]
     #[inline(always)]
     pub fn is_value13(&self) -> bool {
         *self == SVIS_A::VALUE13
     }
-    #[doc = "Checks if the value of the field is `VALUE14`"]
+    #[doc = "HRPWMx.SyIN"]
     #[inline(always)]
     pub fn is_value14(&self) -> bool {
         *self == SVIS_A::VALUE14
     }
-    #[doc = "Checks if the value of the field is `VALUE15`"]
+    #[doc = "HRPWMx.SyIO"]
     #[inline(always)]
     pub fn is_value15(&self) -> bool {
         *self == SVIS_A::VALUE15
     }
-    #[doc = "Checks if the value of the field is `VALUE16`"]
+    #[doc = "HRPWMx.SyIP"]
     #[inline(always)]
     pub fn is_value16(&self) -> bool {
         *self == SVIS_A::VALUE16
     }
 }
 #[doc = "Field `SVIS` writer - Value Selector input selection"]
-pub type SVIS_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, DCI_SPEC, u8, SVIS_A, 4, O>;
-impl<'a, const O: u8> SVIS_W<'a, O> {
+pub type SVIS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4, SVIS_A>;
+impl<'a, REG> SVIS_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "HRPWMx.SyIA"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE1)
     }
     #[doc = "HRPWMx.SyIB"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE2)
     }
     #[doc = "HRPWMx.SyIC"]
     #[inline(always)]
-    pub fn value3(self) -> &'a mut W {
+    pub fn value3(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE3)
     }
     #[doc = "HRPWMx.SyID"]
     #[inline(always)]
-    pub fn value4(self) -> &'a mut W {
+    pub fn value4(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE4)
     }
     #[doc = "HRPWMx.SyIE"]
     #[inline(always)]
-    pub fn value5(self) -> &'a mut W {
+    pub fn value5(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE5)
     }
     #[doc = "HRPWMx.SyIF"]
     #[inline(always)]
-    pub fn value6(self) -> &'a mut W {
+    pub fn value6(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE6)
     }
     #[doc = "HRPWMx.SyIG"]
     #[inline(always)]
-    pub fn value7(self) -> &'a mut W {
+    pub fn value7(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE7)
     }
     #[doc = "HRPWMx.SyIH"]
     #[inline(always)]
-    pub fn value8(self) -> &'a mut W {
+    pub fn value8(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE8)
     }
     #[doc = "HRPWMx.SyII"]
     #[inline(always)]
-    pub fn value9(self) -> &'a mut W {
+    pub fn value9(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE9)
     }
     #[doc = "HRPWMx.SyIJ"]
     #[inline(always)]
-    pub fn value10(self) -> &'a mut W {
+    pub fn value10(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE10)
     }
     #[doc = "HRPWMx.SyIK"]
     #[inline(always)]
-    pub fn value11(self) -> &'a mut W {
+    pub fn value11(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE11)
     }
     #[doc = "HRPWMx.SyIL"]
     #[inline(always)]
-    pub fn value12(self) -> &'a mut W {
+    pub fn value12(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE12)
     }
     #[doc = "HRPWMx.SyIM"]
     #[inline(always)]
-    pub fn value13(self) -> &'a mut W {
+    pub fn value13(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE13)
     }
     #[doc = "HRPWMx.SyIN"]
     #[inline(always)]
-    pub fn value14(self) -> &'a mut W {
+    pub fn value14(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE14)
     }
     #[doc = "HRPWMx.SyIO"]
     #[inline(always)]
-    pub fn value15(self) -> &'a mut W {
+    pub fn value15(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE15)
     }
     #[doc = "HRPWMx.SyIP"]
     #[inline(always)]
-    pub fn value16(self) -> &'a mut W {
+    pub fn value16(self) -> &'a mut crate::W<REG> {
         self.variant(SVIS_A::VALUE16)
     }
 }
 #[doc = "Field `STRIS` reader - Slope generation start control input selection"]
-pub type STRIS_R = crate::FieldReader<u8, u8>;
+pub type STRIS_R = crate::FieldReader;
 #[doc = "Field `STRIS` writer - Slope generation start control input selection"]
-pub type STRIS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCI_SPEC, u8, u8, 4, O>;
+pub type STRIS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `STPIS` reader - Slope generation stop control input selection"]
-pub type STPIS_R = crate::FieldReader<u8, u8>;
+pub type STPIS_R = crate::FieldReader;
 #[doc = "Field `STPIS` writer - Slope generation stop control input selection"]
-pub type STPIS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCI_SPEC, u8, u8, 4, O>;
+pub type STPIS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TRGIS` reader - External conversion trigger input selection"]
-pub type TRGIS_R = crate::FieldReader<u8, u8>;
+pub type TRGIS_R = crate::FieldReader;
 #[doc = "Field `TRGIS` writer - External conversion trigger input selection"]
-pub type TRGIS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCI_SPEC, u8, u8, 4, O>;
+pub type TRGIS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `STIS` reader - External shadow request enable input selection"]
-pub type STIS_R = crate::FieldReader<u8, u8>;
+pub type STIS_R = crate::FieldReader;
 #[doc = "Field `STIS` writer - External shadow request enable input selection"]
-pub type STIS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCI_SPEC, u8, u8, 4, O>;
+pub type STIS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SCS` reader - Slope generation clock selection"]
-pub type SCS_R = crate::FieldReader<u8, SCS_A>;
+pub type SCS_R = crate::FieldReader<SCS_A>;
 #[doc = "Slope generation clock selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -305,10 +280,13 @@ impl From<SCS_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for SCS_A {
+    type Ux = u8;
+}
 impl SCS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SCS_A {
+    pub const fn variant(&self) -> SCS_A {
         match self.bits {
             0 => SCS_A::VALUE1,
             1 => SCS_A::VALUE2,
@@ -317,48 +295,52 @@ impl SCS_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "HRPWMx.MCLK (Module clock is used)"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == SCS_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "HRPWMx.ECLKA (External clock is used)"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == SCS_A::VALUE2
     }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[doc = "HRPWMx.ECLKB (External clock is used)"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
         *self == SCS_A::VALUE3
     }
-    #[doc = "Checks if the value of the field is `VALUE4`"]
+    #[doc = "HRPWMx.ECLKC (External clock is used)"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
         *self == SCS_A::VALUE4
     }
 }
 #[doc = "Field `SCS` writer - Slope generation clock selection"]
-pub type SCS_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, DCI_SPEC, u8, SCS_A, 2, O>;
-impl<'a, const O: u8> SCS_W<'a, O> {
+pub type SCS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, SCS_A>;
+impl<'a, REG> SCS_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "HRPWMx.MCLK (Module clock is used)"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(SCS_A::VALUE1)
     }
     #[doc = "HRPWMx.ECLKA (External clock is used)"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(SCS_A::VALUE2)
     }
     #[doc = "HRPWMx.ECLKB (External clock is used)"]
     #[inline(always)]
-    pub fn value3(self) -> &'a mut W {
+    pub fn value3(self) -> &'a mut crate::W<REG> {
         self.variant(SCS_A::VALUE3)
     }
     #[doc = "HRPWMx.ECLKC (External clock is used)"]
     #[inline(always)]
-    pub fn value4(self) -> &'a mut W {
+    pub fn value4(self) -> &'a mut crate::W<REG> {
         self.variant(SCS_A::VALUE4)
     }
 }
@@ -398,58 +380,59 @@ impl W {
     #[doc = "Bits 0:3 - Value Selector input selection"]
     #[inline(always)]
     #[must_use]
-    pub fn svis(&mut self) -> SVIS_W<0> {
-        SVIS_W::new(self)
+    pub fn svis(&mut self) -> SVIS_W<DCI_SPEC> {
+        SVIS_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Slope generation start control input selection"]
     #[inline(always)]
     #[must_use]
-    pub fn stris(&mut self) -> STRIS_W<4> {
-        STRIS_W::new(self)
+    pub fn stris(&mut self) -> STRIS_W<DCI_SPEC> {
+        STRIS_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Slope generation stop control input selection"]
     #[inline(always)]
     #[must_use]
-    pub fn stpis(&mut self) -> STPIS_W<8> {
-        STPIS_W::new(self)
+    pub fn stpis(&mut self) -> STPIS_W<DCI_SPEC> {
+        STPIS_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - External conversion trigger input selection"]
     #[inline(always)]
     #[must_use]
-    pub fn trgis(&mut self) -> TRGIS_W<12> {
-        TRGIS_W::new(self)
+    pub fn trgis(&mut self) -> TRGIS_W<DCI_SPEC> {
+        TRGIS_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - External shadow request enable input selection"]
     #[inline(always)]
     #[must_use]
-    pub fn stis(&mut self) -> STIS_W<16> {
-        STIS_W::new(self)
+    pub fn stis(&mut self) -> STIS_W<DCI_SPEC> {
+        STIS_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - Slope generation clock selection"]
     #[inline(always)]
     #[must_use]
-    pub fn scs(&mut self) -> SCS_W<20> {
-        SCS_W::new(self)
+    pub fn scs(&mut self) -> SCS_W<DCI_SPEC> {
+        SCS_W::new(self, 20)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "External input selection\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dci](index.html) module"]
+#[doc = "External input selection\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dci::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dci::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DCI_SPEC;
 impl crate::RegisterSpec for DCI_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dci::R](R) reader structure"]
-impl crate::Readable for DCI_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dci::W](W) writer structure"]
+#[doc = "`read()` method returns [`dci::R`](R) reader structure"]
+impl crate::Readable for DCI_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dci::W`](W) writer structure"]
 impl crate::Writable for DCI_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

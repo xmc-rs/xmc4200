@@ -1,18 +1,5 @@
 #[doc = "Register `SRRAW` reader"]
-pub struct R(crate::R<SRRAW_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SRRAW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SRRAW_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SRRAW_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SRRAW_SPEC>;
 #[doc = "Field `PRWARN` reader - WDT pre-warning Interrupt Status Before Masking"]
 pub type PRWARN_R = crate::BitReader<PRWARN_A>;
 #[doc = "WDT pre-warning Interrupt Status Before Masking\n\nValue on reset: 0"]
@@ -32,29 +19,29 @@ impl From<PRWARN_A> for bool {
 impl PRWARN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PRWARN_A {
+    pub const fn variant(&self) -> PRWARN_A {
         match self.bits {
             false => PRWARN_A::VALUE1,
             true => PRWARN_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Inactive"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == PRWARN_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Active"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == PRWARN_A::VALUE2
     }
 }
 #[doc = "Field `PI` reader - RTC Raw Periodic Interrupt Status Before Masking"]
-pub type PI_R = crate::BitReader<bool>;
+pub type PI_R = crate::BitReader;
 #[doc = "Field `AI` reader - RTC Raw Alarm Interrupt Status Before Masking"]
-pub type AI_R = crate::BitReader<bool>;
+pub type AI_R = crate::BitReader;
 #[doc = "Field `DLROVR` reader - DLR Request Overrun Interrupt Status Before Masking"]
-pub type DLROVR_R = crate::BitReader<bool>;
+pub type DLROVR_R = crate::BitReader;
 #[doc = "Field `LPACCR` reader - LPACLR Mirror Register Update Status Before Masking"]
 pub type LPACCR_R = crate::BitReader<LPACCR_A>;
 #[doc = "LPACLR Mirror Register Update Status Before Masking\n\nValue on reset: 0"]
@@ -74,18 +61,18 @@ impl From<LPACCR_A> for bool {
 impl LPACCR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LPACCR_A {
+    pub const fn variant(&self) -> LPACCR_A {
         match self.bits {
             false => LPACCR_A::VALUE1,
             true => LPACCR_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == LPACCR_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == LPACCR_A::VALUE2
@@ -110,18 +97,18 @@ impl From<LPACTH0_A> for bool {
 impl LPACTH0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LPACTH0_A {
+    pub const fn variant(&self) -> LPACTH0_A {
         match self.bits {
             false => LPACTH0_A::VALUE1,
             true => LPACTH0_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == LPACTH0_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == LPACTH0_A::VALUE2
@@ -146,18 +133,18 @@ impl From<LPACTH1_A> for bool {
 impl LPACTH1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LPACTH1_A {
+    pub const fn variant(&self) -> LPACTH1_A {
         match self.bits {
             false => LPACTH1_A::VALUE1,
             true => LPACTH1_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == LPACTH1_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == LPACTH1_A::VALUE2
@@ -182,18 +169,18 @@ impl From<LPACST_A> for bool {
 impl LPACST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LPACST_A {
+    pub const fn variant(&self) -> LPACST_A {
         match self.bits {
             false => LPACST_A::VALUE1,
             true => LPACST_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == LPACST_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == LPACST_A::VALUE2
@@ -218,18 +205,18 @@ impl From<LPACCLR_A> for bool {
 impl LPACCLR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LPACCLR_A {
+    pub const fn variant(&self) -> LPACCLR_A {
         match self.bits {
             false => LPACCLR_A::VALUE1,
             true => LPACCLR_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == LPACCLR_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == LPACCLR_A::VALUE2
@@ -254,18 +241,18 @@ impl From<LPACSET_A> for bool {
 impl LPACSET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LPACSET_A {
+    pub const fn variant(&self) -> LPACSET_A {
         match self.bits {
             false => LPACSET_A::VALUE1,
             true => LPACSET_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == LPACSET_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == LPACSET_A::VALUE2
@@ -290,18 +277,18 @@ impl From<HINTST_A> for bool {
 impl HINTST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HINTST_A {
+    pub const fn variant(&self) -> HINTST_A {
         match self.bits {
             false => HINTST_A::VALUE1,
             true => HINTST_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == HINTST_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == HINTST_A::VALUE2
@@ -326,18 +313,18 @@ impl From<HINTCLR_A> for bool {
 impl HINTCLR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HINTCLR_A {
+    pub const fn variant(&self) -> HINTCLR_A {
         match self.bits {
             false => HINTCLR_A::VALUE1,
             true => HINTCLR_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == HINTCLR_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == HINTCLR_A::VALUE2
@@ -362,18 +349,18 @@ impl From<HINTSET_A> for bool {
 impl HINTSET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HINTSET_A {
+    pub const fn variant(&self) -> HINTSET_A {
         match self.bits {
             false => HINTSET_A::VALUE1,
             true => HINTSET_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == HINTSET_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == HINTSET_A::VALUE2
@@ -398,18 +385,18 @@ impl From<HDCLR_A> for bool {
 impl HDCLR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HDCLR_A {
+    pub const fn variant(&self) -> HDCLR_A {
         match self.bits {
             false => HDCLR_A::VALUE1,
             true => HDCLR_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == HDCLR_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == HDCLR_A::VALUE2
@@ -434,18 +421,18 @@ impl From<HDSET_A> for bool {
 impl HDSET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HDSET_A {
+    pub const fn variant(&self) -> HDSET_A {
         match self.bits {
             false => HDSET_A::VALUE1,
             true => HDSET_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == HDSET_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == HDSET_A::VALUE2
@@ -470,18 +457,18 @@ impl From<HDCR_A> for bool {
 impl HDCR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HDCR_A {
+    pub const fn variant(&self) -> HDCR_A {
         match self.bits {
             false => HDCR_A::VALUE1,
             true => HDCR_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == HDCR_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == HDCR_A::VALUE2
@@ -506,18 +493,18 @@ impl From<OSCSICTRL_A> for bool {
 impl OSCSICTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OSCSICTRL_A {
+    pub const fn variant(&self) -> OSCSICTRL_A {
         match self.bits {
             false => OSCSICTRL_A::VALUE1,
             true => OSCSICTRL_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == OSCSICTRL_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == OSCSICTRL_A::VALUE2
@@ -542,18 +529,18 @@ impl From<OSCULCTRL_A> for bool {
 impl OSCULCTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OSCULCTRL_A {
+    pub const fn variant(&self) -> OSCULCTRL_A {
         match self.bits {
             false => OSCULCTRL_A::VALUE1,
             true => OSCULCTRL_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == OSCULCTRL_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == OSCULCTRL_A::VALUE2
@@ -578,18 +565,18 @@ impl From<RTC_CTR_A> for bool {
 impl RTC_CTR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RTC_CTR_A {
+    pub const fn variant(&self) -> RTC_CTR_A {
         match self.bits {
             false => RTC_CTR_A::VALUE1,
             true => RTC_CTR_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == RTC_CTR_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == RTC_CTR_A::VALUE2
@@ -614,18 +601,18 @@ impl From<RTC_ATIM0_A> for bool {
 impl RTC_ATIM0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RTC_ATIM0_A {
+    pub const fn variant(&self) -> RTC_ATIM0_A {
         match self.bits {
             false => RTC_ATIM0_A::VALUE1,
             true => RTC_ATIM0_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == RTC_ATIM0_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == RTC_ATIM0_A::VALUE2
@@ -650,18 +637,18 @@ impl From<RTC_ATIM1_A> for bool {
 impl RTC_ATIM1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RTC_ATIM1_A {
+    pub const fn variant(&self) -> RTC_ATIM1_A {
         match self.bits {
             false => RTC_ATIM1_A::VALUE1,
             true => RTC_ATIM1_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == RTC_ATIM1_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == RTC_ATIM1_A::VALUE2
@@ -686,18 +673,18 @@ impl From<RTC_TIM0_A> for bool {
 impl RTC_TIM0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RTC_TIM0_A {
+    pub const fn variant(&self) -> RTC_TIM0_A {
         match self.bits {
             false => RTC_TIM0_A::VALUE1,
             true => RTC_TIM0_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == RTC_TIM0_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == RTC_TIM0_A::VALUE2
@@ -722,18 +709,18 @@ impl From<RTC_TIM1_A> for bool {
 impl RTC_TIM1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RTC_TIM1_A {
+    pub const fn variant(&self) -> RTC_TIM1_A {
         match self.bits {
             false => RTC_TIM1_A::VALUE1,
             true => RTC_TIM1_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == RTC_TIM1_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == RTC_TIM1_A::VALUE2
@@ -758,18 +745,18 @@ impl From<RMX_A> for bool {
 impl RMX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RMX_A {
+    pub const fn variant(&self) -> RMX_A {
         match self.bits {
             false => RMX_A::VALUE1,
             true => RMX_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Not updated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == RMX_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Update completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == RMX_A::VALUE2
@@ -897,15 +884,13 @@ impl R {
         RMX_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
-#[doc = "SCU Raw Service Request Status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [srraw](index.html) module"]
+#[doc = "SCU Raw Service Request Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`srraw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SRRAW_SPEC;
 impl crate::RegisterSpec for SRRAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [srraw::R](R) reader structure"]
-impl crate::Readable for SRRAW_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`srraw::R`](R) reader structure"]
+impl crate::Readable for SRRAW_SPEC {}
 #[doc = "`reset()` method sets SRRAW to value 0"]
 impl crate::Resettable for SRRAW_SPEC {
     const RESET_VALUE: Self::Ux = 0;
