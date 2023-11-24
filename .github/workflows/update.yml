@@ -10,20 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.1
-      - uses: xmc-rs/cargo@v1.0.0
-        with:
-          command: install
-          args: svd2rust
-      - uses: xmc-rs/cargo@v1.0.0
-        with:
-          command: install
-          args: form
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - run:  cargo install svd2rust
+      - run:  cargo install form
       - uses: oleksiyrudenko/gha-git-credentials@v2.1.1
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
       - run: |
           rm -r src/
-          svd2rust -i XMC4700.svd
+          svd2rust -i XMC4200.svd
           mkdir src
           form -i lib.rs -o src/
           cargo fmt
