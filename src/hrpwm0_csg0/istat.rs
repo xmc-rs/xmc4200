@@ -1,18 +1,5 @@
 #[doc = "Register `ISTAT` reader"]
-pub struct R(crate::R<ISTAT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ISTAT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ISTAT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ISTAT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ISTAT_SPEC>;
 #[doc = "Field `VLS1S` reader - Value switch from CSGyDSV1 to CSGyDSV2 interrupt status"]
 pub type VLS1S_R = crate::BitReader<VLS1S_A>;
 #[doc = "Value switch from CSGyDSV1 to CSGyDSV2 interrupt status\n\nValue on reset: 0"]
@@ -32,18 +19,18 @@ impl From<VLS1S_A> for bool {
 impl VLS1S_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> VLS1S_A {
+    pub const fn variant(&self) -> VLS1S_A {
         match self.bits {
             false => VLS1S_A::VALUE1,
             true => VLS1S_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Value switch not detected"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == VLS1S_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Value switch detected"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == VLS1S_A::VALUE2
@@ -68,18 +55,18 @@ impl From<VLS2S_A> for bool {
 impl VLS2S_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> VLS2S_A {
+    pub const fn variant(&self) -> VLS2S_A {
         match self.bits {
             false => VLS2S_A::VALUE1,
             true => VLS2S_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Value switch not detected"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == VLS2S_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Value switch detected"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == VLS2S_A::VALUE2
@@ -104,18 +91,18 @@ impl From<TRGSS_A> for bool {
 impl TRGSS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TRGSS_A {
+    pub const fn variant(&self) -> TRGSS_A {
         match self.bits {
             false => TRGSS_A::VALUE1,
             true => TRGSS_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Conversion trigger was not generated"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == TRGSS_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Conversion trigger was generated"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == TRGSS_A::VALUE2
@@ -140,18 +127,18 @@ impl From<STRSS_A> for bool {
 impl STRSS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STRSS_A {
+    pub const fn variant(&self) -> STRSS_A {
         match self.bits {
             false => STRSS_A::VALUE1,
             true => STRSS_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Start trigger not detected"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == STRSS_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Start trigger detected"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == STRSS_A::VALUE2
@@ -176,18 +163,18 @@ impl From<STPSS_A> for bool {
 impl STPSS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STPSS_A {
+    pub const fn variant(&self) -> STPSS_A {
         match self.bits {
             false => STPSS_A::VALUE1,
             true => STPSS_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Stop trigger not detected"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == STPSS_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Stop trigger detected"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == STPSS_A::VALUE2
@@ -212,18 +199,18 @@ impl From<STDS_A> for bool {
 impl STDS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STDS_A {
+    pub const fn variant(&self) -> STDS_A {
         match self.bits {
             false => STDS_A::VALUE1,
             true => STDS_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Shadow transfer was not performed"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == STDS_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Shadow transfer was performed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == STDS_A::VALUE2
@@ -248,18 +235,18 @@ impl From<CRSS_A> for bool {
 impl CRSS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CRSS_A {
+    pub const fn variant(&self) -> CRSS_A {
         match self.bits {
             false => CRSS_A::VALUE1,
             true => CRSS_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Comparator output LOW to HIGH transition not detected"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == CRSS_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Comparator output LOW to HIGH transition detected"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == CRSS_A::VALUE2
@@ -284,18 +271,18 @@ impl From<CFSS_A> for bool {
 impl CFSS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CFSS_A {
+    pub const fn variant(&self) -> CFSS_A {
         match self.bits {
             false => CFSS_A::VALUE1,
             true => CFSS_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Comparator output HIGH to LOW transition not detected"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == CFSS_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Comparator output HIGH to LOW transition detected"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == CFSS_A::VALUE2
@@ -320,18 +307,18 @@ impl From<CSES_A> for bool {
 impl CSES_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CSES_A {
+    pub const fn variant(&self) -> CSES_A {
         match self.bits {
             false => CSES_A::VALUE1,
             true => CSES_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Comparator output has been set to the clamped state"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == CSES_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Comparator output has not been set to the clamped state"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == CSES_A::VALUE2
@@ -384,15 +371,13 @@ impl R {
         CSES_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
-#[doc = "Service request status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [istat](index.html) module"]
+#[doc = "Service request status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`istat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ISTAT_SPEC;
 impl crate::RegisterSpec for ISTAT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [istat::R](R) reader structure"]
-impl crate::Readable for ISTAT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`istat::R`](R) reader structure"]
+impl crate::Readable for ISTAT_SPEC {}
 #[doc = "`reset()` method sets ISTAT to value 0"]
 impl crate::Resettable for ISTAT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

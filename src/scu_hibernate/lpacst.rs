@@ -1,18 +1,5 @@
 #[doc = "Register `LPACST` reader"]
-pub struct R(crate::R<LPACST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LPACST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LPACST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LPACST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LPACST_SPEC>;
 #[doc = "Field `VBATSCMP` reader - Trigger VBAT Single Compare Operation Status"]
 pub type VBATSCMP_R = crate::BitReader<VBATSCMP_A>;
 #[doc = "Trigger VBAT Single Compare Operation Status\n\nValue on reset: 0"]
@@ -32,18 +19,18 @@ impl From<VBATSCMP_A> for bool {
 impl VBATSCMP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> VBATSCMP_A {
+    pub const fn variant(&self) -> VBATSCMP_A {
         match self.bits {
             false => VBATSCMP_A::VALUE1,
             true => VBATSCMP_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Ready to start new compare operation"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == VBATSCMP_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Compare operation completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == VBATSCMP_A::VALUE2
@@ -68,18 +55,18 @@ impl From<AHIBIO0SCMP_A> for bool {
 impl AHIBIO0SCMP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> AHIBIO0SCMP_A {
+    pub const fn variant(&self) -> AHIBIO0SCMP_A {
         match self.bits {
             false => AHIBIO0SCMP_A::VALUE1,
             true => AHIBIO0SCMP_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Ready to start new compare operation"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == AHIBIO0SCMP_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Compare operation completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == AHIBIO0SCMP_A::VALUE2
@@ -104,18 +91,18 @@ impl From<VBATVAL_A> for bool {
 impl VBATVAL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> VBATVAL_A {
+    pub const fn variant(&self) -> VBATVAL_A {
         match self.bits {
             false => VBATVAL_A::VALUE1,
             true => VBATVAL_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Below programmed threshold"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == VBATVAL_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Above programmed threshold"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == VBATVAL_A::VALUE2
@@ -140,18 +127,18 @@ impl From<AHIBIO0VAL_A> for bool {
 impl AHIBIO0VAL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> AHIBIO0VAL_A {
+    pub const fn variant(&self) -> AHIBIO0VAL_A {
         match self.bits {
             false => AHIBIO0VAL_A::VALUE1,
             true => AHIBIO0VAL_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Below programmed threshold"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == AHIBIO0VAL_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Above programmed threshold"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == AHIBIO0VAL_A::VALUE2
@@ -179,15 +166,13 @@ impl R {
         AHIBIO0VAL_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
-#[doc = "Hibernate Analog Control State Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lpacst](index.html) module"]
+#[doc = "Hibernate Analog Control State Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lpacst::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LPACST_SPEC;
 impl crate::RegisterSpec for LPACST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lpacst::R](R) reader structure"]
-impl crate::Readable for LPACST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`lpacst::R`](R) reader structure"]
+impl crate::Readable for LPACST_SPEC {}
 #[doc = "`reset()` method sets LPACST to value 0"]
 impl crate::Resettable for LPACST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

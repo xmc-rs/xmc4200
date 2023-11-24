@@ -1,18 +1,5 @@
 #[doc = "Register `HRCSTSG` reader"]
-pub struct R(crate::R<HRCSTSG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HRCSTSG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HRCSTSG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HRCSTSG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HRCSTSG_SPEC>;
 #[doc = "Field `H0STE` reader - HRC0 high resolution values shadow transfer status"]
 pub type H0STE_R = crate::BitReader<H0STE_A>;
 #[doc = "HRC0 high resolution values shadow transfer status\n\nValue on reset: 0"]
@@ -32,18 +19,18 @@ impl From<H0STE_A> for bool {
 impl H0STE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> H0STE_A {
+    pub const fn variant(&self) -> H0STE_A {
         match self.bits {
             false => H0STE_A::VALUE1,
             true => H0STE_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == H0STE_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == H0STE_A::VALUE2
@@ -68,18 +55,18 @@ impl From<H0DSTE_A> for bool {
 impl H0DSTE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> H0DSTE_A {
+    pub const fn variant(&self) -> H0DSTE_A {
         match self.bits {
             false => H0DSTE_A::VALUE1,
             true => H0DSTE_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == H0DSTE_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == H0DSTE_A::VALUE2
@@ -104,18 +91,18 @@ impl From<H1STE_A> for bool {
 impl H1STE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> H1STE_A {
+    pub const fn variant(&self) -> H1STE_A {
         match self.bits {
             false => H1STE_A::VALUE1,
             true => H1STE_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == H1STE_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == H1STE_A::VALUE2
@@ -140,18 +127,18 @@ impl From<H1DSTE_A> for bool {
 impl H1DSTE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> H1DSTE_A {
+    pub const fn variant(&self) -> H1DSTE_A {
         match self.bits {
             false => H1DSTE_A::VALUE1,
             true => H1DSTE_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == H1DSTE_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == H1DSTE_A::VALUE2
@@ -176,18 +163,18 @@ impl From<H2STE_A> for bool {
 impl H2STE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> H2STE_A {
+    pub const fn variant(&self) -> H2STE_A {
         match self.bits {
             false => H2STE_A::VALUE1,
             true => H2STE_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == H2STE_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == H2STE_A::VALUE2
@@ -212,18 +199,18 @@ impl From<H2DSTE_A> for bool {
 impl H2DSTE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> H2DSTE_A {
+    pub const fn variant(&self) -> H2DSTE_A {
         match self.bits {
             false => H2DSTE_A::VALUE1,
             true => H2DSTE_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == H2DSTE_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == H2DSTE_A::VALUE2
@@ -248,18 +235,18 @@ impl From<H3STE_A> for bool {
 impl H3STE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> H3STE_A {
+    pub const fn variant(&self) -> H3STE_A {
         match self.bits {
             false => H3STE_A::VALUE1,
             true => H3STE_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == H3STE_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Shadow transfer pending for HRCyCR1This register holds the value for the rising edge high resolution signal placement. the update of this value should be done via the associated shadow register, . and HRCyCR2This register holds the value for the falling edge high resolution signal placement. the update of this value should be done via the associated shadow register, . values"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == H3STE_A::VALUE2
@@ -284,18 +271,18 @@ impl From<H3DSTE_A> for bool {
 impl H3DSTE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> H3DSTE_A {
+    pub const fn variant(&self) -> H3DSTE_A {
         match self.bits {
             false => H3DSTE_A::VALUE1,
             true => H3DSTE_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == H3DSTE_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Shadow transfer pending for HRCyDCRThis register holds the dead time value that is going to be inserted whenever a rising transition on the output latch is sensed. and HRCyDCFThis register holds the dead time value that is going to be inserted whenever a falling transition on the output latch is sensed. values"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == H3DSTE_A::VALUE2
@@ -343,15 +330,13 @@ impl R {
         H3DSTE_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
-#[doc = "Global HRC shadow transfer status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hrcstsg](index.html) module"]
+#[doc = "Global HRC shadow transfer status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hrcstsg::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HRCSTSG_SPEC;
 impl crate::RegisterSpec for HRCSTSG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hrcstsg::R](R) reader structure"]
-impl crate::Readable for HRCSTSG_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`hrcstsg::R`](R) reader structure"]
+impl crate::Readable for HRCSTSG_SPEC {}
 #[doc = "`reset()` method sets HRCSTSG to value 0"]
 impl crate::Resettable for HRCSTSG_SPEC {
     const RESET_VALUE: Self::Ux = 0;

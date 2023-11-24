@@ -1,18 +1,5 @@
 #[doc = "Register `CSGFSG` reader"]
-pub struct R(crate::R<CSGFSG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CSGFSG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CSGFSG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CSGFSG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CSGFSG_SPEC>;
 #[doc = "Field `S0RB` reader - DAC0 slope generation status"]
 pub type S0RB_R = crate::BitReader<S0RB_A>;
 #[doc = "DAC0 slope generation status\n\nValue on reset: 0"]
@@ -32,18 +19,18 @@ impl From<S0RB_A> for bool {
 impl S0RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> S0RB_A {
+    pub const fn variant(&self) -> S0RB_A {
         match self.bits {
             false => S0RB_A::VALUE1,
             true => S0RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Slope generation is stopped."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == S0RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Slope generation is running."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == S0RB_A::VALUE2
@@ -68,18 +55,18 @@ impl From<P0RB_A> for bool {
 impl P0RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> P0RB_A {
+    pub const fn variant(&self) -> P0RB_A {
         match self.bits {
             false => P0RB_A::VALUE1,
             true => P0RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Prescaler is stopped. The clock used for the slope generation is halted and therefore the slope is frozen."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == P0RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Prescaler is running."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == P0RB_A::VALUE2
@@ -104,18 +91,18 @@ impl From<S1RB_A> for bool {
 impl S1RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> S1RB_A {
+    pub const fn variant(&self) -> S1RB_A {
         match self.bits {
             false => S1RB_A::VALUE1,
             true => S1RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Slope generation is stopped."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == S1RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Slope generation is running."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == S1RB_A::VALUE2
@@ -140,18 +127,18 @@ impl From<P1RB_A> for bool {
 impl P1RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> P1RB_A {
+    pub const fn variant(&self) -> P1RB_A {
         match self.bits {
             false => P1RB_A::VALUE1,
             true => P1RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Prescaler is stopped. The clock used for the slope generation is halted and therefore the slope is frozen."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == P1RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Prescaler is running."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == P1RB_A::VALUE2
@@ -176,18 +163,18 @@ impl From<S2RB_A> for bool {
 impl S2RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> S2RB_A {
+    pub const fn variant(&self) -> S2RB_A {
         match self.bits {
             false => S2RB_A::VALUE1,
             true => S2RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Slope generation is stopped."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == S2RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Slope generation is running."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == S2RB_A::VALUE2
@@ -212,18 +199,18 @@ impl From<P2RB_A> for bool {
 impl P2RB_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> P2RB_A {
+    pub const fn variant(&self) -> P2RB_A {
         match self.bits {
             false => P2RB_A::VALUE1,
             true => P2RB_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "Prescaler is stopped. The clock used for the slope generation is halted and therefore the slope is frozen."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == P2RB_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "Prescaler is running."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == P2RB_A::VALUE2
@@ -261,15 +248,13 @@ impl R {
         P2RB_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
-#[doc = "Global CSG slope/prescaler status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csgfsg](index.html) module"]
+#[doc = "Global CSG slope/prescaler status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`csgfsg::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CSGFSG_SPEC;
 impl crate::RegisterSpec for CSGFSG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [csgfsg::R](R) reader structure"]
-impl crate::Readable for CSGFSG_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`csgfsg::R`](R) reader structure"]
+impl crate::Readable for CSGFSG_SPEC {}
 #[doc = "`reset()` method sets CSGFSG to value 0"]
 impl crate::Resettable for CSGFSG_SPEC {
     const RESET_VALUE: Self::Ux = 0;

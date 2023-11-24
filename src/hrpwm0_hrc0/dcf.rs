@@ -1,20 +1,7 @@
 #[doc = "Register `DCF` reader"]
-pub struct R(crate::R<DCF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DCF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DCF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DCF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DCF_SPEC>;
 #[doc = "Field `DTFV` reader - Dead time falling value"]
-pub type DTFV_R = crate::FieldReader<u16, u16>;
+pub type DTFV_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - Dead time falling value"]
     #[inline(always)]
@@ -22,15 +9,13 @@ impl R {
         DTFV_R::new((self.bits & 0xffff) as u16)
     }
 }
-#[doc = "HRC dead time falling value\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcf](index.html) module"]
+#[doc = "HRC dead time falling value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dcf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DCF_SPEC;
 impl crate::RegisterSpec for DCF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dcf::R](R) reader structure"]
-impl crate::Readable for DCF_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`dcf::R`](R) reader structure"]
+impl crate::Readable for DCF_SPEC {}
 #[doc = "`reset()` method sets DCF to value 0x01"]
 impl crate::Resettable for DCF_SPEC {
     const RESET_VALUE: Self::Ux = 0x01;

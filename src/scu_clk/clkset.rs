@@ -1,24 +1,5 @@
 #[doc = "Register `CLKSET` writer"]
-pub struct W(crate::W<CLKSET_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLKSET_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLKSET_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLKSET_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CLKSET_SPEC>;
 #[doc = "USB Clock Enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USBCEN_AW {
@@ -34,16 +15,19 @@ impl From<USBCEN_AW> for bool {
     }
 }
 #[doc = "Field `USBCEN` writer - USB Clock Enable"]
-pub type USBCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLKSET_SPEC, USBCEN_AW, O>;
-impl<'a, const O: u8> USBCEN_W<'a, O> {
+pub type USBCEN_W<'a, REG> = crate::BitWriter<'a, REG, USBCEN_AW>;
+impl<'a, REG> USBCEN_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No effect"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(USBCEN_AW::VALUE1)
     }
     #[doc = "Enable"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(USBCEN_AW::VALUE2)
     }
 }
@@ -62,16 +46,19 @@ impl From<CCUCEN_AW> for bool {
     }
 }
 #[doc = "Field `CCUCEN` writer - CCU Clock Enable"]
-pub type CCUCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLKSET_SPEC, CCUCEN_AW, O>;
-impl<'a, const O: u8> CCUCEN_W<'a, O> {
+pub type CCUCEN_W<'a, REG> = crate::BitWriter<'a, REG, CCUCEN_AW>;
+impl<'a, REG> CCUCEN_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No effect"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(CCUCEN_AW::VALUE1)
     }
     #[doc = "Enable"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(CCUCEN_AW::VALUE2)
     }
 }
@@ -90,16 +77,19 @@ impl From<WDTCEN_AW> for bool {
     }
 }
 #[doc = "Field `WDTCEN` writer - WDT Clock Enable"]
-pub type WDTCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLKSET_SPEC, WDTCEN_AW, O>;
-impl<'a, const O: u8> WDTCEN_W<'a, O> {
+pub type WDTCEN_W<'a, REG> = crate::BitWriter<'a, REG, WDTCEN_AW>;
+impl<'a, REG> WDTCEN_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No effect"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(WDTCEN_AW::VALUE1)
     }
     #[doc = "Enable"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(WDTCEN_AW::VALUE2)
     }
 }
@@ -107,36 +97,39 @@ impl W {
     #[doc = "Bit 0 - USB Clock Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn usbcen(&mut self) -> USBCEN_W<0> {
-        USBCEN_W::new(self)
+    pub fn usbcen(&mut self) -> USBCEN_W<CLKSET_SPEC> {
+        USBCEN_W::new(self, 0)
     }
     #[doc = "Bit 4 - CCU Clock Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ccucen(&mut self) -> CCUCEN_W<4> {
-        CCUCEN_W::new(self)
+    pub fn ccucen(&mut self) -> CCUCEN_W<CLKSET_SPEC> {
+        CCUCEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - WDT Clock Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn wdtcen(&mut self) -> WDTCEN_W<5> {
-        WDTCEN_W::new(self)
+    pub fn wdtcen(&mut self) -> WDTCEN_W<CLKSET_SPEC> {
+        WDTCEN_W::new(self, 5)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "CLK Set Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clkset](index.html) module"]
+#[doc = "CLK Set Register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkset::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLKSET_SPEC;
 impl crate::RegisterSpec for CLKSET_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [clkset::W](W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [`clkset::W`](W) writer structure"]
 impl crate::Writable for CLKSET_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
