@@ -46,7 +46,6 @@ jobs:
         id: release
         with:
           release-type: rust
-          skip-github-pull-request: true
 
   publish:
     name: Publish to crates.io
