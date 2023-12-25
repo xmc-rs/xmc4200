@@ -21,7 +21,8 @@ optional = true
 version = "0.7.3"
 
 [features]
+default = ["critical-section", "rt"]
 rt = ["cortex-m-rt/device"]
 
 [package.metadata.docs.rs]
-features = ['rt']
+features = ['default']
