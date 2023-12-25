@@ -9,16 +9,13 @@ repository = "https://github.com/xmc-rs/xmc4200"
 keywords = ["cortex-m", "xmc4x", "no_std", "svd2rust", "embedded"]
 documentation = "https://docs.rs/xmc4200/"
 categories = ["embedded", "no-std"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 cortex-m = "0.7.7"
+cortex-m-rt = { version = "0.7.3", optional = true}
 critical-section = { version = "1.1.2", optional = true }
 vcell = "0.1.3"
-
-[dependencies.cortex-m-rt]
-optional = true
-version = "0.7.3"
 
 [features]
 default = ["critical-section", "rt"]
