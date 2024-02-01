@@ -40,10 +40,10 @@ impl crate::RegisterSpec for SPC_SPEC {
 impl crate::Readable for SPC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spc::W`](W) writer structure"]
 impl crate::Writable for SPC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPC to value 0"]
 impl crate::Resettable for SPC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

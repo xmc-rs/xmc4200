@@ -18,5 +18,5 @@ impl crate::RegisterSpec for PC_SPEC {
 impl crate::Readable for PC_SPEC {}
 #[doc = "`reset()` method sets PC to value 0"]
 impl crate::Resettable for PC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

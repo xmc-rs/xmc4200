@@ -18,5 +18,5 @@ impl crate::RegisterSpec for DCR_SPEC {
 impl crate::Readable for DCR_SPEC {}
 #[doc = "`reset()` method sets DCR to value 0x01"]
 impl crate::Resettable for DCR_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01;
+    const RESET_VALUE: u32 = 0x01;
 }

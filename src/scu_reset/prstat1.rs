@@ -216,5 +216,5 @@ impl crate::RegisterSpec for PRSTAT1_SPEC {
 impl crate::Readable for PRSTAT1_SPEC {}
 #[doc = "`reset()` method sets PRSTAT1 to value 0xb8"]
 impl crate::Resettable for PRSTAT1_SPEC {
-    const RESET_VALUE: Self::Ux = 0xb8;
+    const RESET_VALUE: u32 = 0xb8;
 }

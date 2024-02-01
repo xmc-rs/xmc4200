@@ -339,5 +339,5 @@ impl crate::RegisterSpec for HRCSTSG_SPEC {
 impl crate::Readable for HRCSTSG_SPEC {}
 #[doc = "`reset()` method sets HRCSTSG to value 0"]
 impl crate::Resettable for HRCSTSG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

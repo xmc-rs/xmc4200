@@ -1076,10 +1076,10 @@ impl crate::RegisterSpec for SC_SPEC {
 impl crate::Readable for SC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sc::W`](W) writer structure"]
 impl crate::Writable for SC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SC to value 0"]
 impl crate::Resettable for SC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }
