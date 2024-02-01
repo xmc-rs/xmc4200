@@ -52,5 +52,5 @@ impl crate::RegisterSpec for MIRRALLSTAT_SPEC {
 impl crate::Readable for MIRRALLSTAT_SPEC {}
 #[doc = "`reset()` method sets MIRRALLSTAT to value 0"]
 impl crate::Resettable for MIRRALLSTAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

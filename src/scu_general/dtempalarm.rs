@@ -93,5 +93,5 @@ impl crate::RegisterSpec for DTEMPALARM_SPEC {
 impl crate::Readable for DTEMPALARM_SPEC {}
 #[doc = "`reset()` method sets DTEMPALARM to value 0"]
 impl crate::Resettable for DTEMPALARM_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

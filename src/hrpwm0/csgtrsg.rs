@@ -257,5 +257,5 @@ impl crate::RegisterSpec for CSGTRSG_SPEC {
 impl crate::Readable for CSGTRSG_SPEC {}
 #[doc = "`reset()` method sets CSGTRSG to value 0"]
 impl crate::Resettable for CSGTRSG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

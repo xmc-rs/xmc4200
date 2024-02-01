@@ -380,5 +380,5 @@ impl crate::RegisterSpec for ISTAT_SPEC {
 impl crate::Readable for ISTAT_SPEC {}
 #[doc = "`reset()` method sets ISTAT to value 0"]
 impl crate::Resettable for ISTAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }
