@@ -1,916 +1,907 @@
 #[doc = "Register `SRCLR` writer"]
-pub type W = crate::W<SRCLR_SPEC>;
+pub type W = crate::W<SrclrSpec>;
 #[doc = "WDT pre-warning Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum PRWARN_AW {
+pub enum Prwarn {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<PRWARN_AW> for bool {
+impl From<Prwarn> for bool {
     #[inline(always)]
-    fn from(variant: PRWARN_AW) -> Self {
+    fn from(variant: Prwarn) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `PRWARN` writer - WDT pre-warning Interrupt Clear"]
-pub type PRWARN_W<'a, REG> = crate::BitWriter<'a, REG, PRWARN_AW>;
-impl<'a, REG> PRWARN_W<'a, REG>
+pub type PrwarnW<'a, REG> = crate::BitWriter<'a, REG, Prwarn>;
+impl<'a, REG> PrwarnW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(PRWARN_AW::VALUE1)
+        self.variant(Prwarn::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(PRWARN_AW::VALUE2)
+        self.variant(Prwarn::Value2)
     }
 }
 #[doc = "RTC Periodic Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum PI_AW {
+pub enum Pi {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<PI_AW> for bool {
+impl From<Pi> for bool {
     #[inline(always)]
-    fn from(variant: PI_AW) -> Self {
+    fn from(variant: Pi) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `PI` writer - RTC Periodic Interrupt Clear"]
-pub type PI_W<'a, REG> = crate::BitWriter<'a, REG, PI_AW>;
-impl<'a, REG> PI_W<'a, REG>
+pub type PiW<'a, REG> = crate::BitWriter<'a, REG, Pi>;
+impl<'a, REG> PiW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(PI_AW::VALUE1)
+        self.variant(Pi::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(PI_AW::VALUE2)
+        self.variant(Pi::Value2)
     }
 }
 #[doc = "RTC Alarm Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum AI_AW {
+pub enum Ai {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<AI_AW> for bool {
+impl From<Ai> for bool {
     #[inline(always)]
-    fn from(variant: AI_AW) -> Self {
+    fn from(variant: Ai) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `AI` writer - RTC Alarm Interrupt Clear"]
-pub type AI_W<'a, REG> = crate::BitWriter<'a, REG, AI_AW>;
-impl<'a, REG> AI_W<'a, REG>
+pub type AiW<'a, REG> = crate::BitWriter<'a, REG, Ai>;
+impl<'a, REG> AiW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(AI_AW::VALUE1)
+        self.variant(Ai::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(AI_AW::VALUE2)
+        self.variant(Ai::Value2)
     }
 }
 #[doc = "DLR Request Overrun Interrupt clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum DLROVR_AW {
+pub enum Dlrovr {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<DLROVR_AW> for bool {
+impl From<Dlrovr> for bool {
     #[inline(always)]
-    fn from(variant: DLROVR_AW) -> Self {
+    fn from(variant: Dlrovr) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `DLROVR` writer - DLR Request Overrun Interrupt clear"]
-pub type DLROVR_W<'a, REG> = crate::BitWriter<'a, REG, DLROVR_AW>;
-impl<'a, REG> DLROVR_W<'a, REG>
+pub type DlrovrW<'a, REG> = crate::BitWriter<'a, REG, Dlrovr>;
+impl<'a, REG> DlrovrW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(DLROVR_AW::VALUE1)
+        self.variant(Dlrovr::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(DLROVR_AW::VALUE2)
+        self.variant(Dlrovr::Value2)
     }
 }
 #[doc = "LPACLR Mirror Register Update Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LPACCR_AW {
+pub enum Lpaccr {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<LPACCR_AW> for bool {
+impl From<Lpaccr> for bool {
     #[inline(always)]
-    fn from(variant: LPACCR_AW) -> Self {
+    fn from(variant: Lpaccr) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LPACCR` writer - LPACLR Mirror Register Update Interrupt Clear"]
-pub type LPACCR_W<'a, REG> = crate::BitWriter<'a, REG, LPACCR_AW>;
-impl<'a, REG> LPACCR_W<'a, REG>
+pub type LpaccrW<'a, REG> = crate::BitWriter<'a, REG, Lpaccr>;
+impl<'a, REG> LpaccrW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACCR_AW::VALUE1)
+        self.variant(Lpaccr::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACCR_AW::VALUE2)
+        self.variant(Lpaccr::Value2)
     }
 }
 #[doc = "LPACTH0 Mirror Register Update Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LPACTH0_AW {
+pub enum Lpacth0 {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<LPACTH0_AW> for bool {
+impl From<Lpacth0> for bool {
     #[inline(always)]
-    fn from(variant: LPACTH0_AW) -> Self {
+    fn from(variant: Lpacth0) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LPACTH0` writer - LPACTH0 Mirror Register Update Interrupt Clear"]
-pub type LPACTH0_W<'a, REG> = crate::BitWriter<'a, REG, LPACTH0_AW>;
-impl<'a, REG> LPACTH0_W<'a, REG>
+pub type Lpacth0W<'a, REG> = crate::BitWriter<'a, REG, Lpacth0>;
+impl<'a, REG> Lpacth0W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACTH0_AW::VALUE1)
+        self.variant(Lpacth0::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACTH0_AW::VALUE2)
+        self.variant(Lpacth0::Value2)
     }
 }
 #[doc = "LPACTH1 Mirror Register Update Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LPACTH1_AW {
+pub enum Lpacth1 {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<LPACTH1_AW> for bool {
+impl From<Lpacth1> for bool {
     #[inline(always)]
-    fn from(variant: LPACTH1_AW) -> Self {
+    fn from(variant: Lpacth1) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LPACTH1` writer - LPACTH1 Mirror Register Update Interrupt Clear"]
-pub type LPACTH1_W<'a, REG> = crate::BitWriter<'a, REG, LPACTH1_AW>;
-impl<'a, REG> LPACTH1_W<'a, REG>
+pub type Lpacth1W<'a, REG> = crate::BitWriter<'a, REG, Lpacth1>;
+impl<'a, REG> Lpacth1W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACTH1_AW::VALUE1)
+        self.variant(Lpacth1::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACTH1_AW::VALUE2)
+        self.variant(Lpacth1::Value2)
     }
 }
 #[doc = "LPACST Mirror Register Update Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LPACST_AW {
+pub enum Lpacst {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<LPACST_AW> for bool {
+impl From<Lpacst> for bool {
     #[inline(always)]
-    fn from(variant: LPACST_AW) -> Self {
+    fn from(variant: Lpacst) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LPACST` writer - LPACST Mirror Register Update Interrupt Clear"]
-pub type LPACST_W<'a, REG> = crate::BitWriter<'a, REG, LPACST_AW>;
-impl<'a, REG> LPACST_W<'a, REG>
+pub type LpacstW<'a, REG> = crate::BitWriter<'a, REG, Lpacst>;
+impl<'a, REG> LpacstW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACST_AW::VALUE1)
+        self.variant(Lpacst::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACST_AW::VALUE2)
+        self.variant(Lpacst::Value2)
     }
 }
 #[doc = "LPACCLR Mirror Register Update Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LPACCLR_AW {
+pub enum Lpacclr {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<LPACCLR_AW> for bool {
+impl From<Lpacclr> for bool {
     #[inline(always)]
-    fn from(variant: LPACCLR_AW) -> Self {
+    fn from(variant: Lpacclr) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LPACCLR` writer - LPACCLR Mirror Register Update Interrupt Clear"]
-pub type LPACCLR_W<'a, REG> = crate::BitWriter<'a, REG, LPACCLR_AW>;
-impl<'a, REG> LPACCLR_W<'a, REG>
+pub type LpacclrW<'a, REG> = crate::BitWriter<'a, REG, Lpacclr>;
+impl<'a, REG> LpacclrW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACCLR_AW::VALUE1)
+        self.variant(Lpacclr::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACCLR_AW::VALUE2)
+        self.variant(Lpacclr::Value2)
     }
 }
 #[doc = "LPACSET Mirror Register Update Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LPACSET_AW {
+pub enum Lpacset {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<LPACSET_AW> for bool {
+impl From<Lpacset> for bool {
     #[inline(always)]
-    fn from(variant: LPACSET_AW) -> Self {
+    fn from(variant: Lpacset) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LPACSET` writer - LPACSET Mirror Register Update Interrupt Clear"]
-pub type LPACSET_W<'a, REG> = crate::BitWriter<'a, REG, LPACSET_AW>;
-impl<'a, REG> LPACSET_W<'a, REG>
+pub type LpacsetW<'a, REG> = crate::BitWriter<'a, REG, Lpacset>;
+impl<'a, REG> LpacsetW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACSET_AW::VALUE1)
+        self.variant(Lpacset::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(LPACSET_AW::VALUE2)
+        self.variant(Lpacset::Value2)
     }
 }
 #[doc = "HINTST Mirror Register Update Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum HINTST_AW {
+pub enum Hintst {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<HINTST_AW> for bool {
+impl From<Hintst> for bool {
     #[inline(always)]
-    fn from(variant: HINTST_AW) -> Self {
+    fn from(variant: Hintst) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HINTST` writer - HINTST Mirror Register Update Interrupt Clear"]
-pub type HINTST_W<'a, REG> = crate::BitWriter<'a, REG, HINTST_AW>;
-impl<'a, REG> HINTST_W<'a, REG>
+pub type HintstW<'a, REG> = crate::BitWriter<'a, REG, Hintst>;
+impl<'a, REG> HintstW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(HINTST_AW::VALUE1)
+        self.variant(Hintst::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(HINTST_AW::VALUE2)
+        self.variant(Hintst::Value2)
     }
 }
 #[doc = "HINTCLR Mirror Register Update Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum HINTCLR_AW {
+pub enum Hintclr {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<HINTCLR_AW> for bool {
+impl From<Hintclr> for bool {
     #[inline(always)]
-    fn from(variant: HINTCLR_AW) -> Self {
+    fn from(variant: Hintclr) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HINTCLR` writer - HINTCLR Mirror Register Update Interrupt Clear"]
-pub type HINTCLR_W<'a, REG> = crate::BitWriter<'a, REG, HINTCLR_AW>;
-impl<'a, REG> HINTCLR_W<'a, REG>
+pub type HintclrW<'a, REG> = crate::BitWriter<'a, REG, Hintclr>;
+impl<'a, REG> HintclrW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(HINTCLR_AW::VALUE1)
+        self.variant(Hintclr::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(HINTCLR_AW::VALUE2)
+        self.variant(Hintclr::Value2)
     }
 }
 #[doc = "HINTSET Mirror Register Update Interrupt Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum HINTSET_AW {
+pub enum Hintset {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<HINTSET_AW> for bool {
+impl From<Hintset> for bool {
     #[inline(always)]
-    fn from(variant: HINTSET_AW) -> Self {
+    fn from(variant: Hintset) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HINTSET` writer - HINTSET Mirror Register Update Interrupt Clear"]
-pub type HINTSET_W<'a, REG> = crate::BitWriter<'a, REG, HINTSET_AW>;
-impl<'a, REG> HINTSET_W<'a, REG>
+pub type HintsetW<'a, REG> = crate::BitWriter<'a, REG, Hintset>;
+impl<'a, REG> HintsetW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(HINTSET_AW::VALUE1)
+        self.variant(Hintset::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(HINTSET_AW::VALUE2)
+        self.variant(Hintset::Value2)
     }
 }
 #[doc = "HDCLR Mirror Register Update Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum HDCLR_AW {
+pub enum Hdclr {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<HDCLR_AW> for bool {
+impl From<Hdclr> for bool {
     #[inline(always)]
-    fn from(variant: HDCLR_AW) -> Self {
+    fn from(variant: Hdclr) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HDCLR` writer - HDCLR Mirror Register Update Clear"]
-pub type HDCLR_W<'a, REG> = crate::BitWriter<'a, REG, HDCLR_AW>;
-impl<'a, REG> HDCLR_W<'a, REG>
+pub type HdclrW<'a, REG> = crate::BitWriter<'a, REG, Hdclr>;
+impl<'a, REG> HdclrW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(HDCLR_AW::VALUE1)
+        self.variant(Hdclr::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(HDCLR_AW::VALUE2)
+        self.variant(Hdclr::Value2)
     }
 }
 #[doc = "HDSET Mirror Register Update Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum HDSET_AW {
+pub enum Hdset {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<HDSET_AW> for bool {
+impl From<Hdset> for bool {
     #[inline(always)]
-    fn from(variant: HDSET_AW) -> Self {
+    fn from(variant: Hdset) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HDSET` writer - HDSET Mirror Register Update Clear"]
-pub type HDSET_W<'a, REG> = crate::BitWriter<'a, REG, HDSET_AW>;
-impl<'a, REG> HDSET_W<'a, REG>
+pub type HdsetW<'a, REG> = crate::BitWriter<'a, REG, Hdset>;
+impl<'a, REG> HdsetW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(HDSET_AW::VALUE1)
+        self.variant(Hdset::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(HDSET_AW::VALUE2)
+        self.variant(Hdset::Value2)
     }
 }
 #[doc = "HDCR Mirror Register Update Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum HDCR_AW {
+pub enum Hdcr {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<HDCR_AW> for bool {
+impl From<Hdcr> for bool {
     #[inline(always)]
-    fn from(variant: HDCR_AW) -> Self {
+    fn from(variant: Hdcr) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HDCR` writer - HDCR Mirror Register Update Clear"]
-pub type HDCR_W<'a, REG> = crate::BitWriter<'a, REG, HDCR_AW>;
-impl<'a, REG> HDCR_W<'a, REG>
+pub type HdcrW<'a, REG> = crate::BitWriter<'a, REG, Hdcr>;
+impl<'a, REG> HdcrW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(HDCR_AW::VALUE1)
+        self.variant(Hdcr::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(HDCR_AW::VALUE2)
+        self.variant(Hdcr::Value2)
     }
 }
 #[doc = "OSCSICTRL Mirror Register Update Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OSCSICTRL_AW {
+pub enum Oscsictrl {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<OSCSICTRL_AW> for bool {
+impl From<Oscsictrl> for bool {
     #[inline(always)]
-    fn from(variant: OSCSICTRL_AW) -> Self {
+    fn from(variant: Oscsictrl) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `OSCSICTRL` writer - OSCSICTRL Mirror Register Update Clear"]
-pub type OSCSICTRL_W<'a, REG> = crate::BitWriter<'a, REG, OSCSICTRL_AW>;
-impl<'a, REG> OSCSICTRL_W<'a, REG>
+pub type OscsictrlW<'a, REG> = crate::BitWriter<'a, REG, Oscsictrl>;
+impl<'a, REG> OscsictrlW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(OSCSICTRL_AW::VALUE1)
+        self.variant(Oscsictrl::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(OSCSICTRL_AW::VALUE2)
+        self.variant(Oscsictrl::Value2)
     }
 }
 #[doc = "OSCULCTRL Mirror Register Update Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OSCULCTRL_AW {
+pub enum Osculctrl {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<OSCULCTRL_AW> for bool {
+impl From<Osculctrl> for bool {
     #[inline(always)]
-    fn from(variant: OSCULCTRL_AW) -> Self {
+    fn from(variant: Osculctrl) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `OSCULCTRL` writer - OSCULCTRL Mirror Register Update Clear"]
-pub type OSCULCTRL_W<'a, REG> = crate::BitWriter<'a, REG, OSCULCTRL_AW>;
-impl<'a, REG> OSCULCTRL_W<'a, REG>
+pub type OsculctrlW<'a, REG> = crate::BitWriter<'a, REG, Osculctrl>;
+impl<'a, REG> OsculctrlW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(OSCULCTRL_AW::VALUE1)
+        self.variant(Osculctrl::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(OSCULCTRL_AW::VALUE2)
+        self.variant(Osculctrl::Value2)
     }
 }
 #[doc = "RTC CTR Mirror Register Update Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RTC_CTR_AW {
+pub enum RtcCtr {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<RTC_CTR_AW> for bool {
+impl From<RtcCtr> for bool {
     #[inline(always)]
-    fn from(variant: RTC_CTR_AW) -> Self {
+    fn from(variant: RtcCtr) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_CTR` writer - RTC CTR Mirror Register Update Clear"]
-pub type RTC_CTR_W<'a, REG> = crate::BitWriter<'a, REG, RTC_CTR_AW>;
-impl<'a, REG> RTC_CTR_W<'a, REG>
+pub type RtcCtrW<'a, REG> = crate::BitWriter<'a, REG, RtcCtr>;
+impl<'a, REG> RtcCtrW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(RTC_CTR_AW::VALUE1)
+        self.variant(RtcCtr::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(RTC_CTR_AW::VALUE2)
+        self.variant(RtcCtr::Value2)
     }
 }
 #[doc = "RTC ATIM0 Mirror Register Update Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RTC_ATIM0_AW {
+pub enum RtcAtim0 {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<RTC_ATIM0_AW> for bool {
+impl From<RtcAtim0> for bool {
     #[inline(always)]
-    fn from(variant: RTC_ATIM0_AW) -> Self {
+    fn from(variant: RtcAtim0) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_ATIM0` writer - RTC ATIM0 Mirror Register Update Clear"]
-pub type RTC_ATIM0_W<'a, REG> = crate::BitWriter<'a, REG, RTC_ATIM0_AW>;
-impl<'a, REG> RTC_ATIM0_W<'a, REG>
+pub type RtcAtim0W<'a, REG> = crate::BitWriter<'a, REG, RtcAtim0>;
+impl<'a, REG> RtcAtim0W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(RTC_ATIM0_AW::VALUE1)
+        self.variant(RtcAtim0::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(RTC_ATIM0_AW::VALUE2)
+        self.variant(RtcAtim0::Value2)
     }
 }
 #[doc = "RTC ATIM1 Mirror Register Update Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RTC_ATIM1_AW {
+pub enum RtcAtim1 {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<RTC_ATIM1_AW> for bool {
+impl From<RtcAtim1> for bool {
     #[inline(always)]
-    fn from(variant: RTC_ATIM1_AW) -> Self {
+    fn from(variant: RtcAtim1) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_ATIM1` writer - RTC ATIM1 Mirror Register Update Clear"]
-pub type RTC_ATIM1_W<'a, REG> = crate::BitWriter<'a, REG, RTC_ATIM1_AW>;
-impl<'a, REG> RTC_ATIM1_W<'a, REG>
+pub type RtcAtim1W<'a, REG> = crate::BitWriter<'a, REG, RtcAtim1>;
+impl<'a, REG> RtcAtim1W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(RTC_ATIM1_AW::VALUE1)
+        self.variant(RtcAtim1::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(RTC_ATIM1_AW::VALUE2)
+        self.variant(RtcAtim1::Value2)
     }
 }
 #[doc = "RTC TIM0 Mirror Register Update Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RTC_TIM0_AW {
+pub enum RtcTim0 {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<RTC_TIM0_AW> for bool {
+impl From<RtcTim0> for bool {
     #[inline(always)]
-    fn from(variant: RTC_TIM0_AW) -> Self {
+    fn from(variant: RtcTim0) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_TIM0` writer - RTC TIM0 Mirror Register Update Clear"]
-pub type RTC_TIM0_W<'a, REG> = crate::BitWriter<'a, REG, RTC_TIM0_AW>;
-impl<'a, REG> RTC_TIM0_W<'a, REG>
+pub type RtcTim0W<'a, REG> = crate::BitWriter<'a, REG, RtcTim0>;
+impl<'a, REG> RtcTim0W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(RTC_TIM0_AW::VALUE1)
+        self.variant(RtcTim0::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(RTC_TIM0_AW::VALUE2)
+        self.variant(RtcTim0::Value2)
     }
 }
 #[doc = "RTC TIM1 Mirror Register Update Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RTC_TIM1_AW {
+pub enum RtcTim1 {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<RTC_TIM1_AW> for bool {
+impl From<RtcTim1> for bool {
     #[inline(always)]
-    fn from(variant: RTC_TIM1_AW) -> Self {
+    fn from(variant: RtcTim1) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_TIM1` writer - RTC TIM1 Mirror Register Update Clear"]
-pub type RTC_TIM1_W<'a, REG> = crate::BitWriter<'a, REG, RTC_TIM1_AW>;
-impl<'a, REG> RTC_TIM1_W<'a, REG>
+pub type RtcTim1W<'a, REG> = crate::BitWriter<'a, REG, RtcTim1>;
+impl<'a, REG> RtcTim1W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(RTC_TIM1_AW::VALUE1)
+        self.variant(RtcTim1::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(RTC_TIM1_AW::VALUE2)
+        self.variant(RtcTim1::Value2)
     }
 }
 #[doc = "Retention Memory Mirror Register Update Clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RMX_AW {
+pub enum Rmx {
     #[doc = "0: No effect"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Clear the status bit"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<RMX_AW> for bool {
+impl From<Rmx> for bool {
     #[inline(always)]
-    fn from(variant: RMX_AW) -> Self {
+    fn from(variant: Rmx) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RMX` writer - Retention Memory Mirror Register Update Clear"]
-pub type RMX_W<'a, REG> = crate::BitWriter<'a, REG, RMX_AW>;
-impl<'a, REG> RMX_W<'a, REG>
+pub type RmxW<'a, REG> = crate::BitWriter<'a, REG, Rmx>;
+impl<'a, REG> RmxW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "No effect"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(RMX_AW::VALUE1)
+        self.variant(Rmx::Value1)
     }
     #[doc = "Clear the status bit"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(RMX_AW::VALUE2)
+        self.variant(Rmx::Value2)
     }
 }
 impl W {
     #[doc = "Bit 0 - WDT pre-warning Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn prwarn(&mut self) -> PRWARN_W<SRCLR_SPEC> {
-        PRWARN_W::new(self, 0)
+    pub fn prwarn(&mut self) -> PrwarnW<SrclrSpec> {
+        PrwarnW::new(self, 0)
     }
     #[doc = "Bit 1 - RTC Periodic Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn pi(&mut self) -> PI_W<SRCLR_SPEC> {
-        PI_W::new(self, 1)
+    pub fn pi(&mut self) -> PiW<SrclrSpec> {
+        PiW::new(self, 1)
     }
     #[doc = "Bit 2 - RTC Alarm Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn ai(&mut self) -> AI_W<SRCLR_SPEC> {
-        AI_W::new(self, 2)
+    pub fn ai(&mut self) -> AiW<SrclrSpec> {
+        AiW::new(self, 2)
     }
     #[doc = "Bit 3 - DLR Request Overrun Interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dlrovr(&mut self) -> DLROVR_W<SRCLR_SPEC> {
-        DLROVR_W::new(self, 3)
+    pub fn dlrovr(&mut self) -> DlrovrW<SrclrSpec> {
+        DlrovrW::new(self, 3)
     }
     #[doc = "Bit 6 - LPACLR Mirror Register Update Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn lpaccr(&mut self) -> LPACCR_W<SRCLR_SPEC> {
-        LPACCR_W::new(self, 6)
+    pub fn lpaccr(&mut self) -> LpaccrW<SrclrSpec> {
+        LpaccrW::new(self, 6)
     }
     #[doc = "Bit 7 - LPACTH0 Mirror Register Update Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn lpacth0(&mut self) -> LPACTH0_W<SRCLR_SPEC> {
-        LPACTH0_W::new(self, 7)
+    pub fn lpacth0(&mut self) -> Lpacth0W<SrclrSpec> {
+        Lpacth0W::new(self, 7)
     }
     #[doc = "Bit 8 - LPACTH1 Mirror Register Update Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn lpacth1(&mut self) -> LPACTH1_W<SRCLR_SPEC> {
-        LPACTH1_W::new(self, 8)
+    pub fn lpacth1(&mut self) -> Lpacth1W<SrclrSpec> {
+        Lpacth1W::new(self, 8)
     }
     #[doc = "Bit 9 - LPACST Mirror Register Update Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn lpacst(&mut self) -> LPACST_W<SRCLR_SPEC> {
-        LPACST_W::new(self, 9)
+    pub fn lpacst(&mut self) -> LpacstW<SrclrSpec> {
+        LpacstW::new(self, 9)
     }
     #[doc = "Bit 10 - LPACCLR Mirror Register Update Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn lpacclr(&mut self) -> LPACCLR_W<SRCLR_SPEC> {
-        LPACCLR_W::new(self, 10)
+    pub fn lpacclr(&mut self) -> LpacclrW<SrclrSpec> {
+        LpacclrW::new(self, 10)
     }
     #[doc = "Bit 11 - LPACSET Mirror Register Update Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn lpacset(&mut self) -> LPACSET_W<SRCLR_SPEC> {
-        LPACSET_W::new(self, 11)
+    pub fn lpacset(&mut self) -> LpacsetW<SrclrSpec> {
+        LpacsetW::new(self, 11)
     }
     #[doc = "Bit 12 - HINTST Mirror Register Update Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hintst(&mut self) -> HINTST_W<SRCLR_SPEC> {
-        HINTST_W::new(self, 12)
+    pub fn hintst(&mut self) -> HintstW<SrclrSpec> {
+        HintstW::new(self, 12)
     }
     #[doc = "Bit 13 - HINTCLR Mirror Register Update Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hintclr(&mut self) -> HINTCLR_W<SRCLR_SPEC> {
-        HINTCLR_W::new(self, 13)
+    pub fn hintclr(&mut self) -> HintclrW<SrclrSpec> {
+        HintclrW::new(self, 13)
     }
     #[doc = "Bit 14 - HINTSET Mirror Register Update Interrupt Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hintset(&mut self) -> HINTSET_W<SRCLR_SPEC> {
-        HINTSET_W::new(self, 14)
+    pub fn hintset(&mut self) -> HintsetW<SrclrSpec> {
+        HintsetW::new(self, 14)
     }
     #[doc = "Bit 17 - HDCLR Mirror Register Update Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hdclr(&mut self) -> HDCLR_W<SRCLR_SPEC> {
-        HDCLR_W::new(self, 17)
+    pub fn hdclr(&mut self) -> HdclrW<SrclrSpec> {
+        HdclrW::new(self, 17)
     }
     #[doc = "Bit 18 - HDSET Mirror Register Update Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hdset(&mut self) -> HDSET_W<SRCLR_SPEC> {
-        HDSET_W::new(self, 18)
+    pub fn hdset(&mut self) -> HdsetW<SrclrSpec> {
+        HdsetW::new(self, 18)
     }
     #[doc = "Bit 19 - HDCR Mirror Register Update Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hdcr(&mut self) -> HDCR_W<SRCLR_SPEC> {
-        HDCR_W::new(self, 19)
+    pub fn hdcr(&mut self) -> HdcrW<SrclrSpec> {
+        HdcrW::new(self, 19)
     }
     #[doc = "Bit 21 - OSCSICTRL Mirror Register Update Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn oscsictrl(&mut self) -> OSCSICTRL_W<SRCLR_SPEC> {
-        OSCSICTRL_W::new(self, 21)
+    pub fn oscsictrl(&mut self) -> OscsictrlW<SrclrSpec> {
+        OscsictrlW::new(self, 21)
     }
     #[doc = "Bit 23 - OSCULCTRL Mirror Register Update Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn osculctrl(&mut self) -> OSCULCTRL_W<SRCLR_SPEC> {
-        OSCULCTRL_W::new(self, 23)
+    pub fn osculctrl(&mut self) -> OsculctrlW<SrclrSpec> {
+        OsculctrlW::new(self, 23)
     }
     #[doc = "Bit 24 - RTC CTR Mirror Register Update Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_ctr(&mut self) -> RTC_CTR_W<SRCLR_SPEC> {
-        RTC_CTR_W::new(self, 24)
+    pub fn rtc_ctr(&mut self) -> RtcCtrW<SrclrSpec> {
+        RtcCtrW::new(self, 24)
     }
     #[doc = "Bit 25 - RTC ATIM0 Mirror Register Update Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_atim0(&mut self) -> RTC_ATIM0_W<SRCLR_SPEC> {
-        RTC_ATIM0_W::new(self, 25)
+    pub fn rtc_atim0(&mut self) -> RtcAtim0W<SrclrSpec> {
+        RtcAtim0W::new(self, 25)
     }
     #[doc = "Bit 26 - RTC ATIM1 Mirror Register Update Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_atim1(&mut self) -> RTC_ATIM1_W<SRCLR_SPEC> {
-        RTC_ATIM1_W::new(self, 26)
+    pub fn rtc_atim1(&mut self) -> RtcAtim1W<SrclrSpec> {
+        RtcAtim1W::new(self, 26)
     }
     #[doc = "Bit 27 - RTC TIM0 Mirror Register Update Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_tim0(&mut self) -> RTC_TIM0_W<SRCLR_SPEC> {
-        RTC_TIM0_W::new(self, 27)
+    pub fn rtc_tim0(&mut self) -> RtcTim0W<SrclrSpec> {
+        RtcTim0W::new(self, 27)
     }
     #[doc = "Bit 28 - RTC TIM1 Mirror Register Update Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc_tim1(&mut self) -> RTC_TIM1_W<SRCLR_SPEC> {
-        RTC_TIM1_W::new(self, 28)
+    pub fn rtc_tim1(&mut self) -> RtcTim1W<SrclrSpec> {
+        RtcTim1W::new(self, 28)
     }
     #[doc = "Bit 29 - Retention Memory Mirror Register Update Clear"]
     #[inline(always)]
     #[must_use]
-    pub fn rmx(&mut self) -> RMX_W<SRCLR_SPEC> {
-        RMX_W::new(self, 29)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn rmx(&mut self) -> RmxW<SrclrSpec> {
+        RmxW::new(self, 29)
     }
 }
 #[doc = "SCU Service Request Clear\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`srclr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct SRCLR_SPEC;
-impl crate::RegisterSpec for SRCLR_SPEC {
+pub struct SrclrSpec;
+impl crate::RegisterSpec for SrclrSpec {
     type Ux = u32;
 }
 #[doc = "`write(|w| ..)` method takes [`srclr::W`](W) writer structure"]
-impl crate::Writable for SRCLR_SPEC {
+impl crate::Writable for SrclrSpec {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRCLR to value 0"]
-impl crate::Resettable for SRCLR_SPEC {
+impl crate::Resettable for SrclrSpec {
     const RESET_VALUE: u32 = 0;
 }
