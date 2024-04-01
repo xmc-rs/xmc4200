@@ -48,6 +48,7 @@ impl From<Ibs> for u8 {
 impl crate::FieldSpec for Ibs {
     type Ux = u8;
 }
+impl crate::IsEnum for Ibs {}
 #[doc = "Field `IBS` reader - External blanking trigger selector"]
 pub type IbsR = crate::FieldReader<Ibs>;
 impl IbsR {
@@ -156,7 +157,7 @@ impl IbsR {
     }
 }
 #[doc = "Field `IBS` writer - External blanking trigger selector"]
-pub type IbsW<'a, REG> = crate::FieldWriterSafe<'a, REG, 4, Ibs>;
+pub type IbsW<'a, REG> = crate::FieldWriter<'a, REG, 4, Ibs, crate::Safe>;
 impl<'a, REG> IbsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -316,6 +317,7 @@ impl From<Imcc> for u8 {
 impl crate::FieldSpec for Imcc {
     type Ux = u8;
 }
+impl crate::IsEnum for Imcc {}
 #[doc = "Field `IMCC` reader - Comparator input switching configuration"]
 pub type ImccR = crate::FieldReader<Imcc>;
 impl ImccR {
@@ -402,6 +404,7 @@ impl From<Blmc> for u8 {
 impl crate::FieldSpec for Blmc {
     type Ux = u8;
 }
+impl crate::IsEnum for Blmc {}
 #[doc = "Field `BLMC` reader - Blanking mode"]
 pub type BlmcR = crate::FieldReader<Blmc>;
 impl BlmcR {
@@ -438,7 +441,7 @@ impl BlmcR {
     }
 }
 #[doc = "Field `BLMC` writer - Blanking mode"]
-pub type BlmcW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Blmc>;
+pub type BlmcW<'a, REG> = crate::FieldWriter<'a, REG, 2, Blmc, crate::Safe>;
 impl<'a, REG> BlmcW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -552,6 +555,7 @@ impl From<Cofm> for u8 {
 impl crate::FieldSpec for Cofm {
     type Ux = u8;
 }
+impl crate::IsEnum for Cofm {}
 #[doc = "Field `COFM` reader - Comparator output filter window"]
 pub type CofmR = crate::FieldReader<Cofm>;
 impl CofmR {
@@ -679,6 +683,7 @@ impl From<Cofc> for u8 {
 impl crate::FieldSpec for Cofc {
     type Ux = u8;
 }
+impl crate::IsEnum for Cofc {}
 #[doc = "Field `COFC` reader - Comparator output filter control"]
 pub type CofcR = crate::FieldReader<Cofc>;
 impl CofcR {

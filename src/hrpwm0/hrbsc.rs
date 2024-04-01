@@ -24,6 +24,7 @@ impl From<Suscfg> for u8 {
 impl crate::FieldSpec for Suscfg {
     type Ux = u8;
 }
+impl crate::IsEnum for Suscfg {}
 #[doc = "Field `SUSCFG` reader - Suspend configuration"]
 pub type SuscfgR = crate::FieldReader<Suscfg>;
 impl SuscfgR {

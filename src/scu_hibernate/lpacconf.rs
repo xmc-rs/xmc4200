@@ -24,6 +24,7 @@ impl From<Cmpen> for u8 {
 impl crate::FieldSpec for Cmpen {
     type Ux = u8;
 }
+impl crate::IsEnum for Cmpen {}
 #[doc = "Field `CMPEN` reader - Compare Enable for Input Selection"]
 pub type CmpenR = crate::FieldReader<Cmpen>;
 impl CmpenR {
@@ -115,6 +116,7 @@ impl From<Trigsel> for u8 {
 impl crate::FieldSpec for Trigsel {
     type Ux = u8;
 }
+impl crate::IsEnum for Trigsel {}
 #[doc = "Field `TRIGSEL` reader - Analog Compare Trigger Select"]
 pub type TrigselR = crate::FieldReader<Trigsel>;
 impl TrigselR {

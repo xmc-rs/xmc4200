@@ -24,6 +24,7 @@ impl From<Psrm> for u8 {
 impl crate::FieldSpec for Psrm {
     type Ux = u8;
 }
+impl crate::IsEnum for Psrm {}
 #[doc = "Field `PSRM` reader - Prescaler external start configuration"]
 pub type PsrmR = crate::FieldReader<Psrm>;
 impl PsrmR {
@@ -60,7 +61,7 @@ impl PsrmR {
     }
 }
 #[doc = "Field `PSRM` writer - Prescaler external start configuration"]
-pub type PsrmW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Psrm>;
+pub type PsrmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Psrm, crate::Safe>;
 impl<'a, REG> PsrmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -109,6 +110,7 @@ impl From<Pstm> for u8 {
 impl crate::FieldSpec for Pstm {
     type Ux = u8;
 }
+impl crate::IsEnum for Pstm {}
 #[doc = "Field `PSTM` reader - Prescaler external stop configuration"]
 pub type PstmR = crate::FieldReader<Pstm>;
 impl PstmR {
@@ -145,7 +147,7 @@ impl PstmR {
     }
 }
 #[doc = "Field `PSTM` writer - Prescaler external stop configuration"]
-pub type PstmW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Pstm>;
+pub type PstmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Pstm, crate::Safe>;
 impl<'a, REG> PstmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -247,6 +249,7 @@ impl From<Psv> for u8 {
 impl crate::FieldSpec for Psv {
     type Ux = u8;
 }
+impl crate::IsEnum for Psv {}
 #[doc = "Field `PSV` reader - Prescaler division factor"]
 pub type PsvR = crate::FieldReader<Psv>;
 impl PsvR {
@@ -283,7 +286,7 @@ impl PsvR {
     }
 }
 #[doc = "Field `PSV` writer - Prescaler division factor"]
-pub type PsvW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Psv>;
+pub type PsvW<'a, REG> = crate::FieldWriter<'a, REG, 2, Psv, crate::Safe>;
 impl<'a, REG> PsvW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -332,6 +335,7 @@ impl From<Scm> for u8 {
 impl crate::FieldSpec for Scm {
     type Ux = u8;
 }
+impl crate::IsEnum for Scm {}
 #[doc = "Field `SCM` reader - Slope control mode"]
 pub type ScmR = crate::FieldReader<Scm>;
 impl ScmR {
@@ -368,7 +372,7 @@ impl ScmR {
     }
 }
 #[doc = "Field `SCM` writer - Slope control mode"]
-pub type ScmW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Scm>;
+pub type ScmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Scm, crate::Safe>;
 impl<'a, REG> ScmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -415,6 +419,7 @@ impl From<Ssrm> for u8 {
 impl crate::FieldSpec for Ssrm {
     type Ux = u8;
 }
+impl crate::IsEnum for Ssrm {}
 #[doc = "Field `SSRM` reader - Slope external start configuration"]
 pub type SsrmR = crate::FieldReader<Ssrm>;
 impl SsrmR {
@@ -487,6 +492,7 @@ impl From<Sstm> for u8 {
 impl crate::FieldSpec for Sstm {
     type Ux = u8;
 }
+impl crate::IsEnum for Sstm {}
 #[doc = "Field `SSTM` reader - Slope external stop configuration"]
 pub type SstmR = crate::FieldReader<Sstm>;
 impl SstmR {
@@ -559,6 +565,7 @@ impl From<Svsc> for u8 {
 impl crate::FieldSpec for Svsc {
     type Ux = u8;
 }
+impl crate::IsEnum for Svsc {}
 #[doc = "Field `SVSC` reader - Slope reference value mode"]
 pub type SvscR = crate::FieldReader<Svsc>;
 impl SvscR {
@@ -633,6 +640,7 @@ impl From<Swsm> for u8 {
 impl crate::FieldSpec for Swsm {
     type Ux = u8;
 }
+impl crate::IsEnum for Swsm {}
 #[doc = "Field `SWSM` reader - Initial DAC start mode"]
 pub type SwsmR = crate::FieldReader<Swsm>;
 impl SwsmR {
@@ -669,7 +677,7 @@ impl SwsmR {
     }
 }
 #[doc = "Field `SWSM` writer - Initial DAC start mode"]
-pub type SwsmW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Swsm>;
+pub type SwsmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Swsm, crate::Safe>;
 impl<'a, REG> SwsmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -718,6 +726,7 @@ impl From<Gcfg> for u8 {
 impl crate::FieldSpec for Gcfg {
     type Ux = u8;
 }
+impl crate::IsEnum for Gcfg {}
 #[doc = "Field `GCFG` reader - Slope step gain configuration"]
 pub type GcfgR = crate::FieldReader<Gcfg>;
 impl GcfgR {
@@ -754,7 +763,7 @@ impl GcfgR {
     }
 }
 #[doc = "Field `GCFG` writer - Slope step gain configuration"]
-pub type GcfgW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Gcfg>;
+pub type GcfgW<'a, REG> = crate::FieldWriter<'a, REG, 2, Gcfg, crate::Safe>;
 impl<'a, REG> GcfgW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -858,6 +867,7 @@ impl From<Pswm> for u8 {
 impl crate::FieldSpec for Pswm {
     type Ux = u8;
 }
+impl crate::IsEnum for Pswm {}
 #[doc = "Field `PSWM` reader - Pulse swallow window mode"]
 pub type PswmR = crate::FieldReader<Pswm>;
 impl PswmR {
