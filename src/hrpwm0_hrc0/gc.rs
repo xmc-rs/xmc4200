@@ -24,6 +24,7 @@ impl From<Hrm0> for u8 {
 impl crate::FieldSpec for Hrm0 {
     type Ux = u8;
 }
+impl crate::IsEnum for Hrm0 {}
 #[doc = "Field `HRM0` reader - HRCy high resolution mode configuration for source selector 0"]
 pub type Hrm0R = crate::FieldReader<Hrm0>;
 impl Hrm0R {
@@ -60,7 +61,7 @@ impl Hrm0R {
     }
 }
 #[doc = "Field `HRM0` writer - HRCy high resolution mode configuration for source selector 0"]
-pub type Hrm0W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Hrm0>;
+pub type Hrm0W<'a, REG> = crate::FieldWriter<'a, REG, 2, Hrm0, crate::Safe>;
 impl<'a, REG> Hrm0W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -109,6 +110,7 @@ impl From<Hrm1> for u8 {
 impl crate::FieldSpec for Hrm1 {
     type Ux = u8;
 }
+impl crate::IsEnum for Hrm1 {}
 #[doc = "Field `HRM1` reader - HRCy high resolution mode configuration for source selector 1"]
 pub type Hrm1R = crate::FieldReader<Hrm1>;
 impl Hrm1R {
@@ -145,7 +147,7 @@ impl Hrm1R {
     }
 }
 #[doc = "Field `HRM1` writer - HRCy high resolution mode configuration for source selector 1"]
-pub type Hrm1W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Hrm1>;
+pub type Hrm1W<'a, REG> = crate::FieldWriter<'a, REG, 2, Hrm1, crate::Safe>;
 impl<'a, REG> Hrm1W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,

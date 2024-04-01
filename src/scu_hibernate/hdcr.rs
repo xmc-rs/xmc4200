@@ -660,6 +660,7 @@ impl From<Hibio0sel> for u8 {
 impl crate::FieldSpec for Hibio0sel {
     type Ux = u8;
 }
+impl crate::IsEnum for Hibio0sel {}
 #[doc = "Field `HIBIO0SEL` reader - HIB_IO_0 Pin I/O Control (default HIBOUT)"]
 pub type Hibio0selR = crate::FieldReader<Hibio0sel>;
 impl Hibio0selR {

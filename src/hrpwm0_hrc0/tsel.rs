@@ -24,6 +24,7 @@ impl From<Tsel0> for u8 {
 impl crate::FieldSpec for Tsel0 {
     type Ux = u8;
 }
+impl crate::IsEnum for Tsel0 {}
 #[doc = "Field `TSEL0` reader - Source Selector 0 Timer connection"]
 pub type Tsel0R = crate::FieldReader<Tsel0>;
 impl Tsel0R {
@@ -109,6 +110,7 @@ impl From<Tsel1> for u8 {
 impl crate::FieldSpec for Tsel1 {
     type Ux = u8;
 }
+impl crate::IsEnum for Tsel1 {}
 #[doc = "Field `TSEL1` reader - Source Selector 1 Timer connection"]
 pub type Tsel1R = crate::FieldReader<Tsel1>;
 impl Tsel1R {

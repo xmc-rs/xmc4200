@@ -48,6 +48,7 @@ impl From<Ipls> for u8 {
 impl crate::FieldSpec for Ipls {
     type Ux = u8;
 }
+impl crate::IsEnum for Ipls {}
 #[doc = "Field `IPLS` reader - Clamping control signal selector"]
 pub type IplsR = crate::FieldReader<Ipls>;
 impl IplsR {
@@ -156,7 +157,7 @@ impl IplsR {
     }
 }
 #[doc = "Field `IPLS` writer - Clamping control signal selector"]
-pub type IplsW<'a, REG> = crate::FieldWriterSafe<'a, REG, 4, Ipls>;
+pub type IplsW<'a, REG> = crate::FieldWriter<'a, REG, 4, Ipls, crate::Safe>;
 impl<'a, REG> IplsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -263,6 +264,7 @@ impl From<Plcl> for u8 {
 impl crate::FieldSpec for Plcl {
     type Ux = u8;
 }
+impl crate::IsEnum for Plcl {}
 #[doc = "Field `PLCL` reader - Clamping control signal level selection"]
 pub type PlclR = crate::FieldReader<Plcl>;
 impl PlclR {
@@ -441,6 +443,7 @@ impl From<Plec> for u8 {
 impl crate::FieldSpec for Plec {
     type Ux = u8;
 }
+impl crate::IsEnum for Plec {}
 #[doc = "Field `PLEC` reader - Passive level enter configuration"]
 pub type PlecR = crate::FieldReader<Plec>;
 impl PlecR {
@@ -513,6 +516,7 @@ impl From<Plxc> for u8 {
 impl crate::FieldSpec for Plxc {
     type Ux = u8;
 }
+impl crate::IsEnum for Plxc {}
 #[doc = "Field `PLXC` reader - Passive level exit configuration"]
 pub type PlxcR = crate::FieldReader<Plxc>;
 impl PlxcR {

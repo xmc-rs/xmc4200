@@ -289,6 +289,7 @@ impl From<Clkc> for u8 {
 impl crate::FieldSpec for Clkc {
     type Ux = u8;
 }
+impl crate::IsEnum for Clkc {}
 #[doc = "Field `CLKC` reader - Clock information control"]
 pub type ClkcR = crate::FieldReader<Clkc>;
 impl ClkcR {

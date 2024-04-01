@@ -24,6 +24,7 @@ impl From<Vls1s> for u8 {
 impl crate::FieldSpec for Vls1s {
     type Ux = u8;
 }
+impl crate::IsEnum for Vls1s {}
 #[doc = "Field `VLS1S` reader - Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection"]
 pub type Vls1sR = crate::FieldReader<Vls1s>;
 impl Vls1sR {
@@ -60,7 +61,7 @@ impl Vls1sR {
     }
 }
 #[doc = "Field `VLS1S` writer - Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection"]
-pub type Vls1sW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Vls1s>;
+pub type Vls1sW<'a, REG> = crate::FieldWriter<'a, REG, 2, Vls1s, crate::Safe>;
 impl<'a, REG> Vls1sW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -109,6 +110,7 @@ impl From<Vls2s> for u8 {
 impl crate::FieldSpec for Vls2s {
     type Ux = u8;
 }
+impl crate::IsEnum for Vls2s {}
 #[doc = "Field `VLS2S` reader - Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection"]
 pub type Vls2sR = crate::FieldReader<Vls2s>;
 impl Vls2sR {
@@ -145,7 +147,7 @@ impl Vls2sR {
     }
 }
 #[doc = "Field `VLS2S` writer - Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection"]
-pub type Vls2sW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Vls2s>;
+pub type Vls2sW<'a, REG> = crate::FieldWriter<'a, REG, 2, Vls2s, crate::Safe>;
 impl<'a, REG> Vls2sW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -194,6 +196,7 @@ impl From<Trls> for u8 {
 impl crate::FieldSpec for Trls {
     type Ux = u8;
 }
+impl crate::IsEnum for Trls {}
 #[doc = "Field `TRLS` reader - Conversion trigger interrupt line selection"]
 pub type TrlsR = crate::FieldReader<Trls>;
 impl TrlsR {
@@ -230,7 +233,7 @@ impl TrlsR {
     }
 }
 #[doc = "Field `TRLS` writer - Conversion trigger interrupt line selection"]
-pub type TrlsW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Trls>;
+pub type TrlsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Trls, crate::Safe>;
 impl<'a, REG> TrlsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -279,6 +282,7 @@ impl From<Ssls> for u8 {
 impl crate::FieldSpec for Ssls {
     type Ux = u8;
 }
+impl crate::IsEnum for Ssls {}
 #[doc = "Field `SSLS` reader - Start/Stop trigger interrupt line selection"]
 pub type SslsR = crate::FieldReader<Ssls>;
 impl SslsR {
@@ -315,7 +319,7 @@ impl SslsR {
     }
 }
 #[doc = "Field `SSLS` writer - Start/Stop trigger interrupt line selection"]
-pub type SslsW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Ssls>;
+pub type SslsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Ssls, crate::Safe>;
 impl<'a, REG> SslsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -364,6 +368,7 @@ impl From<Stls> for u8 {
 impl crate::FieldSpec for Stls {
     type Ux = u8;
 }
+impl crate::IsEnum for Stls {}
 #[doc = "Field `STLS` reader - Shadow transfer done interrupt line selection"]
 pub type StlsR = crate::FieldReader<Stls>;
 impl StlsR {
@@ -400,7 +405,7 @@ impl StlsR {
     }
 }
 #[doc = "Field `STLS` writer - Shadow transfer done interrupt line selection"]
-pub type StlsW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Stls>;
+pub type StlsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Stls, crate::Safe>;
 impl<'a, REG> StlsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -449,6 +454,7 @@ impl From<Crfls> for u8 {
 impl crate::FieldSpec for Crfls {
     type Ux = u8;
 }
+impl crate::IsEnum for Crfls {}
 #[doc = "Field `CRFLS` reader - Comparator rise/fall interrupt line selection"]
 pub type CrflsR = crate::FieldReader<Crfls>;
 impl CrflsR {
@@ -485,7 +491,7 @@ impl CrflsR {
     }
 }
 #[doc = "Field `CRFLS` writer - Comparator rise/fall interrupt line selection"]
-pub type CrflsW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Crfls>;
+pub type CrflsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Crfls, crate::Safe>;
 impl<'a, REG> CrflsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -534,6 +540,7 @@ impl From<Csls> for u8 {
 impl crate::FieldSpec for Csls {
     type Ux = u8;
 }
+impl crate::IsEnum for Csls {}
 #[doc = "Field `CSLS` reader - Comparator clamped state interrupt line selection"]
 pub type CslsR = crate::FieldReader<Csls>;
 impl CslsR {
@@ -570,7 +577,7 @@ impl CslsR {
     }
 }
 #[doc = "Field `CSLS` writer - Comparator clamped state interrupt line selection"]
-pub type CslsW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Csls>;
+pub type CslsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Csls, crate::Safe>;
 impl<'a, REG> CslsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,

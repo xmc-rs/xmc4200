@@ -48,6 +48,7 @@ impl From<Svis> for u8 {
 impl crate::FieldSpec for Svis {
     type Ux = u8;
 }
+impl crate::IsEnum for Svis {}
 #[doc = "Field `SVIS` reader - Value Selector input selection"]
 pub type SvisR = crate::FieldReader<Svis>;
 impl SvisR {
@@ -156,7 +157,7 @@ impl SvisR {
     }
 }
 #[doc = "Field `SVIS` writer - Value Selector input selection"]
-pub type SvisW<'a, REG> = crate::FieldWriterSafe<'a, REG, 4, Svis>;
+pub type SvisW<'a, REG> = crate::FieldWriter<'a, REG, 4, Svis, crate::Safe>;
 impl<'a, REG> SvisW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -281,6 +282,7 @@ impl From<Scs> for u8 {
 impl crate::FieldSpec for Scs {
     type Ux = u8;
 }
+impl crate::IsEnum for Scs {}
 #[doc = "Field `SCS` reader - Slope generation clock selection"]
 pub type ScsR = crate::FieldReader<Scs>;
 impl ScsR {
@@ -317,7 +319,7 @@ impl ScsR {
     }
 }
 #[doc = "Field `SCS` writer - Slope generation clock selection"]
-pub type ScsW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Scs>;
+pub type ScsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Scs, crate::Safe>;
 impl<'a, REG> ScsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,

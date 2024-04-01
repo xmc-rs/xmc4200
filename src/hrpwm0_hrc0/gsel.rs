@@ -22,6 +22,7 @@ impl From<C0ss> for u8 {
 impl crate::FieldSpec for C0ss {
     type Ux = u8;
 }
+impl crate::IsEnum for C0ss {}
 #[doc = "Field `C0SS` reader - Source selector 0 comparator set configuration"]
 pub type C0ssR = crate::FieldReader<C0ss>;
 impl C0ssR {
@@ -94,6 +95,7 @@ impl From<C0cs> for u8 {
 impl crate::FieldSpec for C0cs {
     type Ux = u8;
 }
+impl crate::IsEnum for C0cs {}
 #[doc = "Field `C0CS` reader - Source selector 0 comparator clear configuration"]
 pub type C0csR = crate::FieldReader<C0cs>;
 impl C0csR {
@@ -164,6 +166,7 @@ impl From<S0m> for u8 {
 impl crate::FieldSpec for S0m {
     type Ux = u8;
 }
+impl crate::IsEnum for S0m {}
 #[doc = "Field `S0M` reader - Source selector 0 set configuration"]
 pub type S0mR = crate::FieldReader<S0m>;
 impl S0mR {
@@ -223,6 +226,7 @@ impl From<C0m> for u8 {
 impl crate::FieldSpec for C0m {
     type Ux = u8;
 }
+impl crate::IsEnum for C0m {}
 #[doc = "Field `C0M` reader - Source selector 0 clear configuration"]
 pub type C0mR = crate::FieldReader<C0m>;
 impl C0mR {
@@ -286,6 +290,7 @@ impl From<S0es> for u8 {
 impl crate::FieldSpec for S0es {
     type Ux = u8;
 }
+impl crate::IsEnum for S0es {}
 #[doc = "Field `S0ES` reader - Source selector 0 set edge configuration"]
 pub type S0esR = crate::FieldReader<S0es>;
 impl S0esR {
@@ -322,7 +327,7 @@ impl S0esR {
     }
 }
 #[doc = "Field `S0ES` writer - Source selector 0 set edge configuration"]
-pub type S0esW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, S0es>;
+pub type S0esW<'a, REG> = crate::FieldWriter<'a, REG, 2, S0es, crate::Safe>;
 impl<'a, REG> S0esW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -371,6 +376,7 @@ impl From<C0es> for u8 {
 impl crate::FieldSpec for C0es {
     type Ux = u8;
 }
+impl crate::IsEnum for C0es {}
 #[doc = "Field `C0ES` reader - Source selector 0 clear edge configuration"]
 pub type C0esR = crate::FieldReader<C0es>;
 impl C0esR {
@@ -407,7 +413,7 @@ impl C0esR {
     }
 }
 #[doc = "Field `C0ES` writer - Source selector 0 clear edge configuration"]
-pub type C0esW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C0es>;
+pub type C0esW<'a, REG> = crate::FieldWriter<'a, REG, 2, C0es, crate::Safe>;
 impl<'a, REG> C0esW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -454,6 +460,7 @@ impl From<C1ss> for u8 {
 impl crate::FieldSpec for C1ss {
     type Ux = u8;
 }
+impl crate::IsEnum for C1ss {}
 #[doc = "Field `C1SS` reader - Source selector 1 comparator set configuration"]
 pub type C1ssR = crate::FieldReader<C1ss>;
 impl C1ssR {
@@ -526,6 +533,7 @@ impl From<C1cs> for u8 {
 impl crate::FieldSpec for C1cs {
     type Ux = u8;
 }
+impl crate::IsEnum for C1cs {}
 #[doc = "Field `C1CS` reader - Source selector 1 comparator clear configuration"]
 pub type C1csR = crate::FieldReader<C1cs>;
 impl C1csR {
@@ -596,6 +604,7 @@ impl From<S1m> for u8 {
 impl crate::FieldSpec for S1m {
     type Ux = u8;
 }
+impl crate::IsEnum for S1m {}
 #[doc = "Field `S1M` reader - Source selector 1 set configuration"]
 pub type S1mR = crate::FieldReader<S1m>;
 impl S1mR {
@@ -655,6 +664,7 @@ impl From<C1m> for u8 {
 impl crate::FieldSpec for C1m {
     type Ux = u8;
 }
+impl crate::IsEnum for C1m {}
 #[doc = "Field `C1M` reader - Source selector 1 clear configuration"]
 pub type C1mR = crate::FieldReader<C1m>;
 impl C1mR {
@@ -718,6 +728,7 @@ impl From<S1es> for u8 {
 impl crate::FieldSpec for S1es {
     type Ux = u8;
 }
+impl crate::IsEnum for S1es {}
 #[doc = "Field `S1ES` reader - Source selector 1 set edge configuration"]
 pub type S1esR = crate::FieldReader<S1es>;
 impl S1esR {
@@ -754,7 +765,7 @@ impl S1esR {
     }
 }
 #[doc = "Field `S1ES` writer - Source selector 1 set edge configuration"]
-pub type S1esW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, S1es>;
+pub type S1esW<'a, REG> = crate::FieldWriter<'a, REG, 2, S1es, crate::Safe>;
 impl<'a, REG> S1esW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -803,6 +814,7 @@ impl From<C1es> for u8 {
 impl crate::FieldSpec for C1es {
     type Ux = u8;
 }
+impl crate::IsEnum for C1es {}
 #[doc = "Field `C1ES` reader - Source selector 1 clear edge configuration"]
 pub type C1esR = crate::FieldReader<C1es>;
 impl C1esR {
@@ -839,7 +851,7 @@ impl C1esR {
     }
 }
 #[doc = "Field `C1ES` writer - Source selector 1 clear edge configuration"]
-pub type C1esW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C1es>;
+pub type C1esW<'a, REG> = crate::FieldWriter<'a, REG, 2, C1es, crate::Safe>;
 impl<'a, REG> C1esW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,

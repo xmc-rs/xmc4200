@@ -22,6 +22,7 @@ impl From<C0pm> for u8 {
 impl crate::FieldSpec for C0pm {
     type Ux = u8;
 }
+impl crate::IsEnum for C0pm {}
 #[doc = "Field `C0PM` reader - CSG0 Power Mode"]
 pub type C0pmR = crate::FieldReader<C0pm>;
 impl C0pmR {
@@ -94,6 +95,7 @@ impl From<C1pm> for u8 {
 impl crate::FieldSpec for C1pm {
     type Ux = u8;
 }
+impl crate::IsEnum for C1pm {}
 #[doc = "Field `C1PM` reader - CSG1 Power Mode"]
 pub type C1pmR = crate::FieldReader<C1pm>;
 impl C1pmR {
@@ -166,6 +168,7 @@ impl From<C2pm> for u8 {
 impl crate::FieldSpec for C2pm {
     type Ux = u8;
 }
+impl crate::IsEnum for C2pm {}
 #[doc = "Field `C2PM` reader - CSG2 Power Mode"]
 pub type C2pmR = crate::FieldReader<C2pm>;
 impl C2pmR {

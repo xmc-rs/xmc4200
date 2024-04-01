@@ -22,6 +22,7 @@ impl From<Svls> for u8 {
 impl crate::FieldSpec for Svls {
     type Ux = u8;
 }
+impl crate::IsEnum for Svls {}
 #[doc = "Field `SVLS` reader - External value switch function level selection"]
 pub type SvlsR = crate::FieldReader<Svls>;
 impl SvlsR {
@@ -96,6 +97,7 @@ impl From<Stres> for u8 {
 impl crate::FieldSpec for Stres {
     type Ux = u8;
 }
+impl crate::IsEnum for Stres {}
 #[doc = "Field `STRES` reader - External start function edge selection"]
 pub type StresR = crate::FieldReader<Stres>;
 impl StresR {
@@ -132,7 +134,7 @@ impl StresR {
     }
 }
 #[doc = "Field `STRES` writer - External start function edge selection"]
-pub type StresW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Stres>;
+pub type StresW<'a, REG> = crate::FieldWriter<'a, REG, 2, Stres, crate::Safe>;
 impl<'a, REG> StresW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -181,6 +183,7 @@ impl From<Stpes> for u8 {
 impl crate::FieldSpec for Stpes {
     type Ux = u8;
 }
+impl crate::IsEnum for Stpes {}
 #[doc = "Field `STPES` reader - External stop function edge selection"]
 pub type StpesR = crate::FieldReader<Stpes>;
 impl StpesR {
@@ -217,7 +220,7 @@ impl StpesR {
     }
 }
 #[doc = "Field `STPES` writer - External stop function edge selection"]
-pub type StpesW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Stpes>;
+pub type StpesW<'a, REG> = crate::FieldWriter<'a, REG, 2, Stpes, crate::Safe>;
 impl<'a, REG> StpesW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -266,6 +269,7 @@ impl From<Trges> for u8 {
 impl crate::FieldSpec for Trges {
     type Ux = u8;
 }
+impl crate::IsEnum for Trges {}
 #[doc = "Field `TRGES` reader - External trigger function edge selection"]
 pub type TrgesR = crate::FieldReader<Trges>;
 impl TrgesR {
@@ -302,7 +306,7 @@ impl TrgesR {
     }
 }
 #[doc = "Field `TRGES` writer - External trigger function edge selection"]
-pub type TrgesW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Trges>;
+pub type TrgesW<'a, REG> = crate::FieldWriter<'a, REG, 2, Trges, crate::Safe>;
 impl<'a, REG> TrgesW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -351,6 +355,7 @@ impl From<Stes> for u8 {
 impl crate::FieldSpec for Stes {
     type Ux = u8;
 }
+impl crate::IsEnum for Stes {}
 #[doc = "Field `STES` reader - External shadow transfer enable edge selection"]
 pub type StesR = crate::FieldReader<Stes>;
 impl StesR {
@@ -387,7 +392,7 @@ impl StesR {
     }
 }
 #[doc = "Field `STES` writer - External shadow transfer enable edge selection"]
-pub type StesW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Stes>;
+pub type StesW<'a, REG> = crate::FieldWriter<'a, REG, 2, Stes, crate::Safe>;
 impl<'a, REG> StesW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
