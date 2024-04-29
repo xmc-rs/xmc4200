@@ -1,333 +1,333 @@
 #[doc = "Register `HRCCFG` reader"]
-pub type R = crate::R<HrccfgSpec>;
+pub type R = crate::R<HRCCFG_SPEC>;
 #[doc = "Register `HRCCFG` writer"]
-pub type W = crate::W<HrccfgSpec>;
+pub type W = crate::W<HRCCFG_SPEC>;
 #[doc = "High resolution channels power mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Hrcpm {
+pub enum HRCPM_A {
     #[doc = "0: High resolution generation logic is OFF. It is not possible to generate high resolution signals throughout any of the high resolution channels, HRCy."]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: High resolution generation logic is ON. In this mode it is possible to generate a high resolution signal placement with the HRCy subunits."]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Hrcpm> for bool {
+impl From<HRCPM_A> for bool {
     #[inline(always)]
-    fn from(variant: Hrcpm) -> Self {
+    fn from(variant: HRCPM_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HRCPM` reader - High resolution channels power mode"]
-pub type HrcpmR = crate::BitReader<Hrcpm>;
-impl HrcpmR {
+pub type HRCPM_R = crate::BitReader<HRCPM_A>;
+impl HRCPM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Hrcpm {
+    pub const fn variant(&self) -> HRCPM_A {
         match self.bits {
-            false => Hrcpm::Value1,
-            true => Hrcpm::Value2,
+            false => HRCPM_A::VALUE1,
+            true => HRCPM_A::VALUE2,
         }
     }
     #[doc = "High resolution generation logic is OFF. It is not possible to generate high resolution signals throughout any of the high resolution channels, HRCy."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Hrcpm::Value1
+        *self == HRCPM_A::VALUE1
     }
     #[doc = "High resolution generation logic is ON. In this mode it is possible to generate a high resolution signal placement with the HRCy subunits."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Hrcpm::Value2
+        *self == HRCPM_A::VALUE2
     }
 }
 #[doc = "Field `HRCPM` writer - High resolution channels power mode"]
-pub type HrcpmW<'a, REG> = crate::BitWriter<'a, REG, Hrcpm>;
-impl<'a, REG> HrcpmW<'a, REG>
+pub type HRCPM_W<'a, REG> = crate::BitWriter<'a, REG, HRCPM_A>;
+impl<'a, REG> HRCPM_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "High resolution generation logic is OFF. It is not possible to generate high resolution signals throughout any of the high resolution channels, HRCy."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(Hrcpm::Value1)
+        self.variant(HRCPM_A::VALUE1)
     }
     #[doc = "High resolution generation logic is ON. In this mode it is possible to generate a high resolution signal placement with the HRCy subunits."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(Hrcpm::Value2)
+        self.variant(HRCPM_A::VALUE2)
     }
 }
 #[doc = "HRC0 high resolution enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Hrc0e {
+pub enum HRC0E_A {
     #[doc = "0: HRC0 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC0 to generate an output PWM signal."]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: HRC0 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Hrc0e> for bool {
+impl From<HRC0E_A> for bool {
     #[inline(always)]
-    fn from(variant: Hrc0e) -> Self {
+    fn from(variant: HRC0E_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HRC0E` reader - HRC0 high resolution enable"]
-pub type Hrc0eR = crate::BitReader<Hrc0e>;
-impl Hrc0eR {
+pub type HRC0E_R = crate::BitReader<HRC0E_A>;
+impl HRC0E_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Hrc0e {
+    pub const fn variant(&self) -> HRC0E_A {
         match self.bits {
-            false => Hrc0e::Value1,
-            true => Hrc0e::Value2,
+            false => HRC0E_A::VALUE1,
+            true => HRC0E_A::VALUE2,
         }
     }
     #[doc = "HRC0 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC0 to generate an output PWM signal."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Hrc0e::Value1
+        *self == HRC0E_A::VALUE1
     }
     #[doc = "HRC0 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Hrc0e::Value2
+        *self == HRC0E_A::VALUE2
     }
 }
 #[doc = "Field `HRC0E` writer - HRC0 high resolution enable"]
-pub type Hrc0eW<'a, REG> = crate::BitWriter<'a, REG, Hrc0e>;
-impl<'a, REG> Hrc0eW<'a, REG>
+pub type HRC0E_W<'a, REG> = crate::BitWriter<'a, REG, HRC0E_A>;
+impl<'a, REG> HRC0E_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "HRC0 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC0 to generate an output PWM signal."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(Hrc0e::Value1)
+        self.variant(HRC0E_A::VALUE1)
     }
     #[doc = "HRC0 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(Hrc0e::Value2)
+        self.variant(HRC0E_A::VALUE2)
     }
 }
 #[doc = "HRC1 high resolution channel enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Hrc1e {
+pub enum HRC1E_A {
     #[doc = "0: HRC1 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC1 to generate an output PWM signal."]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: HRC1 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Hrc1e> for bool {
+impl From<HRC1E_A> for bool {
     #[inline(always)]
-    fn from(variant: Hrc1e) -> Self {
+    fn from(variant: HRC1E_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HRC1E` reader - HRC1 high resolution channel enable"]
-pub type Hrc1eR = crate::BitReader<Hrc1e>;
-impl Hrc1eR {
+pub type HRC1E_R = crate::BitReader<HRC1E_A>;
+impl HRC1E_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Hrc1e {
+    pub const fn variant(&self) -> HRC1E_A {
         match self.bits {
-            false => Hrc1e::Value1,
-            true => Hrc1e::Value2,
+            false => HRC1E_A::VALUE1,
+            true => HRC1E_A::VALUE2,
         }
     }
     #[doc = "HRC1 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC1 to generate an output PWM signal."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Hrc1e::Value1
+        *self == HRC1E_A::VALUE1
     }
     #[doc = "HRC1 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Hrc1e::Value2
+        *self == HRC1E_A::VALUE2
     }
 }
 #[doc = "Field `HRC1E` writer - HRC1 high resolution channel enable"]
-pub type Hrc1eW<'a, REG> = crate::BitWriter<'a, REG, Hrc1e>;
-impl<'a, REG> Hrc1eW<'a, REG>
+pub type HRC1E_W<'a, REG> = crate::BitWriter<'a, REG, HRC1E_A>;
+impl<'a, REG> HRC1E_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "HRC1 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC1 to generate an output PWM signal."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(Hrc1e::Value1)
+        self.variant(HRC1E_A::VALUE1)
     }
     #[doc = "HRC1 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(Hrc1e::Value2)
+        self.variant(HRC1E_A::VALUE2)
     }
 }
 #[doc = "HRC2 high resolution channel enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Hrc2e {
+pub enum HRC2E_A {
     #[doc = "0: HRC2 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC2 to generate an output PWM signal."]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: HRC2 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Hrc2e> for bool {
+impl From<HRC2E_A> for bool {
     #[inline(always)]
-    fn from(variant: Hrc2e) -> Self {
+    fn from(variant: HRC2E_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HRC2E` reader - HRC2 high resolution channel enable"]
-pub type Hrc2eR = crate::BitReader<Hrc2e>;
-impl Hrc2eR {
+pub type HRC2E_R = crate::BitReader<HRC2E_A>;
+impl HRC2E_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Hrc2e {
+    pub const fn variant(&self) -> HRC2E_A {
         match self.bits {
-            false => Hrc2e::Value1,
-            true => Hrc2e::Value2,
+            false => HRC2E_A::VALUE1,
+            true => HRC2E_A::VALUE2,
         }
     }
     #[doc = "HRC2 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC2 to generate an output PWM signal."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Hrc2e::Value1
+        *self == HRC2E_A::VALUE1
     }
     #[doc = "HRC2 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Hrc2e::Value2
+        *self == HRC2E_A::VALUE2
     }
 }
 #[doc = "Field `HRC2E` writer - HRC2 high resolution channel enable"]
-pub type Hrc2eW<'a, REG> = crate::BitWriter<'a, REG, Hrc2e>;
-impl<'a, REG> Hrc2eW<'a, REG>
+pub type HRC2E_W<'a, REG> = crate::BitWriter<'a, REG, HRC2E_A>;
+impl<'a, REG> HRC2E_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "HRC2 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC2 to generate an output PWM signal."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(Hrc2e::Value1)
+        self.variant(HRC2E_A::VALUE1)
     }
     #[doc = "HRC2 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(Hrc2e::Value2)
+        self.variant(HRC2E_A::VALUE2)
     }
 }
 #[doc = "HRC3 high resolution channel enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Hrc3e {
+pub enum HRC3E_A {
     #[doc = "0: HRC3 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC3 to generate an output PWM signal."]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: HRC3 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Hrc3e> for bool {
+impl From<HRC3E_A> for bool {
     #[inline(always)]
-    fn from(variant: Hrc3e) -> Self {
+    fn from(variant: HRC3E_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HRC3E` reader - HRC3 high resolution channel enable"]
-pub type Hrc3eR = crate::BitReader<Hrc3e>;
-impl Hrc3eR {
+pub type HRC3E_R = crate::BitReader<HRC3E_A>;
+impl HRC3E_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Hrc3e {
+    pub const fn variant(&self) -> HRC3E_A {
         match self.bits {
-            false => Hrc3e::Value1,
-            true => Hrc3e::Value2,
+            false => HRC3E_A::VALUE1,
+            true => HRC3E_A::VALUE2,
         }
     }
     #[doc = "HRC3 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC3 to generate an output PWM signal."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Hrc3e::Value1
+        *self == HRC3E_A::VALUE1
     }
     #[doc = "HRC3 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Hrc3e::Value2
+        *self == HRC3E_A::VALUE2
     }
 }
 #[doc = "Field `HRC3E` writer - HRC3 high resolution channel enable"]
-pub type Hrc3eW<'a, REG> = crate::BitWriter<'a, REG, Hrc3e>;
-impl<'a, REG> Hrc3eW<'a, REG>
+pub type HRC3E_W<'a, REG> = crate::BitWriter<'a, REG, HRC3E_A>;
+impl<'a, REG> HRC3E_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "HRC3 High Resolution Path is disabled. In this mode, is not possible to use the High Resolution Path inside of HRC3 to generate an output PWM signal."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(Hrc3e::Value1)
+        self.variant(HRC3E_A::VALUE1)
     }
     #[doc = "HRC3 High Resolution Path is enabled. In this mode it is possible to generate a high resolution PWM signal if HRCPM = 1#."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(Hrc3e::Value2)
+        self.variant(HRC3E_A::VALUE2)
     }
 }
 #[doc = "Clock information control\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum Clkc {
+pub enum CLKC_A {
     #[doc = "0: No clock frequency is selected"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Module clock frequency is 180 MHz"]
-    Value2 = 1,
+    VALUE2 = 1,
     #[doc = "2: Module clock frequency is 120 MHz"]
-    Value3 = 2,
+    VALUE3 = 2,
     #[doc = "3: Module clock frequency is 80 MHz"]
-    Value4 = 3,
+    VALUE4 = 3,
 }
-impl From<Clkc> for u8 {
+impl From<CLKC_A> for u8 {
     #[inline(always)]
-    fn from(variant: Clkc) -> Self {
+    fn from(variant: CLKC_A) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for Clkc {
+impl crate::FieldSpec for CLKC_A {
     type Ux = u8;
 }
-impl crate::IsEnum for Clkc {}
+impl crate::IsEnum for CLKC_A {}
 #[doc = "Field `CLKC` reader - Clock information control"]
-pub type ClkcR = crate::FieldReader<Clkc>;
-impl ClkcR {
+pub type CLKC_R = crate::FieldReader<CLKC_A>;
+impl CLKC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<Clkc> {
+    pub const fn variant(&self) -> Option<CLKC_A> {
         match self.bits {
-            0 => Some(Clkc::Value1),
-            1 => Some(Clkc::Value2),
-            2 => Some(Clkc::Value3),
-            3 => Some(Clkc::Value4),
+            0 => Some(CLKC_A::VALUE1),
+            1 => Some(CLKC_A::VALUE2),
+            2 => Some(CLKC_A::VALUE3),
+            3 => Some(CLKC_A::VALUE4),
             _ => None,
         }
     }
     #[doc = "No clock frequency is selected"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Clkc::Value1
+        *self == CLKC_A::VALUE1
     }
     #[doc = "Module clock frequency is 180 MHz"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Clkc::Value2
+        *self == CLKC_A::VALUE2
     }
     #[doc = "Module clock frequency is 120 MHz"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == Clkc::Value3
+        *self == CLKC_A::VALUE3
     }
     #[doc = "Module clock frequency is 80 MHz"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == Clkc::Value4
+        *self == CLKC_A::VALUE4
     }
 }
 #[doc = "Field `CLKC` writer - Clock information control"]
-pub type ClkcW<'a, REG> = crate::FieldWriter<'a, REG, 3, Clkc>;
-impl<'a, REG> ClkcW<'a, REG>
+pub type CLKC_W<'a, REG> = crate::FieldWriter<'a, REG, 3, CLKC_A>;
+impl<'a, REG> CLKC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -335,364 +335,364 @@ where
     #[doc = "No clock frequency is selected"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(Clkc::Value1)
+        self.variant(CLKC_A::VALUE1)
     }
     #[doc = "Module clock frequency is 180 MHz"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(Clkc::Value2)
+        self.variant(CLKC_A::VALUE2)
     }
     #[doc = "Module clock frequency is 120 MHz"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(Clkc::Value3)
+        self.variant(CLKC_A::VALUE3)
     }
     #[doc = "Module clock frequency is 80 MHz"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(Clkc::Value4)
+        self.variant(CLKC_A::VALUE4)
     }
 }
 #[doc = "HRC0 low resolution channel enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Lrc0e {
+pub enum LRC0E_A {
     #[doc = "0: HRC0 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC0 to generate an output PWM signal."]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: HRC0 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Lrc0e> for bool {
+impl From<LRC0E_A> for bool {
     #[inline(always)]
-    fn from(variant: Lrc0e) -> Self {
+    fn from(variant: LRC0E_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LRC0E` reader - HRC0 low resolution channel enable"]
-pub type Lrc0eR = crate::BitReader<Lrc0e>;
-impl Lrc0eR {
+pub type LRC0E_R = crate::BitReader<LRC0E_A>;
+impl LRC0E_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Lrc0e {
+    pub const fn variant(&self) -> LRC0E_A {
         match self.bits {
-            false => Lrc0e::Value1,
-            true => Lrc0e::Value2,
+            false => LRC0E_A::VALUE1,
+            true => LRC0E_A::VALUE2,
         }
     }
     #[doc = "HRC0 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC0 to generate an output PWM signal."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Lrc0e::Value1
+        *self == LRC0E_A::VALUE1
     }
     #[doc = "HRC0 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Lrc0e::Value2
+        *self == LRC0E_A::VALUE2
     }
 }
 #[doc = "Field `LRC0E` writer - HRC0 low resolution channel enable"]
-pub type Lrc0eW<'a, REG> = crate::BitWriter<'a, REG, Lrc0e>;
-impl<'a, REG> Lrc0eW<'a, REG>
+pub type LRC0E_W<'a, REG> = crate::BitWriter<'a, REG, LRC0E_A>;
+impl<'a, REG> LRC0E_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "HRC0 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC0 to generate an output PWM signal."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(Lrc0e::Value1)
+        self.variant(LRC0E_A::VALUE1)
     }
     #[doc = "HRC0 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(Lrc0e::Value2)
+        self.variant(LRC0E_A::VALUE2)
     }
 }
 #[doc = "HRC1 low resolution channel enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Lrc1e {
+pub enum LRC1E_A {
     #[doc = "0: HRC1 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC1 to generate an output PWM signal."]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: HRC1 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Lrc1e> for bool {
+impl From<LRC1E_A> for bool {
     #[inline(always)]
-    fn from(variant: Lrc1e) -> Self {
+    fn from(variant: LRC1E_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LRC1E` reader - HRC1 low resolution channel enable"]
-pub type Lrc1eR = crate::BitReader<Lrc1e>;
-impl Lrc1eR {
+pub type LRC1E_R = crate::BitReader<LRC1E_A>;
+impl LRC1E_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Lrc1e {
+    pub const fn variant(&self) -> LRC1E_A {
         match self.bits {
-            false => Lrc1e::Value1,
-            true => Lrc1e::Value2,
+            false => LRC1E_A::VALUE1,
+            true => LRC1E_A::VALUE2,
         }
     }
     #[doc = "HRC1 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC1 to generate an output PWM signal."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Lrc1e::Value1
+        *self == LRC1E_A::VALUE1
     }
     #[doc = "HRC1 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Lrc1e::Value2
+        *self == LRC1E_A::VALUE2
     }
 }
 #[doc = "Field `LRC1E` writer - HRC1 low resolution channel enable"]
-pub type Lrc1eW<'a, REG> = crate::BitWriter<'a, REG, Lrc1e>;
-impl<'a, REG> Lrc1eW<'a, REG>
+pub type LRC1E_W<'a, REG> = crate::BitWriter<'a, REG, LRC1E_A>;
+impl<'a, REG> LRC1E_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "HRC1 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC1 to generate an output PWM signal."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(Lrc1e::Value1)
+        self.variant(LRC1E_A::VALUE1)
     }
     #[doc = "HRC1 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(Lrc1e::Value2)
+        self.variant(LRC1E_A::VALUE2)
     }
 }
 #[doc = "HRC2 low resolution channel enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Lrc2e {
+pub enum LRC2E_A {
     #[doc = "0: HRC2 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC2 to generate an output PWM signal."]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: HRC2 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Lrc2e> for bool {
+impl From<LRC2E_A> for bool {
     #[inline(always)]
-    fn from(variant: Lrc2e) -> Self {
+    fn from(variant: LRC2E_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LRC2E` reader - HRC2 low resolution channel enable"]
-pub type Lrc2eR = crate::BitReader<Lrc2e>;
-impl Lrc2eR {
+pub type LRC2E_R = crate::BitReader<LRC2E_A>;
+impl LRC2E_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Lrc2e {
+    pub const fn variant(&self) -> LRC2E_A {
         match self.bits {
-            false => Lrc2e::Value1,
-            true => Lrc2e::Value2,
+            false => LRC2E_A::VALUE1,
+            true => LRC2E_A::VALUE2,
         }
     }
     #[doc = "HRC2 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC2 to generate an output PWM signal."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Lrc2e::Value1
+        *self == LRC2E_A::VALUE1
     }
     #[doc = "HRC2 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Lrc2e::Value2
+        *self == LRC2E_A::VALUE2
     }
 }
 #[doc = "Field `LRC2E` writer - HRC2 low resolution channel enable"]
-pub type Lrc2eW<'a, REG> = crate::BitWriter<'a, REG, Lrc2e>;
-impl<'a, REG> Lrc2eW<'a, REG>
+pub type LRC2E_W<'a, REG> = crate::BitWriter<'a, REG, LRC2E_A>;
+impl<'a, REG> LRC2E_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "HRC2 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC2 to generate an output PWM signal."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(Lrc2e::Value1)
+        self.variant(LRC2E_A::VALUE1)
     }
     #[doc = "HRC2 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(Lrc2e::Value2)
+        self.variant(LRC2E_A::VALUE2)
     }
 }
 #[doc = "HRC3 low resolution channel enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Lrc3e {
+pub enum LRC3E_A {
     #[doc = "0: HRC3 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC3 to generate an output PWM signal."]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: HRC3 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Lrc3e> for bool {
+impl From<LRC3E_A> for bool {
     #[inline(always)]
-    fn from(variant: Lrc3e) -> Self {
+    fn from(variant: LRC3E_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LRC3E` reader - HRC3 low resolution channel enable"]
-pub type Lrc3eR = crate::BitReader<Lrc3e>;
-impl Lrc3eR {
+pub type LRC3E_R = crate::BitReader<LRC3E_A>;
+impl LRC3E_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Lrc3e {
+    pub const fn variant(&self) -> LRC3E_A {
         match self.bits {
-            false => Lrc3e::Value1,
-            true => Lrc3e::Value2,
+            false => LRC3E_A::VALUE1,
+            true => LRC3E_A::VALUE2,
         }
     }
     #[doc = "HRC3 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC3 to generate an output PWM signal."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Lrc3e::Value1
+        *self == LRC3E_A::VALUE1
     }
     #[doc = "HRC3 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Lrc3e::Value2
+        *self == LRC3E_A::VALUE2
     }
 }
 #[doc = "Field `LRC3E` writer - HRC3 low resolution channel enable"]
-pub type Lrc3eW<'a, REG> = crate::BitWriter<'a, REG, Lrc3e>;
-impl<'a, REG> Lrc3eW<'a, REG>
+pub type LRC3E_W<'a, REG> = crate::BitWriter<'a, REG, LRC3E_A>;
+impl<'a, REG> LRC3E_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "HRC3 Low Resolution Path is disabled. In this mode, is not possible to use the Low Resolution Path inside of HRC3 to generate an output PWM signal."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(Lrc3e::Value1)
+        self.variant(LRC3E_A::VALUE1)
     }
     #[doc = "HRC3 Low Resolution Path is enabled. In this mode it is possible to generate a an output PWM signal via the Low Resolution Path."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(Lrc3e::Value2)
+        self.variant(LRC3E_A::VALUE2)
     }
 }
 impl R {
     #[doc = "Bit 0 - High resolution channels power mode"]
     #[inline(always)]
-    pub fn hrcpm(&self) -> HrcpmR {
-        HrcpmR::new((self.bits & 1) != 0)
+    pub fn hrcpm(&self) -> HRCPM_R {
+        HRCPM_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 4 - HRC0 high resolution enable"]
     #[inline(always)]
-    pub fn hrc0e(&self) -> Hrc0eR {
-        Hrc0eR::new(((self.bits >> 4) & 1) != 0)
+    pub fn hrc0e(&self) -> HRC0E_R {
+        HRC0E_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - HRC1 high resolution channel enable"]
     #[inline(always)]
-    pub fn hrc1e(&self) -> Hrc1eR {
-        Hrc1eR::new(((self.bits >> 5) & 1) != 0)
+    pub fn hrc1e(&self) -> HRC1E_R {
+        HRC1E_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - HRC2 high resolution channel enable"]
     #[inline(always)]
-    pub fn hrc2e(&self) -> Hrc2eR {
-        Hrc2eR::new(((self.bits >> 6) & 1) != 0)
+    pub fn hrc2e(&self) -> HRC2E_R {
+        HRC2E_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - HRC3 high resolution channel enable"]
     #[inline(always)]
-    pub fn hrc3e(&self) -> Hrc3eR {
-        Hrc3eR::new(((self.bits >> 7) & 1) != 0)
+    pub fn hrc3e(&self) -> HRC3E_R {
+        HRC3E_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 16:18 - Clock information control"]
     #[inline(always)]
-    pub fn clkc(&self) -> ClkcR {
-        ClkcR::new(((self.bits >> 16) & 7) as u8)
+    pub fn clkc(&self) -> CLKC_R {
+        CLKC_R::new(((self.bits >> 16) & 7) as u8)
     }
     #[doc = "Bit 20 - HRC0 low resolution channel enable"]
     #[inline(always)]
-    pub fn lrc0e(&self) -> Lrc0eR {
-        Lrc0eR::new(((self.bits >> 20) & 1) != 0)
+    pub fn lrc0e(&self) -> LRC0E_R {
+        LRC0E_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - HRC1 low resolution channel enable"]
     #[inline(always)]
-    pub fn lrc1e(&self) -> Lrc1eR {
-        Lrc1eR::new(((self.bits >> 21) & 1) != 0)
+    pub fn lrc1e(&self) -> LRC1E_R {
+        LRC1E_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - HRC2 low resolution channel enable"]
     #[inline(always)]
-    pub fn lrc2e(&self) -> Lrc2eR {
-        Lrc2eR::new(((self.bits >> 22) & 1) != 0)
+    pub fn lrc2e(&self) -> LRC2E_R {
+        LRC2E_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - HRC3 low resolution channel enable"]
     #[inline(always)]
-    pub fn lrc3e(&self) -> Lrc3eR {
-        Lrc3eR::new(((self.bits >> 23) & 1) != 0)
+    pub fn lrc3e(&self) -> LRC3E_R {
+        LRC3E_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - High resolution channels power mode"]
     #[inline(always)]
     #[must_use]
-    pub fn hrcpm(&mut self) -> HrcpmW<HrccfgSpec> {
-        HrcpmW::new(self, 0)
+    pub fn hrcpm(&mut self) -> HRCPM_W<HRCCFG_SPEC> {
+        HRCPM_W::new(self, 0)
     }
     #[doc = "Bit 4 - HRC0 high resolution enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hrc0e(&mut self) -> Hrc0eW<HrccfgSpec> {
-        Hrc0eW::new(self, 4)
+    pub fn hrc0e(&mut self) -> HRC0E_W<HRCCFG_SPEC> {
+        HRC0E_W::new(self, 4)
     }
     #[doc = "Bit 5 - HRC1 high resolution channel enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hrc1e(&mut self) -> Hrc1eW<HrccfgSpec> {
-        Hrc1eW::new(self, 5)
+    pub fn hrc1e(&mut self) -> HRC1E_W<HRCCFG_SPEC> {
+        HRC1E_W::new(self, 5)
     }
     #[doc = "Bit 6 - HRC2 high resolution channel enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hrc2e(&mut self) -> Hrc2eW<HrccfgSpec> {
-        Hrc2eW::new(self, 6)
+    pub fn hrc2e(&mut self) -> HRC2E_W<HRCCFG_SPEC> {
+        HRC2E_W::new(self, 6)
     }
     #[doc = "Bit 7 - HRC3 high resolution channel enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hrc3e(&mut self) -> Hrc3eW<HrccfgSpec> {
-        Hrc3eW::new(self, 7)
+    pub fn hrc3e(&mut self) -> HRC3E_W<HRCCFG_SPEC> {
+        HRC3E_W::new(self, 7)
     }
     #[doc = "Bits 16:18 - Clock information control"]
     #[inline(always)]
     #[must_use]
-    pub fn clkc(&mut self) -> ClkcW<HrccfgSpec> {
-        ClkcW::new(self, 16)
+    pub fn clkc(&mut self) -> CLKC_W<HRCCFG_SPEC> {
+        CLKC_W::new(self, 16)
     }
     #[doc = "Bit 20 - HRC0 low resolution channel enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lrc0e(&mut self) -> Lrc0eW<HrccfgSpec> {
-        Lrc0eW::new(self, 20)
+    pub fn lrc0e(&mut self) -> LRC0E_W<HRCCFG_SPEC> {
+        LRC0E_W::new(self, 20)
     }
     #[doc = "Bit 21 - HRC1 low resolution channel enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lrc1e(&mut self) -> Lrc1eW<HrccfgSpec> {
-        Lrc1eW::new(self, 21)
+    pub fn lrc1e(&mut self) -> LRC1E_W<HRCCFG_SPEC> {
+        LRC1E_W::new(self, 21)
     }
     #[doc = "Bit 22 - HRC2 low resolution channel enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lrc2e(&mut self) -> Lrc2eW<HrccfgSpec> {
-        Lrc2eW::new(self, 22)
+    pub fn lrc2e(&mut self) -> LRC2E_W<HRCCFG_SPEC> {
+        LRC2E_W::new(self, 22)
     }
     #[doc = "Bit 23 - HRC3 low resolution channel enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lrc3e(&mut self) -> Lrc3eW<HrccfgSpec> {
-        Lrc3eW::new(self, 23)
+    pub fn lrc3e(&mut self) -> LRC3E_W<HRCCFG_SPEC> {
+        LRC3E_W::new(self, 23)
     }
 }
 #[doc = "Global HRC configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hrccfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hrccfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct HrccfgSpec;
-impl crate::RegisterSpec for HrccfgSpec {
+pub struct HRCCFG_SPEC;
+impl crate::RegisterSpec for HRCCFG_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`hrccfg::R`](R) reader structure"]
-impl crate::Readable for HrccfgSpec {}
+impl crate::Readable for HRCCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hrccfg::W`](W) writer structure"]
-impl crate::Writable for HrccfgSpec {
+impl crate::Writable for HRCCFG_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HRCCFG to value 0"]
-impl crate::Resettable for HrccfgSpec {
+impl crate::Resettable for HRCCFG_SPEC {
     const RESET_VALUE: u32 = 0;
 }

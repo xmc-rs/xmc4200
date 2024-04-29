@@ -1,835 +1,835 @@
 #[doc = "Register `MIRRSTS` reader"]
-pub type R = crate::R<MirrstsSpec>;
+pub type R = crate::R<MIRRSTS_SPEC>;
 #[doc = "HDCLR Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Hdclr {
+pub enum HDCLR_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Hdclr> for bool {
+impl From<HDCLR_A> for bool {
     #[inline(always)]
-    fn from(variant: Hdclr) -> Self {
+    fn from(variant: HDCLR_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HDCLR` reader - HDCLR Mirror Register Write Status"]
-pub type HdclrR = crate::BitReader<Hdclr>;
-impl HdclrR {
+pub type HDCLR_R = crate::BitReader<HDCLR_A>;
+impl HDCLR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Hdclr {
+    pub const fn variant(&self) -> HDCLR_A {
         match self.bits {
-            false => Hdclr::Value1,
-            true => Hdclr::Value2,
+            false => HDCLR_A::VALUE1,
+            true => HDCLR_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Hdclr::Value1
+        *self == HDCLR_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Hdclr::Value2
+        *self == HDCLR_A::VALUE2
     }
 }
 #[doc = "HDSET Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Hdset {
+pub enum HDSET_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Hdset> for bool {
+impl From<HDSET_A> for bool {
     #[inline(always)]
-    fn from(variant: Hdset) -> Self {
+    fn from(variant: HDSET_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HDSET` reader - HDSET Mirror Register Write Status"]
-pub type HdsetR = crate::BitReader<Hdset>;
-impl HdsetR {
+pub type HDSET_R = crate::BitReader<HDSET_A>;
+impl HDSET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Hdset {
+    pub const fn variant(&self) -> HDSET_A {
         match self.bits {
-            false => Hdset::Value1,
-            true => Hdset::Value2,
+            false => HDSET_A::VALUE1,
+            true => HDSET_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Hdset::Value1
+        *self == HDSET_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Hdset::Value2
+        *self == HDSET_A::VALUE2
     }
 }
 #[doc = "HDCR Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Hdcr {
+pub enum HDCR_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Hdcr> for bool {
+impl From<HDCR_A> for bool {
     #[inline(always)]
-    fn from(variant: Hdcr) -> Self {
+    fn from(variant: HDCR_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HDCR` reader - HDCR Mirror Register Write Status"]
-pub type HdcrR = crate::BitReader<Hdcr>;
-impl HdcrR {
+pub type HDCR_R = crate::BitReader<HDCR_A>;
+impl HDCR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Hdcr {
+    pub const fn variant(&self) -> HDCR_A {
         match self.bits {
-            false => Hdcr::Value1,
-            true => Hdcr::Value2,
+            false => HDCR_A::VALUE1,
+            true => HDCR_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Hdcr::Value1
+        *self == HDCR_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Hdcr::Value2
+        *self == HDCR_A::VALUE2
     }
 }
 #[doc = "OSCSICTRL Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Oscsictrl {
+pub enum OSCSICTRL_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Oscsictrl> for bool {
+impl From<OSCSICTRL_A> for bool {
     #[inline(always)]
-    fn from(variant: Oscsictrl) -> Self {
+    fn from(variant: OSCSICTRL_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `OSCSICTRL` reader - OSCSICTRL Mirror Register Write Status"]
-pub type OscsictrlR = crate::BitReader<Oscsictrl>;
-impl OscsictrlR {
+pub type OSCSICTRL_R = crate::BitReader<OSCSICTRL_A>;
+impl OSCSICTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Oscsictrl {
+    pub const fn variant(&self) -> OSCSICTRL_A {
         match self.bits {
-            false => Oscsictrl::Value1,
-            true => Oscsictrl::Value2,
+            false => OSCSICTRL_A::VALUE1,
+            true => OSCSICTRL_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Oscsictrl::Value1
+        *self == OSCSICTRL_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Oscsictrl::Value2
+        *self == OSCSICTRL_A::VALUE2
     }
 }
 #[doc = "OSCULCTRL Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Osculctrl {
+pub enum OSCULCTRL_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Osculctrl> for bool {
+impl From<OSCULCTRL_A> for bool {
     #[inline(always)]
-    fn from(variant: Osculctrl) -> Self {
+    fn from(variant: OSCULCTRL_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `OSCULCTRL` reader - OSCULCTRL Mirror Register Write Status"]
-pub type OsculctrlR = crate::BitReader<Osculctrl>;
-impl OsculctrlR {
+pub type OSCULCTRL_R = crate::BitReader<OSCULCTRL_A>;
+impl OSCULCTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Osculctrl {
+    pub const fn variant(&self) -> OSCULCTRL_A {
         match self.bits {
-            false => Osculctrl::Value1,
-            true => Osculctrl::Value2,
+            false => OSCULCTRL_A::VALUE1,
+            true => OSCULCTRL_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Osculctrl::Value1
+        *self == OSCULCTRL_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Osculctrl::Value2
+        *self == OSCULCTRL_A::VALUE2
     }
 }
 #[doc = "RTC CTR Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RtcCtr {
+pub enum RTC_CTR_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<RtcCtr> for bool {
+impl From<RTC_CTR_A> for bool {
     #[inline(always)]
-    fn from(variant: RtcCtr) -> Self {
+    fn from(variant: RTC_CTR_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_CTR` reader - RTC CTR Mirror Register Write Status"]
-pub type RtcCtrR = crate::BitReader<RtcCtr>;
-impl RtcCtrR {
+pub type RTC_CTR_R = crate::BitReader<RTC_CTR_A>;
+impl RTC_CTR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RtcCtr {
+    pub const fn variant(&self) -> RTC_CTR_A {
         match self.bits {
-            false => RtcCtr::Value1,
-            true => RtcCtr::Value2,
+            false => RTC_CTR_A::VALUE1,
+            true => RTC_CTR_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == RtcCtr::Value1
+        *self == RTC_CTR_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == RtcCtr::Value2
+        *self == RTC_CTR_A::VALUE2
     }
 }
 #[doc = "RTC ATIM0 Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RtcAtim0 {
+pub enum RTC_ATIM0_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<RtcAtim0> for bool {
+impl From<RTC_ATIM0_A> for bool {
     #[inline(always)]
-    fn from(variant: RtcAtim0) -> Self {
+    fn from(variant: RTC_ATIM0_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_ATIM0` reader - RTC ATIM0 Mirror Register Write Status"]
-pub type RtcAtim0R = crate::BitReader<RtcAtim0>;
-impl RtcAtim0R {
+pub type RTC_ATIM0_R = crate::BitReader<RTC_ATIM0_A>;
+impl RTC_ATIM0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RtcAtim0 {
+    pub const fn variant(&self) -> RTC_ATIM0_A {
         match self.bits {
-            false => RtcAtim0::Value1,
-            true => RtcAtim0::Value2,
+            false => RTC_ATIM0_A::VALUE1,
+            true => RTC_ATIM0_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == RtcAtim0::Value1
+        *self == RTC_ATIM0_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == RtcAtim0::Value2
+        *self == RTC_ATIM0_A::VALUE2
     }
 }
 #[doc = "RTC ATIM1 Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RtcAtim1 {
+pub enum RTC_ATIM1_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<RtcAtim1> for bool {
+impl From<RTC_ATIM1_A> for bool {
     #[inline(always)]
-    fn from(variant: RtcAtim1) -> Self {
+    fn from(variant: RTC_ATIM1_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_ATIM1` reader - RTC ATIM1 Mirror Register Write Status"]
-pub type RtcAtim1R = crate::BitReader<RtcAtim1>;
-impl RtcAtim1R {
+pub type RTC_ATIM1_R = crate::BitReader<RTC_ATIM1_A>;
+impl RTC_ATIM1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RtcAtim1 {
+    pub const fn variant(&self) -> RTC_ATIM1_A {
         match self.bits {
-            false => RtcAtim1::Value1,
-            true => RtcAtim1::Value2,
+            false => RTC_ATIM1_A::VALUE1,
+            true => RTC_ATIM1_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == RtcAtim1::Value1
+        *self == RTC_ATIM1_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == RtcAtim1::Value2
+        *self == RTC_ATIM1_A::VALUE2
     }
 }
 #[doc = "RTC TIM0 Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RtcTim0 {
+pub enum RTC_TIM0_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<RtcTim0> for bool {
+impl From<RTC_TIM0_A> for bool {
     #[inline(always)]
-    fn from(variant: RtcTim0) -> Self {
+    fn from(variant: RTC_TIM0_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_TIM0` reader - RTC TIM0 Mirror Register Write Status"]
-pub type RtcTim0R = crate::BitReader<RtcTim0>;
-impl RtcTim0R {
+pub type RTC_TIM0_R = crate::BitReader<RTC_TIM0_A>;
+impl RTC_TIM0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RtcTim0 {
+    pub const fn variant(&self) -> RTC_TIM0_A {
         match self.bits {
-            false => RtcTim0::Value1,
-            true => RtcTim0::Value2,
+            false => RTC_TIM0_A::VALUE1,
+            true => RTC_TIM0_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == RtcTim0::Value1
+        *self == RTC_TIM0_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == RtcTim0::Value2
+        *self == RTC_TIM0_A::VALUE2
     }
 }
 #[doc = "RTC TIM1 Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RtcTim1 {
+pub enum RTC_TIM1_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<RtcTim1> for bool {
+impl From<RTC_TIM1_A> for bool {
     #[inline(always)]
-    fn from(variant: RtcTim1) -> Self {
+    fn from(variant: RTC_TIM1_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_TIM1` reader - RTC TIM1 Mirror Register Write Status"]
-pub type RtcTim1R = crate::BitReader<RtcTim1>;
-impl RtcTim1R {
+pub type RTC_TIM1_R = crate::BitReader<RTC_TIM1_A>;
+impl RTC_TIM1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RtcTim1 {
+    pub const fn variant(&self) -> RTC_TIM1_A {
         match self.bits {
-            false => RtcTim1::Value1,
-            true => RtcTim1::Value2,
+            false => RTC_TIM1_A::VALUE1,
+            true => RTC_TIM1_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == RtcTim1::Value1
+        *self == RTC_TIM1_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == RtcTim1::Value2
+        *self == RTC_TIM1_A::VALUE2
     }
 }
 #[doc = "Retention Memory Access Register Update Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Rmx {
+pub enum RMX_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Rmx> for bool {
+impl From<RMX_A> for bool {
     #[inline(always)]
-    fn from(variant: Rmx) -> Self {
+    fn from(variant: RMX_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RMX` reader - Retention Memory Access Register Update Status"]
-pub type RmxR = crate::BitReader<Rmx>;
-impl RmxR {
+pub type RMX_R = crate::BitReader<RMX_A>;
+impl RMX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Rmx {
+    pub const fn variant(&self) -> RMX_A {
         match self.bits {
-            false => Rmx::Value1,
-            true => Rmx::Value2,
+            false => RMX_A::VALUE1,
+            true => RMX_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Rmx::Value1
+        *self == RMX_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Rmx::Value2
+        *self == RMX_A::VALUE2
     }
 }
 #[doc = "RTC MSKSSR Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RtcMsksr {
+pub enum RTC_MSKSR_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<RtcMsksr> for bool {
+impl From<RTC_MSKSR_A> for bool {
     #[inline(always)]
-    fn from(variant: RtcMsksr) -> Self {
+    fn from(variant: RTC_MSKSR_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_MSKSR` reader - RTC MSKSSR Mirror Register Write Status"]
-pub type RtcMsksrR = crate::BitReader<RtcMsksr>;
-impl RtcMsksrR {
+pub type RTC_MSKSR_R = crate::BitReader<RTC_MSKSR_A>;
+impl RTC_MSKSR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RtcMsksr {
+    pub const fn variant(&self) -> RTC_MSKSR_A {
         match self.bits {
-            false => RtcMsksr::Value1,
-            true => RtcMsksr::Value2,
+            false => RTC_MSKSR_A::VALUE1,
+            true => RTC_MSKSR_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == RtcMsksr::Value1
+        *self == RTC_MSKSR_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == RtcMsksr::Value2
+        *self == RTC_MSKSR_A::VALUE2
     }
 }
 #[doc = "RTC CLRSR Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RtcClrsr {
+pub enum RTC_CLRSR_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<RtcClrsr> for bool {
+impl From<RTC_CLRSR_A> for bool {
     #[inline(always)]
-    fn from(variant: RtcClrsr) -> Self {
+    fn from(variant: RTC_CLRSR_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RTC_CLRSR` reader - RTC CLRSR Mirror Register Write Status"]
-pub type RtcClrsrR = crate::BitReader<RtcClrsr>;
-impl RtcClrsrR {
+pub type RTC_CLRSR_R = crate::BitReader<RTC_CLRSR_A>;
+impl RTC_CLRSR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RtcClrsr {
+    pub const fn variant(&self) -> RTC_CLRSR_A {
         match self.bits {
-            false => RtcClrsr::Value1,
-            true => RtcClrsr::Value2,
+            false => RTC_CLRSR_A::VALUE1,
+            true => RTC_CLRSR_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == RtcClrsr::Value1
+        *self == RTC_CLRSR_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == RtcClrsr::Value2
+        *self == RTC_CLRSR_A::VALUE2
     }
 }
 #[doc = "LPACCONF Mirror Register Write Interrupt Set\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Lpacconf {
+pub enum LPACCONF_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Lpacconf> for bool {
+impl From<LPACCONF_A> for bool {
     #[inline(always)]
-    fn from(variant: Lpacconf) -> Self {
+    fn from(variant: LPACCONF_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LPACCONF` reader - LPACCONF Mirror Register Write Interrupt Set"]
-pub type LpacconfR = crate::BitReader<Lpacconf>;
-impl LpacconfR {
+pub type LPACCONF_R = crate::BitReader<LPACCONF_A>;
+impl LPACCONF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Lpacconf {
+    pub const fn variant(&self) -> LPACCONF_A {
         match self.bits {
-            false => Lpacconf::Value1,
-            true => Lpacconf::Value2,
+            false => LPACCONF_A::VALUE1,
+            true => LPACCONF_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Lpacconf::Value1
+        *self == LPACCONF_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Lpacconf::Value2
+        *self == LPACCONF_A::VALUE2
     }
 }
 #[doc = "LPACTH0 Mirror Register Write Interrupt Set\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Lpacth0 {
+pub enum LPACTH0_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Lpacth0> for bool {
+impl From<LPACTH0_A> for bool {
     #[inline(always)]
-    fn from(variant: Lpacth0) -> Self {
+    fn from(variant: LPACTH0_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LPACTH0` reader - LPACTH0 Mirror Register Write Interrupt Set"]
-pub type Lpacth0R = crate::BitReader<Lpacth0>;
-impl Lpacth0R {
+pub type LPACTH0_R = crate::BitReader<LPACTH0_A>;
+impl LPACTH0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Lpacth0 {
+    pub const fn variant(&self) -> LPACTH0_A {
         match self.bits {
-            false => Lpacth0::Value1,
-            true => Lpacth0::Value2,
+            false => LPACTH0_A::VALUE1,
+            true => LPACTH0_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Lpacth0::Value1
+        *self == LPACTH0_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Lpacth0::Value2
+        *self == LPACTH0_A::VALUE2
     }
 }
 #[doc = "LPACTH1 Mirror Register Write Interrupt Set\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Lpacth1 {
+pub enum LPACTH1_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Lpacth1> for bool {
+impl From<LPACTH1_A> for bool {
     #[inline(always)]
-    fn from(variant: Lpacth1) -> Self {
+    fn from(variant: LPACTH1_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LPACTH1` reader - LPACTH1 Mirror Register Write Interrupt Set"]
-pub type Lpacth1R = crate::BitReader<Lpacth1>;
-impl Lpacth1R {
+pub type LPACTH1_R = crate::BitReader<LPACTH1_A>;
+impl LPACTH1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Lpacth1 {
+    pub const fn variant(&self) -> LPACTH1_A {
         match self.bits {
-            false => Lpacth1::Value1,
-            true => Lpacth1::Value2,
+            false => LPACTH1_A::VALUE1,
+            true => LPACTH1_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Lpacth1::Value1
+        *self == LPACTH1_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Lpacth1::Value2
+        *self == LPACTH1_A::VALUE2
     }
 }
 #[doc = "LPACCLR Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Lpacclr {
+pub enum LPACCLR_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Lpacclr> for bool {
+impl From<LPACCLR_A> for bool {
     #[inline(always)]
-    fn from(variant: Lpacclr) -> Self {
+    fn from(variant: LPACCLR_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LPACCLR` reader - LPACCLR Mirror Register Write Status"]
-pub type LpacclrR = crate::BitReader<Lpacclr>;
-impl LpacclrR {
+pub type LPACCLR_R = crate::BitReader<LPACCLR_A>;
+impl LPACCLR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Lpacclr {
+    pub const fn variant(&self) -> LPACCLR_A {
         match self.bits {
-            false => Lpacclr::Value1,
-            true => Lpacclr::Value2,
+            false => LPACCLR_A::VALUE1,
+            true => LPACCLR_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Lpacclr::Value1
+        *self == LPACCLR_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Lpacclr::Value2
+        *self == LPACCLR_A::VALUE2
     }
 }
 #[doc = "LPACSET Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Lpacset {
+pub enum LPACSET_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Lpacset> for bool {
+impl From<LPACSET_A> for bool {
     #[inline(always)]
-    fn from(variant: Lpacset) -> Self {
+    fn from(variant: LPACSET_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LPACSET` reader - LPACSET Mirror Register Write Status"]
-pub type LpacsetR = crate::BitReader<Lpacset>;
-impl LpacsetR {
+pub type LPACSET_R = crate::BitReader<LPACSET_A>;
+impl LPACSET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Lpacset {
+    pub const fn variant(&self) -> LPACSET_A {
         match self.bits {
-            false => Lpacset::Value1,
-            true => Lpacset::Value2,
+            false => LPACSET_A::VALUE1,
+            true => LPACSET_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Lpacset::Value1
+        *self == LPACSET_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Lpacset::Value2
+        *self == LPACSET_A::VALUE2
     }
 }
 #[doc = "HINTCLR Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Hintclr {
+pub enum HINTCLR_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Hintclr> for bool {
+impl From<HINTCLR_A> for bool {
     #[inline(always)]
-    fn from(variant: Hintclr) -> Self {
+    fn from(variant: HINTCLR_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HINTCLR` reader - HINTCLR Mirror Register Write Status"]
-pub type HintclrR = crate::BitReader<Hintclr>;
-impl HintclrR {
+pub type HINTCLR_R = crate::BitReader<HINTCLR_A>;
+impl HINTCLR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Hintclr {
+    pub const fn variant(&self) -> HINTCLR_A {
         match self.bits {
-            false => Hintclr::Value1,
-            true => Hintclr::Value2,
+            false => HINTCLR_A::VALUE1,
+            true => HINTCLR_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Hintclr::Value1
+        *self == HINTCLR_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Hintclr::Value2
+        *self == HINTCLR_A::VALUE2
     }
 }
 #[doc = "HINTSET Mirror Register Write Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Hintset {
+pub enum HINTSET_A {
     #[doc = "0: Ready"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Busy"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Hintset> for bool {
+impl From<HINTSET_A> for bool {
     #[inline(always)]
-    fn from(variant: Hintset) -> Self {
+    fn from(variant: HINTSET_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HINTSET` reader - HINTSET Mirror Register Write Status"]
-pub type HintsetR = crate::BitReader<Hintset>;
-impl HintsetR {
+pub type HINTSET_R = crate::BitReader<HINTSET_A>;
+impl HINTSET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Hintset {
+    pub const fn variant(&self) -> HINTSET_A {
         match self.bits {
-            false => Hintset::Value1,
-            true => Hintset::Value2,
+            false => HINTSET_A::VALUE1,
+            true => HINTSET_A::VALUE2,
         }
     }
     #[doc = "Ready"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Hintset::Value1
+        *self == HINTSET_A::VALUE1
     }
     #[doc = "Busy"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Hintset::Value2
+        *self == HINTSET_A::VALUE2
     }
 }
 impl R {
     #[doc = "Bit 1 - HDCLR Mirror Register Write Status"]
     #[inline(always)]
-    pub fn hdclr(&self) -> HdclrR {
-        HdclrR::new(((self.bits >> 1) & 1) != 0)
+    pub fn hdclr(&self) -> HDCLR_R {
+        HDCLR_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - HDSET Mirror Register Write Status"]
     #[inline(always)]
-    pub fn hdset(&self) -> HdsetR {
-        HdsetR::new(((self.bits >> 2) & 1) != 0)
+    pub fn hdset(&self) -> HDSET_R {
+        HDSET_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - HDCR Mirror Register Write Status"]
     #[inline(always)]
-    pub fn hdcr(&self) -> HdcrR {
-        HdcrR::new(((self.bits >> 3) & 1) != 0)
+    pub fn hdcr(&self) -> HDCR_R {
+        HDCR_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 5 - OSCSICTRL Mirror Register Write Status"]
     #[inline(always)]
-    pub fn oscsictrl(&self) -> OscsictrlR {
-        OscsictrlR::new(((self.bits >> 5) & 1) != 0)
+    pub fn oscsictrl(&self) -> OSCSICTRL_R {
+        OSCSICTRL_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 7 - OSCULCTRL Mirror Register Write Status"]
     #[inline(always)]
-    pub fn osculctrl(&self) -> OsculctrlR {
-        OsculctrlR::new(((self.bits >> 7) & 1) != 0)
+    pub fn osculctrl(&self) -> OSCULCTRL_R {
+        OSCULCTRL_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - RTC CTR Mirror Register Write Status"]
     #[inline(always)]
-    pub fn rtc_ctr(&self) -> RtcCtrR {
-        RtcCtrR::new(((self.bits >> 8) & 1) != 0)
+    pub fn rtc_ctr(&self) -> RTC_CTR_R {
+        RTC_CTR_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - RTC ATIM0 Mirror Register Write Status"]
     #[inline(always)]
-    pub fn rtc_atim0(&self) -> RtcAtim0R {
-        RtcAtim0R::new(((self.bits >> 9) & 1) != 0)
+    pub fn rtc_atim0(&self) -> RTC_ATIM0_R {
+        RTC_ATIM0_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - RTC ATIM1 Mirror Register Write Status"]
     #[inline(always)]
-    pub fn rtc_atim1(&self) -> RtcAtim1R {
-        RtcAtim1R::new(((self.bits >> 10) & 1) != 0)
+    pub fn rtc_atim1(&self) -> RTC_ATIM1_R {
+        RTC_ATIM1_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - RTC TIM0 Mirror Register Write Status"]
     #[inline(always)]
-    pub fn rtc_tim0(&self) -> RtcTim0R {
-        RtcTim0R::new(((self.bits >> 11) & 1) != 0)
+    pub fn rtc_tim0(&self) -> RTC_TIM0_R {
+        RTC_TIM0_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - RTC TIM1 Mirror Register Write Status"]
     #[inline(always)]
-    pub fn rtc_tim1(&self) -> RtcTim1R {
-        RtcTim1R::new(((self.bits >> 12) & 1) != 0)
+    pub fn rtc_tim1(&self) -> RTC_TIM1_R {
+        RTC_TIM1_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Retention Memory Access Register Update Status"]
     #[inline(always)]
-    pub fn rmx(&self) -> RmxR {
-        RmxR::new(((self.bits >> 13) & 1) != 0)
+    pub fn rmx(&self) -> RMX_R {
+        RMX_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - RTC MSKSSR Mirror Register Write Status"]
     #[inline(always)]
-    pub fn rtc_msksr(&self) -> RtcMsksrR {
-        RtcMsksrR::new(((self.bits >> 14) & 1) != 0)
+    pub fn rtc_msksr(&self) -> RTC_MSKSR_R {
+        RTC_MSKSR_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - RTC CLRSR Mirror Register Write Status"]
     #[inline(always)]
-    pub fn rtc_clrsr(&self) -> RtcClrsrR {
-        RtcClrsrR::new(((self.bits >> 15) & 1) != 0)
+    pub fn rtc_clrsr(&self) -> RTC_CLRSR_R {
+        RTC_CLRSR_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - LPACCONF Mirror Register Write Interrupt Set"]
     #[inline(always)]
-    pub fn lpacconf(&self) -> LpacconfR {
-        LpacconfR::new(((self.bits >> 16) & 1) != 0)
+    pub fn lpacconf(&self) -> LPACCONF_R {
+        LPACCONF_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - LPACTH0 Mirror Register Write Interrupt Set"]
     #[inline(always)]
-    pub fn lpacth0(&self) -> Lpacth0R {
-        Lpacth0R::new(((self.bits >> 17) & 1) != 0)
+    pub fn lpacth0(&self) -> LPACTH0_R {
+        LPACTH0_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - LPACTH1 Mirror Register Write Interrupt Set"]
     #[inline(always)]
-    pub fn lpacth1(&self) -> Lpacth1R {
-        Lpacth1R::new(((self.bits >> 18) & 1) != 0)
+    pub fn lpacth1(&self) -> LPACTH1_R {
+        LPACTH1_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 20 - LPACCLR Mirror Register Write Status"]
     #[inline(always)]
-    pub fn lpacclr(&self) -> LpacclrR {
-        LpacclrR::new(((self.bits >> 20) & 1) != 0)
+    pub fn lpacclr(&self) -> LPACCLR_R {
+        LPACCLR_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - LPACSET Mirror Register Write Status"]
     #[inline(always)]
-    pub fn lpacset(&self) -> LpacsetR {
-        LpacsetR::new(((self.bits >> 21) & 1) != 0)
+    pub fn lpacset(&self) -> LPACSET_R {
+        LPACSET_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 23 - HINTCLR Mirror Register Write Status"]
     #[inline(always)]
-    pub fn hintclr(&self) -> HintclrR {
-        HintclrR::new(((self.bits >> 23) & 1) != 0)
+    pub fn hintclr(&self) -> HINTCLR_R {
+        HINTCLR_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - HINTSET Mirror Register Write Status"]
     #[inline(always)]
-    pub fn hintset(&self) -> HintsetR {
-        HintsetR::new(((self.bits >> 24) & 1) != 0)
+    pub fn hintset(&self) -> HINTSET_R {
+        HINTSET_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 #[doc = "Mirror Write Status Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mirrsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct MirrstsSpec;
-impl crate::RegisterSpec for MirrstsSpec {
+pub struct MIRRSTS_SPEC;
+impl crate::RegisterSpec for MIRRSTS_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`mirrsts::R`](R) reader structure"]
-impl crate::Readable for MirrstsSpec {}
+impl crate::Readable for MIRRSTS_SPEC {}
 #[doc = "`reset()` method sets MIRRSTS to value 0"]
-impl crate::Resettable for MirrstsSpec {
+impl crate::Resettable for MIRRSTS_SPEC {
     const RESET_VALUE: u32 = 0;
 }

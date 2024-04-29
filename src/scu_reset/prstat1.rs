@@ -1,220 +1,220 @@
 #[doc = "Register `PRSTAT1` reader"]
-pub type R = crate::R<Prstat1Spec>;
+pub type R = crate::R<PRSTAT1_SPEC>;
 #[doc = "LEDTS Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Ledtscu0rs {
+pub enum LEDTSCU0RS_A {
     #[doc = "0: Reset de-asserted"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Reset asserted"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Ledtscu0rs> for bool {
+impl From<LEDTSCU0RS_A> for bool {
     #[inline(always)]
-    fn from(variant: Ledtscu0rs) -> Self {
+    fn from(variant: LEDTSCU0RS_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LEDTSCU0RS` reader - LEDTS Reset Status"]
-pub type Ledtscu0rsR = crate::BitReader<Ledtscu0rs>;
-impl Ledtscu0rsR {
+pub type LEDTSCU0RS_R = crate::BitReader<LEDTSCU0RS_A>;
+impl LEDTSCU0RS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Ledtscu0rs {
+    pub const fn variant(&self) -> LEDTSCU0RS_A {
         match self.bits {
-            false => Ledtscu0rs::Value1,
-            true => Ledtscu0rs::Value2,
+            false => LEDTSCU0RS_A::VALUE1,
+            true => LEDTSCU0RS_A::VALUE2,
         }
     }
     #[doc = "Reset de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Ledtscu0rs::Value1
+        *self == LEDTSCU0RS_A::VALUE1
     }
     #[doc = "Reset asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Ledtscu0rs::Value2
+        *self == LEDTSCU0RS_A::VALUE2
     }
 }
 #[doc = "MultiCAN Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Mcan0rs {
+pub enum MCAN0RS_A {
     #[doc = "0: Reset de-asserted"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Reset asserted"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Mcan0rs> for bool {
+impl From<MCAN0RS_A> for bool {
     #[inline(always)]
-    fn from(variant: Mcan0rs) -> Self {
+    fn from(variant: MCAN0RS_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `MCAN0RS` reader - MultiCAN Reset Status"]
-pub type Mcan0rsR = crate::BitReader<Mcan0rs>;
-impl Mcan0rsR {
+pub type MCAN0RS_R = crate::BitReader<MCAN0RS_A>;
+impl MCAN0RS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Mcan0rs {
+    pub const fn variant(&self) -> MCAN0RS_A {
         match self.bits {
-            false => Mcan0rs::Value1,
-            true => Mcan0rs::Value2,
+            false => MCAN0RS_A::VALUE1,
+            true => MCAN0RS_A::VALUE2,
         }
     }
     #[doc = "Reset de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Mcan0rs::Value1
+        *self == MCAN0RS_A::VALUE1
     }
     #[doc = "Reset asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Mcan0rs::Value2
+        *self == MCAN0RS_A::VALUE2
     }
 }
 #[doc = "DAC Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Dacrs {
+pub enum DACRS_A {
     #[doc = "0: Reset de-asserted"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Reset asserted"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Dacrs> for bool {
+impl From<DACRS_A> for bool {
     #[inline(always)]
-    fn from(variant: Dacrs) -> Self {
+    fn from(variant: DACRS_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `DACRS` reader - DAC Reset Status"]
-pub type DacrsR = crate::BitReader<Dacrs>;
-impl DacrsR {
+pub type DACRS_R = crate::BitReader<DACRS_A>;
+impl DACRS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Dacrs {
+    pub const fn variant(&self) -> DACRS_A {
         match self.bits {
-            false => Dacrs::Value1,
-            true => Dacrs::Value2,
+            false => DACRS_A::VALUE1,
+            true => DACRS_A::VALUE2,
         }
     }
     #[doc = "Reset de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Dacrs::Value1
+        *self == DACRS_A::VALUE1
     }
     #[doc = "Reset asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Dacrs::Value2
+        *self == DACRS_A::VALUE2
     }
 }
 #[doc = "USIC1 Reset Status\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Usic1rs {
+pub enum USIC1RS_A {
     #[doc = "0: Reset de-asserted"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Reset asserted"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Usic1rs> for bool {
+impl From<USIC1RS_A> for bool {
     #[inline(always)]
-    fn from(variant: Usic1rs) -> Self {
+    fn from(variant: USIC1RS_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `USIC1RS` reader - USIC1 Reset Status"]
-pub type Usic1rsR = crate::BitReader<Usic1rs>;
-impl Usic1rsR {
+pub type USIC1RS_R = crate::BitReader<USIC1RS_A>;
+impl USIC1RS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Usic1rs {
+    pub const fn variant(&self) -> USIC1RS_A {
         match self.bits {
-            false => Usic1rs::Value1,
-            true => Usic1rs::Value2,
+            false => USIC1RS_A::VALUE1,
+            true => USIC1RS_A::VALUE2,
         }
     }
     #[doc = "Reset de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Usic1rs::Value1
+        *self == USIC1RS_A::VALUE1
     }
     #[doc = "Reset asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Usic1rs::Value2
+        *self == USIC1RS_A::VALUE2
     }
 }
 #[doc = "PORTS Reset Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Pportsrs {
+pub enum PPORTSRS_A {
     #[doc = "0: Reset de-asserted"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Reset asserted"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Pportsrs> for bool {
+impl From<PPORTSRS_A> for bool {
     #[inline(always)]
-    fn from(variant: Pportsrs) -> Self {
+    fn from(variant: PPORTSRS_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `PPORTSRS` reader - PORTS Reset Status"]
-pub type PportsrsR = crate::BitReader<Pportsrs>;
-impl PportsrsR {
+pub type PPORTSRS_R = crate::BitReader<PPORTSRS_A>;
+impl PPORTSRS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Pportsrs {
+    pub const fn variant(&self) -> PPORTSRS_A {
         match self.bits {
-            false => Pportsrs::Value1,
-            true => Pportsrs::Value2,
+            false => PPORTSRS_A::VALUE1,
+            true => PPORTSRS_A::VALUE2,
         }
     }
     #[doc = "Reset de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Pportsrs::Value1
+        *self == PPORTSRS_A::VALUE1
     }
     #[doc = "Reset asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Pportsrs::Value2
+        *self == PPORTSRS_A::VALUE2
     }
 }
 impl R {
     #[doc = "Bit 3 - LEDTS Reset Status"]
     #[inline(always)]
-    pub fn ledtscu0rs(&self) -> Ledtscu0rsR {
-        Ledtscu0rsR::new(((self.bits >> 3) & 1) != 0)
+    pub fn ledtscu0rs(&self) -> LEDTSCU0RS_R {
+        LEDTSCU0RS_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - MultiCAN Reset Status"]
     #[inline(always)]
-    pub fn mcan0rs(&self) -> Mcan0rsR {
-        Mcan0rsR::new(((self.bits >> 4) & 1) != 0)
+    pub fn mcan0rs(&self) -> MCAN0RS_R {
+        MCAN0RS_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - DAC Reset Status"]
     #[inline(always)]
-    pub fn dacrs(&self) -> DacrsR {
-        DacrsR::new(((self.bits >> 5) & 1) != 0)
+    pub fn dacrs(&self) -> DACRS_R {
+        DACRS_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 7 - USIC1 Reset Status"]
     #[inline(always)]
-    pub fn usic1rs(&self) -> Usic1rsR {
-        Usic1rsR::new(((self.bits >> 7) & 1) != 0)
+    pub fn usic1rs(&self) -> USIC1RS_R {
+        USIC1RS_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 9 - PORTS Reset Status"]
     #[inline(always)]
-    pub fn pportsrs(&self) -> PportsrsR {
-        PportsrsR::new(((self.bits >> 9) & 1) != 0)
+    pub fn pportsrs(&self) -> PPORTSRS_R {
+        PPORTSRS_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 #[doc = "RCU Peripheral 1 Reset Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`prstat1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct Prstat1Spec;
-impl crate::RegisterSpec for Prstat1Spec {
+pub struct PRSTAT1_SPEC;
+impl crate::RegisterSpec for PRSTAT1_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`prstat1::R`](R) reader structure"]
-impl crate::Readable for Prstat1Spec {}
+impl crate::Readable for PRSTAT1_SPEC {}
 #[doc = "`reset()` method sets PRSTAT1 to value 0xb8"]
-impl crate::Resettable for Prstat1Spec {
+impl crate::Resettable for PRSTAT1_SPEC {
     const RESET_VALUE: u32 = 0xb8;
 }
