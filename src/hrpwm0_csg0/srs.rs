@@ -1,68 +1,68 @@
 #[doc = "Register `SRS` reader"]
-pub type R = crate::R<SRS_SPEC>;
+pub type R = crate::R<SrsSpec>;
 #[doc = "Register `SRS` writer"]
-pub type W = crate::W<SRS_SPEC>;
+pub type W = crate::W<SrsSpec>;
 #[doc = "Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum VLS1S_A {
+pub enum Vls1s {
     #[doc = "0: CSGySR0"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<VLS1S_A> for u8 {
+impl From<Vls1s> for u8 {
     #[inline(always)]
-    fn from(variant: VLS1S_A) -> Self {
+    fn from(variant: Vls1s) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for VLS1S_A {
+impl crate::FieldSpec for Vls1s {
     type Ux = u8;
 }
-impl crate::IsEnum for VLS1S_A {}
+impl crate::IsEnum for Vls1s {}
 #[doc = "Field `VLS1S` reader - Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection"]
-pub type VLS1S_R = crate::FieldReader<VLS1S_A>;
-impl VLS1S_R {
+pub type Vls1sR = crate::FieldReader<Vls1s>;
+impl Vls1sR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> VLS1S_A {
+    pub const fn variant(&self) -> Vls1s {
         match self.bits {
-            0 => VLS1S_A::VALUE1,
-            1 => VLS1S_A::VALUE2,
-            2 => VLS1S_A::VALUE3,
-            3 => VLS1S_A::VALUE4,
+            0 => Vls1s::Value1,
+            1 => Vls1s::Value2,
+            2 => Vls1s::Value3,
+            3 => Vls1s::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VLS1S_A::VALUE1
+        *self == Vls1s::Value1
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VLS1S_A::VALUE2
+        *self == Vls1s::Value2
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == VLS1S_A::VALUE3
+        *self == Vls1s::Value3
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == VLS1S_A::VALUE4
+        *self == Vls1s::Value4
     }
 }
 #[doc = "Field `VLS1S` writer - Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection"]
-pub type VLS1S_W<'a, REG> = crate::FieldWriter<'a, REG, 2, VLS1S_A, crate::Safe>;
-impl<'a, REG> VLS1S_W<'a, REG>
+pub type Vls1sW<'a, REG> = crate::FieldWriter<'a, REG, 2, Vls1s, crate::Safe>;
+impl<'a, REG> Vls1sW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -70,85 +70,85 @@ where
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(VLS1S_A::VALUE1)
+        self.variant(Vls1s::Value1)
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(VLS1S_A::VALUE2)
+        self.variant(Vls1s::Value2)
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(VLS1S_A::VALUE3)
+        self.variant(Vls1s::Value3)
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(VLS1S_A::VALUE4)
+        self.variant(Vls1s::Value4)
     }
 }
 #[doc = "Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum VLS2S_A {
+pub enum Vls2s {
     #[doc = "0: CSGySR0"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<VLS2S_A> for u8 {
+impl From<Vls2s> for u8 {
     #[inline(always)]
-    fn from(variant: VLS2S_A) -> Self {
+    fn from(variant: Vls2s) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for VLS2S_A {
+impl crate::FieldSpec for Vls2s {
     type Ux = u8;
 }
-impl crate::IsEnum for VLS2S_A {}
+impl crate::IsEnum for Vls2s {}
 #[doc = "Field `VLS2S` reader - Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection"]
-pub type VLS2S_R = crate::FieldReader<VLS2S_A>;
-impl VLS2S_R {
+pub type Vls2sR = crate::FieldReader<Vls2s>;
+impl Vls2sR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> VLS2S_A {
+    pub const fn variant(&self) -> Vls2s {
         match self.bits {
-            0 => VLS2S_A::VALUE1,
-            1 => VLS2S_A::VALUE2,
-            2 => VLS2S_A::VALUE3,
-            3 => VLS2S_A::VALUE4,
+            0 => Vls2s::Value1,
+            1 => Vls2s::Value2,
+            2 => Vls2s::Value3,
+            3 => Vls2s::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VLS2S_A::VALUE1
+        *self == Vls2s::Value1
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VLS2S_A::VALUE2
+        *self == Vls2s::Value2
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == VLS2S_A::VALUE3
+        *self == Vls2s::Value3
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == VLS2S_A::VALUE4
+        *self == Vls2s::Value4
     }
 }
 #[doc = "Field `VLS2S` writer - Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection"]
-pub type VLS2S_W<'a, REG> = crate::FieldWriter<'a, REG, 2, VLS2S_A, crate::Safe>;
-impl<'a, REG> VLS2S_W<'a, REG>
+pub type Vls2sW<'a, REG> = crate::FieldWriter<'a, REG, 2, Vls2s, crate::Safe>;
+impl<'a, REG> Vls2sW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -156,85 +156,85 @@ where
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(VLS2S_A::VALUE1)
+        self.variant(Vls2s::Value1)
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(VLS2S_A::VALUE2)
+        self.variant(Vls2s::Value2)
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(VLS2S_A::VALUE3)
+        self.variant(Vls2s::Value3)
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(VLS2S_A::VALUE4)
+        self.variant(Vls2s::Value4)
     }
 }
 #[doc = "Conversion trigger interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum TRLS_A {
+pub enum Trls {
     #[doc = "0: CSGySR0"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<TRLS_A> for u8 {
+impl From<Trls> for u8 {
     #[inline(always)]
-    fn from(variant: TRLS_A) -> Self {
+    fn from(variant: Trls) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for TRLS_A {
+impl crate::FieldSpec for Trls {
     type Ux = u8;
 }
-impl crate::IsEnum for TRLS_A {}
+impl crate::IsEnum for Trls {}
 #[doc = "Field `TRLS` reader - Conversion trigger interrupt line selection"]
-pub type TRLS_R = crate::FieldReader<TRLS_A>;
-impl TRLS_R {
+pub type TrlsR = crate::FieldReader<Trls>;
+impl TrlsR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> TRLS_A {
+    pub const fn variant(&self) -> Trls {
         match self.bits {
-            0 => TRLS_A::VALUE1,
-            1 => TRLS_A::VALUE2,
-            2 => TRLS_A::VALUE3,
-            3 => TRLS_A::VALUE4,
+            0 => Trls::Value1,
+            1 => Trls::Value2,
+            2 => Trls::Value3,
+            3 => Trls::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == TRLS_A::VALUE1
+        *self == Trls::Value1
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == TRLS_A::VALUE2
+        *self == Trls::Value2
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == TRLS_A::VALUE3
+        *self == Trls::Value3
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == TRLS_A::VALUE4
+        *self == Trls::Value4
     }
 }
 #[doc = "Field `TRLS` writer - Conversion trigger interrupt line selection"]
-pub type TRLS_W<'a, REG> = crate::FieldWriter<'a, REG, 2, TRLS_A, crate::Safe>;
-impl<'a, REG> TRLS_W<'a, REG>
+pub type TrlsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Trls, crate::Safe>;
+impl<'a, REG> TrlsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -242,85 +242,85 @@ where
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(TRLS_A::VALUE1)
+        self.variant(Trls::Value1)
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(TRLS_A::VALUE2)
+        self.variant(Trls::Value2)
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(TRLS_A::VALUE3)
+        self.variant(Trls::Value3)
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(TRLS_A::VALUE4)
+        self.variant(Trls::Value4)
     }
 }
 #[doc = "Start/Stop trigger interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum SSLS_A {
+pub enum Ssls {
     #[doc = "0: CSGySR0"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<SSLS_A> for u8 {
+impl From<Ssls> for u8 {
     #[inline(always)]
-    fn from(variant: SSLS_A) -> Self {
+    fn from(variant: Ssls) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for SSLS_A {
+impl crate::FieldSpec for Ssls {
     type Ux = u8;
 }
-impl crate::IsEnum for SSLS_A {}
+impl crate::IsEnum for Ssls {}
 #[doc = "Field `SSLS` reader - Start/Stop trigger interrupt line selection"]
-pub type SSLS_R = crate::FieldReader<SSLS_A>;
-impl SSLS_R {
+pub type SslsR = crate::FieldReader<Ssls>;
+impl SslsR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> SSLS_A {
+    pub const fn variant(&self) -> Ssls {
         match self.bits {
-            0 => SSLS_A::VALUE1,
-            1 => SSLS_A::VALUE2,
-            2 => SSLS_A::VALUE3,
-            3 => SSLS_A::VALUE4,
+            0 => Ssls::Value1,
+            1 => Ssls::Value2,
+            2 => Ssls::Value3,
+            3 => Ssls::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SSLS_A::VALUE1
+        *self == Ssls::Value1
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SSLS_A::VALUE2
+        *self == Ssls::Value2
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SSLS_A::VALUE3
+        *self == Ssls::Value3
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == SSLS_A::VALUE4
+        *self == Ssls::Value4
     }
 }
 #[doc = "Field `SSLS` writer - Start/Stop trigger interrupt line selection"]
-pub type SSLS_W<'a, REG> = crate::FieldWriter<'a, REG, 2, SSLS_A, crate::Safe>;
-impl<'a, REG> SSLS_W<'a, REG>
+pub type SslsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Ssls, crate::Safe>;
+impl<'a, REG> SslsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -328,85 +328,85 @@ where
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(SSLS_A::VALUE1)
+        self.variant(Ssls::Value1)
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(SSLS_A::VALUE2)
+        self.variant(Ssls::Value2)
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(SSLS_A::VALUE3)
+        self.variant(Ssls::Value3)
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(SSLS_A::VALUE4)
+        self.variant(Ssls::Value4)
     }
 }
 #[doc = "Shadow transfer done interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum STLS_A {
+pub enum Stls {
     #[doc = "0: CSGySR0"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<STLS_A> for u8 {
+impl From<Stls> for u8 {
     #[inline(always)]
-    fn from(variant: STLS_A) -> Self {
+    fn from(variant: Stls) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for STLS_A {
+impl crate::FieldSpec for Stls {
     type Ux = u8;
 }
-impl crate::IsEnum for STLS_A {}
+impl crate::IsEnum for Stls {}
 #[doc = "Field `STLS` reader - Shadow transfer done interrupt line selection"]
-pub type STLS_R = crate::FieldReader<STLS_A>;
-impl STLS_R {
+pub type StlsR = crate::FieldReader<Stls>;
+impl StlsR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> STLS_A {
+    pub const fn variant(&self) -> Stls {
         match self.bits {
-            0 => STLS_A::VALUE1,
-            1 => STLS_A::VALUE2,
-            2 => STLS_A::VALUE3,
-            3 => STLS_A::VALUE4,
+            0 => Stls::Value1,
+            1 => Stls::Value2,
+            2 => Stls::Value3,
+            3 => Stls::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == STLS_A::VALUE1
+        *self == Stls::Value1
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == STLS_A::VALUE2
+        *self == Stls::Value2
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == STLS_A::VALUE3
+        *self == Stls::Value3
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == STLS_A::VALUE4
+        *self == Stls::Value4
     }
 }
 #[doc = "Field `STLS` writer - Shadow transfer done interrupt line selection"]
-pub type STLS_W<'a, REG> = crate::FieldWriter<'a, REG, 2, STLS_A, crate::Safe>;
-impl<'a, REG> STLS_W<'a, REG>
+pub type StlsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Stls, crate::Safe>;
+impl<'a, REG> StlsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -414,85 +414,85 @@ where
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(STLS_A::VALUE1)
+        self.variant(Stls::Value1)
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(STLS_A::VALUE2)
+        self.variant(Stls::Value2)
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(STLS_A::VALUE3)
+        self.variant(Stls::Value3)
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(STLS_A::VALUE4)
+        self.variant(Stls::Value4)
     }
 }
 #[doc = "Comparator rise/fall interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum CRFLS_A {
+pub enum Crfls {
     #[doc = "0: CSGySR0"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<CRFLS_A> for u8 {
+impl From<Crfls> for u8 {
     #[inline(always)]
-    fn from(variant: CRFLS_A) -> Self {
+    fn from(variant: Crfls) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for CRFLS_A {
+impl crate::FieldSpec for Crfls {
     type Ux = u8;
 }
-impl crate::IsEnum for CRFLS_A {}
+impl crate::IsEnum for Crfls {}
 #[doc = "Field `CRFLS` reader - Comparator rise/fall interrupt line selection"]
-pub type CRFLS_R = crate::FieldReader<CRFLS_A>;
-impl CRFLS_R {
+pub type CrflsR = crate::FieldReader<Crfls>;
+impl CrflsR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CRFLS_A {
+    pub const fn variant(&self) -> Crfls {
         match self.bits {
-            0 => CRFLS_A::VALUE1,
-            1 => CRFLS_A::VALUE2,
-            2 => CRFLS_A::VALUE3,
-            3 => CRFLS_A::VALUE4,
+            0 => Crfls::Value1,
+            1 => Crfls::Value2,
+            2 => Crfls::Value3,
+            3 => Crfls::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CRFLS_A::VALUE1
+        *self == Crfls::Value1
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CRFLS_A::VALUE2
+        *self == Crfls::Value2
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == CRFLS_A::VALUE3
+        *self == Crfls::Value3
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == CRFLS_A::VALUE4
+        *self == Crfls::Value4
     }
 }
 #[doc = "Field `CRFLS` writer - Comparator rise/fall interrupt line selection"]
-pub type CRFLS_W<'a, REG> = crate::FieldWriter<'a, REG, 2, CRFLS_A, crate::Safe>;
-impl<'a, REG> CRFLS_W<'a, REG>
+pub type CrflsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Crfls, crate::Safe>;
+impl<'a, REG> CrflsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -500,85 +500,85 @@ where
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(CRFLS_A::VALUE1)
+        self.variant(Crfls::Value1)
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(CRFLS_A::VALUE2)
+        self.variant(Crfls::Value2)
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(CRFLS_A::VALUE3)
+        self.variant(Crfls::Value3)
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(CRFLS_A::VALUE4)
+        self.variant(Crfls::Value4)
     }
 }
 #[doc = "Comparator clamped state interrupt line selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum CSLS_A {
+pub enum Csls {
     #[doc = "0: CSGySR0"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: CSGySR1"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: CSGySR2"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: CSGySR3"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<CSLS_A> for u8 {
+impl From<Csls> for u8 {
     #[inline(always)]
-    fn from(variant: CSLS_A) -> Self {
+    fn from(variant: Csls) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for CSLS_A {
+impl crate::FieldSpec for Csls {
     type Ux = u8;
 }
-impl crate::IsEnum for CSLS_A {}
+impl crate::IsEnum for Csls {}
 #[doc = "Field `CSLS` reader - Comparator clamped state interrupt line selection"]
-pub type CSLS_R = crate::FieldReader<CSLS_A>;
-impl CSLS_R {
+pub type CslsR = crate::FieldReader<Csls>;
+impl CslsR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CSLS_A {
+    pub const fn variant(&self) -> Csls {
         match self.bits {
-            0 => CSLS_A::VALUE1,
-            1 => CSLS_A::VALUE2,
-            2 => CSLS_A::VALUE3,
-            3 => CSLS_A::VALUE4,
+            0 => Csls::Value1,
+            1 => Csls::Value2,
+            2 => Csls::Value3,
+            3 => Csls::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CSLS_A::VALUE1
+        *self == Csls::Value1
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CSLS_A::VALUE2
+        *self == Csls::Value2
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == CSLS_A::VALUE3
+        *self == Csls::Value3
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == CSLS_A::VALUE4
+        *self == Csls::Value4
     }
 }
 #[doc = "Field `CSLS` writer - Comparator clamped state interrupt line selection"]
-pub type CSLS_W<'a, REG> = crate::FieldWriter<'a, REG, 2, CSLS_A, crate::Safe>;
-impl<'a, REG> CSLS_W<'a, REG>
+pub type CslsW<'a, REG> = crate::FieldWriter<'a, REG, 2, Csls, crate::Safe>;
+impl<'a, REG> CslsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -586,119 +586,119 @@ where
     #[doc = "CSGySR0"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(CSLS_A::VALUE1)
+        self.variant(Csls::Value1)
     }
     #[doc = "CSGySR1"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(CSLS_A::VALUE2)
+        self.variant(Csls::Value2)
     }
     #[doc = "CSGySR2"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(CSLS_A::VALUE3)
+        self.variant(Csls::Value3)
     }
     #[doc = "CSGySR3"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(CSLS_A::VALUE4)
+        self.variant(Csls::Value4)
     }
 }
 impl R {
     #[doc = "Bits 0:1 - Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection"]
     #[inline(always)]
-    pub fn vls1s(&self) -> VLS1S_R {
-        VLS1S_R::new((self.bits & 3) as u8)
+    pub fn vls1s(&self) -> Vls1sR {
+        Vls1sR::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection"]
     #[inline(always)]
-    pub fn vls2s(&self) -> VLS2S_R {
-        VLS2S_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn vls2s(&self) -> Vls2sR {
+        Vls2sR::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - Conversion trigger interrupt line selection"]
     #[inline(always)]
-    pub fn trls(&self) -> TRLS_R {
-        TRLS_R::new(((self.bits >> 4) & 3) as u8)
+    pub fn trls(&self) -> TrlsR {
+        TrlsR::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - Start/Stop trigger interrupt line selection"]
     #[inline(always)]
-    pub fn ssls(&self) -> SSLS_R {
-        SSLS_R::new(((self.bits >> 6) & 3) as u8)
+    pub fn ssls(&self) -> SslsR {
+        SslsR::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - Shadow transfer done interrupt line selection"]
     #[inline(always)]
-    pub fn stls(&self) -> STLS_R {
-        STLS_R::new(((self.bits >> 8) & 3) as u8)
+    pub fn stls(&self) -> StlsR {
+        StlsR::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - Comparator rise/fall interrupt line selection"]
     #[inline(always)]
-    pub fn crfls(&self) -> CRFLS_R {
-        CRFLS_R::new(((self.bits >> 10) & 3) as u8)
+    pub fn crfls(&self) -> CrflsR {
+        CrflsR::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - Comparator clamped state interrupt line selection"]
     #[inline(always)]
-    pub fn csls(&self) -> CSLS_R {
-        CSLS_R::new(((self.bits >> 12) & 3) as u8)
+    pub fn csls(&self) -> CslsR {
+        CslsR::new(((self.bits >> 12) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection"]
     #[inline(always)]
     #[must_use]
-    pub fn vls1s(&mut self) -> VLS1S_W<SRS_SPEC> {
-        VLS1S_W::new(self, 0)
+    pub fn vls1s(&mut self) -> Vls1sW<SrsSpec> {
+        Vls1sW::new(self, 0)
     }
     #[doc = "Bits 2:3 - Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection"]
     #[inline(always)]
     #[must_use]
-    pub fn vls2s(&mut self) -> VLS2S_W<SRS_SPEC> {
-        VLS2S_W::new(self, 2)
+    pub fn vls2s(&mut self) -> Vls2sW<SrsSpec> {
+        Vls2sW::new(self, 2)
     }
     #[doc = "Bits 4:5 - Conversion trigger interrupt line selection"]
     #[inline(always)]
     #[must_use]
-    pub fn trls(&mut self) -> TRLS_W<SRS_SPEC> {
-        TRLS_W::new(self, 4)
+    pub fn trls(&mut self) -> TrlsW<SrsSpec> {
+        TrlsW::new(self, 4)
     }
     #[doc = "Bits 6:7 - Start/Stop trigger interrupt line selection"]
     #[inline(always)]
     #[must_use]
-    pub fn ssls(&mut self) -> SSLS_W<SRS_SPEC> {
-        SSLS_W::new(self, 6)
+    pub fn ssls(&mut self) -> SslsW<SrsSpec> {
+        SslsW::new(self, 6)
     }
     #[doc = "Bits 8:9 - Shadow transfer done interrupt line selection"]
     #[inline(always)]
     #[must_use]
-    pub fn stls(&mut self) -> STLS_W<SRS_SPEC> {
-        STLS_W::new(self, 8)
+    pub fn stls(&mut self) -> StlsW<SrsSpec> {
+        StlsW::new(self, 8)
     }
     #[doc = "Bits 10:11 - Comparator rise/fall interrupt line selection"]
     #[inline(always)]
     #[must_use]
-    pub fn crfls(&mut self) -> CRFLS_W<SRS_SPEC> {
-        CRFLS_W::new(self, 10)
+    pub fn crfls(&mut self) -> CrflsW<SrsSpec> {
+        CrflsW::new(self, 10)
     }
     #[doc = "Bits 12:13 - Comparator clamped state interrupt line selection"]
     #[inline(always)]
     #[must_use]
-    pub fn csls(&mut self) -> CSLS_W<SRS_SPEC> {
-        CSLS_W::new(self, 12)
+    pub fn csls(&mut self) -> CslsW<SrsSpec> {
+        CslsW::new(self, 12)
     }
 }
 #[doc = "Service request line selector\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`srs::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`srs::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct SRS_SPEC;
-impl crate::RegisterSpec for SRS_SPEC {
+pub struct SrsSpec;
+impl crate::RegisterSpec for SrsSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`srs::R`](R) reader structure"]
-impl crate::Readable for SRS_SPEC {}
+impl crate::Readable for SrsSpec {}
 #[doc = "`write(|w| ..)` method takes [`srs::W`](W) writer structure"]
-impl crate::Writable for SRS_SPEC {
+impl crate::Writable for SrsSpec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRS to value 0"]
-impl crate::Resettable for SRS_SPEC {
+impl crate::Resettable for SrsSpec {
     const RESET_VALUE: u32 = 0;
 }

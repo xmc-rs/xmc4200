@@ -1,164 +1,164 @@
 #[doc = "Register `CC` reader"]
-pub type R = crate::R<CC_SPEC>;
+pub type R = crate::R<CcSpec>;
 #[doc = "Register `CC` writer"]
-pub type W = crate::W<CC_SPEC>;
+pub type W = crate::W<CcSpec>;
 #[doc = "External blanking trigger selector\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum IBS_A {
+pub enum Ibs {
     #[doc = "0: HRPWMx.BLyA"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: HRPWMx.BLyB"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: HRPWMx.BLyC"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: HRPWMx.BLyD"]
-    VALUE4 = 3,
+    Value4 = 3,
     #[doc = "4: HRPWMx.BLyE"]
-    VALUE5 = 4,
+    Value5 = 4,
     #[doc = "5: HRPWMx.BLyF"]
-    VALUE6 = 5,
+    Value6 = 5,
     #[doc = "6: HRPWMx.BLyG"]
-    VALUE7 = 6,
+    Value7 = 6,
     #[doc = "7: HRPWMx.BLyH"]
-    VALUE8 = 7,
+    Value8 = 7,
     #[doc = "8: HRPWMx.BLyI"]
-    VALUE9 = 8,
+    Value9 = 8,
     #[doc = "9: HRPWMx.BLyJ"]
-    VALUE10 = 9,
+    Value10 = 9,
     #[doc = "10: HRPWMx.BLyK"]
-    VALUE11 = 10,
+    Value11 = 10,
     #[doc = "11: HRPWMx.BLyL"]
-    VALUE12 = 11,
+    Value12 = 11,
     #[doc = "12: HRPWMx.BLyM"]
-    VALUE13 = 12,
+    Value13 = 12,
     #[doc = "13: HRPWMx.BLyN"]
-    VALUE14 = 13,
+    Value14 = 13,
     #[doc = "14: HRPWMx.BLyO"]
-    VALUE15 = 14,
+    Value15 = 14,
     #[doc = "15: HRPWMx.BLyP"]
-    VALUE16 = 15,
+    Value16 = 15,
 }
-impl From<IBS_A> for u8 {
+impl From<Ibs> for u8 {
     #[inline(always)]
-    fn from(variant: IBS_A) -> Self {
+    fn from(variant: Ibs) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for IBS_A {
+impl crate::FieldSpec for Ibs {
     type Ux = u8;
 }
-impl crate::IsEnum for IBS_A {}
+impl crate::IsEnum for Ibs {}
 #[doc = "Field `IBS` reader - External blanking trigger selector"]
-pub type IBS_R = crate::FieldReader<IBS_A>;
-impl IBS_R {
+pub type IbsR = crate::FieldReader<Ibs>;
+impl IbsR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> IBS_A {
+    pub const fn variant(&self) -> Ibs {
         match self.bits {
-            0 => IBS_A::VALUE1,
-            1 => IBS_A::VALUE2,
-            2 => IBS_A::VALUE3,
-            3 => IBS_A::VALUE4,
-            4 => IBS_A::VALUE5,
-            5 => IBS_A::VALUE6,
-            6 => IBS_A::VALUE7,
-            7 => IBS_A::VALUE8,
-            8 => IBS_A::VALUE9,
-            9 => IBS_A::VALUE10,
-            10 => IBS_A::VALUE11,
-            11 => IBS_A::VALUE12,
-            12 => IBS_A::VALUE13,
-            13 => IBS_A::VALUE14,
-            14 => IBS_A::VALUE15,
-            15 => IBS_A::VALUE16,
+            0 => Ibs::Value1,
+            1 => Ibs::Value2,
+            2 => Ibs::Value3,
+            3 => Ibs::Value4,
+            4 => Ibs::Value5,
+            5 => Ibs::Value6,
+            6 => Ibs::Value7,
+            7 => Ibs::Value8,
+            8 => Ibs::Value9,
+            9 => Ibs::Value10,
+            10 => Ibs::Value11,
+            11 => Ibs::Value12,
+            12 => Ibs::Value13,
+            13 => Ibs::Value14,
+            14 => Ibs::Value15,
+            15 => Ibs::Value16,
             _ => unreachable!(),
         }
     }
     #[doc = "HRPWMx.BLyA"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == IBS_A::VALUE1
+        *self == Ibs::Value1
     }
     #[doc = "HRPWMx.BLyB"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == IBS_A::VALUE2
+        *self == Ibs::Value2
     }
     #[doc = "HRPWMx.BLyC"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == IBS_A::VALUE3
+        *self == Ibs::Value3
     }
     #[doc = "HRPWMx.BLyD"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == IBS_A::VALUE4
+        *self == Ibs::Value4
     }
     #[doc = "HRPWMx.BLyE"]
     #[inline(always)]
     pub fn is_value5(&self) -> bool {
-        *self == IBS_A::VALUE5
+        *self == Ibs::Value5
     }
     #[doc = "HRPWMx.BLyF"]
     #[inline(always)]
     pub fn is_value6(&self) -> bool {
-        *self == IBS_A::VALUE6
+        *self == Ibs::Value6
     }
     #[doc = "HRPWMx.BLyG"]
     #[inline(always)]
     pub fn is_value7(&self) -> bool {
-        *self == IBS_A::VALUE7
+        *self == Ibs::Value7
     }
     #[doc = "HRPWMx.BLyH"]
     #[inline(always)]
     pub fn is_value8(&self) -> bool {
-        *self == IBS_A::VALUE8
+        *self == Ibs::Value8
     }
     #[doc = "HRPWMx.BLyI"]
     #[inline(always)]
     pub fn is_value9(&self) -> bool {
-        *self == IBS_A::VALUE9
+        *self == Ibs::Value9
     }
     #[doc = "HRPWMx.BLyJ"]
     #[inline(always)]
     pub fn is_value10(&self) -> bool {
-        *self == IBS_A::VALUE10
+        *self == Ibs::Value10
     }
     #[doc = "HRPWMx.BLyK"]
     #[inline(always)]
     pub fn is_value11(&self) -> bool {
-        *self == IBS_A::VALUE11
+        *self == Ibs::Value11
     }
     #[doc = "HRPWMx.BLyL"]
     #[inline(always)]
     pub fn is_value12(&self) -> bool {
-        *self == IBS_A::VALUE12
+        *self == Ibs::Value12
     }
     #[doc = "HRPWMx.BLyM"]
     #[inline(always)]
     pub fn is_value13(&self) -> bool {
-        *self == IBS_A::VALUE13
+        *self == Ibs::Value13
     }
     #[doc = "HRPWMx.BLyN"]
     #[inline(always)]
     pub fn is_value14(&self) -> bool {
-        *self == IBS_A::VALUE14
+        *self == Ibs::Value14
     }
     #[doc = "HRPWMx.BLyO"]
     #[inline(always)]
     pub fn is_value15(&self) -> bool {
-        *self == IBS_A::VALUE15
+        *self == Ibs::Value15
     }
     #[doc = "HRPWMx.BLyP"]
     #[inline(always)]
     pub fn is_value16(&self) -> bool {
-        *self == IBS_A::VALUE16
+        *self == Ibs::Value16
     }
 }
 #[doc = "Field `IBS` writer - External blanking trigger selector"]
-pub type IBS_W<'a, REG> = crate::FieldWriter<'a, REG, 4, IBS_A, crate::Safe>;
-impl<'a, REG> IBS_W<'a, REG>
+pub type IbsW<'a, REG> = crate::FieldWriter<'a, REG, 4, Ibs, crate::Safe>;
+impl<'a, REG> IbsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -166,190 +166,190 @@ where
     #[doc = "HRPWMx.BLyA"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE1)
+        self.variant(Ibs::Value1)
     }
     #[doc = "HRPWMx.BLyB"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE2)
+        self.variant(Ibs::Value2)
     }
     #[doc = "HRPWMx.BLyC"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE3)
+        self.variant(Ibs::Value3)
     }
     #[doc = "HRPWMx.BLyD"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE4)
+        self.variant(Ibs::Value4)
     }
     #[doc = "HRPWMx.BLyE"]
     #[inline(always)]
     pub fn value5(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE5)
+        self.variant(Ibs::Value5)
     }
     #[doc = "HRPWMx.BLyF"]
     #[inline(always)]
     pub fn value6(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE6)
+        self.variant(Ibs::Value6)
     }
     #[doc = "HRPWMx.BLyG"]
     #[inline(always)]
     pub fn value7(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE7)
+        self.variant(Ibs::Value7)
     }
     #[doc = "HRPWMx.BLyH"]
     #[inline(always)]
     pub fn value8(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE8)
+        self.variant(Ibs::Value8)
     }
     #[doc = "HRPWMx.BLyI"]
     #[inline(always)]
     pub fn value9(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE9)
+        self.variant(Ibs::Value9)
     }
     #[doc = "HRPWMx.BLyJ"]
     #[inline(always)]
     pub fn value10(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE10)
+        self.variant(Ibs::Value10)
     }
     #[doc = "HRPWMx.BLyK"]
     #[inline(always)]
     pub fn value11(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE11)
+        self.variant(Ibs::Value11)
     }
     #[doc = "HRPWMx.BLyL"]
     #[inline(always)]
     pub fn value12(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE12)
+        self.variant(Ibs::Value12)
     }
     #[doc = "HRPWMx.BLyM"]
     #[inline(always)]
     pub fn value13(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE13)
+        self.variant(Ibs::Value13)
     }
     #[doc = "HRPWMx.BLyN"]
     #[inline(always)]
     pub fn value14(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE14)
+        self.variant(Ibs::Value14)
     }
     #[doc = "HRPWMx.BLyO"]
     #[inline(always)]
     pub fn value15(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE15)
+        self.variant(Ibs::Value15)
     }
     #[doc = "HRPWMx.BLyP"]
     #[inline(always)]
     pub fn value16(self) -> &'a mut crate::W<REG> {
-        self.variant(IBS_A::VALUE16)
+        self.variant(Ibs::Value16)
     }
 }
 #[doc = "Inverting comparator input selector\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum IMCS_A {
+pub enum Imcs {
     #[doc = "0: HRPWMx.CyINA"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: HRPWMx.CyINB"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<IMCS_A> for bool {
+impl From<Imcs> for bool {
     #[inline(always)]
-    fn from(variant: IMCS_A) -> Self {
+    fn from(variant: Imcs) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `IMCS` reader - Inverting comparator input selector"]
-pub type IMCS_R = crate::BitReader<IMCS_A>;
-impl IMCS_R {
+pub type ImcsR = crate::BitReader<Imcs>;
+impl ImcsR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> IMCS_A {
+    pub const fn variant(&self) -> Imcs {
         match self.bits {
-            false => IMCS_A::VALUE1,
-            true => IMCS_A::VALUE2,
+            false => Imcs::Value1,
+            true => Imcs::Value2,
         }
     }
     #[doc = "HRPWMx.CyINA"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == IMCS_A::VALUE1
+        *self == Imcs::Value1
     }
     #[doc = "HRPWMx.CyINB"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == IMCS_A::VALUE2
+        *self == Imcs::Value2
     }
 }
 #[doc = "Field `IMCS` writer - Inverting comparator input selector"]
-pub type IMCS_W<'a, REG> = crate::BitWriter<'a, REG, IMCS_A>;
-impl<'a, REG> IMCS_W<'a, REG>
+pub type ImcsW<'a, REG> = crate::BitWriter<'a, REG, Imcs>;
+impl<'a, REG> ImcsW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "HRPWMx.CyINA"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(IMCS_A::VALUE1)
+        self.variant(Imcs::Value1)
     }
     #[doc = "HRPWMx.CyINB"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(IMCS_A::VALUE2)
+        self.variant(Imcs::Value2)
     }
 }
 #[doc = "Comparator input switching configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum IMCC_A {
+pub enum Imcc {
     #[doc = "0: Dynamic switch disabled"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Comparator input is connected to HRPWMx.CyINB when the control signal is HIGH"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: Comparator input is connected to HRPWMx.CyINA when the control signal is HIGH"]
-    VALUE3 = 2,
+    Value3 = 2,
 }
-impl From<IMCC_A> for u8 {
+impl From<Imcc> for u8 {
     #[inline(always)]
-    fn from(variant: IMCC_A) -> Self {
+    fn from(variant: Imcc) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for IMCC_A {
+impl crate::FieldSpec for Imcc {
     type Ux = u8;
 }
-impl crate::IsEnum for IMCC_A {}
+impl crate::IsEnum for Imcc {}
 #[doc = "Field `IMCC` reader - Comparator input switching configuration"]
-pub type IMCC_R = crate::FieldReader<IMCC_A>;
-impl IMCC_R {
+pub type ImccR = crate::FieldReader<Imcc>;
+impl ImccR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<IMCC_A> {
+    pub const fn variant(&self) -> Option<Imcc> {
         match self.bits {
-            0 => Some(IMCC_A::VALUE1),
-            1 => Some(IMCC_A::VALUE2),
-            2 => Some(IMCC_A::VALUE3),
+            0 => Some(Imcc::Value1),
+            1 => Some(Imcc::Value2),
+            2 => Some(Imcc::Value3),
             _ => None,
         }
     }
     #[doc = "Dynamic switch disabled"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == IMCC_A::VALUE1
+        *self == Imcc::Value1
     }
     #[doc = "Comparator input is connected to HRPWMx.CyINB when the control signal is HIGH"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == IMCC_A::VALUE2
+        *self == Imcc::Value2
     }
     #[doc = "Comparator input is connected to HRPWMx.CyINA when the control signal is HIGH"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == IMCC_A::VALUE3
+        *self == Imcc::Value3
     }
 }
 #[doc = "Field `IMCC` writer - Comparator input switching configuration"]
-pub type IMCC_W<'a, REG> = crate::FieldWriter<'a, REG, 2, IMCC_A>;
-impl<'a, REG> IMCC_W<'a, REG>
+pub type ImccW<'a, REG> = crate::FieldWriter<'a, REG, 2, Imcc>;
+impl<'a, REG> ImccW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -357,92 +357,92 @@ where
     #[doc = "Dynamic switch disabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(IMCC_A::VALUE1)
+        self.variant(Imcc::Value1)
     }
     #[doc = "Comparator input is connected to HRPWMx.CyINB when the control signal is HIGH"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(IMCC_A::VALUE2)
+        self.variant(Imcc::Value2)
     }
     #[doc = "Comparator input is connected to HRPWMx.CyINA when the control signal is HIGH"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(IMCC_A::VALUE3)
+        self.variant(Imcc::Value3)
     }
 }
 #[doc = "Field `ESE` reader - External triggered switch enable"]
-pub type ESE_R = crate::BitReader;
+pub type EseR = crate::BitReader;
 #[doc = "Field `ESE` writer - External triggered switch enable"]
-pub type ESE_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type EseW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OIE` reader - Comparator output inversion enable"]
-pub type OIE_R = crate::BitReader;
+pub type OieR = crate::BitReader;
 #[doc = "Field `OIE` writer - Comparator output inversion enable"]
-pub type OIE_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OSE` reader - Comparator output synchronization enable"]
-pub type OSE_R = crate::BitReader;
+pub type OseR = crate::BitReader;
 #[doc = "Field `OSE` writer - Comparator output synchronization enable"]
-pub type OSE_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OseW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Blanking mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum BLMC_A {
+pub enum Blmc {
     #[doc = "0: Blanking disabled"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Blanking on a LOW to HIGH transition"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: Blanking on a HIGH to LOW transition"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: Blanking on both transitions"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<BLMC_A> for u8 {
+impl From<Blmc> for u8 {
     #[inline(always)]
-    fn from(variant: BLMC_A) -> Self {
+    fn from(variant: Blmc) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for BLMC_A {
+impl crate::FieldSpec for Blmc {
     type Ux = u8;
 }
-impl crate::IsEnum for BLMC_A {}
+impl crate::IsEnum for Blmc {}
 #[doc = "Field `BLMC` reader - Blanking mode"]
-pub type BLMC_R = crate::FieldReader<BLMC_A>;
-impl BLMC_R {
+pub type BlmcR = crate::FieldReader<Blmc>;
+impl BlmcR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> BLMC_A {
+    pub const fn variant(&self) -> Blmc {
         match self.bits {
-            0 => BLMC_A::VALUE1,
-            1 => BLMC_A::VALUE2,
-            2 => BLMC_A::VALUE3,
-            3 => BLMC_A::VALUE4,
+            0 => Blmc::Value1,
+            1 => Blmc::Value2,
+            2 => Blmc::Value3,
+            3 => Blmc::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "Blanking disabled"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == BLMC_A::VALUE1
+        *self == Blmc::Value1
     }
     #[doc = "Blanking on a LOW to HIGH transition"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == BLMC_A::VALUE2
+        *self == Blmc::Value2
     }
     #[doc = "Blanking on a HIGH to LOW transition"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == BLMC_A::VALUE3
+        *self == Blmc::Value3
     }
     #[doc = "Blanking on both transitions"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == BLMC_A::VALUE4
+        *self == Blmc::Value4
     }
 }
 #[doc = "Field `BLMC` writer - Blanking mode"]
-pub type BLMC_W<'a, REG> = crate::FieldWriter<'a, REG, 2, BLMC_A, crate::Safe>;
-impl<'a, REG> BLMC_W<'a, REG>
+pub type BlmcW<'a, REG> = crate::FieldWriter<'a, REG, 2, Blmc, crate::Safe>;
+impl<'a, REG> BlmcW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -450,174 +450,174 @@ where
     #[doc = "Blanking disabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(BLMC_A::VALUE1)
+        self.variant(Blmc::Value1)
     }
     #[doc = "Blanking on a LOW to HIGH transition"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(BLMC_A::VALUE2)
+        self.variant(Blmc::Value2)
     }
     #[doc = "Blanking on a HIGH to LOW transition"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(BLMC_A::VALUE3)
+        self.variant(Blmc::Value3)
     }
     #[doc = "Blanking on both transitions"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(BLMC_A::VALUE4)
+        self.variant(Blmc::Value4)
     }
 }
 #[doc = "Field `EBE` reader - External blanking trigger enabled"]
-pub type EBE_R = crate::BitReader;
+pub type EbeR = crate::BitReader;
 #[doc = "Field `EBE` writer - External blanking trigger enabled"]
-pub type EBE_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type EbeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Comparator output filter enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum COFE_A {
+pub enum Cofe {
     #[doc = "0: Filtering stage disabled"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Filtering stage enabled"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<COFE_A> for bool {
+impl From<Cofe> for bool {
     #[inline(always)]
-    fn from(variant: COFE_A) -> Self {
+    fn from(variant: Cofe) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `COFE` reader - Comparator output filter enable"]
-pub type COFE_R = crate::BitReader<COFE_A>;
-impl COFE_R {
+pub type CofeR = crate::BitReader<Cofe>;
+impl CofeR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> COFE_A {
+    pub const fn variant(&self) -> Cofe {
         match self.bits {
-            false => COFE_A::VALUE1,
-            true => COFE_A::VALUE2,
+            false => Cofe::Value1,
+            true => Cofe::Value2,
         }
     }
     #[doc = "Filtering stage disabled"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == COFE_A::VALUE1
+        *self == Cofe::Value1
     }
     #[doc = "Filtering stage enabled"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == COFE_A::VALUE2
+        *self == Cofe::Value2
     }
 }
 #[doc = "Field `COFE` writer - Comparator output filter enable"]
-pub type COFE_W<'a, REG> = crate::BitWriter<'a, REG, COFE_A>;
-impl<'a, REG> COFE_W<'a, REG>
+pub type CofeW<'a, REG> = crate::BitWriter<'a, REG, Cofe>;
+impl<'a, REG> CofeW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Filtering stage disabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(COFE_A::VALUE1)
+        self.variant(Cofe::Value1)
     }
     #[doc = "Filtering stage enabled"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(COFE_A::VALUE2)
+        self.variant(Cofe::Value2)
     }
 }
 #[doc = "Comparator output filter window\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum COFM_A {
+pub enum Cofm {
     #[doc = "0: Comparator Output needs to be stable for 2 clock cycles"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Comparator Output needs to be stable for 3 clock cycles"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: Comparator Output needs to be stable for 4 clock cycles"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: Comparator Output needs to be stable for 5 clock cycles"]
-    VALUE4 = 3,
+    Value4 = 3,
     #[doc = "12: Comparator Output needs to be stable for 14 clock cycles"]
-    VALUE5 = 12,
+    Value5 = 12,
     #[doc = "13: Comparator Output needs to be stable for 15 clock cycles"]
-    VALUE6 = 13,
+    Value6 = 13,
     #[doc = "14: Comparator Output needs to be stable for 16 clock cycles"]
-    VALUE7 = 14,
+    Value7 = 14,
     #[doc = "15: Comparator Output needs to be stable for 32 clock cycles"]
-    VALUE8 = 15,
+    Value8 = 15,
 }
-impl From<COFM_A> for u8 {
+impl From<Cofm> for u8 {
     #[inline(always)]
-    fn from(variant: COFM_A) -> Self {
+    fn from(variant: Cofm) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for COFM_A {
+impl crate::FieldSpec for Cofm {
     type Ux = u8;
 }
-impl crate::IsEnum for COFM_A {}
+impl crate::IsEnum for Cofm {}
 #[doc = "Field `COFM` reader - Comparator output filter window"]
-pub type COFM_R = crate::FieldReader<COFM_A>;
-impl COFM_R {
+pub type CofmR = crate::FieldReader<Cofm>;
+impl CofmR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<COFM_A> {
+    pub const fn variant(&self) -> Option<Cofm> {
         match self.bits {
-            0 => Some(COFM_A::VALUE1),
-            1 => Some(COFM_A::VALUE2),
-            2 => Some(COFM_A::VALUE3),
-            3 => Some(COFM_A::VALUE4),
-            12 => Some(COFM_A::VALUE5),
-            13 => Some(COFM_A::VALUE6),
-            14 => Some(COFM_A::VALUE7),
-            15 => Some(COFM_A::VALUE8),
+            0 => Some(Cofm::Value1),
+            1 => Some(Cofm::Value2),
+            2 => Some(Cofm::Value3),
+            3 => Some(Cofm::Value4),
+            12 => Some(Cofm::Value5),
+            13 => Some(Cofm::Value6),
+            14 => Some(Cofm::Value7),
+            15 => Some(Cofm::Value8),
             _ => None,
         }
     }
     #[doc = "Comparator Output needs to be stable for 2 clock cycles"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == COFM_A::VALUE1
+        *self == Cofm::Value1
     }
     #[doc = "Comparator Output needs to be stable for 3 clock cycles"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == COFM_A::VALUE2
+        *self == Cofm::Value2
     }
     #[doc = "Comparator Output needs to be stable for 4 clock cycles"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == COFM_A::VALUE3
+        *self == Cofm::Value3
     }
     #[doc = "Comparator Output needs to be stable for 5 clock cycles"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == COFM_A::VALUE4
+        *self == Cofm::Value4
     }
     #[doc = "Comparator Output needs to be stable for 14 clock cycles"]
     #[inline(always)]
     pub fn is_value5(&self) -> bool {
-        *self == COFM_A::VALUE5
+        *self == Cofm::Value5
     }
     #[doc = "Comparator Output needs to be stable for 15 clock cycles"]
     #[inline(always)]
     pub fn is_value6(&self) -> bool {
-        *self == COFM_A::VALUE6
+        *self == Cofm::Value6
     }
     #[doc = "Comparator Output needs to be stable for 16 clock cycles"]
     #[inline(always)]
     pub fn is_value7(&self) -> bool {
-        *self == COFM_A::VALUE7
+        *self == Cofm::Value7
     }
     #[doc = "Comparator Output needs to be stable for 32 clock cycles"]
     #[inline(always)]
     pub fn is_value8(&self) -> bool {
-        *self == COFM_A::VALUE8
+        *self == Cofm::Value8
     }
 }
 #[doc = "Field `COFM` writer - Comparator output filter window"]
-pub type COFM_W<'a, REG> = crate::FieldWriter<'a, REG, 4, COFM_A>;
-impl<'a, REG> COFM_W<'a, REG>
+pub type CofmW<'a, REG> = crate::FieldWriter<'a, REG, 4, Cofm>;
+impl<'a, REG> CofmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -625,97 +625,97 @@ where
     #[doc = "Comparator Output needs to be stable for 2 clock cycles"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(COFM_A::VALUE1)
+        self.variant(Cofm::Value1)
     }
     #[doc = "Comparator Output needs to be stable for 3 clock cycles"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(COFM_A::VALUE2)
+        self.variant(Cofm::Value2)
     }
     #[doc = "Comparator Output needs to be stable for 4 clock cycles"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(COFM_A::VALUE3)
+        self.variant(Cofm::Value3)
     }
     #[doc = "Comparator Output needs to be stable for 5 clock cycles"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(COFM_A::VALUE4)
+        self.variant(Cofm::Value4)
     }
     #[doc = "Comparator Output needs to be stable for 14 clock cycles"]
     #[inline(always)]
     pub fn value5(self) -> &'a mut crate::W<REG> {
-        self.variant(COFM_A::VALUE5)
+        self.variant(Cofm::Value5)
     }
     #[doc = "Comparator Output needs to be stable for 15 clock cycles"]
     #[inline(always)]
     pub fn value6(self) -> &'a mut crate::W<REG> {
-        self.variant(COFM_A::VALUE6)
+        self.variant(Cofm::Value6)
     }
     #[doc = "Comparator Output needs to be stable for 16 clock cycles"]
     #[inline(always)]
     pub fn value7(self) -> &'a mut crate::W<REG> {
-        self.variant(COFM_A::VALUE7)
+        self.variant(Cofm::Value7)
     }
     #[doc = "Comparator Output needs to be stable for 32 clock cycles"]
     #[inline(always)]
     pub fn value8(self) -> &'a mut crate::W<REG> {
-        self.variant(COFM_A::VALUE8)
+        self.variant(Cofm::Value8)
     }
 }
 #[doc = "Comparator output filter control\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum COFC_A {
+pub enum Cofc {
     #[doc = "0: Filtering is always done if enabled"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Filtering is only done when CSGyDSV1 value is currently fed to the DAC"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: Filtering is only done when the CSGyDSV2 value is currently fed to the DAC"]
-    VALUE3 = 2,
+    Value3 = 2,
 }
-impl From<COFC_A> for u8 {
+impl From<Cofc> for u8 {
     #[inline(always)]
-    fn from(variant: COFC_A) -> Self {
+    fn from(variant: Cofc) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for COFC_A {
+impl crate::FieldSpec for Cofc {
     type Ux = u8;
 }
-impl crate::IsEnum for COFC_A {}
+impl crate::IsEnum for Cofc {}
 #[doc = "Field `COFC` reader - Comparator output filter control"]
-pub type COFC_R = crate::FieldReader<COFC_A>;
-impl COFC_R {
+pub type CofcR = crate::FieldReader<Cofc>;
+impl CofcR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<COFC_A> {
+    pub const fn variant(&self) -> Option<Cofc> {
         match self.bits {
-            0 => Some(COFC_A::VALUE1),
-            1 => Some(COFC_A::VALUE2),
-            2 => Some(COFC_A::VALUE3),
+            0 => Some(Cofc::Value1),
+            1 => Some(Cofc::Value2),
+            2 => Some(Cofc::Value3),
             _ => None,
         }
     }
     #[doc = "Filtering is always done if enabled"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == COFC_A::VALUE1
+        *self == Cofc::Value1
     }
     #[doc = "Filtering is only done when CSGyDSV1 value is currently fed to the DAC"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == COFC_A::VALUE2
+        *self == Cofc::Value2
     }
     #[doc = "Filtering is only done when the CSGyDSV2 value is currently fed to the DAC"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == COFC_A::VALUE3
+        *self == Cofc::Value3
     }
 }
 #[doc = "Field `COFC` writer - Comparator output filter control"]
-pub type COFC_W<'a, REG> = crate::FieldWriter<'a, REG, 2, COFC_A>;
-impl<'a, REG> COFC_W<'a, REG>
+pub type CofcW<'a, REG> = crate::FieldWriter<'a, REG, 2, Cofc>;
+impl<'a, REG> CofcW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -723,158 +723,158 @@ where
     #[doc = "Filtering is always done if enabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(COFC_A::VALUE1)
+        self.variant(Cofc::Value1)
     }
     #[doc = "Filtering is only done when CSGyDSV1 value is currently fed to the DAC"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(COFC_A::VALUE2)
+        self.variant(Cofc::Value2)
     }
     #[doc = "Filtering is only done when the CSGyDSV2 value is currently fed to the DAC"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(COFC_A::VALUE3)
+        self.variant(Cofc::Value3)
     }
 }
 impl R {
     #[doc = "Bits 0:3 - External blanking trigger selector"]
     #[inline(always)]
-    pub fn ibs(&self) -> IBS_R {
-        IBS_R::new((self.bits & 0x0f) as u8)
+    pub fn ibs(&self) -> IbsR {
+        IbsR::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bit 8 - Inverting comparator input selector"]
     #[inline(always)]
-    pub fn imcs(&self) -> IMCS_R {
-        IMCS_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn imcs(&self) -> ImcsR {
+        ImcsR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:10 - Comparator input switching configuration"]
     #[inline(always)]
-    pub fn imcc(&self) -> IMCC_R {
-        IMCC_R::new(((self.bits >> 9) & 3) as u8)
+    pub fn imcc(&self) -> ImccR {
+        ImccR::new(((self.bits >> 9) & 3) as u8)
     }
     #[doc = "Bit 11 - External triggered switch enable"]
     #[inline(always)]
-    pub fn ese(&self) -> ESE_R {
-        ESE_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn ese(&self) -> EseR {
+        EseR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Comparator output inversion enable"]
     #[inline(always)]
-    pub fn oie(&self) -> OIE_R {
-        OIE_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn oie(&self) -> OieR {
+        OieR::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Comparator output synchronization enable"]
     #[inline(always)]
-    pub fn ose(&self) -> OSE_R {
-        OSE_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn ose(&self) -> OseR {
+        OseR::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 14:15 - Blanking mode"]
     #[inline(always)]
-    pub fn blmc(&self) -> BLMC_R {
-        BLMC_R::new(((self.bits >> 14) & 3) as u8)
+    pub fn blmc(&self) -> BlmcR {
+        BlmcR::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bit 16 - External blanking trigger enabled"]
     #[inline(always)]
-    pub fn ebe(&self) -> EBE_R {
-        EBE_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn ebe(&self) -> EbeR {
+        EbeR::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Comparator output filter enable"]
     #[inline(always)]
-    pub fn cofe(&self) -> COFE_R {
-        COFE_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn cofe(&self) -> CofeR {
+        CofeR::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bits 18:21 - Comparator output filter window"]
     #[inline(always)]
-    pub fn cofm(&self) -> COFM_R {
-        COFM_R::new(((self.bits >> 18) & 0x0f) as u8)
+    pub fn cofm(&self) -> CofmR {
+        CofmR::new(((self.bits >> 18) & 0x0f) as u8)
     }
     #[doc = "Bits 24:25 - Comparator output filter control"]
     #[inline(always)]
-    pub fn cofc(&self) -> COFC_R {
-        COFC_R::new(((self.bits >> 24) & 3) as u8)
+    pub fn cofc(&self) -> CofcR {
+        CofcR::new(((self.bits >> 24) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - External blanking trigger selector"]
     #[inline(always)]
     #[must_use]
-    pub fn ibs(&mut self) -> IBS_W<CC_SPEC> {
-        IBS_W::new(self, 0)
+    pub fn ibs(&mut self) -> IbsW<CcSpec> {
+        IbsW::new(self, 0)
     }
     #[doc = "Bit 8 - Inverting comparator input selector"]
     #[inline(always)]
     #[must_use]
-    pub fn imcs(&mut self) -> IMCS_W<CC_SPEC> {
-        IMCS_W::new(self, 8)
+    pub fn imcs(&mut self) -> ImcsW<CcSpec> {
+        ImcsW::new(self, 8)
     }
     #[doc = "Bits 9:10 - Comparator input switching configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn imcc(&mut self) -> IMCC_W<CC_SPEC> {
-        IMCC_W::new(self, 9)
+    pub fn imcc(&mut self) -> ImccW<CcSpec> {
+        ImccW::new(self, 9)
     }
     #[doc = "Bit 11 - External triggered switch enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ese(&mut self) -> ESE_W<CC_SPEC> {
-        ESE_W::new(self, 11)
+    pub fn ese(&mut self) -> EseW<CcSpec> {
+        EseW::new(self, 11)
     }
     #[doc = "Bit 12 - Comparator output inversion enable"]
     #[inline(always)]
     #[must_use]
-    pub fn oie(&mut self) -> OIE_W<CC_SPEC> {
-        OIE_W::new(self, 12)
+    pub fn oie(&mut self) -> OieW<CcSpec> {
+        OieW::new(self, 12)
     }
     #[doc = "Bit 13 - Comparator output synchronization enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ose(&mut self) -> OSE_W<CC_SPEC> {
-        OSE_W::new(self, 13)
+    pub fn ose(&mut self) -> OseW<CcSpec> {
+        OseW::new(self, 13)
     }
     #[doc = "Bits 14:15 - Blanking mode"]
     #[inline(always)]
     #[must_use]
-    pub fn blmc(&mut self) -> BLMC_W<CC_SPEC> {
-        BLMC_W::new(self, 14)
+    pub fn blmc(&mut self) -> BlmcW<CcSpec> {
+        BlmcW::new(self, 14)
     }
     #[doc = "Bit 16 - External blanking trigger enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn ebe(&mut self) -> EBE_W<CC_SPEC> {
-        EBE_W::new(self, 16)
+    pub fn ebe(&mut self) -> EbeW<CcSpec> {
+        EbeW::new(self, 16)
     }
     #[doc = "Bit 17 - Comparator output filter enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cofe(&mut self) -> COFE_W<CC_SPEC> {
-        COFE_W::new(self, 17)
+    pub fn cofe(&mut self) -> CofeW<CcSpec> {
+        CofeW::new(self, 17)
     }
     #[doc = "Bits 18:21 - Comparator output filter window"]
     #[inline(always)]
     #[must_use]
-    pub fn cofm(&mut self) -> COFM_W<CC_SPEC> {
-        COFM_W::new(self, 18)
+    pub fn cofm(&mut self) -> CofmW<CcSpec> {
+        CofmW::new(self, 18)
     }
     #[doc = "Bits 24:25 - Comparator output filter control"]
     #[inline(always)]
     #[must_use]
-    pub fn cofc(&mut self) -> COFC_W<CC_SPEC> {
-        COFC_W::new(self, 24)
+    pub fn cofc(&mut self) -> CofcW<CcSpec> {
+        CofcW::new(self, 24)
     }
 }
 #[doc = "Comparator configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct CC_SPEC;
-impl crate::RegisterSpec for CC_SPEC {
+pub struct CcSpec;
+impl crate::RegisterSpec for CcSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`cc::R`](R) reader structure"]
-impl crate::Readable for CC_SPEC {}
+impl crate::Readable for CcSpec {}
 #[doc = "`write(|w| ..)` method takes [`cc::W`](W) writer structure"]
-impl crate::Writable for CC_SPEC {
+impl crate::Writable for CcSpec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CC to value 0"]
-impl crate::Resettable for CC_SPEC {
+impl crate::Resettable for CcSpec {
     const RESET_VALUE: u32 = 0;
 }

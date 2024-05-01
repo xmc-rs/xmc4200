@@ -1,343 +1,343 @@
 #[doc = "Register `CGATSTAT0` reader"]
-pub type R = crate::R<CGATSTAT0_SPEC>;
+pub type R = crate::R<Cgatstat0Spec>;
 #[doc = "VADC Gating Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum VADC_A {
+pub enum Vadc {
     #[doc = "0: Gating de-asserted"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Gating asserted"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<VADC_A> for bool {
+impl From<Vadc> for bool {
     #[inline(always)]
-    fn from(variant: VADC_A) -> Self {
+    fn from(variant: Vadc) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `VADC` reader - VADC Gating Status"]
-pub type VADC_R = crate::BitReader<VADC_A>;
-impl VADC_R {
+pub type VadcR = crate::BitReader<Vadc>;
+impl VadcR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> VADC_A {
+    pub const fn variant(&self) -> Vadc {
         match self.bits {
-            false => VADC_A::VALUE1,
-            true => VADC_A::VALUE2,
+            false => Vadc::Value1,
+            true => Vadc::Value2,
         }
     }
     #[doc = "Gating de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VADC_A::VALUE1
+        *self == Vadc::Value1
     }
     #[doc = "Gating asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VADC_A::VALUE2
+        *self == Vadc::Value2
     }
 }
 #[doc = "CCU40 Gating Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CCU40_A {
+pub enum Ccu40 {
     #[doc = "0: Gating de-asserted"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Gating asserted"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<CCU40_A> for bool {
+impl From<Ccu40> for bool {
     #[inline(always)]
-    fn from(variant: CCU40_A) -> Self {
+    fn from(variant: Ccu40) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `CCU40` reader - CCU40 Gating Status"]
-pub type CCU40_R = crate::BitReader<CCU40_A>;
-impl CCU40_R {
+pub type Ccu40R = crate::BitReader<Ccu40>;
+impl Ccu40R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CCU40_A {
+    pub const fn variant(&self) -> Ccu40 {
         match self.bits {
-            false => CCU40_A::VALUE1,
-            true => CCU40_A::VALUE2,
+            false => Ccu40::Value1,
+            true => Ccu40::Value2,
         }
     }
     #[doc = "Gating de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CCU40_A::VALUE1
+        *self == Ccu40::Value1
     }
     #[doc = "Gating asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CCU40_A::VALUE2
+        *self == Ccu40::Value2
     }
 }
 #[doc = "CCU41 Gating Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CCU41_A {
+pub enum Ccu41 {
     #[doc = "0: Gating de-asserted"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Gating asserted"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<CCU41_A> for bool {
+impl From<Ccu41> for bool {
     #[inline(always)]
-    fn from(variant: CCU41_A) -> Self {
+    fn from(variant: Ccu41) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `CCU41` reader - CCU41 Gating Status"]
-pub type CCU41_R = crate::BitReader<CCU41_A>;
-impl CCU41_R {
+pub type Ccu41R = crate::BitReader<Ccu41>;
+impl Ccu41R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CCU41_A {
+    pub const fn variant(&self) -> Ccu41 {
         match self.bits {
-            false => CCU41_A::VALUE1,
-            true => CCU41_A::VALUE2,
+            false => Ccu41::Value1,
+            true => Ccu41::Value2,
         }
     }
     #[doc = "Gating de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CCU41_A::VALUE1
+        *self == Ccu41::Value1
     }
     #[doc = "Gating asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CCU41_A::VALUE2
+        *self == Ccu41::Value2
     }
 }
 #[doc = "CCU80 Gating Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CCU80_A {
+pub enum Ccu80 {
     #[doc = "0: Gating de-asserted"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Gating asserted"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<CCU80_A> for bool {
+impl From<Ccu80> for bool {
     #[inline(always)]
-    fn from(variant: CCU80_A) -> Self {
+    fn from(variant: Ccu80) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `CCU80` reader - CCU80 Gating Status"]
-pub type CCU80_R = crate::BitReader<CCU80_A>;
-impl CCU80_R {
+pub type Ccu80R = crate::BitReader<Ccu80>;
+impl Ccu80R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CCU80_A {
+    pub const fn variant(&self) -> Ccu80 {
         match self.bits {
-            false => CCU80_A::VALUE1,
-            true => CCU80_A::VALUE2,
+            false => Ccu80::Value1,
+            true => Ccu80::Value2,
         }
     }
     #[doc = "Gating de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CCU80_A::VALUE1
+        *self == Ccu80::Value1
     }
     #[doc = "Gating asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CCU80_A::VALUE2
+        *self == Ccu80::Value2
     }
 }
 #[doc = "POSIF0 Gating Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum POSIF0_A {
+pub enum Posif0 {
     #[doc = "0: Gating de-asserted"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Gating asserted"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<POSIF0_A> for bool {
+impl From<Posif0> for bool {
     #[inline(always)]
-    fn from(variant: POSIF0_A) -> Self {
+    fn from(variant: Posif0) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `POSIF0` reader - POSIF0 Gating Status"]
-pub type POSIF0_R = crate::BitReader<POSIF0_A>;
-impl POSIF0_R {
+pub type Posif0R = crate::BitReader<Posif0>;
+impl Posif0R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> POSIF0_A {
+    pub const fn variant(&self) -> Posif0 {
         match self.bits {
-            false => POSIF0_A::VALUE1,
-            true => POSIF0_A::VALUE2,
+            false => Posif0::Value1,
+            true => Posif0::Value2,
         }
     }
     #[doc = "Gating de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == POSIF0_A::VALUE1
+        *self == Posif0::Value1
     }
     #[doc = "Gating asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == POSIF0_A::VALUE2
+        *self == Posif0::Value2
     }
 }
 #[doc = "USIC0 Gating Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum USIC0_A {
+pub enum Usic0 {
     #[doc = "0: Gating de-asserted"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Gating asserted"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<USIC0_A> for bool {
+impl From<Usic0> for bool {
     #[inline(always)]
-    fn from(variant: USIC0_A) -> Self {
+    fn from(variant: Usic0) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `USIC0` reader - USIC0 Gating Status"]
-pub type USIC0_R = crate::BitReader<USIC0_A>;
-impl USIC0_R {
+pub type Usic0R = crate::BitReader<Usic0>;
+impl Usic0R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> USIC0_A {
+    pub const fn variant(&self) -> Usic0 {
         match self.bits {
-            false => USIC0_A::VALUE1,
-            true => USIC0_A::VALUE2,
+            false => Usic0::Value1,
+            true => Usic0::Value2,
         }
     }
     #[doc = "Gating de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == USIC0_A::VALUE1
+        *self == Usic0::Value1
     }
     #[doc = "Gating asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == USIC0_A::VALUE2
+        *self == Usic0::Value2
     }
 }
 #[doc = "ERU1 Gating Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ERU1_A {
+pub enum Eru1 {
     #[doc = "0: Gating de-asserted"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Gating asserted"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<ERU1_A> for bool {
+impl From<Eru1> for bool {
     #[inline(always)]
-    fn from(variant: ERU1_A) -> Self {
+    fn from(variant: Eru1) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `ERU1` reader - ERU1 Gating Status"]
-pub type ERU1_R = crate::BitReader<ERU1_A>;
-impl ERU1_R {
+pub type Eru1R = crate::BitReader<Eru1>;
+impl Eru1R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> ERU1_A {
+    pub const fn variant(&self) -> Eru1 {
         match self.bits {
-            false => ERU1_A::VALUE1,
-            true => ERU1_A::VALUE2,
+            false => Eru1::Value1,
+            true => Eru1::Value2,
         }
     }
     #[doc = "Gating de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == ERU1_A::VALUE1
+        *self == Eru1::Value1
     }
     #[doc = "Gating asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == ERU1_A::VALUE2
+        *self == Eru1::Value2
     }
 }
 #[doc = "HRPWM0 Gating Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum HRPWM0_A {
+pub enum Hrpwm0 {
     #[doc = "0: Gating de-asserted"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Gating asserted"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<HRPWM0_A> for bool {
+impl From<Hrpwm0> for bool {
     #[inline(always)]
-    fn from(variant: HRPWM0_A) -> Self {
+    fn from(variant: Hrpwm0) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HRPWM0` reader - HRPWM0 Gating Status"]
-pub type HRPWM0_R = crate::BitReader<HRPWM0_A>;
-impl HRPWM0_R {
+pub type Hrpwm0R = crate::BitReader<Hrpwm0>;
+impl Hrpwm0R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> HRPWM0_A {
+    pub const fn variant(&self) -> Hrpwm0 {
         match self.bits {
-            false => HRPWM0_A::VALUE1,
-            true => HRPWM0_A::VALUE2,
+            false => Hrpwm0::Value1,
+            true => Hrpwm0::Value2,
         }
     }
     #[doc = "Gating de-asserted"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == HRPWM0_A::VALUE1
+        *self == Hrpwm0::Value1
     }
     #[doc = "Gating asserted"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == HRPWM0_A::VALUE2
+        *self == Hrpwm0::Value2
     }
 }
 impl R {
     #[doc = "Bit 0 - VADC Gating Status"]
     #[inline(always)]
-    pub fn vadc(&self) -> VADC_R {
-        VADC_R::new((self.bits & 1) != 0)
+    pub fn vadc(&self) -> VadcR {
+        VadcR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - CCU40 Gating Status"]
     #[inline(always)]
-    pub fn ccu40(&self) -> CCU40_R {
-        CCU40_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn ccu40(&self) -> Ccu40R {
+        Ccu40R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - CCU41 Gating Status"]
     #[inline(always)]
-    pub fn ccu41(&self) -> CCU41_R {
-        CCU41_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn ccu41(&self) -> Ccu41R {
+        Ccu41R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 7 - CCU80 Gating Status"]
     #[inline(always)]
-    pub fn ccu80(&self) -> CCU80_R {
-        CCU80_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn ccu80(&self) -> Ccu80R {
+        Ccu80R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 9 - POSIF0 Gating Status"]
     #[inline(always)]
-    pub fn posif0(&self) -> POSIF0_R {
-        POSIF0_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn posif0(&self) -> Posif0R {
+        Posif0R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 11 - USIC0 Gating Status"]
     #[inline(always)]
-    pub fn usic0(&self) -> USIC0_R {
-        USIC0_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn usic0(&self) -> Usic0R {
+        Usic0R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 16 - ERU1 Gating Status"]
     #[inline(always)]
-    pub fn eru1(&self) -> ERU1_R {
-        ERU1_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn eru1(&self) -> Eru1R {
+        Eru1R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 23 - HRPWM0 Gating Status"]
     #[inline(always)]
-    pub fn hrpwm0(&self) -> HRPWM0_R {
-        HRPWM0_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn hrpwm0(&self) -> Hrpwm0R {
+        Hrpwm0R::new(((self.bits >> 23) & 1) != 0)
     }
 }
 #[doc = "Peripheral 0 Clock Gating Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cgatstat0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct CGATSTAT0_SPEC;
-impl crate::RegisterSpec for CGATSTAT0_SPEC {
+pub struct Cgatstat0Spec;
+impl crate::RegisterSpec for Cgatstat0Spec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`cgatstat0::R`](R) reader structure"]
-impl crate::Readable for CGATSTAT0_SPEC {}
+impl crate::Readable for Cgatstat0Spec {}
 #[doc = "`reset()` method sets CGATSTAT0 to value 0"]
-impl crate::Resettable for CGATSTAT0_SPEC {
+impl crate::Resettable for Cgatstat0Spec {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,68 +1,68 @@
 #[doc = "Register `SC` reader"]
-pub type R = crate::R<SC_SPEC>;
+pub type R = crate::R<ScSpec>;
 #[doc = "Register `SC` writer"]
-pub type W = crate::W<SC_SPEC>;
+pub type W = crate::W<ScSpec>;
 #[doc = "Prescaler external start configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum PSRM_A {
+pub enum Psrm {
     #[doc = "0: External start trigger is ignored"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Start prescaler"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: Clear prescaler"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: Clear &amp; Start prescaler"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<PSRM_A> for u8 {
+impl From<Psrm> for u8 {
     #[inline(always)]
-    fn from(variant: PSRM_A) -> Self {
+    fn from(variant: Psrm) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for PSRM_A {
+impl crate::FieldSpec for Psrm {
     type Ux = u8;
 }
-impl crate::IsEnum for PSRM_A {}
+impl crate::IsEnum for Psrm {}
 #[doc = "Field `PSRM` reader - Prescaler external start configuration"]
-pub type PSRM_R = crate::FieldReader<PSRM_A>;
-impl PSRM_R {
+pub type PsrmR = crate::FieldReader<Psrm>;
+impl PsrmR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> PSRM_A {
+    pub const fn variant(&self) -> Psrm {
         match self.bits {
-            0 => PSRM_A::VALUE1,
-            1 => PSRM_A::VALUE2,
-            2 => PSRM_A::VALUE3,
-            3 => PSRM_A::VALUE4,
+            0 => Psrm::Value1,
+            1 => Psrm::Value2,
+            2 => Psrm::Value3,
+            3 => Psrm::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "External start trigger is ignored"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PSRM_A::VALUE1
+        *self == Psrm::Value1
     }
     #[doc = "Start prescaler"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PSRM_A::VALUE2
+        *self == Psrm::Value2
     }
     #[doc = "Clear prescaler"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == PSRM_A::VALUE3
+        *self == Psrm::Value3
     }
     #[doc = "Clear &amp; Start prescaler"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == PSRM_A::VALUE4
+        *self == Psrm::Value4
     }
 }
 #[doc = "Field `PSRM` writer - Prescaler external start configuration"]
-pub type PSRM_W<'a, REG> = crate::FieldWriter<'a, REG, 2, PSRM_A, crate::Safe>;
-impl<'a, REG> PSRM_W<'a, REG>
+pub type PsrmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Psrm, crate::Safe>;
+impl<'a, REG> PsrmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -70,85 +70,85 @@ where
     #[doc = "External start trigger is ignored"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(PSRM_A::VALUE1)
+        self.variant(Psrm::Value1)
     }
     #[doc = "Start prescaler"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(PSRM_A::VALUE2)
+        self.variant(Psrm::Value2)
     }
     #[doc = "Clear prescaler"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(PSRM_A::VALUE3)
+        self.variant(Psrm::Value3)
     }
     #[doc = "Clear &amp; Start prescaler"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(PSRM_A::VALUE4)
+        self.variant(Psrm::Value4)
     }
 }
 #[doc = "Prescaler external stop configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum PSTM_A {
+pub enum Pstm {
     #[doc = "0: External stop trigger is ignored"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Stop prescaler"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: Clear prescaler"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: Clear &amp; Stop prescaler"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<PSTM_A> for u8 {
+impl From<Pstm> for u8 {
     #[inline(always)]
-    fn from(variant: PSTM_A) -> Self {
+    fn from(variant: Pstm) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for PSTM_A {
+impl crate::FieldSpec for Pstm {
     type Ux = u8;
 }
-impl crate::IsEnum for PSTM_A {}
+impl crate::IsEnum for Pstm {}
 #[doc = "Field `PSTM` reader - Prescaler external stop configuration"]
-pub type PSTM_R = crate::FieldReader<PSTM_A>;
-impl PSTM_R {
+pub type PstmR = crate::FieldReader<Pstm>;
+impl PstmR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> PSTM_A {
+    pub const fn variant(&self) -> Pstm {
         match self.bits {
-            0 => PSTM_A::VALUE1,
-            1 => PSTM_A::VALUE2,
-            2 => PSTM_A::VALUE3,
-            3 => PSTM_A::VALUE4,
+            0 => Pstm::Value1,
+            1 => Pstm::Value2,
+            2 => Pstm::Value3,
+            3 => Pstm::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "External stop trigger is ignored"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PSTM_A::VALUE1
+        *self == Pstm::Value1
     }
     #[doc = "Stop prescaler"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PSTM_A::VALUE2
+        *self == Pstm::Value2
     }
     #[doc = "Clear prescaler"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == PSTM_A::VALUE3
+        *self == Pstm::Value3
     }
     #[doc = "Clear &amp; Stop prescaler"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == PSTM_A::VALUE4
+        *self == Pstm::Value4
     }
 }
 #[doc = "Field `PSTM` writer - Prescaler external stop configuration"]
-pub type PSTM_W<'a, REG> = crate::FieldWriter<'a, REG, 2, PSTM_A, crate::Safe>;
-impl<'a, REG> PSTM_W<'a, REG>
+pub type PstmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Pstm, crate::Safe>;
+impl<'a, REG> PstmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -156,138 +156,138 @@ where
     #[doc = "External stop trigger is ignored"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(PSTM_A::VALUE1)
+        self.variant(Pstm::Value1)
     }
     #[doc = "Stop prescaler"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(PSTM_A::VALUE2)
+        self.variant(Pstm::Value2)
     }
     #[doc = "Clear prescaler"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(PSTM_A::VALUE3)
+        self.variant(Pstm::Value3)
     }
     #[doc = "Clear &amp; Stop prescaler"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(PSTM_A::VALUE4)
+        self.variant(Pstm::Value4)
     }
 }
 #[doc = "Fixed division disable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum FPD_A {
+pub enum Fpd {
     #[doc = "0: Division by 4 enabled"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Division by 4 disabled"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<FPD_A> for bool {
+impl From<Fpd> for bool {
     #[inline(always)]
-    fn from(variant: FPD_A) -> Self {
+    fn from(variant: Fpd) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `FPD` reader - Fixed division disable"]
-pub type FPD_R = crate::BitReader<FPD_A>;
-impl FPD_R {
+pub type FpdR = crate::BitReader<Fpd>;
+impl FpdR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FPD_A {
+    pub const fn variant(&self) -> Fpd {
         match self.bits {
-            false => FPD_A::VALUE1,
-            true => FPD_A::VALUE2,
+            false => Fpd::Value1,
+            true => Fpd::Value2,
         }
     }
     #[doc = "Division by 4 enabled"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == FPD_A::VALUE1
+        *self == Fpd::Value1
     }
     #[doc = "Division by 4 disabled"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == FPD_A::VALUE2
+        *self == Fpd::Value2
     }
 }
 #[doc = "Field `FPD` writer - Fixed division disable"]
-pub type FPD_W<'a, REG> = crate::BitWriter<'a, REG, FPD_A>;
-impl<'a, REG> FPD_W<'a, REG>
+pub type FpdW<'a, REG> = crate::BitWriter<'a, REG, Fpd>;
+impl<'a, REG> FpdW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Division by 4 enabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(FPD_A::VALUE1)
+        self.variant(Fpd::Value1)
     }
     #[doc = "Division by 4 disabled"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(FPD_A::VALUE2)
+        self.variant(Fpd::Value2)
     }
 }
 #[doc = "Prescaler division factor\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum PSV_A {
+pub enum Psv {
     #[doc = "0: division by 1"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: division by 2"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: division by 4"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: division by 8"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<PSV_A> for u8 {
+impl From<Psv> for u8 {
     #[inline(always)]
-    fn from(variant: PSV_A) -> Self {
+    fn from(variant: Psv) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for PSV_A {
+impl crate::FieldSpec for Psv {
     type Ux = u8;
 }
-impl crate::IsEnum for PSV_A {}
+impl crate::IsEnum for Psv {}
 #[doc = "Field `PSV` reader - Prescaler division factor"]
-pub type PSV_R = crate::FieldReader<PSV_A>;
-impl PSV_R {
+pub type PsvR = crate::FieldReader<Psv>;
+impl PsvR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> PSV_A {
+    pub const fn variant(&self) -> Psv {
         match self.bits {
-            0 => PSV_A::VALUE1,
-            1 => PSV_A::VALUE2,
-            2 => PSV_A::VALUE3,
-            3 => PSV_A::VALUE4,
+            0 => Psv::Value1,
+            1 => Psv::Value2,
+            2 => Psv::Value3,
+            3 => Psv::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "division by 1"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PSV_A::VALUE1
+        *self == Psv::Value1
     }
     #[doc = "division by 2"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PSV_A::VALUE2
+        *self == Psv::Value2
     }
     #[doc = "division by 4"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == PSV_A::VALUE3
+        *self == Psv::Value3
     }
     #[doc = "division by 8"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == PSV_A::VALUE4
+        *self == Psv::Value4
     }
 }
 #[doc = "Field `PSV` writer - Prescaler division factor"]
-pub type PSV_W<'a, REG> = crate::FieldWriter<'a, REG, 2, PSV_A, crate::Safe>;
-impl<'a, REG> PSV_W<'a, REG>
+pub type PsvW<'a, REG> = crate::FieldWriter<'a, REG, 2, Psv, crate::Safe>;
+impl<'a, REG> PsvW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -295,85 +295,85 @@ where
     #[doc = "division by 1"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(PSV_A::VALUE1)
+        self.variant(Psv::Value1)
     }
     #[doc = "division by 2"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(PSV_A::VALUE2)
+        self.variant(Psv::Value2)
     }
     #[doc = "division by 4"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(PSV_A::VALUE3)
+        self.variant(Psv::Value3)
     }
     #[doc = "division by 8"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(PSV_A::VALUE4)
+        self.variant(Psv::Value4)
     }
 }
 #[doc = "Slope control mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum SCM_A {
+pub enum Scm {
     #[doc = "0: Slope generation disabled. Used when the switch between the two reference values, CSGyDSV1This register contains the actual value used for the DSV1 reference. and CSGyDSV2This register contains the actual value used for the DSV2 reference. is done via external signal."]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Decrementing slope generation."]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: Incrementing slope generation."]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: Triangular slope generation."]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<SCM_A> for u8 {
+impl From<Scm> for u8 {
     #[inline(always)]
-    fn from(variant: SCM_A) -> Self {
+    fn from(variant: Scm) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for SCM_A {
+impl crate::FieldSpec for Scm {
     type Ux = u8;
 }
-impl crate::IsEnum for SCM_A {}
+impl crate::IsEnum for Scm {}
 #[doc = "Field `SCM` reader - Slope control mode"]
-pub type SCM_R = crate::FieldReader<SCM_A>;
-impl SCM_R {
+pub type ScmR = crate::FieldReader<Scm>;
+impl ScmR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> SCM_A {
+    pub const fn variant(&self) -> Scm {
         match self.bits {
-            0 => SCM_A::VALUE1,
-            1 => SCM_A::VALUE2,
-            2 => SCM_A::VALUE3,
-            3 => SCM_A::VALUE4,
+            0 => Scm::Value1,
+            1 => Scm::Value2,
+            2 => Scm::Value3,
+            3 => Scm::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "Slope generation disabled. Used when the switch between the two reference values, CSGyDSV1This register contains the actual value used for the DSV1 reference. and CSGyDSV2This register contains the actual value used for the DSV2 reference. is done via external signal."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SCM_A::VALUE1
+        *self == Scm::Value1
     }
     #[doc = "Decrementing slope generation."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SCM_A::VALUE2
+        *self == Scm::Value2
     }
     #[doc = "Incrementing slope generation."]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SCM_A::VALUE3
+        *self == Scm::Value3
     }
     #[doc = "Triangular slope generation."]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == SCM_A::VALUE4
+        *self == Scm::Value4
     }
 }
 #[doc = "Field `SCM` writer - Slope control mode"]
-pub type SCM_W<'a, REG> = crate::FieldWriter<'a, REG, 2, SCM_A, crate::Safe>;
-impl<'a, REG> SCM_W<'a, REG>
+pub type ScmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Scm, crate::Safe>;
+impl<'a, REG> ScmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -381,77 +381,77 @@ where
     #[doc = "Slope generation disabled. Used when the switch between the two reference values, CSGyDSV1This register contains the actual value used for the DSV1 reference. and CSGyDSV2This register contains the actual value used for the DSV2 reference. is done via external signal."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(SCM_A::VALUE1)
+        self.variant(Scm::Value1)
     }
     #[doc = "Decrementing slope generation."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(SCM_A::VALUE2)
+        self.variant(Scm::Value2)
     }
     #[doc = "Incrementing slope generation."]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(SCM_A::VALUE3)
+        self.variant(Scm::Value3)
     }
     #[doc = "Triangular slope generation."]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(SCM_A::VALUE4)
+        self.variant(Scm::Value4)
     }
 }
 #[doc = "Slope external start configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum SSRM_A {
+pub enum Ssrm {
     #[doc = "0: External start trigger is ignored"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Start/restart slope generation"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: Resumes slope"]
-    VALUE3 = 2,
+    Value3 = 2,
 }
-impl From<SSRM_A> for u8 {
+impl From<Ssrm> for u8 {
     #[inline(always)]
-    fn from(variant: SSRM_A) -> Self {
+    fn from(variant: Ssrm) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for SSRM_A {
+impl crate::FieldSpec for Ssrm {
     type Ux = u8;
 }
-impl crate::IsEnum for SSRM_A {}
+impl crate::IsEnum for Ssrm {}
 #[doc = "Field `SSRM` reader - Slope external start configuration"]
-pub type SSRM_R = crate::FieldReader<SSRM_A>;
-impl SSRM_R {
+pub type SsrmR = crate::FieldReader<Ssrm>;
+impl SsrmR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<SSRM_A> {
+    pub const fn variant(&self) -> Option<Ssrm> {
         match self.bits {
-            0 => Some(SSRM_A::VALUE1),
-            1 => Some(SSRM_A::VALUE2),
-            2 => Some(SSRM_A::VALUE3),
+            0 => Some(Ssrm::Value1),
+            1 => Some(Ssrm::Value2),
+            2 => Some(Ssrm::Value3),
             _ => None,
         }
     }
     #[doc = "External start trigger is ignored"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SSRM_A::VALUE1
+        *self == Ssrm::Value1
     }
     #[doc = "Start/restart slope generation"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SSRM_A::VALUE2
+        *self == Ssrm::Value2
     }
     #[doc = "Resumes slope"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SSRM_A::VALUE3
+        *self == Ssrm::Value3
     }
 }
 #[doc = "Field `SSRM` writer - Slope external start configuration"]
-pub type SSRM_W<'a, REG> = crate::FieldWriter<'a, REG, 2, SSRM_A>;
-impl<'a, REG> SSRM_W<'a, REG>
+pub type SsrmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Ssrm>;
+impl<'a, REG> SsrmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -459,72 +459,72 @@ where
     #[doc = "External start trigger is ignored"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(SSRM_A::VALUE1)
+        self.variant(Ssrm::Value1)
     }
     #[doc = "Start/restart slope generation"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(SSRM_A::VALUE2)
+        self.variant(Ssrm::Value2)
     }
     #[doc = "Resumes slope"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(SSRM_A::VALUE3)
+        self.variant(Ssrm::Value3)
     }
 }
 #[doc = "Slope external stop configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum SSTM_A {
+pub enum Sstm {
     #[doc = "0: External stop trigger is ignored"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Stops/Halts the slope generation"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: Used in hybrid mode. It freezes the slope generation and feeds constantly the value programmed in CSGyDSV2This register contains the actual value used for the DSV2 reference. to the DAC."]
-    VALUE3 = 2,
+    Value3 = 2,
 }
-impl From<SSTM_A> for u8 {
+impl From<Sstm> for u8 {
     #[inline(always)]
-    fn from(variant: SSTM_A) -> Self {
+    fn from(variant: Sstm) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for SSTM_A {
+impl crate::FieldSpec for Sstm {
     type Ux = u8;
 }
-impl crate::IsEnum for SSTM_A {}
+impl crate::IsEnum for Sstm {}
 #[doc = "Field `SSTM` reader - Slope external stop configuration"]
-pub type SSTM_R = crate::FieldReader<SSTM_A>;
-impl SSTM_R {
+pub type SstmR = crate::FieldReader<Sstm>;
+impl SstmR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<SSTM_A> {
+    pub const fn variant(&self) -> Option<Sstm> {
         match self.bits {
-            0 => Some(SSTM_A::VALUE1),
-            1 => Some(SSTM_A::VALUE2),
-            2 => Some(SSTM_A::VALUE3),
+            0 => Some(Sstm::Value1),
+            1 => Some(Sstm::Value2),
+            2 => Some(Sstm::Value3),
             _ => None,
         }
     }
     #[doc = "External stop trigger is ignored"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SSTM_A::VALUE1
+        *self == Sstm::Value1
     }
     #[doc = "Stops/Halts the slope generation"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SSTM_A::VALUE2
+        *self == Sstm::Value2
     }
     #[doc = "Used in hybrid mode. It freezes the slope generation and feeds constantly the value programmed in CSGyDSV2This register contains the actual value used for the DSV2 reference. to the DAC."]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SSTM_A::VALUE3
+        *self == Sstm::Value3
     }
 }
 #[doc = "Field `SSTM` writer - Slope external stop configuration"]
-pub type SSTM_W<'a, REG> = crate::FieldWriter<'a, REG, 2, SSTM_A>;
-impl<'a, REG> SSTM_W<'a, REG>
+pub type SstmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Sstm>;
+impl<'a, REG> SstmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -532,72 +532,72 @@ where
     #[doc = "External stop trigger is ignored"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(SSTM_A::VALUE1)
+        self.variant(Sstm::Value1)
     }
     #[doc = "Stops/Halts the slope generation"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(SSTM_A::VALUE2)
+        self.variant(Sstm::Value2)
     }
     #[doc = "Used in hybrid mode. It freezes the slope generation and feeds constantly the value programmed in CSGyDSV2This register contains the actual value used for the DSV2 reference. to the DAC."]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(SSTM_A::VALUE3)
+        self.variant(Sstm::Value3)
     }
 }
 #[doc = "Slope reference value mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum SVSC_A {
+pub enum Svsc {
     #[doc = "0: Only CSGyDSV1This register contains the actual value used for the DSV1 reference. value is used for the slope generation: if slope is incrementing, CSGyDSV1This register contains the actual value used for the DSV1 reference. is the bottom reference value from where the ramp starts; if decrementing, then CSGyDSV1This register contains the actual value used for the DSV1 reference. is the upper reference value from where the ramp starts."]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: The two reference values are being used: CSGyDSV1This register contains the actual value used for the DSV1 reference. is the low or high reference value from where the ramp starts (incrementing or decrementing respectively); CSGyDSV2This register contains the actual value used for the DSV2 reference. is used as a static value (this value is constantly fed to the DAC after a stop trigger as been detected)."]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: The two reference values are used: CSGyDSV1This register contains the actual value used for the DSV1 reference. is the low or high reference value from where the slope starts (incrementing or decrementing respectively); CSGyDSV2This register contains the actual value used for the DSV2 reference. is used as an internal re start condition for the slope."]
-    VALUE3 = 2,
+    Value3 = 2,
 }
-impl From<SVSC_A> for u8 {
+impl From<Svsc> for u8 {
     #[inline(always)]
-    fn from(variant: SVSC_A) -> Self {
+    fn from(variant: Svsc) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for SVSC_A {
+impl crate::FieldSpec for Svsc {
     type Ux = u8;
 }
-impl crate::IsEnum for SVSC_A {}
+impl crate::IsEnum for Svsc {}
 #[doc = "Field `SVSC` reader - Slope reference value mode"]
-pub type SVSC_R = crate::FieldReader<SVSC_A>;
-impl SVSC_R {
+pub type SvscR = crate::FieldReader<Svsc>;
+impl SvscR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<SVSC_A> {
+    pub const fn variant(&self) -> Option<Svsc> {
         match self.bits {
-            0 => Some(SVSC_A::VALUE1),
-            1 => Some(SVSC_A::VALUE2),
-            2 => Some(SVSC_A::VALUE3),
+            0 => Some(Svsc::Value1),
+            1 => Some(Svsc::Value2),
+            2 => Some(Svsc::Value3),
             _ => None,
         }
     }
     #[doc = "Only CSGyDSV1This register contains the actual value used for the DSV1 reference. value is used for the slope generation: if slope is incrementing, CSGyDSV1This register contains the actual value used for the DSV1 reference. is the bottom reference value from where the ramp starts; if decrementing, then CSGyDSV1This register contains the actual value used for the DSV1 reference. is the upper reference value from where the ramp starts."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SVSC_A::VALUE1
+        *self == Svsc::Value1
     }
     #[doc = "The two reference values are being used: CSGyDSV1This register contains the actual value used for the DSV1 reference. is the low or high reference value from where the ramp starts (incrementing or decrementing respectively); CSGyDSV2This register contains the actual value used for the DSV2 reference. is used as a static value (this value is constantly fed to the DAC after a stop trigger as been detected)."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SVSC_A::VALUE2
+        *self == Svsc::Value2
     }
     #[doc = "The two reference values are used: CSGyDSV1This register contains the actual value used for the DSV1 reference. is the low or high reference value from where the slope starts (incrementing or decrementing respectively); CSGyDSV2This register contains the actual value used for the DSV2 reference. is used as an internal re start condition for the slope."]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SVSC_A::VALUE3
+        *self == Svsc::Value3
     }
 }
 #[doc = "Field `SVSC` writer - Slope reference value mode"]
-pub type SVSC_W<'a, REG> = crate::FieldWriter<'a, REG, 2, SVSC_A>;
-impl<'a, REG> SVSC_W<'a, REG>
+pub type SvscW<'a, REG> = crate::FieldWriter<'a, REG, 2, Svsc>;
+impl<'a, REG> SvscW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -605,80 +605,80 @@ where
     #[doc = "Only CSGyDSV1This register contains the actual value used for the DSV1 reference. value is used for the slope generation: if slope is incrementing, CSGyDSV1This register contains the actual value used for the DSV1 reference. is the bottom reference value from where the ramp starts; if decrementing, then CSGyDSV1This register contains the actual value used for the DSV1 reference. is the upper reference value from where the ramp starts."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(SVSC_A::VALUE1)
+        self.variant(Svsc::Value1)
     }
     #[doc = "The two reference values are being used: CSGyDSV1This register contains the actual value used for the DSV1 reference. is the low or high reference value from where the ramp starts (incrementing or decrementing respectively); CSGyDSV2This register contains the actual value used for the DSV2 reference. is used as a static value (this value is constantly fed to the DAC after a stop trigger as been detected)."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(SVSC_A::VALUE2)
+        self.variant(Svsc::Value2)
     }
     #[doc = "The two reference values are used: CSGyDSV1This register contains the actual value used for the DSV1 reference. is the low or high reference value from where the slope starts (incrementing or decrementing respectively); CSGyDSV2This register contains the actual value used for the DSV2 reference. is used as an internal re start condition for the slope."]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(SVSC_A::VALUE3)
+        self.variant(Svsc::Value3)
     }
 }
 #[doc = "Initial DAC start mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum SWSM_A {
+pub enum Swsm {
     #[doc = "0: CSGyDSV2This register contains the actual value used for the DSV2 reference. is fed to the DAC and initial conversion trigger is generated."]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: CSGyDSV1This register contains the actual value used for the DSV1 reference. is fed to the DAC and initial conversion trigger is generated."]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: CSGyDSV2This register contains the actual value used for the DSV2 reference. is fed to the DAC but initial conversion trigger is not generated."]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: CSGyDSV1This register contains the actual value used for the DSV1 reference. is fed to the DAC but initial conversion trigger is not generated."]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<SWSM_A> for u8 {
+impl From<Swsm> for u8 {
     #[inline(always)]
-    fn from(variant: SWSM_A) -> Self {
+    fn from(variant: Swsm) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for SWSM_A {
+impl crate::FieldSpec for Swsm {
     type Ux = u8;
 }
-impl crate::IsEnum for SWSM_A {}
+impl crate::IsEnum for Swsm {}
 #[doc = "Field `SWSM` reader - Initial DAC start mode"]
-pub type SWSM_R = crate::FieldReader<SWSM_A>;
-impl SWSM_R {
+pub type SwsmR = crate::FieldReader<Swsm>;
+impl SwsmR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> SWSM_A {
+    pub const fn variant(&self) -> Swsm {
         match self.bits {
-            0 => SWSM_A::VALUE1,
-            1 => SWSM_A::VALUE2,
-            2 => SWSM_A::VALUE3,
-            3 => SWSM_A::VALUE4,
+            0 => Swsm::Value1,
+            1 => Swsm::Value2,
+            2 => Swsm::Value3,
+            3 => Swsm::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "CSGyDSV2This register contains the actual value used for the DSV2 reference. is fed to the DAC and initial conversion trigger is generated."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SWSM_A::VALUE1
+        *self == Swsm::Value1
     }
     #[doc = "CSGyDSV1This register contains the actual value used for the DSV1 reference. is fed to the DAC and initial conversion trigger is generated."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SWSM_A::VALUE2
+        *self == Swsm::Value2
     }
     #[doc = "CSGyDSV2This register contains the actual value used for the DSV2 reference. is fed to the DAC but initial conversion trigger is not generated."]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SWSM_A::VALUE3
+        *self == Swsm::Value3
     }
     #[doc = "CSGyDSV1This register contains the actual value used for the DSV1 reference. is fed to the DAC but initial conversion trigger is not generated."]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == SWSM_A::VALUE4
+        *self == Swsm::Value4
     }
 }
 #[doc = "Field `SWSM` writer - Initial DAC start mode"]
-pub type SWSM_W<'a, REG> = crate::FieldWriter<'a, REG, 2, SWSM_A, crate::Safe>;
-impl<'a, REG> SWSM_W<'a, REG>
+pub type SwsmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Swsm, crate::Safe>;
+impl<'a, REG> SwsmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -686,85 +686,85 @@ where
     #[doc = "CSGyDSV2This register contains the actual value used for the DSV2 reference. is fed to the DAC and initial conversion trigger is generated."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(SWSM_A::VALUE1)
+        self.variant(Swsm::Value1)
     }
     #[doc = "CSGyDSV1This register contains the actual value used for the DSV1 reference. is fed to the DAC and initial conversion trigger is generated."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(SWSM_A::VALUE2)
+        self.variant(Swsm::Value2)
     }
     #[doc = "CSGyDSV2This register contains the actual value used for the DSV2 reference. is fed to the DAC but initial conversion trigger is not generated."]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(SWSM_A::VALUE3)
+        self.variant(Swsm::Value3)
     }
     #[doc = "CSGyDSV1This register contains the actual value used for the DSV1 reference. is fed to the DAC but initial conversion trigger is not generated."]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(SWSM_A::VALUE4)
+        self.variant(Swsm::Value4)
     }
 }
 #[doc = "Slope step gain configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum GCFG_A {
+pub enum Gcfg {
     #[doc = "0: Each slope step has an increment/decrement of 1"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Each slope step has an increment/decrement of 2"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: Each slope step has an increment/decrement of 4"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: Each slope step has an increment/decrement of 8"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<GCFG_A> for u8 {
+impl From<Gcfg> for u8 {
     #[inline(always)]
-    fn from(variant: GCFG_A) -> Self {
+    fn from(variant: Gcfg) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for GCFG_A {
+impl crate::FieldSpec for Gcfg {
     type Ux = u8;
 }
-impl crate::IsEnum for GCFG_A {}
+impl crate::IsEnum for Gcfg {}
 #[doc = "Field `GCFG` reader - Slope step gain configuration"]
-pub type GCFG_R = crate::FieldReader<GCFG_A>;
-impl GCFG_R {
+pub type GcfgR = crate::FieldReader<Gcfg>;
+impl GcfgR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> GCFG_A {
+    pub const fn variant(&self) -> Gcfg {
         match self.bits {
-            0 => GCFG_A::VALUE1,
-            1 => GCFG_A::VALUE2,
-            2 => GCFG_A::VALUE3,
-            3 => GCFG_A::VALUE4,
+            0 => Gcfg::Value1,
+            1 => Gcfg::Value2,
+            2 => Gcfg::Value3,
+            3 => Gcfg::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "Each slope step has an increment/decrement of 1"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == GCFG_A::VALUE1
+        *self == Gcfg::Value1
     }
     #[doc = "Each slope step has an increment/decrement of 2"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == GCFG_A::VALUE2
+        *self == Gcfg::Value2
     }
     #[doc = "Each slope step has an increment/decrement of 4"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == GCFG_A::VALUE3
+        *self == Gcfg::Value3
     }
     #[doc = "Each slope step has an increment/decrement of 8"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == GCFG_A::VALUE4
+        *self == Gcfg::Value4
     }
 }
 #[doc = "Field `GCFG` writer - Slope step gain configuration"]
-pub type GCFG_W<'a, REG> = crate::FieldWriter<'a, REG, 2, GCFG_A, crate::Safe>;
-impl<'a, REG> GCFG_W<'a, REG>
+pub type GcfgW<'a, REG> = crate::FieldWriter<'a, REG, 2, Gcfg, crate::Safe>;
+impl<'a, REG> GcfgW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -772,134 +772,134 @@ where
     #[doc = "Each slope step has an increment/decrement of 1"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(GCFG_A::VALUE1)
+        self.variant(Gcfg::Value1)
     }
     #[doc = "Each slope step has an increment/decrement of 2"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(GCFG_A::VALUE2)
+        self.variant(Gcfg::Value2)
     }
     #[doc = "Each slope step has an increment/decrement of 4"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(GCFG_A::VALUE3)
+        self.variant(Gcfg::Value3)
     }
     #[doc = "Each slope step has an increment/decrement of 8"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
-        self.variant(GCFG_A::VALUE4)
+        self.variant(Gcfg::Value4)
     }
 }
 #[doc = "Field `IST` reader - Immediate shadow transfer"]
-pub type IST_R = crate::BitReader;
+pub type IstR = crate::BitReader;
 #[doc = "Field `IST` writer - Immediate shadow transfer"]
-pub type IST_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type IstW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Pulse swallow enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum PSE_A {
+pub enum Pse {
     #[doc = "0: Pulse swallow disabled"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Pulse swallow enabled"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<PSE_A> for bool {
+impl From<Pse> for bool {
     #[inline(always)]
-    fn from(variant: PSE_A) -> Self {
+    fn from(variant: Pse) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `PSE` reader - Pulse swallow enable"]
-pub type PSE_R = crate::BitReader<PSE_A>;
-impl PSE_R {
+pub type PseR = crate::BitReader<Pse>;
+impl PseR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> PSE_A {
+    pub const fn variant(&self) -> Pse {
         match self.bits {
-            false => PSE_A::VALUE1,
-            true => PSE_A::VALUE2,
+            false => Pse::Value1,
+            true => Pse::Value2,
         }
     }
     #[doc = "Pulse swallow disabled"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PSE_A::VALUE1
+        *self == Pse::Value1
     }
     #[doc = "Pulse swallow enabled"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PSE_A::VALUE2
+        *self == Pse::Value2
     }
 }
 #[doc = "Field `PSE` writer - Pulse swallow enable"]
-pub type PSE_W<'a, REG> = crate::BitWriter<'a, REG, PSE_A>;
-impl<'a, REG> PSE_W<'a, REG>
+pub type PseW<'a, REG> = crate::BitWriter<'a, REG, Pse>;
+impl<'a, REG> PseW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Pulse swallow disabled"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(PSE_A::VALUE1)
+        self.variant(Pse::Value1)
     }
     #[doc = "Pulse swallow enabled"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(PSE_A::VALUE2)
+        self.variant(Pse::Value2)
     }
 }
 #[doc = "Pulse swallow window mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum PSWM_A {
+pub enum Pswm {
     #[doc = "0: 16 clock cycle window"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: 32 clock cycle window"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: 64 clock cycle window"]
-    VALUE3 = 2,
+    Value3 = 2,
 }
-impl From<PSWM_A> for u8 {
+impl From<Pswm> for u8 {
     #[inline(always)]
-    fn from(variant: PSWM_A) -> Self {
+    fn from(variant: Pswm) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for PSWM_A {
+impl crate::FieldSpec for Pswm {
     type Ux = u8;
 }
-impl crate::IsEnum for PSWM_A {}
+impl crate::IsEnum for Pswm {}
 #[doc = "Field `PSWM` reader - Pulse swallow window mode"]
-pub type PSWM_R = crate::FieldReader<PSWM_A>;
-impl PSWM_R {
+pub type PswmR = crate::FieldReader<Pswm>;
+impl PswmR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<PSWM_A> {
+    pub const fn variant(&self) -> Option<Pswm> {
         match self.bits {
-            0 => Some(PSWM_A::VALUE1),
-            1 => Some(PSWM_A::VALUE2),
-            2 => Some(PSWM_A::VALUE3),
+            0 => Some(Pswm::Value1),
+            1 => Some(Pswm::Value2),
+            2 => Some(Pswm::Value3),
             _ => None,
         }
     }
     #[doc = "16 clock cycle window"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == PSWM_A::VALUE1
+        *self == Pswm::Value1
     }
     #[doc = "32 clock cycle window"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == PSWM_A::VALUE2
+        *self == Pswm::Value2
     }
     #[doc = "64 clock cycle window"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == PSWM_A::VALUE3
+        *self == Pswm::Value3
     }
 }
 #[doc = "Field `PSWM` writer - Pulse swallow window mode"]
-pub type PSWM_W<'a, REG> = crate::FieldWriter<'a, REG, 2, PSWM_A>;
-impl<'a, REG> PSWM_W<'a, REG>
+pub type PswmW<'a, REG> = crate::FieldWriter<'a, REG, 2, Pswm>;
+impl<'a, REG> PswmW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -907,180 +907,180 @@ where
     #[doc = "16 clock cycle window"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(PSWM_A::VALUE1)
+        self.variant(Pswm::Value1)
     }
     #[doc = "32 clock cycle window"]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(PSWM_A::VALUE2)
+        self.variant(Pswm::Value2)
     }
     #[doc = "64 clock cycle window"]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(PSWM_A::VALUE3)
+        self.variant(Pswm::Value3)
     }
 }
 impl R {
     #[doc = "Bits 0:1 - Prescaler external start configuration"]
     #[inline(always)]
-    pub fn psrm(&self) -> PSRM_R {
-        PSRM_R::new((self.bits & 3) as u8)
+    pub fn psrm(&self) -> PsrmR {
+        PsrmR::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - Prescaler external stop configuration"]
     #[inline(always)]
-    pub fn pstm(&self) -> PSTM_R {
-        PSTM_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn pstm(&self) -> PstmR {
+        PstmR::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 4 - Fixed division disable"]
     #[inline(always)]
-    pub fn fpd(&self) -> FPD_R {
-        FPD_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn fpd(&self) -> FpdR {
+        FpdR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:6 - Prescaler division factor"]
     #[inline(always)]
-    pub fn psv(&self) -> PSV_R {
-        PSV_R::new(((self.bits >> 5) & 3) as u8)
+    pub fn psv(&self) -> PsvR {
+        PsvR::new(((self.bits >> 5) & 3) as u8)
     }
     #[doc = "Bits 8:9 - Slope control mode"]
     #[inline(always)]
-    pub fn scm(&self) -> SCM_R {
-        SCM_R::new(((self.bits >> 8) & 3) as u8)
+    pub fn scm(&self) -> ScmR {
+        ScmR::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - Slope external start configuration"]
     #[inline(always)]
-    pub fn ssrm(&self) -> SSRM_R {
-        SSRM_R::new(((self.bits >> 10) & 3) as u8)
+    pub fn ssrm(&self) -> SsrmR {
+        SsrmR::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - Slope external stop configuration"]
     #[inline(always)]
-    pub fn sstm(&self) -> SSTM_R {
-        SSTM_R::new(((self.bits >> 12) & 3) as u8)
+    pub fn sstm(&self) -> SstmR {
+        SstmR::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - Slope reference value mode"]
     #[inline(always)]
-    pub fn svsc(&self) -> SVSC_R {
-        SVSC_R::new(((self.bits >> 14) & 3) as u8)
+    pub fn svsc(&self) -> SvscR {
+        SvscR::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - Initial DAC start mode"]
     #[inline(always)]
-    pub fn swsm(&self) -> SWSM_R {
-        SWSM_R::new(((self.bits >> 16) & 3) as u8)
+    pub fn swsm(&self) -> SwsmR {
+        SwsmR::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19 - Slope step gain configuration"]
     #[inline(always)]
-    pub fn gcfg(&self) -> GCFG_R {
-        GCFG_R::new(((self.bits >> 18) & 3) as u8)
+    pub fn gcfg(&self) -> GcfgR {
+        GcfgR::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bit 20 - Immediate shadow transfer"]
     #[inline(always)]
-    pub fn ist(&self) -> IST_R {
-        IST_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn ist(&self) -> IstR {
+        IstR::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Pulse swallow enable"]
     #[inline(always)]
-    pub fn pse(&self) -> PSE_R {
-        PSE_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn pse(&self) -> PseR {
+        PseR::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bits 24:25 - Pulse swallow window mode"]
     #[inline(always)]
-    pub fn pswm(&self) -> PSWM_R {
-        PSWM_R::new(((self.bits >> 24) & 3) as u8)
+    pub fn pswm(&self) -> PswmR {
+        PswmR::new(((self.bits >> 24) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Prescaler external start configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn psrm(&mut self) -> PSRM_W<SC_SPEC> {
-        PSRM_W::new(self, 0)
+    pub fn psrm(&mut self) -> PsrmW<ScSpec> {
+        PsrmW::new(self, 0)
     }
     #[doc = "Bits 2:3 - Prescaler external stop configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pstm(&mut self) -> PSTM_W<SC_SPEC> {
-        PSTM_W::new(self, 2)
+    pub fn pstm(&mut self) -> PstmW<ScSpec> {
+        PstmW::new(self, 2)
     }
     #[doc = "Bit 4 - Fixed division disable"]
     #[inline(always)]
     #[must_use]
-    pub fn fpd(&mut self) -> FPD_W<SC_SPEC> {
-        FPD_W::new(self, 4)
+    pub fn fpd(&mut self) -> FpdW<ScSpec> {
+        FpdW::new(self, 4)
     }
     #[doc = "Bits 5:6 - Prescaler division factor"]
     #[inline(always)]
     #[must_use]
-    pub fn psv(&mut self) -> PSV_W<SC_SPEC> {
-        PSV_W::new(self, 5)
+    pub fn psv(&mut self) -> PsvW<ScSpec> {
+        PsvW::new(self, 5)
     }
     #[doc = "Bits 8:9 - Slope control mode"]
     #[inline(always)]
     #[must_use]
-    pub fn scm(&mut self) -> SCM_W<SC_SPEC> {
-        SCM_W::new(self, 8)
+    pub fn scm(&mut self) -> ScmW<ScSpec> {
+        ScmW::new(self, 8)
     }
     #[doc = "Bits 10:11 - Slope external start configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn ssrm(&mut self) -> SSRM_W<SC_SPEC> {
-        SSRM_W::new(self, 10)
+    pub fn ssrm(&mut self) -> SsrmW<ScSpec> {
+        SsrmW::new(self, 10)
     }
     #[doc = "Bits 12:13 - Slope external stop configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn sstm(&mut self) -> SSTM_W<SC_SPEC> {
-        SSTM_W::new(self, 12)
+    pub fn sstm(&mut self) -> SstmW<ScSpec> {
+        SstmW::new(self, 12)
     }
     #[doc = "Bits 14:15 - Slope reference value mode"]
     #[inline(always)]
     #[must_use]
-    pub fn svsc(&mut self) -> SVSC_W<SC_SPEC> {
-        SVSC_W::new(self, 14)
+    pub fn svsc(&mut self) -> SvscW<ScSpec> {
+        SvscW::new(self, 14)
     }
     #[doc = "Bits 16:17 - Initial DAC start mode"]
     #[inline(always)]
     #[must_use]
-    pub fn swsm(&mut self) -> SWSM_W<SC_SPEC> {
-        SWSM_W::new(self, 16)
+    pub fn swsm(&mut self) -> SwsmW<ScSpec> {
+        SwsmW::new(self, 16)
     }
     #[doc = "Bits 18:19 - Slope step gain configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn gcfg(&mut self) -> GCFG_W<SC_SPEC> {
-        GCFG_W::new(self, 18)
+    pub fn gcfg(&mut self) -> GcfgW<ScSpec> {
+        GcfgW::new(self, 18)
     }
     #[doc = "Bit 20 - Immediate shadow transfer"]
     #[inline(always)]
     #[must_use]
-    pub fn ist(&mut self) -> IST_W<SC_SPEC> {
-        IST_W::new(self, 20)
+    pub fn ist(&mut self) -> IstW<ScSpec> {
+        IstW::new(self, 20)
     }
     #[doc = "Bit 21 - Pulse swallow enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pse(&mut self) -> PSE_W<SC_SPEC> {
-        PSE_W::new(self, 21)
+    pub fn pse(&mut self) -> PseW<ScSpec> {
+        PseW::new(self, 21)
     }
     #[doc = "Bits 24:25 - Pulse swallow window mode"]
     #[inline(always)]
     #[must_use]
-    pub fn pswm(&mut self) -> PSWM_W<SC_SPEC> {
-        PSWM_W::new(self, 24)
+    pub fn pswm(&mut self) -> PswmW<ScSpec> {
+        PswmW::new(self, 24)
     }
 }
 #[doc = "Slope generation control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct SC_SPEC;
-impl crate::RegisterSpec for SC_SPEC {
+pub struct ScSpec;
+impl crate::RegisterSpec for ScSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`sc::R`](R) reader structure"]
-impl crate::Readable for SC_SPEC {}
+impl crate::Readable for ScSpec {}
 #[doc = "`write(|w| ..)` method takes [`sc::W`](W) writer structure"]
-impl crate::Writable for SC_SPEC {
+impl crate::Writable for ScSpec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SC to value 0"]
-impl crate::Resettable for SC_SPEC {
+impl crate::Resettable for ScSpec {
     const RESET_VALUE: u32 = 0;
 }
