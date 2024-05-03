@@ -1,179 +1,179 @@
 #[doc = "Register `LPACST` reader"]
-pub type R = crate::R<LpacstSpec>;
+pub type R = crate::R<LPACST_SPEC>;
 #[doc = "Trigger VBAT Single Compare Operation Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Vbatscmp {
+pub enum VBATSCMP_A {
     #[doc = "0: Ready to start new compare operation"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Compare operation completed"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Vbatscmp> for bool {
+impl From<VBATSCMP_A> for bool {
     #[inline(always)]
-    fn from(variant: Vbatscmp) -> Self {
+    fn from(variant: VBATSCMP_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `VBATSCMP` reader - Trigger VBAT Single Compare Operation Status"]
-pub type VbatscmpR = crate::BitReader<Vbatscmp>;
-impl VbatscmpR {
+pub type VBATSCMP_R = crate::BitReader<VBATSCMP_A>;
+impl VBATSCMP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Vbatscmp {
+    pub const fn variant(&self) -> VBATSCMP_A {
         match self.bits {
-            false => Vbatscmp::Value1,
-            true => Vbatscmp::Value2,
+            false => VBATSCMP_A::VALUE1,
+            true => VBATSCMP_A::VALUE2,
         }
     }
     #[doc = "Ready to start new compare operation"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Vbatscmp::Value1
+        *self == VBATSCMP_A::VALUE1
     }
     #[doc = "Compare operation completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Vbatscmp::Value2
+        *self == VBATSCMP_A::VALUE2
     }
 }
 #[doc = "Trigger HIB_IO_0 Input Single Compare Operation Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Ahibio0scmp {
+pub enum AHIBIO0SCMP_A {
     #[doc = "0: Ready to start new compare operation"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Compare operation completed"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Ahibio0scmp> for bool {
+impl From<AHIBIO0SCMP_A> for bool {
     #[inline(always)]
-    fn from(variant: Ahibio0scmp) -> Self {
+    fn from(variant: AHIBIO0SCMP_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `AHIBIO0SCMP` reader - Trigger HIB_IO_0 Input Single Compare Operation Status"]
-pub type Ahibio0scmpR = crate::BitReader<Ahibio0scmp>;
-impl Ahibio0scmpR {
+pub type AHIBIO0SCMP_R = crate::BitReader<AHIBIO0SCMP_A>;
+impl AHIBIO0SCMP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Ahibio0scmp {
+    pub const fn variant(&self) -> AHIBIO0SCMP_A {
         match self.bits {
-            false => Ahibio0scmp::Value1,
-            true => Ahibio0scmp::Value2,
+            false => AHIBIO0SCMP_A::VALUE1,
+            true => AHIBIO0SCMP_A::VALUE2,
         }
     }
     #[doc = "Ready to start new compare operation"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Ahibio0scmp::Value1
+        *self == AHIBIO0SCMP_A::VALUE1
     }
     #[doc = "Compare operation completed"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Ahibio0scmp::Value2
+        *self == AHIBIO0SCMP_A::VALUE2
     }
 }
 #[doc = "VBAT Compare Operation Result\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Vbatval {
+pub enum VBATVAL_A {
     #[doc = "0: Below programmed threshold"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Above programmed threshold"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Vbatval> for bool {
+impl From<VBATVAL_A> for bool {
     #[inline(always)]
-    fn from(variant: Vbatval) -> Self {
+    fn from(variant: VBATVAL_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `VBATVAL` reader - VBAT Compare Operation Result"]
-pub type VbatvalR = crate::BitReader<Vbatval>;
-impl VbatvalR {
+pub type VBATVAL_R = crate::BitReader<VBATVAL_A>;
+impl VBATVAL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Vbatval {
+    pub const fn variant(&self) -> VBATVAL_A {
         match self.bits {
-            false => Vbatval::Value1,
-            true => Vbatval::Value2,
+            false => VBATVAL_A::VALUE1,
+            true => VBATVAL_A::VALUE2,
         }
     }
     #[doc = "Below programmed threshold"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Vbatval::Value1
+        *self == VBATVAL_A::VALUE1
     }
     #[doc = "Above programmed threshold"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Vbatval::Value2
+        *self == VBATVAL_A::VALUE2
     }
 }
 #[doc = "HIB_IO_0 Input Compare Operation Result\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Ahibio0val {
+pub enum AHIBIO0VAL_A {
     #[doc = "0: Below programmed threshold"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Above programmed threshold"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Ahibio0val> for bool {
+impl From<AHIBIO0VAL_A> for bool {
     #[inline(always)]
-    fn from(variant: Ahibio0val) -> Self {
+    fn from(variant: AHIBIO0VAL_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `AHIBIO0VAL` reader - HIB_IO_0 Input Compare Operation Result"]
-pub type Ahibio0valR = crate::BitReader<Ahibio0val>;
-impl Ahibio0valR {
+pub type AHIBIO0VAL_R = crate::BitReader<AHIBIO0VAL_A>;
+impl AHIBIO0VAL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Ahibio0val {
+    pub const fn variant(&self) -> AHIBIO0VAL_A {
         match self.bits {
-            false => Ahibio0val::Value1,
-            true => Ahibio0val::Value2,
+            false => AHIBIO0VAL_A::VALUE1,
+            true => AHIBIO0VAL_A::VALUE2,
         }
     }
     #[doc = "Below programmed threshold"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Ahibio0val::Value1
+        *self == AHIBIO0VAL_A::VALUE1
     }
     #[doc = "Above programmed threshold"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Ahibio0val::Value2
+        *self == AHIBIO0VAL_A::VALUE2
     }
 }
 impl R {
     #[doc = "Bit 0 - Trigger VBAT Single Compare Operation Status"]
     #[inline(always)]
-    pub fn vbatscmp(&self) -> VbatscmpR {
-        VbatscmpR::new((self.bits & 1) != 0)
+    pub fn vbatscmp(&self) -> VBATSCMP_R {
+        VBATSCMP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Trigger HIB_IO_0 Input Single Compare Operation Status"]
     #[inline(always)]
-    pub fn ahibio0scmp(&self) -> Ahibio0scmpR {
-        Ahibio0scmpR::new(((self.bits >> 1) & 1) != 0)
+    pub fn ahibio0scmp(&self) -> AHIBIO0SCMP_R {
+        AHIBIO0SCMP_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 16 - VBAT Compare Operation Result"]
     #[inline(always)]
-    pub fn vbatval(&self) -> VbatvalR {
-        VbatvalR::new(((self.bits >> 16) & 1) != 0)
+    pub fn vbatval(&self) -> VBATVAL_R {
+        VBATVAL_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - HIB_IO_0 Input Compare Operation Result"]
     #[inline(always)]
-    pub fn ahibio0val(&self) -> Ahibio0valR {
-        Ahibio0valR::new(((self.bits >> 17) & 1) != 0)
+    pub fn ahibio0val(&self) -> AHIBIO0VAL_R {
+        AHIBIO0VAL_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
 #[doc = "Hibernate Analog Control State Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lpacst::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct LpacstSpec;
-impl crate::RegisterSpec for LpacstSpec {
+pub struct LPACST_SPEC;
+impl crate::RegisterSpec for LPACST_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`lpacst::R`](R) reader structure"]
-impl crate::Readable for LpacstSpec {}
+impl crate::Readable for LPACST_SPEC {}
 #[doc = "`reset()` method sets LPACST to value 0"]
-impl crate::Resettable for LpacstSpec {
+impl crate::Resettable for LPACST_SPEC {
     const RESET_VALUE: u32 = 0;
 }
