@@ -1,227 +1,227 @@
 #[doc = "Register `HINTST` reader"]
-pub type R = crate::R<HintstSpec>;
+pub type R = crate::R<HINTST_SPEC>;
 #[doc = "Internally Controlled Hibernate Sequence Request State\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Hibnint {
+pub enum HIBNINT_A {
     #[doc = "0: Hibernate not entered"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Hibernate entered"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Hibnint> for bool {
+impl From<HIBNINT_A> for bool {
     #[inline(always)]
-    fn from(variant: Hibnint) -> Self {
+    fn from(variant: HIBNINT_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `HIBNINT` reader - Internally Controlled Hibernate Sequence Request State"]
-pub type HibnintR = crate::BitReader<Hibnint>;
-impl HibnintR {
+pub type HIBNINT_R = crate::BitReader<HIBNINT_A>;
+impl HIBNINT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Hibnint {
+    pub const fn variant(&self) -> HIBNINT_A {
         match self.bits {
-            false => Hibnint::Value1,
-            true => Hibnint::Value2,
+            false => HIBNINT_A::VALUE1,
+            true => HIBNINT_A::VALUE2,
         }
     }
     #[doc = "Hibernate not entered"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Hibnint::Value1
+        *self == HIBNINT_A::VALUE1
     }
     #[doc = "Hibernate entered"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Hibnint::Value2
+        *self == HIBNINT_A::VALUE2
     }
 }
 #[doc = "VDDP Supply Switch of Flash State\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Flashoff {
+pub enum FLASHOFF_A {
     #[doc = "0: VDDP supply of Flash switched on"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: VDDP supply of Flash switched off"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Flashoff> for bool {
+impl From<FLASHOFF_A> for bool {
     #[inline(always)]
-    fn from(variant: Flashoff) -> Self {
+    fn from(variant: FLASHOFF_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `FLASHOFF` reader - VDDP Supply Switch of Flash State"]
-pub type FlashoffR = crate::BitReader<Flashoff>;
-impl FlashoffR {
+pub type FLASHOFF_R = crate::BitReader<FLASHOFF_A>;
+impl FLASHOFF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Flashoff {
+    pub const fn variant(&self) -> FLASHOFF_A {
         match self.bits {
-            false => Flashoff::Value1,
-            true => Flashoff::Value2,
+            false => FLASHOFF_A::VALUE1,
+            true => FLASHOFF_A::VALUE2,
         }
     }
     #[doc = "VDDP supply of Flash switched on"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Flashoff::Value1
+        *self == FLASHOFF_A::VALUE1
     }
     #[doc = "VDDP supply of Flash switched off"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Flashoff::Value2
+        *self == FLASHOFF_A::VALUE2
     }
 }
 #[doc = "Flash Power Down State\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Flashpd {
+pub enum FLASHPD_A {
     #[doc = "0: Normal mode"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Power down mode effectively entered"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Flashpd> for bool {
+impl From<FLASHPD_A> for bool {
     #[inline(always)]
-    fn from(variant: Flashpd) -> Self {
+    fn from(variant: FLASHPD_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `FLASHPD` reader - Flash Power Down State"]
-pub type FlashpdR = crate::BitReader<Flashpd>;
-impl FlashpdR {
+pub type FLASHPD_R = crate::BitReader<FLASHPD_A>;
+impl FLASHPD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Flashpd {
+    pub const fn variant(&self) -> FLASHPD_A {
         match self.bits {
-            false => Flashpd::Value1,
-            true => Flashpd::Value2,
+            false => FLASHPD_A::VALUE1,
+            true => FLASHPD_A::VALUE2,
         }
     }
     #[doc = "Normal mode"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Flashpd::Value1
+        *self == FLASHPD_A::VALUE1
     }
     #[doc = "Power down mode effectively entered"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Flashpd::Value2
+        *self == FLASHPD_A::VALUE2
     }
 }
 #[doc = "PORST Pull-up OFF Direct Control State\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Poffd {
+pub enum POFFD_A {
     #[doc = "0: Pull-up on"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Pull-up off"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Poffd> for bool {
+impl From<POFFD_A> for bool {
     #[inline(always)]
-    fn from(variant: Poffd) -> Self {
+    fn from(variant: POFFD_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `POFFD` reader - PORST Pull-up OFF Direct Control State"]
-pub type PoffdR = crate::BitReader<Poffd>;
-impl PoffdR {
+pub type POFFD_R = crate::BitReader<POFFD_A>;
+impl POFFD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Poffd {
+    pub const fn variant(&self) -> POFFD_A {
         match self.bits {
-            false => Poffd::Value1,
-            true => Poffd::Value2,
+            false => POFFD_A::VALUE1,
+            true => POFFD_A::VALUE2,
         }
     }
     #[doc = "Pull-up on"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Poffd::Value1
+        *self == POFFD_A::VALUE1
     }
     #[doc = "Pull-up off"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Poffd::Value2
+        *self == POFFD_A::VALUE2
     }
 }
 #[doc = "Field `PPODEL` reader - Delay on PORTS Pull-up Switching OFF on Hibernate Request"]
-pub type PpodelR = crate::FieldReader;
+pub type PPODEL_R = crate::FieldReader;
 #[doc = "PORST Pull-up OFF in Hibernate Mode State\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Poffh {
+pub enum POFFH_A {
     #[doc = "0: Pull-up on"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: Pull-up off"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Poffh> for bool {
+impl From<POFFH_A> for bool {
     #[inline(always)]
-    fn from(variant: Poffh) -> Self {
+    fn from(variant: POFFH_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `POFFH` reader - PORST Pull-up OFF in Hibernate Mode State"]
-pub type PoffhR = crate::BitReader<Poffh>;
-impl PoffhR {
+pub type POFFH_R = crate::BitReader<POFFH_A>;
+impl POFFH_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Poffh {
+    pub const fn variant(&self) -> POFFH_A {
         match self.bits {
-            false => Poffh::Value1,
-            true => Poffh::Value2,
+            false => POFFH_A::VALUE1,
+            true => POFFH_A::VALUE2,
         }
     }
     #[doc = "Pull-up on"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Poffh::Value1
+        *self == POFFH_A::VALUE1
     }
     #[doc = "Pull-up off"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Poffh::Value2
+        *self == POFFH_A::VALUE2
     }
 }
 impl R {
     #[doc = "Bit 0 - Internally Controlled Hibernate Sequence Request State"]
     #[inline(always)]
-    pub fn hibnint(&self) -> HibnintR {
-        HibnintR::new((self.bits & 1) != 0)
+    pub fn hibnint(&self) -> HIBNINT_R {
+        HIBNINT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - VDDP Supply Switch of Flash State"]
     #[inline(always)]
-    pub fn flashoff(&self) -> FlashoffR {
-        FlashoffR::new(((self.bits >> 2) & 1) != 0)
+    pub fn flashoff(&self) -> FLASHOFF_R {
+        FLASHOFF_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Flash Power Down State"]
     #[inline(always)]
-    pub fn flashpd(&self) -> FlashpdR {
-        FlashpdR::new(((self.bits >> 3) & 1) != 0)
+    pub fn flashpd(&self) -> FLASHPD_R {
+        FLASHPD_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - PORST Pull-up OFF Direct Control State"]
     #[inline(always)]
-    pub fn poffd(&self) -> PoffdR {
-        PoffdR::new(((self.bits >> 4) & 1) != 0)
+    pub fn poffd(&self) -> POFFD_R {
+        POFFD_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 16:17 - Delay on PORTS Pull-up Switching OFF on Hibernate Request"]
     #[inline(always)]
-    pub fn ppodel(&self) -> PpodelR {
-        PpodelR::new(((self.bits >> 16) & 3) as u8)
+    pub fn ppodel(&self) -> PPODEL_R {
+        PPODEL_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bit 20 - PORST Pull-up OFF in Hibernate Mode State"]
     #[inline(always)]
-    pub fn poffh(&self) -> PoffhR {
-        PoffhR::new(((self.bits >> 20) & 1) != 0)
+    pub fn poffh(&self) -> POFFH_R {
+        POFFH_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 #[doc = "Hibernate Internal Control State Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hintst::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct HintstSpec;
-impl crate::RegisterSpec for HintstSpec {
+pub struct HINTST_SPEC;
+impl crate::RegisterSpec for HINTST_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`hintst::R`](R) reader structure"]
-impl crate::Readable for HintstSpec {}
+impl crate::Readable for HINTST_SPEC {}
 #[doc = "`reset()` method sets HINTST to value 0"]
-impl crate::Resettable for HintstSpec {
+impl crate::Resettable for HINTST_SPEC {
     const RESET_VALUE: u32 = 0;
 }

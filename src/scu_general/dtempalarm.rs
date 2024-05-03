@@ -1,97 +1,97 @@
 #[doc = "Register `DTEMPALARM` reader"]
-pub type R = crate::R<DtempalarmSpec>;
+pub type R = crate::R<DTEMPALARM_SPEC>;
 #[doc = "Lower Limit Underflow\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Underfl {
+pub enum UNDERFL_A {
     #[doc = "0: No temperature underflow was detected"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: A temperature underflow was detected"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Underfl> for bool {
+impl From<UNDERFL_A> for bool {
     #[inline(always)]
-    fn from(variant: Underfl) -> Self {
+    fn from(variant: UNDERFL_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `UNDERFL` reader - Lower Limit Underflow"]
-pub type UnderflR = crate::BitReader<Underfl>;
-impl UnderflR {
+pub type UNDERFL_R = crate::BitReader<UNDERFL_A>;
+impl UNDERFL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Underfl {
+    pub const fn variant(&self) -> UNDERFL_A {
         match self.bits {
-            false => Underfl::Value1,
-            true => Underfl::Value2,
+            false => UNDERFL_A::VALUE1,
+            true => UNDERFL_A::VALUE2,
         }
     }
     #[doc = "No temperature underflow was detected"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Underfl::Value1
+        *self == UNDERFL_A::VALUE1
     }
     #[doc = "A temperature underflow was detected"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Underfl::Value2
+        *self == UNDERFL_A::VALUE2
     }
 }
 #[doc = "Upper Limit Overflow\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Overfl {
+pub enum OVERFL_A {
     #[doc = "0: No temperature overflow was detected"]
-    Value1 = 0,
+    VALUE1 = 0,
     #[doc = "1: A temperature overflow was detected"]
-    Value2 = 1,
+    VALUE2 = 1,
 }
-impl From<Overfl> for bool {
+impl From<OVERFL_A> for bool {
     #[inline(always)]
-    fn from(variant: Overfl) -> Self {
+    fn from(variant: OVERFL_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `OVERFL` reader - Upper Limit Overflow"]
-pub type OverflR = crate::BitReader<Overfl>;
-impl OverflR {
+pub type OVERFL_R = crate::BitReader<OVERFL_A>;
+impl OVERFL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Overfl {
+    pub const fn variant(&self) -> OVERFL_A {
         match self.bits {
-            false => Overfl::Value1,
-            true => Overfl::Value2,
+            false => OVERFL_A::VALUE1,
+            true => OVERFL_A::VALUE2,
         }
     }
     #[doc = "No temperature overflow was detected"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == Overfl::Value1
+        *self == OVERFL_A::VALUE1
     }
     #[doc = "A temperature overflow was detected"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == Overfl::Value2
+        *self == OVERFL_A::VALUE2
     }
 }
 impl R {
     #[doc = "Bit 0 - Lower Limit Underflow"]
     #[inline(always)]
-    pub fn underfl(&self) -> UnderflR {
-        UnderflR::new((self.bits & 1) != 0)
+    pub fn underfl(&self) -> UNDERFL_R {
+        UNDERFL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 16 - Upper Limit Overflow"]
     #[inline(always)]
-    pub fn overfl(&self) -> OverflR {
-        OverflR::new(((self.bits >> 16) & 1) != 0)
+    pub fn overfl(&self) -> OVERFL_R {
+        OVERFL_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 #[doc = "Die Temperature Sensor Alarm Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dtempalarm::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct DtempalarmSpec;
-impl crate::RegisterSpec for DtempalarmSpec {
+pub struct DTEMPALARM_SPEC;
+impl crate::RegisterSpec for DTEMPALARM_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`dtempalarm::R`](R) reader structure"]
-impl crate::Readable for DtempalarmSpec {}
+impl crate::Readable for DTEMPALARM_SPEC {}
 #[doc = "`reset()` method sets DTEMPALARM to value 0"]
-impl crate::Resettable for DtempalarmSpec {
+impl crate::Resettable for DTEMPALARM_SPEC {
     const RESET_VALUE: u32 = 0;
 }
