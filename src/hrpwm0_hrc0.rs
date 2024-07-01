@@ -88,72 +88,72 @@ impl RegisterBlock {
         &self.scr2
     }
 }
-#[doc = "GC (rw) register accessor: HRC mode configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gc::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gc::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gc`]
+#[doc = "GC (rw) register accessor: HRC mode configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`gc::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gc::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gc`]
 module"]
 pub type GC = crate::Reg<gc::GC_SPEC>;
 #[doc = "HRC mode configuration"]
 pub mod gc;
-#[doc = "PL (rw) register accessor: HRC output passive level\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pl`]
+#[doc = "PL (rw) register accessor: HRC output passive level\n\nYou can [`read`](crate::Reg::read) this register and get [`pl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pl`]
 module"]
 pub type PL = crate::Reg<pl::PL_SPEC>;
 #[doc = "HRC output passive level"]
 pub mod pl;
-#[doc = "GSEL (rw) register accessor: HRC global control selection\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gsel::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gsel::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gsel`]
+#[doc = "GSEL (rw) register accessor: HRC global control selection\n\nYou can [`read`](crate::Reg::read) this register and get [`gsel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gsel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gsel`]
 module"]
 pub type GSEL = crate::Reg<gsel::GSEL_SPEC>;
 #[doc = "HRC global control selection"]
 pub mod gsel;
-#[doc = "TSEL (rw) register accessor: HRC timer selection\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsel::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tsel::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tsel`]
+#[doc = "TSEL (rw) register accessor: HRC timer selection\n\nYou can [`read`](crate::Reg::read) this register and get [`tsel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tsel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tsel`]
 module"]
 pub type TSEL = crate::Reg<tsel::TSEL_SPEC>;
 #[doc = "HRC timer selection"]
 pub mod tsel;
-#[doc = "SC (r) register accessor: HRC current source for shadow\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sc::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sc`]
+#[doc = "SC (r) register accessor: HRC current source for shadow\n\nYou can [`read`](crate::Reg::read) this register and get [`sc::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sc`]
 module"]
 pub type SC = crate::Reg<sc::SC_SPEC>;
 #[doc = "HRC current source for shadow"]
 pub mod sc;
-#[doc = "DCR (r) register accessor: HRC dead time rising value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dcr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dcr`]
+#[doc = "DCR (r) register accessor: HRC dead time rising value\n\nYou can [`read`](crate::Reg::read) this register and get [`dcr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dcr`]
 module"]
 pub type DCR = crate::Reg<dcr::DCR_SPEC>;
 #[doc = "HRC dead time rising value"]
 pub mod dcr;
-#[doc = "DCF (r) register accessor: HRC dead time falling value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dcf::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dcf`]
+#[doc = "DCF (r) register accessor: HRC dead time falling value\n\nYou can [`read`](crate::Reg::read) this register and get [`dcf::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dcf`]
 module"]
 pub type DCF = crate::Reg<dcf::DCF_SPEC>;
 #[doc = "HRC dead time falling value"]
 pub mod dcf;
-#[doc = "CR1 (r) register accessor: HRC rising edge value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cr1`]
+#[doc = "CR1 (r) register accessor: HRC rising edge value\n\nYou can [`read`](crate::Reg::read) this register and get [`cr1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cr1`]
 module"]
 pub type CR1 = crate::Reg<cr1::CR1_SPEC>;
 #[doc = "HRC rising edge value"]
 pub mod cr1;
-#[doc = "CR2 (r) register accessor: HRC falling edge value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cr2`]
+#[doc = "CR2 (r) register accessor: HRC falling edge value\n\nYou can [`read`](crate::Reg::read) this register and get [`cr2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cr2`]
 module"]
 pub type CR2 = crate::Reg<cr2::CR2_SPEC>;
 #[doc = "HRC falling edge value"]
 pub mod cr2;
-#[doc = "SSC (rw) register accessor: HRC next source for shadow\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ssc::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ssc::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ssc`]
+#[doc = "SSC (rw) register accessor: HRC next source for shadow\n\nYou can [`read`](crate::Reg::read) this register and get [`ssc::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ssc::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ssc`]
 module"]
 pub type SSC = crate::Reg<ssc::SSC_SPEC>;
 #[doc = "HRC next source for shadow"]
 pub mod ssc;
-#[doc = "SDCR (rw) register accessor: HRC shadow dead time rising\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sdcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sdcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sdcr`]
+#[doc = "SDCR (rw) register accessor: HRC shadow dead time rising\n\nYou can [`read`](crate::Reg::read) this register and get [`sdcr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sdcr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sdcr`]
 module"]
 pub type SDCR = crate::Reg<sdcr::SDCR_SPEC>;
 #[doc = "HRC shadow dead time rising"]
 pub mod sdcr;
-#[doc = "SDCF (rw) register accessor: HRC shadow dead time falling\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sdcf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sdcf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sdcf`]
+#[doc = "SDCF (rw) register accessor: HRC shadow dead time falling\n\nYou can [`read`](crate::Reg::read) this register and get [`sdcf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sdcf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sdcf`]
 module"]
 pub type SDCF = crate::Reg<sdcf::SDCF_SPEC>;
 #[doc = "HRC shadow dead time falling"]
 pub mod sdcf;
-#[doc = "SCR1 (rw) register accessor: HRC shadow rising edge value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`scr1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scr1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scr1`]
+#[doc = "SCR1 (rw) register accessor: HRC shadow rising edge value\n\nYou can [`read`](crate::Reg::read) this register and get [`scr1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scr1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scr1`]
 module"]
 pub type SCR1 = crate::Reg<scr1::SCR1_SPEC>;
 #[doc = "HRC shadow rising edge value"]
 pub mod scr1;
-#[doc = "SCR2 (rw) register accessor: HRC shadow falling edge value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`scr2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scr2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scr2`]
+#[doc = "SCR2 (rw) register accessor: HRC shadow falling edge value\n\nYou can [`read`](crate::Reg::read) this register and get [`scr2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scr2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scr2`]
 module"]
 pub type SCR2 = crate::Reg<scr2::SCR2_SPEC>;
 #[doc = "HRC shadow falling edge value"]

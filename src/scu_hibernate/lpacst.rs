@@ -166,7 +166,7 @@ impl R {
         AHIBIO0VAL_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
-#[doc = "Hibernate Analog Control State Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lpacst::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Hibernate Analog Control State Register\n\nYou can [`read`](crate::Reg::read) this register and get [`lpacst::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LPACST_SPEC;
 impl crate::RegisterSpec for LPACST_SPEC {
     type Ux = u32;

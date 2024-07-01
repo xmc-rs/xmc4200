@@ -9,7 +9,7 @@ impl R {
         DTRV_R::new((self.bits & 0xffff) as u16)
     }
 }
-#[doc = "HRC dead time rising value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dcr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HRC dead time rising value\n\nYou can [`read`](crate::Reg::read) this register and get [`dcr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DCR_SPEC;
 impl crate::RegisterSpec for DCR_SPEC {
     type Ux = u32;

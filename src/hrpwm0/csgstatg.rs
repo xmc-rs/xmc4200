@@ -371,7 +371,7 @@ impl R {
         PSLS2_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
-#[doc = "Global CSG run bit status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`csgstatg::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Global CSG run bit status\n\nYou can [`read`](crate::Reg::read) this register and get [`csgstatg::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CSGSTATG_SPEC;
 impl crate::RegisterSpec for CSGSTATG_SPEC {
     type Ux = u32;

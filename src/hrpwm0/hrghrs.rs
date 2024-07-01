@@ -43,7 +43,7 @@ impl R {
         HRGR_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "High Resolution Generation Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hrghrs::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "High Resolution Generation Status\n\nYou can [`read`](crate::Reg::read) this register and get [`hrghrs::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HRGHRS_SPEC;
 impl crate::RegisterSpec for HRGHRS_SPEC {
     type Ux = u32;
