@@ -9,7 +9,7 @@ impl R {
         DSV1_R::new((self.bits & 0x03ff) as u16)
     }
 }
-#[doc = "DAC reference value 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dsv1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DAC reference value 1\n\nYou can [`read`](crate::Reg::read) this register and get [`dsv1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DSV1_SPEC;
 impl crate::RegisterSpec for DSV1_SPEC {
     type Ux = u32;

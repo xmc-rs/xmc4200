@@ -214,7 +214,7 @@ impl R {
         POFFH_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
-#[doc = "Hibernate Internal Control State Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hintst::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Hibernate Internal Control State Register\n\nYou can [`read`](crate::Reg::read) this register and get [`hintst::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HINTST_SPEC;
 impl crate::RegisterSpec for HINTST_SPEC {
     type Ux = u32;

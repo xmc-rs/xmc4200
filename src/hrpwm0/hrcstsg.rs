@@ -330,7 +330,7 @@ impl R {
         H3DSTE_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
-#[doc = "Global HRC shadow transfer status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hrcstsg::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Global HRC shadow transfer status\n\nYou can [`read`](crate::Reg::read) this register and get [`hrcstsg::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HRCSTSG_SPEC;
 impl crate::RegisterSpec for HRCSTSG_SPEC {
     type Ux = u32;

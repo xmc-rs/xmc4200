@@ -43,7 +43,7 @@ impl R {
         ST_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "HRC current source for shadow\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HRC current source for shadow\n\nYou can [`read`](crate::Reg::read) this register and get [`sc::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SC_SPEC;
 impl crate::RegisterSpec for SC_SPEC {
     type Ux = u32;

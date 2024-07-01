@@ -43,7 +43,7 @@ impl R {
         BUSY_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "Mirror All Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mirrallstat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Mirror All Status\n\nYou can [`read`](crate::Reg::read) this register and get [`mirrallstat::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MIRRALLSTAT_SPEC;
 impl crate::RegisterSpec for MIRRALLSTAT_SPEC {
     type Ux = u32;

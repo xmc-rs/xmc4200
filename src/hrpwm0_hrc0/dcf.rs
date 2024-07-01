@@ -9,7 +9,7 @@ impl R {
         DTFV_R::new((self.bits & 0xffff) as u16)
     }
 }
-#[doc = "HRC dead time falling value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dcf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HRC dead time falling value\n\nYou can [`read`](crate::Reg::read) this register and get [`dcf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DCF_SPEC;
 impl crate::RegisterSpec for DCF_SPEC {
     type Ux = u32;

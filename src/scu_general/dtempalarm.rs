@@ -84,7 +84,7 @@ impl R {
         OVERFL_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
-#[doc = "Die Temperature Sensor Alarm Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dtempalarm::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Die Temperature Sensor Alarm Register\n\nYou can [`read`](crate::Reg::read) this register and get [`dtempalarm::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DTEMPALARM_SPEC;
 impl crate::RegisterSpec for DTEMPALARM_SPEC {
     type Ux = u32;

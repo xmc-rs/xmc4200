@@ -9,7 +9,7 @@ impl R {
         CR1_R::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "HRC rising edge value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HRC rising edge value\n\nYou can [`read`](crate::Reg::read) this register and get [`cr1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CR1_SPEC;
 impl crate::RegisterSpec for CR1_SPEC {
     type Ux = u32;

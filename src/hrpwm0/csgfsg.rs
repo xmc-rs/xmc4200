@@ -248,7 +248,7 @@ impl R {
         P2RB_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
-#[doc = "Global CSG slope/prescaler status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`csgfsg::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Global CSG slope/prescaler status\n\nYou can [`read`](crate::Reg::read) this register and get [`csgfsg::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CSGFSG_SPEC;
 impl crate::RegisterSpec for CSGFSG_SPEC {
     type Ux = u32;
