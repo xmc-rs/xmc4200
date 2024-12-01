@@ -191,43 +191,36 @@ where
 impl W {
     #[doc = "Bit 0 - Internally Controlled Hibernate Sequence Request Set"]
     #[inline(always)]
-    #[must_use]
     pub fn hibnint(&mut self) -> HIBNINT_W<HINTSET_SPEC> {
         HIBNINT_W::new(self, 0)
     }
     #[doc = "Bit 1 - VDDC Generation off on EVR Set"]
     #[inline(always)]
-    #[must_use]
     pub fn vcoreoff(&mut self) -> VCOREOFF_W<HINTSET_SPEC> {
         VCOREOFF_W::new(self, 1)
     }
     #[doc = "Bit 2 - VDDP Supply Switch of Flash Set"]
     #[inline(always)]
-    #[must_use]
     pub fn flashoff(&mut self) -> FLASHOFF_W<HINTSET_SPEC> {
         FLASHOFF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Flash Power Down Set"]
     #[inline(always)]
-    #[must_use]
     pub fn flashpd(&mut self) -> FLASHPD_W<HINTSET_SPEC> {
         FLASHPD_W::new(self, 3)
     }
     #[doc = "Bit 4 - PORST Pull-up OFF Direct Control Set"]
     #[inline(always)]
-    #[must_use]
     pub fn poffd(&mut self) -> POFFD_W<HINTSET_SPEC> {
         POFFD_W::new(self, 4)
     }
     #[doc = "Bits 16:17 - Delay on PORTS Pull-up Switching OFF on Hibernate Request Set"]
     #[inline(always)]
-    #[must_use]
     pub fn ppodel(&mut self) -> PPODEL_W<HINTSET_SPEC> {
         PPODEL_W::new(self, 16)
     }
     #[doc = "Bit 20 - PORST Pull-up OFF in Hibernate Mode Set"]
     #[inline(always)]
-    #[must_use]
     pub fn poffh(&mut self) -> POFFH_W<HINTSET_SPEC> {
         POFFH_W::new(self, 20)
     }

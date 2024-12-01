@@ -137,55 +137,46 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Delay of lock detection"]
     #[inline(always)]
-    #[must_use]
     pub fn sldly(&mut self) -> SLDLY_W<GLBANA_SPEC> {
         SLDLY_W::new(self, 0)
     }
     #[doc = "Bit 2 - Force chargepump up"]
     #[inline(always)]
-    #[must_use]
     pub fn fup(&mut self) -> FUP_W<GLBANA_SPEC> {
         FUP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Force chargepump down"]
     #[inline(always)]
-    #[must_use]
     pub fn fdn(&mut self) -> FDN_W<GLBANA_SPEC> {
         FDN_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - HRCs chargepump current selection"]
     #[inline(always)]
-    #[must_use]
     pub fn slcp(&mut self) -> SLCP_W<GLBANA_SPEC> {
         SLCP_W::new(self, 6)
     }
     #[doc = "Bits 9:10 - HRCs LDO bias current"]
     #[inline(always)]
-    #[must_use]
     pub fn slibldo(&mut self) -> SLIBLDO_W<GLBANA_SPEC> {
         SLIBLDO_W::new(self, 9)
     }
     #[doc = "Bits 11:12 - HRCs loop filter bias current"]
     #[inline(always)]
-    #[must_use]
     pub fn sliblf(&mut self) -> SLIBLF_W<GLBANA_SPEC> {
         SLIBLF_W::new(self, 11)
     }
     #[doc = "Bits 13:15 - Reference voltage for chargepump and loop filter"]
     #[inline(always)]
-    #[must_use]
     pub fn slvref(&mut self) -> SLVREF_W<GLBANA_SPEC> {
         SLVREF_W::new(self, 13)
     }
     #[doc = "Bits 16:17 - Bias trimming"]
     #[inline(always)]
-    #[must_use]
     pub fn tribias(&mut self) -> TRIBIAS_W<GLBANA_SPEC> {
         TRIBIAS_W::new(self, 16)
     }
     #[doc = "Bit 18 - Force chargepump down"]
     #[inline(always)]
-    #[must_use]
     pub fn ghren(&mut self) -> GHREN_W<GLBANA_SPEC> {
         GHREN_W::new(self, 18)
     }

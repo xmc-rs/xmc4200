@@ -239,25 +239,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - System Clock Selection Value"]
     #[inline(always)]
-    #[must_use]
     pub fn syssel(&mut self) -> SYSSEL_W<SLEEPCR_SPEC> {
         SYSSEL_W::new(self, 0)
     }
     #[doc = "Bit 16 - USB Clock Control"]
     #[inline(always)]
-    #[must_use]
     pub fn usbcr(&mut self) -> USBCR_W<SLEEPCR_SPEC> {
         USBCR_W::new(self, 16)
     }
     #[doc = "Bit 20 - CCU Clock Control"]
     #[inline(always)]
-    #[must_use]
     pub fn ccucr(&mut self) -> CCUCR_W<SLEEPCR_SPEC> {
         CCUCR_W::new(self, 20)
     }
     #[doc = "Bit 21 - WDT Clock Control"]
     #[inline(always)]
-    #[must_use]
     pub fn wdtcr(&mut self) -> WDTCR_W<SLEEPCR_SPEC> {
         WDTCR_W::new(self, 21)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Blanking value"]
     #[inline(always)]
-    #[must_use]
     pub fn blv(&mut self) -> BLV_W<BLV_SPEC> {
         BLV_W::new(self, 0)
     }

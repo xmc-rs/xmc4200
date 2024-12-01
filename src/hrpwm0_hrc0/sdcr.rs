@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Shadow dead time rising value"]
     #[inline(always)]
-    #[must_use]
     pub fn sdtrv(&mut self) -> SDTRV_W<SDCR_SPEC> {
         SDTRV_W::new(self, 0)
     }

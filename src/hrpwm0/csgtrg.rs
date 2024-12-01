@@ -15,37 +15,31 @@ pub type D2SVS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - DAC0 shadow transfer enable set"]
     #[inline(always)]
-    #[must_use]
     pub fn d0ses(&mut self) -> D0SES_W<CSGTRG_SPEC> {
         D0SES_W::new(self, 0)
     }
     #[doc = "Bit 1 - CMP0 inverting input switch request"]
     #[inline(always)]
-    #[must_use]
     pub fn d0svs(&mut self) -> D0SVS_W<CSGTRG_SPEC> {
         D0SVS_W::new(self, 1)
     }
     #[doc = "Bit 4 - DAC1 shadow transfer enable set"]
     #[inline(always)]
-    #[must_use]
     pub fn d1ses(&mut self) -> D1SES_W<CSGTRG_SPEC> {
         D1SES_W::new(self, 4)
     }
     #[doc = "Bit 5 - CMP1 inverting input switch request"]
     #[inline(always)]
-    #[must_use]
     pub fn d1svs(&mut self) -> D1SVS_W<CSGTRG_SPEC> {
         D1SVS_W::new(self, 5)
     }
     #[doc = "Bit 8 - DAC2 shadow transfer enable set"]
     #[inline(always)]
-    #[must_use]
     pub fn d2ses(&mut self) -> D2SES_W<CSGTRG_SPEC> {
         D2SES_W::new(self, 8)
     }
     #[doc = "Bit 9 - CMP2 inverting input switch request"]
     #[inline(always)]
-    #[must_use]
     pub fn d2svs(&mut self) -> D2SVS_W<CSGTRG_SPEC> {
         D2SVS_W::new(self, 9)
     }

@@ -34,7 +34,6 @@ where
 impl W {
     #[doc = "Bit 0 - Mirror All Execution Request"]
     #[inline(always)]
-    #[must_use]
     pub fn req(&mut self) -> REQ_W<MIRRALLREQ_SPEC> {
         REQ_W::new(self, 0)
     }

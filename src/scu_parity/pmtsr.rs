@@ -413,43 +413,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Test Enable Control for PSRAM"]
     #[inline(always)]
-    #[must_use]
     pub fn mtenps(&mut self) -> MTENPS_W<PMTSR_SPEC> {
         MTENPS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Test Enable Control for DSRAM1"]
     #[inline(always)]
-    #[must_use]
     pub fn mtends1(&mut self) -> MTENDS1_W<PMTSR_SPEC> {
         MTENDS1_W::new(self, 1)
     }
     #[doc = "Bit 8 - Test Enable Control for USIC0 Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn mteu0(&mut self) -> MTEU0_W<PMTSR_SPEC> {
         MTEU0_W::new(self, 8)
     }
     #[doc = "Bit 9 - Test Enable Control for USIC1 Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn mteu1(&mut self) -> MTEU1_W<PMTSR_SPEC> {
         MTEU1_W::new(self, 9)
     }
     #[doc = "Bit 12 - Test Enable Control for MultiCAN Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn mtemc(&mut self) -> MTEMC_W<PMTSR_SPEC> {
         MTEMC_W::new(self, 12)
     }
     #[doc = "Bit 13 - Test Enable Control for PMU Prefetch Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn mtepprf(&mut self) -> MTEPPRF_W<PMTSR_SPEC> {
         MTEPPRF_W::new(self, 13)
     }
     #[doc = "Bit 16 - Test Enable Control for USB Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn mtusb(&mut self) -> MTUSB_W<PMTSR_SPEC> {
         MTUSB_W::new(self, 16)
     }

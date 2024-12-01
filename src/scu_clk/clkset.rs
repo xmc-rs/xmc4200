@@ -96,19 +96,16 @@ where
 impl W {
     #[doc = "Bit 0 - USB Clock Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn usbcen(&mut self) -> USBCEN_W<CLKSET_SPEC> {
         USBCEN_W::new(self, 0)
     }
     #[doc = "Bit 4 - CCU Clock Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ccucen(&mut self) -> CCUCEN_W<CLKSET_SPEC> {
         CCUCEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - WDT Clock Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn wdtcen(&mut self) -> WDTCEN_W<CLKSET_SPEC> {
         WDTCEN_W::new(self, 5)
     }

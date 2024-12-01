@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Shadow DAC reference value 1"]
     #[inline(always)]
-    #[must_use]
     pub fn sdsv1(&mut self) -> SDSV1_W<SDSV1_SPEC> {
         SDSV1_W::new(self, 0)
     }

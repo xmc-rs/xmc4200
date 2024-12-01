@@ -644,43 +644,36 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection"]
     #[inline(always)]
-    #[must_use]
     pub fn vls1s(&mut self) -> VLS1S_W<SRS_SPEC> {
         VLS1S_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection"]
     #[inline(always)]
-    #[must_use]
     pub fn vls2s(&mut self) -> VLS2S_W<SRS_SPEC> {
         VLS2S_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Conversion trigger interrupt line selection"]
     #[inline(always)]
-    #[must_use]
     pub fn trls(&mut self) -> TRLS_W<SRS_SPEC> {
         TRLS_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Start/Stop trigger interrupt line selection"]
     #[inline(always)]
-    #[must_use]
     pub fn ssls(&mut self) -> SSLS_W<SRS_SPEC> {
         SSLS_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Shadow transfer done interrupt line selection"]
     #[inline(always)]
-    #[must_use]
     pub fn stls(&mut self) -> STLS_W<SRS_SPEC> {
         STLS_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Comparator rise/fall interrupt line selection"]
     #[inline(always)]
-    #[must_use]
     pub fn crfls(&mut self) -> CRFLS_W<SRS_SPEC> {
         CRFLS_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Comparator clamped state interrupt line selection"]
     #[inline(always)]
-    #[must_use]
     pub fn csls(&mut self) -> CSLS_W<SRS_SPEC> {
         CSLS_W::new(self, 12)
     }

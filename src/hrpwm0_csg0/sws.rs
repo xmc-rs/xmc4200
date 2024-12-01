@@ -21,55 +21,46 @@ pub type SCSS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - Value switch from CSGyDSV1 to CSGyDSV2 status set"]
     #[inline(always)]
-    #[must_use]
     pub fn svls1(&mut self) -> SVLS1_W<SWS_SPEC> {
         SVLS1_W::new(self, 0)
     }
     #[doc = "Bit 1 - Value switch from CSGyDSV2 to CSGyDSV1 status set"]
     #[inline(always)]
-    #[must_use]
     pub fn svls2(&mut self) -> SVLS2_W<SWS_SPEC> {
         SVLS2_W::new(self, 1)
     }
     #[doc = "Bit 2 - Conversion trigger status set"]
     #[inline(always)]
-    #[must_use]
     pub fn strgs(&mut self) -> STRGS_W<SWS_SPEC> {
         STRGS_W::new(self, 2)
     }
     #[doc = "Bit 3 - Start trigger status set"]
     #[inline(always)]
-    #[must_use]
     pub fn sstrs(&mut self) -> SSTRS_W<SWS_SPEC> {
         SSTRS_W::new(self, 3)
     }
     #[doc = "Bit 4 - Stop trigger status set"]
     #[inline(always)]
-    #[must_use]
     pub fn sstps(&mut self) -> SSTPS_W<SWS_SPEC> {
         SSTPS_W::new(self, 4)
     }
     #[doc = "Bit 5 - Shadow transfer status set"]
     #[inline(always)]
-    #[must_use]
     pub fn sstd(&mut self) -> SSTD_W<SWS_SPEC> {
         SSTD_W::new(self, 5)
     }
     #[doc = "Bit 6 - Comparator rise status set"]
     #[inline(always)]
-    #[must_use]
     pub fn scrs(&mut self) -> SCRS_W<SWS_SPEC> {
         SCRS_W::new(self, 6)
     }
     #[doc = "Bit 7 - Comparator fall status set"]
     #[inline(always)]
-    #[must_use]
     pub fn scfs(&mut self) -> SCFS_W<SWS_SPEC> {
         SCFS_W::new(self, 7)
     }
     #[doc = "Bit 8 - Comparator clamped state status set"]
     #[inline(always)]
-    #[must_use]
     pub fn scss(&mut self) -> SCSS_W<SWS_SPEC> {
         SCSS_W::new(self, 8)
     }

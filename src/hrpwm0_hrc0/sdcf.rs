@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Shadow dead time falling value"]
     #[inline(always)]
-    #[must_use]
     pub fn sdtfv(&mut self) -> SDTFV_W<SDCF_SPEC> {
         SDTFV_W::new(self, 0)
     }

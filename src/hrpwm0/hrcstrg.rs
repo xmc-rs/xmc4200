@@ -19,49 +19,41 @@ pub type H3DES_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - HRC0 high resolution values shadow transfer Enable Set"]
     #[inline(always)]
-    #[must_use]
     pub fn h0es(&mut self) -> H0ES_W<HRCSTRG_SPEC> {
         H0ES_W::new(self, 0)
     }
     #[doc = "Bit 1 - HRC0 dead time value shadow transfer enable set"]
     #[inline(always)]
-    #[must_use]
     pub fn h0des(&mut self) -> H0DES_W<HRCSTRG_SPEC> {
         H0DES_W::new(self, 1)
     }
     #[doc = "Bit 4 - HRC1 high resolution values shadow transfer Enable Set"]
     #[inline(always)]
-    #[must_use]
     pub fn h1es(&mut self) -> H1ES_W<HRCSTRG_SPEC> {
         H1ES_W::new(self, 4)
     }
     #[doc = "Bit 5 - HRC0 dead time value shadow transfer enable set"]
     #[inline(always)]
-    #[must_use]
     pub fn h1des(&mut self) -> H1DES_W<HRCSTRG_SPEC> {
         H1DES_W::new(self, 5)
     }
     #[doc = "Bit 8 - HRC2 high resolution values shadow transfer Enable Set"]
     #[inline(always)]
-    #[must_use]
     pub fn h2es(&mut self) -> H2ES_W<HRCSTRG_SPEC> {
         H2ES_W::new(self, 8)
     }
     #[doc = "Bit 9 - HRC0 dead time value shadow transfer enable set"]
     #[inline(always)]
-    #[must_use]
     pub fn h2des(&mut self) -> H2DES_W<HRCSTRG_SPEC> {
         H2DES_W::new(self, 9)
     }
     #[doc = "Bit 12 - HRC3 high resolution values shadow transfer Enable Set"]
     #[inline(always)]
-    #[must_use]
     pub fn h3es(&mut self) -> H3ES_W<HRCSTRG_SPEC> {
         H3ES_W::new(self, 12)
     }
     #[doc = "Bit 13 - HRC0 dead time value shadow transfer enable set"]
     #[inline(always)]
-    #[must_use]
     pub fn h3des(&mut self) -> H3DES_W<HRCSTRG_SPEC> {
         H3DES_W::new(self, 13)
     }

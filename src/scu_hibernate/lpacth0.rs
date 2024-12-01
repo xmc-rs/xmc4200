@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - VBAT Lower Threshold Value"]
     #[inline(always)]
-    #[must_use]
     pub fn vbatlo(&mut self) -> VBATLO_W<LPACTH0_SPEC> {
         VBATLO_W::new(self, 0)
     }
     #[doc = "Bits 8:13 - VBAT Upper Threshold Value"]
     #[inline(always)]
-    #[must_use]
     pub fn vbathi(&mut self) -> VBATHI_W<LPACTH0_SPEC> {
         VBATHI_W::new(self, 8)
     }

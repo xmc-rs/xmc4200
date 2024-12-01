@@ -413,43 +413,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Select Memory Check for PSRAM"]
     #[inline(always)]
-    #[must_use]
     pub fn selps(&mut self) -> SELPS_W<MCHKCON_SPEC> {
         SELPS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Select Memory Check for DSRAM1"]
     #[inline(always)]
-    #[must_use]
     pub fn selds1(&mut self) -> SELDS1_W<MCHKCON_SPEC> {
         SELDS1_W::new(self, 1)
     }
     #[doc = "Bit 8 - Select Memory Check for USIC0"]
     #[inline(always)]
-    #[must_use]
     pub fn usic0dra(&mut self) -> USIC0DRA_W<MCHKCON_SPEC> {
         USIC0DRA_W::new(self, 8)
     }
     #[doc = "Bit 9 - Select Memory Check for USIC1"]
     #[inline(always)]
-    #[must_use]
     pub fn usic1dra(&mut self) -> USIC1DRA_W<MCHKCON_SPEC> {
         USIC1DRA_W::new(self, 9)
     }
     #[doc = "Bit 12 - Select Memory Check for MultiCAN"]
     #[inline(always)]
-    #[must_use]
     pub fn mcandra(&mut self) -> MCANDRA_W<MCHKCON_SPEC> {
         MCANDRA_W::new(self, 12)
     }
     #[doc = "Bit 13 - Select Memory Check for PMU"]
     #[inline(always)]
-    #[must_use]
     pub fn pprfdra(&mut self) -> PPRFDRA_W<MCHKCON_SPEC> {
         PPRFDRA_W::new(self, 13)
     }
     #[doc = "Bit 16 - Select Memory Check for USB SRAM"]
     #[inline(always)]
-    #[must_use]
     pub fn selusb(&mut self) -> SELUSB_W<MCHKCON_SPEC> {
         SELUSB_W::new(self, 16)
     }

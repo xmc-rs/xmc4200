@@ -251,49 +251,41 @@ where
 impl W {
     #[doc = "Bit 0 - Wake-up Pin Event Positive Edge Set"]
     #[inline(always)]
-    #[must_use]
     pub fn epev(&mut self) -> EPEV_W<HDSET_SPEC> {
         EPEV_W::new(self, 0)
     }
     #[doc = "Bit 1 - Wake-up Pin Event Negative Edge Set"]
     #[inline(always)]
-    #[must_use]
     pub fn enev(&mut self) -> ENEV_W<HDSET_SPEC> {
         ENEV_W::new(self, 1)
     }
     #[doc = "Bit 2 - RTC Event Set"]
     #[inline(always)]
-    #[must_use]
     pub fn rtcev(&mut self) -> RTCEV_W<HDSET_SPEC> {
         RTCEV_W::new(self, 2)
     }
     #[doc = "Bit 3 - ULP WDG Alarm Set"]
     #[inline(always)]
-    #[must_use]
     pub fn ulpwdg(&mut self) -> ULPWDG_W<HDSET_SPEC> {
         ULPWDG_W::new(self, 3)
     }
     #[doc = "Bit 8 - Wake-Up on LPAC Positive Edge of VBAT Threshold Crossing Set"]
     #[inline(always)]
-    #[must_use]
     pub fn vbatpev(&mut self) -> VBATPEV_W<HDSET_SPEC> {
         VBATPEV_W::new(self, 8)
     }
     #[doc = "Bit 9 - Wake-Up on LPAC Negative Edge of VBAT Threshold Crossing Set"]
     #[inline(always)]
-    #[must_use]
     pub fn vbatnev(&mut self) -> VBATNEV_W<HDSET_SPEC> {
         VBATNEV_W::new(self, 9)
     }
     #[doc = "Bit 10 - Wake-Up on LPAC Positive Edge of HIB_IO_0 Threshold Crossing Set"]
     #[inline(always)]
-    #[must_use]
     pub fn ahibio0pev(&mut self) -> AHIBIO0PEV_W<HDSET_SPEC> {
         AHIBIO0PEV_W::new(self, 10)
     }
     #[doc = "Bit 11 - Wake-Up on LPAC Negative Edge of HIB_IO_0 Threshold Crossing Set"]
     #[inline(always)]
-    #[must_use]
     pub fn ahibio0nev(&mut self) -> AHIBIO0NEV_W<HDSET_SPEC> {
         AHIBIO0NEV_W::new(self, 11)
     }

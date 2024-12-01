@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - High resolution falling edge value"]
     #[inline(always)]
-    #[must_use]
     pub fn scr1(&mut self) -> SCR1_W<SCR1_SPEC> {
         SCR1_W::new(self, 0)
     }

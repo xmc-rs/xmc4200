@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Lower Limit"]
     #[inline(always)]
-    #[must_use]
     pub fn lower(&mut self) -> LOWER_W<DTEMPLIM_SPEC> {
         LOWER_W::new(self, 0)
     }
     #[doc = "Bits 16:25 - Upper Limit"]
     #[inline(always)]
-    #[must_use]
     pub fn upper(&mut self) -> UPPER_W<DTEMPLIM_SPEC> {
         UPPER_W::new(self, 16)
     }
