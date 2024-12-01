@@ -305,25 +305,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Source Selector 0 Timer connection"]
     #[inline(always)]
-    #[must_use]
     pub fn tsel0(&mut self) -> TSEL0_W<TSEL_SPEC> {
         TSEL0_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Source Selector 1 Timer connection"]
     #[inline(always)]
-    #[must_use]
     pub fn tsel1(&mut self) -> TSEL1_W<TSEL_SPEC> {
         TSEL1_W::new(self, 3)
     }
     #[doc = "Bit 16 - Source selector 0 TRAP enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ts0e(&mut self) -> TS0E_W<TSEL_SPEC> {
         TS0E_W::new(self, 16)
     }
     #[doc = "Bit 17 - Source selector 1 TRAP enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ts1e(&mut self) -> TS1E_W<TSEL_SPEC> {
         TS1E_W::new(self, 17)
     }

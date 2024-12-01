@@ -413,43 +413,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Parity Error Trap Enable for PSRAM"]
     #[inline(always)]
-    #[must_use]
     pub fn peteps(&mut self) -> PETEPS_W<PETE_SPEC> {
         PETEPS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Parity Error Trap Enable for DSRAM1"]
     #[inline(always)]
-    #[must_use]
     pub fn peteds1(&mut self) -> PETEDS1_W<PETE_SPEC> {
         PETEDS1_W::new(self, 1)
     }
     #[doc = "Bit 8 - Parity Error Trap Enable for USIC0 Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn peteu0(&mut self) -> PETEU0_W<PETE_SPEC> {
         PETEU0_W::new(self, 8)
     }
     #[doc = "Bit 9 - Parity Error Trap Enable for USIC1 Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn peteu1(&mut self) -> PETEU1_W<PETE_SPEC> {
         PETEU1_W::new(self, 9)
     }
     #[doc = "Bit 12 - Parity Error Trap Enable for MultiCAN Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn petemc(&mut self) -> PETEMC_W<PETE_SPEC> {
         PETEMC_W::new(self, 12)
     }
     #[doc = "Bit 13 - Parity Error Trap Enable for PMU Prefetch Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn petepprf(&mut self) -> PETEPPRF_W<PETE_SPEC> {
         PETEPPRF_W::new(self, 13)
     }
     #[doc = "Bit 16 - Parity Error Trap Enable for USB Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn peteusb(&mut self) -> PETEUSB_W<PETE_SPEC> {
         PETEUSB_W::new(self, 16)
     }

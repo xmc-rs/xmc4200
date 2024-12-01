@@ -158,31 +158,26 @@ where
 impl W {
     #[doc = "Bit 3 - LEDTS Gating Set"]
     #[inline(always)]
-    #[must_use]
     pub fn ledtscu0(&mut self) -> LEDTSCU0_W<CGATSET1_SPEC> {
         LEDTSCU0_W::new(self, 3)
     }
     #[doc = "Bit 4 - MultiCAN Gating Set"]
     #[inline(always)]
-    #[must_use]
     pub fn mcan0(&mut self) -> MCAN0_W<CGATSET1_SPEC> {
         MCAN0_W::new(self, 4)
     }
     #[doc = "Bit 5 - DAC Gating Set"]
     #[inline(always)]
-    #[must_use]
     pub fn dac(&mut self) -> DAC_W<CGATSET1_SPEC> {
         DAC_W::new(self, 5)
     }
     #[doc = "Bit 7 - USIC1 Gating Set"]
     #[inline(always)]
-    #[must_use]
     pub fn usic1(&mut self) -> USIC1_W<CGATSET1_SPEC> {
         USIC1_W::new(self, 7)
     }
     #[doc = "Bit 9 - PORTS Gating Set"]
     #[inline(always)]
-    #[must_use]
     pub fn pports(&mut self) -> PPORTS_W<CGATSET1_SPEC> {
         PPORTS_W::new(self, 9)
     }

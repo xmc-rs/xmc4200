@@ -33,91 +33,76 @@ pub type PS2CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - Slope 0 start"]
     #[inline(always)]
-    #[must_use]
     pub fn s0str(&mut self) -> S0STR_W<CSGFCG_SPEC> {
         S0STR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Slope 0 stop"]
     #[inline(always)]
-    #[must_use]
     pub fn s0stp(&mut self) -> S0STP_W<CSGFCG_SPEC> {
         S0STP_W::new(self, 1)
     }
     #[doc = "Bit 2 - Prescaler 0 start"]
     #[inline(always)]
-    #[must_use]
     pub fn ps0str(&mut self) -> PS0STR_W<CSGFCG_SPEC> {
         PS0STR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Prescaler 0 stop"]
     #[inline(always)]
-    #[must_use]
     pub fn ps0stp(&mut self) -> PS0STP_W<CSGFCG_SPEC> {
         PS0STP_W::new(self, 3)
     }
     #[doc = "Bit 4 - Prescaler 0 clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ps0clr(&mut self) -> PS0CLR_W<CSGFCG_SPEC> {
         PS0CLR_W::new(self, 4)
     }
     #[doc = "Bit 8 - Slope 1 start"]
     #[inline(always)]
-    #[must_use]
     pub fn s1str(&mut self) -> S1STR_W<CSGFCG_SPEC> {
         S1STR_W::new(self, 8)
     }
     #[doc = "Bit 9 - Slope 1 stop"]
     #[inline(always)]
-    #[must_use]
     pub fn s1stp(&mut self) -> S1STP_W<CSGFCG_SPEC> {
         S1STP_W::new(self, 9)
     }
     #[doc = "Bit 10 - Prescaler 1 start"]
     #[inline(always)]
-    #[must_use]
     pub fn ps1str(&mut self) -> PS1STR_W<CSGFCG_SPEC> {
         PS1STR_W::new(self, 10)
     }
     #[doc = "Bit 11 - Prescaler 1 stop"]
     #[inline(always)]
-    #[must_use]
     pub fn ps1stp(&mut self) -> PS1STP_W<CSGFCG_SPEC> {
         PS1STP_W::new(self, 11)
     }
     #[doc = "Bit 12 - Prescaler 1 clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ps1clr(&mut self) -> PS1CLR_W<CSGFCG_SPEC> {
         PS1CLR_W::new(self, 12)
     }
     #[doc = "Bit 16 - Slope 2 start"]
     #[inline(always)]
-    #[must_use]
     pub fn s2str(&mut self) -> S2STR_W<CSGFCG_SPEC> {
         S2STR_W::new(self, 16)
     }
     #[doc = "Bit 17 - Slope 2 stop"]
     #[inline(always)]
-    #[must_use]
     pub fn s2stp(&mut self) -> S2STP_W<CSGFCG_SPEC> {
         S2STP_W::new(self, 17)
     }
     #[doc = "Bit 18 - Prescaler 2 start"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2str(&mut self) -> PS2STR_W<CSGFCG_SPEC> {
         PS2STR_W::new(self, 18)
     }
     #[doc = "Bit 19 - Prescaler 2 stop"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2stp(&mut self) -> PS2STP_W<CSGFCG_SPEC> {
         PS2STP_W::new(self, 19)
     }
     #[doc = "Bit 20 - Prescaler 2 clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2clr(&mut self) -> PS2CLR_W<CSGFCG_SPEC> {
         PS2CLR_W::new(self, 20)
     }

@@ -12,7 +12,7 @@ pub enum PSRM_A {
     VALUE2 = 1,
     #[doc = "2: Clear prescaler"]
     VALUE3 = 2,
-    #[doc = "3: Clear &amp; Start prescaler"]
+    #[doc = "3: Clear & Start prescaler"]
     VALUE4 = 3,
 }
 impl From<PSRM_A> for u8 {
@@ -54,7 +54,7 @@ impl PSRM_R {
     pub fn is_value3(&self) -> bool {
         *self == PSRM_A::VALUE3
     }
-    #[doc = "Clear &amp; Start prescaler"]
+    #[doc = "Clear & Start prescaler"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
         *self == PSRM_A::VALUE4
@@ -82,7 +82,7 @@ where
     pub fn value3(self) -> &'a mut crate::W<REG> {
         self.variant(PSRM_A::VALUE3)
     }
-    #[doc = "Clear &amp; Start prescaler"]
+    #[doc = "Clear & Start prescaler"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
         self.variant(PSRM_A::VALUE4)
@@ -98,7 +98,7 @@ pub enum PSTM_A {
     VALUE2 = 1,
     #[doc = "2: Clear prescaler"]
     VALUE3 = 2,
-    #[doc = "3: Clear &amp; Stop prescaler"]
+    #[doc = "3: Clear & Stop prescaler"]
     VALUE4 = 3,
 }
 impl From<PSTM_A> for u8 {
@@ -140,7 +140,7 @@ impl PSTM_R {
     pub fn is_value3(&self) -> bool {
         *self == PSTM_A::VALUE3
     }
-    #[doc = "Clear &amp; Stop prescaler"]
+    #[doc = "Clear & Stop prescaler"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
         *self == PSTM_A::VALUE4
@@ -168,7 +168,7 @@ where
     pub fn value3(self) -> &'a mut crate::W<REG> {
         self.variant(PSTM_A::VALUE3)
     }
-    #[doc = "Clear &amp; Stop prescaler"]
+    #[doc = "Clear & Stop prescaler"]
     #[inline(always)]
     pub fn value4(self) -> &'a mut crate::W<REG> {
         self.variant(PSTM_A::VALUE4)
@@ -990,79 +990,66 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Prescaler external start configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn psrm(&mut self) -> PSRM_W<SC_SPEC> {
         PSRM_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Prescaler external stop configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn pstm(&mut self) -> PSTM_W<SC_SPEC> {
         PSTM_W::new(self, 2)
     }
     #[doc = "Bit 4 - Fixed division disable"]
     #[inline(always)]
-    #[must_use]
     pub fn fpd(&mut self) -> FPD_W<SC_SPEC> {
         FPD_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - Prescaler division factor"]
     #[inline(always)]
-    #[must_use]
     pub fn psv(&mut self) -> PSV_W<SC_SPEC> {
         PSV_W::new(self, 5)
     }
     #[doc = "Bits 8:9 - Slope control mode"]
     #[inline(always)]
-    #[must_use]
     pub fn scm(&mut self) -> SCM_W<SC_SPEC> {
         SCM_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Slope external start configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn ssrm(&mut self) -> SSRM_W<SC_SPEC> {
         SSRM_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Slope external stop configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn sstm(&mut self) -> SSTM_W<SC_SPEC> {
         SSTM_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Slope reference value mode"]
     #[inline(always)]
-    #[must_use]
     pub fn svsc(&mut self) -> SVSC_W<SC_SPEC> {
         SVSC_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - Initial DAC start mode"]
     #[inline(always)]
-    #[must_use]
     pub fn swsm(&mut self) -> SWSM_W<SC_SPEC> {
         SWSM_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - Slope step gain configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn gcfg(&mut self) -> GCFG_W<SC_SPEC> {
         GCFG_W::new(self, 18)
     }
     #[doc = "Bit 20 - Immediate shadow transfer"]
     #[inline(always)]
-    #[must_use]
     pub fn ist(&mut self) -> IST_W<SC_SPEC> {
         IST_W::new(self, 20)
     }
     #[doc = "Bit 21 - Pulse swallow enable"]
     #[inline(always)]
-    #[must_use]
     pub fn pse(&mut self) -> PSE_W<SC_SPEC> {
         PSE_W::new(self, 21)
     }
     #[doc = "Bits 24:25 - Pulse swallow window mode"]
     #[inline(always)]
-    #[must_use]
     pub fn pswm(&mut self) -> PSWM_W<SC_SPEC> {
         PSWM_W::new(self, 24)
     }

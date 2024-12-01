@@ -21,55 +21,46 @@ pub type CC2P_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - DAC0 run bit clear"]
     #[inline(always)]
-    #[must_use]
     pub fn cd0r(&mut self) -> CD0R_W<CSGCLRG_SPEC> {
         CD0R_W::new(self, 0)
     }
     #[doc = "Bit 1 - CMP0 run bit clear"]
     #[inline(always)]
-    #[must_use]
     pub fn cc0r(&mut self) -> CC0R_W<CSGCLRG_SPEC> {
         CC0R_W::new(self, 1)
     }
     #[doc = "Bit 2 - CMP0 passive level clear"]
     #[inline(always)]
-    #[must_use]
     pub fn cc0p(&mut self) -> CC0P_W<CSGCLRG_SPEC> {
         CC0P_W::new(self, 2)
     }
     #[doc = "Bit 4 - DAC1 run bit clear"]
     #[inline(always)]
-    #[must_use]
     pub fn cd1r(&mut self) -> CD1R_W<CSGCLRG_SPEC> {
         CD1R_W::new(self, 4)
     }
     #[doc = "Bit 5 - CMP1 run bit clear"]
     #[inline(always)]
-    #[must_use]
     pub fn cc1r(&mut self) -> CC1R_W<CSGCLRG_SPEC> {
         CC1R_W::new(self, 5)
     }
     #[doc = "Bit 6 - CMP1 passive level clear"]
     #[inline(always)]
-    #[must_use]
     pub fn cc1p(&mut self) -> CC1P_W<CSGCLRG_SPEC> {
         CC1P_W::new(self, 6)
     }
     #[doc = "Bit 8 - DAC2 run bit clear"]
     #[inline(always)]
-    #[must_use]
     pub fn cd2r(&mut self) -> CD2R_W<CSGCLRG_SPEC> {
         CD2R_W::new(self, 8)
     }
     #[doc = "Bit 9 - CMP2 run bit clear"]
     #[inline(always)]
-    #[must_use]
     pub fn cc2r(&mut self) -> CC2R_W<CSGCLRG_SPEC> {
         CC2R_W::new(self, 9)
     }
     #[doc = "Bit 10 - CMP2 passive level clear"]
     #[inline(always)]
-    #[must_use]
     pub fn cc2p(&mut self) -> CC2P_W<CSGCLRG_SPEC> {
         CC2P_W::new(self, 10)
     }

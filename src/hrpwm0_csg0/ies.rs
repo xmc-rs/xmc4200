@@ -449,31 +449,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - External value switch function level selection"]
     #[inline(always)]
-    #[must_use]
     pub fn svls(&mut self) -> SVLS_W<IES_SPEC> {
         SVLS_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - External start function edge selection"]
     #[inline(always)]
-    #[must_use]
     pub fn stres(&mut self) -> STRES_W<IES_SPEC> {
         STRES_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - External stop function edge selection"]
     #[inline(always)]
-    #[must_use]
     pub fn stpes(&mut self) -> STPES_W<IES_SPEC> {
         STPES_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - External trigger function edge selection"]
     #[inline(always)]
-    #[must_use]
     pub fn trges(&mut self) -> TRGES_W<IES_SPEC> {
         TRGES_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - External shadow transfer enable edge selection"]
     #[inline(always)]
-    #[must_use]
     pub fn stes(&mut self) -> STES_W<IES_SPEC> {
         STES_W::new(self, 8)
     }

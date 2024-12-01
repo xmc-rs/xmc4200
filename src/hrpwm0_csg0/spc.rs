@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Shadow pulse swallow value"]
     #[inline(always)]
-    #[must_use]
     pub fn spswv(&mut self) -> SPSWV_W<SPC_SPEC> {
         SPSWV_W::new(self, 0)
     }

@@ -255,31 +255,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Compare Enable for Input Selection"]
     #[inline(always)]
-    #[must_use]
     pub fn cmpen(&mut self) -> CMPEN_W<LPACCONF_SPEC> {
         CMPEN_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Analog Compare Trigger Select"]
     #[inline(always)]
-    #[must_use]
     pub fn trigsel(&mut self) -> TRIGSEL_W<LPACCONF_SPEC> {
         TRIGSEL_W::new(self, 4)
     }
     #[doc = "Bit 12 - Conversion Delay"]
     #[inline(always)]
-    #[must_use]
     pub fn convdel(&mut self) -> CONVDEL_W<LPACCONF_SPEC> {
         CONVDEL_W::new(self, 12)
     }
     #[doc = "Bits 16:27 - Sub-second Interval Counter"]
     #[inline(always)]
-    #[must_use]
     pub fn intervcnt(&mut self) -> INTERVCNT_W<LPACCONF_SPEC> {
         INTERVCNT_W::new(self, 16)
     }
     #[doc = "Bits 28:31 - LPAC Settle Time Counter"]
     #[inline(always)]
-    #[must_use]
     pub fn settlecnt(&mut self) -> SETTLECNT_W<LPACCONF_SPEC> {
         SETTLECNT_W::new(self, 28)
     }

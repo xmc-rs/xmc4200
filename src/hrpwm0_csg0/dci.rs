@@ -381,37 +381,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Value Selector input selection"]
     #[inline(always)]
-    #[must_use]
     pub fn svis(&mut self) -> SVIS_W<DCI_SPEC> {
         SVIS_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Slope generation start control input selection"]
     #[inline(always)]
-    #[must_use]
     pub fn stris(&mut self) -> STRIS_W<DCI_SPEC> {
         STRIS_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Slope generation stop control input selection"]
     #[inline(always)]
-    #[must_use]
     pub fn stpis(&mut self) -> STPIS_W<DCI_SPEC> {
         STPIS_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - External conversion trigger input selection"]
     #[inline(always)]
-    #[must_use]
     pub fn trgis(&mut self) -> TRGIS_W<DCI_SPEC> {
         TRGIS_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - External shadow request enable input selection"]
     #[inline(always)]
-    #[must_use]
     pub fn stis(&mut self) -> STIS_W<DCI_SPEC> {
         STIS_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - Slope generation clock selection"]
     #[inline(always)]
-    #[must_use]
     pub fn scs(&mut self) -> SCS_W<DCI_SPEC> {
         SCS_W::new(self, 20)
     }

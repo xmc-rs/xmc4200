@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Source selector for the shadow transfer"]
     #[inline(always)]
-    #[must_use]
     pub fn sst(&mut self) -> SST_W<SSC_SPEC> {
         SST_W::new(self, 0)
     }

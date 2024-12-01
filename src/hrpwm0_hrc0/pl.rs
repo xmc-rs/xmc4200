@@ -123,13 +123,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - HRPWMx.OUTy0 passive level"]
     #[inline(always)]
-    #[must_use]
     pub fn psl0(&mut self) -> PSL0_W<PL_SPEC> {
         PSL0_W::new(self, 0)
     }
     #[doc = "Bit 1 - HRPWMx.OUTy1 passive level"]
     #[inline(always)]
-    #[must_use]
     pub fn psl1(&mut self) -> PSL1_W<PL_SPEC> {
         PSL1_W::new(self, 1)
     }

@@ -184,31 +184,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - FS Timeout Calibration"]
     #[inline(always)]
-    #[must_use]
     pub fn tout_cal(&mut self) -> TOUT_CAL_W<GUSBCFG_SPEC> {
         TOUT_CAL_W::new(self, 0)
     }
     #[doc = "Bits 10:13 - USB Turnaround Time"]
     #[inline(always)]
-    #[must_use]
     pub fn usbtrd_tim(&mut self) -> USBTRD_TIM_W<GUSBCFG_SPEC> {
         USBTRD_TIM_W::new(self, 10)
     }
     #[doc = "Bit 28 - Tx End Delay"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_end_delay(&mut self) -> TX_END_DELAY_W<GUSBCFG_SPEC> {
         TX_END_DELAY_W::new(self, 28)
     }
     #[doc = "Bit 30 - Force Device Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn force_dev_mode(&mut self) -> FORCE_DEV_MODE_W<GUSBCFG_SPEC> {
         FORCE_DEV_MODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Corrupt Tx packet"]
     #[inline(always)]
-    #[must_use]
     pub fn ctp(&mut self) -> CTP_W<GUSBCFG_SPEC> {
         CTP_W::new(self, 31)
     }

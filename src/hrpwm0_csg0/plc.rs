@@ -604,37 +604,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Clamping control signal selector"]
     #[inline(always)]
-    #[must_use]
     pub fn ipls(&mut self) -> IPLS_W<PLC_SPEC> {
         IPLS_W::new(self, 0)
     }
     #[doc = "Bits 8:9 - Clamping control signal level selection"]
     #[inline(always)]
-    #[must_use]
     pub fn plcl(&mut self) -> PLCL_W<PLC_SPEC> {
         PLCL_W::new(self, 8)
     }
     #[doc = "Bit 10 - Output passive level value"]
     #[inline(always)]
-    #[must_use]
     pub fn psl(&mut self) -> PSL_W<PLC_SPEC> {
         PSL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Clamped state exit SW configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn plsw(&mut self) -> PLSW_W<PLC_SPEC> {
         PLSW_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Passive level enter configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn plec(&mut self) -> PLEC_W<PLC_SPEC> {
         PLEC_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Passive level exit configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn plxc(&mut self) -> PLXC_W<PLC_SPEC> {
         PLXC_W::new(self, 14)
     }

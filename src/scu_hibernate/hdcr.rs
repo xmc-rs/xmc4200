@@ -1092,103 +1092,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Wake-Up on Pin Event Positive Edge Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn wkpep(&mut self) -> WKPEP_W<HDCR_SPEC> {
         WKPEP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Wake-up on Pin Event Negative Edge Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn wkpen(&mut self) -> WKPEN_W<HDCR_SPEC> {
         WKPEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Wake-up on RTC Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn rtce(&mut self) -> RTCE_W<HDCR_SPEC> {
         RTCE_W::new(self, 2)
     }
     #[doc = "Bit 3 - ULP WDG Alarm Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ulpwdgen(&mut self) -> ULPWDGEN_W<HDCR_SPEC> {
         ULPWDGEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Hibernate Request Value Set"]
     #[inline(always)]
-    #[must_use]
     pub fn hib(&mut self) -> HIB_W<HDCR_SPEC> {
         HIB_W::new(self, 4)
     }
     #[doc = "Bit 5 - Multiplex Control for RTC_XTAL_1 Select as GPI Input"]
     #[inline(always)]
-    #[must_use]
     pub fn xtalgpi1sel(&mut self) -> XTALGPI1SEL_W<HDCR_SPEC> {
         XTALGPI1SEL_W::new(self, 5)
     }
     #[doc = "Bit 6 - fRTC Clock Selection"]
     #[inline(always)]
-    #[must_use]
     pub fn rcs(&mut self) -> RCS_W<HDCR_SPEC> {
         RCS_W::new(self, 6)
     }
     #[doc = "Bit 7 - fSTDBY Clock Selection"]
     #[inline(always)]
-    #[must_use]
     pub fn stdbysel(&mut self) -> STDBYSEL_W<HDCR_SPEC> {
         STDBYSEL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Wake-Up from Hibernate Trigger Input Selection"]
     #[inline(always)]
-    #[must_use]
     pub fn wkupsel(&mut self) -> WKUPSEL_W<HDCR_SPEC> {
         WKUPSEL_W::new(self, 8)
     }
     #[doc = "Bit 10 - General Purpose Input 0 Selection"]
     #[inline(always)]
-    #[must_use]
     pub fn gpi0sel(&mut self) -> GPI0SEL_W<HDCR_SPEC> {
         GPI0SEL_W::new(self, 10)
     }
     #[doc = "Bit 12 - HIBIO0 Polarity Set"]
     #[inline(always)]
-    #[must_use]
     pub fn hibio0pol(&mut self) -> HIBIO0POL_W<HDCR_SPEC> {
         HIBIO0POL_W::new(self, 12)
     }
     #[doc = "Bit 14 - Select Analog Channel 0 or Digital Output Path"]
     #[inline(always)]
-    #[must_use]
     pub fn adig0sel(&mut self) -> ADIG0SEL_W<HDCR_SPEC> {
         ADIG0SEL_W::new(self, 14)
     }
     #[doc = "Bits 16:19 - HIB_IO_0 Pin I/O Control (default HIBOUT)"]
     #[inline(always)]
-    #[must_use]
     pub fn hibio0sel(&mut self) -> HIBIO0SEL_W<HDCR_SPEC> {
         HIBIO0SEL_W::new(self, 16)
     }
     #[doc = "Bit 24 - Wake-Up on VBAT Falling Below Threshold Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn vbatlo(&mut self) -> VBATLO_W<HDCR_SPEC> {
         VBATLO_W::new(self, 24)
     }
     #[doc = "Bit 25 - Wake-Up on VBAT Rising Above Threshold Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn vbathi(&mut self) -> VBATHI_W<HDCR_SPEC> {
         VBATHI_W::new(self, 25)
     }
     #[doc = "Bit 26 - Wake-Up on Analog HIB_IO_0 Falling Below Threshold Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ahibio0lo(&mut self) -> AHIBIO0LO_W<HDCR_SPEC> {
         AHIBIO0LO_W::new(self, 26)
     }
     #[doc = "Bit 27 - Wake-Up on Analog HIB_IO_0 Rising Above Threshold Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ahibio0hi(&mut self) -> AHIBIO0HI_W<HDCR_SPEC> {
         AHIBIO0HI_W::new(self, 27)
     }

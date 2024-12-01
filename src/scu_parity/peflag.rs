@@ -413,43 +413,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Parity Error Flag for PSRAM"]
     #[inline(always)]
-    #[must_use]
     pub fn pefps(&mut self) -> PEFPS_W<PEFLAG_SPEC> {
         PEFPS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Parity Error Flag for DSRAM1"]
     #[inline(always)]
-    #[must_use]
     pub fn pefds1(&mut self) -> PEFDS1_W<PEFLAG_SPEC> {
         PEFDS1_W::new(self, 1)
     }
     #[doc = "Bit 8 - Parity Error Flag for USIC0 Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn pefu0(&mut self) -> PEFU0_W<PEFLAG_SPEC> {
         PEFU0_W::new(self, 8)
     }
     #[doc = "Bit 9 - Parity Error Flag for USIC1 Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn pefu1(&mut self) -> PEFU1_W<PEFLAG_SPEC> {
         PEFU1_W::new(self, 9)
     }
     #[doc = "Bit 12 - Parity Error Flag for MultiCAN Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn pefmc(&mut self) -> PEFMC_W<PEFLAG_SPEC> {
         PEFMC_W::new(self, 12)
     }
     #[doc = "Bit 13 - Parity Error Flag for PMU Prefetch Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn pefpprf(&mut self) -> PEFPPRF_W<PEFLAG_SPEC> {
         PEFPPRF_W::new(self, 13)
     }
     #[doc = "Bit 16 - Parity Error Flag for USB Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn peusb(&mut self) -> PEUSB_W<PEFLAG_SPEC> {
         PEUSB_W::new(self, 16)
     }

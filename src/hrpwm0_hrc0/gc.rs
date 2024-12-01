@@ -653,61 +653,51 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - HRCy high resolution mode configuration for source selector 0"]
     #[inline(always)]
-    #[must_use]
     pub fn hrm0(&mut self) -> HRM0_W<GC_SPEC> {
         HRM0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - HRCy high resolution mode configuration for source selector 1"]
     #[inline(always)]
-    #[must_use]
     pub fn hrm1(&mut self) -> HRM1_W<GC_SPEC> {
         HRM1_W::new(self, 2)
     }
     #[doc = "Bit 8 - HRCy dead time enable"]
     #[inline(always)]
-    #[must_use]
     pub fn dte(&mut self) -> DTE_W<GC_SPEC> {
         DTE_W::new(self, 8)
     }
     #[doc = "Bit 9 - HRCy trap enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tr0e(&mut self) -> TR0E_W<GC_SPEC> {
         TR0E_W::new(self, 9)
     }
     #[doc = "Bit 10 - HRCy complementary trap enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tr1e(&mut self) -> TR1E_W<GC_SPEC> {
         TR1E_W::new(self, 10)
     }
     #[doc = "Bit 11 - HRCy shadow transfer configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn stc(&mut self) -> STC_W<GC_SPEC> {
         STC_W::new(self, 11)
     }
     #[doc = "Bit 12 - HRCy dead time shadow transfer configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn dstc(&mut self) -> DSTC_W<GC_SPEC> {
         DSTC_W::new(self, 12)
     }
     #[doc = "Bit 13 - HRPWMx.OUTy0 channel selector"]
     #[inline(always)]
-    #[must_use]
     pub fn ocs0(&mut self) -> OCS0_W<GC_SPEC> {
         OCS0_W::new(self, 13)
     }
     #[doc = "Bit 14 - HRPWMx.OUTy1 channel selector"]
     #[inline(always)]
-    #[must_use]
     pub fn ocs1(&mut self) -> OCS1_W<GC_SPEC> {
         OCS1_W::new(self, 14)
     }
     #[doc = "Bit 16 - Dead Time update trigger selector"]
     #[inline(always)]
-    #[must_use]
     pub fn dtus(&mut self) -> DTUS_W<GC_SPEC> {
         DTUS_W::new(self, 16)
     }

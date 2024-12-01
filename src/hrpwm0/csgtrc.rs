@@ -9,19 +9,16 @@ pub type D2SEC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - DAC0 shadow transfer enable clear"]
     #[inline(always)]
-    #[must_use]
     pub fn d0sec(&mut self) -> D0SEC_W<CSGTRC_SPEC> {
         D0SEC_W::new(self, 0)
     }
     #[doc = "Bit 4 - DAC1 shadow transfer enable clear"]
     #[inline(always)]
-    #[must_use]
     pub fn d1sec(&mut self) -> D1SEC_W<CSGTRC_SPEC> {
         D1SEC_W::new(self, 4)
     }
     #[doc = "Bit 8 - DAC2 shadow transfer enable clear"]
     #[inline(always)]
-    #[must_use]
     pub fn d2sec(&mut self) -> D2SEC_W<CSGTRC_SPEC> {
         D2SEC_W::new(self, 8)
     }

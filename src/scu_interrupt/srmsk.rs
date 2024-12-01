@@ -1399,145 +1399,121 @@ impl R {
 impl W {
     #[doc = "Bit 0 - WDT pre-warning Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn prwarn(&mut self) -> PRWARN_W<SRMSK_SPEC> {
         PRWARN_W::new(self, 0)
     }
     #[doc = "Bit 1 - RTC Periodic Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn pi(&mut self) -> PI_W<SRMSK_SPEC> {
         PI_W::new(self, 1)
     }
     #[doc = "Bit 2 - RTC Alarm Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn ai(&mut self) -> AI_W<SRMSK_SPEC> {
         AI_W::new(self, 2)
     }
     #[doc = "Bit 3 - DLR Request Overrun Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn dlrovr(&mut self) -> DLROVR_W<SRMSK_SPEC> {
         DLROVR_W::new(self, 3)
     }
     #[doc = "Bit 6 - LPACLR Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn lpaccr(&mut self) -> LPACCR_W<SRMSK_SPEC> {
         LPACCR_W::new(self, 6)
     }
     #[doc = "Bit 7 - LPACTH0 Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn lpacth0(&mut self) -> LPACTH0_W<SRMSK_SPEC> {
         LPACTH0_W::new(self, 7)
     }
     #[doc = "Bit 8 - LPACTH1 Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn lpacth1(&mut self) -> LPACTH1_W<SRMSK_SPEC> {
         LPACTH1_W::new(self, 8)
     }
     #[doc = "Bit 9 - LPACST Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn lpacst(&mut self) -> LPACST_W<SRMSK_SPEC> {
         LPACST_W::new(self, 9)
     }
     #[doc = "Bit 10 - LPACCLR Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn lpacclr(&mut self) -> LPACCLR_W<SRMSK_SPEC> {
         LPACCLR_W::new(self, 10)
     }
     #[doc = "Bit 11 - LPACSET Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn lpacset(&mut self) -> LPACSET_W<SRMSK_SPEC> {
         LPACSET_W::new(self, 11)
     }
     #[doc = "Bit 12 - HINTST Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn hintst(&mut self) -> HINTST_W<SRMSK_SPEC> {
         HINTST_W::new(self, 12)
     }
     #[doc = "Bit 13 - HINTCLR Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn hintclr(&mut self) -> HINTCLR_W<SRMSK_SPEC> {
         HINTCLR_W::new(self, 13)
     }
     #[doc = "Bit 14 - HINTSET Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn hintset(&mut self) -> HINTSET_W<SRMSK_SPEC> {
         HINTSET_W::new(self, 14)
     }
     #[doc = "Bit 17 - HDCLR Mirror Register Update Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn hdclr(&mut self) -> HDCLR_W<SRMSK_SPEC> {
         HDCLR_W::new(self, 17)
     }
     #[doc = "Bit 18 - HDSET Mirror Register Update Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn hdset(&mut self) -> HDSET_W<SRMSK_SPEC> {
         HDSET_W::new(self, 18)
     }
     #[doc = "Bit 19 - HDCR Mirror Register Update Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn hdcr(&mut self) -> HDCR_W<SRMSK_SPEC> {
         HDCR_W::new(self, 19)
     }
     #[doc = "Bit 21 - OSCSICTRL Mirror Register Update Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn oscsictrl(&mut self) -> OSCSICTRL_W<SRMSK_SPEC> {
         OSCSICTRL_W::new(self, 21)
     }
     #[doc = "Bit 23 - OSCULCTRL Mirror Register Update Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn osculctrl(&mut self) -> OSCULCTRL_W<SRMSK_SPEC> {
         OSCULCTRL_W::new(self, 23)
     }
     #[doc = "Bit 24 - RTC CTR Mirror Register Update Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_ctr(&mut self) -> RTC_CTR_W<SRMSK_SPEC> {
         RTC_CTR_W::new(self, 24)
     }
     #[doc = "Bit 25 - RTC ATIM0 Mirror Register Update Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_atim0(&mut self) -> RTC_ATIM0_W<SRMSK_SPEC> {
         RTC_ATIM0_W::new(self, 25)
     }
     #[doc = "Bit 26 - RTC ATIM1 Mirror Register Update Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_atim1(&mut self) -> RTC_ATIM1_W<SRMSK_SPEC> {
         RTC_ATIM1_W::new(self, 26)
     }
     #[doc = "Bit 27 - RTC TIM0 Mirror Register Update Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_tim0(&mut self) -> RTC_TIM0_W<SRMSK_SPEC> {
         RTC_TIM0_W::new(self, 27)
     }
     #[doc = "Bit 28 - RTC TIM1 Mirror Register Update Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_tim1(&mut self) -> RTC_TIM1_W<SRMSK_SPEC> {
         RTC_TIM1_W::new(self, 28)
     }
     #[doc = "Bit 29 - Retention Memory Mirror Register Update Mask"]
     #[inline(always)]
-    #[must_use]
     pub fn rmx(&mut self) -> RMX_W<SRMSK_SPEC> {
         RMX_W::new(self, 29)
     }

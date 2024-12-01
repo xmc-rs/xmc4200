@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - DAC reference value 2"]
     #[inline(always)]
-    #[must_use]
     pub fn dsv2(&mut self) -> DSV2_W<DSV2_SPEC> {
         DSV2_W::new(self, 0)
     }

@@ -796,67 +796,56 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - External blanking trigger selector"]
     #[inline(always)]
-    #[must_use]
     pub fn ibs(&mut self) -> IBS_W<CC_SPEC> {
         IBS_W::new(self, 0)
     }
     #[doc = "Bit 8 - Inverting comparator input selector"]
     #[inline(always)]
-    #[must_use]
     pub fn imcs(&mut self) -> IMCS_W<CC_SPEC> {
         IMCS_W::new(self, 8)
     }
     #[doc = "Bits 9:10 - Comparator input switching configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn imcc(&mut self) -> IMCC_W<CC_SPEC> {
         IMCC_W::new(self, 9)
     }
     #[doc = "Bit 11 - External triggered switch enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ese(&mut self) -> ESE_W<CC_SPEC> {
         ESE_W::new(self, 11)
     }
     #[doc = "Bit 12 - Comparator output inversion enable"]
     #[inline(always)]
-    #[must_use]
     pub fn oie(&mut self) -> OIE_W<CC_SPEC> {
         OIE_W::new(self, 12)
     }
     #[doc = "Bit 13 - Comparator output synchronization enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ose(&mut self) -> OSE_W<CC_SPEC> {
         OSE_W::new(self, 13)
     }
     #[doc = "Bits 14:15 - Blanking mode"]
     #[inline(always)]
-    #[must_use]
     pub fn blmc(&mut self) -> BLMC_W<CC_SPEC> {
         BLMC_W::new(self, 14)
     }
     #[doc = "Bit 16 - External blanking trigger enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn ebe(&mut self) -> EBE_W<CC_SPEC> {
         EBE_W::new(self, 16)
     }
     #[doc = "Bit 17 - Comparator output filter enable"]
     #[inline(always)]
-    #[must_use]
     pub fn cofe(&mut self) -> COFE_W<CC_SPEC> {
         COFE_W::new(self, 17)
     }
     #[doc = "Bits 18:21 - Comparator output filter window"]
     #[inline(always)]
-    #[must_use]
     pub fn cofm(&mut self) -> COFM_W<CC_SPEC> {
         COFM_W::new(self, 18)
     }
     #[doc = "Bits 24:25 - Comparator output filter control"]
     #[inline(always)]
-    #[must_use]
     pub fn cofc(&mut self) -> COFC_W<CC_SPEC> {
         COFC_W::new(self, 24)
     }

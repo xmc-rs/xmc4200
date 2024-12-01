@@ -88,55 +88,46 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Value switch from CSGyDSV1 to CSGyDSV2 interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn vls1e(&mut self) -> VLS1E_W<SRE_SPEC> {
         VLS1E_W::new(self, 0)
     }
     #[doc = "Bit 1 - Value switch from CSGyDSV2 to CSGyDSV1 interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn vls2e(&mut self) -> VLS2E_W<SRE_SPEC> {
         VLS2E_W::new(self, 1)
     }
     #[doc = "Bit 2 - Conversion trigger interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn trgse(&mut self) -> TRGSE_W<SRE_SPEC> {
         TRGSE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Start trigger interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn strse(&mut self) -> STRSE_W<SRE_SPEC> {
         STRSE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Stop trigger interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn stpse(&mut self) -> STPSE_W<SRE_SPEC> {
         STPSE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Shadow transfer done interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn stde(&mut self) -> STDE_W<SRE_SPEC> {
         STDE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Comparator rise interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn crse(&mut self) -> CRSE_W<SRE_SPEC> {
         CRSE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Comparator fall interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn cfse(&mut self) -> CFSE_W<SRE_SPEC> {
         CFSE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Clamped state interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn csee(&mut self) -> CSEE_W<SRE_SPEC> {
         CSEE_W::new(self, 8)
     }
