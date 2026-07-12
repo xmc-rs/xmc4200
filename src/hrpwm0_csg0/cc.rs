@@ -796,57 +796,57 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - External blanking trigger selector"]
     #[inline(always)]
-    pub fn ibs(&mut self) -> IBS_W<CC_SPEC> {
+    pub fn ibs(&mut self) -> IBS_W<'_, CC_SPEC> {
         IBS_W::new(self, 0)
     }
     #[doc = "Bit 8 - Inverting comparator input selector"]
     #[inline(always)]
-    pub fn imcs(&mut self) -> IMCS_W<CC_SPEC> {
+    pub fn imcs(&mut self) -> IMCS_W<'_, CC_SPEC> {
         IMCS_W::new(self, 8)
     }
     #[doc = "Bits 9:10 - Comparator input switching configuration"]
     #[inline(always)]
-    pub fn imcc(&mut self) -> IMCC_W<CC_SPEC> {
+    pub fn imcc(&mut self) -> IMCC_W<'_, CC_SPEC> {
         IMCC_W::new(self, 9)
     }
     #[doc = "Bit 11 - External triggered switch enable"]
     #[inline(always)]
-    pub fn ese(&mut self) -> ESE_W<CC_SPEC> {
+    pub fn ese(&mut self) -> ESE_W<'_, CC_SPEC> {
         ESE_W::new(self, 11)
     }
     #[doc = "Bit 12 - Comparator output inversion enable"]
     #[inline(always)]
-    pub fn oie(&mut self) -> OIE_W<CC_SPEC> {
+    pub fn oie(&mut self) -> OIE_W<'_, CC_SPEC> {
         OIE_W::new(self, 12)
     }
     #[doc = "Bit 13 - Comparator output synchronization enable"]
     #[inline(always)]
-    pub fn ose(&mut self) -> OSE_W<CC_SPEC> {
+    pub fn ose(&mut self) -> OSE_W<'_, CC_SPEC> {
         OSE_W::new(self, 13)
     }
     #[doc = "Bits 14:15 - Blanking mode"]
     #[inline(always)]
-    pub fn blmc(&mut self) -> BLMC_W<CC_SPEC> {
+    pub fn blmc(&mut self) -> BLMC_W<'_, CC_SPEC> {
         BLMC_W::new(self, 14)
     }
     #[doc = "Bit 16 - External blanking trigger enabled"]
     #[inline(always)]
-    pub fn ebe(&mut self) -> EBE_W<CC_SPEC> {
+    pub fn ebe(&mut self) -> EBE_W<'_, CC_SPEC> {
         EBE_W::new(self, 16)
     }
     #[doc = "Bit 17 - Comparator output filter enable"]
     #[inline(always)]
-    pub fn cofe(&mut self) -> COFE_W<CC_SPEC> {
+    pub fn cofe(&mut self) -> COFE_W<'_, CC_SPEC> {
         COFE_W::new(self, 17)
     }
     #[doc = "Bits 18:21 - Comparator output filter window"]
     #[inline(always)]
-    pub fn cofm(&mut self) -> COFM_W<CC_SPEC> {
+    pub fn cofm(&mut self) -> COFM_W<'_, CC_SPEC> {
         COFM_W::new(self, 18)
     }
     #[doc = "Bits 24:25 - Comparator output filter control"]
     #[inline(always)]
-    pub fn cofc(&mut self) -> COFC_W<CC_SPEC> {
+    pub fn cofc(&mut self) -> COFC_W<'_, CC_SPEC> {
         COFC_W::new(self, 24)
     }
 }
@@ -860,10 +860,6 @@ impl crate::Readable for CC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cc::W`](W) writer structure"]
 impl crate::Writable for CC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CC to value 0"]
-impl crate::Resettable for CC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CC_SPEC {}

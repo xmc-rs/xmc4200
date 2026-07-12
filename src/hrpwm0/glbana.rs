@@ -137,47 +137,47 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Delay of lock detection"]
     #[inline(always)]
-    pub fn sldly(&mut self) -> SLDLY_W<GLBANA_SPEC> {
+    pub fn sldly(&mut self) -> SLDLY_W<'_, GLBANA_SPEC> {
         SLDLY_W::new(self, 0)
     }
     #[doc = "Bit 2 - Force chargepump up"]
     #[inline(always)]
-    pub fn fup(&mut self) -> FUP_W<GLBANA_SPEC> {
+    pub fn fup(&mut self) -> FUP_W<'_, GLBANA_SPEC> {
         FUP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Force chargepump down"]
     #[inline(always)]
-    pub fn fdn(&mut self) -> FDN_W<GLBANA_SPEC> {
+    pub fn fdn(&mut self) -> FDN_W<'_, GLBANA_SPEC> {
         FDN_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - HRCs chargepump current selection"]
     #[inline(always)]
-    pub fn slcp(&mut self) -> SLCP_W<GLBANA_SPEC> {
+    pub fn slcp(&mut self) -> SLCP_W<'_, GLBANA_SPEC> {
         SLCP_W::new(self, 6)
     }
     #[doc = "Bits 9:10 - HRCs LDO bias current"]
     #[inline(always)]
-    pub fn slibldo(&mut self) -> SLIBLDO_W<GLBANA_SPEC> {
+    pub fn slibldo(&mut self) -> SLIBLDO_W<'_, GLBANA_SPEC> {
         SLIBLDO_W::new(self, 9)
     }
     #[doc = "Bits 11:12 - HRCs loop filter bias current"]
     #[inline(always)]
-    pub fn sliblf(&mut self) -> SLIBLF_W<GLBANA_SPEC> {
+    pub fn sliblf(&mut self) -> SLIBLF_W<'_, GLBANA_SPEC> {
         SLIBLF_W::new(self, 11)
     }
     #[doc = "Bits 13:15 - Reference voltage for chargepump and loop filter"]
     #[inline(always)]
-    pub fn slvref(&mut self) -> SLVREF_W<GLBANA_SPEC> {
+    pub fn slvref(&mut self) -> SLVREF_W<'_, GLBANA_SPEC> {
         SLVREF_W::new(self, 13)
     }
     #[doc = "Bits 16:17 - Bias trimming"]
     #[inline(always)]
-    pub fn tribias(&mut self) -> TRIBIAS_W<GLBANA_SPEC> {
+    pub fn tribias(&mut self) -> TRIBIAS_W<'_, GLBANA_SPEC> {
         TRIBIAS_W::new(self, 16)
     }
     #[doc = "Bit 18 - Force chargepump down"]
     #[inline(always)]
-    pub fn ghren(&mut self) -> GHREN_W<GLBANA_SPEC> {
+    pub fn ghren(&mut self) -> GHREN_W<'_, GLBANA_SPEC> {
         GHREN_W::new(self, 18)
     }
 }
@@ -191,8 +191,6 @@ impl crate::Readable for GLBANA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`glbana::W`](W) writer structure"]
 impl crate::Writable for GLBANA_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GLBANA to value 0x4b8c"]
 impl crate::Resettable for GLBANA_SPEC {

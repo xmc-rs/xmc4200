@@ -123,12 +123,12 @@ impl R {
 impl W {
     #[doc = "Bit 0 - HRPWMx.OUTy0 passive level"]
     #[inline(always)]
-    pub fn psl0(&mut self) -> PSL0_W<PL_SPEC> {
+    pub fn psl0(&mut self) -> PSL0_W<'_, PL_SPEC> {
         PSL0_W::new(self, 0)
     }
     #[doc = "Bit 1 - HRPWMx.OUTy1 passive level"]
     #[inline(always)]
-    pub fn psl1(&mut self) -> PSL1_W<PL_SPEC> {
+    pub fn psl1(&mut self) -> PSL1_W<'_, PL_SPEC> {
         PSL1_W::new(self, 1)
     }
 }
@@ -142,10 +142,6 @@ impl crate::Readable for PL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pl::W`](W) writer structure"]
 impl crate::Writable for PL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PL to value 0"]
-impl crate::Resettable for PL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PL_SPEC {}

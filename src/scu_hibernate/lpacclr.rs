@@ -127,22 +127,22 @@ where
 impl W {
     #[doc = "Bit 0 - Trigger VBAT Single Compare Operation Clear"]
     #[inline(always)]
-    pub fn vbatscmp(&mut self) -> VBATSCMP_W<LPACCLR_SPEC> {
+    pub fn vbatscmp(&mut self) -> VBATSCMP_W<'_, LPACCLR_SPEC> {
         VBATSCMP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Trigger HIB_IO_0 Input Single Compare Operation Clear"]
     #[inline(always)]
-    pub fn ahibio0scmp(&mut self) -> AHIBIO0SCMP_W<LPACCLR_SPEC> {
+    pub fn ahibio0scmp(&mut self) -> AHIBIO0SCMP_W<'_, LPACCLR_SPEC> {
         AHIBIO0SCMP_W::new(self, 1)
     }
     #[doc = "Bit 16 - VBAT Compare Operation Initial Value Clear"]
     #[inline(always)]
-    pub fn vbatval(&mut self) -> VBATVAL_W<LPACCLR_SPEC> {
+    pub fn vbatval(&mut self) -> VBATVAL_W<'_, LPACCLR_SPEC> {
         VBATVAL_W::new(self, 16)
     }
     #[doc = "Bit 17 - HIB_IO_0 Input Compare Initial Value Clear"]
     #[inline(always)]
-    pub fn ahibio0val(&mut self) -> AHIBIO0VAL_W<LPACCLR_SPEC> {
+    pub fn ahibio0val(&mut self) -> AHIBIO0VAL_W<'_, LPACCLR_SPEC> {
         AHIBIO0VAL_W::new(self, 17)
     }
 }
@@ -154,10 +154,6 @@ impl crate::RegisterSpec for LPACCLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`lpacclr::W`](W) writer structure"]
 impl crate::Writable for LPACCLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LPACCLR to value 0"]
-impl crate::Resettable for LPACCLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LPACCLR_SPEC {}

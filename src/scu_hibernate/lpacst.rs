@@ -174,6 +174,4 @@ impl crate::RegisterSpec for LPACST_SPEC {
 #[doc = "`read()` method returns [`lpacst::R`](R) reader structure"]
 impl crate::Readable for LPACST_SPEC {}
 #[doc = "`reset()` method sets LPACST to value 0"]
-impl crate::Resettable for LPACST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LPACST_SPEC {}

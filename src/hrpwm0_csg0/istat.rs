@@ -379,6 +379,4 @@ impl crate::RegisterSpec for ISTAT_SPEC {
 #[doc = "`read()` method returns [`istat::R`](R) reader structure"]
 impl crate::Readable for ISTAT_SPEC {}
 #[doc = "`reset()` method sets ISTAT to value 0"]
-impl crate::Resettable for ISTAT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ISTAT_SPEC {}

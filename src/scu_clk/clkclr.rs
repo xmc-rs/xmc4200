@@ -96,17 +96,17 @@ where
 impl W {
     #[doc = "Bit 0 - USB Clock Disable"]
     #[inline(always)]
-    pub fn usbcdi(&mut self) -> USBCDI_W<CLKCLR_SPEC> {
+    pub fn usbcdi(&mut self) -> USBCDI_W<'_, CLKCLR_SPEC> {
         USBCDI_W::new(self, 0)
     }
     #[doc = "Bit 4 - CCU Clock Disable"]
     #[inline(always)]
-    pub fn ccucdi(&mut self) -> CCUCDI_W<CLKCLR_SPEC> {
+    pub fn ccucdi(&mut self) -> CCUCDI_W<'_, CLKCLR_SPEC> {
         CCUCDI_W::new(self, 4)
     }
     #[doc = "Bit 5 - WDT Clock Disable"]
     #[inline(always)]
-    pub fn wdtcdi(&mut self) -> WDTCDI_W<CLKCLR_SPEC> {
+    pub fn wdtcdi(&mut self) -> WDTCDI_W<'_, CLKCLR_SPEC> {
         WDTCDI_W::new(self, 5)
     }
 }
@@ -118,10 +118,6 @@ impl crate::RegisterSpec for CLKCLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`clkclr::W`](W) writer structure"]
 impl crate::Writable for CLKCLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLKCLR to value 0"]
-impl crate::Resettable for CLKCLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CLKCLR_SPEC {}

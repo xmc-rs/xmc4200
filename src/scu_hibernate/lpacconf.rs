@@ -255,27 +255,27 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Compare Enable for Input Selection"]
     #[inline(always)]
-    pub fn cmpen(&mut self) -> CMPEN_W<LPACCONF_SPEC> {
+    pub fn cmpen(&mut self) -> CMPEN_W<'_, LPACCONF_SPEC> {
         CMPEN_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Analog Compare Trigger Select"]
     #[inline(always)]
-    pub fn trigsel(&mut self) -> TRIGSEL_W<LPACCONF_SPEC> {
+    pub fn trigsel(&mut self) -> TRIGSEL_W<'_, LPACCONF_SPEC> {
         TRIGSEL_W::new(self, 4)
     }
     #[doc = "Bit 12 - Conversion Delay"]
     #[inline(always)]
-    pub fn convdel(&mut self) -> CONVDEL_W<LPACCONF_SPEC> {
+    pub fn convdel(&mut self) -> CONVDEL_W<'_, LPACCONF_SPEC> {
         CONVDEL_W::new(self, 12)
     }
     #[doc = "Bits 16:27 - Sub-second Interval Counter"]
     #[inline(always)]
-    pub fn intervcnt(&mut self) -> INTERVCNT_W<LPACCONF_SPEC> {
+    pub fn intervcnt(&mut self) -> INTERVCNT_W<'_, LPACCONF_SPEC> {
         INTERVCNT_W::new(self, 16)
     }
     #[doc = "Bits 28:31 - LPAC Settle Time Counter"]
     #[inline(always)]
-    pub fn settlecnt(&mut self) -> SETTLECNT_W<LPACCONF_SPEC> {
+    pub fn settlecnt(&mut self) -> SETTLECNT_W<'_, LPACCONF_SPEC> {
         SETTLECNT_W::new(self, 28)
     }
 }
@@ -289,8 +289,6 @@ impl crate::Readable for LPACCONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lpacconf::W`](W) writer structure"]
 impl crate::Writable for LPACCONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LPACCONF to value 0x7000_0000"]
 impl crate::Resettable for LPACCONF_SPEC {
