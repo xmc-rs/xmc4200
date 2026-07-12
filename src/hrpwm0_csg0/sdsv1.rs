@@ -16,7 +16,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Shadow DAC reference value 1"]
     #[inline(always)]
-    pub fn sdsv1(&mut self) -> SDSV1_W<SDSV1_SPEC> {
+    pub fn sdsv1(&mut self) -> SDSV1_W<'_, SDSV1_SPEC> {
         SDSV1_W::new(self, 0)
     }
 }
@@ -30,10 +30,6 @@ impl crate::Readable for SDSV1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sdsv1::W`](W) writer structure"]
 impl crate::Writable for SDSV1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SDSV1 to value 0"]
-impl crate::Resettable for SDSV1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SDSV1_SPEC {}

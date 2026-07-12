@@ -51,6 +51,4 @@ impl crate::RegisterSpec for MIRRALLSTAT_SPEC {
 #[doc = "`read()` method returns [`mirrallstat::R`](R) reader structure"]
 impl crate::Readable for MIRRALLSTAT_SPEC {}
 #[doc = "`reset()` method sets MIRRALLSTAT to value 0"]
-impl crate::Resettable for MIRRALLSTAT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MIRRALLSTAT_SPEC {}

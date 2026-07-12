@@ -92,6 +92,4 @@ impl crate::RegisterSpec for DTEMPALARM_SPEC {
 #[doc = "`read()` method returns [`dtempalarm::R`](R) reader structure"]
 impl crate::Readable for DTEMPALARM_SPEC {}
 #[doc = "`reset()` method sets DTEMPALARM to value 0"]
-impl crate::Resettable for DTEMPALARM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DTEMPALARM_SPEC {}

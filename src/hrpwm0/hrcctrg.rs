@@ -19,42 +19,42 @@ pub type H3DEC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - HRC0 high resolution values shadow transfer Enable Clear"]
     #[inline(always)]
-    pub fn h0ec(&mut self) -> H0EC_W<HRCCTRG_SPEC> {
+    pub fn h0ec(&mut self) -> H0EC_W<'_, HRCCTRG_SPEC> {
         H0EC_W::new(self, 0)
     }
     #[doc = "Bit 1 - HRC0 dead time value shadow transfer Enable Clear"]
     #[inline(always)]
-    pub fn h0dec(&mut self) -> H0DEC_W<HRCCTRG_SPEC> {
+    pub fn h0dec(&mut self) -> H0DEC_W<'_, HRCCTRG_SPEC> {
         H0DEC_W::new(self, 1)
     }
     #[doc = "Bit 4 - HRC1 high resolution values shadow transfer Enable Clear"]
     #[inline(always)]
-    pub fn h1ec(&mut self) -> H1EC_W<HRCCTRG_SPEC> {
+    pub fn h1ec(&mut self) -> H1EC_W<'_, HRCCTRG_SPEC> {
         H1EC_W::new(self, 4)
     }
     #[doc = "Bit 5 - HRC1 dead time value shadow transfer Enable Clear"]
     #[inline(always)]
-    pub fn h1dec(&mut self) -> H1DEC_W<HRCCTRG_SPEC> {
+    pub fn h1dec(&mut self) -> H1DEC_W<'_, HRCCTRG_SPEC> {
         H1DEC_W::new(self, 5)
     }
     #[doc = "Bit 8 - HRC2 high resolution values shadow transfer Enable Clear"]
     #[inline(always)]
-    pub fn h2cec(&mut self) -> H2CEC_W<HRCCTRG_SPEC> {
+    pub fn h2cec(&mut self) -> H2CEC_W<'_, HRCCTRG_SPEC> {
         H2CEC_W::new(self, 8)
     }
     #[doc = "Bit 9 - HRC2 dead time value shadow transfer Enable Clear"]
     #[inline(always)]
-    pub fn h2dec(&mut self) -> H2DEC_W<HRCCTRG_SPEC> {
+    pub fn h2dec(&mut self) -> H2DEC_W<'_, HRCCTRG_SPEC> {
         H2DEC_W::new(self, 9)
     }
     #[doc = "Bit 12 - HRC3 high resolution values shadow transfer Enable Clear"]
     #[inline(always)]
-    pub fn h3ec(&mut self) -> H3EC_W<HRCCTRG_SPEC> {
+    pub fn h3ec(&mut self) -> H3EC_W<'_, HRCCTRG_SPEC> {
         H3EC_W::new(self, 12)
     }
     #[doc = "Bit 13 - HRC3 dead time value shadow transfer Enable Clear"]
     #[inline(always)]
-    pub fn h3dec(&mut self) -> H3DEC_W<HRCCTRG_SPEC> {
+    pub fn h3dec(&mut self) -> H3DEC_W<'_, HRCCTRG_SPEC> {
         H3DEC_W::new(self, 13)
     }
 }
@@ -66,10 +66,6 @@ impl crate::RegisterSpec for HRCCTRG_SPEC {
 #[doc = "`write(|w| ..)` method takes [`hrcctrg::W`](W) writer structure"]
 impl crate::Writable for HRCCTRG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HRCCTRG to value 0"]
-impl crate::Resettable for HRCCTRG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HRCCTRG_SPEC {}

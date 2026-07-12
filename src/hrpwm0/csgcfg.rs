@@ -268,32 +268,32 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - CSG0 Power Mode"]
     #[inline(always)]
-    pub fn c0pm(&mut self) -> C0PM_W<CSGCFG_SPEC> {
+    pub fn c0pm(&mut self) -> C0PM_W<'_, CSGCFG_SPEC> {
         C0PM_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - CSG1 Power Mode"]
     #[inline(always)]
-    pub fn c1pm(&mut self) -> C1PM_W<CSGCFG_SPEC> {
+    pub fn c1pm(&mut self) -> C1PM_W<'_, CSGCFG_SPEC> {
         C1PM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - CSG2 Power Mode"]
     #[inline(always)]
-    pub fn c2pm(&mut self) -> C2PM_W<CSGCFG_SPEC> {
+    pub fn c2pm(&mut self) -> C2PM_W<'_, CSGCFG_SPEC> {
         C2PM_W::new(self, 4)
     }
     #[doc = "Bit 16 - CSG0 Clock disable"]
     #[inline(always)]
-    pub fn c0cd(&mut self) -> C0CD_W<CSGCFG_SPEC> {
+    pub fn c0cd(&mut self) -> C0CD_W<'_, CSGCFG_SPEC> {
         C0CD_W::new(self, 16)
     }
     #[doc = "Bit 17 - CSG1 Clock disable"]
     #[inline(always)]
-    pub fn c1cd(&mut self) -> C1CD_W<CSGCFG_SPEC> {
+    pub fn c1cd(&mut self) -> C1CD_W<'_, CSGCFG_SPEC> {
         C1CD_W::new(self, 17)
     }
     #[doc = "Bit 18 - CSG2 Clock disable"]
     #[inline(always)]
-    pub fn c2cd(&mut self) -> C2CD_W<CSGCFG_SPEC> {
+    pub fn c2cd(&mut self) -> C2CD_W<'_, CSGCFG_SPEC> {
         C2CD_W::new(self, 18)
     }
 }
@@ -307,10 +307,6 @@ impl crate::Readable for CSGCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`csgcfg::W`](W) writer structure"]
 impl crate::Writable for CSGCFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CSGCFG to value 0"]
-impl crate::Resettable for CSGCFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CSGCFG_SPEC {}

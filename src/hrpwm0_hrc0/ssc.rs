@@ -65,7 +65,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Source selector for the shadow transfer"]
     #[inline(always)]
-    pub fn sst(&mut self) -> SST_W<SSC_SPEC> {
+    pub fn sst(&mut self) -> SST_W<'_, SSC_SPEC> {
         SST_W::new(self, 0)
     }
 }
@@ -79,10 +79,6 @@ impl crate::Readable for SSC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ssc::W`](W) writer structure"]
 impl crate::Writable for SSC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SSC to value 0"]
-impl crate::Resettable for SSC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SSC_SPEC {}
