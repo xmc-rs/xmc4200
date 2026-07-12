@@ -34,7 +34,7 @@ where
 impl W {
     #[doc = "Bit 0 - Mirror All Execution Request"]
     #[inline(always)]
-    pub fn req(&mut self) -> REQ_W<MIRRALLREQ_SPEC> {
+    pub fn req(&mut self) -> REQ_W<'_, MIRRALLREQ_SPEC> {
         REQ_W::new(self, 0)
     }
 }
@@ -46,10 +46,6 @@ impl crate::RegisterSpec for MIRRALLREQ_SPEC {
 #[doc = "`write(|w| ..)` method takes [`mirrallreq::W`](W) writer structure"]
 impl crate::Writable for MIRRALLREQ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MIRRALLREQ to value 0"]
-impl crate::Resettable for MIRRALLREQ_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MIRRALLREQ_SPEC {}

@@ -16,7 +16,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - High resolution falling edge value"]
     #[inline(always)]
-    pub fn scr1(&mut self) -> SCR1_W<SCR1_SPEC> {
+    pub fn scr1(&mut self) -> SCR1_W<'_, SCR1_SPEC> {
         SCR1_W::new(self, 0)
     }
 }
@@ -30,10 +30,6 @@ impl crate::Readable for SCR1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`scr1::W`](W) writer structure"]
 impl crate::Writable for SCR1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SCR1 to value 0"]
-impl crate::Resettable for SCR1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SCR1_SPEC {}

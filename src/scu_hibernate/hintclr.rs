@@ -160,32 +160,32 @@ where
 impl W {
     #[doc = "Bit 0 - Internally Controlled Hibernate Sequence Request Clear"]
     #[inline(always)]
-    pub fn hibnint(&mut self) -> HIBNINT_W<HINTCLR_SPEC> {
+    pub fn hibnint(&mut self) -> HIBNINT_W<'_, HINTCLR_SPEC> {
         HIBNINT_W::new(self, 0)
     }
     #[doc = "Bit 2 - VDDP Supply Switch of Flash Clear"]
     #[inline(always)]
-    pub fn flashoff(&mut self) -> FLASHOFF_W<HINTCLR_SPEC> {
+    pub fn flashoff(&mut self) -> FLASHOFF_W<'_, HINTCLR_SPEC> {
         FLASHOFF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Flash Power Down Clear"]
     #[inline(always)]
-    pub fn flashpd(&mut self) -> FLASHPD_W<HINTCLR_SPEC> {
+    pub fn flashpd(&mut self) -> FLASHPD_W<'_, HINTCLR_SPEC> {
         FLASHPD_W::new(self, 3)
     }
     #[doc = "Bit 4 - PORST Pull-up OFF Direct Control Clear"]
     #[inline(always)]
-    pub fn poffd(&mut self) -> POFFD_W<HINTCLR_SPEC> {
+    pub fn poffd(&mut self) -> POFFD_W<'_, HINTCLR_SPEC> {
         POFFD_W::new(self, 4)
     }
     #[doc = "Bits 16:17 - Delay on PORTS Pull-up Switching OFF on Hibernate Request Clear"]
     #[inline(always)]
-    pub fn ppodel(&mut self) -> PPODEL_W<HINTCLR_SPEC> {
+    pub fn ppodel(&mut self) -> PPODEL_W<'_, HINTCLR_SPEC> {
         PPODEL_W::new(self, 16)
     }
     #[doc = "Bit 20 - PORST Pull-up OFF in Hibernate Mode Clear"]
     #[inline(always)]
-    pub fn poffh(&mut self) -> POFFH_W<HINTCLR_SPEC> {
+    pub fn poffh(&mut self) -> POFFH_W<'_, HINTCLR_SPEC> {
         POFFH_W::new(self, 20)
     }
 }
@@ -197,10 +197,6 @@ impl crate::RegisterSpec for HINTCLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`hintclr::W`](W) writer structure"]
 impl crate::Writable for HINTCLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HINTCLR to value 0"]
-impl crate::Resettable for HINTCLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HINTCLR_SPEC {}

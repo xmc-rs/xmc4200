@@ -1399,122 +1399,122 @@ impl R {
 impl W {
     #[doc = "Bit 0 - WDT pre-warning Interrupt Mask"]
     #[inline(always)]
-    pub fn prwarn(&mut self) -> PRWARN_W<SRMSK_SPEC> {
+    pub fn prwarn(&mut self) -> PRWARN_W<'_, SRMSK_SPEC> {
         PRWARN_W::new(self, 0)
     }
     #[doc = "Bit 1 - RTC Periodic Interrupt Mask"]
     #[inline(always)]
-    pub fn pi(&mut self) -> PI_W<SRMSK_SPEC> {
+    pub fn pi(&mut self) -> PI_W<'_, SRMSK_SPEC> {
         PI_W::new(self, 1)
     }
     #[doc = "Bit 2 - RTC Alarm Interrupt Mask"]
     #[inline(always)]
-    pub fn ai(&mut self) -> AI_W<SRMSK_SPEC> {
+    pub fn ai(&mut self) -> AI_W<'_, SRMSK_SPEC> {
         AI_W::new(self, 2)
     }
     #[doc = "Bit 3 - DLR Request Overrun Interrupt Mask"]
     #[inline(always)]
-    pub fn dlrovr(&mut self) -> DLROVR_W<SRMSK_SPEC> {
+    pub fn dlrovr(&mut self) -> DLROVR_W<'_, SRMSK_SPEC> {
         DLROVR_W::new(self, 3)
     }
     #[doc = "Bit 6 - LPACLR Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    pub fn lpaccr(&mut self) -> LPACCR_W<SRMSK_SPEC> {
+    pub fn lpaccr(&mut self) -> LPACCR_W<'_, SRMSK_SPEC> {
         LPACCR_W::new(self, 6)
     }
     #[doc = "Bit 7 - LPACTH0 Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    pub fn lpacth0(&mut self) -> LPACTH0_W<SRMSK_SPEC> {
+    pub fn lpacth0(&mut self) -> LPACTH0_W<'_, SRMSK_SPEC> {
         LPACTH0_W::new(self, 7)
     }
     #[doc = "Bit 8 - LPACTH1 Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    pub fn lpacth1(&mut self) -> LPACTH1_W<SRMSK_SPEC> {
+    pub fn lpacth1(&mut self) -> LPACTH1_W<'_, SRMSK_SPEC> {
         LPACTH1_W::new(self, 8)
     }
     #[doc = "Bit 9 - LPACST Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    pub fn lpacst(&mut self) -> LPACST_W<SRMSK_SPEC> {
+    pub fn lpacst(&mut self) -> LPACST_W<'_, SRMSK_SPEC> {
         LPACST_W::new(self, 9)
     }
     #[doc = "Bit 10 - LPACCLR Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    pub fn lpacclr(&mut self) -> LPACCLR_W<SRMSK_SPEC> {
+    pub fn lpacclr(&mut self) -> LPACCLR_W<'_, SRMSK_SPEC> {
         LPACCLR_W::new(self, 10)
     }
     #[doc = "Bit 11 - LPACSET Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    pub fn lpacset(&mut self) -> LPACSET_W<SRMSK_SPEC> {
+    pub fn lpacset(&mut self) -> LPACSET_W<'_, SRMSK_SPEC> {
         LPACSET_W::new(self, 11)
     }
     #[doc = "Bit 12 - HINTST Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    pub fn hintst(&mut self) -> HINTST_W<SRMSK_SPEC> {
+    pub fn hintst(&mut self) -> HINTST_W<'_, SRMSK_SPEC> {
         HINTST_W::new(self, 12)
     }
     #[doc = "Bit 13 - HINTCLR Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    pub fn hintclr(&mut self) -> HINTCLR_W<SRMSK_SPEC> {
+    pub fn hintclr(&mut self) -> HINTCLR_W<'_, SRMSK_SPEC> {
         HINTCLR_W::new(self, 13)
     }
     #[doc = "Bit 14 - HINTSET Mirror Register Update Interrupt Mask"]
     #[inline(always)]
-    pub fn hintset(&mut self) -> HINTSET_W<SRMSK_SPEC> {
+    pub fn hintset(&mut self) -> HINTSET_W<'_, SRMSK_SPEC> {
         HINTSET_W::new(self, 14)
     }
     #[doc = "Bit 17 - HDCLR Mirror Register Update Mask"]
     #[inline(always)]
-    pub fn hdclr(&mut self) -> HDCLR_W<SRMSK_SPEC> {
+    pub fn hdclr(&mut self) -> HDCLR_W<'_, SRMSK_SPEC> {
         HDCLR_W::new(self, 17)
     }
     #[doc = "Bit 18 - HDSET Mirror Register Update Mask"]
     #[inline(always)]
-    pub fn hdset(&mut self) -> HDSET_W<SRMSK_SPEC> {
+    pub fn hdset(&mut self) -> HDSET_W<'_, SRMSK_SPEC> {
         HDSET_W::new(self, 18)
     }
     #[doc = "Bit 19 - HDCR Mirror Register Update Mask"]
     #[inline(always)]
-    pub fn hdcr(&mut self) -> HDCR_W<SRMSK_SPEC> {
+    pub fn hdcr(&mut self) -> HDCR_W<'_, SRMSK_SPEC> {
         HDCR_W::new(self, 19)
     }
     #[doc = "Bit 21 - OSCSICTRL Mirror Register Update Mask"]
     #[inline(always)]
-    pub fn oscsictrl(&mut self) -> OSCSICTRL_W<SRMSK_SPEC> {
+    pub fn oscsictrl(&mut self) -> OSCSICTRL_W<'_, SRMSK_SPEC> {
         OSCSICTRL_W::new(self, 21)
     }
     #[doc = "Bit 23 - OSCULCTRL Mirror Register Update Mask"]
     #[inline(always)]
-    pub fn osculctrl(&mut self) -> OSCULCTRL_W<SRMSK_SPEC> {
+    pub fn osculctrl(&mut self) -> OSCULCTRL_W<'_, SRMSK_SPEC> {
         OSCULCTRL_W::new(self, 23)
     }
     #[doc = "Bit 24 - RTC CTR Mirror Register Update Mask"]
     #[inline(always)]
-    pub fn rtc_ctr(&mut self) -> RTC_CTR_W<SRMSK_SPEC> {
+    pub fn rtc_ctr(&mut self) -> RTC_CTR_W<'_, SRMSK_SPEC> {
         RTC_CTR_W::new(self, 24)
     }
     #[doc = "Bit 25 - RTC ATIM0 Mirror Register Update Mask"]
     #[inline(always)]
-    pub fn rtc_atim0(&mut self) -> RTC_ATIM0_W<SRMSK_SPEC> {
+    pub fn rtc_atim0(&mut self) -> RTC_ATIM0_W<'_, SRMSK_SPEC> {
         RTC_ATIM0_W::new(self, 25)
     }
     #[doc = "Bit 26 - RTC ATIM1 Mirror Register Update Mask"]
     #[inline(always)]
-    pub fn rtc_atim1(&mut self) -> RTC_ATIM1_W<SRMSK_SPEC> {
+    pub fn rtc_atim1(&mut self) -> RTC_ATIM1_W<'_, SRMSK_SPEC> {
         RTC_ATIM1_W::new(self, 26)
     }
     #[doc = "Bit 27 - RTC TIM0 Mirror Register Update Mask"]
     #[inline(always)]
-    pub fn rtc_tim0(&mut self) -> RTC_TIM0_W<SRMSK_SPEC> {
+    pub fn rtc_tim0(&mut self) -> RTC_TIM0_W<'_, SRMSK_SPEC> {
         RTC_TIM0_W::new(self, 27)
     }
     #[doc = "Bit 28 - RTC TIM1 Mirror Register Update Mask"]
     #[inline(always)]
-    pub fn rtc_tim1(&mut self) -> RTC_TIM1_W<SRMSK_SPEC> {
+    pub fn rtc_tim1(&mut self) -> RTC_TIM1_W<'_, SRMSK_SPEC> {
         RTC_TIM1_W::new(self, 28)
     }
     #[doc = "Bit 29 - Retention Memory Mirror Register Update Mask"]
     #[inline(always)]
-    pub fn rmx(&mut self) -> RMX_W<SRMSK_SPEC> {
+    pub fn rmx(&mut self) -> RMX_W<'_, SRMSK_SPEC> {
         RMX_W::new(self, 29)
     }
 }
@@ -1528,10 +1528,6 @@ impl crate::Readable for SRMSK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`srmsk::W`](W) writer structure"]
 impl crate::Writable for SRMSK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRMSK to value 0"]
-impl crate::Resettable for SRMSK_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SRMSK_SPEC {}

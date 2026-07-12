@@ -17,6 +17,4 @@ impl crate::RegisterSpec for PC_SPEC {
 #[doc = "`read()` method returns [`pc::R`](R) reader structure"]
 impl crate::Readable for PC_SPEC {}
 #[doc = "`reset()` method sets PC to value 0"]
-impl crate::Resettable for PC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PC_SPEC {}

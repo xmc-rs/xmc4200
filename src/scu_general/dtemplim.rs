@@ -25,12 +25,12 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Lower Limit"]
     #[inline(always)]
-    pub fn lower(&mut self) -> LOWER_W<DTEMPLIM_SPEC> {
+    pub fn lower(&mut self) -> LOWER_W<'_, DTEMPLIM_SPEC> {
         LOWER_W::new(self, 0)
     }
     #[doc = "Bits 16:25 - Upper Limit"]
     #[inline(always)]
-    pub fn upper(&mut self) -> UPPER_W<DTEMPLIM_SPEC> {
+    pub fn upper(&mut self) -> UPPER_W<'_, DTEMPLIM_SPEC> {
         UPPER_W::new(self, 16)
     }
 }
@@ -44,10 +44,6 @@ impl crate::Readable for DTEMPLIM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dtemplim::W`](W) writer structure"]
 impl crate::Writable for DTEMPLIM_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DTEMPLIM to value 0"]
-impl crate::Resettable for DTEMPLIM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DTEMPLIM_SPEC {}

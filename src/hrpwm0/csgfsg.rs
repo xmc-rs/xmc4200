@@ -256,6 +256,4 @@ impl crate::RegisterSpec for CSGFSG_SPEC {
 #[doc = "`read()` method returns [`csgfsg::R`](R) reader structure"]
 impl crate::Readable for CSGFSG_SPEC {}
 #[doc = "`reset()` method sets CSGFSG to value 0"]
-impl crate::Resettable for CSGFSG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CSGFSG_SPEC {}

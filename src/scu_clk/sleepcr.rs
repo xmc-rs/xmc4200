@@ -239,22 +239,22 @@ impl R {
 impl W {
     #[doc = "Bit 0 - System Clock Selection Value"]
     #[inline(always)]
-    pub fn syssel(&mut self) -> SYSSEL_W<SLEEPCR_SPEC> {
+    pub fn syssel(&mut self) -> SYSSEL_W<'_, SLEEPCR_SPEC> {
         SYSSEL_W::new(self, 0)
     }
     #[doc = "Bit 16 - USB Clock Control"]
     #[inline(always)]
-    pub fn usbcr(&mut self) -> USBCR_W<SLEEPCR_SPEC> {
+    pub fn usbcr(&mut self) -> USBCR_W<'_, SLEEPCR_SPEC> {
         USBCR_W::new(self, 16)
     }
     #[doc = "Bit 20 - CCU Clock Control"]
     #[inline(always)]
-    pub fn ccucr(&mut self) -> CCUCR_W<SLEEPCR_SPEC> {
+    pub fn ccucr(&mut self) -> CCUCR_W<'_, SLEEPCR_SPEC> {
         CCUCR_W::new(self, 20)
     }
     #[doc = "Bit 21 - WDT Clock Control"]
     #[inline(always)]
-    pub fn wdtcr(&mut self) -> WDTCR_W<SLEEPCR_SPEC> {
+    pub fn wdtcr(&mut self) -> WDTCR_W<'_, SLEEPCR_SPEC> {
         WDTCR_W::new(self, 21)
     }
 }
@@ -268,10 +268,6 @@ impl crate::Readable for SLEEPCR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sleepcr::W`](W) writer structure"]
 impl crate::Writable for SLEEPCR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLEEPCR to value 0"]
-impl crate::Resettable for SLEEPCR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLEEPCR_SPEC {}

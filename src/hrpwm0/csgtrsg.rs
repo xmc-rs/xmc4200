@@ -256,6 +256,4 @@ impl crate::RegisterSpec for CSGTRSG_SPEC {
 #[doc = "`read()` method returns [`csgtrsg::R`](R) reader structure"]
 impl crate::Readable for CSGTRSG_SPEC {}
 #[doc = "`reset()` method sets CSGTRSG to value 0"]
-impl crate::Resettable for CSGTRSG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CSGTRSG_SPEC {}

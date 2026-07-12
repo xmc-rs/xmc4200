@@ -96,17 +96,17 @@ where
 impl W {
     #[doc = "Bit 0 - USB Clock Enable"]
     #[inline(always)]
-    pub fn usbcen(&mut self) -> USBCEN_W<CLKSET_SPEC> {
+    pub fn usbcen(&mut self) -> USBCEN_W<'_, CLKSET_SPEC> {
         USBCEN_W::new(self, 0)
     }
     #[doc = "Bit 4 - CCU Clock Enable"]
     #[inline(always)]
-    pub fn ccucen(&mut self) -> CCUCEN_W<CLKSET_SPEC> {
+    pub fn ccucen(&mut self) -> CCUCEN_W<'_, CLKSET_SPEC> {
         CCUCEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - WDT Clock Enable"]
     #[inline(always)]
-    pub fn wdtcen(&mut self) -> WDTCEN_W<CLKSET_SPEC> {
+    pub fn wdtcen(&mut self) -> WDTCEN_W<'_, CLKSET_SPEC> {
         WDTCEN_W::new(self, 5)
     }
 }
@@ -118,10 +118,6 @@ impl crate::RegisterSpec for CLKSET_SPEC {
 #[doc = "`write(|w| ..)` method takes [`clkset::W`](W) writer structure"]
 impl crate::Writable for CLKSET_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLKSET to value 0"]
-impl crate::Resettable for CLKSET_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CLKSET_SPEC {}

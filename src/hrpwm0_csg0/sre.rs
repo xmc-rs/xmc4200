@@ -88,47 +88,47 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Value switch from CSGyDSV1 to CSGyDSV2 interrupt enable"]
     #[inline(always)]
-    pub fn vls1e(&mut self) -> VLS1E_W<SRE_SPEC> {
+    pub fn vls1e(&mut self) -> VLS1E_W<'_, SRE_SPEC> {
         VLS1E_W::new(self, 0)
     }
     #[doc = "Bit 1 - Value switch from CSGyDSV2 to CSGyDSV1 interrupt enable"]
     #[inline(always)]
-    pub fn vls2e(&mut self) -> VLS2E_W<SRE_SPEC> {
+    pub fn vls2e(&mut self) -> VLS2E_W<'_, SRE_SPEC> {
         VLS2E_W::new(self, 1)
     }
     #[doc = "Bit 2 - Conversion trigger interrupt enable"]
     #[inline(always)]
-    pub fn trgse(&mut self) -> TRGSE_W<SRE_SPEC> {
+    pub fn trgse(&mut self) -> TRGSE_W<'_, SRE_SPEC> {
         TRGSE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Start trigger interrupt enable"]
     #[inline(always)]
-    pub fn strse(&mut self) -> STRSE_W<SRE_SPEC> {
+    pub fn strse(&mut self) -> STRSE_W<'_, SRE_SPEC> {
         STRSE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Stop trigger interrupt enable"]
     #[inline(always)]
-    pub fn stpse(&mut self) -> STPSE_W<SRE_SPEC> {
+    pub fn stpse(&mut self) -> STPSE_W<'_, SRE_SPEC> {
         STPSE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Shadow transfer done interrupt enable"]
     #[inline(always)]
-    pub fn stde(&mut self) -> STDE_W<SRE_SPEC> {
+    pub fn stde(&mut self) -> STDE_W<'_, SRE_SPEC> {
         STDE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Comparator rise interrupt enable"]
     #[inline(always)]
-    pub fn crse(&mut self) -> CRSE_W<SRE_SPEC> {
+    pub fn crse(&mut self) -> CRSE_W<'_, SRE_SPEC> {
         CRSE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Comparator fall interrupt enable"]
     #[inline(always)]
-    pub fn cfse(&mut self) -> CFSE_W<SRE_SPEC> {
+    pub fn cfse(&mut self) -> CFSE_W<'_, SRE_SPEC> {
         CFSE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Clamped state interrupt enable"]
     #[inline(always)]
-    pub fn csee(&mut self) -> CSEE_W<SRE_SPEC> {
+    pub fn csee(&mut self) -> CSEE_W<'_, SRE_SPEC> {
         CSEE_W::new(self, 8)
     }
 }
@@ -142,10 +142,6 @@ impl crate::Readable for SRE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sre::W`](W) writer structure"]
 impl crate::Writable for SRE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRE to value 0"]
-impl crate::Resettable for SRE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SRE_SPEC {}

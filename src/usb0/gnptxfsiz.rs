@@ -25,12 +25,12 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - IN Endpoint FIFO0 Transmit RAM Start Address"]
     #[inline(always)]
-    pub fn ineptx_f0st_addr(&mut self) -> INEPTX_F0ST_ADDR_W<GNPTXFSIZ_SPEC> {
+    pub fn ineptx_f0st_addr(&mut self) -> INEPTX_F0ST_ADDR_W<'_, GNPTXFSIZ_SPEC> {
         INEPTX_F0ST_ADDR_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - IN Endpoint TxFIFO 0 Depth"]
     #[inline(always)]
-    pub fn ineptx_f0dep(&mut self) -> INEPTX_F0DEP_W<GNPTXFSIZ_SPEC> {
+    pub fn ineptx_f0dep(&mut self) -> INEPTX_F0DEP_W<'_, GNPTXFSIZ_SPEC> {
         INEPTX_F0DEP_W::new(self, 16)
     }
 }
@@ -44,8 +44,6 @@ impl crate::Readable for GNPTXFSIZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gnptxfsiz::W`](W) writer structure"]
 impl crate::Writable for GNPTXFSIZ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GNPTXFSIZ to value 0x0010_011a"]
 impl crate::Resettable for GNPTXFSIZ_SPEC {
