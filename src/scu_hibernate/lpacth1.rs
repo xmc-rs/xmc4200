@@ -25,12 +25,12 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Analog HIB_IO_0 Lower Threshold Value"]
     #[inline(always)]
-    pub fn ahibio0lo(&mut self) -> AHIBIO0LO_W<LPACTH1_SPEC> {
+    pub fn ahibio0lo(&mut self) -> AHIBIO0LO_W<'_, LPACTH1_SPEC> {
         AHIBIO0LO_W::new(self, 0)
     }
     #[doc = "Bits 8:13 - Analog HIB_IO_0 Upper Threshold Value"]
     #[inline(always)]
-    pub fn ahibio0hi(&mut self) -> AHIBIO0HI_W<LPACTH1_SPEC> {
+    pub fn ahibio0hi(&mut self) -> AHIBIO0HI_W<'_, LPACTH1_SPEC> {
         AHIBIO0HI_W::new(self, 8)
     }
 }
@@ -44,10 +44,6 @@ impl crate::Readable for LPACTH1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lpacth1::W`](W) writer structure"]
 impl crate::Writable for LPACTH1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LPACTH1 to value 0"]
-impl crate::Resettable for LPACTH1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LPACTH1_SPEC {}

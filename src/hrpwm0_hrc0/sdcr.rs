@@ -16,7 +16,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Shadow dead time rising value"]
     #[inline(always)]
-    pub fn sdtrv(&mut self) -> SDTRV_W<SDCR_SPEC> {
+    pub fn sdtrv(&mut self) -> SDTRV_W<'_, SDCR_SPEC> {
         SDTRV_W::new(self, 0)
     }
 }
@@ -30,8 +30,6 @@ impl crate::Readable for SDCR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sdcr::W`](W) writer structure"]
 impl crate::Writable for SDCR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SDCR to value 0x01"]
 impl crate::Resettable for SDCR_SPEC {

@@ -16,7 +16,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Blanking value"]
     #[inline(always)]
-    pub fn blv(&mut self) -> BLV_W<BLV_SPEC> {
+    pub fn blv(&mut self) -> BLV_W<'_, BLV_SPEC> {
         BLV_W::new(self, 0)
     }
 }
@@ -30,10 +30,6 @@ impl crate::Readable for BLV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`blv::W`](W) writer structure"]
 impl crate::Writable for BLV_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BLV to value 0"]
-impl crate::Resettable for BLV_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BLV_SPEC {}

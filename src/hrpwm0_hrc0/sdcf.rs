@@ -16,7 +16,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Shadow dead time falling value"]
     #[inline(always)]
-    pub fn sdtfv(&mut self) -> SDTFV_W<SDCF_SPEC> {
+    pub fn sdtfv(&mut self) -> SDTFV_W<'_, SDCF_SPEC> {
         SDTFV_W::new(self, 0)
     }
 }
@@ -30,8 +30,6 @@ impl crate::Readable for SDCF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sdcf::W`](W) writer structure"]
 impl crate::Writable for SDCF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SDCF to value 0x01"]
 impl crate::Resettable for SDCF_SPEC {

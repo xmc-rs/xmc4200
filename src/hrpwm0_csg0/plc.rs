@@ -604,32 +604,32 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Clamping control signal selector"]
     #[inline(always)]
-    pub fn ipls(&mut self) -> IPLS_W<PLC_SPEC> {
+    pub fn ipls(&mut self) -> IPLS_W<'_, PLC_SPEC> {
         IPLS_W::new(self, 0)
     }
     #[doc = "Bits 8:9 - Clamping control signal level selection"]
     #[inline(always)]
-    pub fn plcl(&mut self) -> PLCL_W<PLC_SPEC> {
+    pub fn plcl(&mut self) -> PLCL_W<'_, PLC_SPEC> {
         PLCL_W::new(self, 8)
     }
     #[doc = "Bit 10 - Output passive level value"]
     #[inline(always)]
-    pub fn psl(&mut self) -> PSL_W<PLC_SPEC> {
+    pub fn psl(&mut self) -> PSL_W<'_, PLC_SPEC> {
         PSL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Clamped state exit SW configuration"]
     #[inline(always)]
-    pub fn plsw(&mut self) -> PLSW_W<PLC_SPEC> {
+    pub fn plsw(&mut self) -> PLSW_W<'_, PLC_SPEC> {
         PLSW_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Passive level enter configuration"]
     #[inline(always)]
-    pub fn plec(&mut self) -> PLEC_W<PLC_SPEC> {
+    pub fn plec(&mut self) -> PLEC_W<'_, PLC_SPEC> {
         PLEC_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Passive level exit configuration"]
     #[inline(always)]
-    pub fn plxc(&mut self) -> PLXC_W<PLC_SPEC> {
+    pub fn plxc(&mut self) -> PLXC_W<'_, PLC_SPEC> {
         PLXC_W::new(self, 14)
     }
 }
@@ -643,10 +643,6 @@ impl crate::Readable for PLC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`plc::W`](W) writer structure"]
 impl crate::Writable for PLC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PLC to value 0"]
-impl crate::Resettable for PLC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PLC_SPEC {}

@@ -107,12 +107,12 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Suspend configuration"]
     #[inline(always)]
-    pub fn suscfg(&mut self) -> SUSCFG_W<HRBSC_SPEC> {
+    pub fn suscfg(&mut self) -> SUSCFG_W<'_, HRBSC_SPEC> {
         SUSCFG_W::new(self, 0)
     }
     #[doc = "Bit 8 - HRPWM bias enable"]
     #[inline(always)]
-    pub fn hrbe(&mut self) -> HRBE_W<HRBSC_SPEC> {
+    pub fn hrbe(&mut self) -> HRBE_W<'_, HRBSC_SPEC> {
         HRBE_W::new(self, 8)
     }
 }
@@ -126,10 +126,6 @@ impl crate::Readable for HRBSC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hrbsc::W`](W) writer structure"]
 impl crate::Writable for HRBSC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HRBSC to value 0"]
-impl crate::Resettable for HRBSC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HRBSC_SPEC {}

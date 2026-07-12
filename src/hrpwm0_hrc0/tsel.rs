@@ -305,22 +305,22 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Source Selector 0 Timer connection"]
     #[inline(always)]
-    pub fn tsel0(&mut self) -> TSEL0_W<TSEL_SPEC> {
+    pub fn tsel0(&mut self) -> TSEL0_W<'_, TSEL_SPEC> {
         TSEL0_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Source Selector 1 Timer connection"]
     #[inline(always)]
-    pub fn tsel1(&mut self) -> TSEL1_W<TSEL_SPEC> {
+    pub fn tsel1(&mut self) -> TSEL1_W<'_, TSEL_SPEC> {
         TSEL1_W::new(self, 3)
     }
     #[doc = "Bit 16 - Source selector 0 TRAP enable"]
     #[inline(always)]
-    pub fn ts0e(&mut self) -> TS0E_W<TSEL_SPEC> {
+    pub fn ts0e(&mut self) -> TS0E_W<'_, TSEL_SPEC> {
         TS0E_W::new(self, 16)
     }
     #[doc = "Bit 17 - Source selector 1 TRAP enable"]
     #[inline(always)]
-    pub fn ts1e(&mut self) -> TS1E_W<TSEL_SPEC> {
+    pub fn ts1e(&mut self) -> TS1E_W<'_, TSEL_SPEC> {
         TS1E_W::new(self, 17)
     }
 }
@@ -334,10 +334,6 @@ impl crate::Readable for TSEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tsel::W`](W) writer structure"]
 impl crate::Writable for TSEL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TSEL to value 0"]
-impl crate::Resettable for TSEL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TSEL_SPEC {}
