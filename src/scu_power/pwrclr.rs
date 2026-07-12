@@ -96,17 +96,17 @@ where
 impl W {
     #[doc = "Bit 0 - Clear Disable Hibernate Domain"]
     #[inline(always)]
-    pub fn hib(&mut self) -> HIB_W<PWRCLR_SPEC> {
+    pub fn hib(&mut self) -> HIB_W<'_, PWRCLR_SPEC> {
         HIB_W::new(self, 0)
     }
     #[doc = "Bit 16 - Clear USB PHY Transceiver Disable"]
     #[inline(always)]
-    pub fn usbphypdq(&mut self) -> USBPHYPDQ_W<PWRCLR_SPEC> {
+    pub fn usbphypdq(&mut self) -> USBPHYPDQ_W<'_, PWRCLR_SPEC> {
         USBPHYPDQ_W::new(self, 16)
     }
     #[doc = "Bit 18 - Clear USB Weak Pull-Up at PADN Enable"]
     #[inline(always)]
-    pub fn usbpuwq(&mut self) -> USBPUWQ_W<PWRCLR_SPEC> {
+    pub fn usbpuwq(&mut self) -> USBPUWQ_W<'_, PWRCLR_SPEC> {
         USBPUWQ_W::new(self, 18)
     }
 }
@@ -118,10 +118,6 @@ impl crate::RegisterSpec for PWRCLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`pwrclr::W`](W) writer structure"]
 impl crate::Writable for PWRCLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PWRCLR to value 0"]
-impl crate::Resettable for PWRCLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PWRCLR_SPEC {}

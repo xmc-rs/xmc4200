@@ -943,62 +943,62 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Source selector 0 comparator set configuration"]
     #[inline(always)]
-    pub fn c0ss(&mut self) -> C0SS_W<GSEL_SPEC> {
+    pub fn c0ss(&mut self) -> C0SS_W<'_, GSEL_SPEC> {
         C0SS_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Source selector 0 comparator clear configuration"]
     #[inline(always)]
-    pub fn c0cs(&mut self) -> C0CS_W<GSEL_SPEC> {
+    pub fn c0cs(&mut self) -> C0CS_W<'_, GSEL_SPEC> {
         C0CS_W::new(self, 3)
     }
     #[doc = "Bits 6:7 - Source selector 0 set configuration"]
     #[inline(always)]
-    pub fn s0m(&mut self) -> S0M_W<GSEL_SPEC> {
+    pub fn s0m(&mut self) -> S0M_W<'_, GSEL_SPEC> {
         S0M_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Source selector 0 clear configuration"]
     #[inline(always)]
-    pub fn c0m(&mut self) -> C0M_W<GSEL_SPEC> {
+    pub fn c0m(&mut self) -> C0M_W<'_, GSEL_SPEC> {
         C0M_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Source selector 0 set edge configuration"]
     #[inline(always)]
-    pub fn s0es(&mut self) -> S0ES_W<GSEL_SPEC> {
+    pub fn s0es(&mut self) -> S0ES_W<'_, GSEL_SPEC> {
         S0ES_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Source selector 0 clear edge configuration"]
     #[inline(always)]
-    pub fn c0es(&mut self) -> C0ES_W<GSEL_SPEC> {
+    pub fn c0es(&mut self) -> C0ES_W<'_, GSEL_SPEC> {
         C0ES_W::new(self, 12)
     }
     #[doc = "Bits 16:18 - Source selector 1 comparator set configuration"]
     #[inline(always)]
-    pub fn c1ss(&mut self) -> C1SS_W<GSEL_SPEC> {
+    pub fn c1ss(&mut self) -> C1SS_W<'_, GSEL_SPEC> {
         C1SS_W::new(self, 16)
     }
     #[doc = "Bits 19:21 - Source selector 1 comparator clear configuration"]
     #[inline(always)]
-    pub fn c1cs(&mut self) -> C1CS_W<GSEL_SPEC> {
+    pub fn c1cs(&mut self) -> C1CS_W<'_, GSEL_SPEC> {
         C1CS_W::new(self, 19)
     }
     #[doc = "Bits 22:23 - Source selector 1 set configuration"]
     #[inline(always)]
-    pub fn s1m(&mut self) -> S1M_W<GSEL_SPEC> {
+    pub fn s1m(&mut self) -> S1M_W<'_, GSEL_SPEC> {
         S1M_W::new(self, 22)
     }
     #[doc = "Bits 24:25 - Source selector 1 clear configuration"]
     #[inline(always)]
-    pub fn c1m(&mut self) -> C1M_W<GSEL_SPEC> {
+    pub fn c1m(&mut self) -> C1M_W<'_, GSEL_SPEC> {
         C1M_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - Source selector 1 set edge configuration"]
     #[inline(always)]
-    pub fn s1es(&mut self) -> S1ES_W<GSEL_SPEC> {
+    pub fn s1es(&mut self) -> S1ES_W<'_, GSEL_SPEC> {
         S1ES_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - Source selector 1 clear edge configuration"]
     #[inline(always)]
-    pub fn c1es(&mut self) -> C1ES_W<GSEL_SPEC> {
+    pub fn c1es(&mut self) -> C1ES_W<'_, GSEL_SPEC> {
         C1ES_W::new(self, 28)
     }
 }
@@ -1012,10 +1012,6 @@ impl crate::Readable for GSEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gsel::W`](W) writer structure"]
 impl crate::Writable for GSEL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GSEL to value 0"]
-impl crate::Resettable for GSEL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GSEL_SPEC {}

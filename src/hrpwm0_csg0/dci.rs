@@ -381,32 +381,32 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Value Selector input selection"]
     #[inline(always)]
-    pub fn svis(&mut self) -> SVIS_W<DCI_SPEC> {
+    pub fn svis(&mut self) -> SVIS_W<'_, DCI_SPEC> {
         SVIS_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Slope generation start control input selection"]
     #[inline(always)]
-    pub fn stris(&mut self) -> STRIS_W<DCI_SPEC> {
+    pub fn stris(&mut self) -> STRIS_W<'_, DCI_SPEC> {
         STRIS_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Slope generation stop control input selection"]
     #[inline(always)]
-    pub fn stpis(&mut self) -> STPIS_W<DCI_SPEC> {
+    pub fn stpis(&mut self) -> STPIS_W<'_, DCI_SPEC> {
         STPIS_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - External conversion trigger input selection"]
     #[inline(always)]
-    pub fn trgis(&mut self) -> TRGIS_W<DCI_SPEC> {
+    pub fn trgis(&mut self) -> TRGIS_W<'_, DCI_SPEC> {
         TRGIS_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - External shadow request enable input selection"]
     #[inline(always)]
-    pub fn stis(&mut self) -> STIS_W<DCI_SPEC> {
+    pub fn stis(&mut self) -> STIS_W<'_, DCI_SPEC> {
         STIS_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - Slope generation clock selection"]
     #[inline(always)]
-    pub fn scs(&mut self) -> SCS_W<DCI_SPEC> {
+    pub fn scs(&mut self) -> SCS_W<'_, DCI_SPEC> {
         SCS_W::new(self, 20)
     }
 }
@@ -420,10 +420,6 @@ impl crate::Readable for DCI_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dci::W`](W) writer structure"]
 impl crate::Writable for DCI_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DCI to value 0"]
-impl crate::Resettable for DCI_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DCI_SPEC {}

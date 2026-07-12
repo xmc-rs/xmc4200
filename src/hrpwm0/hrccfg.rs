@@ -620,52 +620,52 @@ impl R {
 impl W {
     #[doc = "Bit 0 - High resolution channels power mode"]
     #[inline(always)]
-    pub fn hrcpm(&mut self) -> HRCPM_W<HRCCFG_SPEC> {
+    pub fn hrcpm(&mut self) -> HRCPM_W<'_, HRCCFG_SPEC> {
         HRCPM_W::new(self, 0)
     }
     #[doc = "Bit 4 - HRC0 high resolution enable"]
     #[inline(always)]
-    pub fn hrc0e(&mut self) -> HRC0E_W<HRCCFG_SPEC> {
+    pub fn hrc0e(&mut self) -> HRC0E_W<'_, HRCCFG_SPEC> {
         HRC0E_W::new(self, 4)
     }
     #[doc = "Bit 5 - HRC1 high resolution channel enable"]
     #[inline(always)]
-    pub fn hrc1e(&mut self) -> HRC1E_W<HRCCFG_SPEC> {
+    pub fn hrc1e(&mut self) -> HRC1E_W<'_, HRCCFG_SPEC> {
         HRC1E_W::new(self, 5)
     }
     #[doc = "Bit 6 - HRC2 high resolution channel enable"]
     #[inline(always)]
-    pub fn hrc2e(&mut self) -> HRC2E_W<HRCCFG_SPEC> {
+    pub fn hrc2e(&mut self) -> HRC2E_W<'_, HRCCFG_SPEC> {
         HRC2E_W::new(self, 6)
     }
     #[doc = "Bit 7 - HRC3 high resolution channel enable"]
     #[inline(always)]
-    pub fn hrc3e(&mut self) -> HRC3E_W<HRCCFG_SPEC> {
+    pub fn hrc3e(&mut self) -> HRC3E_W<'_, HRCCFG_SPEC> {
         HRC3E_W::new(self, 7)
     }
     #[doc = "Bits 16:18 - Clock information control"]
     #[inline(always)]
-    pub fn clkc(&mut self) -> CLKC_W<HRCCFG_SPEC> {
+    pub fn clkc(&mut self) -> CLKC_W<'_, HRCCFG_SPEC> {
         CLKC_W::new(self, 16)
     }
     #[doc = "Bit 20 - HRC0 low resolution channel enable"]
     #[inline(always)]
-    pub fn lrc0e(&mut self) -> LRC0E_W<HRCCFG_SPEC> {
+    pub fn lrc0e(&mut self) -> LRC0E_W<'_, HRCCFG_SPEC> {
         LRC0E_W::new(self, 20)
     }
     #[doc = "Bit 21 - HRC1 low resolution channel enable"]
     #[inline(always)]
-    pub fn lrc1e(&mut self) -> LRC1E_W<HRCCFG_SPEC> {
+    pub fn lrc1e(&mut self) -> LRC1E_W<'_, HRCCFG_SPEC> {
         LRC1E_W::new(self, 21)
     }
     #[doc = "Bit 22 - HRC2 low resolution channel enable"]
     #[inline(always)]
-    pub fn lrc2e(&mut self) -> LRC2E_W<HRCCFG_SPEC> {
+    pub fn lrc2e(&mut self) -> LRC2E_W<'_, HRCCFG_SPEC> {
         LRC2E_W::new(self, 22)
     }
     #[doc = "Bit 23 - HRC3 low resolution channel enable"]
     #[inline(always)]
-    pub fn lrc3e(&mut self) -> LRC3E_W<HRCCFG_SPEC> {
+    pub fn lrc3e(&mut self) -> LRC3E_W<'_, HRCCFG_SPEC> {
         LRC3E_W::new(self, 23)
     }
 }
@@ -679,10 +679,6 @@ impl crate::Readable for HRCCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hrccfg::W`](W) writer structure"]
 impl crate::Writable for HRCCFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HRCCFG to value 0"]
-impl crate::Resettable for HRCCFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HRCCFG_SPEC {}

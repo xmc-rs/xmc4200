@@ -313,52 +313,52 @@ where
 impl W {
     #[doc = "Bit 0 - System OSC WDT Trap Set"]
     #[inline(always)]
-    pub fn soscwdgt(&mut self) -> SOSCWDGT_W<TRAPSET_SPEC> {
+    pub fn soscwdgt(&mut self) -> SOSCWDGT_W<'_, TRAPSET_SPEC> {
         SOSCWDGT_W::new(self, 0)
     }
     #[doc = "Bit 2 - System VCO Lock Trap Set"]
     #[inline(always)]
-    pub fn svcolckt(&mut self) -> SVCOLCKT_W<TRAPSET_SPEC> {
+    pub fn svcolckt(&mut self) -> SVCOLCKT_W<'_, TRAPSET_SPEC> {
         SVCOLCKT_W::new(self, 2)
     }
     #[doc = "Bit 3 - USB VCO Lock Trap Set"]
     #[inline(always)]
-    pub fn uvcolckt(&mut self) -> UVCOLCKT_W<TRAPSET_SPEC> {
+    pub fn uvcolckt(&mut self) -> UVCOLCKT_W<'_, TRAPSET_SPEC> {
         UVCOLCKT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Parity Error Trap Set"]
     #[inline(always)]
-    pub fn pet(&mut self) -> PET_W<TRAPSET_SPEC> {
+    pub fn pet(&mut self) -> PET_W<'_, TRAPSET_SPEC> {
         PET_W::new(self, 4)
     }
     #[doc = "Bit 5 - Brown Out Trap Set"]
     #[inline(always)]
-    pub fn brwnt(&mut self) -> BRWNT_W<TRAPSET_SPEC> {
+    pub fn brwnt(&mut self) -> BRWNT_W<'_, TRAPSET_SPEC> {
         BRWNT_W::new(self, 5)
     }
     #[doc = "Bit 6 - OSC_ULP WDG Trap Set"]
     #[inline(always)]
-    pub fn ulpwdt(&mut self) -> ULPWDT_W<TRAPSET_SPEC> {
+    pub fn ulpwdt(&mut self) -> ULPWDT_W<'_, TRAPSET_SPEC> {
         ULPWDT_W::new(self, 6)
     }
     #[doc = "Bit 7 - Peripheral Bridge 0 Trap Set"]
     #[inline(always)]
-    pub fn bwerr0t(&mut self) -> BWERR0T_W<TRAPSET_SPEC> {
+    pub fn bwerr0t(&mut self) -> BWERR0T_W<'_, TRAPSET_SPEC> {
         BWERR0T_W::new(self, 7)
     }
     #[doc = "Bit 8 - Peripheral Bridge 1 Trap Set"]
     #[inline(always)]
-    pub fn bwerr1t(&mut self) -> BWERR1T_W<TRAPSET_SPEC> {
+    pub fn bwerr1t(&mut self) -> BWERR1T_W<'_, TRAPSET_SPEC> {
         BWERR1T_W::new(self, 8)
     }
     #[doc = "Bit 12 - Die Temperature Too High Trap Set"]
     #[inline(always)]
-    pub fn temphit(&mut self) -> TEMPHIT_W<TRAPSET_SPEC> {
+    pub fn temphit(&mut self) -> TEMPHIT_W<'_, TRAPSET_SPEC> {
         TEMPHIT_W::new(self, 12)
     }
     #[doc = "Bit 13 - Die Temperature Too Low Trap Set"]
     #[inline(always)]
-    pub fn templot(&mut self) -> TEMPLOT_W<TRAPSET_SPEC> {
+    pub fn templot(&mut self) -> TEMPLOT_W<'_, TRAPSET_SPEC> {
         TEMPLOT_W::new(self, 13)
     }
 }
@@ -370,10 +370,6 @@ impl crate::RegisterSpec for TRAPSET_SPEC {
 #[doc = "`write(|w| ..)` method takes [`trapset::W`](W) writer structure"]
 impl crate::Writable for TRAPSET_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TRAPSET to value 0"]
-impl crate::Resettable for TRAPSET_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TRAPSET_SPEC {}

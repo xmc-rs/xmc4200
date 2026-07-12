@@ -644,37 +644,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Value switch from CSGyDSV1 to CSGyDSV2 interrupt line selection"]
     #[inline(always)]
-    pub fn vls1s(&mut self) -> VLS1S_W<SRS_SPEC> {
+    pub fn vls1s(&mut self) -> VLS1S_W<'_, SRS_SPEC> {
         VLS1S_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Value switch from CSGyDSV2 to CSGyDSV1 interrupt line selection"]
     #[inline(always)]
-    pub fn vls2s(&mut self) -> VLS2S_W<SRS_SPEC> {
+    pub fn vls2s(&mut self) -> VLS2S_W<'_, SRS_SPEC> {
         VLS2S_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Conversion trigger interrupt line selection"]
     #[inline(always)]
-    pub fn trls(&mut self) -> TRLS_W<SRS_SPEC> {
+    pub fn trls(&mut self) -> TRLS_W<'_, SRS_SPEC> {
         TRLS_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Start/Stop trigger interrupt line selection"]
     #[inline(always)]
-    pub fn ssls(&mut self) -> SSLS_W<SRS_SPEC> {
+    pub fn ssls(&mut self) -> SSLS_W<'_, SRS_SPEC> {
         SSLS_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Shadow transfer done interrupt line selection"]
     #[inline(always)]
-    pub fn stls(&mut self) -> STLS_W<SRS_SPEC> {
+    pub fn stls(&mut self) -> STLS_W<'_, SRS_SPEC> {
         STLS_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Comparator rise/fall interrupt line selection"]
     #[inline(always)]
-    pub fn crfls(&mut self) -> CRFLS_W<SRS_SPEC> {
+    pub fn crfls(&mut self) -> CRFLS_W<'_, SRS_SPEC> {
         CRFLS_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Comparator clamped state interrupt line selection"]
     #[inline(always)]
-    pub fn csls(&mut self) -> CSLS_W<SRS_SPEC> {
+    pub fn csls(&mut self) -> CSLS_W<'_, SRS_SPEC> {
         CSLS_W::new(self, 12)
     }
 }
@@ -688,10 +688,6 @@ impl crate::Readable for SRS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`srs::W`](W) writer structure"]
 impl crate::Writable for SRS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRS to value 0"]
-impl crate::Resettable for SRS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SRS_SPEC {}

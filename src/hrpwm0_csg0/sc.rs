@@ -990,67 +990,67 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Prescaler external start configuration"]
     #[inline(always)]
-    pub fn psrm(&mut self) -> PSRM_W<SC_SPEC> {
+    pub fn psrm(&mut self) -> PSRM_W<'_, SC_SPEC> {
         PSRM_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Prescaler external stop configuration"]
     #[inline(always)]
-    pub fn pstm(&mut self) -> PSTM_W<SC_SPEC> {
+    pub fn pstm(&mut self) -> PSTM_W<'_, SC_SPEC> {
         PSTM_W::new(self, 2)
     }
     #[doc = "Bit 4 - Fixed division disable"]
     #[inline(always)]
-    pub fn fpd(&mut self) -> FPD_W<SC_SPEC> {
+    pub fn fpd(&mut self) -> FPD_W<'_, SC_SPEC> {
         FPD_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - Prescaler division factor"]
     #[inline(always)]
-    pub fn psv(&mut self) -> PSV_W<SC_SPEC> {
+    pub fn psv(&mut self) -> PSV_W<'_, SC_SPEC> {
         PSV_W::new(self, 5)
     }
     #[doc = "Bits 8:9 - Slope control mode"]
     #[inline(always)]
-    pub fn scm(&mut self) -> SCM_W<SC_SPEC> {
+    pub fn scm(&mut self) -> SCM_W<'_, SC_SPEC> {
         SCM_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Slope external start configuration"]
     #[inline(always)]
-    pub fn ssrm(&mut self) -> SSRM_W<SC_SPEC> {
+    pub fn ssrm(&mut self) -> SSRM_W<'_, SC_SPEC> {
         SSRM_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Slope external stop configuration"]
     #[inline(always)]
-    pub fn sstm(&mut self) -> SSTM_W<SC_SPEC> {
+    pub fn sstm(&mut self) -> SSTM_W<'_, SC_SPEC> {
         SSTM_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Slope reference value mode"]
     #[inline(always)]
-    pub fn svsc(&mut self) -> SVSC_W<SC_SPEC> {
+    pub fn svsc(&mut self) -> SVSC_W<'_, SC_SPEC> {
         SVSC_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - Initial DAC start mode"]
     #[inline(always)]
-    pub fn swsm(&mut self) -> SWSM_W<SC_SPEC> {
+    pub fn swsm(&mut self) -> SWSM_W<'_, SC_SPEC> {
         SWSM_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - Slope step gain configuration"]
     #[inline(always)]
-    pub fn gcfg(&mut self) -> GCFG_W<SC_SPEC> {
+    pub fn gcfg(&mut self) -> GCFG_W<'_, SC_SPEC> {
         GCFG_W::new(self, 18)
     }
     #[doc = "Bit 20 - Immediate shadow transfer"]
     #[inline(always)]
-    pub fn ist(&mut self) -> IST_W<SC_SPEC> {
+    pub fn ist(&mut self) -> IST_W<'_, SC_SPEC> {
         IST_W::new(self, 20)
     }
     #[doc = "Bit 21 - Pulse swallow enable"]
     #[inline(always)]
-    pub fn pse(&mut self) -> PSE_W<SC_SPEC> {
+    pub fn pse(&mut self) -> PSE_W<'_, SC_SPEC> {
         PSE_W::new(self, 21)
     }
     #[doc = "Bits 24:25 - Pulse swallow window mode"]
     #[inline(always)]
-    pub fn pswm(&mut self) -> PSWM_W<SC_SPEC> {
+    pub fn pswm(&mut self) -> PSWM_W<'_, SC_SPEC> {
         PSWM_W::new(self, 24)
     }
 }
@@ -1064,10 +1064,6 @@ impl crate::Readable for SC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sc::W`](W) writer structure"]
 impl crate::Writable for SC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SC to value 0"]
-impl crate::Resettable for SC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SC_SPEC {}

@@ -338,6 +338,4 @@ impl crate::RegisterSpec for HRCSTSG_SPEC {
 #[doc = "`read()` method returns [`hrcstsg::R`](R) reader structure"]
 impl crate::Readable for HRCSTSG_SPEC {}
 #[doc = "`reset()` method sets HRCSTSG to value 0"]
-impl crate::Resettable for HRCSTSG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HRCSTSG_SPEC {}
